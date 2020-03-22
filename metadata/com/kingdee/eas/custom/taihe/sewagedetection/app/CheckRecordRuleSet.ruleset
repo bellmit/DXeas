@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.taihe.sewagedetection.app</package>
+    <name>CheckRecordRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.taihe.sewagedetection.app.CheckRecordRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.taihe.sewagedetection.app.CheckRecordRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>1fee2c21-8c7e-4d5d-9317-a5b9fba437c2</id>
+            <parentID />
+            <source>Entry.upperLimit=Entry.checkItem.upperLimit</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>950d1357-6e18-4664-8c24-91d58527e5bd</id>
+            <parentID>1fee2c21-8c7e-4d5d-9317-a5b9fba437c2</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>ec13068d-00bf-459f-8d7e-12a2c0df8656</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ec13068d-00bf-459f-8d7e-12a2c0df8656</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"upperLimit")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>af6ebf9c-ab19-418d-a759-9ae4415f44ea</id>
+            <parentID>1fee2c21-8c7e-4d5d-9317-a5b9fba437c2</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>45ae3149-1061-4777-b9b9-6eeb6fc5c6c5</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>2f5e1825-0d87-4880-b8fc-db13646b3e2e</id>
+                        <expressionID>146ffdb9-436f-4935-85c2-e8eec6ee74c5</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>cd34aca5-0d11-464e-8437-b385cc9d3825</id>
+                        <expressionID>97219ce2-725f-4c30-899d-a09476ec677f</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>45ae3149-1061-4777-b9b9-6eeb6fc5c6c5</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>146ffdb9-436f-4935-85c2-e8eec6ee74c5</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>72cddb53-a05d-494a-bb41-2d110abcf30d</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>72cddb53-a05d-494a-bb41-2d110abcf30d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntry.getCell(rowIndex,"checkItem")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>97219ce2-725f-4c30-899d-a09476ec677f</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>upperLimit</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>bad81735-308a-462e-8e3a-e02404b354f4</id>
+            <parentID />
+            <source>Entry.inIndex=Entry.checkItem.inIndex</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>47ba439a-fff9-4859-86d1-2a6540835b1d</id>
+            <parentID>bad81735-308a-462e-8e3a-e02404b354f4</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>a5c5328f-f1de-46e4-ba64-6db707b5263d</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a5c5328f-f1de-46e4-ba64-6db707b5263d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"inIndex")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6f411dab-8d62-447d-9be3-26e9e0b36f3a</id>
+            <parentID>bad81735-308a-462e-8e3a-e02404b354f4</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>cab140b8-f9ad-4eb9-92b5-562bec4a3df1</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>7e42f634-454a-4457-9206-6a46aa983a87</id>
+                        <expressionID>208f4ebf-45de-4301-9dba-497293a890a7</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>5a58f084-8ec1-4d1c-a068-e0dda6ec3e07</id>
+                        <expressionID>0793ccfe-fde6-4796-bf93-fd087b493afa</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cab140b8-f9ad-4eb9-92b5-562bec4a3df1</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>208f4ebf-45de-4301-9dba-497293a890a7</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>40ba1afe-c211-4232-960a-96277f37b6d0</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>40ba1afe-c211-4232-960a-96277f37b6d0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntry.getCell(rowIndex,"checkItem")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0793ccfe-fde6-4796-bf93-fd087b493afa</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>inIndex</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>fa256144-a09b-498e-8fe8-c41ae5e9f2f0</id>
+            <name>Entry_upperLimit_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.sewagedetection.app.CheckRecordRuleSet].actions.action[Entry_upperLimit_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.sewagedetection.app.CheckRecordRuleSet].actions.action[Entry_upperLimit_ActionInfo].description</description>
+            <expressionID>1fee2c21-8c7e-4d5d-9317-a5b9fba437c2</expressionID>
+        </action>
+        <action>
+            <id>73fc2650-a454-4bae-8b52-e7b8d72b1189</id>
+            <name>Entry_inIndex_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.sewagedetection.app.CheckRecordRuleSet].actions.action[Entry_inIndex_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.sewagedetection.app.CheckRecordRuleSet].actions.action[Entry_inIndex_ActionInfo].description</description>
+            <expressionID>bad81735-308a-462e-8e3a-e02404b354f4</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>Entry_upperLimit_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.sewagedetection.app.CheckRecordRuleSet].rules.conditionRule[Entry_upperLimit_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.sewagedetection.app.CheckRecordRuleSet].rules.conditionRule[Entry_upperLimit_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="fa256144-a09b-498e-8fe8-c41ae5e9f2f0" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>Entry_inIndex_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.sewagedetection.app.CheckRecordRuleSet].rules.conditionRule[Entry_inIndex_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.sewagedetection.app.CheckRecordRuleSet].rules.conditionRule[Entry_inIndex_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="73fc2650-a454-4bae-8b52-e7b8d72b1189" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.sewagedetection.app.CheckRecordRuleSet].actions.action[Entry_inIndex_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_inIndex" />
+            <lang locale="zh_HK" value="攜帶字段屬性_inIndex" />
+            <lang locale="zh_TW" value="攜帶字段屬性_inIndex" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.sewagedetection.app.CheckRecordRuleSet].actions.action[Entry_inIndex_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.sewagedetection.app.CheckRecordRuleSet].actions.action[Entry_upperLimit_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_upperLimit" />
+            <lang locale="zh_HK" value="攜帶字段屬性_upperLimit" />
+            <lang locale="zh_TW" value="攜帶字段屬性_upperLimit" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.sewagedetection.app.CheckRecordRuleSet].actions.action[Entry_upperLimit_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.sewagedetection.app.CheckRecordRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.sewagedetection.app.CheckRecordRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.sewagedetection.app.CheckRecordRuleSet].rules.conditionRule[Entry_inIndex_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_inIndex" />
+            <lang locale="zh_HK" value="攜帶字段屬性_inIndex" />
+            <lang locale="zh_TW" value="攜帶字段屬性_inIndex" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.sewagedetection.app.CheckRecordRuleSet].rules.conditionRule[Entry_inIndex_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.sewagedetection.app.CheckRecordRuleSet].rules.conditionRule[Entry_inIndex_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="checkItem" />
+            <lang locale="zh_CN" value="checkItem" />
+            <lang locale="zh_TW" value="checkItem" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.sewagedetection.app.CheckRecordRuleSet].rules.conditionRule[Entry_inIndex_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.sewagedetection.app.CheckRecordRuleSet].rules.conditionRule[Entry_upperLimit_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_upperLimit" />
+            <lang locale="zh_HK" value="攜帶字段屬性_upperLimit" />
+            <lang locale="zh_TW" value="攜帶字段屬性_upperLimit" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.sewagedetection.app.CheckRecordRuleSet].rules.conditionRule[Entry_upperLimit_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.sewagedetection.app.CheckRecordRuleSet].rules.conditionRule[Entry_upperLimit_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="checkItem" />
+            <lang locale="zh_CN" value="checkItem" />
+            <lang locale="zh_TW" value="checkItem" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.sewagedetection.app.CheckRecordRuleSet].rules.conditionRule[Entry_upperLimit_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

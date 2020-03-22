@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.breed.layegg.app</package>
+    <name>LayEggHouseSetRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.breed.layegg.app.LayEggHouseSetRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.breed.layegg.app.LayEggHouseSetRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>27614116-3f49-41d6-ba9b-55e22882c5c4</id>
+            <parentID />
+            <source>entrys.materialName=entrys.material.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>83e3408d-6bee-4273-ad78-1a565d95c520</id>
+            <parentID>27614116-3f49-41d6-ba9b-55e22882c5c4</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>e5b246b9-d652-4d1d-9b3b-ae93dfe22853</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e5b246b9-d652-4d1d-9b3b-ae93dfe22853</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"materialName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0eb04863-661d-4345-9771-5a12e15cdfd6</id>
+            <parentID>27614116-3f49-41d6-ba9b-55e22882c5c4</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>775dd3dc-e4aa-4884-8f9e-e2b2c0886ee9</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>d2c32439-d547-4ad5-b2f5-a09c7015eda5</id>
+                        <expressionID>f88ef544-b5b0-4e83-a0d5-29c46a216cd9</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>8e3d2395-fe4f-4228-a136-40f50e9b5597</id>
+                        <expressionID>b5ad7f9b-e829-46d3-af98-c97a4c7c4182</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>775dd3dc-e4aa-4884-8f9e-e2b2c0886ee9</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f88ef544-b5b0-4e83-a0d5-29c46a216cd9</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>d6d5d2a8-ad77-48e2-b399-7374f9086b86</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d6d5d2a8-ad77-48e2-b399-7374f9086b86</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b5ad7f9b-e829-46d3-af98-c97a4c7c4182</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>fb6f62fd-92a5-488c-a2b8-858b88f56ff5</id>
+            <parentID />
+            <source>warehouse=henhouse.warehouse.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>2dd3c4b6-2f12-4958-b17d-5c42dd073160</id>
+            <parentID>fb6f62fd-92a5-488c-a2b8-858b88f56ff5</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>9eb652e9-b976-4011-808e-5ee67d1ab62d</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9eb652e9-b976-4011-808e-5ee67d1ab62d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtwarehouse</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d6f70ed6-9615-4ff8-95f4-9617d6de625f</id>
+            <parentID>fb6f62fd-92a5-488c-a2b8-858b88f56ff5</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>bf2cca65-b291-4902-9987-31d46727a6a0</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>e9b6ff91-9126-4083-8326-3e2dbea49b54</id>
+                        <expressionID>9f87fb0d-258f-4671-a787-c51255ca0a0e</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>304d5663-834e-4b50-8100-d1c7d1506543</id>
+                        <expressionID>af8e1165-232a-45eb-a8ff-fff9d6cd39be</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bf2cca65-b291-4902-9987-31d46727a6a0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9f87fb0d-258f-4671-a787-c51255ca0a0e</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>bce1a514-f8d8-405f-a411-bbf877cc0c23</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bce1a514-f8d8-405f-a411-bbf877cc0c23</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmthenhouse</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>af8e1165-232a-45eb-a8ff-fff9d6cd39be</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>warehouse.name</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>6bbbd1f5-66ec-4f50-87e9-9b6d853287e0</id>
+            <name>entrys_materialName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.breed.layegg.app.LayEggHouseSetRuleSet].actions.action[entrys_materialName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.breed.layegg.app.LayEggHouseSetRuleSet].actions.action[entrys_materialName_ActionInfo].description</description>
+            <expressionID>27614116-3f49-41d6-ba9b-55e22882c5c4</expressionID>
+        </action>
+        <action>
+            <id>64240d7d-5133-49ab-8ffb-f7b5dbbea636</id>
+            <name>BroodCoopSet_warehouse_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.breed.layegg.app.LayEggHouseSetRuleSet].actions.action[BroodCoopSet_warehouse_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.breed.layegg.app.LayEggHouseSetRuleSet].actions.action[BroodCoopSet_warehouse_ActionInfo].description</description>
+            <expressionID>fb6f62fd-92a5-488c-a2b8-858b88f56ff5</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>BroodCoopSet_warehouse_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.breed.layegg.app.LayEggHouseSetRuleSet].rules.conditionRule[BroodCoopSet_warehouse_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.breed.layegg.app.LayEggHouseSetRuleSet].rules.conditionRule[BroodCoopSet_warehouse_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="64240d7d-5133-49ab-8ffb-f7b5dbbea636" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.breed.layegg.app.LayEggHouseSetRuleSet].actions.action[BroodCoopSet_warehouse_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_warehouse" />
+            <lang locale="zh_HK" value="攜帶字段屬性_warehouse" />
+            <lang locale="zh_TW" value="攜帶字段屬性_warehouse" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.breed.layegg.app.LayEggHouseSetRuleSet].actions.action[BroodCoopSet_warehouse_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.breed.layegg.app.LayEggHouseSetRuleSet].actions.action[entrys_materialName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.breed.layegg.app.LayEggHouseSetRuleSet].actions.action[entrys_materialName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.breed.layegg.app.LayEggHouseSetRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.breed.layegg.app.LayEggHouseSetRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.breed.layegg.app.LayEggHouseSetRuleSet].rules.conditionRule[BroodCoopSet_warehouse_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_warehouse" />
+            <lang locale="zh_HK" value="攜帶字段屬性_warehouse" />
+            <lang locale="zh_TW" value="攜帶字段屬性_warehouse" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.breed.layegg.app.LayEggHouseSetRuleSet].rules.conditionRule[BroodCoopSet_warehouse_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.breed.layegg.app.LayEggHouseSetRuleSet].rules.conditionRule[BroodCoopSet_warehouse_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="henhouse" />
+            <lang locale="zh_CN" value="henhouse" />
+            <lang locale="zh_TW" value="henhouse" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.breed.layegg.app.LayEggHouseSetRuleSet].rules.conditionRule[BroodCoopSet_warehouse_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

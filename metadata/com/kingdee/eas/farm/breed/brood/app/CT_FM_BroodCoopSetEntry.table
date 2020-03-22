@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataTable xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.breed.brood.app</package>
+    <name>CT_FM_BroodCoopSetEntry</name>
+    <alias>dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].alias</alias>
+    <description>dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].description</description>
+    <userDefined>true</userDefined>
+    <bizUnitPK />
+    <columns>
+        <column>
+            <name>FSeq</name>
+            <alias>dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].columns.column[FSeq].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].columns.column[FSeq].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>4</precision>
+        </column>
+        <column>
+            <name>FID</name>
+            <alias>dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].columns.column[FID].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].columns.column[FID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>false</isNullable>
+            <defaultValue>''</defaultValue>
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>44</precision>
+        </column>
+        <column>
+            <name>FParentID</name>
+            <alias>dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].columns.column[FParentID].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].columns.column[FParentID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>44</precision>
+        </column>
+        <column>
+            <name>CFMaterialID</name>
+            <alias>dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].columns.column[CFMaterialID].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].columns.column[CFMaterialID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFMaterialName</name>
+            <alias>dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].columns.column[CFMaterialName].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].columns.column[CFMaterialName].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFDefaultQuantity</name>
+            <alias>dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].columns.column[CFDefaultQuantity].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].columns.column[CFDefaultQuantity].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NUMERIC</sqlType>
+            <length>28</length>
+            <scale>2</scale>
+            <precision>28</precision>
+        </column>
+    </columns>
+    <primaryKey>
+        <name>CPK_FM_BroodCSEsm5</name>
+        <userDefined>true</userDefined>
+        <primaryKeyColumns>
+            <primaryKeyColumn>
+                <indexID>0</indexID>
+                <sortType>ASC</sortType>
+                <column>
+                    <key name="name" value="FID" />
+                </column>
+            </primaryKeyColumn>
+        </primaryKeyColumns>
+    </primaryKey>
+    <foreignKeys>
+        <foreignKey>
+            <name>CFK_FM_FMBCSEPrnsm</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.farm.breed.brood.app" />
+                <key name="name" value="CT_FM_BroodCoopSet" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FParentID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>CFK_FM_FMBCSEFMIsm</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.master.material.app" />
+                <key name="name" value="T_BD_Material" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="CFMaterialID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+    </foreignKeys>
+    <resource>
+        <rs key="dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="分录" />
+            <lang locale="zh_HK" value="分錄" />
+            <lang locale="zh_TW" value="分錄" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].columns.column[CFDefaultQuantity].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="默认日投料量（KG）" />
+            <lang locale="zh_HK" value="默認日投料量（KG）" />
+            <lang locale="zh_TW" value="默認日投料量（KG）" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].columns.column[CFDefaultQuantity].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="默认日投料量（KG）" />
+            <lang locale="zh_HK" value="默認日投料量（KG）" />
+            <lang locale="zh_TW" value="默認日投料量（KG）" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].columns.column[CFMaterialID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="饲喂饲料" />
+            <lang locale="zh_HK" value="飼喂飼料" />
+            <lang locale="zh_TW" value="飼喂飼料" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].columns.column[CFMaterialID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="饲料" />
+            <lang locale="zh_HK" value="飼料" />
+            <lang locale="zh_TW" value="飼料" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].columns.column[CFMaterialName].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="饲料名称" />
+            <lang locale="zh_HK" value="飼料名稱" />
+            <lang locale="zh_TW" value="飼料名稱" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].columns.column[CFMaterialName].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="饲料名称" />
+            <lang locale="zh_HK" value="飼料名稱" />
+            <lang locale="zh_TW" value="飼料名稱" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].columns.column[FID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].columns.column[FID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].columns.column[FParentID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].columns.column[FParentID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].columns.column[FSeq].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据分录序列号" />
+            <lang locale="zh_HK" value="單據分錄序列號" />
+            <lang locale="zh_TW" value="單據分錄序列號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].columns.column[FSeq].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据分录序列号（定义为序列属性即使用{seq}）" />
+            <lang locale="zh_HK" value="單據分錄序列號（定義為序列屬性即使用{seq}）" />
+            <lang locale="zh_TW" value="單據分錄序列號（定義為序列屬性即使用{seq}）" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.breed.brood.app.CT_FM_BroodCoopSetEntry].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</dataTable>
+

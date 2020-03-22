@@ -1,0 +1,1257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.workflow.app</package>
+    <name>WFAssignQueryForApp</name>
+    <alias>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].alias</alias>
+    <description>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].description</description>
+    <userDefined>true</userDefined>
+    <reportDataSource />
+    <bizUnitPK />
+    <connectionProvider />
+    <subObjects>
+        <subEntity>
+            <name>Assign</name>
+            <alias>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].subObjects.subEntity[Assign].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.bos.workflow.metas" />
+                <key name="name" value="Assign" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>AssignRead</name>
+            <alias>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].subObjects.subEntity[AssignRead].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.base.message.app" />
+                <key name="name" value="AssignRead" />
+            </entityRef>
+        </subEntity>
+    </subObjects>
+    <units>
+        <queryField>
+            <name>id</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AssignRead" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>type</name>
+            <userDefined>false</userDefined>
+            <formulaString>10</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[type].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bizType</name>
+            <userDefined>false</userDefined>
+            <formulaString>0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[bizType].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>title</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[title].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="title" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Assign" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="subject" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>sender</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[sender].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="sender" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AssignRead" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="sender" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>receiver</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[receiver].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="receiver" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Assign" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="personUserID" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>sendTime</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[sendTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Timestamp</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="sendTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Assign" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="createdTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>receiveTime</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[receiveTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Timestamp</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="receiveTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Assign" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="createdTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>priority</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[priority].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="priority" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Assign" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="priority" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>status</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[status].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="status" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AssignRead" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="status" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>sourceStatus</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[sourceStatus].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="sourceStatus" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Assign" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="state" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>NewUnit1</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.propertyUnit[NewUnit1].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit1" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Assign" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="assignID" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit2</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.propertyUnit[NewUnit2].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit2" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AssignRead" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="assignID" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>orgType</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[orgType].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="orgType" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AssignRead" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="orgType" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>orgID</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[orgID].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="orgID" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AssignRead" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="orgID" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>sourceID</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[sourceID].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="sourceID" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Assign" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="assignID" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>isSendMsg</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[isSendMsg].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Boolean</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="isSendMsg" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Assign" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="isSendMsg" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>isWebSupport</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[isWebSupport].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Boolean</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="isWebSupport" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AssignRead" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="isWebSupport" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bosType</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[bosType].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="bosType" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AssignRead" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bosType" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>AssignRead.assignID</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[AssignRead.assignID].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>faba178e-0112-1000-e000-006ac0a812e1</key>
+                    <parentUnit>
+                        <key name="name" value="AssignRead.assignID" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AssignRead" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="assignID" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>body</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[body].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>1249ca0e-0115-1000-e000-0019c0a812e2</key>
+                    <parentUnit>
+                        <key name="name" value="body" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Assign" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="body" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>procdefName</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[procdefName].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>d02328ad-ae38-4093-bf57-9b430b0ad70b</key>
+                    <parentUnit>
+                        <key name="name" value="procdefName" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Assign" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="procdefName" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>tag</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[tag].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>6893c38a-6fa5-45f0-925f-eced3c18cfef</key>
+                    <parentUnit>
+                        <key name="name" value="tag" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AssignRead" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="tag" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>senderId</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[senderId].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>087cce0c-e5c4-494b-b189-65414242ac19</key>
+                    <parentUnit>
+                        <key name="name" value="senderId" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AssignRead" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="senderId" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>priorPerformerID</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[priorPerformerID].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>1c89793c-97c2-49c1-b668-e18d9bbe7347</key>
+                    <parentUnit>
+                        <key name="name" value="priorPerformerID" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AssignRead" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="priorPerformerID" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>priorPerformName</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[priorPerformName].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>2d9a8d34-a672-4cb4-b019-46be5abee50d</key>
+                    <parentUnit>
+                        <key name="name" value="priorPerformName" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AssignRead" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="priorPerformName" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>billEntity</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[billEntity].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>e436ea95-26ab-480b-b12e-cdf15a05e632</key>
+                    <parentUnit>
+                        <key name="name" value="billEntity" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Assign" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="billEntity" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>assignID</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[assignID].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>d9099e72-a4be-4fd1-8072-2220bcd93666</key>
+                    <parentUnit>
+                        <key name="name" value="assignID" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Assign" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="assignID" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bizObjID</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[bizObjID].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>3f3d275c-0c14-481f-a4ae-a031d1228e3d</key>
+                    <parentUnit>
+                        <key name="name" value="bizObjID" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Assign" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bizObjID" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </queryField>
+    </units>
+    <defaultFilter>
+        <name>defaultFilter</name>
+        <formulaString />
+        <filterItems>
+            <queryFilterItem>
+                <propertyName>isSendMsg</propertyName>
+                <compareType>=</compareType>
+                <compareValue>1</compareValue>
+                <userDefined>false</userDefined>
+                <filter>
+                    <key name="name" value="defaultFilter" />
+                </filter>
+                <configured>false</configured>
+            </queryFilterItem>
+        </filterItems>
+        <query>
+            <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+            <key name="name" value="WFAssignQueryForApp" />
+        </query>
+    </defaultFilter>
+    <queryPK>
+        <name>QueryPK</name>
+        <alias>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].queryPK[QueryPK].alias</alias>
+        <description>joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].queryPK[QueryPK].description</description>
+        <keyProperties>
+            <queryField>
+                <key name="name" value="id" />
+            </queryField>
+        </keyProperties>
+    </queryPK>
+    <isDistinct>false</isDistinct>
+    <joins>
+        <join>
+            <name>NewJoin0</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="Assign" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="AssignRead" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>0</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="NewUnit1" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="NewUnit2" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="NewJoin0" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.workflow.app" />
+                <key name="name" value="WFAssignQueryForApp" />
+            </query>
+        </join>
+    </joins>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工作流任务查询" />
+            <lang locale="zh_HK" value="工作流任務查詢" />
+            <lang locale="zh_TW" value="工作流任務查詢" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工作流任务查询" />
+            <lang locale="zh_HK" value="工作流任務查詢" />
+            <lang locale="zh_TW" value="工作流任務查詢" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].queryPK[QueryPK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].queryPK[QueryPK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].subObjects.subEntity[AssignRead].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].subObjects.subEntity[Assign].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.propertyUnit[NewUnit1].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.propertyUnit[NewUnit2].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[AssignRead.assignID].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="任务ID" />
+            <lang locale="zh_HK" value="任務ID" />
+            <lang locale="zh_TW" value="任務ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[assignID].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="任务内码" />
+            <lang locale="zh_HK" value="任務內碼" />
+            <lang locale="zh_TW" value="任務內碼" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[billEntity].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="实体类型" />
+            <lang locale="zh_HK" value="實體類型" />
+            <lang locale="zh_TW" value="實體類型" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[bizObjID].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务对象内码" />
+            <lang locale="zh_HK" value="業務對象內碼" />
+            <lang locale="zh_TW" value="業務對象內碼" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[bizType].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[body].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[bosType].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="元数据类型" />
+            <lang locale="zh_HK" value="元數據類型" />
+            <lang locale="zh_TW" value="元數據類型" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[isSendMsg].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[isWebSupport].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否支持WEB" />
+            <lang locale="zh_HK" value="是否支持WEB" />
+            <lang locale="zh_TW" value="是否支持WEB" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[orgID].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="组织ID" />
+            <lang locale="zh_HK" value="組織ID" />
+            <lang locale="zh_TW" value="組織ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[orgType].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="组织类型" />
+            <lang locale="zh_HK" value="組織類型" />
+            <lang locale="zh_TW" value="組織類型" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[priorPerformName].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="前一执行人姓名" />
+            <lang locale="zh_HK" value="前一執行人姓名" />
+            <lang locale="zh_TW" value="前一執行人姓名" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[priorPerformName].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[priorPerformName].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[priorPerformerID].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="前一执行人ID" />
+            <lang locale="zh_HK" value="前一執行人ID" />
+            <lang locale="zh_TW" value="前一執行人ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[priority].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="优先级" />
+            <lang locale="zh_HK" value="優先級" />
+            <lang locale="zh_TW" value="優先級" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[procdefName].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="流程定义名称" />
+            <lang locale="zh_HK" value="流程定義名稱" />
+            <lang locale="zh_TW" value="流程定義名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[procdefName].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[procdefName].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[receiveTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="接收时间" />
+            <lang locale="zh_HK" value="接收時間" />
+            <lang locale="zh_TW" value="接收時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[receiveTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[receiveTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[receiver].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[sendTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[senderId].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="发起人ID" />
+            <lang locale="zh_HK" value="發起人ID" />
+            <lang locale="zh_TW" value="發起人ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[sender].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="发送人" />
+            <lang locale="zh_HK" value="發送人" />
+            <lang locale="zh_TW" value="發送人" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[sender].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[sender].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[sourceID].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="任务ID" />
+            <lang locale="zh_HK" value="任務ID" />
+            <lang locale="zh_TW" value="任務ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[sourceStatus].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="任务状态" />
+            <lang locale="zh_HK" value="任務狀態" />
+            <lang locale="zh_TW" value="任務狀態" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[status].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="状态" />
+            <lang locale="zh_HK" value="狀態" />
+            <lang locale="zh_TW" value="狀態" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[status].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[status].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[tag].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据类型" />
+            <lang locale="zh_HK" value="單據類型" />
+            <lang locale="zh_TW" value="單據類型" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[tag].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[tag].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[title].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="标题" />
+            <lang locale="zh_HK" value="標題" />
+            <lang locale="zh_TW" value="標題" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[title].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[title].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.workflow.app.WFAssignQueryForApp].units.queryField[type].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</joinQuery>
+

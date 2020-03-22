@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.wages.app</package>
+    <name>SocialwelfareRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.wages.app.SocialwelfareRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.wages.app.SocialwelfareRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>a7d2c9eb-bbc4-4929-8e5a-b95a9a37f843</id>
+            <parentID />
+            <source>entrys.personnumber=entrys.person.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>104a6fcc-3313-408e-9459-27ae8f3a1586</id>
+            <parentID>a7d2c9eb-bbc4-4929-8e5a-b95a9a37f843</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>5788fee5-3b79-4230-a60d-a53cb6b49cfd</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5788fee5-3b79-4230-a60d-a53cb6b49cfd</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"personnumber")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1c323505-c20b-43aa-96dd-250d56200902</id>
+            <parentID>a7d2c9eb-bbc4-4929-8e5a-b95a9a37f843</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>fbd32a6d-acc0-4965-93a4-2eae32a82772</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>568a76aa-30cf-4c99-ab0d-bdebeca8caa6</id>
+                        <expressionID>92c5653b-6dcd-49ed-b91c-f5f4f8458d18</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>0c218315-5bb4-439b-80ee-c4b35f2bc0d7</id>
+                        <expressionID>63920ee9-f9be-4852-952e-f45f0f27a6d7</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fbd32a6d-acc0-4965-93a4-2eae32a82772</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>92c5653b-6dcd-49ed-b91c-f5f4f8458d18</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>93a70492-9efc-4721-9a52-9bbca9298c19</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>93a70492-9efc-4721-9a52-9bbca9298c19</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"person")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>63920ee9-f9be-4852-952e-f45f0f27a6d7</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>b311e19a-1b7d-40f4-8130-ff69b29d66fe</id>
+            <parentID />
+            <source>entrys.personName=entrys.person.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>427ff54c-7cb8-47e1-b31e-2c62f89836fc</id>
+            <parentID>b311e19a-1b7d-40f4-8130-ff69b29d66fe</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>473e8f6c-9717-44b0-b128-262749b29a33</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>473e8f6c-9717-44b0-b128-262749b29a33</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"personName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e4249cdd-0680-47ba-91b0-dbc6c0e55030</id>
+            <parentID>b311e19a-1b7d-40f4-8130-ff69b29d66fe</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>1bb7b19d-4e7a-4a0a-a3a2-db8d5bc810d2</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>ff2d546f-4e63-442c-a09b-070f3ad77f68</id>
+                        <expressionID>78f1854e-e98d-46a5-96af-df5ff9cfe0fd</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>c3538954-501c-4a2e-a5b5-2018c6c6b8c8</id>
+                        <expressionID>c0858059-655d-41ee-8011-86b2358b500f</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1bb7b19d-4e7a-4a0a-a3a2-db8d5bc810d2</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>78f1854e-e98d-46a5-96af-df5ff9cfe0fd</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>4c69acdf-2dd4-4d5b-9332-dc7524b6079e</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4c69acdf-2dd4-4d5b-9332-dc7524b6079e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"person")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c0858059-655d-41ee-8011-86b2358b500f</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>fd7e3d81-f0a0-4c32-9518-8e98b72104c6</id>
+            <parentID />
+            <source>entrys.personName = entrys.person.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>930a2c00-9166-4a21-a9ef-26a4590a6599</id>
+            <parentID>fd7e3d81-f0a0-4c32-9518-8e98b72104c6</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>6450f59c-c572-4b58-8dfe-987989912521</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6450f59c-c572-4b58-8dfe-987989912521</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"personName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6b12bfc4-e3b1-4542-8c98-92251b660f53</id>
+            <parentID>fd7e3d81-f0a0-4c32-9518-8e98b72104c6</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>f04863bb-1e38-4a95-935a-26831af55d8e</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>9be72d0d-4890-46e6-9275-c8ad4784ae3d</id>
+                        <expressionID>f3e48fa4-9d78-4379-b83b-c0a9cf74ccaf</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>19688d8e-d9c1-4efe-a8ab-6a0c651e4aee</id>
+                        <expressionID>bed8464f-71da-4bd1-be70-8a66d8f35f06</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f04863bb-1e38-4a95-935a-26831af55d8e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f3e48fa4-9d78-4379-b83b-c0a9cf74ccaf</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>8be1e27a-a4c3-4ba0-8541-6f15f84bd8f2</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8be1e27a-a4c3-4ba0-8541-6f15f84bd8f2</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"person")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bed8464f-71da-4bd1-be70-8a66d8f35f06</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>39f716c5-f269-44e6-a56b-0cb5aac0eebb</id>
+            <name>entrys_personnumber_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.app.SocialwelfareRuleSet].actions.action[entrys_personnumber_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.app.SocialwelfareRuleSet].actions.action[entrys_personnumber_ActionInfo].description</description>
+            <expressionID>a7d2c9eb-bbc4-4929-8e5a-b95a9a37f843</expressionID>
+        </action>
+        <action>
+            <id>4d26aebb-70d8-4a40-83c9-3684cecdc8c6</id>
+            <name>entrys_personName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.app.SocialwelfareRuleSet].actions.action[entrys_personName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.app.SocialwelfareRuleSet].actions.action[entrys_personName_ActionInfo].description</description>
+            <expressionID>b311e19a-1b7d-40f4-8130-ff69b29d66fe</expressionID>
+        </action>
+        <action>
+            <id>5e535035-9209-4dc0-9737-78d26dec2d96</id>
+            <name>DEA25SMI</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.app.SocialwelfareRuleSet].actions.action[DEA25SMI].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.app.SocialwelfareRuleSet].actions.action[DEA25SMI].description</description>
+            <expressionID>fd7e3d81-f0a0-4c32-9518-8e98b72104c6</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>DEA25SMI</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.app.SocialwelfareRuleSet].rules.conditionRule[DEA25SMI].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.app.SocialwelfareRuleSet].rules.conditionRule[DEA25SMI].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="5e535035-9209-4dc0-9737-78d26dec2d96" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.SocialwelfareRuleSet].actions.action[DEA25SMI].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.SocialwelfareRuleSet].actions.action[DEA25SMI].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.SocialwelfareRuleSet].actions.action[entrys_personName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.SocialwelfareRuleSet].actions.action[entrys_personName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.SocialwelfareRuleSet].actions.action[entrys_personnumber_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.SocialwelfareRuleSet].actions.action[entrys_personnumber_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.SocialwelfareRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.SocialwelfareRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.SocialwelfareRuleSet].rules.conditionRule[DEA25SMI].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="SetFieldPropEvent0001" />
+            <lang locale="zh_HK" value="SetFieldPropEvent0001" />
+            <lang locale="zh_TW" value="SetFieldPropEvent0001" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.SocialwelfareRuleSet].rules.conditionRule[DEA25SMI].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.SocialwelfareRuleSet].rules.conditionRule[DEA25SMI].extendedProperty.columnName">
+            <lang locale="en_US" value="person" />
+            <lang locale="zh_CN" value="person" />
+            <lang locale="zh_TW" value="person" />
+        </rs>
+    </resource>
+</ruleSet>
+

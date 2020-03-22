@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.salaryvoucher.app</package>
+    <name>PersonRelationRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>55afa3dc-7e29-44fd-90df-3d358c39c907</id>
+            <parentID />
+            <source>EASPersonName=person.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>f2bfa2e9-d29f-4334-9fce-7a04c4f6d246</id>
+            <parentID>55afa3dc-7e29-44fd-90df-3d358c39c907</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>97fdaf1a-27e6-40ee-9865-a35330d017df</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>97fdaf1a-27e6-40ee-9865-a35330d017df</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtEASPersonName</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cb03be79-e229-4889-be7f-5c4ed63bb694</id>
+            <parentID>55afa3dc-7e29-44fd-90df-3d358c39c907</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>6e950826-2a5c-40de-b90d-f136e97cee9a</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>6e4f7015-cbae-46cc-b985-f5a7be2ef29e</id>
+                        <expressionID>f7caa621-3543-4b20-8922-dcd1c9332a96</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>74b6bd1b-bc06-4c5a-a39a-884888a59f09</id>
+                        <expressionID>544ab723-a283-4d76-874a-0f87e12921c7</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6e950826-2a5c-40de-b90d-f136e97cee9a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f7caa621-3543-4b20-8922-dcd1c9332a96</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>dd853eb9-8de4-4859-9462-cf97eddcd0de</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>dd853eb9-8de4-4859-9462-cf97eddcd0de</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtperson</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>544ab723-a283-4d76-874a-0f87e12921c7</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>f7024a66-4dbf-4266-958a-7465cc6d5f8e</id>
+            <parentID />
+            <source>EASPersonNum=person.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>11358dfa-749e-473b-9017-0bc2afe5745d</id>
+            <parentID>f7024a66-4dbf-4266-958a-7465cc6d5f8e</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>10bb2e2f-7dd7-4b28-94db-3f14224578a5</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>10bb2e2f-7dd7-4b28-94db-3f14224578a5</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtEASPersonNum</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>30161a27-e67e-4988-aabb-0e19fa523c03</id>
+            <parentID>f7024a66-4dbf-4266-958a-7465cc6d5f8e</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>4323fbe6-316e-4a7d-a7a2-e8c4be206c92</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>2c3fe95b-cf9a-4584-968f-54ccb2dbc4d0</id>
+                        <expressionID>8f9492fd-28fa-424c-b35e-1bd734ed176e</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>f73a4fc7-ac43-45e0-9c33-aaff50aac05e</id>
+                        <expressionID>e1e28dbf-9ad2-4a5c-a7a7-d4eb6f9f12ac</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4323fbe6-316e-4a7d-a7a2-e8c4be206c92</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8f9492fd-28fa-424c-b35e-1bd734ed176e</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>618c5afc-c343-41c6-8e79-b90cca1f3c56</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>618c5afc-c343-41c6-8e79-b90cca1f3c56</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtperson</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e1e28dbf-9ad2-4a5c-a7a7-d4eb6f9f12ac</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>c03fee63-17e3-4d56-b479-e8430fb62021</id>
+            <parentID />
+            <source>PersonNatureCode=personNature.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>bbd832b6-a64e-458f-a267-93894e43d9be</id>
+            <parentID>c03fee63-17e3-4d56-b479-e8430fb62021</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>f29b5501-005b-4f0b-a00d-fabd30990e01</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f29b5501-005b-4f0b-a00d-fabd30990e01</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtPersonNatureCode</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fa4ce32d-ed9c-424b-a1b5-8afb8a7ec23a</id>
+            <parentID>c03fee63-17e3-4d56-b479-e8430fb62021</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>aedfe8ed-bb86-4b23-84a4-b40deb516485</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>a2f25e45-b3bf-48d0-8246-a59f3023d293</id>
+                        <expressionID>b804dcfd-fcef-45fe-a8a6-f99c3c1065a2</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>2b386b05-9d06-4364-96f2-3a9ff547f1ac</id>
+                        <expressionID>6c589367-0353-454c-a4ef-42b3e909f760</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>aedfe8ed-bb86-4b23-84a4-b40deb516485</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b804dcfd-fcef-45fe-a8a6-f99c3c1065a2</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>1b666f20-5f0e-454b-bd87-5b4c6068d519</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1b666f20-5f0e-454b-bd87-5b4c6068d519</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtpersonNature</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6c589367-0353-454c-a4ef-42b3e909f760</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>bc9616bc-d933-40ae-9cb6-97a58142aaff</id>
+            <parentID />
+            <source>PersonNatureName=personNature.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>a48d6b1f-5ea1-42f1-8372-04e0ef5c6dca</id>
+            <parentID>bc9616bc-d933-40ae-9cb6-97a58142aaff</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>1d8a0978-909d-491b-aac5-e7193ab83e58</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1d8a0978-909d-491b-aac5-e7193ab83e58</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtPersonNatureName</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c185264e-e39d-4003-a369-f3aa71f96165</id>
+            <parentID>bc9616bc-d933-40ae-9cb6-97a58142aaff</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>862f0ce2-6563-4602-98c0-0f8ec0fbb3ff</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>641f9f1d-e21e-4a8d-9274-7057e645ed4b</id>
+                        <expressionID>af0983ff-4935-47f3-9457-fe4de7e5f1b2</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>ff528f60-5a3a-4184-be5e-a420d7121f9c</id>
+                        <expressionID>c1b0ab98-8650-4a29-aa62-74adf2350d1e</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>862f0ce2-6563-4602-98c0-0f8ec0fbb3ff</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>af0983ff-4935-47f3-9457-fe4de7e5f1b2</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>cd1757a4-e1f3-457e-b572-0c97157b63ca</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cd1757a4-e1f3-457e-b572-0c97157b63ca</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtpersonNature</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c1b0ab98-8650-4a29-aa62-74adf2350d1e</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>9b9d4363-fd4f-4853-8232-b89f61d72d71</id>
+            <parentID />
+            <source>EASPersonName=EASperson.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>00615afa-7563-434c-baeb-a94d550c4375</id>
+            <parentID>9b9d4363-fd4f-4853-8232-b89f61d72d71</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>46a9a5d1-0275-4a9b-b829-7e3789c3362f</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>46a9a5d1-0275-4a9b-b829-7e3789c3362f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtEASPersonName</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f419b72f-a5bc-4fd5-912d-22661b9da70a</id>
+            <parentID>9b9d4363-fd4f-4853-8232-b89f61d72d71</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>fe44a1a6-1313-4fb3-a1f7-6dcdbbf2bfa9</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>46bfb851-d5fd-45fc-8bd4-08ccd1089da1</id>
+                        <expressionID>e33afcb7-bb6a-4bbe-b3d4-9b5a46c57e40</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>13884b50-9604-4c34-bfd0-8662d7a94cc2</id>
+                        <expressionID>1cf8ff93-a4c4-4bab-8314-06255ed5abae</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fe44a1a6-1313-4fb3-a1f7-6dcdbbf2bfa9</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e33afcb7-bb6a-4bbe-b3d4-9b5a46c57e40</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>3bf5c110-d8cb-46fc-852b-d4def3753175</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3bf5c110-d8cb-46fc-852b-d4def3753175</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtEASperson</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1cf8ff93-a4c4-4bab-8314-06255ed5abae</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>324b5b0e-5040-4af7-9b42-2df85600c360</id>
+            <parentID />
+            <source>EASPersonNum=EASperson.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>e028a643-61c3-45c2-ae11-9ffcbd1b75f2</id>
+            <parentID>324b5b0e-5040-4af7-9b42-2df85600c360</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>063bfa9a-8276-4f48-ac26-2fd3aa5b2c16</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>063bfa9a-8276-4f48-ac26-2fd3aa5b2c16</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtEASPersonNum</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>443c91b5-8419-44ec-b350-3ebc66109497</id>
+            <parentID>324b5b0e-5040-4af7-9b42-2df85600c360</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>ef3b6315-deb8-4f19-840b-efb45956687e</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>e2d24f9a-d669-4b5e-a479-c6afbf4c89e4</id>
+                        <expressionID>ddbcf08c-5c33-43b9-920e-3421ff959f7b</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>4cdbbbbf-0980-46d5-83e8-4834f9233536</id>
+                        <expressionID>396119a4-0742-442b-a00e-2d39fe0e8c03</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ef3b6315-deb8-4f19-840b-efb45956687e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ddbcf08c-5c33-43b9-920e-3421ff959f7b</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>b220ea05-5548-4875-bb2e-91a92cf9b688</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b220ea05-5548-4875-bb2e-91a92cf9b688</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtEASperson</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>396119a4-0742-442b-a00e-2d39fe0e8c03</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>f0d84c01-1a03-47cb-ba83-8d870b5c38bd</id>
+            <name>PersonRelation_EASPersonName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].actions.action[PersonRelation_EASPersonName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].actions.action[PersonRelation_EASPersonName_ActionInfo].description</description>
+            <expressionID>55afa3dc-7e29-44fd-90df-3d358c39c907</expressionID>
+        </action>
+        <action>
+            <id>208776b5-7a49-4e37-a9f6-6a5fa946f488</id>
+            <name>PersonRelation_EASPersonNum_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].actions.action[PersonRelation_EASPersonNum_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].actions.action[PersonRelation_EASPersonNum_ActionInfo].description</description>
+            <expressionID>f7024a66-4dbf-4266-958a-7465cc6d5f8e</expressionID>
+        </action>
+        <action>
+            <id>28de95ed-72f3-42a7-a54e-7b75959974d5</id>
+            <name>PersonRelation_PersonNatureCode_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].actions.action[PersonRelation_PersonNatureCode_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].actions.action[PersonRelation_PersonNatureCode_ActionInfo].description</description>
+            <expressionID>c03fee63-17e3-4d56-b479-e8430fb62021</expressionID>
+        </action>
+        <action>
+            <id>cf025c28-06cc-44d4-8441-29f63183915f</id>
+            <name>PersonRelation_PersonNatureName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].actions.action[PersonRelation_PersonNatureName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].actions.action[PersonRelation_PersonNatureName_ActionInfo].description</description>
+            <expressionID>bc9616bc-d933-40ae-9cb6-97a58142aaff</expressionID>
+        </action>
+        <action>
+            <id>a3b23d17-c106-4e54-a86a-81612dc153f4</id>
+            <name>PersonRelation_EASPersonName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].actions.action[PersonRelation_EASPersonName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].actions.action[PersonRelation_EASPersonName_ActionInfo].description</description>
+            <expressionID>9b9d4363-fd4f-4853-8232-b89f61d72d71</expressionID>
+        </action>
+        <action>
+            <id>ee706bc4-d3d2-4bde-901b-7a427cda6c57</id>
+            <name>PersonRelation_EASPersonNum_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].actions.action[PersonRelation_EASPersonNum_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].actions.action[PersonRelation_EASPersonNum_ActionInfo].description</description>
+            <expressionID>324b5b0e-5040-4af7-9b42-2df85600c360</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>PersonRelation_PersonNatureCode_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].rules.conditionRule[PersonRelation_PersonNatureCode_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].rules.conditionRule[PersonRelation_PersonNatureCode_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="28de95ed-72f3-42a7-a54e-7b75959974d5" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>PersonRelation_PersonNatureName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].rules.conditionRule[PersonRelation_PersonNatureName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].rules.conditionRule[PersonRelation_PersonNatureName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="cf025c28-06cc-44d4-8441-29f63183915f" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>PersonRelation_EASPersonName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].rules.conditionRule[PersonRelation_EASPersonName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].rules.conditionRule[PersonRelation_EASPersonName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="a3b23d17-c106-4e54-a86a-81612dc153f4" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>PersonRelation_EASPersonNum_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].rules.conditionRule[PersonRelation_EASPersonNum_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].rules.conditionRule[PersonRelation_EASPersonNum_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="ee706bc4-d3d2-4bde-901b-7a427cda6c57" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].actions.action[PersonRelation_EASPersonName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].actions.action[PersonRelation_EASPersonName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].actions.action[PersonRelation_EASPersonNum_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].actions.action[PersonRelation_EASPersonNum_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].actions.action[PersonRelation_PersonNatureCode_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].actions.action[PersonRelation_PersonNatureCode_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].actions.action[PersonRelation_PersonNatureName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].actions.action[PersonRelation_PersonNatureName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].rules.conditionRule[PersonRelation_EASPersonName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].rules.conditionRule[PersonRelation_EASPersonName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].rules.conditionRule[PersonRelation_EASPersonName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="EASperson" />
+            <lang locale="zh_CN" value="EASperson" />
+            <lang locale="zh_TW" value="EASperson" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].rules.conditionRule[PersonRelation_EASPersonName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].rules.conditionRule[PersonRelation_EASPersonNum_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].rules.conditionRule[PersonRelation_EASPersonNum_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].rules.conditionRule[PersonRelation_EASPersonNum_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="EASperson" />
+            <lang locale="zh_CN" value="EASperson" />
+            <lang locale="zh_TW" value="EASperson" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].rules.conditionRule[PersonRelation_EASPersonNum_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].rules.conditionRule[PersonRelation_PersonNatureCode_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].rules.conditionRule[PersonRelation_PersonNatureCode_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].rules.conditionRule[PersonRelation_PersonNatureCode_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="personNature" />
+            <lang locale="zh_CN" value="personNature" />
+            <lang locale="zh_TW" value="personNature" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].rules.conditionRule[PersonRelation_PersonNatureCode_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].rules.conditionRule[PersonRelation_PersonNatureName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].rules.conditionRule[PersonRelation_PersonNatureName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].rules.conditionRule[PersonRelation_PersonNatureName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="personNature" />
+            <lang locale="zh_CN" value="personNature" />
+            <lang locale="zh_TW" value="personNature" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.PersonRelationRuleSet].rules.conditionRule[PersonRelation_PersonNatureName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

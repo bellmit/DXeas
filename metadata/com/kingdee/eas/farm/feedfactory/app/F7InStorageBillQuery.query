@@ -1,0 +1,2726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.feedfactory.app</package>
+    <name>F7InStorageBillQuery</name>
+    <alias>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].alias</alias>
+    <description>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].description</description>
+    <userDefined>true</userDefined>
+    <reportDataSource />
+    <bizUnitPK>com.kingdee.eas.weighbridge.InStorageBill</bizUnitPK>
+    <connectionProvider />
+    <subObjects>
+        <subEntity>
+            <name>InStorageBill</name>
+            <alias>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[InStorageBill].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.weighbridge.app" />
+                <key name="name" value="InStorageBill" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>auditor</name>
+            <alias>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[auditor].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="User" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>creator</name>
+            <alias>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[creator].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="User" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>lastUpdateUser</name>
+            <alias>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[lastUpdateUser].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="User" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>entrys</name>
+            <alias>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[entrys].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.weighbridge.app" />
+                <key name="name" value="InStorageBillEntry" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>handler</name>
+            <alias>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[handler].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="User" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>car</name>
+            <alias>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[car].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.publicdata.app" />
+                <key name="name" value="Car" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>entrys_material</name>
+            <alias>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[entrys_material].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.master.material.app" />
+                <key name="name" value="Material" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>entrys_Unit</name>
+            <alias>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[entrys_Unit].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.assistant.app" />
+                <key name="name" value="MeasureUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>storageOrgUnit</name>
+            <alias>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[storageOrgUnit].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="StorageOrgUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>orderStorageOrgUnit</name>
+            <alias>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[orderStorageOrgUnit].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="StorageOrgUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>weighman</name>
+            <alias>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[weighman].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.person.app" />
+                <key name="name" value="Person" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>supplier</name>
+            <alias>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[supplier].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.master.cssp.app" />
+                <key name="name" value="Supplier" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>company</name>
+            <alias>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[company].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="CompanyOrgUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>orderCompany</name>
+            <alias>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[orderCompany].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="CompanyOrgUnit" />
+            </entityRef>
+        </subEntity>
+    </subObjects>
+    <units>
+        <propertyUnit>
+            <name>NewUnit0</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[NewUnit0].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit0" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="InStorageBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="auditor" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit1</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[NewUnit1].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit1" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="auditor" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit2</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[NewUnit2].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit2" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="InStorageBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="creator" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit3</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[NewUnit3].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit3" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="creator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit4</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[NewUnit4].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit4" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="InStorageBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="lastUpdateUser" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit5</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[NewUnit5].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit5" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="lastUpdateUser" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="InStorageBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>inTime</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[inTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>fe418761-8bbe-47a9-96ae-68511ca9b61e</key>
+                    <parentUnit>
+                        <key name="name" value="inTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="InStorageBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="inTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>entrys.mateiralName</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[entrys.mateiralName].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>4185a5e6-8b3b-49b3-bd25-d226f4d67396</key>
+                    <parentUnit>
+                        <key name="name" value="entrys.mateiralName" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="entrys" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="mateiralName" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>entrys.qty</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[entrys.qty].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>74a447cf-a68c-468f-9625-c77fc548ba25</key>
+                    <parentUnit>
+                        <key name="name" value="entrys.qty" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="entrys" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="qty" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>entrys.tare</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[entrys.tare].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0477aecc-7d2e-4646-92bf-831f3cece2cb</key>
+                    <parentUnit>
+                        <key name="name" value="entrys.tare" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="entrys" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="tare" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>entrys.gross</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[entrys.gross].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>be046f6c-772e-4a09-888a-88b9081cb310</key>
+                    <parentUnit>
+                        <key name="name" value="entrys.gross" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="entrys" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="gross" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>entrys.suttle</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[entrys.suttle].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>a974fb52-2d3c-4c5f-9dfd-149dcd6a0355</key>
+                    <parentUnit>
+                        <key name="name" value="entrys.suttle" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="entrys" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="suttle" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bizDate</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[bizDate].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="bizDate" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="InStorageBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bizDate" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>description</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[description].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="description" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="InStorageBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="description" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>createTime</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[createTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Timestamp</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="createTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="InStorageBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="createTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>creator.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[creator.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="creator.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="creator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>NewUnit7</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[NewUnit7].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit7" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="InStorageBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit6</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[NewUnit6].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit6" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="entrys" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="parent" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit9</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[NewUnit9].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit9" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="InStorageBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="handler" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit8</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[NewUnit8].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit8" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="handler" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>car.number</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[car.number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>17a990ca-cbf8-44a0-8953-d530f8599d1e</key>
+                    <parentUnit>
+                        <key name="name" value="car.number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="car" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>454b790f-7423-46e4-8d41-d20f6dfdd300</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[454b790f-7423-46e4-8d41-d20f6dfdd300].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>1fff1553-eb64-4844-b2b8-18457f4c08c0</key>
+                    <parentUnit>
+                        <key name="name" value="454b790f-7423-46e4-8d41-d20f6dfdd300" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="InStorageBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="car" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>780b1ac5-90ca-40dd-b824-fa937eca04e8</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[780b1ac5-90ca-40dd-b824-fa937eca04e8].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>7a4120cd-d4a3-46b8-896c-41a760381fd8</key>
+                    <parentUnit>
+                        <key name="name" value="780b1ac5-90ca-40dd-b824-fa937eca04e8" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="car" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>67b57ffc-1aaa-4c64-ba85-f6f4a7ecdfdf</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[67b57ffc-1aaa-4c64-ba85-f6f4a7ecdfdf].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>de60410f-90d2-4c5e-b513-fae034ac4eea</key>
+                    <parentUnit>
+                        <key name="name" value="67b57ffc-1aaa-4c64-ba85-f6f4a7ecdfdf" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="entrys" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="material" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>958803b4-49fd-45e0-85a3-5bc98feca393</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[958803b4-49fd-45e0-85a3-5bc98feca393].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>bbefeb0a-5b21-415c-b52a-301807dc7ced</key>
+                    <parentUnit>
+                        <key name="name" value="958803b4-49fd-45e0-85a3-5bc98feca393" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="entrys_material" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>286d549e-4730-4994-8363-b40590d3b9be</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[286d549e-4730-4994-8363-b40590d3b9be].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>e07ecfe9-f08e-42c0-8f93-0da71bffd19b</key>
+                    <parentUnit>
+                        <key name="name" value="286d549e-4730-4994-8363-b40590d3b9be" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="entrys" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="Unit" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>6d8a65c0-a699-479d-94d8-cc2e3ea9910e</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[6d8a65c0-a699-479d-94d8-cc2e3ea9910e].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>80dd6dad-53f3-4986-b06d-0b01da2880fb</key>
+                    <parentUnit>
+                        <key name="name" value="6d8a65c0-a699-479d-94d8-cc2e3ea9910e" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="entrys_Unit" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>storageOrgUnit.name</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[storageOrgUnit.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>498a61fb-d520-4188-bcd6-c8e8d1a9f27a</key>
+                    <parentUnit>
+                        <key name="name" value="storageOrgUnit.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="storageOrgUnit" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>653038a3-613a-428b-9456-6c803ca80646</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[653038a3-613a-428b-9456-6c803ca80646].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>edfce22e-9e54-4e50-9be5-fdce134aef10</key>
+                    <parentUnit>
+                        <key name="name" value="653038a3-613a-428b-9456-6c803ca80646" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="InStorageBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="storageOrgUnit" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>4b650740-75ee-47c1-9d3e-074c12678bac</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[4b650740-75ee-47c1-9d3e-074c12678bac].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>c54eeefc-9d98-4fc1-924e-5612909da331</key>
+                    <parentUnit>
+                        <key name="name" value="4b650740-75ee-47c1-9d3e-074c12678bac" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="storageOrgUnit" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>65f0b9d4-2637-46ac-a63b-da400d71cc1f</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[65f0b9d4-2637-46ac-a63b-da400d71cc1f].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>2f7b1bfc-859d-4ffc-b052-81dbf8201ddc</key>
+                    <parentUnit>
+                        <key name="name" value="65f0b9d4-2637-46ac-a63b-da400d71cc1f" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="InStorageBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="orderStorageOrgUnit" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>60600579-1399-4e99-be0d-5a912ff95ea5</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[60600579-1399-4e99-be0d-5a912ff95ea5].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>d3be5a12-2f62-4386-813f-108886f3358e</key>
+                    <parentUnit>
+                        <key name="name" value="60600579-1399-4e99-be0d-5a912ff95ea5" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="orderStorageOrgUnit" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>623ed300-2afa-4d6a-9355-4c2782e57581</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[623ed300-2afa-4d6a-9355-4c2782e57581].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0f738b4d-e685-4398-8fc9-689cebd4d504</key>
+                    <parentUnit>
+                        <key name="name" value="623ed300-2afa-4d6a-9355-4c2782e57581" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="InStorageBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="weighman" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>d13e1044-d2d7-4bcb-9e43-70fe6013a409</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[d13e1044-d2d7-4bcb-9e43-70fe6013a409].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>e0079a34-801c-484e-8ea2-00781293a519</key>
+                    <parentUnit>
+                        <key name="name" value="d13e1044-d2d7-4bcb-9e43-70fe6013a409" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="weighman" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>bizType</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[bizType].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>5c0ec23f-3a6a-4dca-b43d-fb1d4eca917b</key>
+                    <parentUnit>
+                        <key name="name" value="bizType" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="InStorageBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bizType" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>supplier.name</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[supplier.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>33a5cb9b-b6ec-499d-822a-6992b182d716</key>
+                    <parentUnit>
+                        <key name="name" value="supplier.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="supplier" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>d194449a-1e3f-4754-b610-ec530b854a6a</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[d194449a-1e3f-4754-b610-ec530b854a6a].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>b77329a3-632b-4329-b5ea-d3d9671d8a60</key>
+                    <parentUnit>
+                        <key name="name" value="d194449a-1e3f-4754-b610-ec530b854a6a" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="InStorageBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="supplier" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>1ee5dffe-0976-4984-869c-d403c583749e</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[1ee5dffe-0976-4984-869c-d403c583749e].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>16f02872-7280-48f0-9006-29a97710f99e</key>
+                    <parentUnit>
+                        <key name="name" value="1ee5dffe-0976-4984-869c-d403c583749e" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="supplier" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>storageOrgUnit.id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[storageOrgUnit.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>e2f1465d-96c3-4ae6-ac3f-b9dee1a0be78</key>
+                    <parentUnit>
+                        <key name="name" value="storageOrgUnit.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="storageOrgUnit" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>orderStorageOrgUnit.id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[orderStorageOrgUnit.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>283832c9-8dc0-48e4-8dac-55f755a1adf8</key>
+                    <parentUnit>
+                        <key name="name" value="orderStorageOrgUnit.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="orderStorageOrgUnit" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>billStatus</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[billStatus].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>3b32907b-2f5d-4940-a5b4-2af7c11450c3</key>
+                    <parentUnit>
+                        <key name="name" value="billStatus" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="InStorageBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="billStatus" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>weighType</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[weighType].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>50b9c9e6-3017-4b81-a221-abdcfcd8b93a</key>
+                    <parentUnit>
+                        <key name="name" value="weighType" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="InStorageBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="weighType" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="InStorageBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>e3e92cde-a513-4d31-a603-34abf8307398</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[e3e92cde-a513-4d31-a603-34abf8307398].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>1fa77d06-a8e9-4c43-91d5-e133fb49b1b8</key>
+                    <parentUnit>
+                        <key name="name" value="e3e92cde-a513-4d31-a603-34abf8307398" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="InStorageBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="company" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>74e87ec6-0b95-4ed6-b38e-662e0ac5523a</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[74e87ec6-0b95-4ed6-b38e-662e0ac5523a].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>a07da1e7-2088-4be2-81a6-25d531f45985</key>
+                    <parentUnit>
+                        <key name="name" value="74e87ec6-0b95-4ed6-b38e-662e0ac5523a" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="company" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>17272c64-9a41-459f-b65e-8a080ce94bdb</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[17272c64-9a41-459f-b65e-8a080ce94bdb].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>d4aaee17-84e5-4c9f-bbaa-e64d869669c9</key>
+                    <parentUnit>
+                        <key name="name" value="17272c64-9a41-459f-b65e-8a080ce94bdb" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="InStorageBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="orderCompany" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>8d136d0f-af3a-4781-8341-f64a5bc78f2c</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[8d136d0f-af3a-4781-8341-f64a5bc78f2c].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>d1c29944-dd5d-40d8-9ae8-19c26feb9738</key>
+                    <parentUnit>
+                        <key name="name" value="8d136d0f-af3a-4781-8341-f64a5bc78f2c" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="orderCompany" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>entrys.id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[entrys.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b02b6a3e-9759-4041-8c3d-905e78228f21</key>
+                    <parentUnit>
+                        <key name="name" value="entrys.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="entrys" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>entrys.seq</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[entrys.seq].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>1433899e-9bd9-4a4a-9305-7da228aee504</key>
+                    <parentUnit>
+                        <key name="name" value="entrys.seq" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="entrys" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="seq" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </queryField>
+    </units>
+    <defaultFilter>
+        <name>defaultFilter</name>
+        <formulaString />
+        <query>
+            <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+            <key name="name" value="F7InStorageBillQuery" />
+        </query>
+    </defaultFilter>
+    <defaultSorters>
+        <querySorterItem>
+            <propertyName>number</propertyName>
+            <sortType>ASC</sortType>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+            <configured>false</configured>
+        </querySorterItem>
+    </defaultSorters>
+    <queryPK>
+        <name>QueryPK</name>
+        <alias>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].queryPK[QueryPK].alias</alias>
+        <description>joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].queryPK[QueryPK].description</description>
+        <keyProperties>
+            <queryField>
+                <key name="name" value="id" />
+            </queryField>
+        </keyProperties>
+    </queryPK>
+    <isDistinct>false</isDistinct>
+    <joins>
+        <join>
+            <name>NewJoin0</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="InStorageBill" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="auditor" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>0</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="NewUnit0" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="NewUnit1" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="NewJoin0" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </join>
+        <join>
+            <name>NewJoin1</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="InStorageBill" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="creator" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>0</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="NewUnit2" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="NewUnit3" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="NewJoin1" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </join>
+        <join>
+            <name>NewJoin2</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="InStorageBill" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="lastUpdateUser" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>0</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="NewUnit4" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="NewUnit5" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="NewJoin2" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </join>
+        <join>
+            <name>NewJoin3</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="InStorageBill" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="entrys" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>0</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="NewUnit7" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="NewUnit6" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="NewJoin3" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </join>
+        <join>
+            <name>NewJoin4</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="InStorageBill" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="handler" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>0</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="NewUnit9" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="NewUnit8" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="NewJoin4" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </join>
+        <join>
+            <name>4fe66e34-7955-4c14-b052-d5b1ac498e51</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="InStorageBill" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="car" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>b5635273-c408-4b4b-b555-1bf40eb119f0</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="454b790f-7423-46e4-8d41-d20f6dfdd300" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="780b1ac5-90ca-40dd-b824-fa937eca04e8" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="4fe66e34-7955-4c14-b052-d5b1ac498e51" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </join>
+        <join>
+            <name>88d617d2-e5f6-4e7e-9aae-f0f7960b4f75</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="entrys" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="entrys_material" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>bd7ad40a-0532-4f4a-901f-a3d5a6184758</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="67b57ffc-1aaa-4c64-ba85-f6f4a7ecdfdf" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="958803b4-49fd-45e0-85a3-5bc98feca393" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="88d617d2-e5f6-4e7e-9aae-f0f7960b4f75" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </join>
+        <join>
+            <name>52bb2762-7ac2-4b40-9080-372950f730bd</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="entrys" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="entrys_Unit" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>efe31367-365a-4163-a0a3-8e419531532a</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="286d549e-4730-4994-8363-b40590d3b9be" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="6d8a65c0-a699-479d-94d8-cc2e3ea9910e" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="52bb2762-7ac2-4b40-9080-372950f730bd" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </join>
+        <join>
+            <name>0737efa7-c5e4-4b84-92a7-09e8ffced660</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="InStorageBill" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="storageOrgUnit" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>b9f9b460-0003-439d-ac34-5423c113efe4</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="653038a3-613a-428b-9456-6c803ca80646" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="4b650740-75ee-47c1-9d3e-074c12678bac" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="0737efa7-c5e4-4b84-92a7-09e8ffced660" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </join>
+        <join>
+            <name>31d01caa-5b0e-4854-bc2c-ae118e0756d2</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="InStorageBill" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="orderStorageOrgUnit" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>deb8f538-cade-424c-8721-2bdd0a639ccc</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="65f0b9d4-2637-46ac-a63b-da400d71cc1f" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="60600579-1399-4e99-be0d-5a912ff95ea5" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="31d01caa-5b0e-4854-bc2c-ae118e0756d2" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </join>
+        <join>
+            <name>6722eea9-0f07-4735-acd2-9abbefe66bc6</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="InStorageBill" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="weighman" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>4287b20b-949f-40a1-9f6c-56f044c161f1</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="623ed300-2afa-4d6a-9355-4c2782e57581" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="d13e1044-d2d7-4bcb-9e43-70fe6013a409" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="6722eea9-0f07-4735-acd2-9abbefe66bc6" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </join>
+        <join>
+            <name>535e88a9-f6ac-421b-89ed-701c1c19790e</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="InStorageBill" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="supplier" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>d7ac0806-4369-4e52-b963-a6dc764454db</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="d194449a-1e3f-4754-b610-ec530b854a6a" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="1ee5dffe-0976-4984-869c-d403c583749e" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="535e88a9-f6ac-421b-89ed-701c1c19790e" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </join>
+        <join>
+            <name>f04d5c9e-947f-44e5-acf4-4a0a5efb8352</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="InStorageBill" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="company" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>5b7917dc-b77a-4044-b888-2780d04261e5</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="e3e92cde-a513-4d31-a603-34abf8307398" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="74e87ec6-0b95-4ed6-b38e-662e0ac5523a" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="f04d5c9e-947f-44e5-acf4-4a0a5efb8352" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </join>
+        <join>
+            <name>5fa93b12-212a-499f-9aaf-2f35693c4fe2</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="InStorageBill" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="orderCompany" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>967e6310-d07b-4920-9182-38562a440fb1</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="17272c64-9a41-459f-b65e-8a080ce94bdb" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="8d136d0f-af3a-4781-8341-f64a5bc78f2c" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="5fa93b12-212a-499f-9aaf-2f35693c4fe2" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="F7InStorageBillQuery" />
+            </query>
+        </join>
+    </joins>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="入库过榜单" />
+            <lang locale="zh_TW" value="入庫過榜單" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].defaultSorters.querySorterItemextendedProperty.f7WindowTitle">
+            <lang locale="en_US" value="多分录基础单据模板" />
+            <lang locale="zh_CN" value="多分录基础单据模板" />
+            <lang locale="zh_TW" value="多分录基础单据模板" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="多分录基础单据查询" />
+            <lang locale="zh_TW" value="多分錄基礎單據查詢" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].extendedProperty.F7WindowTitle">
+            <lang locale="en_US" value="com.kingdee.eas.weighbridge.client.WeighbridgeResource.InStorageBillQueryF7WindowTitle" />
+            <lang locale="zh_CN" value="com.kingdee.eas.weighbridge.client.WeighbridgeResource.InStorageBillQueryF7WindowTitle" />
+            <lang locale="zh_TW" value="com.kingdee.eas.weighbridge.client.WeighbridgeResource.InStorageBillQueryF7WindowTitle" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].extendedProperty.f7WindowTitle">
+            <lang locale="en_US" value="入库过榜单" />
+            <lang locale="zh_CN" value="入库过榜单" />
+            <lang locale="zh_TW" value="入库过榜单" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].queryPK[QueryPK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].queryPK[QueryPK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[InStorageBill].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[auditor].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[car].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[company].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[creator].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[entrys].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[entrys_Unit].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[entrys_material].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[handler].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[lastUpdateUser].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[orderCompany].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[orderStorageOrgUnit].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[storageOrgUnit].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[supplier].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].subObjects.subEntity[weighman].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[17272c64-9a41-459f-b65e-8a080ce94bdb].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[1ee5dffe-0976-4984-869c-d403c583749e].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[286d549e-4730-4994-8363-b40590d3b9be].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[454b790f-7423-46e4-8d41-d20f6dfdd300].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[4b650740-75ee-47c1-9d3e-074c12678bac].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[60600579-1399-4e99-be0d-5a912ff95ea5].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[623ed300-2afa-4d6a-9355-4c2782e57581].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[653038a3-613a-428b-9456-6c803ca80646].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[65f0b9d4-2637-46ac-a63b-da400d71cc1f].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[67b57ffc-1aaa-4c64-ba85-f6f4a7ecdfdf].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[6d8a65c0-a699-479d-94d8-cc2e3ea9910e].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[74e87ec6-0b95-4ed6-b38e-662e0ac5523a].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[780b1ac5-90ca-40dd-b824-fa937eca04e8].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[8d136d0f-af3a-4781-8341-f64a5bc78f2c].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[958803b4-49fd-45e0-85a3-5bc98feca393].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[NewUnit0].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[NewUnit1].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[NewUnit2].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[NewUnit3].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[NewUnit4].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[NewUnit5].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[NewUnit6].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[NewUnit7].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[NewUnit8].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[NewUnit9].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[d13e1044-d2d7-4bcb-9e43-70fe6013a409].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[d194449a-1e3f-4754-b610-ec530b854a6a].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.propertyUnit[e3e92cde-a513-4d31-a603-34abf8307398].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[billStatus].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据状态" />
+            <lang locale="zh_TW" value="單據狀態" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[billStatus].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[billStatus].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[bizDate].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务日期" />
+            <lang locale="zh_TW" value="業務日期" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[bizDate].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[bizDate].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[bizType].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务类型" />
+            <lang locale="zh_TW" value="業務類型" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[bizType].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[bizType].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[car.number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="车辆" />
+            <lang locale="zh_TW" value="車輛" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[car.number].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[car.number].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[car.number].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[createTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建时间" />
+            <lang locale="zh_TW" value="創建時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[createTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[createTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[creator.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="别名" />
+            <lang locale="zh_TW" value="別名" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[description].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="参考信息" />
+            <lang locale="zh_TW" value="參考信息" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[description].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[description].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[entrys.gross].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="毛重" />
+            <lang locale="zh_TW" value="毛重" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[entrys.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[entrys.id].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[entrys.mateiralName].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="物料名称" />
+            <lang locale="zh_TW" value="物料名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[entrys.qty].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="重量" />
+            <lang locale="zh_TW" value="重量" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[entrys.seq].displayName">
+            <lang locale="en_US" value="sequence" />
+            <lang locale="zh_CN" value="单据分录序列号" />
+            <lang locale="zh_TW" value="單據分錄序列號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[entrys.seq].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[entrys.suttle].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="净重" />
+            <lang locale="zh_TW" value="淨重" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[entrys.tare].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="皮重" />
+            <lang locale="zh_TW" value="皮重" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[id].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[inTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="入场时间" />
+            <lang locale="zh_TW" value="入場時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[inTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[inTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据编号" />
+            <lang locale="zh_TW" value="單據編號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[number].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[number].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[orderStorageOrgUnit.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[orderStorageOrgUnit.id].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[storageOrgUnit.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[storageOrgUnit.id].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[storageOrgUnit.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="库存组织" />
+            <lang locale="zh_TW" value="庫存組織" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[storageOrgUnit.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[storageOrgUnit.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[storageOrgUnit.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[supplier.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="供应商" />
+            <lang locale="zh_TW" value="供應商" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[supplier.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[supplier.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[supplier.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[weighType].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="过磅方式" />
+            <lang locale="zh_TW" value="過磅方式" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[weighType].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.F7InStorageBillQuery].units.queryField[weighType].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</joinQuery>
+

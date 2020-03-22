@@ -1,0 +1,1291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.hatch.app</package>
+    <name>BEggCandlingBillRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>5380a418-4b4f-4153-b257-6d2e1235491c</id>
+            <parentID />
+            <source>[EggEntries.eggQty] = [EggEntries.qc1lv1Qty] + [EggEntries.qc1lv2Qty] + [EggEntries.qc2lv1Qty] + [EggEntries.qc2lv2Qty] + [EggEntries.qc3lv1Qty] + [EggEntries.qc4lv1Qty] + [EggEntries.qc5lv1Qty] + [EggEntries.qc6lv1Qty]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>1419f556-3648-49be-8adf-9c44fcf83957</id>
+            <parentID>5380a418-4b4f-4153-b257-6d2e1235491c</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Integer</valueType>
+            <value />
+            <property>
+                <ownerID>5ef8a82c-b4db-47d3-93f3-377f8ee5555b</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5ef8a82c-b4db-47d3-93f3-377f8ee5555b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEggEntries.getCell(rowIndex,"eggQty")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>9d887e45-c567-412a-885a-e99092a7dd31</id>
+            <parentID>5380a418-4b4f-4153-b257-6d2e1235491c</parentID>
+            <source />
+            <operator>+</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>b156552b-7714-454c-8d87-54dc38f5c3a5</id>
+            <parentID>9d887e45-c567-412a-885a-e99092a7dd31</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Integer</valueType>
+            <value />
+            <property>
+                <ownerID>8b867e05-433e-4e4c-8ac5-eff8d90b1505</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8b867e05-433e-4e4c-8ac5-eff8d90b1505</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEggEntries.getCell(rowIndex,"qc1lv1Qty")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>67c0b7c2-32dd-4943-b657-19a5ea0d79d7</id>
+            <parentID>9d887e45-c567-412a-885a-e99092a7dd31</parentID>
+            <source />
+            <operator>+</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>f068b024-8c92-4a6e-9da6-8a3b141c6309</id>
+            <parentID>67c0b7c2-32dd-4943-b657-19a5ea0d79d7</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Integer</valueType>
+            <value />
+            <property>
+                <ownerID>cc9a8a86-ee9f-40dd-a95a-28b2d97e888d</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cc9a8a86-ee9f-40dd-a95a-28b2d97e888d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEggEntries.getCell(rowIndex,"qc1lv2Qty")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>8ad29195-8d85-4c87-984e-efc812dc0c68</id>
+            <parentID>67c0b7c2-32dd-4943-b657-19a5ea0d79d7</parentID>
+            <source />
+            <operator>+</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>f1d91ecf-3887-4787-9750-67fb81304e05</id>
+            <parentID>8ad29195-8d85-4c87-984e-efc812dc0c68</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Integer</valueType>
+            <value />
+            <property>
+                <ownerID>f9e2da41-7d5a-438c-8d8b-cd7db070dc50</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f9e2da41-7d5a-438c-8d8b-cd7db070dc50</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEggEntries.getCell(rowIndex,"qc2lv1Qty")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>2e3650d7-4c23-410b-b121-1ed76f0f310a</id>
+            <parentID>8ad29195-8d85-4c87-984e-efc812dc0c68</parentID>
+            <source />
+            <operator>+</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>dc23078c-1ddd-4d7a-808b-87022432f273</id>
+            <parentID>2e3650d7-4c23-410b-b121-1ed76f0f310a</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Integer</valueType>
+            <value />
+            <property>
+                <ownerID>fb6f909f-c81a-40ac-a046-2b4337c06a81</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fb6f909f-c81a-40ac-a046-2b4337c06a81</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEggEntries.getCell(rowIndex,"qc2lv2Qty")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>e4189152-3cc7-4e60-9267-80b44c4ffc83</id>
+            <parentID>2e3650d7-4c23-410b-b121-1ed76f0f310a</parentID>
+            <source />
+            <operator>+</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>f4cea1d4-6512-461e-a8b1-749f4ef907c7</id>
+            <parentID>e4189152-3cc7-4e60-9267-80b44c4ffc83</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Integer</valueType>
+            <value />
+            <property>
+                <ownerID>7044a099-2932-438e-9516-84de9c5d6161</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7044a099-2932-438e-9516-84de9c5d6161</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEggEntries.getCell(rowIndex,"qc3lv1Qty")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>ac8470c6-07ec-493e-a382-ea4790802300</id>
+            <parentID>e4189152-3cc7-4e60-9267-80b44c4ffc83</parentID>
+            <source />
+            <operator>+</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>3001c97e-a776-41d5-98b5-81a48aa3e15b</id>
+            <parentID>ac8470c6-07ec-493e-a382-ea4790802300</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Integer</valueType>
+            <value />
+            <property>
+                <ownerID>ac1d67bd-a73b-446d-8323-4a179fc6b03e</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ac1d67bd-a73b-446d-8323-4a179fc6b03e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEggEntries.getCell(rowIndex,"qc4lv1Qty")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>6b7202d7-dfb2-45cd-8f84-0c5ff67638c3</id>
+            <parentID>ac8470c6-07ec-493e-a382-ea4790802300</parentID>
+            <source />
+            <operator>+</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>6c7bc97d-7c2d-4aee-bf7d-1b3a8c013bb9</id>
+            <parentID>6b7202d7-dfb2-45cd-8f84-0c5ff67638c3</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Integer</valueType>
+            <value />
+            <property>
+                <ownerID>52b2eea5-f08a-4b51-b4f9-30d43ddc4191</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>52b2eea5-f08a-4b51-b4f9-30d43ddc4191</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEggEntries.getCell(rowIndex,"qc5lv1Qty")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>50143db2-8a78-4059-a57b-641809f3542a</id>
+            <parentID>6b7202d7-dfb2-45cd-8f84-0c5ff67638c3</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Integer</valueType>
+            <value />
+            <property>
+                <ownerID>e351d48f-b0e7-4ac3-a690-d97adb2733e5</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e351d48f-b0e7-4ac3-a690-d97adb2733e5</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEggEntries.getCell(rowIndex,"qc6lv1Qty")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>aca4414d-03dd-4ee4-90e1-903eb2e7f807</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>5c47aa59-7565-441b-90fc-b82fdbfc6a4f</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>1a731770-f2fb-4566-8c7f-2ed450c4a316</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>588fa500-59fe-4e49-b3c8-d2b874eab0e3</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>f8fb23b1-0c5c-4950-8e4b-17c3942358d4</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>7228508f-11e8-4955-9fcb-83f8ad96b14d</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>d3c916bf-bc1f-4679-9126-22d9f1ea628c</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>a29b6b4b-401f-4466-8828-c0b9d1127f10</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <groupExpression>
+            <id>276baa31-f34e-462e-8219-60e058161593</id>
+            <parentID />
+            <source>EggEntries.outArea = EggEntries.farmer.treeid</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>4abcdcb2-988d-43a1-8d84-3eb4bc05a21f</id>
+            <parentID>276baa31-f34e-462e-8219-60e058161593</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType />
+            <value />
+            <property>
+                <ownerID>7738d8b0-0d3d-4477-a0c4-dd3319034a7c</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7738d8b0-0d3d-4477-a0c4-dd3319034a7c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEggEntries.getCell(rowIndex,"outArea")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e022eb81-0292-46d1-9afb-dc4e07982975</id>
+            <parentID>276baa31-f34e-462e-8219-60e058161593</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType />
+            <value />
+            <method>
+                <ownerID>e440a50e-9c95-4eb5-8351-ff4678b38391</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>257a86d3-2a1a-4ab0-b3a3-19a241aca6f1</id>
+                        <expressionID>ce16aeae-7e90-4042-8807-2c6c4864fae4</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>807a678a-2aaa-406b-b184-6f9f3761cc0d</id>
+                        <expressionID>6d164b0d-3c40-4a80-be0e-be635fbe737f</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e440a50e-9c95-4eb5-8351-ff4678b38391</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ce16aeae-7e90-4042-8807-2c6c4864fae4</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>6806b94f-ae22-4967-9185-0fc7d8d7154c</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6806b94f-ae22-4967-9185-0fc7d8d7154c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEggEntries.getCell(rowIndex,"farmer")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6d164b0d-3c40-4a80-be0e-be635fbe737f</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>treeid</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>20939344-7e83-4068-a17c-54910e95fc40</id>
+            <name>D0L0MAJ8</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0MAJ8].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0MAJ8].description</description>
+            <expressionID>5380a418-4b4f-4153-b257-6d2e1235491c</expressionID>
+        </action>
+        <action>
+            <id>ff2fe4d4-3416-4a1d-b0e4-1d51618a7e8a</id>
+            <name>D0L0MAJM</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0MAJM].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0MAJM].description</description>
+            <expressionID>aca4414d-03dd-4ee4-90e1-903eb2e7f807</expressionID>
+        </action>
+        <action>
+            <id>ed3876a6-7d7e-4745-b399-20813055c139</id>
+            <name>D0L0N9K0</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0N9K0].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0N9K0].description</description>
+            <expressionID>5c47aa59-7565-441b-90fc-b82fdbfc6a4f</expressionID>
+        </action>
+        <action>
+            <id>2e7100a1-88fd-4b85-8c54-44ac9932c688</id>
+            <name>D0L0NKAW</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0NKAW].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0NKAW].description</description>
+            <expressionID>1a731770-f2fb-4566-8c7f-2ed450c4a316</expressionID>
+        </action>
+        <action>
+            <id>bb922a34-0f12-4687-ab75-8fc34c49f1d5</id>
+            <name>D0L0NS_I</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0NS_I].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0NS_I].description</description>
+            <expressionID>588fa500-59fe-4e49-b3c8-d2b874eab0e3</expressionID>
+        </action>
+        <action>
+            <id>8af29830-e208-4210-b6cc-8795a8a6f583</id>
+            <name>D0L0N_WE</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0N_WE].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0N_WE].description</description>
+            <expressionID>f8fb23b1-0c5c-4950-8e4b-17c3942358d4</expressionID>
+        </action>
+        <action>
+            <id>abb112d9-1181-465e-99c3-8cfbd6d4b054</id>
+            <name>D0L0O6BU</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0O6BU].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0O6BU].description</description>
+            <expressionID>7228508f-11e8-4955-9fcb-83f8ad96b14d</expressionID>
+        </action>
+        <action>
+            <id>16309792-3d3a-44a7-89e3-6d5056ab8c4c</id>
+            <name>D0L0OE7$</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0OE7$].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0OE7$].description</description>
+            <expressionID>d3c916bf-bc1f-4679-9126-22d9f1ea628c</expressionID>
+        </action>
+        <action>
+            <id>b6a5f437-4ed9-4d83-8aa7-044a2ed03911</id>
+            <name>D0L0OLLO</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0OLLO].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0OLLO].description</description>
+            <expressionID>a29b6b4b-401f-4466-8828-c0b9d1127f10</expressionID>
+        </action>
+        <action>
+            <id>0527472f-ffa2-40be-a231-d315ce83d461</id>
+            <name>EggEntries_outArea_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[EggEntries_outArea_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[EggEntries_outArea_ActionInfo].description</description>
+            <expressionID>276baa31-f34e-462e-8219-60e058161593</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>BEggCandlingBillD0LJ1_09</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[BEggCandlingBillD0LJ1_09].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[BEggCandlingBillD0LJ1_09].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="0527472f-ffa2-40be-a231-d315ce83d461" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>D0L0N3$H</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0N3$H].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0N3$H].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+            </actions>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="ff2fe4d4-3416-4a1d-b0e4-1d51618a7e8a" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+        <conditionRule>
+            <name>D0L0NDF0</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0NDF0].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0NDF0].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+            </actions>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="ed3876a6-7d7e-4745-b399-20813055c139" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+        <conditionRule>
+            <name>D0L0NMFG</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0NMFG].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0NMFG].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+            </actions>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="2e7100a1-88fd-4b85-8c54-44ac9932c688" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+        <conditionRule>
+            <name>D0L0NU$P</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0NU$P].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0NU$P].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+            </actions>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="bb922a34-0f12-4687-ab75-8fc34c49f1d5" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+        <conditionRule>
+            <name>D0L0O0U1</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0O0U1].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0O0U1].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+            </actions>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="8af29830-e208-4210-b6cc-8795a8a6f583" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+        <conditionRule>
+            <name>D0L0O84J</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0O84J].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0O84J].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+            </actions>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="abb112d9-1181-465e-99c3-8cfbd6d4b054" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+        <conditionRule>
+            <name>D0L0OG35</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0OG35].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0OG35].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+            </actions>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="16309792-3d3a-44a7-89e3-6d5056ab8c4c" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+        <conditionRule>
+            <name>D0L0ONJY</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0ONJY].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0ONJY].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+                <action>
+                    <key name="id" value="20939344-7e83-4068-a17c-54910e95fc40" />
+                </action>
+            </actions>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="b6a5f437-4ed9-4d83-8aa7-044a2ed03911" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0MAJ8].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算总数量" />
+            <lang locale="zh_HK" value="計算總數量" />
+            <lang locale="zh_TW" value="計算總數量" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0MAJ8].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0MAJM].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0MAJM].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0N9K0].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0N9K0].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0NKAW].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0NKAW].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0NS_I].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0NS_I].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0N_WE].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0N_WE].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0O6BU].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0O6BU].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0OE7$].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0OE7$].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0OLLO].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[D0L0OLLO].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[EggEntries_outArea_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_treeid" />
+            <lang locale="zh_HK" value="攜帶字段屬性_treeid" />
+            <lang locale="zh_TW" value="攜帶字段屬性_treeid" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].actions.action[EggEntries_outArea_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[BEggCandlingBillD0LJ1_09].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_treeid" />
+            <lang locale="zh_HK" value="攜帶字段屬性_treeid" />
+            <lang locale="zh_TW" value="攜帶字段屬性_treeid" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[BEggCandlingBillD0LJ1_09].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[BEggCandlingBillD0LJ1_09].extendedProperty.columnName">
+            <lang locale="en_US" value="farmer" />
+            <lang locale="zh_CN" value="farmer" />
+            <lang locale="zh_TW" value="farmer" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[BEggCandlingBillD0LJ1_09].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0N3$H].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="CalculateEvent0001" />
+            <lang locale="zh_HK" value="CalculateEvent0001" />
+            <lang locale="zh_TW" value="CalculateEvent0001" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0N3$H].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0N3$H].extendedProperty.columnName">
+            <lang locale="en_US" value="qc1lv1Qty" />
+            <lang locale="zh_CN" value="qc1lv1Qty" />
+            <lang locale="zh_TW" value="qc1lv1Qty" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0NDF0].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="CalculateEvent0002" />
+            <lang locale="zh_HK" value="CalculateEvent0002" />
+            <lang locale="zh_TW" value="CalculateEvent0002" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0NDF0].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0NDF0].extendedProperty.columnName">
+            <lang locale="en_US" value="qc1lv2Qty" />
+            <lang locale="zh_CN" value="qc1lv2Qty" />
+            <lang locale="zh_TW" value="qc1lv2Qty" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0NMFG].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="CalculateEvent0003" />
+            <lang locale="zh_HK" value="CalculateEvent0003" />
+            <lang locale="zh_TW" value="CalculateEvent0003" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0NMFG].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0NMFG].extendedProperty.columnName">
+            <lang locale="en_US" value="qc2lv1Qty" />
+            <lang locale="zh_CN" value="qc2lv1Qty" />
+            <lang locale="zh_TW" value="qc2lv1Qty" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0NU$P].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="CalculateEvent0004" />
+            <lang locale="zh_HK" value="CalculateEvent0004" />
+            <lang locale="zh_TW" value="CalculateEvent0004" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0NU$P].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0NU$P].extendedProperty.columnName">
+            <lang locale="en_US" value="qc2lv2Qty" />
+            <lang locale="zh_CN" value="qc2lv2Qty" />
+            <lang locale="zh_TW" value="qc2lv2Qty" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0O0U1].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="CalculateEvent0005" />
+            <lang locale="zh_HK" value="CalculateEvent0005" />
+            <lang locale="zh_TW" value="CalculateEvent0005" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0O0U1].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0O0U1].extendedProperty.columnName">
+            <lang locale="en_US" value="qc3lv1Qty" />
+            <lang locale="zh_CN" value="qc3lv1Qty" />
+            <lang locale="zh_TW" value="qc3lv1Qty" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0O84J].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="CalculateEvent0006" />
+            <lang locale="zh_HK" value="CalculateEvent0006" />
+            <lang locale="zh_TW" value="CalculateEvent0006" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0O84J].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0O84J].extendedProperty.columnName">
+            <lang locale="en_US" value="qc4lv1Qty" />
+            <lang locale="zh_CN" value="qc4lv1Qty" />
+            <lang locale="zh_TW" value="qc4lv1Qty" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0OG35].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="CalculateEvent0007" />
+            <lang locale="zh_HK" value="CalculateEvent0007" />
+            <lang locale="zh_TW" value="CalculateEvent0007" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0OG35].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0OG35].extendedProperty.columnName">
+            <lang locale="en_US" value="qc5lv1Qty" />
+            <lang locale="zh_CN" value="qc5lv1Qty" />
+            <lang locale="zh_TW" value="qc5lv1Qty" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0ONJY].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="CalculateEvent0008" />
+            <lang locale="zh_HK" value="CalculateEvent0008" />
+            <lang locale="zh_TW" value="CalculateEvent0008" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0ONJY].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.BEggCandlingBillRuleSet].rules.conditionRule[D0L0ONJY].extendedProperty.columnName">
+            <lang locale="en_US" value="qc6lv1Qty" />
+            <lang locale="zh_CN" value="qc6lv1Qty" />
+            <lang locale="zh_TW" value="qc6lv1Qty" />
+        </rs>
+    </resource>
+</ruleSet>
+

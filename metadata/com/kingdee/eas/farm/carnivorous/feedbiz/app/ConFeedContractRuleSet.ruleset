@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.carnivorous.feedbiz.app</package>
+    <name>ConFeedContractRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>4c74bf19-3c4a-4b19-a770-1e0ef83c450c</id>
+            <parentID />
+            <source>header=farm.theHeader</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>eddc4a91-9760-44c7-b497-dbe3e5ae8c7f</id>
+            <parentID>4c74bf19-3c4a-4b19-a770-1e0ef83c450c</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>ee790020-fd80-41e5-ba91-114402bbca4c</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ee790020-fd80-41e5-ba91-114402bbca4c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtheader</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3ab6b791-94d1-43d1-a4a7-3e0008ba2cbc</id>
+            <parentID>4c74bf19-3c4a-4b19-a770-1e0ef83c450c</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>3505f2ba-b233-448e-988a-abb7a2f2c80e</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>73612424-bd25-45cf-9f61-34bc02d00e4a</id>
+                        <expressionID>8594a8f4-1a91-4bda-a5ba-a78eef53b57e</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>7b1eace1-2c80-4164-9773-1fa287fd3710</id>
+                        <expressionID>94480b23-46b9-486e-b45e-f1696ad139bd</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3505f2ba-b233-448e-988a-abb7a2f2c80e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8594a8f4-1a91-4bda-a5ba-a78eef53b57e</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>f4610ab6-6614-4d0e-a72c-71325e9cdae1</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f4610ab6-6614-4d0e-a72c-71325e9cdae1</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtfarm</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>94480b23-46b9-486e-b45e-f1696ad139bd</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>theHeader</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>3cec514b-85b8-4b20-828f-c2ae2f297e19</id>
+            <parentID />
+            <source>capacity=farm.capacity</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>e29e8f35-59c2-47a5-9b9f-8144a19fe720</id>
+            <parentID>3cec514b-85b8-4b20-828f-c2ae2f297e19</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>c0908b6a-6004-4f78-bfd7-959147b9206c</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c0908b6a-6004-4f78-bfd7-959147b9206c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtcapacity</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c2e99a95-46f5-418f-8774-4a17d74e1fdf</id>
+            <parentID>3cec514b-85b8-4b20-828f-c2ae2f297e19</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>894011f3-a139-4367-a476-e7d301c85c49</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>1ad572cf-de8a-4d7f-a29f-db779ffbdd99</id>
+                        <expressionID>e55a73bc-a6a2-4088-9151-5f95f638947b</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>c1f6d58d-5a35-4189-88d9-c651110719e1</id>
+                        <expressionID>13d12d83-60eb-4634-b08f-7bc5230831fc</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>894011f3-a139-4367-a476-e7d301c85c49</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e55a73bc-a6a2-4088-9151-5f95f638947b</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>da7388cb-33cd-4faa-96f6-9239fb1f7970</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>da7388cb-33cd-4faa-96f6-9239fb1f7970</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtfarm</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>13d12d83-60eb-4634-b08f-7bc5230831fc</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>capacity</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>86a87694-beda-4eac-8c11-5435e15c2e90</id>
+            <parentID />
+            <source>identity=farmer.identity</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>8541be27-8f36-4a87-a2d2-d8cb50cb9f18</id>
+            <parentID>86a87694-beda-4eac-8c11-5435e15c2e90</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>4ad1f812-5586-46b0-a335-a07c6f1b071e</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4ad1f812-5586-46b0-a335-a07c6f1b071e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtidentity</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>97811758-4f39-4e9f-b1f1-5bfda0c689e8</id>
+            <parentID>86a87694-beda-4eac-8c11-5435e15c2e90</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>7aea0e0c-c5f0-452f-96fb-5e3b068fac8a</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>3c4787ec-f1da-4315-9224-dcaddb147d27</id>
+                        <expressionID>770a4213-0db4-414d-b1ff-49bcfdf13fcc</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>c8196b18-9fca-4331-b3cb-03613f5074c5</id>
+                        <expressionID>abb49b87-3742-483b-b497-69d54ac94348</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7aea0e0c-c5f0-452f-96fb-5e3b068fac8a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>770a4213-0db4-414d-b1ff-49bcfdf13fcc</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>bc5b7b17-bce7-40ac-9b85-634895946358</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bc5b7b17-bce7-40ac-9b85-634895946358</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtfarmer</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>abb49b87-3742-483b-b497-69d54ac94348</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>identity</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>8d922648-81d5-4e6c-b021-7eba72e0f102</id>
+            <parentID />
+            <source>farmAddress=farm.address</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>de11909b-7dce-4392-8a84-9af4bbf252bc</id>
+            <parentID>8d922648-81d5-4e6c-b021-7eba72e0f102</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>4fabe6ca-7468-445e-8bf8-76658b140cd8</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4fabe6ca-7468-445e-8bf8-76658b140cd8</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtfarmAddress</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f2cf4016-ab9b-4aec-8bbf-b5989c40a1ae</id>
+            <parentID>8d922648-81d5-4e6c-b021-7eba72e0f102</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>7a0070ce-98fe-43ab-bc3d-aa03cfdbe493</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>c5233acc-5e49-4411-9df5-160a3366fdca</id>
+                        <expressionID>b21cb321-2b65-4bbf-98bb-62afda50168d</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>5fac6cb0-955b-4dbe-b408-3708431e7828</id>
+                        <expressionID>c7e91c13-4c2b-46e7-bb56-0d9f2bb9982f</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7a0070ce-98fe-43ab-bc3d-aa03cfdbe493</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b21cb321-2b65-4bbf-98bb-62afda50168d</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>a086a4c2-c8ec-49b4-8217-dbbf12a7f567</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a086a4c2-c8ec-49b4-8217-dbbf12a7f567</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtfarm</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c7e91c13-4c2b-46e7-bb56-0d9f2bb9982f</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>address</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>f1ba9eb4-039e-4130-8e1a-b17e0b5393f3</id>
+            <parentID />
+            <source>PolicyEntry.subsidyType=PolicyEntry.confeedPolicy.subsidyType</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>77db2a17-26f8-4f7d-8635-c3af5cc82bea</id>
+            <parentID>f1ba9eb4-039e-4130-8e1a-b17e0b5393f3</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>98b9ef5c-769b-4f1f-98e3-f5f6c9195f47</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>98b9ef5c-769b-4f1f-98e3-f5f6c9195f47</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPolicyEntry.getCell(rowIndex,"subsidyType")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>87aab6df-cfc0-4fb9-9e04-d1cd52c3b9d3</id>
+            <parentID>f1ba9eb4-039e-4130-8e1a-b17e0b5393f3</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Enum</valueType>
+            <value />
+            <method>
+                <ownerID>a7a94d72-a8d3-4416-9df8-68cdcaec4bcb</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>9a073160-784c-4c55-a906-da8619d99447</id>
+                        <expressionID>1a352937-36fb-4e05-9f0e-423a0c4f4438</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>ee397b89-2db4-4921-85e3-dc26852776af</id>
+                        <expressionID>410c13e1-3866-470b-b5e7-5b9529939cf5</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a7a94d72-a8d3-4416-9df8-68cdcaec4bcb</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1a352937-36fb-4e05-9f0e-423a0c4f4438</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>b6271426-046c-481d-958e-36196f75f2dc</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b6271426-046c-481d-958e-36196f75f2dc</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtPolicyEntry.getCell(rowIndex,"confeedPolicy")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>410c13e1-3866-470b-b5e7-5b9529939cf5</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>subsidyType</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>f2e6380b-be92-4dc3-89cf-296a89e94aab</id>
+            <parentID />
+            <source>PolicyEntry.subsidy=PolicyEntry.confeedPolicy.subsidy</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>fd8322f7-672e-4884-ba16-939d524cfedb</id>
+            <parentID>f2e6380b-be92-4dc3-89cf-296a89e94aab</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>7a2f7c6c-714a-4eb0-87b9-c0e27ae2d59c</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7a2f7c6c-714a-4eb0-87b9-c0e27ae2d59c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPolicyEntry.getCell(rowIndex,"subsidy")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6505f63c-2588-4b18-9a47-8f4e97e10b21</id>
+            <parentID>f2e6380b-be92-4dc3-89cf-296a89e94aab</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>ec988edc-2f68-4d1d-a9a5-ac5f7229bb68</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>5ce2d6f0-08f9-4699-adb6-1d0107bdb772</id>
+                        <expressionID>39214221-7758-45ff-a0da-12b7bf057691</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>514260c6-090d-402c-8fa3-3c5f198daf28</id>
+                        <expressionID>7977e036-4670-4946-9dd6-397723053a40</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ec988edc-2f68-4d1d-a9a5-ac5f7229bb68</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>39214221-7758-45ff-a0da-12b7bf057691</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>6831cda2-8444-4a1d-864f-23bf9fa88554</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6831cda2-8444-4a1d-864f-23bf9fa88554</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtPolicyEntry.getCell(rowIndex,"confeedPolicy")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7977e036-4670-4946-9dd6-397723053a40</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>subsidy</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>68536a98-3bf9-473a-baa0-cb27d11fa21e</id>
+            <name>SuccessiveContract_header_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].actions.action[SuccessiveContract_header_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].actions.action[SuccessiveContract_header_ActionInfo].description</description>
+            <expressionID>4c74bf19-3c4a-4b19-a770-1e0ef83c450c</expressionID>
+        </action>
+        <action>
+            <id>4dc5087f-84c2-4f4a-91f2-7208ff28d9e3</id>
+            <name>SuccessiveContract_capacity_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].actions.action[SuccessiveContract_capacity_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].actions.action[SuccessiveContract_capacity_ActionInfo].description</description>
+            <expressionID>3cec514b-85b8-4b20-828f-c2ae2f297e19</expressionID>
+        </action>
+        <action>
+            <id>612f4fd5-482c-4bca-afe2-910a103779c4</id>
+            <name>ConFeedContract_identity_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].actions.action[ConFeedContract_identity_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].actions.action[ConFeedContract_identity_ActionInfo].description</description>
+            <expressionID>86a87694-beda-4eac-8c11-5435e15c2e90</expressionID>
+        </action>
+        <action>
+            <id>b585c2a2-de77-418b-9935-1449e95d2457</id>
+            <name>ConFeedContract_farmAddress_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].actions.action[ConFeedContract_farmAddress_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].actions.action[ConFeedContract_farmAddress_ActionInfo].description</description>
+            <expressionID>8d922648-81d5-4e6c-b021-7eba72e0f102</expressionID>
+        </action>
+        <action>
+            <id>41c3be76-f740-4faa-9389-304f18c63f56</id>
+            <name>PolicyEntry_subsidyType_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].actions.action[PolicyEntry_subsidyType_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].actions.action[PolicyEntry_subsidyType_ActionInfo].description</description>
+            <expressionID>f1ba9eb4-039e-4130-8e1a-b17e0b5393f3</expressionID>
+        </action>
+        <action>
+            <id>0d13e2c1-2f6f-467c-b6e7-7abb1580ac06</id>
+            <name>PolicyEntry_subsidy_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].actions.action[PolicyEntry_subsidy_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].actions.action[PolicyEntry_subsidy_ActionInfo].description</description>
+            <expressionID>f2e6380b-be92-4dc3-89cf-296a89e94aab</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>ConFeedContract_identity_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].rules.conditionRule[ConFeedContract_identity_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].rules.conditionRule[ConFeedContract_identity_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="612f4fd5-482c-4bca-afe2-910a103779c4" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>ConFeedContract_farmAddress_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].rules.conditionRule[ConFeedContract_farmAddress_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].rules.conditionRule[ConFeedContract_farmAddress_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="b585c2a2-de77-418b-9935-1449e95d2457" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>PolicyEntry_subsidyType_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].rules.conditionRule[PolicyEntry_subsidyType_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].rules.conditionRule[PolicyEntry_subsidyType_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="41c3be76-f740-4faa-9389-304f18c63f56" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>PolicyEntry_subsidy_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].rules.conditionRule[PolicyEntry_subsidy_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].rules.conditionRule[PolicyEntry_subsidy_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="0d13e2c1-2f6f-467c-b6e7-7abb1580ac06" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].actions.action[ConFeedContract_farmAddress_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_address" />
+            <lang locale="zh_HK" value="攜帶字段屬性_address" />
+            <lang locale="zh_TW" value="攜帶字段屬性_address" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].actions.action[ConFeedContract_farmAddress_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].actions.action[ConFeedContract_identity_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_identity" />
+            <lang locale="zh_HK" value="攜帶字段屬性_identity" />
+            <lang locale="zh_TW" value="攜帶字段屬性_identity" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].actions.action[ConFeedContract_identity_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].actions.action[PolicyEntry_subsidyType_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_subsidyType" />
+            <lang locale="zh_HK" value="攜帶字段屬性_subsidyType" />
+            <lang locale="zh_TW" value="攜帶字段屬性_subsidyType" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].actions.action[PolicyEntry_subsidyType_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].actions.action[PolicyEntry_subsidy_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_subsidy" />
+            <lang locale="zh_HK" value="攜帶字段屬性_subsidy" />
+            <lang locale="zh_TW" value="攜帶字段屬性_subsidy" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].actions.action[PolicyEntry_subsidy_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].actions.action[SuccessiveContract_capacity_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_capacity" />
+            <lang locale="zh_HK" value="攜帶字段屬性_capacity" />
+            <lang locale="zh_TW" value="攜帶字段屬性_capacity" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].actions.action[SuccessiveContract_capacity_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].actions.action[SuccessiveContract_header_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_theHeader" />
+            <lang locale="zh_HK" value="攜帶字段屬性_theHeader" />
+            <lang locale="zh_TW" value="攜帶字段屬性_theHeader" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].actions.action[SuccessiveContract_header_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].rules.conditionRule[ConFeedContract_farmAddress_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_address" />
+            <lang locale="zh_HK" value="攜帶字段屬性_address" />
+            <lang locale="zh_TW" value="攜帶字段屬性_address" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].rules.conditionRule[ConFeedContract_farmAddress_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].rules.conditionRule[ConFeedContract_farmAddress_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="farm" />
+            <lang locale="zh_CN" value="farm" />
+            <lang locale="zh_TW" value="farm" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].rules.conditionRule[ConFeedContract_farmAddress_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].rules.conditionRule[ConFeedContract_identity_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_identity" />
+            <lang locale="zh_HK" value="攜帶字段屬性_identity" />
+            <lang locale="zh_TW" value="攜帶字段屬性_identity" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].rules.conditionRule[ConFeedContract_identity_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].rules.conditionRule[ConFeedContract_identity_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="farmer" />
+            <lang locale="zh_CN" value="farmer" />
+            <lang locale="zh_TW" value="farmer" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].rules.conditionRule[ConFeedContract_identity_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].rules.conditionRule[PolicyEntry_subsidyType_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_subsidyType" />
+            <lang locale="zh_HK" value="攜帶字段屬性_subsidyType" />
+            <lang locale="zh_TW" value="攜帶字段屬性_subsidyType" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].rules.conditionRule[PolicyEntry_subsidyType_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].rules.conditionRule[PolicyEntry_subsidyType_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="confeedPolicy" />
+            <lang locale="zh_CN" value="confeedPolicy" />
+            <lang locale="zh_TW" value="confeedPolicy" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].rules.conditionRule[PolicyEntry_subsidyType_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].rules.conditionRule[PolicyEntry_subsidy_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_subsidy" />
+            <lang locale="zh_HK" value="攜帶字段屬性_subsidy" />
+            <lang locale="zh_TW" value="攜帶字段屬性_subsidy" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].rules.conditionRule[PolicyEntry_subsidy_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].rules.conditionRule[PolicyEntry_subsidy_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="confeedPolicy" />
+            <lang locale="zh_CN" value="confeedPolicy" />
+            <lang locale="zh_TW" value="confeedPolicy" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.ConFeedContractRuleSet].rules.conditionRule[PolicyEntry_subsidy_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

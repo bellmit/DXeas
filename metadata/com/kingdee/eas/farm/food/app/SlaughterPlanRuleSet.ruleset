@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.food.app</package>
+    <name>SlaughterPlanRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.food.app.SlaughterPlanRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.food.app.SlaughterPlanRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>a5cd5f0c-5fa6-42ba-8cfa-a40331b2b3e5</id>
+            <parentID />
+            <source>entrys.henHouseName=entrys.henHouse.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>4dc220d4-254c-4fac-9cc9-b2af35610861</id>
+            <parentID>a5cd5f0c-5fa6-42ba-8cfa-a40331b2b3e5</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>bcec0844-2337-412e-bb8b-230fa342b2b2</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bcec0844-2337-412e-bb8b-230fa342b2b2</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"henHouseName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0a0a1c41-8ef6-4cc0-85e0-6035ff9e2252</id>
+            <parentID>a5cd5f0c-5fa6-42ba-8cfa-a40331b2b3e5</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>4c36a6b7-6997-44f3-aeee-5a1a502a1059</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>695a379d-6375-4278-a73c-75a2f9e14e32</id>
+                        <expressionID>357ac45a-7d08-4263-a650-c122ab9efa3b</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>a29f60b2-e04b-4716-9a84-a60a99053237</id>
+                        <expressionID>183784ba-fbf5-49e1-a166-68237f9cab03</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4c36a6b7-6997-44f3-aeee-5a1a502a1059</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>357ac45a-7d08-4263-a650-c122ab9efa3b</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>690232ac-eb7c-4dcb-a1a0-dfbb1fd11b35</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>690232ac-eb7c-4dcb-a1a0-dfbb1fd11b35</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"henHouse")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>183784ba-fbf5-49e1-a166-68237f9cab03</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>f7fe5016-30d2-4216-973f-7322fea64908</id>
+            <name>entrys_henHouseName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.SlaughterPlanRuleSet].actions.action[entrys_henHouseName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.SlaughterPlanRuleSet].actions.action[entrys_henHouseName_ActionInfo].description</description>
+            <expressionID>a5cd5f0c-5fa6-42ba-8cfa-a40331b2b3e5</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>entrys_henHouseName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.SlaughterPlanRuleSet].rules.conditionRule[entrys_henHouseName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.SlaughterPlanRuleSet].rules.conditionRule[entrys_henHouseName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="f7fe5016-30d2-4216-973f-7322fea64908" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.SlaughterPlanRuleSet].actions.action[entrys_henHouseName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.SlaughterPlanRuleSet].actions.action[entrys_henHouseName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.SlaughterPlanRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.SlaughterPlanRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.SlaughterPlanRuleSet].rules.conditionRule[entrys_henHouseName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.SlaughterPlanRuleSet].rules.conditionRule[entrys_henHouseName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.SlaughterPlanRuleSet].rules.conditionRule[entrys_henHouseName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="henHouse" />
+            <lang locale="zh_CN" value="henHouse" />
+            <lang locale="zh_TW" value="henHouse" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.SlaughterPlanRuleSet].rules.conditionRule[entrys_henHouseName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

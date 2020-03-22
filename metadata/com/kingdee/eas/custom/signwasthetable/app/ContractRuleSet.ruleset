@@ -1,0 +1,1897 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.signwasthetable.app</package>
+    <name>ContractRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>c99826eb-7159-48d1-bd57-6e54ac2080a3</id>
+            <parentID />
+            <source>[Payment.overAmt] = [Payment.payAmount] + [Payment.payAmount] * [Payment.overRate] /100</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>7e927ffe-7365-43bf-8180-a543c9d7993c</id>
+            <parentID>c99826eb-7159-48d1-bd57-6e54ac2080a3</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>3fe17078-af56-4bfb-85cc-409119a144ac</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3fe17078-af56-4bfb-85cc-409119a144ac</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"overAmt")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>1f040131-0638-4b73-b82f-50b8d95ac722</id>
+            <parentID>c99826eb-7159-48d1-bd57-6e54ac2080a3</parentID>
+            <source />
+            <operator>+</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>457fda5c-eb67-4b57-8ead-06792bafde49</id>
+            <parentID>1f040131-0638-4b73-b82f-50b8d95ac722</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>ad2383fb-e5fa-495d-a267-b041beb9ffde</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ad2383fb-e5fa-495d-a267-b041beb9ffde</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"payAmount")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>11d4dcd5-7724-4059-88c3-51ef219a1eea</id>
+            <parentID>1f040131-0638-4b73-b82f-50b8d95ac722</parentID>
+            <source />
+            <operator>*</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>17920751-1da8-49ee-978a-d3f66197ebe6</id>
+            <parentID>11d4dcd5-7724-4059-88c3-51ef219a1eea</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>b86fe33f-2354-4732-a8e6-af35b46b882a</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b86fe33f-2354-4732-a8e6-af35b46b882a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"payAmount")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>6b963efc-434c-4226-aa67-ef676464b6c4</id>
+            <parentID>11d4dcd5-7724-4059-88c3-51ef219a1eea</parentID>
+            <source />
+            <operator>/</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>e0966c5b-9a09-41a4-bba0-17fc9e8aebdc</id>
+            <parentID>6b963efc-434c-4226-aa67-ef676464b6c4</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>1ad2795d-550d-440b-88e1-928da8ed830f</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1ad2795d-550d-440b-88e1-928da8ed830f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"overRate")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d3f66c8a-cb9d-439a-9fac-b8b3ff1099e6</id>
+            <parentID>6b963efc-434c-4226-aa67-ef676464b6c4</parentID>
+            <source />
+            <type>CONST</type>
+            <valueType>Int</valueType>
+            <value>100</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>64f0eb3c-b6f2-4ef2-b311-f243baebda3a</id>
+            <parentID />
+            <source>[Payment.overRate] =( [Payment.overAmt] - [Payment.payAmount] )*100/ [Payment.payAmount]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>e1df97f9-e193-4845-9903-e4a7d0d9e358</id>
+            <parentID>64f0eb3c-b6f2-4ef2-b311-f243baebda3a</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>b7492118-146e-4b3e-b887-f3d05eb18d56</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b7492118-146e-4b3e-b887-f3d05eb18d56</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"overRate")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>f34817d0-cca4-4ca0-b042-431cf5e0c130</id>
+            <parentID>64f0eb3c-b6f2-4ef2-b311-f243baebda3a</parentID>
+            <source />
+            <operator>*</operator>
+        </groupExpression>
+        <groupExpression>
+            <id>aaa4fd78-7779-4286-9c2c-f3ee10da0702</id>
+            <parentID>f34817d0-cca4-4ca0-b042-431cf5e0c130</parentID>
+            <source />
+            <operator>-</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>a101903d-d796-476e-9eb8-ea212460a3fe</id>
+            <parentID>aaa4fd78-7779-4286-9c2c-f3ee10da0702</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>2905420d-9315-4d2c-ae87-5b9d482cfc02</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2905420d-9315-4d2c-ae87-5b9d482cfc02</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"overAmt")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>72f4d539-3eeb-431e-bda3-fa0391fc6428</id>
+            <parentID>aaa4fd78-7779-4286-9c2c-f3ee10da0702</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>8fb95664-6626-481e-b50e-2240137c3fbd</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8fb95664-6626-481e-b50e-2240137c3fbd</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"payAmount")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>757b225c-de3d-490c-a706-09aad29d574a</id>
+            <parentID>f34817d0-cca4-4ca0-b042-431cf5e0c130</parentID>
+            <source />
+            <operator>/</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>4e9b338a-d5e9-4218-8471-ce457ee6db1c</id>
+            <parentID>757b225c-de3d-490c-a706-09aad29d574a</parentID>
+            <source />
+            <type>CONST</type>
+            <valueType>Int</valueType>
+            <value>100</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d5ffa2c4-b8dd-422d-81ca-81acf4b48641</id>
+            <parentID>757b225c-de3d-490c-a706-09aad29d574a</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>0e41393d-f364-4f92-8d76-8c0ad30d8d64</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0e41393d-f364-4f92-8d76-8c0ad30d8d64</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"payAmount")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>91b0b3d0-51c5-437c-b948-838ad954f757</id>
+            <parentID />
+            <source>[Payment.unReqAmtLocal] =( [Payment.overAmt] - [Payment.requiredPayAmount] )* [exchangeRate]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>8480a60e-d177-4f17-8567-98ace2deb341</id>
+            <parentID>91b0b3d0-51c5-437c-b948-838ad954f757</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>05022ad4-49d5-458d-80f5-568d8e395b90</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>05022ad4-49d5-458d-80f5-568d8e395b90</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"unReqAmtLocal")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>1fd90db2-3283-4a20-852f-9e76b76b15a7</id>
+            <parentID>91b0b3d0-51c5-437c-b948-838ad954f757</parentID>
+            <source />
+            <operator>*</operator>
+        </groupExpression>
+        <groupExpression>
+            <id>dd0b2165-4324-4e1b-ab98-2aa058908070</id>
+            <parentID>1fd90db2-3283-4a20-852f-9e76b76b15a7</parentID>
+            <source />
+            <operator>-</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>fd6a5d46-4771-4e6a-9416-c7e7234b135e</id>
+            <parentID>dd0b2165-4324-4e1b-ab98-2aa058908070</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>19a20922-b1ce-40fd-b3a3-b3ebeda50c43</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>19a20922-b1ce-40fd-b3a3-b3ebeda50c43</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"overAmt")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e8557ade-b70c-468b-b853-72e39df4c402</id>
+            <parentID>dd0b2165-4324-4e1b-ab98-2aa058908070</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>bfcb3cc5-5b6f-4b5e-af82-8defbfd5bf16</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bfcb3cc5-5b6f-4b5e-af82-8defbfd5bf16</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"requiredPayAmount")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9e5b1260-757b-43ac-8016-90cb5180dcaa</id>
+            <parentID>1fd90db2-3283-4a20-852f-9e76b76b15a7</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>e09d42d1-8fe7-455e-95ed-11a41ae582d0</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e09d42d1-8fe7-455e-95ed-11a41ae582d0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtexchangeRate</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>9d57a498-d3c8-47ce-a92b-6a1f4376cfae</id>
+            <parentID />
+            <source>[Payment.unReqAmtLocal] = [Payment.overAmt] * [exchangeRate]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>cff35590-6e7b-4932-8287-e2b56918f1aa</id>
+            <parentID>9d57a498-d3c8-47ce-a92b-6a1f4376cfae</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>0b972947-f084-484f-b6ff-c16d08e0dcf0</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0b972947-f084-484f-b6ff-c16d08e0dcf0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"unReqAmtLocal")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>b5632a51-9d2d-479d-8bb8-b46480a76949</id>
+            <parentID>9d57a498-d3c8-47ce-a92b-6a1f4376cfae</parentID>
+            <source />
+            <operator>*</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>2e451a21-300d-4319-8777-e6713151f203</id>
+            <parentID>b5632a51-9d2d-479d-8bb8-b46480a76949</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>1dc0be50-c898-43df-88a0-f2f9c321f39c</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1dc0be50-c898-43df-88a0-f2f9c321f39c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"overAmt")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>870b6579-5536-4e89-b357-5ff124dea227</id>
+            <parentID>b5632a51-9d2d-479d-8bb8-b46480a76949</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>36795a0a-0544-43ec-ae5e-5e5c479a78e5</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>36795a0a-0544-43ec-ae5e-5e5c479a78e5</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtexchangeRate</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>7a0e2d2e-1493-44b8-8e85-fb09f84c3b83</id>
+            <parentID />
+            <source>[Payment.unRequiredAmt] = [Payment.overAmt] - [Payment.requiredPayAmount]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>0b5bb941-c700-480d-abf4-1676ee4a0c5d</id>
+            <parentID>7a0e2d2e-1493-44b8-8e85-fb09f84c3b83</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>67cf9184-575f-4e42-bd47-4435d2793cfb</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>67cf9184-575f-4e42-bd47-4435d2793cfb</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"unRequiredAmt")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>6accfa1d-74b3-4fc8-80eb-b6c35aaf9da5</id>
+            <parentID>7a0e2d2e-1493-44b8-8e85-fb09f84c3b83</parentID>
+            <source />
+            <operator>-</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>5d2fe460-c156-4655-93b2-528c74eb8190</id>
+            <parentID>6accfa1d-74b3-4fc8-80eb-b6c35aaf9da5</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>426b67e0-fd8b-4412-985d-a856e06be8f6</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>426b67e0-fd8b-4412-985d-a856e06be8f6</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"overAmt")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>800f6d7a-992b-48d9-830c-e35c3d5ed635</id>
+            <parentID>6accfa1d-74b3-4fc8-80eb-b6c35aaf9da5</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>ed0c5081-a753-4a2e-89dd-39685e050360</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ed0c5081-a753-4a2e-89dd-39685e050360</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"requiredPayAmount")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>eb9531ea-aa9a-4849-86e3-b9f514ed471d</id>
+            <parentID />
+            <source>[Payment.unRequiredAmt] = [Payment.overAmt]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>bf1b5132-2da3-477c-a82a-11414d445d9c</id>
+            <parentID>eb9531ea-aa9a-4849-86e3-b9f514ed471d</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>a83c47ed-661c-41a5-ad42-a29ef018bb6d</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a83c47ed-661c-41a5-ad42-a29ef018bb6d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"unRequiredAmt")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>20a51fb4-0ed7-40d9-b1d5-e73058393a6f</id>
+            <parentID>eb9531ea-aa9a-4849-86e3-b9f514ed471d</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>7ce08091-a10e-44f9-ab15-8a0f9675eac4</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7ce08091-a10e-44f9-ab15-8a0f9675eac4</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"overAmt")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>698aa34e-efab-47f1-9a33-b35677d72ef5</id>
+            <parentID />
+            <source>[Payment.unRequiredAmt] =  [Payment.payAmount] +([Payment.payAmount] * [Payment.overRate] /100)- [Payment.requiredPayAmount]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>c4f8c756-2184-42f9-b1f8-f3b00f9f0e83</id>
+            <parentID>698aa34e-efab-47f1-9a33-b35677d72ef5</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>9ce15a51-8841-435b-806b-1d5ea2d021f0</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9ce15a51-8841-435b-806b-1d5ea2d021f0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"unRequiredAmt")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>df2fee98-f987-4991-81eb-627072edd0b7</id>
+            <parentID>698aa34e-efab-47f1-9a33-b35677d72ef5</parentID>
+            <source />
+            <operator>+</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>d099d0cd-c55b-49e4-a606-a1d7ce3aaf91</id>
+            <parentID>df2fee98-f987-4991-81eb-627072edd0b7</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>7f126915-5ead-47b7-8c73-e0eb02dcf4f2</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7f126915-5ead-47b7-8c73-e0eb02dcf4f2</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"payAmount")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>cb66e186-673d-4259-bd79-0fe48c0b6c4e</id>
+            <parentID>df2fee98-f987-4991-81eb-627072edd0b7</parentID>
+            <source />
+            <operator>-</operator>
+        </groupExpression>
+        <groupExpression>
+            <id>21dee614-d8eb-4ae9-b54c-aa41d44bcd24</id>
+            <parentID>cb66e186-673d-4259-bd79-0fe48c0b6c4e</parentID>
+            <source />
+            <operator>*</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>e4767bfc-e887-4260-af9b-450964ba4086</id>
+            <parentID>21dee614-d8eb-4ae9-b54c-aa41d44bcd24</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>9632d614-e047-4c8c-9fd7-4fd9717025e3</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9632d614-e047-4c8c-9fd7-4fd9717025e3</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"payAmount")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>0b928a89-b72d-4f3e-86c4-e1ebc405de21</id>
+            <parentID>21dee614-d8eb-4ae9-b54c-aa41d44bcd24</parentID>
+            <source />
+            <operator>/</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>1ea3653b-d329-4135-9cf4-2247069f3d7b</id>
+            <parentID>0b928a89-b72d-4f3e-86c4-e1ebc405de21</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>30dc4615-3ecd-4d9f-b739-39f088350c02</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>30dc4615-3ecd-4d9f-b739-39f088350c02</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"overRate")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ab46a445-2d8a-41fd-a8a3-0f97eef56973</id>
+            <parentID>0b928a89-b72d-4f3e-86c4-e1ebc405de21</parentID>
+            <source />
+            <type>CONST</type>
+            <valueType>Int</valueType>
+            <value>100</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9754741f-e8cd-428c-8f30-b51d78c2c03b</id>
+            <parentID>cb66e186-673d-4259-bd79-0fe48c0b6c4e</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>8225d823-7acc-4221-86c4-c4d58c4ceee2</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8225d823-7acc-4221-86c4-c4d58c4ceee2</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"requiredPayAmount")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>97317319-eb4c-489e-91e9-de8efe6ce9ee</id>
+            <parentID />
+            <source>[Payment.unRequiredAmt] = [Payment.payAmount] -  [Payment.requiredPayAmount]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>beaf6049-4c3d-4fec-80c5-a9df484f0e94</id>
+            <parentID>97317319-eb4c-489e-91e9-de8efe6ce9ee</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>2fe5d9a4-ee2a-4f84-b898-53ac0409fb1f</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2fe5d9a4-ee2a-4f84-b898-53ac0409fb1f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"unRequiredAmt")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>280d3cd4-75bd-4c96-8d32-a99fab74bd4a</id>
+            <parentID>97317319-eb4c-489e-91e9-de8efe6ce9ee</parentID>
+            <source />
+            <operator>-</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>5dfc4c00-8188-49b7-ac6b-89eb27921829</id>
+            <parentID>280d3cd4-75bd-4c96-8d32-a99fab74bd4a</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>72679d3d-7b06-47da-949e-12777022008b</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>72679d3d-7b06-47da-949e-12777022008b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"payAmount")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>45c2d29b-6105-4df8-bcae-3f5bec22b777</id>
+            <parentID>280d3cd4-75bd-4c96-8d32-a99fab74bd4a</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>4bb8d14b-411a-4e75-918c-f6057325556c</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4bb8d14b-411a-4e75-918c-f6057325556c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"requiredPayAmount")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>a2767a8d-296b-40d7-8417-c5da9ad8b25c</id>
+            <parentID />
+            <source>[Payment.unReqAmtLocal] = [Payment.payAmount] + ([Payment.payAmount] * [Payment.overRate]*[exchangeRate]/100) - [Payment.reqPayAmountLocal]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>24f33a46-c82e-4950-bfec-4394246ca321</id>
+            <parentID>a2767a8d-296b-40d7-8417-c5da9ad8b25c</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>5a64a477-9aed-4868-9bff-3ec79e673fba</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5a64a477-9aed-4868-9bff-3ec79e673fba</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"unReqAmtLocal")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>8636a78a-7ca4-41d8-b38a-4f6221040514</id>
+            <parentID>a2767a8d-296b-40d7-8417-c5da9ad8b25c</parentID>
+            <source />
+            <operator>+</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>ee16fe44-a06f-4b0b-8dcf-4561e5d31079</id>
+            <parentID>8636a78a-7ca4-41d8-b38a-4f6221040514</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>aa2a7081-f2d5-4f23-ad88-f22121bb909e</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>aa2a7081-f2d5-4f23-ad88-f22121bb909e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"payAmount")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>8f64abf6-f596-4a32-8864-aed7b8b5c312</id>
+            <parentID>8636a78a-7ca4-41d8-b38a-4f6221040514</parentID>
+            <source />
+            <operator>-</operator>
+        </groupExpression>
+        <groupExpression>
+            <id>dfffbc5f-a526-4e07-b4fc-6a6f9edf6e45</id>
+            <parentID>8f64abf6-f596-4a32-8864-aed7b8b5c312</parentID>
+            <source />
+            <operator>*</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>5396b4e8-7ac7-4704-a7e6-60020876de73</id>
+            <parentID>dfffbc5f-a526-4e07-b4fc-6a6f9edf6e45</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>5c04ac18-bb16-423c-82f8-c958062dff5a</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5c04ac18-bb16-423c-82f8-c958062dff5a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"payAmount")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>6b7ef5b2-16cd-4a64-8779-438ba2207572</id>
+            <parentID>dfffbc5f-a526-4e07-b4fc-6a6f9edf6e45</parentID>
+            <source />
+            <operator>*</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>96a7312f-cdd0-450b-91b1-bc69ff3839eb</id>
+            <parentID>6b7ef5b2-16cd-4a64-8779-438ba2207572</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>d49e846b-99ca-4b24-a7da-192b3b3bfad5</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d49e846b-99ca-4b24-a7da-192b3b3bfad5</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"overRate")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>4cbd8208-7c03-41a7-a27c-1c97f49c3b3c</id>
+            <parentID>6b7ef5b2-16cd-4a64-8779-438ba2207572</parentID>
+            <source />
+            <operator>/</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>5a410d8d-cec8-49d2-9710-089866a7c8f9</id>
+            <parentID>4cbd8208-7c03-41a7-a27c-1c97f49c3b3c</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>071e6c21-ce51-4235-9b8e-e18bc620092a</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>071e6c21-ce51-4235-9b8e-e18bc620092a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtexchangeRate</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>af2b00ba-3349-4428-89c1-0226f748e430</id>
+            <parentID>4cbd8208-7c03-41a7-a27c-1c97f49c3b3c</parentID>
+            <source />
+            <type>CONST</type>
+            <valueType>Int</valueType>
+            <value>100</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ee3a44a6-f7a9-435f-a993-958dac4bc7f8</id>
+            <parentID>8f64abf6-f596-4a32-8864-aed7b8b5c312</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>3ec7fc34-69e2-4852-8990-756e61a9676a</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3ec7fc34-69e2-4852-8990-756e61a9676a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"reqPayAmountLocal")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>4773b7da-6d77-438f-b486-c42ff1ecc8a5</id>
+            <parentID />
+            <source>[Payment.unReqAmtLocal] = [Payment.payAmount] * [exchangeRate] - [Payment.reqPayAmountLocal]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>087385ec-e7ef-43fd-ae5d-0f60a48e1ec2</id>
+            <parentID>4773b7da-6d77-438f-b486-c42ff1ecc8a5</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>01bac501-bf7b-4b1d-84f3-3b000c3c6bc7</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>01bac501-bf7b-4b1d-84f3-3b000c3c6bc7</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"unReqAmtLocal")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>803469f3-e355-4e4d-bee7-2c0748fc557c</id>
+            <parentID>4773b7da-6d77-438f-b486-c42ff1ecc8a5</parentID>
+            <source />
+            <operator>*</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>174bece1-a947-4e20-ae4f-8679fcaa02d1</id>
+            <parentID>803469f3-e355-4e4d-bee7-2c0748fc557c</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>b81a6bd7-8af5-4eb9-9687-803fe12979fc</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b81a6bd7-8af5-4eb9-9687-803fe12979fc</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"payAmount")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>ed7acc4b-6629-4491-9272-d30a4297a38f</id>
+            <parentID>803469f3-e355-4e4d-bee7-2c0748fc557c</parentID>
+            <source />
+            <operator>-</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>cf1a25c7-ee55-4443-84a7-c869665908d1</id>
+            <parentID>ed7acc4b-6629-4491-9272-d30a4297a38f</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>aef15799-8b6f-4808-ab86-d58697644c38</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>aef15799-8b6f-4808-ab86-d58697644c38</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtexchangeRate</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3d20c39e-bea9-4603-a701-c8209703a0a1</id>
+            <parentID>ed7acc4b-6629-4491-9272-d30a4297a38f</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>fb2165c8-0c5a-4682-a768-e864d7a1b65a</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fb2165c8-0c5a-4682-a768-e864d7a1b65a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"reqPayAmountLocal")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>69e4c1b1-e2c1-4a1c-9d47-460329e4bbf8</id>
+            <parentID />
+            <source>ISNULL( [Payment.payAmount] ) OR ISNULL( [Payment.overRate] )</source>
+            <operator>||</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>b373695e-eb39-4c72-8d6b-2a43712df80c</id>
+            <parentID>69e4c1b1-e2c1-4a1c-9d47-460329e4bbf8</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>boolean</valueType>
+            <value />
+            <method>
+                <ownerID>1ff1c839-b4cb-4cd8-8531-080b562f5400</ownerID>
+                <name>isNull</name>
+                <type>boolean</type>
+                <parameters>
+                    <parameter>
+                        <id>22e7d46f-a156-494b-871b-afa540364f76</id>
+                        <expressionID>de761413-9494-4d0a-a798-45274ee0b31b</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1ff1c839-b4cb-4cd8-8531-080b562f5400</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>de761413-9494-4d0a-a798-45274ee0b31b</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>aeee9d35-2009-46a3-8ab3-137c9e29905f</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>aeee9d35-2009-46a3-8ab3-137c9e29905f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"payAmount")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>76c7ae42-0901-47c0-a439-66c6d2fa5532</id>
+            <parentID>69e4c1b1-e2c1-4a1c-9d47-460329e4bbf8</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>boolean</valueType>
+            <value />
+            <method>
+                <ownerID>b245b5cd-39c8-41d6-a664-3e9a632fafdb</ownerID>
+                <name>isNull</name>
+                <type>boolean</type>
+                <parameters>
+                    <parameter>
+                        <id>1ee8b4bd-10bc-4d94-81e0-eddcf67e4833</id>
+                        <expressionID>a83a63ee-5c51-46d0-a67a-f527ba799f7c</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b245b5cd-39c8-41d6-a664-3e9a632fafdb</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a83a63ee-5c51-46d0-a67a-f527ba799f7c</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>522ef8bd-c360-4eff-b1b4-ad3e40522b7a</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>522ef8bd-c360-4eff-b1b4-ad3e40522b7a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"overRate")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>d02a6837-e347-4289-90c4-5e0ded7440e2</id>
+            <parentID />
+            <source>ISNULL([Payment.overAmt] ) OR ISNULL( [Payment.payAmount] )</source>
+            <operator>||</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>3914239b-c842-415b-bc24-57f5e62cc37c</id>
+            <parentID>d02a6837-e347-4289-90c4-5e0ded7440e2</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>boolean</valueType>
+            <value />
+            <method>
+                <ownerID>abca0afd-946b-43b1-8559-44a9f5fc7cb8</ownerID>
+                <name>isNull</name>
+                <type>boolean</type>
+                <parameters>
+                    <parameter>
+                        <id>af8b7c57-3d8f-47e2-9e4e-181aa9345fd7</id>
+                        <expressionID>abf53bb2-6f7a-4178-9943-e6495dfed86f</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>abca0afd-946b-43b1-8559-44a9f5fc7cb8</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>abf53bb2-6f7a-4178-9943-e6495dfed86f</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>203a655e-a4c8-4a8c-84bb-acb227aa6a20</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>203a655e-a4c8-4a8c-84bb-acb227aa6a20</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"overAmt")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>63f9bc3a-5303-47f2-bf69-e8ba2cf42045</id>
+            <parentID>d02a6837-e347-4289-90c4-5e0ded7440e2</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>boolean</valueType>
+            <value />
+            <method>
+                <ownerID>6429628c-d4c6-4895-bc22-09925e7ce9a3</ownerID>
+                <name>isNull</name>
+                <type>boolean</type>
+                <parameters>
+                    <parameter>
+                        <id>67b5d570-1419-49a9-9661-bab30c36702c</id>
+                        <expressionID>13f9dc9f-70e6-49dc-b7e4-bd661c32fb94</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6429628c-d4c6-4895-bc22-09925e7ce9a3</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>13f9dc9f-70e6-49dc-b7e4-bd661c32fb94</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>8dadebd9-4985-4b0a-ae05-4712d8ccced9</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8dadebd9-4985-4b0a-ae05-4712d8ccced9</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"payAmount")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>4ea7d1ba-f57b-4abf-a20d-49d56a95b944</id>
+            <parentID />
+            <source>ISNULL( [Payment.requiredPayAmount] ) OR ISNULL( [Payment.overAmt] )</source>
+            <operator>||</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>77d79da5-eb48-4052-b9e0-6e7a5b0acc68</id>
+            <parentID>4ea7d1ba-f57b-4abf-a20d-49d56a95b944</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>boolean</valueType>
+            <value />
+            <method>
+                <ownerID>71006e85-bd9a-461c-a0ed-838795c4be48</ownerID>
+                <name>isNull</name>
+                <type>boolean</type>
+                <parameters>
+                    <parameter>
+                        <id>60b744a5-463a-481d-a7a7-c67bf425bc54</id>
+                        <expressionID>633f2a70-da04-4054-b93e-5ab289700efc</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>71006e85-bd9a-461c-a0ed-838795c4be48</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>633f2a70-da04-4054-b93e-5ab289700efc</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>ca3ec66e-9d29-4dc0-ae99-c0dc1c551402</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ca3ec66e-9d29-4dc0-ae99-c0dc1c551402</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"requiredPayAmount")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d664aaae-6379-4d2c-8447-17bf67fea1f8</id>
+            <parentID>4ea7d1ba-f57b-4abf-a20d-49d56a95b944</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>boolean</valueType>
+            <value />
+            <method>
+                <ownerID>82570647-1da2-4f99-b797-9935f33d74ae</ownerID>
+                <name>isNull</name>
+                <type>boolean</type>
+                <parameters>
+                    <parameter>
+                        <id>6a8d0aff-8cbe-4626-8ad4-2226b69556db</id>
+                        <expressionID>2993f58d-7a5e-46ce-8d04-9c6cbc31218b</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>82570647-1da2-4f99-b797-9935f33d74ae</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2993f58d-7a5e-46ce-8d04-9c6cbc31218b</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>6af7d598-18dd-4a04-ba4e-9e5dc3f1cdd4</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6af7d598-18dd-4a04-ba4e-9e5dc3f1cdd4</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"overAmt")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>56974cb6-f4e8-4ba2-adc4-773ec76e68fd</id>
+            <parentID />
+            <source>ISNULL( [Payment.requiredPayAmount] ) OR ISNULL( [Payment.overAmt] )</source>
+            <operator>||</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>cac780bc-c08c-43ba-8c7a-d3813a2cc7b0</id>
+            <parentID>56974cb6-f4e8-4ba2-adc4-773ec76e68fd</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>boolean</valueType>
+            <value />
+            <method>
+                <ownerID>c667e46e-c4a9-4fef-b6a9-917893af53d6</ownerID>
+                <name>isNull</name>
+                <type>boolean</type>
+                <parameters>
+                    <parameter>
+                        <id>3f88908c-dc41-495f-b070-f1e0d0eea195</id>
+                        <expressionID>4f9d0b6a-256e-4004-82e4-0bf6ea2043be</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c667e46e-c4a9-4fef-b6a9-917893af53d6</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4f9d0b6a-256e-4004-82e4-0bf6ea2043be</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>836ca6f7-f75e-44be-a089-2cd5cc0d815c</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>836ca6f7-f75e-44be-a089-2cd5cc0d815c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"requiredPayAmount")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c8049d25-b00a-498e-9247-cc09cea3981e</id>
+            <parentID>56974cb6-f4e8-4ba2-adc4-773ec76e68fd</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>boolean</valueType>
+            <value />
+            <method>
+                <ownerID>2add21bd-4550-4d2a-997d-46064e0484c3</ownerID>
+                <name>isNull</name>
+                <type>boolean</type>
+                <parameters>
+                    <parameter>
+                        <id>548e5175-4248-47c0-a72c-f0169d56c62c</id>
+                        <expressionID>e9e11208-5eb9-4e77-83f1-c2d1566f8e0a</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2add21bd-4550-4d2a-997d-46064e0484c3</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e9e11208-5eb9-4e77-83f1-c2d1566f8e0a</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>933cf6f9-6dec-4657-825d-7a1bbcd3dd9f</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>933cf6f9-6dec-4657-825d-7a1bbcd3dd9f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"overAmt")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6fff8a90-85a5-4543-af7f-f04dc0254f2f</id>
+            <parentID />
+            <source>ISNULL( [Payment.overRate] )</source>
+            <type>METHODINVOKE</type>
+            <valueType>boolean</valueType>
+            <value />
+            <method>
+                <ownerID>74bbaf6f-ab5d-4941-b20a-6ba8e08a9e8c</ownerID>
+                <name>isNull</name>
+                <type>boolean</type>
+                <parameters>
+                    <parameter>
+                        <id>bbbae4ea-c96c-44ba-b0a0-a46957ba3eae</id>
+                        <expressionID>44500db1-99f4-46a9-ba69-2fcfd9dc8f89</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>74bbaf6f-ab5d-4941-b20a-6ba8e08a9e8c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>44500db1-99f4-46a9-ba69-2fcfd9dc8f89</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>955c950b-2c15-4ce4-ab4e-484c8ecc6049</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>955c950b-2c15-4ce4-ab4e-484c8ecc6049</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"overRate")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>d7313615-225a-49eb-a000-667655211c01</id>
+            <parentID />
+            <source>ISNULL( [Payment.overRate] ) OR ISNULL( [Payment.payAmount] )</source>
+            <operator>||</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>6a57189e-c173-484f-923e-aae6fc576e2a</id>
+            <parentID>d7313615-225a-49eb-a000-667655211c01</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>boolean</valueType>
+            <value />
+            <method>
+                <ownerID>af406b06-c41b-44fa-8865-10ae02e2418b</ownerID>
+                <name>isNull</name>
+                <type>boolean</type>
+                <parameters>
+                    <parameter>
+                        <id>b79e00cc-856f-4493-9b35-1602ca7375c7</id>
+                        <expressionID>964ab702-2dc9-4f8a-be0e-122a85d94bb3</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>af406b06-c41b-44fa-8865-10ae02e2418b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>964ab702-2dc9-4f8a-be0e-122a85d94bb3</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>58153fdb-936b-4d73-b347-b4247aa33268</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>58153fdb-936b-4d73-b347-b4247aa33268</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"overRate")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>657ec886-a795-4e38-8d15-7860ce6ac5b0</id>
+            <parentID>d7313615-225a-49eb-a000-667655211c01</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>boolean</valueType>
+            <value />
+            <method>
+                <ownerID>04944d4d-85c7-4f6c-9161-1a15e0bc40e2</ownerID>
+                <name>isNull</name>
+                <type>boolean</type>
+                <parameters>
+                    <parameter>
+                        <id>90126799-0922-4557-9b56-061d434a5a46</id>
+                        <expressionID>0347d8db-fb6e-4704-96f8-f15556749d65</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>04944d4d-85c7-4f6c-9161-1a15e0bc40e2</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0347d8db-fb6e-4704-96f8-f15556749d65</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>22251981-c223-4885-8861-66293f256e1e</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>22251981-c223-4885-8861-66293f256e1e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPayment.getCell(rowIndex,"payAmount")</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>68a5d34e-c376-4468-91d5-c20670317fd7</id>
+            <name>COTKXZWH</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COTKXZWH].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COTKXZWH].description</description>
+            <expressionID>c99826eb-7159-48d1-bd57-6e54ac2080a3</expressionID>
+        </action>
+        <action>
+            <id>c8ed6a05-ce3b-4edc-8ae3-6d580977c87b</id>
+            <name>COXYRVLI</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COXYRVLI].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COXYRVLI].description</description>
+            <expressionID>64f0eb3c-b6f2-4ef2-b311-f243baebda3a</expressionID>
+        </action>
+        <action>
+            <id>22c8575c-9bbd-4e9c-9447-6005f9eb3453</id>
+            <name>COZLGGNE</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COZLGGNE].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COZLGGNE].description</description>
+            <expressionID>91b0b3d0-51c5-437c-b948-838ad954f757</expressionID>
+        </action>
+        <action>
+            <id>cb39b097-4113-433b-b13f-23bcf6ae2e82</id>
+            <name>COZLGGLP</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COZLGGLP].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COZLGGLP].description</description>
+            <expressionID>9d57a498-d3c8-47ce-a92b-6a1f4376cfae</expressionID>
+        </action>
+        <action>
+            <id>8a6f8adc-3e31-447b-9934-9b7550cb6820</id>
+            <name>COZLCQUM</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COZLCQUM].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COZLCQUM].description</description>
+            <expressionID>7a0e2d2e-1493-44b8-8e85-fb09f84c3b83</expressionID>
+        </action>
+        <action>
+            <id>61cd9185-edf3-4774-bd45-ceecbf2d2c49</id>
+            <name>COZLCQSX</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COZLCQSX].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COZLCQSX].description</description>
+            <expressionID>eb9531ea-aa9a-4849-86e3-b9f514ed471d</expressionID>
+        </action>
+        <action>
+            <id>ce996226-09ef-4559-95a7-211b6d116cbd</id>
+            <name>COWKR1OV</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COWKR1OV].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COWKR1OV].description</description>
+            <expressionID>698aa34e-efab-47f1-9a33-b35677d72ef5</expressionID>
+        </action>
+        <action>
+            <id>c3462cef-3284-452a-862d-53bf08eb85f3</id>
+            <name>COWKR1N0</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COWKR1N0].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COWKR1N0].description</description>
+            <expressionID>97317319-eb4c-489e-91e9-de8efe6ce9ee</expressionID>
+        </action>
+        <action>
+            <id>5bc8a6e5-c133-4aca-b4b1-98ff0cc071d7</id>
+            <name>COWKT957</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COWKT957].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COWKT957].description</description>
+            <expressionID>a2767a8d-296b-40d7-8417-c5da9ad8b25c</expressionID>
+        </action>
+        <action>
+            <id>760d97f8-ad74-4f48-95da-37eb33b0e4a1</id>
+            <name>COWKT93B</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COWKT93B].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COWKT93B].description</description>
+            <expressionID>4773b7da-6d77-438f-b486-c42ff1ecc8a5</expressionID>
+        </action>
+    </actions>
+    <conditions>
+        <baseCondition>
+            <id>d971b47e-469f-4b94-b2ad-6de866ccae94</id>
+            <name>COTKZ4G2</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].conditions.baseCondition[COTKZ4G2].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].conditions.baseCondition[COTKZ4G2].description</description>
+            <expressionID>69e4c1b1-e2c1-4a1c-9d47-460329e4bbf8</expressionID>
+        </baseCondition>
+        <baseCondition>
+            <id>951bc641-fcd1-4ee2-9cdb-bfa5a05305bd</id>
+            <name>COXYW3Z1</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].conditions.baseCondition[COXYW3Z1].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].conditions.baseCondition[COXYW3Z1].description</description>
+            <expressionID>d02a6837-e347-4289-90c4-5e0ded7440e2</expressionID>
+        </baseCondition>
+        <baseCondition>
+            <id>c9756784-8183-434c-b156-abfa163e3b1e</id>
+            <name>COZLCM9A</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].conditions.baseCondition[COZLCM9A].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].conditions.baseCondition[COZLCM9A].description</description>
+            <expressionID>4ea7d1ba-f57b-4abf-a20d-49d56a95b944</expressionID>
+        </baseCondition>
+        <baseCondition>
+            <id>ee651a28-2cc9-4db2-9ca5-919cd6608178</id>
+            <name>COZLCLO7</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].conditions.baseCondition[COZLCLO7].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].conditions.baseCondition[COZLCLO7].description</description>
+            <expressionID>56974cb6-f4e8-4ba2-adc4-773ec76e68fd</expressionID>
+        </baseCondition>
+        <baseCondition>
+            <id>dd246f9f-d61c-477e-88a8-77ba2ddc8427</id>
+            <name>COWKT02K</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].conditions.baseCondition[COWKT02K].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].conditions.baseCondition[COWKT02K].description</description>
+            <expressionID>6fff8a90-85a5-4543-af7f-f04dc0254f2f</expressionID>
+        </baseCondition>
+        <baseCondition>
+            <id>c2e4ea29-b7f7-408b-b72f-225de8811b68</id>
+            <name>COWKVWHW</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].conditions.baseCondition[COWKVWHW].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].conditions.baseCondition[COWKVWHW].description</description>
+            <expressionID>d7313615-225a-49eb-a000-667655211c01</expressionID>
+        </baseCondition>
+    </conditions>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COTKXZWH].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COTKXZWH].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COWKR1N0].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COWKR1N0].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COWKR1OV].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COWKR1OV].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COWKT93B].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COWKT93B].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COWKT957].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COWKT957].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COXYRVLI].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COXYRVLI].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COZLCQSX].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COZLCQSX].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COZLCQUM].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COZLCQUM].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COZLGGLP].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COZLGGLP].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COZLGGNE].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].actions.action[COZLGGNE].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].conditions.baseCondition[COTKZ4G2].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].conditions.baseCondition[COTKZ4G2].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].conditions.baseCondition[COWKT02K].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].conditions.baseCondition[COWKT02K].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].conditions.baseCondition[COWKVWHW].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].conditions.baseCondition[COWKVWHW].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].conditions.baseCondition[COXYW3Z1].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].conditions.baseCondition[COXYW3Z1].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].conditions.baseCondition[COZLCLO7].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].conditions.baseCondition[COZLCLO7].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].conditions.baseCondition[COZLCM9A].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].conditions.baseCondition[COZLCM9A].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.ContractRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</ruleSet>
+

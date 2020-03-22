@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.pig.breedingsow.app</package>
+    <name>SowPolulationRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>e3b0edb5-365d-4e53-a2f1-5e9b76f79907</id>
+            <parentID />
+            <source>entrys.sowName=entrys.sow.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>c432cd5f-fa26-43ac-a06c-72d26c9cf475</id>
+            <parentID>e3b0edb5-365d-4e53-a2f1-5e9b76f79907</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>61449a02-a67e-4038-9993-f50b5e47caa2</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>61449a02-a67e-4038-9993-f50b5e47caa2</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"sowName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8d2b4482-7069-4ae4-a5d2-3a18b11853c3</id>
+            <parentID>e3b0edb5-365d-4e53-a2f1-5e9b76f79907</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>b6cdaa97-26e7-499a-ae3b-7c551812945a</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>77f661ee-b938-4158-9f11-f51b7b0767f0</id>
+                        <expressionID>b6c40696-bb4a-4a44-b2e8-39eaef97f92b</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>d2904f85-5b44-42dd-a48f-dd3363e8fd78</id>
+                        <expressionID>8b41b46b-cf4f-4685-a302-2ce9d61be2e0</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b6cdaa97-26e7-499a-ae3b-7c551812945a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b6c40696-bb4a-4a44-b2e8-39eaef97f92b</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>f4a02d89-7ffa-4405-8c13-e845d92c07af</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f4a02d89-7ffa-4405-8c13-e845d92c07af</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"sow")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8b41b46b-cf4f-4685-a302-2ce9d61be2e0</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>f699f0ad-2ca1-46e9-b726-011ef24021f4</id>
+            <parentID />
+            <source>entrys.earGap=entrys.sow.earGap</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>ce3b0704-35c9-4e65-96a4-37743c2193c7</id>
+            <parentID>f699f0ad-2ca1-46e9-b726-011ef24021f4</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>da0fd912-3000-42b9-ad52-3fcea025b075</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>da0fd912-3000-42b9-ad52-3fcea025b075</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"earGap")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>af198e17-06d1-488e-b3b1-97714a824c31</id>
+            <parentID>f699f0ad-2ca1-46e9-b726-011ef24021f4</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>8cf6dca0-30a4-4f99-a39e-b2bc3e79cfa6</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>97cc2df0-b215-4932-99ba-80d3bd8ab519</id>
+                        <expressionID>1b9919e8-9dec-4706-9f35-5b1faacc0ff4</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>84f90655-ecac-4642-9a00-a15632cdbaf6</id>
+                        <expressionID>145e1668-3519-4c9b-8b14-fc700cd3041d</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8cf6dca0-30a4-4f99-a39e-b2bc3e79cfa6</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1b9919e8-9dec-4706-9f35-5b1faacc0ff4</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>876668cf-9fa4-41ab-b4b0-fed058385d7f</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>876668cf-9fa4-41ab-b4b0-fed058385d7f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"sow")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>145e1668-3519-4c9b-8b14-fc700cd3041d</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>earGap</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>8a0ae275-31ab-4559-8e67-47bea9210372</id>
+            <parentID />
+            <source>entrys.earTag=entrys.sow.earTag</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>bf5d7f6f-3b1b-4d9d-8966-9d6e28507b64</id>
+            <parentID>8a0ae275-31ab-4559-8e67-47bea9210372</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>a6f2f101-173d-4733-8f15-2d9eba85ae3c</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a6f2f101-173d-4733-8f15-2d9eba85ae3c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"earTag")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b06e7615-0357-42e1-99aa-7096be68678b</id>
+            <parentID>8a0ae275-31ab-4559-8e67-47bea9210372</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>18b0ab2b-11ab-4cf7-b46d-04c36852089c</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>cc3f1b59-c58b-4cf4-935d-df03ec20ba81</id>
+                        <expressionID>570d3583-eddf-43aa-af1d-eb56fba4e4b6</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>2353bd78-a46c-4b96-af8e-2337b0449103</id>
+                        <expressionID>eacb5a56-2977-4eb9-aca7-0b282c7e5b69</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>18b0ab2b-11ab-4cf7-b46d-04c36852089c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>570d3583-eddf-43aa-af1d-eb56fba4e4b6</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>0cba9d4b-6191-44ac-82b2-aa05a148ff3c</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0cba9d4b-6191-44ac-82b2-aa05a148ff3c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"sow")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>eacb5a56-2977-4eb9-aca7-0b282c7e5b69</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>earTag</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>047db2d3-cdd0-4e2f-821a-654ab8ec4211</id>
+            <parentID />
+            <source>entrys.immuneTag=entrys.sow.immuneTag</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>9394487a-d313-46e0-b156-90cccece1566</id>
+            <parentID>047db2d3-cdd0-4e2f-821a-654ab8ec4211</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>02d8fc06-7d90-4282-a86f-9571c9c7a565</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>02d8fc06-7d90-4282-a86f-9571c9c7a565</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"immuneTag")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4c652335-f4b6-48c2-a85e-5c8f4ce4076c</id>
+            <parentID>047db2d3-cdd0-4e2f-821a-654ab8ec4211</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>9635aa0d-8152-4cd4-b64b-5f8e828d6f67</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>e3bdb375-6adc-4583-9d1b-02f4b1df9950</id>
+                        <expressionID>bff9c729-9abd-424e-be09-4b6fb1779d9f</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>88d84b8b-bb1f-4c2e-932f-c68bf590616d</id>
+                        <expressionID>f2594e25-16b2-412a-91c4-03b931aaed16</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9635aa0d-8152-4cd4-b64b-5f8e828d6f67</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bff9c729-9abd-424e-be09-4b6fb1779d9f</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>6a101333-a07b-4b6a-9508-f0368071acb2</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6a101333-a07b-4b6a-9508-f0368071acb2</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"sow")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f2594e25-16b2-412a-91c4-03b931aaed16</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>immuneTag</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>f575c5ac-7bd3-4578-8a81-236c05c7ebe9</id>
+            <parentID />
+            <source>entrys.bornDate=entrys.sow.bornDate</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>8795b295-5207-4897-a2be-240115391cf6</id>
+            <parentID>f575c5ac-7bd3-4578-8a81-236c05c7ebe9</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Date</valueType>
+            <value />
+            <property>
+                <ownerID>99018b9c-9f7f-4aa7-a805-32bf83027d7b</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>99018b9c-9f7f-4aa7-a805-32bf83027d7b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"bornDate")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d7b1e8e2-a840-4572-b5d3-9383784665a4</id>
+            <parentID>f575c5ac-7bd3-4578-8a81-236c05c7ebe9</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Date</valueType>
+            <value />
+            <method>
+                <ownerID>c6c38be8-fe3d-43bc-ade0-f17fb96d2191</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>53c6ecaa-01dc-4f23-8487-f8fefaaff62c</id>
+                        <expressionID>5deab6e5-ccb4-4ab4-b525-8b09eb34ac91</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>cbcd87f5-5055-49af-822d-ea20239fd47b</id>
+                        <expressionID>d41f45f7-bc96-4646-a8e9-4740be8321e6</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c6c38be8-fe3d-43bc-ade0-f17fb96d2191</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5deab6e5-ccb4-4ab4-b525-8b09eb34ac91</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>bd9220f9-8b8d-420b-968b-b6be934e7437</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bd9220f9-8b8d-420b-968b-b6be934e7437</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"sow")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d41f45f7-bc96-4646-a8e9-4740be8321e6</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>bornDate</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>51e94240-6a42-46a2-87cf-65956afc486a</id>
+            <name>entrys_sowName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].actions.action[entrys_sowName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].actions.action[entrys_sowName_ActionInfo].description</description>
+            <expressionID>e3b0edb5-365d-4e53-a2f1-5e9b76f79907</expressionID>
+        </action>
+        <action>
+            <id>e80e89ff-1f99-43c0-acc6-f3d589b8868b</id>
+            <name>entrys_earGap_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].actions.action[entrys_earGap_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].actions.action[entrys_earGap_ActionInfo].description</description>
+            <expressionID>f699f0ad-2ca1-46e9-b726-011ef24021f4</expressionID>
+        </action>
+        <action>
+            <id>bbddcbce-4f9c-4dd8-916c-27d09877e216</id>
+            <name>entrys_earTag_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].actions.action[entrys_earTag_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].actions.action[entrys_earTag_ActionInfo].description</description>
+            <expressionID>8a0ae275-31ab-4559-8e67-47bea9210372</expressionID>
+        </action>
+        <action>
+            <id>79f9263e-b79b-4f88-9158-53ae5ea31dab</id>
+            <name>entrys_immuneTag_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].actions.action[entrys_immuneTag_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].actions.action[entrys_immuneTag_ActionInfo].description</description>
+            <expressionID>047db2d3-cdd0-4e2f-821a-654ab8ec4211</expressionID>
+        </action>
+        <action>
+            <id>4b14deae-a299-44fe-b8d2-4b07350c1ce4</id>
+            <name>entrys_bornDate_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].actions.action[entrys_bornDate_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].actions.action[entrys_bornDate_ActionInfo].description</description>
+            <expressionID>f575c5ac-7bd3-4578-8a81-236c05c7ebe9</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>entrys_sowName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_sowName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_sowName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="51e94240-6a42-46a2-87cf-65956afc486a" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>entrys_earGap_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_earGap_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_earGap_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="e80e89ff-1f99-43c0-acc6-f3d589b8868b" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>entrys_earTag_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_earTag_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_earTag_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="bbddcbce-4f9c-4dd8-916c-27d09877e216" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>entrys_immuneTag_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_immuneTag_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_immuneTag_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="79f9263e-b79b-4f88-9158-53ae5ea31dab" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>entrys_bornDate_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_bornDate_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_bornDate_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="4b14deae-a299-44fe-b8d2-4b07350c1ce4" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].actions.action[entrys_bornDate_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_bornDate" />
+            <lang locale="zh_HK" value="攜帶字段屬性_bornDate" />
+            <lang locale="zh_TW" value="攜帶字段屬性_bornDate" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].actions.action[entrys_bornDate_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].actions.action[entrys_earGap_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_earGap" />
+            <lang locale="zh_HK" value="攜帶字段屬性_earGap" />
+            <lang locale="zh_TW" value="攜帶字段屬性_earGap" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].actions.action[entrys_earGap_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].actions.action[entrys_earTag_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_earTag" />
+            <lang locale="zh_HK" value="攜帶字段屬性_earTag" />
+            <lang locale="zh_TW" value="攜帶字段屬性_earTag" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].actions.action[entrys_earTag_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].actions.action[entrys_immuneTag_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_immuneTag" />
+            <lang locale="zh_HK" value="攜帶字段屬性_immuneTag" />
+            <lang locale="zh_TW" value="攜帶字段屬性_immuneTag" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].actions.action[entrys_immuneTag_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].actions.action[entrys_sowName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].actions.action[entrys_sowName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_bornDate_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_bornDate" />
+            <lang locale="zh_HK" value="攜帶字段屬性_bornDate" />
+            <lang locale="zh_TW" value="攜帶字段屬性_bornDate" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_bornDate_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_bornDate_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="sow" />
+            <lang locale="zh_CN" value="sow" />
+            <lang locale="zh_TW" value="sow" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_bornDate_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_earGap_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_earGap" />
+            <lang locale="zh_HK" value="攜帶字段屬性_earGap" />
+            <lang locale="zh_TW" value="攜帶字段屬性_earGap" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_earGap_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_earGap_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="sow" />
+            <lang locale="zh_CN" value="sow" />
+            <lang locale="zh_TW" value="sow" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_earGap_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_earTag_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_earTag" />
+            <lang locale="zh_HK" value="攜帶字段屬性_earTag" />
+            <lang locale="zh_TW" value="攜帶字段屬性_earTag" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_earTag_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_earTag_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="sow" />
+            <lang locale="zh_CN" value="sow" />
+            <lang locale="zh_TW" value="sow" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_earTag_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_immuneTag_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_immuneTag" />
+            <lang locale="zh_HK" value="攜帶字段屬性_immuneTag" />
+            <lang locale="zh_TW" value="攜帶字段屬性_immuneTag" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_immuneTag_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_immuneTag_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="sow" />
+            <lang locale="zh_CN" value="sow" />
+            <lang locale="zh_TW" value="sow" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_immuneTag_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_sowName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_sowName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_sowName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="sow" />
+            <lang locale="zh_CN" value="sow" />
+            <lang locale="zh_TW" value="sow" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingsow.app.SowPolulationRuleSet].rules.conditionRule[entrys_sowName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

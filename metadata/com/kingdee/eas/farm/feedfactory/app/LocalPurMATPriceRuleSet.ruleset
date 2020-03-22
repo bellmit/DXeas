@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.feedfactory.app</package>
+    <name>LocalPurMATPriceRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>72ffb85e-bf84-4636-8a4d-d13d4b396ab5</id>
+            <parentID />
+            <source>Entry.materialName=Entry.material.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>9c9e0a17-668a-4340-ad5f-a0fa6e094e66</id>
+            <parentID>72ffb85e-bf84-4636-8a4d-d13d4b396ab5</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>82819812-3044-42f5-9cbb-0a1e6fc9e578</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>82819812-3044-42f5-9cbb-0a1e6fc9e578</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"materialName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b16a1f58-1e1d-401f-85d2-573ce38f3977</id>
+            <parentID>72ffb85e-bf84-4636-8a4d-d13d4b396ab5</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>35adb186-6818-4b16-8d24-3d0fd8373d48</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>c804e2ba-a63b-4ea2-864b-f946e53e11d9</id>
+                        <expressionID>930b62db-33b5-4344-b5e1-1483050444a3</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>e62dc8f3-704e-4071-96c4-0533e0aa69fd</id>
+                        <expressionID>ddbbd6d8-14a8-487a-a2bb-e9e0d711622f</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>35adb186-6818-4b16-8d24-3d0fd8373d48</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>930b62db-33b5-4344-b5e1-1483050444a3</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>65325fd2-9add-4ca5-804b-55780dd09ded</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>65325fd2-9add-4ca5-804b-55780dd09ded</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntry.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ddbbd6d8-14a8-487a-a2bb-e9e0d711622f</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>e72bb844-8768-4ad4-9ba2-6bd7a21e966d</id>
+            <name>Entry_materialName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceRuleSet].actions.action[Entry_materialName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceRuleSet].actions.action[Entry_materialName_ActionInfo].description</description>
+            <expressionID>72ffb85e-bf84-4636-8a4d-d13d4b396ab5</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>Entry_materialName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceRuleSet].rules.conditionRule[Entry_materialName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceRuleSet].rules.conditionRule[Entry_materialName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="e72bb844-8768-4ad4-9ba2-6bd7a21e966d" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceRuleSet].actions.action[Entry_materialName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceRuleSet].actions.action[Entry_materialName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceRuleSet].rules.conditionRule[Entry_materialName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceRuleSet].rules.conditionRule[Entry_materialName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceRuleSet].rules.conditionRule[Entry_materialName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="material" />
+            <lang locale="zh_CN" value="material" />
+            <lang locale="zh_TW" value="material" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceRuleSet].rules.conditionRule[Entry_materialName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

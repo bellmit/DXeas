@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.bdm.bdapply.app</package>
+    <name>CustomerInfoReqRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.bdm.bdapply.app.CustomerInfoReqRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.bdm.bdapply.app.CustomerInfoReqRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <simpleExpression>
+            <id>f41e7772-5d4b-4f97-9c37-a5f9b07ab226</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <groupExpression>
+            <id>7837354a-e1b8-412f-8bec-b68f31e5f1b3</id>
+            <parentID />
+            <source>CustomerGroupEntry.groupFullName = CustomerGroupEntry.customerGroup.displayName</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>60719bab-f502-4d22-83de-47a5d0c07ab7</id>
+            <parentID>7837354a-e1b8-412f-8bec-b68f31e5f1b3</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>3bad77aa-cc98-44ea-85c2-5160d50c858e</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3bad77aa-cc98-44ea-85c2-5160d50c858e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtCustomerGroupEntry.getCell(rowIndex,"groupFullName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5b8cc16b-b813-4041-bf2c-39c4f2c1670d</id>
+            <parentID>7837354a-e1b8-412f-8bec-b68f31e5f1b3</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>bd4c6354-6bd2-496f-bd02-bb8d21d0cf26</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>78adefdf-93e7-4256-b239-cb916694f08d</id>
+                        <expressionID>adea7315-0ea3-4d1b-82e9-07fd948cfd79</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>00fef74a-69d7-4142-b81d-ebe3a280a480</id>
+                        <expressionID>c4a750b4-4c10-4dc4-97d4-a0ec54ca9a36</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bd4c6354-6bd2-496f-bd02-bb8d21d0cf26</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>adea7315-0ea3-4d1b-82e9-07fd948cfd79</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>cb70db06-e67a-4809-993e-14bc5c22383e</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cb70db06-e67a-4809-993e-14bc5c22383e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtCustomerGroupEntry.getCell(rowIndex,"customerGroup")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c4a750b4-4c10-4dc4-97d4-a0ec54ca9a36</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>displayName</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>aad33819-54b4-4e1c-b7ae-4e8642b4213d</id>
+            <name>B5UX9CDI</name>
+            <alias>ruleSet[com.kingdee.eas.bdm.bdapply.app.CustomerInfoReqRuleSet].actions.action[B5UX9CDI].alias</alias>
+            <description>ruleSet[com.kingdee.eas.bdm.bdapply.app.CustomerInfoReqRuleSet].actions.action[B5UX9CDI].description</description>
+            <expressionID>f41e7772-5d4b-4f97-9c37-a5f9b07ab226</expressionID>
+        </action>
+        <action>
+            <id>447aed2a-c308-4940-9638-bcf6b2eccefe</id>
+            <name>CXYZSB8K</name>
+            <alias>ruleSet[com.kingdee.eas.bdm.bdapply.app.CustomerInfoReqRuleSet].actions.action[CXYZSB8K].alias</alias>
+            <description>ruleSet[com.kingdee.eas.bdm.bdapply.app.CustomerInfoReqRuleSet].actions.action[CXYZSB8K].description</description>
+            <expressionID>7837354a-e1b8-412f-8bec-b68f31e5f1b3</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>CXYZSB_1</name>
+            <alias>ruleSet[com.kingdee.eas.bdm.bdapply.app.CustomerInfoReqRuleSet].rules.conditionRule[CXYZSB_1].alias</alias>
+            <description>ruleSet[com.kingdee.eas.bdm.bdapply.app.CustomerInfoReqRuleSet].rules.conditionRule[CXYZSB_1].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="447aed2a-c308-4940-9638-bcf6b2eccefe" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.bdm.bdapply.app.CustomerInfoReqRuleSet].actions.action[B5UX9CDI].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.bdm.bdapply.app.CustomerInfoReqRuleSet].actions.action[B5UX9CDI].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.bdm.bdapply.app.CustomerInfoReqRuleSet].actions.action[CXYZSB8K].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.bdm.bdapply.app.CustomerInfoReqRuleSet].actions.action[CXYZSB8K].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.bdm.bdapply.app.CustomerInfoReqRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.bdm.bdapply.app.CustomerInfoReqRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.bdm.bdapply.app.CustomerInfoReqRuleSet].rules.conditionRule[CXYZSB_1].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="SetFieldPropEvent0002" />
+            <lang locale="zh_HK" value="SetFieldPropEvent0002" />
+            <lang locale="zh_TW" value="SetFieldPropEvent0002" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.bdm.bdapply.app.CustomerInfoReqRuleSet].rules.conditionRule[CXYZSB_1].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.bdm.bdapply.app.CustomerInfoReqRuleSet].rules.conditionRule[CXYZSB_1].extendedProperty.columnName">
+            <lang locale="en_US" value="customerGroup" />
+            <lang locale="zh_CN" value="customerGroup" />
+            <lang locale="zh_TW" value="customerGroup" />
+        </rs>
+    </resource>
+</ruleSet>
+

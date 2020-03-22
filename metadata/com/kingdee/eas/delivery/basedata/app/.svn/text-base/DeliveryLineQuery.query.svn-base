@@ -1,0 +1,2618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.delivery.basedata.app</package>
+    <name>DeliveryLineQuery</name>
+    <alias>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].alias</alias>
+    <description>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].description</description>
+    <userDefined>true</userDefined>
+    <reportDataSource />
+    <bizUnitPK>com.kingdee.eas.delivery.basedata.DeliveryLine</bizUnitPK>
+    <connectionProvider />
+    <subObjects>
+        <subEntity>
+            <name>DeliveryLine</name>
+            <alias>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].subObjects.subEntity[DeliveryLine].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLine" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>beginStation</name>
+            <alias>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].subObjects.subEntity[beginStation].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.assistant.app" />
+                <key name="name" value="Address" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>defaultCarrier</name>
+            <alias>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].subObjects.subEntity[defaultCarrier].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.master.cssp.app" />
+                <key name="name" value="Supplier" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>lastUpdateUser</name>
+            <alias>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].subObjects.subEntity[lastUpdateUser].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="User" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>CU</name>
+            <alias>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].subObjects.subEntity[CU].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="CtrlUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>endStation</name>
+            <alias>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].subObjects.subEntity[endStation].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.assistant.app" />
+                <key name="name" value="Address" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>entry</name>
+            <alias>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].subObjects.subEntity[entry].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineEntry" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>creator</name>
+            <alias>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].subObjects.subEntity[creator].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="User" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>fromStorageOrg</name>
+            <alias>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].subObjects.subEntity[fromStorageOrg].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="StorageOrgUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>toStorageOrg</name>
+            <alias>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].subObjects.subEntity[toStorageOrg].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="StorageOrgUnit" />
+            </entityRef>
+        </subEntity>
+    </subObjects>
+    <units>
+        <propertyUnit>
+            <name>142b4b71-d7f8-476a-989a-1aa666511b09</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[142b4b71-d7f8-476a-989a-1aa666511b09].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>e5eaddd0-4c1a-4e7b-8239-535274337d8a</key>
+                    <parentUnit>
+                        <key name="name" value="142b4b71-d7f8-476a-989a-1aa666511b09" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DeliveryLine" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="beginStation" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>ae75b0f5-6f13-4fa5-b063-4b16c404c092</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[ae75b0f5-6f13-4fa5-b063-4b16c404c092].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>12ba5fd5-da5e-4a95-8046-7bf2661619fb</key>
+                    <parentUnit>
+                        <key name="name" value="ae75b0f5-6f13-4fa5-b063-4b16c404c092" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="beginStation" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>0dbb9107-a354-4124-87bd-b7bc45810d4e</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[0dbb9107-a354-4124-87bd-b7bc45810d4e].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>5d868e7f-f9e0-4393-9d80-af3864b6d43f</key>
+                    <parentUnit>
+                        <key name="name" value="0dbb9107-a354-4124-87bd-b7bc45810d4e" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DeliveryLine" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="defaultCarrier" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>9227495d-4051-47f2-8f52-cb538ea9ffde</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[9227495d-4051-47f2-8f52-cb538ea9ffde].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>be013ee6-03db-4844-8c48-647871697ca1</key>
+                    <parentUnit>
+                        <key name="name" value="9227495d-4051-47f2-8f52-cb538ea9ffde" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="defaultCarrier" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>08f20114-f679-4650-bb38-24701d8e5e86</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[08f20114-f679-4650-bb38-24701d8e5e86].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>dc978644-b573-4484-9281-c953ad1a035c</key>
+                    <parentUnit>
+                        <key name="name" value="08f20114-f679-4650-bb38-24701d8e5e86" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DeliveryLine" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="lastUpdateUser" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>2ef5852d-99e2-4e35-9391-8d82aa7ad1df</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[2ef5852d-99e2-4e35-9391-8d82aa7ad1df].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>c9b3c369-aeeb-40ce-9360-e27faf79b60d</key>
+                    <parentUnit>
+                        <key name="name" value="2ef5852d-99e2-4e35-9391-8d82aa7ad1df" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="lastUpdateUser" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>3a05fc99-476e-48b5-b946-c540f5ffa8a1</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[3a05fc99-476e-48b5-b946-c540f5ffa8a1].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>378cd26a-c3cb-4ddc-a546-837b5212f2b9</key>
+                    <parentUnit>
+                        <key name="name" value="3a05fc99-476e-48b5-b946-c540f5ffa8a1" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DeliveryLine" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="CU" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>ab37ce11-e505-490b-a50e-1ee34c1d9022</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[ab37ce11-e505-490b-a50e-1ee34c1d9022].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>8d106b29-4c82-42b9-bd62-962170cf2b55</key>
+                    <parentUnit>
+                        <key name="name" value="ab37ce11-e505-490b-a50e-1ee34c1d9022" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="CU" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>defaultTranType</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[defaultTranType].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>c1d17d91-4941-49ae-86bc-0b2f0e16e0b6</key>
+                    <parentUnit>
+                        <key name="name" value="defaultTranType" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DeliveryLine" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="defaultTranType" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>totalMileage</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[totalMileage].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>23a325e2-a7e6-4286-a486-abd57535d4a4</key>
+                    <parentUnit>
+                        <key name="name" value="totalMileage" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DeliveryLine" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="totalMileage" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>status</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[status].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>9fecf2c6-55c8-4c86-92a2-c8bf32deb2a9</key>
+                    <parentUnit>
+                        <key name="name" value="status" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DeliveryLine" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="status" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b2dc7cfb-922b-48aa-bd50-5b835b353098</key>
+                    <parentUnit>
+                        <key name="name" value="name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DeliveryLine" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>d9456d42-83e2-4e65-ae2b-d483e7885f27</key>
+                    <parentUnit>
+                        <key name="name" value="number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DeliveryLine" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>description</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[description].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>d11cda33-2268-428a-92d3-1c0170c7b25e</key>
+                    <parentUnit>
+                        <key name="name" value="description" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DeliveryLine" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="description" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>beginStation.id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[beginStation.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b7194442-1578-4a56-8be0-602fcb4d36d9</key>
+                    <parentUnit>
+                        <key name="name" value="beginStation.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="beginStation" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>beginStation.number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[beginStation.number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>43ea1926-7ef6-452c-b63f-635f88efe624</key>
+                    <parentUnit>
+                        <key name="name" value="beginStation.number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="beginStation" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>beginStation.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[beginStation.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>be85d878-d782-4480-8c3e-169e6d9165bb</key>
+                    <parentUnit>
+                        <key name="name" value="beginStation.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="beginStation" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>defaultCarrier.id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[defaultCarrier.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>bbae251a-b95e-41aa-82ee-cf13ed5e420b</key>
+                    <parentUnit>
+                        <key name="name" value="defaultCarrier.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="defaultCarrier" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>defaultCarrier.number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[defaultCarrier.number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>52211e88-c34b-4942-bbd1-45b78c15330c</key>
+                    <parentUnit>
+                        <key name="name" value="defaultCarrier.number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="defaultCarrier" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>defaultCarrier.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[defaultCarrier.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>c00cb206-7642-4204-adbe-6f061855b4fb</key>
+                    <parentUnit>
+                        <key name="name" value="defaultCarrier.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="defaultCarrier" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>lastUpdateUser.id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[lastUpdateUser.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>16f1e13d-ee55-423e-b1a0-54f294e2a8ef</key>
+                    <parentUnit>
+                        <key name="name" value="lastUpdateUser.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="lastUpdateUser" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>lastUpdateUser.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[lastUpdateUser.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>7d279bc1-e347-46e7-9f39-4d97e28ac75f</key>
+                    <parentUnit>
+                        <key name="name" value="lastUpdateUser.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="lastUpdateUser" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>lastUpdateUser.number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[lastUpdateUser.number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>f922ef92-5214-43e4-939a-236adee55d79</key>
+                    <parentUnit>
+                        <key name="name" value="lastUpdateUser.number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="lastUpdateUser" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>CU.id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[CU.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>4c345d76-50b8-45be-96eb-dc6e0531588c</key>
+                    <parentUnit>
+                        <key name="name" value="CU.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="CU" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>endStation.id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[endStation.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>59c28b55-56fc-4424-b9a9-2962ff76e911</key>
+                    <parentUnit>
+                        <key name="name" value="endStation.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="endStation" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>endStation.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[endStation.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>e9f5bad4-9e02-4514-908d-8e3b21194c1f</key>
+                    <parentUnit>
+                        <key name="name" value="endStation.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="endStation" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>endStation.number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[endStation.number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>ae163c1d-f1cd-42b1-b2c5-df38d1990653</key>
+                    <parentUnit>
+                        <key name="name" value="endStation.number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="endStation" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>entry.detailMileage</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[entry.detailMileage].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>e80ebb4c-9c28-40ae-85a6-cfc35cf832fb</key>
+                    <parentUnit>
+                        <key name="name" value="entry.detailMileage" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="detailMileage" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>entry.detailTranType</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[entry.detailTranType].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>8135f4e5-fdd3-472a-9ad6-f1faa9780c0c</key>
+                    <parentUnit>
+                        <key name="name" value="entry.detailTranType" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="detailTranType" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>entry.seq</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[entry.seq].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>bf1eb839-899d-4405-aa8c-df2b1895df3e</key>
+                    <parentUnit>
+                        <key name="name" value="entry.seq" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="seq" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>entry.id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[entry.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>f3de249d-1897-4854-915f-b8e34051a640</key>
+                    <parentUnit>
+                        <key name="name" value="entry.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>creator.id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[creator.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>57a46a6d-fd28-4a04-b4e5-9beb36893e79</key>
+                    <parentUnit>
+                        <key name="name" value="creator.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="creator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>creator.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[creator.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>04144eef-3cfb-4b07-8791-1831504e4948</key>
+                    <parentUnit>
+                        <key name="name" value="creator.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="creator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>creator.number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[creator.number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0b587fe6-5de6-47ee-a1f0-14f1bbecf273</key>
+                    <parentUnit>
+                        <key name="name" value="creator.number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="creator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>0d51e5da-366b-4e7b-b4b1-2ea4b1112df4</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[0d51e5da-366b-4e7b-b4b1-2ea4b1112df4].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>4669ae9c-8d3e-4f8b-98a8-e0f7af31e7ed</key>
+                    <parentUnit>
+                        <key name="name" value="0d51e5da-366b-4e7b-b4b1-2ea4b1112df4" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DeliveryLine" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>452e6898-9f81-40dc-b6ab-bf770945dbd7</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[452e6898-9f81-40dc-b6ab-bf770945dbd7].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>ef7ab1af-62fb-47b1-a762-79378e064f96</key>
+                    <parentUnit>
+                        <key name="name" value="452e6898-9f81-40dc-b6ab-bf770945dbd7" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="parent" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>1a5cf3ee-8bfc-4c17-9648-7daaa53f71a2</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[1a5cf3ee-8bfc-4c17-9648-7daaa53f71a2].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>38ee9952-e27a-416b-94ee-ace5b22425cd</key>
+                    <parentUnit>
+                        <key name="name" value="1a5cf3ee-8bfc-4c17-9648-7daaa53f71a2" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DeliveryLine" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="creator" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>5174b941-c145-4254-8059-9e9f4f83b4b6</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[5174b941-c145-4254-8059-9e9f4f83b4b6].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0cf67be5-ead2-46cf-8154-e1f68afc08bd</key>
+                    <parentUnit>
+                        <key name="name" value="5174b941-c145-4254-8059-9e9f4f83b4b6" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="creator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>50230320-c43c-41d2-b758-507ce5473694</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[50230320-c43c-41d2-b758-507ce5473694].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>7f227027-bb43-42a8-879c-482c41163309</key>
+                    <parentUnit>
+                        <key name="name" value="50230320-c43c-41d2-b758-507ce5473694" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DeliveryLine" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="endStation" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>284dadac-2439-4392-99a0-dc121104f693</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[284dadac-2439-4392-99a0-dc121104f693].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>e93ad281-b104-470d-83c3-5ed6ce67870e</key>
+                    <parentUnit>
+                        <key name="name" value="284dadac-2439-4392-99a0-dc121104f693" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="endStation" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>fbca3bdb-dd3b-4483-a8cd-c92bfbe7f85e</key>
+                    <parentUnit>
+                        <key name="name" value="id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DeliveryLine" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>avgHour</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[avgHour].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>af162c39-aa51-4823-9a12-4df7f42d30cc</key>
+                    <parentUnit>
+                        <key name="name" value="avgHour" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DeliveryLine" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="avgHour" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>avgMinute</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[avgMinute].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>a748fac0-387b-4e88-894b-70e55117d2b8</key>
+                    <parentUnit>
+                        <key name="name" value="avgMinute" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DeliveryLine" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="avgMinute" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>isInner</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[isInner].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Boolean</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>c4427980-b748-4cd5-a703-595c8652b056</key>
+                    <parentUnit>
+                        <key name="name" value="isInner" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DeliveryLine" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="isInner" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>fromStorageOrg.name</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[fromStorageOrg.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>4e56de78-3b1c-427d-8876-aeead6b931b7</key>
+                    <parentUnit>
+                        <key name="name" value="fromStorageOrg.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="fromStorageOrg" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>dc362743-2087-4d6e-a25e-dd9e70ce7a24</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[dc362743-2087-4d6e-a25e-dd9e70ce7a24].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>934b16e2-191e-4dfa-9dfc-d68799502d19</key>
+                    <parentUnit>
+                        <key name="name" value="dc362743-2087-4d6e-a25e-dd9e70ce7a24" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DeliveryLine" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="fromStorageOrg" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>b5b9b7ff-4dbd-45b1-9864-4f005bff671c</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[b5b9b7ff-4dbd-45b1-9864-4f005bff671c].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>746ea6ee-3576-4678-adb7-885312dd2f72</key>
+                    <parentUnit>
+                        <key name="name" value="b5b9b7ff-4dbd-45b1-9864-4f005bff671c" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="fromStorageOrg" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>toStorageOrg.name</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[toStorageOrg.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>1fb2ade8-e495-419e-9fce-efe7445af29b</key>
+                    <parentUnit>
+                        <key name="name" value="toStorageOrg.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="toStorageOrg" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>824d78d1-0b5c-47bd-b5e2-f683c5fa71ac</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[824d78d1-0b5c-47bd-b5e2-f683c5fa71ac].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>4656047c-75cf-400e-908a-ef980eff798b</key>
+                    <parentUnit>
+                        <key name="name" value="824d78d1-0b5c-47bd-b5e2-f683c5fa71ac" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DeliveryLine" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="toStorageOrg" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>49279293-d6ec-428f-be84-0b983a702274</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[49279293-d6ec-428f-be84-0b983a702274].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>f420c925-f676-4388-af8e-07d9d9e2b4a6</key>
+                    <parentUnit>
+                        <key name="name" value="49279293-d6ec-428f-be84-0b983a702274" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="toStorageOrg" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>defaultCarCount</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[defaultCarCount].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>92cf9ef7-12dd-43ce-9d5e-0229e2027593</key>
+                    <parentUnit>
+                        <key name="name" value="defaultCarCount" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DeliveryLine" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="defaultCarCount" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </queryField>
+    </units>
+    <defaultFilter>
+        <name>defaultFilter</name>
+        <formulaString />
+        <query>
+            <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+            <key name="name" value="DeliveryLineQuery" />
+        </query>
+    </defaultFilter>
+    <isDistinct>false</isDistinct>
+    <joins>
+        <join>
+            <name>9be2d72a-d166-4870-9579-aa67bef98e04</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="DeliveryLine" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="beginStation" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>c7699db6-d50b-45b7-9d30-72ce75b8952d</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="142b4b71-d7f8-476a-989a-1aa666511b09" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="ae75b0f5-6f13-4fa5-b063-4b16c404c092" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="9be2d72a-d166-4870-9579-aa67bef98e04" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </join>
+        <join>
+            <name>d3edcc59-774e-4630-b628-1c49a072eae8</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="DeliveryLine" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="defaultCarrier" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>164fd4c8-0849-4baa-9c37-9cbb31716c7c</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="0dbb9107-a354-4124-87bd-b7bc45810d4e" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="9227495d-4051-47f2-8f52-cb538ea9ffde" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="d3edcc59-774e-4630-b628-1c49a072eae8" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </join>
+        <join>
+            <name>43910bc1-e4f9-4cb7-8eb1-237a3180c5fc</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="DeliveryLine" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="lastUpdateUser" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>bece3686-5467-441d-a56f-a7663c0a5428</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="08f20114-f679-4650-bb38-24701d8e5e86" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="2ef5852d-99e2-4e35-9391-8d82aa7ad1df" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="43910bc1-e4f9-4cb7-8eb1-237a3180c5fc" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </join>
+        <join>
+            <name>cc37ac22-e015-4a62-a44b-f57ab0ca9c52</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="DeliveryLine" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="CU" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>67e2b78b-203d-45bf-a348-3ee3192d9b59</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="3a05fc99-476e-48b5-b946-c540f5ffa8a1" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="ab37ce11-e505-490b-a50e-1ee34c1d9022" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="cc37ac22-e015-4a62-a44b-f57ab0ca9c52" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </join>
+        <join>
+            <name>e453fcf4-0751-4acc-9423-fc6b714cba0f</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="DeliveryLine" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="endStation" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>3ddf2473-f158-4479-a9f6-be3afb13c4d2</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="50230320-c43c-41d2-b758-507ce5473694" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="284dadac-2439-4392-99a0-dc121104f693" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="e453fcf4-0751-4acc-9423-fc6b714cba0f" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </join>
+        <join>
+            <name>2e1e960f-472f-4917-afa8-80ce26392b90</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="DeliveryLine" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="entry" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>2c60f13b-0bf0-4a46-a017-bb481598bdc1</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="0d51e5da-366b-4e7b-b4b1-2ea4b1112df4" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="452e6898-9f81-40dc-b6ab-bf770945dbd7" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="2e1e960f-472f-4917-afa8-80ce26392b90" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </join>
+        <join>
+            <name>bc4bf5c1-a307-4ec1-b484-d0b7a3c22715</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="DeliveryLine" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="creator" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>d97a109f-e3a2-4917-bb94-94b47fe3c5f6</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="1a5cf3ee-8bfc-4c17-9648-7daaa53f71a2" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="5174b941-c145-4254-8059-9e9f4f83b4b6" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="bc4bf5c1-a307-4ec1-b484-d0b7a3c22715" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </join>
+        <join>
+            <name>1822e7be-d736-41dd-bb72-493707a5d2ba</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="DeliveryLine" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="fromStorageOrg" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>c9685df5-dfc6-4c21-be1e-edc28977211b</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="dc362743-2087-4d6e-a25e-dd9e70ce7a24" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="b5b9b7ff-4dbd-45b1-9864-4f005bff671c" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="1822e7be-d736-41dd-bb72-493707a5d2ba" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </join>
+        <join>
+            <name>e213f9a6-c84b-44ca-bc74-9895b1f5ff14</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="DeliveryLine" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="toStorageOrg" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>da467183-4a73-4b12-b30b-ad54f05ab303</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="824d78d1-0b5c-47bd-b5e2-f683c5fa71ac" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="49279293-d6ec-428f-be84-0b983a702274" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="e213f9a6-c84b-44ca-bc74-9895b1f5ff14" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.delivery.basedata.app" />
+                <key name="name" value="DeliveryLineQuery" />
+            </query>
+        </join>
+    </joins>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="发运路线" />
+            <lang locale="zh_HK" value="發運路線" />
+            <lang locale="zh_TW" value="發運路線" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].extendedProperty.PkNameGroupBy">
+            <lang locale="en_US" value="" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].extendedProperty.bizDateField">
+            <lang locale="en_US" value="" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].extendedProperty.commitFormat">
+            <lang locale="en_US" value="" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].extendedProperty.f7WindowTitle">
+            <lang locale="en_US" value="发运路线" />
+            <lang locale="zh_CN" value="发运路线" />
+            <lang locale="zh_TW" value="发运路线" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].extendedProperty.isF7Maintain">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].subObjects.subEntity[CU].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].subObjects.subEntity[DeliveryLine].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].subObjects.subEntity[beginStation].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].subObjects.subEntity[creator].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].subObjects.subEntity[defaultCarrier].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].subObjects.subEntity[endStation].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].subObjects.subEntity[entry].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].subObjects.subEntity[fromStorageOrg].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].subObjects.subEntity[lastUpdateUser].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].subObjects.subEntity[toStorageOrg].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[08f20114-f679-4650-bb38-24701d8e5e86].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[0d51e5da-366b-4e7b-b4b1-2ea4b1112df4].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[0dbb9107-a354-4124-87bd-b7bc45810d4e].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[142b4b71-d7f8-476a-989a-1aa666511b09].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[1a5cf3ee-8bfc-4c17-9648-7daaa53f71a2].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[284dadac-2439-4392-99a0-dc121104f693].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[2ef5852d-99e2-4e35-9391-8d82aa7ad1df].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[3a05fc99-476e-48b5-b946-c540f5ffa8a1].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[452e6898-9f81-40dc-b6ab-bf770945dbd7].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[49279293-d6ec-428f-be84-0b983a702274].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[50230320-c43c-41d2-b758-507ce5473694].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[5174b941-c145-4254-8059-9e9f4f83b4b6].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[824d78d1-0b5c-47bd-b5e2-f683c5fa71ac].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[9227495d-4051-47f2-8f52-cb538ea9ffde].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[ab37ce11-e505-490b-a50e-1ee34c1d9022].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[ae75b0f5-6f13-4fa5-b063-4b16c404c092].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[b5b9b7ff-4dbd-45b1-9864-4f005bff671c].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.propertyUnit[dc362743-2087-4d6e-a25e-dd9e70ce7a24].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[CU.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[avgHour].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="平均耗时（小时）" />
+            <lang locale="zh_HK" value="平均耗時（小時）" />
+            <lang locale="zh_TW" value="平均耗時（小時）" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[avgHour].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[avgHour].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[avgMinute].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="分钟" />
+            <lang locale="zh_HK" value="分鐘" />
+            <lang locale="zh_TW" value="分鐘" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[avgMinute].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[avgMinute].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[beginStation.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[beginStation.id].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[beginStation.id].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[beginStation.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="名称" />
+            <lang locale="zh_HK" value="名稱" />
+            <lang locale="zh_TW" value="名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[beginStation.number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="编码" />
+            <lang locale="zh_HK" value="編碼" />
+            <lang locale="zh_TW" value="編碼" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[creator.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[creator.name].displayName">
+            <lang locale="en_US" value="用户别名" />
+            <lang locale="zh_CN" value="用户实名" />
+            <lang locale="zh_HK" value="用戶實名" />
+            <lang locale="zh_TW" value="用戶實名" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[creator.number].displayName">
+            <lang locale="en_US" value="用户名称" />
+            <lang locale="zh_CN" value="用户名" />
+            <lang locale="zh_HK" value="用戶名" />
+            <lang locale="zh_TW" value="用戶名" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[defaultCarCount].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="默认派车数" />
+            <lang locale="zh_HK" value="默認派車數" />
+            <lang locale="zh_TW" value="默認派車數" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[defaultCarCount].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[defaultCarCount].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[defaultCarrier.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[defaultCarrier.id].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[defaultCarrier.id].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[defaultCarrier.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="名称" />
+            <lang locale="zh_HK" value="名稱" />
+            <lang locale="zh_TW" value="名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[defaultCarrier.number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="编码" />
+            <lang locale="zh_HK" value="編碼" />
+            <lang locale="zh_TW" value="編碼" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[defaultTranType].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="默认运输方式" />
+            <lang locale="zh_HK" value="默認運輸方式" />
+            <lang locale="zh_TW" value="默認運輸方式" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[defaultTranType].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[defaultTranType].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[description].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="描述" />
+            <lang locale="zh_HK" value="描述" />
+            <lang locale="zh_TW" value="描述" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[description].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[description].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[endStation.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[endStation.id].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[endStation.id].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[endStation.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="名称" />
+            <lang locale="zh_HK" value="名稱" />
+            <lang locale="zh_TW" value="名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[endStation.number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="编码" />
+            <lang locale="zh_HK" value="編碼" />
+            <lang locale="zh_TW" value="編碼" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[entry.detailMileage].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="里程（公里）" />
+            <lang locale="zh_HK" value="裏程（公裏）" />
+            <lang locale="zh_TW" value="裏程（公裏）" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[entry.detailMileage].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[entry.detailMileage].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[entry.detailTranType].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="默认运输方式" />
+            <lang locale="zh_HK" value="默認運輸方式" />
+            <lang locale="zh_TW" value="默認運輸方式" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[entry.detailTranType].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[entry.detailTranType].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[entry.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[entry.seq].displayName">
+            <lang locale="en_US" value="sequence" />
+            <lang locale="zh_CN" value="单据分录序列号" />
+            <lang locale="zh_HK" value="單據分錄序列號" />
+            <lang locale="zh_TW" value="單據分錄序列號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[entry.seq].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[entry.seq].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[fromStorageOrg.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="起始组织" />
+            <lang locale="zh_HK" value="起始組織" />
+            <lang locale="zh_TW" value="起始組織" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[fromStorageOrg.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[fromStorageOrg.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[fromStorageOrg.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[id].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[id].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[id].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[isInner].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="集团内路线" />
+            <lang locale="zh_HK" value="集團內路線" />
+            <lang locale="zh_TW" value="集團內路線" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[isInner].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[isInner].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[lastUpdateUser.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[lastUpdateUser.name].displayName">
+            <lang locale="en_US" value="用户别名" />
+            <lang locale="zh_CN" value="用户实名" />
+            <lang locale="zh_HK" value="用戶實名" />
+            <lang locale="zh_TW" value="用戶實名" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[lastUpdateUser.number].displayName">
+            <lang locale="en_US" value="用户名称" />
+            <lang locale="zh_CN" value="用户名" />
+            <lang locale="zh_HK" value="用戶名" />
+            <lang locale="zh_TW" value="用戶名" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="名称" />
+            <lang locale="zh_HK" value="名稱" />
+            <lang locale="zh_TW" value="名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="编码" />
+            <lang locale="zh_HK" value="編碼" />
+            <lang locale="zh_TW" value="編碼" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[number].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[number].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[status].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="状态" />
+            <lang locale="zh_HK" value="狀態" />
+            <lang locale="zh_TW" value="狀態" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[status].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[status].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[toStorageOrg.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="目的组织" />
+            <lang locale="zh_HK" value="目的組織" />
+            <lang locale="zh_TW" value="目的組織" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[toStorageOrg.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[toStorageOrg.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[toStorageOrg.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[totalMileage].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="总里程（公里）" />
+            <lang locale="zh_HK" value="總裏程（公裏）" />
+            <lang locale="zh_TW" value="總裏程（公裏）" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[totalMileage].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.delivery.basedata.app.DeliveryLineQuery].units.queryField[totalMileage].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</joinQuery>
+

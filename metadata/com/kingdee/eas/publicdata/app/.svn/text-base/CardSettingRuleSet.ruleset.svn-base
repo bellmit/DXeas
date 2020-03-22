@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.publicdata.app</package>
+    <name>CardSettingRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.publicdata.app.CardSettingRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.publicdata.app.CardSettingRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>8f310de1-d41d-4e48-87e3-b22d622273b7</id>
+            <parentID />
+            <source>Entrys.MaterialEntrys.materialName=Entrys.MaterialEntrys.material.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>1ee1e3d2-e8c6-41a3-88c2-f86982213c7e</id>
+            <parentID>8f310de1-d41d-4e48-87e3-b22d622273b7</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>4213e91b-7599-4993-9648-5560b2246dc8</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4213e91b-7599-4993-9648-5560b2246dc8</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtMaterialEntrys.getCell(rowIndex,"materialName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a2690c3a-e34d-49a1-b935-eb252baba417</id>
+            <parentID>8f310de1-d41d-4e48-87e3-b22d622273b7</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>45802412-bd83-400a-a0ce-8dc1031ad7b9</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>6a19c2bb-18e3-48c8-aca7-4f765a4459ec</id>
+                        <expressionID>eb16211c-637c-499a-8b30-8380defc2493</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>c6dce27a-9d30-4565-bdac-e87702d673b7</id>
+                        <expressionID>36da45ff-4681-4c06-8fc4-a45ebbc94899</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>45802412-bd83-400a-a0ce-8dc1031ad7b9</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>eb16211c-637c-499a-8b30-8380defc2493</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>d2fafe3f-c925-4a87-9795-5e217bb94b24</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d2fafe3f-c925-4a87-9795-5e217bb94b24</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtMaterialEntrys.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>36da45ff-4681-4c06-8fc4-a45ebbc94899</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>9cca26da-397d-4e5f-9df8-b59065f0e110</id>
+            <parentID />
+            <source>Entrys.MaterialEntrys.model=Entrys.MaterialEntrys.material.model</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>24ef8b8c-14d6-4c81-ad14-b74a0bd18e6f</id>
+            <parentID>9cca26da-397d-4e5f-9df8-b59065f0e110</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>155cb846-4b1d-4659-ae18-3c7d1599c0a1</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>155cb846-4b1d-4659-ae18-3c7d1599c0a1</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtMaterialEntrys.getCell(rowIndex,"model")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>995ba4fb-4a95-4004-a262-a94b23b90725</id>
+            <parentID>9cca26da-397d-4e5f-9df8-b59065f0e110</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>7e89404c-57dd-4dc7-bc70-68a1e59576b5</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>ac90ed8f-a6a2-4bb8-a171-507aa514e9d2</id>
+                        <expressionID>3b959415-9c5a-431d-a130-f3d72cdf7fcf</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>b2481edf-fa84-4f95-888a-0e04692cdd24</id>
+                        <expressionID>93143672-7eab-4129-bb42-5cfac84baf77</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7e89404c-57dd-4dc7-bc70-68a1e59576b5</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3b959415-9c5a-431d-a130-f3d72cdf7fcf</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>29ac2fde-60d5-408d-aaae-b149c40c195c</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>29ac2fde-60d5-408d-aaae-b149c40c195c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtMaterialEntrys.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>93143672-7eab-4129-bb42-5cfac84baf77</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>model</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>50bf865f-d5ab-49a4-9f96-b62cc4b991a7</id>
+            <name>MaterialEntrys_materialName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.publicdata.app.CardSettingRuleSet].actions.action[MaterialEntrys_materialName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.publicdata.app.CardSettingRuleSet].actions.action[MaterialEntrys_materialName_ActionInfo].description</description>
+            <expressionID>8f310de1-d41d-4e48-87e3-b22d622273b7</expressionID>
+        </action>
+        <action>
+            <id>26f760c4-4e9e-42d5-a8d8-0b554cd79a41</id>
+            <name>MaterialEntrys_model_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.publicdata.app.CardSettingRuleSet].actions.action[MaterialEntrys_model_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.publicdata.app.CardSettingRuleSet].actions.action[MaterialEntrys_model_ActionInfo].description</description>
+            <expressionID>9cca26da-397d-4e5f-9df8-b59065f0e110</expressionID>
+        </action>
+    </actions>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.publicdata.app.CardSettingRuleSet].actions.action[MaterialEntrys_materialName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.publicdata.app.CardSettingRuleSet].actions.action[MaterialEntrys_materialName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.publicdata.app.CardSettingRuleSet].actions.action[MaterialEntrys_model_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.publicdata.app.CardSettingRuleSet].actions.action[MaterialEntrys_model_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.publicdata.app.CardSettingRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.publicdata.app.CardSettingRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</ruleSet>
+

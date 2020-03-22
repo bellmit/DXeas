@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.hatch.app</package>
+    <name>TranferBoxBillRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>720b974b-7d2a-4750-b2c0-46c8c126eb2a</id>
+            <parentID />
+            <source>entrys.incubatorName=entrys.incubator.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>ac823a53-cd68-4e49-b287-b428d6a9efc8</id>
+            <parentID>720b974b-7d2a-4750-b2c0-46c8c126eb2a</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>91a44de4-8ce6-41d3-8def-1729598c1551</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>91a44de4-8ce6-41d3-8def-1729598c1551</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"incubatorName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ea228e0f-b5b0-420e-ac86-9c150691f9bb</id>
+            <parentID>720b974b-7d2a-4750-b2c0-46c8c126eb2a</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>95b7f965-16b7-4688-918d-d877d3201337</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>11c76acd-8ff4-4bf0-85ef-ab0e42195945</id>
+                        <expressionID>c6341c27-990e-403c-a4ae-255cffec9467</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>55f93f4c-d5b4-4d70-89c6-642ee26bc782</id>
+                        <expressionID>fdf552fd-acef-458d-9491-c30ace753f54</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>95b7f965-16b7-4688-918d-d877d3201337</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c6341c27-990e-403c-a4ae-255cffec9467</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>93f34e2a-df7a-432e-a557-53c570738a6f</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>93f34e2a-df7a-432e-a557-53c570738a6f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"incubator")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fdf552fd-acef-458d-9491-c30ace753f54</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>d2277f03-b7ea-427f-b6f9-d062906eaad2</id>
+            <parentID />
+            <source>entrys.babyChickBatchName=entrys.babyChickBatch.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>69cc9500-6209-408a-8399-c0f02ea7b8e7</id>
+            <parentID>d2277f03-b7ea-427f-b6f9-d062906eaad2</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>318d5023-d4e8-479b-a1c9-548d62a910db</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>318d5023-d4e8-479b-a1c9-548d62a910db</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"babyChickBatchName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>dc67d8e7-249a-423a-899b-a686de9eadc5</id>
+            <parentID>d2277f03-b7ea-427f-b6f9-d062906eaad2</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>a013a310-0895-467a-a6aa-b2804e8ddff8</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>9e5761d3-e716-4818-86f1-f2318f16967f</id>
+                        <expressionID>9fa9fe7e-5958-4730-a1a8-db99efcbdede</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>a336c255-2160-4134-a3b4-2c21df0f10f0</id>
+                        <expressionID>3f914522-570d-4fb1-a3db-e7bd643d2915</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a013a310-0895-467a-a6aa-b2804e8ddff8</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9fa9fe7e-5958-4730-a1a8-db99efcbdede</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>80133db5-d332-4a8f-a769-30067891352a</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>80133db5-d332-4a8f-a769-30067891352a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"babyChickBatch")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3f914522-570d-4fb1-a3db-e7bd643d2915</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>294b44e5-a5df-4b64-8ecd-2e5ce703cdd3</id>
+            <parentID />
+            <source>incubator=hatchBill.incubator.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>519f2f52-c23c-4886-8b02-385e6576630f</id>
+            <parentID>294b44e5-a5df-4b64-8ecd-2e5ce703cdd3</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>0839ec8d-4636-42ae-ae61-a1064bf6c70b</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0839ec8d-4636-42ae-ae61-a1064bf6c70b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtincubator</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1cfc9c04-8d34-42cb-89d4-d0cb5c86a8ed</id>
+            <parentID>294b44e5-a5df-4b64-8ecd-2e5ce703cdd3</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>65b4857e-834c-4890-9e7f-f9f022c1486c</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>eeecd39e-5e39-4379-bc5a-565c109a6279</id>
+                        <expressionID>faf8836c-b735-47b4-8262-a87db0127fd0</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>76cd421b-cef7-44e1-8055-a0115f50d075</id>
+                        <expressionID>5bb3d864-d8a9-4d9f-a67f-c1de938f909a</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>65b4857e-834c-4890-9e7f-f9f022c1486c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>faf8836c-b735-47b4-8262-a87db0127fd0</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>326229dd-52e8-4230-a904-31dce7178f08</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>326229dd-52e8-4230-a904-31dce7178f08</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmthatchBill</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5bb3d864-d8a9-4d9f-a67f-c1de938f909a</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>incubator.name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>9defa6c5-f0ac-4c86-8456-4a84547c1445</id>
+            <parentID />
+            <source>eggQty=hatchBill.eggQty</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>57c70d5c-4352-4c92-b01a-f916e4423c4c</id>
+            <parentID>9defa6c5-f0ac-4c86-8456-4a84547c1445</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Integer</valueType>
+            <value />
+            <property>
+                <ownerID>d96c0950-c47b-40c7-95cb-fe1077a10f43</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d96c0950-c47b-40c7-95cb-fe1077a10f43</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txteggQty</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b76f7610-6741-4d38-9544-f803b85d9f58</id>
+            <parentID>9defa6c5-f0ac-4c86-8456-4a84547c1445</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Integer</valueType>
+            <value />
+            <method>
+                <ownerID>89d83fe6-d23a-4303-8b27-6d25775e6228</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>c8155b8e-c862-4506-a1cb-18fea795dfb4</id>
+                        <expressionID>3944abfc-6c08-46bb-91f4-206384e6b757</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>016a7b50-aaf8-432f-8f1c-42c231a57aba</id>
+                        <expressionID>a68046b4-a3f0-4c33-bc47-d7ebbffc2354</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>89d83fe6-d23a-4303-8b27-6d25775e6228</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3944abfc-6c08-46bb-91f4-206384e6b757</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>c9f0117b-b048-4464-8d52-984892a0172b</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c9f0117b-b048-4464-8d52-984892a0172b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmthatchBill</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a68046b4-a3f0-4c33-bc47-d7ebbffc2354</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>eggQty</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>3f28cbd8-08e6-4364-8a24-0c5907798140</id>
+            <parentID />
+            <source>incubator=hatchBill.invubatorBox.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>0c7e5934-b40b-4164-8700-0b43d3eb2d36</id>
+            <parentID>3f28cbd8-08e6-4364-8a24-0c5907798140</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>6976344c-2f39-42f2-91e8-8d69287da540</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6976344c-2f39-42f2-91e8-8d69287da540</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtincubator</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ef672782-046c-4ed1-8a52-045fd8edf967</id>
+            <parentID>3f28cbd8-08e6-4364-8a24-0c5907798140</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>7fb5c250-cc39-47d9-a39e-50cb1cc7d255</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>657ef002-89a0-4855-8f2a-3ccf366fa613</id>
+                        <expressionID>d71a27c8-de0e-43f7-9cd2-1ef981e2c97d</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>bea5d8ab-a2ba-4184-b92c-f2f065688b27</id>
+                        <expressionID>973be6d8-be3a-44dd-815a-423476978775</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7fb5c250-cc39-47d9-a39e-50cb1cc7d255</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d71a27c8-de0e-43f7-9cd2-1ef981e2c97d</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>f323731d-0c1b-456e-901c-5e799c2e0a65</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f323731d-0c1b-456e-901c-5e799c2e0a65</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmthatchBill</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>973be6d8-be3a-44dd-815a-423476978775</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>invubatorBox.name</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>38c63063-99f2-42fb-8616-7221b4a1d404</id>
+            <name>entrys_incubatorName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].actions.action[entrys_incubatorName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].actions.action[entrys_incubatorName_ActionInfo].description</description>
+            <expressionID>720b974b-7d2a-4750-b2c0-46c8c126eb2a</expressionID>
+        </action>
+        <action>
+            <id>c75da54a-4898-4b85-a57f-53df9bbfc4c8</id>
+            <name>entrys_babyChickBatchName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].actions.action[entrys_babyChickBatchName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].actions.action[entrys_babyChickBatchName_ActionInfo].description</description>
+            <expressionID>d2277f03-b7ea-427f-b6f9-d062906eaad2</expressionID>
+        </action>
+        <action>
+            <id>a2e221c4-b102-4c30-9d75-dde319603d14</id>
+            <name>TranferBoxBill_incubator_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].actions.action[TranferBoxBill_incubator_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].actions.action[TranferBoxBill_incubator_ActionInfo].description</description>
+            <expressionID>294b44e5-a5df-4b64-8ecd-2e5ce703cdd3</expressionID>
+        </action>
+        <action>
+            <id>b9f419ab-19d0-4f9d-b9f3-84c0cbc61907</id>
+            <name>TranferBoxBill_eggQty_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].actions.action[TranferBoxBill_eggQty_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].actions.action[TranferBoxBill_eggQty_ActionInfo].description</description>
+            <expressionID>9defa6c5-f0ac-4c86-8456-4a84547c1445</expressionID>
+        </action>
+        <action>
+            <id>9fb0d807-961a-4aa5-8955-401d7106c19d</id>
+            <name>TranferBoxBill_incubator_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].actions.action[TranferBoxBill_incubator_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].actions.action[TranferBoxBill_incubator_ActionInfo].description</description>
+            <expressionID>3f28cbd8-08e6-4364-8a24-0c5907798140</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>TranferBoxBill_eggQty_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].rules.conditionRule[TranferBoxBill_eggQty_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].rules.conditionRule[TranferBoxBill_eggQty_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="b9f419ab-19d0-4f9d-b9f3-84c0cbc61907" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>TranferBoxBill_incubator_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].rules.conditionRule[TranferBoxBill_incubator_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].rules.conditionRule[TranferBoxBill_incubator_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="9fb0d807-961a-4aa5-8955-401d7106c19d" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].actions.action[TranferBoxBill_eggQty_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_eggQty" />
+            <lang locale="zh_HK" value="攜帶字段屬性_eggQty" />
+            <lang locale="zh_TW" value="攜帶字段屬性_eggQty" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].actions.action[TranferBoxBill_eggQty_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].actions.action[TranferBoxBill_incubator_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_invubatorBox" />
+            <lang locale="zh_HK" value="攜帶字段屬性_invubatorBox" />
+            <lang locale="zh_TW" value="攜帶字段屬性_invubatorBox" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].actions.action[TranferBoxBill_incubator_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].actions.action[entrys_babyChickBatchName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].actions.action[entrys_babyChickBatchName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].actions.action[entrys_incubatorName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].actions.action[entrys_incubatorName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].rules.conditionRule[TranferBoxBill_eggQty_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_eggQty" />
+            <lang locale="zh_HK" value="攜帶字段屬性_eggQty" />
+            <lang locale="zh_TW" value="攜帶字段屬性_eggQty" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].rules.conditionRule[TranferBoxBill_eggQty_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].rules.conditionRule[TranferBoxBill_eggQty_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="hatchBill" />
+            <lang locale="zh_CN" value="hatchBill" />
+            <lang locale="zh_TW" value="hatchBill" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].rules.conditionRule[TranferBoxBill_eggQty_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].rules.conditionRule[TranferBoxBill_incubator_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_invubatorBox" />
+            <lang locale="zh_HK" value="攜帶字段屬性_invubatorBox" />
+            <lang locale="zh_TW" value="攜帶字段屬性_invubatorBox" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].rules.conditionRule[TranferBoxBill_incubator_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].rules.conditionRule[TranferBoxBill_incubator_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="hatchBill" />
+            <lang locale="zh_CN" value="hatchBill" />
+            <lang locale="zh_TW" value="hatchBill" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.hatch.app.TranferBoxBillRuleSet].rules.conditionRule[TranferBoxBill_incubator_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

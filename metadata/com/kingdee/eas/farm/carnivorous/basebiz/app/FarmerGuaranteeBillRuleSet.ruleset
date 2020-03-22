@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.carnivorous.basebiz.app</package>
+    <name>FarmerGuaranteeBillRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>c335bad4-4d3f-4fc5-919a-77e4d768b1bb</id>
+            <parentID />
+            <source>farmerIDcard=farmer.identity</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>5f0b51c4-da78-40bd-8566-5103852edf73</id>
+            <parentID>c335bad4-4d3f-4fc5-919a-77e4d768b1bb</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>9aa084b5-e67e-4588-b640-32f3c8cd882a</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9aa084b5-e67e-4588-b640-32f3c8cd882a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtfarmerIDcard</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d12be387-bd08-43dd-8362-6000f2b84deb</id>
+            <parentID>c335bad4-4d3f-4fc5-919a-77e4d768b1bb</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>c1a9de2a-85a8-4a99-92ca-609114dc8eab</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>f084adcc-d0d6-495b-a466-47a463e74687</id>
+                        <expressionID>07a047db-4012-4178-8d22-d088da512b77</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>9683e8c7-8b7a-4623-a843-dd5b799c1321</id>
+                        <expressionID>9a347c98-2a35-448d-a59d-bda419028a6b</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c1a9de2a-85a8-4a99-92ca-609114dc8eab</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>07a047db-4012-4178-8d22-d088da512b77</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>02143f5b-dbee-4bcf-8315-963dfc6ed7f5</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>02143f5b-dbee-4bcf-8315-963dfc6ed7f5</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtfarmer</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9a347c98-2a35-448d-a59d-bda419028a6b</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>identity</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>94af8c5b-e3c2-4c32-8985-efc96ef8ef0c</id>
+            <parentID />
+            <source>farmerPhone=farmer.mobileTel</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>a4f56d19-6813-4d32-8bc3-920848df22d0</id>
+            <parentID>94af8c5b-e3c2-4c32-8985-efc96ef8ef0c</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>b03f4cec-a7c4-4a11-a706-4945d89b6331</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b03f4cec-a7c4-4a11-a706-4945d89b6331</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtfarmerPhone</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>55231af4-269a-4c5e-abc2-0537ae07bcef</id>
+            <parentID>94af8c5b-e3c2-4c32-8985-efc96ef8ef0c</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>296e7221-0eee-4745-89e8-09f0da901fc8</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>ae0af3ac-2689-47f6-b3fd-64b1c082e50a</id>
+                        <expressionID>c7897cdd-4ee6-4c2b-ba42-38518d34358e</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>dd98ecea-fa1c-4d7e-b561-beec78e828cc</id>
+                        <expressionID>1f6fb1c7-5332-4aa0-b90b-883e743313bc</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>296e7221-0eee-4745-89e8-09f0da901fc8</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c7897cdd-4ee6-4c2b-ba42-38518d34358e</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>91e21a0a-2ccc-4683-9469-4bdcc9eaed99</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>91e21a0a-2ccc-4683-9469-4bdcc9eaed99</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtfarmer</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1f6fb1c7-5332-4aa0-b90b-883e743313bc</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>mobileTel</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>d027aaa2-4594-4009-b4fa-1110d48a865b</id>
+            <parentID />
+            <source>farmerAddress=farmer.address</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>bdec3811-a9b7-40d9-a8d4-af6c18de739f</id>
+            <parentID>d027aaa2-4594-4009-b4fa-1110d48a865b</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>a2a29941-47d2-4d70-9397-cebd05772c95</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a2a29941-47d2-4d70-9397-cebd05772c95</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtfarmerAddress</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e2c3ad8a-0c1e-412f-a6d5-1486562ded27</id>
+            <parentID>d027aaa2-4594-4009-b4fa-1110d48a865b</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>33c2a810-63bc-4cce-bef7-bae40f1068ee</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>521556d0-9f07-42e4-aca0-48d104fad0f9</id>
+                        <expressionID>578abd02-c1eb-427c-934e-822ecc1f36db</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>08da6436-1426-4ecb-bb8d-401f4972171c</id>
+                        <expressionID>bf60d74b-3e07-4b91-aca5-6e95ea67abb0</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>33c2a810-63bc-4cce-bef7-bae40f1068ee</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>578abd02-c1eb-427c-934e-822ecc1f36db</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>9e0675eb-0870-4d8e-bdbd-980c50a1a52f</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9e0675eb-0870-4d8e-bdbd-980c50a1a52f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtfarmer</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bf60d74b-3e07-4b91-aca5-6e95ea67abb0</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>address</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>83532df5-eaa5-4b19-9887-7ce8e08461f0</id>
+            <name>FarmerGuaranteeBill_farmerIDcard_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].actions.action[FarmerGuaranteeBill_farmerIDcard_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].actions.action[FarmerGuaranteeBill_farmerIDcard_ActionInfo].description</description>
+            <expressionID>c335bad4-4d3f-4fc5-919a-77e4d768b1bb</expressionID>
+        </action>
+        <action>
+            <id>3b097d68-7eb6-4cbf-9102-b679333123b8</id>
+            <name>FarmerGuaranteeBill_farmerPhone_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].actions.action[FarmerGuaranteeBill_farmerPhone_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].actions.action[FarmerGuaranteeBill_farmerPhone_ActionInfo].description</description>
+            <expressionID>94af8c5b-e3c2-4c32-8985-efc96ef8ef0c</expressionID>
+        </action>
+        <action>
+            <id>063ba402-774d-476a-af79-a9a1c57b2272</id>
+            <name>FarmerGuaranteeBill_farmerAddress_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].actions.action[FarmerGuaranteeBill_farmerAddress_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].actions.action[FarmerGuaranteeBill_farmerAddress_ActionInfo].description</description>
+            <expressionID>d027aaa2-4594-4009-b4fa-1110d48a865b</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>FarmerGuaranteeBill_farmerIDcard_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].rules.conditionRule[FarmerGuaranteeBill_farmerIDcard_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].rules.conditionRule[FarmerGuaranteeBill_farmerIDcard_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="83532df5-eaa5-4b19-9887-7ce8e08461f0" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>FarmerGuaranteeBill_farmerPhone_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].rules.conditionRule[FarmerGuaranteeBill_farmerPhone_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].rules.conditionRule[FarmerGuaranteeBill_farmerPhone_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="3b097d68-7eb6-4cbf-9102-b679333123b8" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>FarmerGuaranteeBill_farmerAddress_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].rules.conditionRule[FarmerGuaranteeBill_farmerAddress_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].rules.conditionRule[FarmerGuaranteeBill_farmerAddress_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="063ba402-774d-476a-af79-a9a1c57b2272" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].actions.action[FarmerGuaranteeBill_farmerAddress_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_address" />
+            <lang locale="zh_HK" value="攜帶字段屬性_address" />
+            <lang locale="zh_TW" value="攜帶字段屬性_address" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].actions.action[FarmerGuaranteeBill_farmerAddress_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].actions.action[FarmerGuaranteeBill_farmerIDcard_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_identity" />
+            <lang locale="zh_HK" value="攜帶字段屬性_identity" />
+            <lang locale="zh_TW" value="攜帶字段屬性_identity" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].actions.action[FarmerGuaranteeBill_farmerIDcard_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].actions.action[FarmerGuaranteeBill_farmerPhone_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_mobileTel" />
+            <lang locale="zh_HK" value="攜帶字段屬性_mobileTel" />
+            <lang locale="zh_TW" value="攜帶字段屬性_mobileTel" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].actions.action[FarmerGuaranteeBill_farmerPhone_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].rules.conditionRule[FarmerGuaranteeBill_farmerAddress_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_address" />
+            <lang locale="zh_HK" value="攜帶字段屬性_address" />
+            <lang locale="zh_TW" value="攜帶字段屬性_address" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].rules.conditionRule[FarmerGuaranteeBill_farmerAddress_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].rules.conditionRule[FarmerGuaranteeBill_farmerAddress_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="farmer" />
+            <lang locale="zh_CN" value="farmer" />
+            <lang locale="zh_TW" value="farmer" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].rules.conditionRule[FarmerGuaranteeBill_farmerAddress_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].rules.conditionRule[FarmerGuaranteeBill_farmerIDcard_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_identity" />
+            <lang locale="zh_HK" value="攜帶字段屬性_identity" />
+            <lang locale="zh_TW" value="攜帶字段屬性_identity" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].rules.conditionRule[FarmerGuaranteeBill_farmerIDcard_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].rules.conditionRule[FarmerGuaranteeBill_farmerIDcard_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="farmer" />
+            <lang locale="zh_CN" value="farmer" />
+            <lang locale="zh_TW" value="farmer" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].rules.conditionRule[FarmerGuaranteeBill_farmerIDcard_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].rules.conditionRule[FarmerGuaranteeBill_farmerPhone_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_mobileTel" />
+            <lang locale="zh_HK" value="攜帶字段屬性_mobileTel" />
+            <lang locale="zh_TW" value="攜帶字段屬性_mobileTel" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].rules.conditionRule[FarmerGuaranteeBill_farmerPhone_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].rules.conditionRule[FarmerGuaranteeBill_farmerPhone_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="farmer" />
+            <lang locale="zh_CN" value="farmer" />
+            <lang locale="zh_TW" value="farmer" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.FarmerGuaranteeBillRuleSet].rules.conditionRule[FarmerGuaranteeBill_farmerPhone_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

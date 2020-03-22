@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.pig.ccpig.app</package>
+    <name>CCPigBreedModelRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigBreedModelRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigBreedModelRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>8b743eba-0771-495a-b2f4-202e6eeda222</id>
+            <parentID />
+            <source>ImmuneEntrys.immuneBaseUnit=ImmuneEntrys.immuneMaterial.baseUnit.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>f627da23-6a2d-4a4a-8876-809b6f3b9ce8</id>
+            <parentID>8b743eba-0771-495a-b2f4-202e6eeda222</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>a2cfcc21-6d49-4129-8504-45648a96185d</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a2cfcc21-6d49-4129-8504-45648a96185d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtImmuneEntrys.getCell(rowIndex,"immuneBaseUnit")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a9c6c36d-a61c-476e-b870-1c252d57a199</id>
+            <parentID>8b743eba-0771-495a-b2f4-202e6eeda222</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>d3722f77-f26a-4c5e-9a0a-72ea3284b6f9</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>3c3f3d7a-64d7-426a-98b6-1b0c3f27c75b</id>
+                        <expressionID>d6cff1ab-b1c9-4792-9275-ce596713498b</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>847d254f-5b77-4916-af37-d9fbc011e3c8</id>
+                        <expressionID>e07c5adf-4952-48d1-9869-b4dae26da543</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d3722f77-f26a-4c5e-9a0a-72ea3284b6f9</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d6cff1ab-b1c9-4792-9275-ce596713498b</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>e174cc07-b7e0-4b48-b674-3bbf9c26a8d1</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e174cc07-b7e0-4b48-b674-3bbf9c26a8d1</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtImmuneEntrys.getCell(rowIndex,"immuneMaterial")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e07c5adf-4952-48d1-9869-b4dae26da543</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>baseUnit.name</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>58060bcb-6b90-419c-aa61-95d3c87da48d</id>
+            <name>ImmuneEntrys_immuneBaseUnit_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigBreedModelRuleSet].actions.action[ImmuneEntrys_immuneBaseUnit_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigBreedModelRuleSet].actions.action[ImmuneEntrys_immuneBaseUnit_ActionInfo].description</description>
+            <expressionID>8b743eba-0771-495a-b2f4-202e6eeda222</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>ImmuneEntrys_immuneBaseUnit_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigBreedModelRuleSet].rules.conditionRule[ImmuneEntrys_immuneBaseUnit_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigBreedModelRuleSet].rules.conditionRule[ImmuneEntrys_immuneBaseUnit_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="58060bcb-6b90-419c-aa61-95d3c87da48d" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigBreedModelRuleSet].actions.action[ImmuneEntrys_immuneBaseUnit_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_baseUnit" />
+            <lang locale="zh_HK" value="攜帶字段屬性_baseUnit" />
+            <lang locale="zh_TW" value="攜帶字段屬性_baseUnit" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigBreedModelRuleSet].actions.action[ImmuneEntrys_immuneBaseUnit_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigBreedModelRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigBreedModelRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigBreedModelRuleSet].rules.conditionRule[ImmuneEntrys_immuneBaseUnit_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_baseUnit" />
+            <lang locale="zh_HK" value="攜帶字段屬性_baseUnit" />
+            <lang locale="zh_TW" value="攜帶字段屬性_baseUnit" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigBreedModelRuleSet].rules.conditionRule[ImmuneEntrys_immuneBaseUnit_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigBreedModelRuleSet].rules.conditionRule[ImmuneEntrys_immuneBaseUnit_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="immuneMaterial" />
+            <lang locale="zh_CN" value="immuneMaterial" />
+            <lang locale="zh_TW" value="immuneMaterial" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigBreedModelRuleSet].rules.conditionRule[ImmuneEntrys_immuneBaseUnit_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

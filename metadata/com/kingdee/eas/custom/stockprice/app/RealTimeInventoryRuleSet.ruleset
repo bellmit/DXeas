@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.stockprice.app</package>
+    <name>RealTimeInventoryRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.stockprice.app.RealTimeInventoryRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.stockprice.app.RealTimeInventoryRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>a1dd3a1b-5423-4154-bbbf-c5fac09c82a2</id>
+            <parentID />
+            <source>entrys.materialNum=entrys.material.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>3d8d4a43-7c1c-442d-99f8-b56822f12756</id>
+            <parentID>a1dd3a1b-5423-4154-bbbf-c5fac09c82a2</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>dcd31a2c-b0eb-4fc9-bac7-d5b79e203b3d</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>dcd31a2c-b0eb-4fc9-bac7-d5b79e203b3d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"materialNum")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>563d9bb8-4429-4c43-bf76-0914c43d5f53</id>
+            <parentID>a1dd3a1b-5423-4154-bbbf-c5fac09c82a2</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>92c7c580-11ec-41fb-8867-33e0eb17547e</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>f76efe75-7a9d-4d8f-ae8d-989093a4d8ca</id>
+                        <expressionID>be7528c2-bee9-45e0-ac70-aa052a8eebbf</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>e7210bec-6413-4022-b961-7f7846ae3fa1</id>
+                        <expressionID>c35ea9fb-e790-44ef-b216-b09c3aa0ba24</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>92c7c580-11ec-41fb-8867-33e0eb17547e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>be7528c2-bee9-45e0-ac70-aa052a8eebbf</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>af670786-16a5-42e8-b0d4-3e03c4cdaaf0</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>af670786-16a5-42e8-b0d4-3e03c4cdaaf0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c35ea9fb-e790-44ef-b216-b09c3aa0ba24</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>641fe1ae-5678-4814-b8c2-f3ec77cec03e</id>
+            <parentID />
+            <source>entrys.model=entrys.material.model</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>be647cba-ac92-48c1-93c7-9506d12ad25a</id>
+            <parentID>641fe1ae-5678-4814-b8c2-f3ec77cec03e</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>3fe65806-4bbd-454b-891c-54452d677be1</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3fe65806-4bbd-454b-891c-54452d677be1</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"model")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>28d79bd0-f3bd-4e0e-8c63-cdc5b84f3cd9</id>
+            <parentID>641fe1ae-5678-4814-b8c2-f3ec77cec03e</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>63a39eda-9fd3-422a-8ed5-5a122726ff26</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>dd82e601-e322-4470-989f-764f0316ae1a</id>
+                        <expressionID>707290ec-69ea-468f-9ddf-fe52dfe05367</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>9338dd55-7a35-45cb-a29e-788d48663b29</id>
+                        <expressionID>72d5072a-06b5-409b-b85e-f522008b012b</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>63a39eda-9fd3-422a-8ed5-5a122726ff26</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>707290ec-69ea-468f-9ddf-fe52dfe05367</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>1a95a6cd-6812-4bb5-9ec0-8c3cc9bd1111</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1a95a6cd-6812-4bb5-9ec0-8c3cc9bd1111</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>72d5072a-06b5-409b-b85e-f522008b012b</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>model</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>2d74a043-4959-4c8c-b15e-6f54dd75418e</id>
+            <name>entrys_materialNum_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.stockprice.app.RealTimeInventoryRuleSet].actions.action[entrys_materialNum_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.stockprice.app.RealTimeInventoryRuleSet].actions.action[entrys_materialNum_ActionInfo].description</description>
+            <expressionID>a1dd3a1b-5423-4154-bbbf-c5fac09c82a2</expressionID>
+        </action>
+        <action>
+            <id>7f713df0-b185-40f0-9bd1-79444cdb122b</id>
+            <name>entrys_model_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.stockprice.app.RealTimeInventoryRuleSet].actions.action[entrys_model_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.stockprice.app.RealTimeInventoryRuleSet].actions.action[entrys_model_ActionInfo].description</description>
+            <expressionID>641fe1ae-5678-4814-b8c2-f3ec77cec03e</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>entrys_materialNum_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.stockprice.app.RealTimeInventoryRuleSet].rules.conditionRule[entrys_materialNum_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.stockprice.app.RealTimeInventoryRuleSet].rules.conditionRule[entrys_materialNum_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="2d74a043-4959-4c8c-b15e-6f54dd75418e" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>entrys_model_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.stockprice.app.RealTimeInventoryRuleSet].rules.conditionRule[entrys_model_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.stockprice.app.RealTimeInventoryRuleSet].rules.conditionRule[entrys_model_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="7f713df0-b185-40f0-9bd1-79444cdb122b" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.stockprice.app.RealTimeInventoryRuleSet].actions.action[entrys_materialNum_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.stockprice.app.RealTimeInventoryRuleSet].actions.action[entrys_materialNum_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.stockprice.app.RealTimeInventoryRuleSet].actions.action[entrys_model_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.stockprice.app.RealTimeInventoryRuleSet].actions.action[entrys_model_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.stockprice.app.RealTimeInventoryRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.stockprice.app.RealTimeInventoryRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.stockprice.app.RealTimeInventoryRuleSet].rules.conditionRule[entrys_materialNum_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.stockprice.app.RealTimeInventoryRuleSet].rules.conditionRule[entrys_materialNum_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.stockprice.app.RealTimeInventoryRuleSet].rules.conditionRule[entrys_materialNum_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="material" />
+            <lang locale="zh_CN" value="material" />
+            <lang locale="zh_TW" value="material" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.stockprice.app.RealTimeInventoryRuleSet].rules.conditionRule[entrys_materialNum_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.stockprice.app.RealTimeInventoryRuleSet].rules.conditionRule[entrys_model_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.stockprice.app.RealTimeInventoryRuleSet].rules.conditionRule[entrys_model_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.stockprice.app.RealTimeInventoryRuleSet].rules.conditionRule[entrys_model_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="material" />
+            <lang locale="zh_CN" value="material" />
+            <lang locale="zh_TW" value="material" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.stockprice.app.RealTimeInventoryRuleSet].rules.conditionRule[entrys_model_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

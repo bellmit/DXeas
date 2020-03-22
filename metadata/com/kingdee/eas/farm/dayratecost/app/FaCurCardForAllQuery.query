@@ -1,0 +1,1149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.dayratecost.app</package>
+    <name>FaCurCardForAllQuery</name>
+    <alias>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].alias</alias>
+    <description>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].description</description>
+    <userDefined>false</userDefined>
+    <reportDataSource />
+    <bizUnitPK>com.kingdee.eas.fi.fa.manage.FaCard</bizUnitPK>
+    <connectionProvider />
+    <subObjects>
+        <subEntity>
+            <name>FaCurCard</name>
+            <alias>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].subObjects.subEntity[FaCurCard].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.fi.fa.manage.app" />
+                <key name="name" value="FaCurCard" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>company</name>
+            <alias>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].subObjects.subEntity[company].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="CompanyOrgUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>CU</name>
+            <alias>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].subObjects.subEntity[CU].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="CtrlUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>assetCat</name>
+            <alias>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].subObjects.subEntity[assetCat].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.fi.fa.basedata.app" />
+                <key name="name" value="FaCat" />
+            </entityRef>
+        </subEntity>
+    </subObjects>
+    <units>
+        <queryField>
+            <name>FID</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[FID].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="FID" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FaCurCard" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bizDate</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[bizDate].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>1ed628b7-a5a4-4e23-aceb-72103887c457</key>
+                    <parentUnit>
+                        <key name="name" value="bizDate" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FaCurCard" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="accountDate" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>type</name>
+            <userDefined>false</userDefined>
+            <formulaString>'1'</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[type].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>number</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>f5180f0f-79ef-4549-b3b4-3f1f533dbd3d</key>
+                    <parentUnit>
+                        <key name="name" value="number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FaCurCard" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>faCatname</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[faCatname].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>33973020-c981-4b0e-8398-731794f2defe</key>
+                    <parentUnit>
+                        <key name="name" value="faCatname" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="assetCat" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Cardnumber</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[Cardnumber].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="Cardnumber" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FaCurCard" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>CardassetName</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[CardassetName].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="CardassetName" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FaCurCard" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="assetName" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>NewUni36</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.propertyUnit[NewUni36].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUni36" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FaCurCard" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUni42</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.propertyUnit[NewUni42].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUni42" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FaCurCard" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="company" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUni41</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.propertyUnit[NewUni41].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUni41" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="company" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>companyid</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[companyid].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="companyid" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="company" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>271f4d2f-da3a-42f5-af4e-27b5db0087af</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.propertyUnit[271f4d2f-da3a-42f5-af4e-27b5db0087af].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>b3200c96-476c-4d4b-962a-79067251f84d</key>
+                    <parentUnit>
+                        <key name="name" value="271f4d2f-da3a-42f5-af4e-27b5db0087af" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FaCurCard" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="CU" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>4bf76c81-eed4-4c0d-9b83-d7a48cbde613</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.propertyUnit[4bf76c81-eed4-4c0d-9b83-d7a48cbde613].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>a2ca3167-0c66-4bd7-80c5-9cdc93de4742</key>
+                    <parentUnit>
+                        <key name="name" value="4bf76c81-eed4-4c0d-9b83-d7a48cbde613" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="CU" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>CUid</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[CUid].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>79afca3a-cd1e-431c-aaab-5a23337bb07c</key>
+                    <parentUnit>
+                        <key name="name" value="CUid" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="CU" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>description</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[description].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>e32da6af-efac-4376-9fe3-9540d5076163</key>
+                    <parentUnit>
+                        <key name="name" value="description" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FaCurCard" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="remark" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>effectedStatus</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[effectedStatus].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>e1cf718d-0620-4de7-bcba-1551812c7218</key>
+                    <parentUnit>
+                        <key name="name" value="effectedStatus" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FaCurCard" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="effectedStatus" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>deletedStatus</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[deletedStatus].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b934ef30-130c-4c0d-a74c-93c7e0280e06</key>
+                    <parentUnit>
+                        <key name="name" value="deletedStatus" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FaCurCard" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="deletedStatus" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>checkedStatus</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[checkedStatus].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>a26438a4-04e5-4981-940d-83c2177ae7ae</key>
+                    <parentUnit>
+                        <key name="name" value="checkedStatus" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FaCurCard" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="checkedStatus" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>blockedStatus</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[blockedStatus].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>793a3c18-9cc8-4d8d-aa1a-01a3608a236c</key>
+                    <parentUnit>
+                        <key name="name" value="blockedStatus" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FaCurCard" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="blockedStatus" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>c2dae501-dbe2-400a-810c-72599786421d</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.propertyUnit[c2dae501-dbe2-400a-810c-72599786421d].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>cfbc5e64-47ca-4802-8efe-b64f2273ba46</key>
+                    <parentUnit>
+                        <key name="name" value="c2dae501-dbe2-400a-810c-72599786421d" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FaCurCard" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="assetCat" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>23085c7b-66e3-468e-96a3-0cc67ed5e853</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.propertyUnit[23085c7b-66e3-468e-96a3-0cc67ed5e853].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>93188f4c-0a33-4c8e-8175-d7bd03513e14</key>
+                    <parentUnit>
+                        <key name="name" value="23085c7b-66e3-468e-96a3-0cc67ed5e853" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="assetCat" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+        </propertyUnit>
+    </units>
+    <defaultFilter>
+        <name>defaultFilter</name>
+        <formulaString />
+        <filterItems>
+            <queryFilterItem>
+                <propertyName>checkedStatus</propertyName>
+                <compareType>=</compareType>
+                <compareValue>2</compareValue>
+                <userDefined>false</userDefined>
+                <filter>
+                    <key name="name" value="defaultFilter" />
+                </filter>
+                <configured>false</configured>
+            </queryFilterItem>
+        </filterItems>
+        <query>
+            <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+            <key name="name" value="FaCurCardForAllQuery" />
+        </query>
+    </defaultFilter>
+    <queryPK>
+        <name>QueryPK</name>
+        <alias>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].queryPK[QueryPK].alias</alias>
+        <description>joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].queryPK[QueryPK].description</description>
+        <keyProperties>
+            <queryField>
+                <key name="name" value="FID" />
+            </queryField>
+        </keyProperties>
+    </queryPK>
+    <isDistinct>false</isDistinct>
+    <joins>
+        <join>
+            <name>NewJoi20</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="FaCurCard" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="company" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>0</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="NewUni42" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="NewUni41" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="NewJoi20" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+        </join>
+        <join>
+            <name>0ec340bf-b994-4578-8264-06463644971b</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="FaCurCard" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="CU" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>4cd2e11c-d47f-4aca-b28c-a9fa561fedca</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="271f4d2f-da3a-42f5-af4e-27b5db0087af" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="4bf76c81-eed4-4c0d-9b83-d7a48cbde613" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="0ec340bf-b994-4578-8264-06463644971b" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+        </join>
+        <join>
+            <name>5d367090-27d1-440b-8735-2ea9621cacec</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="FaCurCard" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="assetCat" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>7337eebe-ae56-431d-ad34-ff79625fa746</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="c2dae501-dbe2-400a-810c-72599786421d" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="23085c7b-66e3-468e-96a3-0cc67ed5e853" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="5d367090-27d1-440b-8735-2ea9621cacec" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.dayratecost.app" />
+                <key name="name" value="FaCurCardForAllQuery" />
+            </query>
+        </join>
+    </joins>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="当前卡片Query" />
+            <lang locale="zh_HK" value="當前卡片Query" />
+            <lang locale="zh_TW" value="當前卡片Query" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="当前卡片Query " />
+            <lang locale="zh_HK" value="當前卡片Query " />
+            <lang locale="zh_TW" value="當前卡片Query " />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].extendedProperty.f7WindowTitle">
+            <lang locale="en_US" value="com.kingdee.eas.fi.fa.manage.FaCardResource.FaCurCard" />
+            <lang locale="zh_CN" value="com.kingdee.eas.fi.fa.manage.FaCardResource.FaCurCard" />
+            <lang locale="zh_TW" value="com.kingdee.eas.fi.fa.manage.FaCardResource.FaCurCard" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].queryPK[QueryPK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].queryPK[QueryPK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].subObjects.subEntity[CU].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].subObjects.subEntity[FaCurCard].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].subObjects.subEntity[assetCat].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].subObjects.subEntity[company].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.propertyUnit[23085c7b-66e3-468e-96a3-0cc67ed5e853].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.propertyUnit[271f4d2f-da3a-42f5-af4e-27b5db0087af].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.propertyUnit[4bf76c81-eed4-4c0d-9b83-d7a48cbde613].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.propertyUnit[NewUni36].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.propertyUnit[NewUni41].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.propertyUnit[NewUni42].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.propertyUnit[c2dae501-dbe2-400a-810c-72599786421d].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[CUid].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[CUid].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[CardassetName].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="固定资产名称" />
+            <lang locale="zh_HK" value="固定資產名稱" />
+            <lang locale="zh_TW" value="固定資產名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[CardassetName].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="150" />
+            <lang locale="zh_CN" value="150" />
+            <lang locale="zh_TW" value="150" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[CardassetName].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[CardassetName].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[CardassetName].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[CardassetName].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[Cardnumber].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="固定资产编码" />
+            <lang locale="zh_HK" value="固定資產編碼" />
+            <lang locale="zh_TW" value="固定資產編碼" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[Cardnumber].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_CN" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[Cardnumber].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[Cardnumber].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[Cardnumber].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[Cardnumber].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[FID].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="FID" />
+            <lang locale="zh_HK" value="FID" />
+            <lang locale="zh_TW" value="FID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[FID].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[FID].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[FID].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[FID].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[FID].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[bizDate].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="实物入账日期" />
+            <lang locale="zh_HK" value="實物入賬日期" />
+            <lang locale="zh_TW" value="實物入賬日期" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[blockedStatus].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="冻结状态" />
+            <lang locale="zh_HK" value="凍結狀態" />
+            <lang locale="zh_TW" value="凍結狀態" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[checkedStatus].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审核状态" />
+            <lang locale="zh_HK" value="審核狀態" />
+            <lang locale="zh_TW" value="審核狀態" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[companyid].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[companyid].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[deletedStatus].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="作废状态" />
+            <lang locale="zh_HK" value="作廢狀態" />
+            <lang locale="zh_TW" value="作廢狀態" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[description].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="备注" />
+            <lang locale="zh_HK" value="備註" />
+            <lang locale="zh_TW" value="備註" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[description].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[description].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[effectedStatus].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="生效状态" />
+            <lang locale="zh_HK" value="生效狀態" />
+            <lang locale="zh_TW" value="生效狀態" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[faCatname].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="固定资产类别" />
+            <lang locale="zh_HK" value="固定資產類別" />
+            <lang locale="zh_TW" value="固定資產類別" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[faCatname].extendedProperty.commitFormat">
+            <lang locale="en_US" value="$number$" />
+            <lang locale="zh_CN" value="$number$" />
+            <lang locale="zh_TW" value="$number$" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[faCatname].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.fi.fa.basedata.FaCatQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.fi.fa.basedata.FaCatQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.fi.fa.basedata.FaCatQuery" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[faCatname].extendedProperty.defaultF7UI">
+            <lang locale="en_US" value="com.kingdee.eas.fi.fa.basedata.client.FaCatPromptBox" />
+            <lang locale="zh_CN" value="com.kingdee.eas.fi.fa.basedata.client.FaCatPromptBox" />
+            <lang locale="zh_TW" value="com.kingdee.eas.fi.fa.basedata.client.FaCatPromptBox" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[faCatname].extendedProperty.displayFormat">
+            <lang locale="en_US" value="$name$" />
+            <lang locale="zh_CN" value="$name$" />
+            <lang locale="zh_TW" value="$name$" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[faCatname].extendedProperty.editFormat">
+            <lang locale="en_US" value="$name$" />
+            <lang locale="zh_CN" value="$name$" />
+            <lang locale="zh_TW" value="$name$" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[faCatname].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[faCatname].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[faCatname].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据编号" />
+            <lang locale="zh_HK" value="單據編號" />
+            <lang locale="zh_TW" value="單據編號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[type].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据名称" />
+            <lang locale="zh_HK" value="單據名稱" />
+            <lang locale="zh_TW" value="單據名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.dayratecost.app.FaCurCardForAllQuery].units.queryField[type].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</joinQuery>
+

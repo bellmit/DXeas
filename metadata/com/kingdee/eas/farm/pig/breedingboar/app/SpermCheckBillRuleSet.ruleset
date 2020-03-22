@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.pig.breedingboar.app</package>
+    <name>SpermCheckBillRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>5e36c0e2-ca58-4462-8ef0-c53ab9f1acda</id>
+            <parentID />
+            <source>entrys.earGap=entrys.boar.earGap</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>90c55f27-71a2-4d03-87f8-02088a0508b1</id>
+            <parentID>5e36c0e2-ca58-4462-8ef0-c53ab9f1acda</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>f938cccc-32b5-4b85-92fc-55a531cd7134</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f938cccc-32b5-4b85-92fc-55a531cd7134</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"earGap")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f2e7833a-7e93-4e6c-8683-fd3df3fe15b9</id>
+            <parentID>5e36c0e2-ca58-4462-8ef0-c53ab9f1acda</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>ccac97e2-af2a-4c25-9861-590c1dbaccb4</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>f6cf0a80-a489-4734-9edf-7af80449148f</id>
+                        <expressionID>30d0bb3e-05fa-4c52-a0de-254da0889946</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>a33d081f-b379-4710-ae62-4f6ec8870a98</id>
+                        <expressionID>dc4e6175-31c1-4083-9f8d-0c8ac6bd3ebe</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ccac97e2-af2a-4c25-9861-590c1dbaccb4</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>30d0bb3e-05fa-4c52-a0de-254da0889946</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>1953846d-dbe7-4e45-ae2f-df3a37ae41c3</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1953846d-dbe7-4e45-ae2f-df3a37ae41c3</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"boar")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>dc4e6175-31c1-4083-9f8d-0c8ac6bd3ebe</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>earGap</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>a644a5dc-7245-4d08-9869-33288dc9279a</id>
+            <parentID />
+            <source>entrys.earTag=entrys.boar.earTag</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>f84a3762-e497-4d77-add1-28414b36c4f4</id>
+            <parentID>a644a5dc-7245-4d08-9869-33288dc9279a</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>454bcaf5-71db-4a29-8404-2521d3d2606e</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>454bcaf5-71db-4a29-8404-2521d3d2606e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"earTag")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a7707de0-9170-4835-85b9-f0166437674d</id>
+            <parentID>a644a5dc-7245-4d08-9869-33288dc9279a</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>67bb1f3a-915d-443d-9f23-cae317acd2b8</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>cb2e4129-0360-486b-9ded-81003d38c3d0</id>
+                        <expressionID>e1f065d4-bb54-4376-9f01-807a1c5d7179</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>b9a087be-a786-47f1-a9d0-b136e2c532bd</id>
+                        <expressionID>055f3aa4-2eb9-4dc5-b1b9-dba6cfbc13e3</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>67bb1f3a-915d-443d-9f23-cae317acd2b8</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e1f065d4-bb54-4376-9f01-807a1c5d7179</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>1e63fffe-5390-4277-8f72-59f1b89cf365</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1e63fffe-5390-4277-8f72-59f1b89cf365</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"boar")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>055f3aa4-2eb9-4dc5-b1b9-dba6cfbc13e3</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>earTag</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>4511d77c-5964-4486-8227-0cb426b9e2cb</id>
+            <parentID />
+            <source>entrys.boarName=entrys.boar.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>a8d8bf96-4dc9-4136-b5dc-a9f6a7975375</id>
+            <parentID>4511d77c-5964-4486-8227-0cb426b9e2cb</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>87e06318-d8b5-4402-a5d0-6d46dd8aacf4</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>87e06318-d8b5-4402-a5d0-6d46dd8aacf4</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"boarName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b80d3def-207e-4da5-850a-e57c3204d4de</id>
+            <parentID>4511d77c-5964-4486-8227-0cb426b9e2cb</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>04975ddb-2133-495b-a7af-97c5fa9e8013</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>a85359bc-eadd-49b6-89f5-e305ab7ec8ea</id>
+                        <expressionID>50133619-8e60-447d-a697-50be914df99d</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>86d58bc5-2dea-4400-8d22-541d44b3531b</id>
+                        <expressionID>ae478f39-0aeb-417d-9d72-3b7a04bcafb5</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>04975ddb-2133-495b-a7af-97c5fa9e8013</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>50133619-8e60-447d-a697-50be914df99d</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>433346b3-3e3b-44d6-8394-4139dd133702</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>433346b3-3e3b-44d6-8394-4139dd133702</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"boar")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ae478f39-0aeb-417d-9d72-3b7a04bcafb5</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>01666f0b-eab9-4ea2-bce1-5d1286f772ab</id>
+            <name>entrys_earGap_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].actions.action[entrys_earGap_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].actions.action[entrys_earGap_ActionInfo].description</description>
+            <expressionID>5e36c0e2-ca58-4462-8ef0-c53ab9f1acda</expressionID>
+        </action>
+        <action>
+            <id>4fde13eb-d7bf-4ce1-ae9a-8275f2bea358</id>
+            <name>entrys_earTag_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].actions.action[entrys_earTag_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].actions.action[entrys_earTag_ActionInfo].description</description>
+            <expressionID>a644a5dc-7245-4d08-9869-33288dc9279a</expressionID>
+        </action>
+        <action>
+            <id>a9bf2425-bda1-4f1a-9d41-0b30b7d1d47a</id>
+            <name>entrys_boarName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].actions.action[entrys_boarName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].actions.action[entrys_boarName_ActionInfo].description</description>
+            <expressionID>4511d77c-5964-4486-8227-0cb426b9e2cb</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>entrys_earGap_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].rules.conditionRule[entrys_earGap_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].rules.conditionRule[entrys_earGap_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="01666f0b-eab9-4ea2-bce1-5d1286f772ab" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>entrys_earTag_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].rules.conditionRule[entrys_earTag_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].rules.conditionRule[entrys_earTag_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="4fde13eb-d7bf-4ce1-ae9a-8275f2bea358" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>entrys_boarName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].rules.conditionRule[entrys_boarName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].rules.conditionRule[entrys_boarName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="a9bf2425-bda1-4f1a-9d41-0b30b7d1d47a" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].actions.action[entrys_boarName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].actions.action[entrys_boarName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].actions.action[entrys_earGap_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_earGap" />
+            <lang locale="zh_HK" value="攜帶字段屬性_earGap" />
+            <lang locale="zh_TW" value="攜帶字段屬性_earGap" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].actions.action[entrys_earGap_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].actions.action[entrys_earTag_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_earTag" />
+            <lang locale="zh_HK" value="攜帶字段屬性_earTag" />
+            <lang locale="zh_TW" value="攜帶字段屬性_earTag" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].actions.action[entrys_earTag_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].rules.conditionRule[entrys_boarName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].rules.conditionRule[entrys_boarName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].rules.conditionRule[entrys_boarName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="boar" />
+            <lang locale="zh_CN" value="boar" />
+            <lang locale="zh_TW" value="boar" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].rules.conditionRule[entrys_boarName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].rules.conditionRule[entrys_earGap_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_earGap" />
+            <lang locale="zh_HK" value="攜帶字段屬性_earGap" />
+            <lang locale="zh_TW" value="攜帶字段屬性_earGap" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].rules.conditionRule[entrys_earGap_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].rules.conditionRule[entrys_earGap_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="boar" />
+            <lang locale="zh_CN" value="boar" />
+            <lang locale="zh_TW" value="boar" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].rules.conditionRule[entrys_earGap_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].rules.conditionRule[entrys_earTag_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_earTag" />
+            <lang locale="zh_HK" value="攜帶字段屬性_earTag" />
+            <lang locale="zh_TW" value="攜帶字段屬性_earTag" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].rules.conditionRule[entrys_earTag_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].rules.conditionRule[entrys_earTag_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="boar" />
+            <lang locale="zh_CN" value="boar" />
+            <lang locale="zh_TW" value="boar" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.breedingboar.app.SpermCheckBillRuleSet].rules.conditionRule[entrys_earTag_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

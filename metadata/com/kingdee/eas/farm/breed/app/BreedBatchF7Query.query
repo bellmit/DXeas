@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.breed.app</package>
+    <name>BreedBatchF7Query</name>
+    <alias>joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].alias</alias>
+    <description>joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].description</description>
+    <userDefined>true</userDefined>
+    <reportDataSource />
+    <bizUnitPK>com.kingdee.eas.farm.breed.BreedBatch</bizUnitPK>
+    <connectionProvider />
+    <subObjects>
+        <subEntity>
+            <name>BreedBatch</name>
+            <alias>joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].subObjects.subEntity[BreedBatch].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.breed.app" />
+                <key name="name" value="BreedBatchF7Query" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.breed.app" />
+                <key name="name" value="BreedBatch" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>costObject</name>
+            <alias>joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].subObjects.subEntity[costObject].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.breed.app" />
+                <key name="name" value="BreedBatchF7Query" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.assistant.app" />
+                <key name="name" value="CostObject" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>stoOrg</name>
+            <alias>joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].subObjects.subEntity[stoOrg].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.breed.app" />
+                <key name="name" value="BreedBatchF7Query" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="StorageOrgUnit" />
+            </entityRef>
+        </subEntity>
+    </subObjects>
+    <units>
+        <queryField>
+            <name>number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BreedBatch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.breed.app" />
+                <key name="name" value="BreedBatchF7Query" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>costObject.name</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[costObject.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>f3a8b201-a30b-4670-8592-2c2d9b2467ec</key>
+                    <parentUnit>
+                        <key name="name" value="costObject.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="costObject" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.breed.app" />
+                <key name="name" value="BreedBatchF7Query" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>e82c6f6a-6a0e-4c8a-b54f-214163716a3a</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.propertyUnit[e82c6f6a-6a0e-4c8a-b54f-214163716a3a].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>b690df52-16f4-4ff3-a008-58555f049308</key>
+                    <parentUnit>
+                        <key name="name" value="e82c6f6a-6a0e-4c8a-b54f-214163716a3a" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BreedBatch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="costObject" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.breed.app" />
+                <key name="name" value="BreedBatchF7Query" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>05585295-cf03-47fb-9624-2eb7614cb8a9</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.propertyUnit[05585295-cf03-47fb-9624-2eb7614cb8a9].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0b4346d7-2d02-4013-aaa5-c5a1c1720973</key>
+                    <parentUnit>
+                        <key name="name" value="05585295-cf03-47fb-9624-2eb7614cb8a9" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="costObject" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.breed.app" />
+                <key name="name" value="BreedBatchF7Query" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>houseType</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[houseType].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>59bfbeab-1b8a-4312-add5-9c5c82e33ddc</key>
+                    <parentUnit>
+                        <key name="name" value="houseType" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BreedBatch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="houseType" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.breed.app" />
+                <key name="name" value="BreedBatchF7Query" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>week</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[week].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>badab916-75a1-4dad-ab3c-aa62c7632312</key>
+                    <parentUnit>
+                        <key name="name" value="week" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BreedBatch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="week" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.breed.app" />
+                <key name="name" value="BreedBatchF7Query" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>weekDay</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[weekDay].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>9f61285e-a4e8-4bee-a1e1-ae8afdb1be66</key>
+                    <parentUnit>
+                        <key name="name" value="weekDay" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BreedBatch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="weekDay" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.breed.app" />
+                <key name="name" value="BreedBatchF7Query" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>auditTime</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[auditTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>a04c5b96-b00a-46a3-abdc-5df00a74277a</key>
+                    <parentUnit>
+                        <key name="name" value="auditTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BreedBatch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="auditTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.breed.app" />
+                <key name="name" value="BreedBatchF7Query" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>stoOrg.name</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[stoOrg.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>be632d3d-b4e8-44ca-b512-c4fb2fc97b36</key>
+                    <parentUnit>
+                        <key name="name" value="stoOrg.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="stoOrg" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.breed.app" />
+                <key name="name" value="BreedBatchF7Query" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bizDate</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[bizDate].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="bizDate" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BreedBatch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bizDate" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.breed.app" />
+                <key name="name" value="BreedBatchF7Query" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>description</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[description].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="description" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BreedBatch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="description" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.breed.app" />
+                <key name="name" value="BreedBatchF7Query" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>createTime</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[createTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Timestamp</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="createTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BreedBatch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="createTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.breed.app" />
+                <key name="name" value="BreedBatchF7Query" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>lastUpdateTime</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[lastUpdateTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Timestamp</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="lastUpdateTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BreedBatch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="lastUpdateTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.breed.app" />
+                <key name="name" value="BreedBatchF7Query" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Fivouchered</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[Fivouchered].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Boolean</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="Fivouchered" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BreedBatch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="Fivouchered" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.breed.app" />
+                <key name="name" value="BreedBatchF7Query" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BreedBatch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.breed.app" />
+                <key name="name" value="BreedBatchF7Query" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>e16f961b-f1f3-4320-b1ad-7b968bc98d76</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.propertyUnit[e16f961b-f1f3-4320-b1ad-7b968bc98d76].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>61b41ca3-b0b4-4f71-b3cb-9d6a4a952e18</key>
+                    <parentUnit>
+                        <key name="name" value="e16f961b-f1f3-4320-b1ad-7b968bc98d76" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BreedBatch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="stoOrg" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.breed.app" />
+                <key name="name" value="BreedBatchF7Query" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>60a44ac3-3c87-4cc5-ba0b-5dc66da59833</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.propertyUnit[60a44ac3-3c87-4cc5-ba0b-5dc66da59833].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>22ef759e-2f89-4488-ba15-3b87e583df26</key>
+                    <parentUnit>
+                        <key name="name" value="60a44ac3-3c87-4cc5-ba0b-5dc66da59833" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="stoOrg" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.breed.app" />
+                <key name="name" value="BreedBatchF7Query" />
+            </query>
+        </propertyUnit>
+    </units>
+    <defaultFilter>
+        <name>defaultFilter</name>
+        <formulaString />
+        <query>
+            <key name="package" value="com.kingdee.eas.farm.breed.app" />
+            <key name="name" value="BreedBatchF7Query" />
+        </query>
+    </defaultFilter>
+    <defaultSorters>
+        <querySorterItem>
+            <propertyName>number</propertyName>
+            <sortType>ASC</sortType>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.breed.app" />
+                <key name="name" value="BreedBatchF7Query" />
+            </query>
+            <configured>false</configured>
+        </querySorterItem>
+    </defaultSorters>
+    <queryPK>
+        <name>QueryPK</name>
+        <alias>joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].queryPK[QueryPK].alias</alias>
+        <description>joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].queryPK[QueryPK].description</description>
+        <keyProperties>
+            <queryField>
+                <key name="name" value="id" />
+            </queryField>
+        </keyProperties>
+    </queryPK>
+    <isDistinct>false</isDistinct>
+    <joins>
+        <join>
+            <name>b58070e6-d42e-459a-8fa8-26f8e14591a3</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="BreedBatch" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="costObject" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>90f998e7-43ef-4a79-83b7-dc7e6084315a</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="e82c6f6a-6a0e-4c8a-b54f-214163716a3a" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="05585295-cf03-47fb-9624-2eb7614cb8a9" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="b58070e6-d42e-459a-8fa8-26f8e14591a3" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.breed.app" />
+                <key name="name" value="BreedBatchF7Query" />
+            </query>
+        </join>
+        <join>
+            <name>1a9937a5-8ccb-4b66-8cb3-5dede6426ad7</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="BreedBatch" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="stoOrg" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>f2f0544f-9f89-4ade-83ab-564a935fb8fa</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="e16f961b-f1f3-4320-b1ad-7b968bc98d76" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="60a44ac3-3c87-4cc5-ba0b-5dc66da59833" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="1a9937a5-8ccb-4b66-8cb3-5dede6426ad7" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.breed.app" />
+                <key name="name" value="BreedBatchF7Query" />
+            </query>
+        </join>
+    </joins>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="养殖批次" />
+            <lang locale="zh_HK" value="養殖批次" />
+            <lang locale="zh_TW" value="養殖批次" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].defaultSorters.querySorterItemextendedProperty.f7WindowTitle">
+            <lang locale="en_US" value="多分录基础单据模板" />
+            <lang locale="zh_CN" value="多分录基础单据模板" />
+            <lang locale="zh_TW" value="多分录基础单据模板" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="多分录基础单据查询" />
+            <lang locale="zh_HK" value="多分錄基礎單據查詢" />
+            <lang locale="zh_TW" value="多分錄基礎單據查詢" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].extendedProperty.F7WindowTitle">
+            <lang locale="en_US" value="com.kingdee.eas.farm.breed.client.BreedResource.BreedBatchQueryF7WindowTitle" />
+            <lang locale="zh_CN" value="com.kingdee.eas.farm.breed.client.BreedResource.BreedBatchQueryF7WindowTitle" />
+            <lang locale="zh_TW" value="com.kingdee.eas.farm.breed.client.BreedResource.BreedBatchQueryF7WindowTitle" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].extendedProperty.f7WindowTitle">
+            <lang locale="en_US" value="养殖批次" />
+            <lang locale="zh_CN" value="养殖批次" />
+            <lang locale="zh_TW" value="养殖批次" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].queryPK[QueryPK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].queryPK[QueryPK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].subObjects.subEntity[BreedBatch].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].subObjects.subEntity[costObject].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].subObjects.subEntity[stoOrg].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.propertyUnit[05585295-cf03-47fb-9624-2eb7614cb8a9].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.propertyUnit[60a44ac3-3c87-4cc5-ba0b-5dc66da59833].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.propertyUnit[e16f961b-f1f3-4320-b1ad-7b968bc98d76].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.propertyUnit[e82c6f6a-6a0e-4c8a-b54f-214163716a3a].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[Fivouchered].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否生成凭证" />
+            <lang locale="zh_HK" value="是否生成憑證" />
+            <lang locale="zh_TW" value="是否生成憑證" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[Fivouchered].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[Fivouchered].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[auditTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审核时间" />
+            <lang locale="zh_HK" value="審核時間" />
+            <lang locale="zh_TW" value="審核時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[auditTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[auditTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[bizDate].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务日期" />
+            <lang locale="zh_HK" value="業務日期" />
+            <lang locale="zh_TW" value="業務日期" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[bizDate].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[bizDate].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[costObject.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="批次（成本对象）" />
+            <lang locale="zh_HK" value="批次（成本對象）" />
+            <lang locale="zh_TW" value="批次（成本對象）" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[costObject.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[costObject.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[costObject.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[createTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建时间" />
+            <lang locale="zh_HK" value="創建時間" />
+            <lang locale="zh_TW" value="創建時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[createTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[createTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[description].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="参考信息" />
+            <lang locale="zh_HK" value="參考信息" />
+            <lang locale="zh_TW" value="參考信息" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[description].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[description].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[houseType].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="鸡舍类别" />
+            <lang locale="zh_HK" value="雞舍類別" />
+            <lang locale="zh_TW" value="雞舍類別" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[id].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[lastUpdateTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最后修改时间" />
+            <lang locale="zh_HK" value="最後修改時間" />
+            <lang locale="zh_TW" value="最後修改時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[lastUpdateTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[lastUpdateTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据编号" />
+            <lang locale="zh_HK" value="單據編號" />
+            <lang locale="zh_TW" value="單據編號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[number].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[number].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[stoOrg.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="养殖场" />
+            <lang locale="zh_HK" value="養殖場" />
+            <lang locale="zh_TW" value="養殖場" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[stoOrg.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[stoOrg.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[stoOrg.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[weekDay].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="日龄" />
+            <lang locale="zh_HK" value="日齡" />
+            <lang locale="zh_TW" value="日齡" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[weekDay].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[weekDay].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[week].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="转栏周龄" />
+            <lang locale="zh_HK" value="轉欄周齡" />
+            <lang locale="zh_TW" value="轉欄周齡" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[week].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.breed.app.BreedBatchF7Query].units.queryField[week].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</joinQuery>
+

@@ -1,0 +1,4265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.taihe.contract.app</package>
+    <name>BatchContractRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>20ff6286-0a6a-4629-b807-53be1a2e9c60</id>
+            <parentID />
+            <source>header=farm.theHeader</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>6f1d111b-0eb4-477b-8085-92209b6bc3b9</id>
+            <parentID>20ff6286-0a6a-4629-b807-53be1a2e9c60</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>c1cbac31-3fe2-419b-a5c0-c7bb5deb545a</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c1cbac31-3fe2-419b-a5c0-c7bb5deb545a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtheader</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2a910912-66b8-443a-912b-c8b25709c19d</id>
+            <parentID>20ff6286-0a6a-4629-b807-53be1a2e9c60</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>d205c9a2-b48b-4f4f-9e51-30e259394833</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>ad4a1dcf-f724-4e25-bf21-2c8870770571</id>
+                        <expressionID>47cf8f55-f30c-4b14-9a8d-df6cf830bc55</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>987dbe55-5362-4546-986d-5acaceca91d1</id>
+                        <expressionID>c2baa8d9-ac96-4684-a5f3-82deaad5fabd</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d205c9a2-b48b-4f4f-9e51-30e259394833</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>47cf8f55-f30c-4b14-9a8d-df6cf830bc55</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>62e0627e-f03f-4d48-a6a5-2211228682dd</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>62e0627e-f03f-4d48-a6a5-2211228682dd</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtfarm</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c2baa8d9-ac96-4684-a5f3-82deaad5fabd</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>theHeader</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>ae41c596-541a-4c28-830a-8399dea6977f</id>
+            <parentID />
+            <source>headerCell=farm.theHearderCell</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>f0f7d1fe-7ac6-470a-97ab-7e6009e1c0b0</id>
+            <parentID>ae41c596-541a-4c28-830a-8399dea6977f</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>370d11ca-aa25-400b-b528-a234422f86a3</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>370d11ca-aa25-400b-b528-a234422f86a3</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtheaderCell</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2ec6988f-f628-4815-9f79-74a05e8a5c67</id>
+            <parentID>ae41c596-541a-4c28-830a-8399dea6977f</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>c958b02e-4ab5-4fe0-ad66-f301d14ab39f</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>b38737ec-9e6c-4512-8df7-527ba72bf73d</id>
+                        <expressionID>841cc6a6-0332-45da-a2ee-bae79400585c</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>1774c063-e178-48a5-b729-f7fd1ac93a19</id>
+                        <expressionID>73d7117b-b77f-4f67-a073-0a068efe051b</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c958b02e-4ab5-4fe0-ad66-f301d14ab39f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>841cc6a6-0332-45da-a2ee-bae79400585c</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>e96f94c9-5dcc-4201-9331-5d58ebc36ca6</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e96f94c9-5dcc-4201-9331-5d58ebc36ca6</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtfarm</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>73d7117b-b77f-4f67-a073-0a068efe051b</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>theHearderCell</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>8de07255-af3e-4851-932a-7471777544f0</id>
+            <parentID />
+            <source>capacity=farm.capacity</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>aef62444-409b-477c-a988-402d8d8cc8c9</id>
+            <parentID>8de07255-af3e-4851-932a-7471777544f0</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>f5cc582f-e052-4aa1-b3fc-628c5084de01</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f5cc582f-e052-4aa1-b3fc-628c5084de01</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtcapacity</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>56c5a5b6-895d-4d25-9893-f93e258cbe1c</id>
+            <parentID>8de07255-af3e-4851-932a-7471777544f0</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>bc2c4acf-1cc6-4a2d-a7f8-f25f6387d020</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>de6f593b-ee30-4c2f-bb92-3b82ab683cbd</id>
+                        <expressionID>a7d4b873-8a45-44f3-8c57-0461176a2acf</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>f98da1df-b833-4dd5-89b5-df47aba44aa5</id>
+                        <expressionID>4eda1bfd-40fa-42c1-a462-50ebe85e7822</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bc2c4acf-1cc6-4a2d-a7f8-f25f6387d020</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a7d4b873-8a45-44f3-8c57-0461176a2acf</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>c2dcc428-4054-4478-a59f-f4863e41ebfd</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c2dcc428-4054-4478-a59f-f4863e41ebfd</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtfarm</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4eda1bfd-40fa-42c1-a462-50ebe85e7822</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>capacity</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>0ed42e8d-4435-4653-a677-b10ed145c347</id>
+            <parentID />
+            <source>farmer=farm.theHeader</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>400f98f7-d899-44a1-8923-b51e19d1bb64</id>
+            <parentID>0ed42e8d-4435-4653-a677-b10ed145c347</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>9e66c365-4e99-4bab-a02a-8a30f0518695</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9e66c365-4e99-4bab-a02a-8a30f0518695</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtfarmer</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>154e2d7f-5d27-45f7-aadb-58e0395a638f</id>
+            <parentID>0ed42e8d-4435-4653-a677-b10ed145c347</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>6eaca611-a242-4285-a8f0-c58596b6c302</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>8fd4104a-576c-462c-b9d6-ee9270888df8</id>
+                        <expressionID>a34164fd-c2e3-419d-b535-dcda91b49ebf</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>a27f65b4-79c9-4de8-b92d-0ef81f96c097</id>
+                        <expressionID>c3690050-ceaf-4cf9-82d1-fe007faa202c</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6eaca611-a242-4285-a8f0-c58596b6c302</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a34164fd-c2e3-419d-b535-dcda91b49ebf</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>f9128194-5b03-4584-939b-46ba957d6dfd</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f9128194-5b03-4584-939b-46ba957d6dfd</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtfarm</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c3690050-ceaf-4cf9-82d1-fe007faa202c</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>theHeader</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>6ace07a1-3f45-4e46-be57-e88074fe4dd9</id>
+            <parentID />
+            <source>headerCell=farm.telePhone</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>682bf3d4-f1e9-4cb1-8e27-d693ada26b6b</id>
+            <parentID>6ace07a1-3f45-4e46-be57-e88074fe4dd9</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>7c985497-e840-4396-9258-b18f7ffbb4d8</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7c985497-e840-4396-9258-b18f7ffbb4d8</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtheaderCell</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>71713917-6f21-40c8-9bcb-5a88fc52e7cf</id>
+            <parentID>6ace07a1-3f45-4e46-be57-e88074fe4dd9</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>e268a814-b9b3-40a1-b98e-1203ac6b04bc</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>9eeea73b-2dfa-4f9a-bbe7-010bf37085b9</id>
+                        <expressionID>5b597c47-40f1-429c-88cc-9e8dfae3342a</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>5a6c58c2-8e44-481a-9bad-984d85224678</id>
+                        <expressionID>7ff13d39-bee1-4008-b0cf-3c8b67cfb843</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e268a814-b9b3-40a1-b98e-1203ac6b04bc</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5b597c47-40f1-429c-88cc-9e8dfae3342a</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>131701fc-f8a5-406b-88cf-8da427dd05f6</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>131701fc-f8a5-406b-88cf-8da427dd05f6</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtfarm</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7ff13d39-bee1-4008-b0cf-3c8b67cfb843</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>telePhone</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>d02b3915-9152-45fb-a0f4-7f8a10c1bd08</id>
+            <parentID />
+            <source>contractType = successiveContract.contractType</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>a9341177-88d7-449d-b954-53990824cd89</id>
+            <parentID>d02b3915-9152-45fb-a0f4-7f8a10c1bd08</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>00b6d257-08f2-4dda-acc7-729b49a10d0a</ownerID>
+                <name>data</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>00b6d257-08f2-4dda-acc7-729b49a10d0a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>prmtcontractType</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>712c3ad4-e71d-4882-8d3e-381539e95b91</id>
+            <parentID>d02b3915-9152-45fb-a0f4-7f8a10c1bd08</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>4efec5b7-c2d3-4f22-a08a-adb60e3dc8e4</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>965ee4cc-e8ce-45d0-bc18-6ad40035d080</id>
+                        <expressionID>7663b61f-06d6-4dea-b127-a95de383f750</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>38220aaf-8e2e-490b-b331-7eac74788196</id>
+                        <expressionID>32f72220-6b0d-441d-900c-b043fea0dd2b</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4efec5b7-c2d3-4f22-a08a-adb60e3dc8e4</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7663b61f-06d6-4dea-b127-a95de383f750</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>3946bace-1b0b-4073-a4b6-e1e1bf116a6a</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3946bace-1b0b-4073-a4b6-e1e1bf116a6a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtsuccessiveContract</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>32f72220-6b0d-441d-900c-b043fea0dd2b</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>contractType</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>0bb87cd9-fd18-4219-bf1b-7fd648f2bfd9</id>
+            <parentID />
+            <source>beginDate = successiveContract.beginDate</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>5fc3db09-8c8a-43bf-b169-5991db5c7d9e</id>
+            <parentID>0bb87cd9-fd18-4219-bf1b-7fd648f2bfd9</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Date</valueType>
+            <value />
+            <property>
+                <ownerID>175a292f-21cf-433b-bad3-815a9ab87f43</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>175a292f-21cf-433b-bad3-815a9ab87f43</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>pkbeginDate</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>27fa5757-e1e7-4e3a-a0e2-c07208452688</id>
+            <parentID>0bb87cd9-fd18-4219-bf1b-7fd648f2bfd9</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Date</valueType>
+            <value />
+            <method>
+                <ownerID>41a35bad-1fb7-49fd-95c8-67bba14d1dcb</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>5493366d-0a3e-4232-a7fc-7e379341bcd8</id>
+                        <expressionID>5851753f-33b6-4004-878c-d41b77a29357</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>51ac6982-8863-4f61-906b-f5ce7322c4ca</id>
+                        <expressionID>27bdf706-bbae-4685-9362-e0c5e9fd3e8a</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>41a35bad-1fb7-49fd-95c8-67bba14d1dcb</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5851753f-33b6-4004-878c-d41b77a29357</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>81d6cf53-fb8f-49be-b7c5-9a2fe3435cce</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>81d6cf53-fb8f-49be-b7c5-9a2fe3435cce</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtsuccessiveContract</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>27bdf706-bbae-4685-9362-e0c5e9fd3e8a</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>beginDate</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>90ff82fd-e3c9-47a8-9f3d-6b1519965e50</id>
+            <parentID />
+            <source>endDate = successiveContract.endDate</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>06d3b2c4-3806-49c6-ab4a-b4cd55610341</id>
+            <parentID>90ff82fd-e3c9-47a8-9f3d-6b1519965e50</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Date</valueType>
+            <value />
+            <property>
+                <ownerID>0dbed854-0709-43fb-b263-7c9d5faffb11</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0dbed854-0709-43fb-b263-7c9d5faffb11</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>pkendDate</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>313a953b-ae5c-47c3-8c38-0177a90d14b8</id>
+            <parentID>90ff82fd-e3c9-47a8-9f3d-6b1519965e50</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Date</valueType>
+            <value />
+            <method>
+                <ownerID>407a46f0-27bd-4318-9870-29e71b236009</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>2eb8a5eb-f697-49ba-a3d6-060acf6c6d97</id>
+                        <expressionID>bc8c8239-f03a-4d1e-b6b6-55abbdef91d7</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>4999fe04-0ef9-4c5c-af6a-373997a327e1</id>
+                        <expressionID>f1c32dd5-e78e-4dc3-8c40-916dcdb31d8d</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>407a46f0-27bd-4318-9870-29e71b236009</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bc8c8239-f03a-4d1e-b6b6-55abbdef91d7</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>3a55405b-46e1-4d76-9d51-70e9801d965a</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3a55405b-46e1-4d76-9d51-70e9801d965a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtsuccessiveContract</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f1c32dd5-e78e-4dc3-8c40-916dcdb31d8d</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>endDate</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>17548646-96ab-408f-9211-98336772de99</id>
+            <parentID />
+            <source>farm = successiveContract.farm</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>0cbb181b-6a36-4c49-9f6b-e59907b584a9</id>
+            <parentID>17548646-96ab-408f-9211-98336772de99</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>59978bf4-ae88-4a40-b698-d78d2185fee2</ownerID>
+                <name>data</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>59978bf4-ae88-4a40-b698-d78d2185fee2</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>prmtfarm</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2bbe57bc-a5f2-4e41-bbc2-bde20c363991</id>
+            <parentID>17548646-96ab-408f-9211-98336772de99</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>0a7058c7-74c9-4610-9859-99b1585a5a4c</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>1ea40836-06b8-4091-8309-88d9303e4350</id>
+                        <expressionID>09e2a97f-114c-4967-bc42-013883fe6e4a</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>9a6d53be-79f0-4c7c-8ff1-499bfbba5e81</id>
+                        <expressionID>1fc2c616-15ca-4a03-b79a-9ef30609b05a</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0a7058c7-74c9-4610-9859-99b1585a5a4c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>09e2a97f-114c-4967-bc42-013883fe6e4a</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>54d47a72-85a7-4e87-a62e-35455f36be95</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>54d47a72-85a7-4e87-a62e-35455f36be95</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtsuccessiveContract</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1fc2c616-15ca-4a03-b79a-9ef30609b05a</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>farm</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>d8e25385-0e5a-4bb9-9a76-f825b5d161e4</id>
+            <parentID />
+            <source>partyBCell = successiveContract.partyBCell</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>241fd25e-8130-49be-9f44-430bc4ab7c35</id>
+            <parentID>d8e25385-0e5a-4bb9-9a76-f825b5d161e4</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>53588dbe-6ae4-4394-aaaf-867c8ea99912</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>53588dbe-6ae4-4394-aaaf-867c8ea99912</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtpartyBCell</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0e6f37ba-b927-439c-ad71-d921fdf38006</id>
+            <parentID>d8e25385-0e5a-4bb9-9a76-f825b5d161e4</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>7e319023-e8ac-485a-ad4d-f588d7a1048f</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>485e41f2-3789-4387-b4bc-b1416ded4ffc</id>
+                        <expressionID>78df9155-2a20-4c94-8738-ada7e2abad3c</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>6f32d4e5-c654-4511-9044-570220b71a87</id>
+                        <expressionID>32d10f03-94c3-408f-a80e-e7f14f39bb89</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7e319023-e8ac-485a-ad4d-f588d7a1048f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>78df9155-2a20-4c94-8738-ada7e2abad3c</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>ab83d220-106e-4b27-a430-169ad75d1660</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ab83d220-106e-4b27-a430-169ad75d1660</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtsuccessiveContract</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>32d10f03-94c3-408f-a80e-e7f14f39bb89</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>partyBCell</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>883f4614-037e-49d0-bdf0-c945661d72a1</id>
+            <parentID />
+            <source>partyBAddress = successiveContract.partyBAddress</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>4e72170f-5299-4d6e-b6ad-c8d505c095fc</id>
+            <parentID>883f4614-037e-49d0-bdf0-c945661d72a1</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>4463cc40-9cc0-4654-bf9c-0472b8db7681</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4463cc40-9cc0-4654-bf9c-0472b8db7681</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtpartyBAddress</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ec210174-3363-49be-b482-a18448b79e2f</id>
+            <parentID>883f4614-037e-49d0-bdf0-c945661d72a1</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>ea16538f-44c1-43f2-9ced-611ba12b9a68</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>ff301314-d2f4-4f85-95b5-667fd3d02e83</id>
+                        <expressionID>77ee3a1d-fe0b-4122-884a-aafafead2306</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>10cb8686-aa95-493e-8b6f-bb6a55d47afa</id>
+                        <expressionID>696db572-5dfb-468b-9415-d350f85c68b5</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ea16538f-44c1-43f2-9ced-611ba12b9a68</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>77ee3a1d-fe0b-4122-884a-aafafead2306</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>8e6a9c2c-77c0-4303-a04e-a7edaf082cca</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8e6a9c2c-77c0-4303-a04e-a7edaf082cca</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtsuccessiveContract</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>696db572-5dfb-468b-9415-d350f85c68b5</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>partyBAddress</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>7e759bb8-813b-4b98-832a-4efa6a4879e6</id>
+            <parentID />
+            <source>partyBID = successiveContract.partyBID</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>708a10a2-27d1-409f-83e5-b8fac33cc0d5</id>
+            <parentID>7e759bb8-813b-4b98-832a-4efa6a4879e6</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>35121df0-cadc-484c-8b10-dcf47962aa23</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>35121df0-cadc-484c-8b10-dcf47962aa23</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtpartyBID</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0e0b7a6c-7d95-4924-8d1e-d43a6f91cf4a</id>
+            <parentID>7e759bb8-813b-4b98-832a-4efa6a4879e6</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>49fbd60f-ae4b-4943-bdf2-e0dfa94787ff</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>6d047952-df72-4e1f-916f-c44a4486a493</id>
+                        <expressionID>87345cbc-2398-4533-8c5d-c52f7cc88d20</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>126a5a4f-a6ff-4e78-8e5f-931d4bbff512</id>
+                        <expressionID>d39ba452-b5dc-4175-a33a-280eb6d7f1c2</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>49fbd60f-ae4b-4943-bdf2-e0dfa94787ff</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>87345cbc-2398-4533-8c5d-c52f7cc88d20</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>f2fabc03-7117-4768-a6fa-b514adcfadcc</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f2fabc03-7117-4768-a6fa-b514adcfadcc</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtsuccessiveContract</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d39ba452-b5dc-4175-a33a-280eb6d7f1c2</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>partyBID</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>b8269691-99f4-4d85-b8db-924dddd2d244</id>
+            <parentID />
+            <source>partyBBank = successiveContract.partyBBank</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>27da2a1d-5f2c-4385-9a6f-d4db4c725202</id>
+            <parentID>b8269691-99f4-4d85-b8db-924dddd2d244</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>ab9f7874-30c9-4037-be61-3430e3d6ea7a</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ab9f7874-30c9-4037-be61-3430e3d6ea7a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtpartyBBank</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cdccba86-62f8-4859-84ec-3d6c3d730c98</id>
+            <parentID>b8269691-99f4-4d85-b8db-924dddd2d244</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>53fad50b-148b-41eb-833d-9e386101a68d</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>3773a6cc-5f9f-49a3-81cd-55867e739ac5</id>
+                        <expressionID>541ba8f3-bcd2-4b65-a931-7cf12c7073ed</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>41dff560-6cb8-4188-84f6-a11f6fb28b96</id>
+                        <expressionID>fc720daa-ba7c-4d7b-bea9-07c4cfc04602</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>53fad50b-148b-41eb-833d-9e386101a68d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>541ba8f3-bcd2-4b65-a931-7cf12c7073ed</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>b884e3bd-f0c0-47fa-9ef7-e1bf75e05343</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b884e3bd-f0c0-47fa-9ef7-e1bf75e05343</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtsuccessiveContract</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fc720daa-ba7c-4d7b-bea9-07c4cfc04602</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>partyBBank</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>a2ee7207-121e-4510-ad0c-fd40af1d0b5b</id>
+            <parentID />
+            <source>partyBAccount = successiveContract.partyBBankNo</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>7b465b71-ce1b-4dd6-9665-7f8f6bc4513e</id>
+            <parentID>a2ee7207-121e-4510-ad0c-fd40af1d0b5b</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>9aca4a51-a6be-46a5-b1ee-fceb60024b55</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9aca4a51-a6be-46a5-b1ee-fceb60024b55</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtpartyBAccount</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>835f4542-9436-4c4e-b34c-25fc70444bea</id>
+            <parentID>a2ee7207-121e-4510-ad0c-fd40af1d0b5b</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>1e49952b-db97-4bf6-b0fe-bf3099a0aa50</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>02d96e61-8921-47e3-abbc-922bd2815199</id>
+                        <expressionID>14eef54b-95a1-4e63-b5a9-7ccbc93d5e60</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>1ee78de8-ac85-4eb7-bab3-434bd43238af</id>
+                        <expressionID>dcd2880d-0ae5-4f67-8330-21a399d13438</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1e49952b-db97-4bf6-b0fe-bf3099a0aa50</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>14eef54b-95a1-4e63-b5a9-7ccbc93d5e60</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>7bf07d17-146b-47a9-beb6-e7e6e24b3b85</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7bf07d17-146b-47a9-beb6-e7e6e24b3b85</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtsuccessiveContract</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>dcd2880d-0ae5-4f67-8330-21a399d13438</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>partyBBankNo</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>e826a99d-047a-423f-bd9b-50b9f7850384</id>
+            <parentID />
+            <source>capacity = successiveContract.capacity</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>1caebdb2-152d-4f71-af13-877b7387b8fe</id>
+            <parentID>e826a99d-047a-423f-bd9b-50b9f7850384</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>91e4a94b-044a-4851-9c9c-c91d60904f0a</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>91e4a94b-044a-4851-9c9c-c91d60904f0a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtcapacity</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ec2c505f-05a6-4178-8299-e4d580deac11</id>
+            <parentID>e826a99d-047a-423f-bd9b-50b9f7850384</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>96e51d7e-0df1-47f8-b224-b137b2300ab6</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>f150af60-0558-4420-be5a-4c298acd905a</id>
+                        <expressionID>bf715e0c-12a9-4c53-80c0-d9321afc96da</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>29b051fb-0205-48fb-a206-61b7acdc8e95</id>
+                        <expressionID>438b6b53-59db-42bf-87b4-832e88809d58</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>96e51d7e-0df1-47f8-b224-b137b2300ab6</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bf715e0c-12a9-4c53-80c0-d9321afc96da</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>104eb12d-bbdd-4e57-a730-c952bda9c828</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>104eb12d-bbdd-4e57-a730-c952bda9c828</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtsuccessiveContract</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>438b6b53-59db-42bf-87b4-832e88809d58</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>capacity</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>4b6eb23b-181e-49fb-9279-c5cf4e55f7ab</id>
+            <parentID />
+            <source>feedType = successiveContract.feedingType</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>a1fdfef0-47ef-459d-b34c-4f88a569cd3a</id>
+            <parentID>4b6eb23b-181e-49fb-9279-c5cf4e55f7ab</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>605d8ff0-1dd3-4f3f-a34e-3c68e5b9d3f9</ownerID>
+                <name>selectedItem</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>605d8ff0-1dd3-4f3f-a34e-3c68e5b9d3f9</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>feedType</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8976232e-b0d2-49b3-8035-2377895610da</id>
+            <parentID>4b6eb23b-181e-49fb-9279-c5cf4e55f7ab</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Enum</valueType>
+            <value />
+            <method>
+                <ownerID>9627be93-3d15-480b-8fb4-918fdeb3a39c</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>90d0b550-177e-4c70-b4ba-e9b9c708ee03</id>
+                        <expressionID>3dc09cda-dda1-4e9b-a64b-0948f2298546</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>3ac1f0ef-303f-42c0-8905-ea545c2319d8</id>
+                        <expressionID>b7d7f059-fd3c-473e-b54d-d6da1d88b45d</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9627be93-3d15-480b-8fb4-918fdeb3a39c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3dc09cda-dda1-4e9b-a64b-0948f2298546</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>51a2d41b-6ac2-4c14-ac58-80333ac474a4</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>51a2d41b-6ac2-4c14-ac58-80333ac474a4</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtsuccessiveContract</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b7d7f059-fd3c-473e-b54d-d6da1d88b45d</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>feedingType</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>5f2ff5be-3557-4c96-92af-db2a9c56449b</id>
+            <parentID />
+            <source>inDate = successiveContract.upSeedingDate</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>d748bc13-d8a5-4d7a-98b1-708ca25be342</id>
+            <parentID>5f2ff5be-3557-4c96-92af-db2a9c56449b</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Date</valueType>
+            <value />
+            <property>
+                <ownerID>e4b05bd9-69e6-47b3-b897-7f4274fe0d2f</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e4b05bd9-69e6-47b3-b897-7f4274fe0d2f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>pkinDate</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>25ee16b2-3ac4-4a85-82cd-c0c922bf978d</id>
+            <parentID>5f2ff5be-3557-4c96-92af-db2a9c56449b</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Date</valueType>
+            <value />
+            <method>
+                <ownerID>3b3bd4a2-177a-41b8-a3d2-83636a0f9e31</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>512a535d-83a8-44b0-8c2a-4ef9dadc3435</id>
+                        <expressionID>862f04cf-0af3-4b43-84eb-c15b037425bf</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>d6d3d636-0120-40c2-a6f7-3b9cc6f08c29</id>
+                        <expressionID>8f35d8b1-e8f7-4110-bb93-044e5b42db1e</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3b3bd4a2-177a-41b8-a3d2-83636a0f9e31</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>862f04cf-0af3-4b43-84eb-c15b037425bf</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>d5684c6e-f6cd-4c3d-bf0b-71558f08b25d</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d5684c6e-f6cd-4c3d-bf0b-71558f08b25d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtsuccessiveContract</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8f35d8b1-e8f7-4110-bb93-044e5b42db1e</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>upSeedingDate</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>8948ecee-b483-4ad1-9adb-bdea397a9edb</id>
+            <parentID />
+            <source>inQty = successiveContract.upSeedingQty</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>915e48c8-5648-4c11-91c5-5928060c1bf8</id>
+            <parentID>8948ecee-b483-4ad1-9adb-bdea397a9edb</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>f8c451b5-a8c7-45b1-a912-99cd136e2f09</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f8c451b5-a8c7-45b1-a912-99cd136e2f09</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtinQty</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>85fb8dcb-f831-417d-b148-a7b77501bf36</id>
+            <parentID>8948ecee-b483-4ad1-9adb-bdea397a9edb</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>973356d4-456a-4dd0-8fc7-d4918e2b8a03</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>86897b44-4040-4c69-aeae-d0b38bc69ae5</id>
+                        <expressionID>08500cb1-d350-4124-a1e8-a7a1c886e478</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>d94488ec-446c-4f9b-a153-4cf866db48de</id>
+                        <expressionID>6113fd6d-4e15-4c2d-827a-088cc9b7a0ec</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>973356d4-456a-4dd0-8fc7-d4918e2b8a03</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>08500cb1-d350-4124-a1e8-a7a1c886e478</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>cd1c3f2b-c850-4303-8259-cb99cddf3f07</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cd1c3f2b-c850-4303-8259-cb99cddf3f07</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtsuccessiveContract</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6113fd6d-4e15-4c2d-827a-088cc9b7a0ec</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>upSeedingQty</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>9a0d0f50-8e91-4aea-904c-9af389b7af79</id>
+            <parentID />
+            <source>settlePolicy = successiveContract.statementPolicy</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>0a3eb54f-faaf-42e5-9d78-a05805c457d7</id>
+            <parentID>9a0d0f50-8e91-4aea-904c-9af389b7af79</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>2b0a30ce-4c27-4d95-8cdf-3d05db0b543d</ownerID>
+                <name>data</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2b0a30ce-4c27-4d95-8cdf-3d05db0b543d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>prmtsettlePolicy</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>16c167b9-bb70-4c27-9df3-784696f343e5</id>
+            <parentID>9a0d0f50-8e91-4aea-904c-9af389b7af79</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>804488ea-64d0-46fa-b8a3-001a3572db9c</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>bfdbed14-9a6b-4167-af1b-4a22a39eabe9</id>
+                        <expressionID>18bd2c76-ae7b-487b-9235-b22b7fae4e68</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>fb091742-a1f5-4eb3-a92c-4410a30b5700</id>
+                        <expressionID>feb47a56-b392-484c-b8af-1668d976e468</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>804488ea-64d0-46fa-b8a3-001a3572db9c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>18bd2c76-ae7b-487b-9235-b22b7fae4e68</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>79c06c5c-2bf9-4994-a699-f72c2699b450</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>79c06c5c-2bf9-4994-a699-f72c2699b450</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtsuccessiveContract</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>feb47a56-b392-484c-b8af-1668d976e468</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>statementPolicy</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>07526bb3-ce14-4388-9f4c-70cd6ba62a53</id>
+            <parentID />
+            <source>outDaysStd = successiveContract.days</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>0b6e699e-b666-4d81-acd4-34acffd1c2de</id>
+            <parentID>07526bb3-ce14-4388-9f4c-70cd6ba62a53</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Integer</valueType>
+            <value />
+            <property>
+                <ownerID>8147b8cd-82a1-41ab-bd42-faa451dbc911</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8147b8cd-82a1-41ab-bd42-faa451dbc911</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtoutDaysStd</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4794b6f1-c4c4-46b3-8732-463c5d9ce8ea</id>
+            <parentID>07526bb3-ce14-4388-9f4c-70cd6ba62a53</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Integer</valueType>
+            <value />
+            <method>
+                <ownerID>c8a992c8-be79-425e-95bd-7535acf37fe0</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>4ea8b957-be1b-41de-beed-355ac27f94c2</id>
+                        <expressionID>ff0cc669-e046-4a4e-bd9a-f3d44c8b0197</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>ab5cbe39-91eb-49a9-b664-79ace16779ed</id>
+                        <expressionID>5a47b0aa-877a-44f5-a35a-994157de89b1</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c8a992c8-be79-425e-95bd-7535acf37fe0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ff0cc669-e046-4a4e-bd9a-f3d44c8b0197</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>8040f7a7-003e-4ae0-bf88-1dac0317e221</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8040f7a7-003e-4ae0-bf88-1dac0317e221</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtsuccessiveContract</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5a47b0aa-877a-44f5-a35a-994157de89b1</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>days</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>f8a89bce-a3fe-4791-83ca-f786cb2261de</id>
+            <parentID />
+            <source>diffDays = successiveContract.diffDays</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>8e4effd2-ec7c-47eb-8a9c-fce38559ebe3</id>
+            <parentID>f8a89bce-a3fe-4791-83ca-f786cb2261de</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Integer</valueType>
+            <value />
+            <property>
+                <ownerID>548a43bd-9fa4-4178-ab48-eb4c25a7a5cc</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>548a43bd-9fa4-4178-ab48-eb4c25a7a5cc</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtdiffDays</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e7aafded-4ae5-4743-bfc0-983190f9d8da</id>
+            <parentID>f8a89bce-a3fe-4791-83ca-f786cb2261de</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Integer</valueType>
+            <value />
+            <method>
+                <ownerID>a41f1f51-f62d-4eb6-953a-71bcd1baf45d</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>d6f39666-7e97-4bc2-b808-67dfd9bf16af</id>
+                        <expressionID>8275ebe9-c408-452b-8af2-d33814383a47</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>df7b897e-bbce-4d85-ab60-e3dd004ac3f2</id>
+                        <expressionID>8eb34f8c-5d0c-4be8-8cb7-0bc712bc22dd</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a41f1f51-f62d-4eb6-953a-71bcd1baf45d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8275ebe9-c408-452b-8af2-d33814383a47</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>49b43307-e4a3-4ed2-acdc-40b6ad94ac40</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>49b43307-e4a3-4ed2-acdc-40b6ad94ac40</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtsuccessiveContract</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8eb34f8c-5d0c-4be8-8cb7-0bc712bc22dd</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>diffDays</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>f6af0e69-5acc-46da-9c4f-5bc631cf957b</id>
+            <parentID />
+            <source>purchasePerson = successiveContract.purchasePerson</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>3a8a8545-6c2b-48a9-9c76-b64ea8623610</id>
+            <parentID>f6af0e69-5acc-46da-9c4f-5bc631cf957b</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>d53ff084-0f88-43b1-9384-4096b2d3c943</ownerID>
+                <name>data</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d53ff084-0f88-43b1-9384-4096b2d3c943</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>prmtpurchasePerson</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>daa19065-c73b-4063-aed1-aa40fb4ccf35</id>
+            <parentID>f6af0e69-5acc-46da-9c4f-5bc631cf957b</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>ff270150-0876-422c-8815-60605c414d31</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>ef766789-a592-4f49-8ecf-6725412ad701</id>
+                        <expressionID>45e7b00c-4628-40af-811f-fbfd811adad8</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>53566de2-ecf6-4942-856e-b1894976b234</id>
+                        <expressionID>d9430a6c-17d2-4e74-ae57-2ef59d933bb2</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ff270150-0876-422c-8815-60605c414d31</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>45e7b00c-4628-40af-811f-fbfd811adad8</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>25e490ff-8200-403a-9a84-6863229400f8</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>25e490ff-8200-403a-9a84-6863229400f8</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtsuccessiveContract</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d9430a6c-17d2-4e74-ae57-2ef59d933bb2</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>purchasePerson</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>00262f4a-75b4-4b0b-876e-3b15862a9e1e</id>
+            <parentID />
+            <source>supplier = successiveContract.Supplier</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>6631c162-5e8c-4eae-a1c5-c93926e8681c</id>
+            <parentID>00262f4a-75b4-4b0b-876e-3b15862a9e1e</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>80f17a94-3950-4032-9f32-4589b5dc9b09</ownerID>
+                <name>data</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>80f17a94-3950-4032-9f32-4589b5dc9b09</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>prmtsupplier</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0a5e0bc8-9048-4c2b-bc84-687a22407a46</id>
+            <parentID>00262f4a-75b4-4b0b-876e-3b15862a9e1e</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>9315d0bc-ba60-4ff1-80e9-ff3e01b11804</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>a2512b8e-38e9-43ad-b6a5-54100e0e89cc</id>
+                        <expressionID>d5bb2505-76d6-426a-837f-b97365dc770a</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>8730c450-d6d2-4231-8529-d725f41a24a2</id>
+                        <expressionID>6bd0a285-e82f-4c66-9f92-7832b735ae00</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9315d0bc-ba60-4ff1-80e9-ff3e01b11804</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d5bb2505-76d6-426a-837f-b97365dc770a</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>e2a251ac-44ce-4f49-8ff4-2ce48db1d294</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e2a251ac-44ce-4f49-8ff4-2ce48db1d294</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtsuccessiveContract</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6bd0a285-e82f-4c66-9f92-7832b735ae00</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>Supplier</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>06d3b05c-d0b5-41c6-a458-21ea28c2dcc5</id>
+            <parentID />
+            <source>headerCell = successiveContract.headerCell</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>363b8f76-bf67-4503-8123-f5b79ea00ad6</id>
+            <parentID>06d3b05c-d0b5-41c6-a458-21ea28c2dcc5</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>1471d261-12fa-4a7d-b580-9f076772fac5</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1471d261-12fa-4a7d-b580-9f076772fac5</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtheaderCell</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>41078a1e-26ca-4310-8d55-b91f3415ebd0</id>
+            <parentID>06d3b05c-d0b5-41c6-a458-21ea28c2dcc5</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>51c0c770-300a-4852-b38d-9bc3d21c88bf</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>746e8b09-d5a3-4064-920b-15547f7ba60e</id>
+                        <expressionID>29629421-3679-4d42-9554-1a9cf061ad68</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>d2c33820-d802-41e2-a540-0958405eb941</id>
+                        <expressionID>00516918-5313-46a4-a460-c6bf60d2c007</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>51c0c770-300a-4852-b38d-9bc3d21c88bf</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>29629421-3679-4d42-9554-1a9cf061ad68</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>3a4a2b66-1b55-4266-9dde-b96dbf900dff</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3a4a2b66-1b55-4266-9dde-b96dbf900dff</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtsuccessiveContract</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>00516918-5313-46a4-a460-c6bf60d2c007</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>headerCell</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>48a0c464-4444-4c24-9844-dce1f73381b7</id>
+            <parentID />
+            <source>policySafePrice = successiveContract.policyMinimum</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>0fdaa04d-f80f-4784-a244-91b64d64727d</id>
+            <parentID>48a0c464-4444-4c24-9844-dce1f73381b7</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>c5e4d452-3fb8-4907-820f-e3cdbe326828</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c5e4d452-3fb8-4907-820f-e3cdbe326828</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtpolicySafePrice</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b1123821-9335-43a5-b9e2-c793ce10db0b</id>
+            <parentID>48a0c464-4444-4c24-9844-dce1f73381b7</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>6aec42ac-63a5-420e-ad56-43e12c05349d</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>4bfcb632-5d16-4951-b233-8d292044ba07</id>
+                        <expressionID>6b3ff9ab-a0c5-4423-ae3c-1ad02bce4f66</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>f4ef86d6-5e0c-49f3-b6a4-585ff87ab370</id>
+                        <expressionID>f7dad23d-bb26-4b1f-88de-f305ca00fa57</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6aec42ac-63a5-420e-ad56-43e12c05349d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6b3ff9ab-a0c5-4423-ae3c-1ad02bce4f66</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>14e7a67c-c2c0-42f1-b6bb-603c42d3eb68</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>14e7a67c-c2c0-42f1-b6bb-603c42d3eb68</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtsuccessiveContract</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f7dad23d-bb26-4b1f-88de-f305ca00fa57</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>policyMinimum</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>52cafe50-423e-4551-8179-b6f8d97d5630</id>
+            <parentID />
+            <source>contractSafePrice = successiveContract.contractMinimum</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>de9c882a-e90e-4f8a-88ec-14ed186c13a1</id>
+            <parentID>52cafe50-423e-4551-8179-b6f8d97d5630</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>a88818da-9b47-418d-bb78-04c965b5104a</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a88818da-9b47-418d-bb78-04c965b5104a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtcontractSafePrice</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e3d6fde5-9409-4a7c-a849-9cd05d4e50a4</id>
+            <parentID>52cafe50-423e-4551-8179-b6f8d97d5630</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>be7d6c93-f3d2-409e-862e-9fd4d9b15d59</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>cfdd6057-c49b-41ce-8611-33f4a336422f</id>
+                        <expressionID>3668f0d0-844f-4c26-91ff-dceb653ba280</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>6e8ca3ef-20cc-403b-8f48-896d4fc8e0e8</id>
+                        <expressionID>ec0f19f8-8ad1-4524-8eb8-eae4b45aa120</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>be7d6c93-f3d2-409e-862e-9fd4d9b15d59</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3668f0d0-844f-4c26-91ff-dceb653ba280</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>b9f6f310-510c-4e3c-b4a6-42f95c056e3e</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b9f6f310-510c-4e3c-b4a6-42f95c056e3e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtsuccessiveContract</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ec0f19f8-8ad1-4524-8eb8-eae4b45aa120</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>contractMinimum</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>a009a8e1-c1d9-4281-bc5b-f49df7eb59eb</id>
+            <parentID />
+            <source>policyProAmt = successiveContract.singleSecurityDeposit</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>00ab4d49-a3e5-4d37-9a8f-51181b26d382</id>
+            <parentID>a009a8e1-c1d9-4281-bc5b-f49df7eb59eb</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>28421911-bc6f-42b2-8204-c83a2f4aa416</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>28421911-bc6f-42b2-8204-c83a2f4aa416</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtpolicyProAmt</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2dbe6d4c-21ed-4a8d-9428-c7fc8696efce</id>
+            <parentID>a009a8e1-c1d9-4281-bc5b-f49df7eb59eb</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>be9221f7-5174-4899-b18e-db60c8e972ad</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>cccce6db-771b-42f7-8b84-3e8f9cc78016</id>
+                        <expressionID>cbcba0a3-786a-48f4-926b-004274dd1458</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>8189ac42-4275-4d2c-bc2b-538fdc61bb15</id>
+                        <expressionID>4e4d1903-ac6d-4b36-a04c-428fa0a2f3dc</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>be9221f7-5174-4899-b18e-db60c8e972ad</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cbcba0a3-786a-48f4-926b-004274dd1458</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>d5806d8d-157a-4788-ac77-0192e4869c93</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d5806d8d-157a-4788-ac77-0192e4869c93</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtsuccessiveContract</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4e4d1903-ac6d-4b36-a04c-428fa0a2f3dc</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>singleSecurityDeposit</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>0d88c776-e993-4dab-a96a-8140d5c7abe6</id>
+            <parentID />
+            <source>[currentDaysPrice] = [fixedCoeff] -( [basePrice] - [hedgingPrice] )*5</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>c874d122-8702-45fc-bcfa-0f5894bcc2d9</id>
+            <parentID>0d88c776-e993-4dab-a96a-8140d5c7abe6</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>399495a4-15c3-404a-915a-33fdad5e48d2</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>399495a4-15c3-404a-915a-33fdad5e48d2</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtcurrentDaysPrice</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>90428769-d593-4ae2-8615-dd46ec76d1fd</id>
+            <parentID>0d88c776-e993-4dab-a96a-8140d5c7abe6</parentID>
+            <source />
+            <operator>-</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>dc72e311-8385-4115-8a15-b351973eb12b</id>
+            <parentID>90428769-d593-4ae2-8615-dd46ec76d1fd</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>bfaa983d-def3-4853-af99-042ab59726d5</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bfaa983d-def3-4853-af99-042ab59726d5</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtfixedCoeff</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>d691a8d7-42f2-433e-bbc6-0d4337877c2e</id>
+            <parentID>90428769-d593-4ae2-8615-dd46ec76d1fd</parentID>
+            <source />
+            <operator>*</operator>
+        </groupExpression>
+        <groupExpression>
+            <id>8a1caf13-238f-448b-94e8-fbc95c218ff8</id>
+            <parentID>d691a8d7-42f2-433e-bbc6-0d4337877c2e</parentID>
+            <source />
+            <operator>-</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>2795dadd-1889-454a-8783-322541b02c15</id>
+            <parentID>8a1caf13-238f-448b-94e8-fbc95c218ff8</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>1e13f4bf-2875-4ecd-8e87-aa5ffe78cd95</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1e13f4bf-2875-4ecd-8e87-aa5ffe78cd95</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtbasePrice</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6662d737-2827-4a5f-8414-792bd6093637</id>
+            <parentID>8a1caf13-238f-448b-94e8-fbc95c218ff8</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>08760338-384d-4c88-8c9c-dc1f2c69b2f4</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>08760338-384d-4c88-8c9c-dc1f2c69b2f4</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txthedgingPrice</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>79b90fc8-9ce5-4b52-a1e0-8a17663f97b6</id>
+            <parentID>d691a8d7-42f2-433e-bbc6-0d4337877c2e</parentID>
+            <source />
+            <type>CONST</type>
+            <valueType>Int</valueType>
+            <value>5</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3eac0878-52e7-480c-926a-9e4aa804ff1d</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>24eec353-def6-4fad-b6e7-54f5d864adc4</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>f53ee179-efae-435c-ad4c-57cc486dc03d</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <groupExpression>
+            <id>ec03cb47-1e37-4a95-bb48-ad08937b0beb</id>
+            <parentID />
+            <source>[receiveAmt] = [contractProAmt] * [inQty]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>13af3da0-c9a4-40d6-8a8e-f828cd5ffc32</id>
+            <parentID>ec03cb47-1e37-4a95-bb48-ad08937b0beb</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>301ccb91-73e3-4f24-a799-41f7e5b37c1b</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>301ccb91-73e3-4f24-a799-41f7e5b37c1b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtreceiveAmt</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>df484d40-aad0-4036-b1e1-4364ad0e2349</id>
+            <parentID>ec03cb47-1e37-4a95-bb48-ad08937b0beb</parentID>
+            <source />
+            <operator>*</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>ea26cd77-cf0d-4658-9d3b-5396713ddba6</id>
+            <parentID>df484d40-aad0-4036-b1e1-4364ad0e2349</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>18ee0d0b-84ad-448b-bbbe-bccb4aeac53b</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>18ee0d0b-84ad-448b-bbbe-bccb4aeac53b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtcontractProAmt</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f0cbfc01-7546-49d6-9248-a2c60634f80a</id>
+            <parentID>df484d40-aad0-4036-b1e1-4364ad0e2349</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>18bfa8f9-8fa0-42e7-81cc-befa91da691d</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>18bfa8f9-8fa0-42e7-81cc-befa91da691d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtinQty</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0951b673-3c2f-4761-8de3-fa30641bc041</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>909b6553-45d3-40f5-9e20-de0dc37000b5</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <groupExpression>
+            <id>e0b84f2d-21e2-4c69-8dcc-64726c519f5a</id>
+            <parentID />
+            <source>farmAddress=farm.address</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>65716618-0ce8-4b8f-bf2b-6e2b880643d6</id>
+            <parentID>e0b84f2d-21e2-4c69-8dcc-64726c519f5a</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>e2a491d8-12d7-44d5-a933-026058d427c0</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e2a491d8-12d7-44d5-a933-026058d427c0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtfarmAddress</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d7b836d5-60ba-49d8-872d-008ed529e433</id>
+            <parentID>e0b84f2d-21e2-4c69-8dcc-64726c519f5a</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>36445e2e-eedb-4146-892a-8f811ea08cd8</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>ce0861e9-cd04-4de9-8d61-9abe58c2e91b</id>
+                        <expressionID>37cf66c1-999e-4a01-a367-4d786a2f55e4</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>eddd22f8-6d0f-42d2-a474-f81d29c9571c</id>
+                        <expressionID>9160d680-aa23-4508-a8a0-25b9fd59bded</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>36445e2e-eedb-4146-892a-8f811ea08cd8</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>37cf66c1-999e-4a01-a367-4d786a2f55e4</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>181998bd-1c62-4c26-a1c8-b74b233690c8</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>181998bd-1c62-4c26-a1c8-b74b233690c8</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtfarm</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9160d680-aa23-4508-a8a0-25b9fd59bded</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>address</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>f9bd1334-f497-408a-b61e-4d6b04d4b2ce</id>
+            <parentID />
+            <source>mManager=farm.mManager.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>f7ec62a2-a828-4c6c-87d6-f7b7e1dea475</id>
+            <parentID>f9bd1334-f497-408a-b61e-4d6b04d4b2ce</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>84f0ce58-f690-4869-a028-7ed1e0453b96</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>84f0ce58-f690-4869-a028-7ed1e0453b96</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtmManager</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6ed3d8a7-5200-42a7-baff-ac2cff8fcd71</id>
+            <parentID>f9bd1334-f497-408a-b61e-4d6b04d4b2ce</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>a32c3c47-8ee1-4c89-b29e-df8f21354197</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>b8437940-b266-4de7-ad48-6018276f010f</id>
+                        <expressionID>622cbad0-c2ba-4168-aade-5d269f0ddecf</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>ec6e0e66-f747-428f-9988-99f63da25bcb</id>
+                        <expressionID>18a313a6-9cf6-4b27-9076-ee370027f400</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a32c3c47-8ee1-4c89-b29e-df8f21354197</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>622cbad0-c2ba-4168-aade-5d269f0ddecf</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>a406668b-f0d0-4790-ba93-c27f6868be12</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a406668b-f0d0-4790-ba93-c27f6868be12</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtfarm</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>18a313a6-9cf6-4b27-9076-ee370027f400</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>mManager.name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>5645cf67-6b79-4d2b-943e-2b1ba1d5ba57</id>
+            <parentID />
+            <source>buildDate=farm.buildDate</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>ea74c228-be7d-4080-ba2e-f10663094472</id>
+            <parentID>5645cf67-6b79-4d2b-943e-2b1ba1d5ba57</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Date</valueType>
+            <value />
+            <property>
+                <ownerID>abce77d4-f993-4b5a-8e8a-fd3beb4cac32</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>abce77d4-f993-4b5a-8e8a-fd3beb4cac32</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>pkbuildDate</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b39d6cd4-3a86-47d1-b623-7011e47febf3</id>
+            <parentID>5645cf67-6b79-4d2b-943e-2b1ba1d5ba57</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Date</valueType>
+            <value />
+            <method>
+                <ownerID>f72460fe-d841-4390-abf7-7f4cd19daeb0</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>9c194b24-f793-40c3-829d-23a3aaf742cf</id>
+                        <expressionID>135249a1-cd21-4abc-8d54-835de3d316e5</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>e49bce2c-4d36-4d0f-90a6-cf2c7b4e7554</id>
+                        <expressionID>a418d65e-68bb-4fd5-9634-c00d476c75a1</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f72460fe-d841-4390-abf7-7f4cd19daeb0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>135249a1-cd21-4abc-8d54-835de3d316e5</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>edbf2165-c505-4910-81d6-a693f9861059</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>edbf2165-c505-4910-81d6-a693f9861059</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtfarm</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a418d65e-68bb-4fd5-9634-c00d476c75a1</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>buildDate</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>74c547c9-2966-497d-8963-53860f5beb62</id>
+            <parentID />
+            <source>prohibitArea=farm.prohibitArea</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>19e2e1b6-74f2-4141-a94e-be3db820a7e2</id>
+            <parentID>74c547c9-2966-497d-8963-53860f5beb62</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Boolean</valueType>
+            <value />
+            <property>
+                <ownerID>7e6be96b-6a10-43ef-9811-7774e0ae5c19</ownerID>
+                <name>selected</name>
+                <type>boolean</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7e6be96b-6a10-43ef-9811-7774e0ae5c19</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>chkprohibitArea</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2963d8be-5c6e-4ab1-b3d1-263dccb87162</id>
+            <parentID>74c547c9-2966-497d-8963-53860f5beb62</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>boolean</valueType>
+            <value />
+            <method>
+                <ownerID>e67cc9e7-a6ef-4060-8479-cb5c06b7c800</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>e063b3f8-31d2-4cc0-9991-d750b5a10763</id>
+                        <expressionID>79defd41-5850-4180-86da-63cbf4f8886f</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>935efd6a-e1e9-4a15-877c-c73543760e34</id>
+                        <expressionID>6bbf1f77-8b00-4820-b554-36efdc2d1606</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e67cc9e7-a6ef-4060-8479-cb5c06b7c800</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>79defd41-5850-4180-86da-63cbf4f8886f</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>dbc33e7c-787c-4983-ab62-a8c96688051c</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>dbc33e7c-787c-4983-ab62-a8c96688051c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtfarm</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6bbf1f77-8b00-4820-b554-36efdc2d1606</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>prohibitArea</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>a41e3793-38ab-4402-a576-8546cd87613c</id>
+            <parentID />
+            <source>yzjincrease=successiveContract.yzjincrease</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>ee9af19f-e4b9-420f-9e20-04ae7fcc3e01</id>
+            <parentID>a41e3793-38ab-4402-a576-8546cd87613c</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>d885611d-d351-4336-b440-3a611df62ac8</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d885611d-d351-4336-b440-3a611df62ac8</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtyzjincrease</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8fff37e2-04ea-4f49-8646-1457e52dcc89</id>
+            <parentID>a41e3793-38ab-4402-a576-8546cd87613c</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>23ce283f-1b0c-44b4-bc27-82ec0a0f06bf</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>4aebad11-2023-44ff-97fe-b60e909a9ff7</id>
+                        <expressionID>91d71022-c1b0-4b2b-8a3b-d7353099edb1</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>19e16623-ddee-4353-aacc-e00592bf95f2</id>
+                        <expressionID>1ad004a0-46f5-40e9-ad55-b6b2de20cd98</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>23ce283f-1b0c-44b4-bc27-82ec0a0f06bf</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>91d71022-c1b0-4b2b-8a3b-d7353099edb1</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>9edfa236-926a-427b-acf5-a24f22c0183d</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9edfa236-926a-427b-acf5-a24f22c0183d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtsuccessiveContract</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1ad004a0-46f5-40e9-ad55-b6b2de20cd98</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>yzjincrease</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>9fbb3ecd-6c1e-4e8f-bf8c-578a80c886e4</id>
+            <parentID />
+            <source>supplier = farm.supplier</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>be230c2a-bbdf-4245-a95c-a97136aaf600</id>
+            <parentID>9fbb3ecd-6c1e-4e8f-bf8c-578a80c886e4</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>345f10b0-bfd5-47f1-8e5e-68ea8eb39491</ownerID>
+                <name>data</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>345f10b0-bfd5-47f1-8e5e-68ea8eb39491</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>prmtsupplier</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fa173ea8-8c73-4853-b465-3adda33526ac</id>
+            <parentID>9fbb3ecd-6c1e-4e8f-bf8c-578a80c886e4</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>b4fbb288-ab03-4054-88de-de148599f64c</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>e68a45e4-699f-4225-9989-fdbf7f9de963</id>
+                        <expressionID>55efbdfb-8427-4b59-bad0-c20250585403</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>480348f6-5935-419e-b69e-34c6bf702e11</id>
+                        <expressionID>36af9b05-461e-4e25-b5a1-d12317520bd3</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b4fbb288-ab03-4054-88de-de148599f64c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>55efbdfb-8427-4b59-bad0-c20250585403</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>ce20f4e2-1cd2-4197-a53b-11d6264df0e1</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ce20f4e2-1cd2-4197-a53b-11d6264df0e1</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtfarm</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>36af9b05-461e-4e25-b5a1-d12317520bd3</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>supplier</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>1c5cfd04-0d34-46d6-83d4-70c19adbb579</id>
+            <name>BatchContract_header_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_header_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_header_ActionInfo].description</description>
+            <expressionID>20ff6286-0a6a-4629-b807-53be1a2e9c60</expressionID>
+        </action>
+        <action>
+            <id>5df84245-eba7-4899-a8a6-44f7d5492ef0</id>
+            <name>BatchContract_headerCell_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_headerCell_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_headerCell_ActionInfo].description</description>
+            <expressionID>ae41c596-541a-4c28-830a-8399dea6977f</expressionID>
+        </action>
+        <action>
+            <id>17b9f2a5-96bd-4639-b130-873560590e80</id>
+            <name>BatchContract_capacity_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_capacity_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_capacity_ActionInfo].description</description>
+            <expressionID>8de07255-af3e-4851-932a-7471777544f0</expressionID>
+        </action>
+        <action>
+            <id>3e12685e-3358-4327-9c72-bcba984c8d24</id>
+            <name>BatchContract_farmer_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_farmer_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_farmer_ActionInfo].description</description>
+            <expressionID>0ed42e8d-4435-4653-a677-b10ed145c347</expressionID>
+        </action>
+        <action>
+            <id>d353365b-31bc-470f-bef2-6f6967fc1c71</id>
+            <name>BatchContract_headerCell_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_headerCell_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_headerCell_ActionInfo].description</description>
+            <expressionID>6ace07a1-3f45-4e46-be57-e88074fe4dd9</expressionID>
+        </action>
+        <action>
+            <id>5f481c18-f65f-438c-a649-750d3181bfdf</id>
+            <name>D7MY$918</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].description</description>
+            <expressionID>d02b3915-9152-45fb-a0f4-7f8a10c1bd08</expressionID>
+        </action>
+        <action>
+            <id>e30b4b57-b324-4834-bec3-957add0478b5</id>
+            <name>D7MY$918</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].description</description>
+            <expressionID>0bb87cd9-fd18-4219-bf1b-7fd648f2bfd9</expressionID>
+        </action>
+        <action>
+            <id>9d65cc1f-7508-440f-8710-66cac0294708</id>
+            <name>D7MY$918</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].description</description>
+            <expressionID>90ff82fd-e3c9-47a8-9f3d-6b1519965e50</expressionID>
+        </action>
+        <action>
+            <id>bc9f148e-fb19-4302-bada-0e0dbdfb8b74</id>
+            <name>D7MY$918</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].description</description>
+            <expressionID>17548646-96ab-408f-9211-98336772de99</expressionID>
+        </action>
+        <action>
+            <id>faa19532-9d27-47fd-9983-0ab96ffc172a</id>
+            <name>D7MY$918</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].description</description>
+            <expressionID>d8e25385-0e5a-4bb9-9a76-f825b5d161e4</expressionID>
+        </action>
+        <action>
+            <id>26e19c77-521f-4fe6-ac1c-55a25d8ccd44</id>
+            <name>D7MY$918</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].description</description>
+            <expressionID>883f4614-037e-49d0-bdf0-c945661d72a1</expressionID>
+        </action>
+        <action>
+            <id>993349f8-9403-474c-b1e2-109a868ded61</id>
+            <name>D7MY$918</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].description</description>
+            <expressionID>7e759bb8-813b-4b98-832a-4efa6a4879e6</expressionID>
+        </action>
+        <action>
+            <id>2e5cdafc-ab87-4593-80fd-466d1a0d70ab</id>
+            <name>D7MY$918</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].description</description>
+            <expressionID>b8269691-99f4-4d85-b8db-924dddd2d244</expressionID>
+        </action>
+        <action>
+            <id>368e9d1c-21b7-4739-82a6-631092855c2b</id>
+            <name>D7MY$918</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].description</description>
+            <expressionID>a2ee7207-121e-4510-ad0c-fd40af1d0b5b</expressionID>
+        </action>
+        <action>
+            <id>62377f6c-be79-4f72-bc91-64d355a29fb1</id>
+            <name>D7MY$918</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].description</description>
+            <expressionID>e826a99d-047a-423f-bd9b-50b9f7850384</expressionID>
+        </action>
+        <action>
+            <id>dd0ecdae-77a2-4de6-9000-c2e8c0baac16</id>
+            <name>D7MY$918</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].description</description>
+            <expressionID>4b6eb23b-181e-49fb-9279-c5cf4e55f7ab</expressionID>
+        </action>
+        <action>
+            <id>9c65173c-c13f-4667-a6ed-e4c00ec02f0e</id>
+            <name>D7MY$918</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].description</description>
+            <expressionID>5f2ff5be-3557-4c96-92af-db2a9c56449b</expressionID>
+        </action>
+        <action>
+            <id>0456e4d8-4220-48db-9430-a91524a4dad9</id>
+            <name>D7MY$918</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].description</description>
+            <expressionID>8948ecee-b483-4ad1-9adb-bdea397a9edb</expressionID>
+        </action>
+        <action>
+            <id>3491d349-d4a2-4169-a3ca-309e34b99fce</id>
+            <name>D7MY$918</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].description</description>
+            <expressionID>9a0d0f50-8e91-4aea-904c-9af389b7af79</expressionID>
+        </action>
+        <action>
+            <id>51ac2ae0-ab6b-424b-9925-24ffd8142f36</id>
+            <name>D7MZ15RU</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MZ15RU].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MZ15RU].description</description>
+            <expressionID>07526bb3-ce14-4388-9f4c-70cd6ba62a53</expressionID>
+        </action>
+        <action>
+            <id>37071d46-5d45-4c34-85bb-fb223eb94906</id>
+            <name>D7MZ15RU</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MZ15RU].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MZ15RU].description</description>
+            <expressionID>f8a89bce-a3fe-4791-83ca-f786cb2261de</expressionID>
+        </action>
+        <action>
+            <id>e872f4c3-0977-4485-bae1-9cae3546dfeb</id>
+            <name>D7MZ2QKN</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MZ2QKN].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MZ2QKN].description</description>
+            <expressionID>f6af0e69-5acc-46da-9c4f-5bc631cf957b</expressionID>
+        </action>
+        <action>
+            <id>b49691a5-c9df-49a2-8dba-2b61c22c6dc4</id>
+            <name>D7MZ2QKO</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MZ2QKO].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MZ2QKO].description</description>
+            <expressionID>00262f4a-75b4-4b0b-876e-3b15862a9e1e</expressionID>
+        </action>
+        <action>
+            <id>34aecef8-da39-40af-ac75-2c56ed434963</id>
+            <name>D7MZ2QKO</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MZ2QKO].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MZ2QKO].description</description>
+            <expressionID>06d3b05c-d0b5-41c6-a458-21ea28c2dcc5</expressionID>
+        </action>
+        <action>
+            <id>5675382c-68e1-4814-ab1d-4bb3e4656bee</id>
+            <name>D7MZ53MH</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MZ53MH].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MZ53MH].description</description>
+            <expressionID>48a0c464-4444-4c24-9844-dce1f73381b7</expressionID>
+        </action>
+        <action>
+            <id>e3e8a76a-854f-4b44-b6df-467b8cdb3b9b</id>
+            <name>D7MZ53MH</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MZ53MH].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MZ53MH].description</description>
+            <expressionID>52cafe50-423e-4551-8179-b6f8d97d5630</expressionID>
+        </action>
+        <action>
+            <id>abc4bae3-f2a4-42df-b53a-0d067512a494</id>
+            <name>D7MZ53MH</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MZ53MH].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MZ53MH].description</description>
+            <expressionID>a009a8e1-c1d9-4281-bc5b-f49df7eb59eb</expressionID>
+        </action>
+        <action>
+            <id>b57b2a3f-e806-4c86-b7d3-ccc839e806ed</id>
+            <name>D7N25QDK</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7N25QDK].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7N25QDK].description</description>
+            <expressionID>0d88c776-e993-4dab-a96a-8140d5c7abe6</expressionID>
+        </action>
+        <action>
+            <id>d1afeef8-e1bf-4a07-82c3-20be543d15bc</id>
+            <name>D7N25QFH</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7N25QFH].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7N25QFH].description</description>
+            <expressionID>3eac0878-52e7-480c-926a-9e4aa804ff1d</expressionID>
+        </action>
+        <action>
+            <id>b9892f58-05d5-4c3f-8e1f-68c7b355875b</id>
+            <name>D7N27Z4G</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7N27Z4G].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7N27Z4G].description</description>
+            <expressionID>24eec353-def6-4fad-b6e7-54f5d864adc4</expressionID>
+        </action>
+        <action>
+            <id>938fb949-f5b4-4f75-a279-fada2257ef0f</id>
+            <name>D7N284SX</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7N284SX].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7N284SX].description</description>
+            <expressionID>f53ee179-efae-435c-ad4c-57cc486dc03d</expressionID>
+        </action>
+        <action>
+            <id>60d9dab3-bcda-4a1a-9f43-c40b4291c049</id>
+            <name>D7O1T27V</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7O1T27V].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7O1T27V].description</description>
+            <expressionID>ec03cb47-1e37-4a95-bb48-ad08937b0beb</expressionID>
+        </action>
+        <action>
+            <id>d7701502-56e0-41cd-9e6e-6b4a32d70122</id>
+            <name>D7O1TQ6M</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7O1TQ6M].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7O1TQ6M].description</description>
+            <expressionID>0951b673-3c2f-4761-8de3-fa30641bc041</expressionID>
+        </action>
+        <action>
+            <id>184a5a1a-cd46-409a-ba5f-5f83bd987a90</id>
+            <name>D7O1T2AN</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7O1T2AN].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7O1T2AN].description</description>
+            <expressionID>909b6553-45d3-40f5-9e20-de0dc37000b5</expressionID>
+        </action>
+        <action>
+            <id>09cd6ea6-fb6a-4b51-8639-09640d863f95</id>
+            <name>BatchContract_farmAddress_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_farmAddress_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_farmAddress_ActionInfo].description</description>
+            <expressionID>e0b84f2d-21e2-4c69-8dcc-64726c519f5a</expressionID>
+        </action>
+        <action>
+            <id>9e28bbab-bcc1-40ff-861d-427726f92445</id>
+            <name>BatchContract_mManager_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_mManager_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_mManager_ActionInfo].description</description>
+            <expressionID>f9bd1334-f497-408a-b61e-4d6b04d4b2ce</expressionID>
+        </action>
+        <action>
+            <id>e98ac90d-8b44-42ad-8379-4d2fcbbd2b36</id>
+            <name>BatchContract_buildDate_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_buildDate_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_buildDate_ActionInfo].description</description>
+            <expressionID>5645cf67-6b79-4d2b-943e-2b1ba1d5ba57</expressionID>
+        </action>
+        <action>
+            <id>585491ca-e0b2-4be7-90de-706b2a549428</id>
+            <name>BatchContract_prohibitArea_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_prohibitArea_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_prohibitArea_ActionInfo].description</description>
+            <expressionID>74c547c9-2966-497d-8963-53860f5beb62</expressionID>
+        </action>
+        <action>
+            <id>de472bd3-8da7-4291-96fc-329396ac9d08</id>
+            <name>BatchContract_yzjincrease_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_yzjincrease_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_yzjincrease_ActionInfo].description</description>
+            <expressionID>a41e3793-38ab-4402-a576-8546cd87613c</expressionID>
+        </action>
+        <action>
+            <id>a7d66011-0d2e-4ebf-b330-6e711410081b</id>
+            <name>DC__3BA4</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[DC__3BA4].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[DC__3BA4].description</description>
+            <expressionID>9fbb3ecd-6c1e-4e8f-bf8c-578a80c886e4</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>BatchContract_capacity_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_capacity_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_capacity_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="17b9f2a5-96bd-4639-b130-873560590e80" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>BatchContract_farmer_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_farmer_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_farmer_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="3e12685e-3358-4327-9c72-bcba984c8d24" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>BatchContract_headerCell_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_headerCell_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_headerCell_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="d353365b-31bc-470f-bef2-6f6967fc1c71" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>BatchContract_farmAddress_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_farmAddress_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_farmAddress_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="09cd6ea6-fb6a-4b51-8639-09640d863f95" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>BatchContract_mManager_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_mManager_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_mManager_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="9e28bbab-bcc1-40ff-861d-427726f92445" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>BatchContract_buildDate_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_buildDate_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_buildDate_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="e98ac90d-8b44-42ad-8379-4d2fcbbd2b36" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>BatchContract_prohibitArea_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_prohibitArea_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_prohibitArea_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="585491ca-e0b2-4be7-90de-706b2a549428" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>DC__3BA4</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[DC__3BA4].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[DC__3BA4].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="a7d66011-0d2e-4ebf-b330-6e711410081b" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>D7O1TT7J</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[D7O1TT7J].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[D7O1TT7J].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="60d9dab3-bcda-4a1a-9f43-c40b4291c049" />
+                </action>
+            </actions>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="d7701502-56e0-41cd-9e6e-6b4a32d70122" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+        <conditionRule>
+            <name>D7O1TG46</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[D7O1TG46].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[D7O1TG46].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="60d9dab3-bcda-4a1a-9f43-c40b4291c049" />
+                </action>
+            </actions>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="184a5a1a-cd46-409a-ba5f-5f83bd987a90" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+        <conditionRule>
+            <name>D7N27U55</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[D7N27U55].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[D7N27U55].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="b57b2a3f-e806-4c86-b7d3-ccc839e806ed" />
+                </action>
+            </actions>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="d1afeef8-e1bf-4a07-82c3-20be543d15bc" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+        <conditionRule>
+            <name>BatchContractD7MZ45SC</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContractD7MZ45SC].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContractD7MZ45SC].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="5f481c18-f65f-438c-a649-750d3181bfdf" />
+                </action>
+                <action>
+                    <key name="id" value="e30b4b57-b324-4834-bec3-957add0478b5" />
+                </action>
+                <action>
+                    <key name="id" value="9d65cc1f-7508-440f-8710-66cac0294708" />
+                </action>
+                <action>
+                    <key name="id" value="bc9f148e-fb19-4302-bada-0e0dbdfb8b74" />
+                </action>
+                <action>
+                    <key name="id" value="faa19532-9d27-47fd-9983-0ab96ffc172a" />
+                </action>
+                <action>
+                    <key name="id" value="26e19c77-521f-4fe6-ac1c-55a25d8ccd44" />
+                </action>
+                <action>
+                    <key name="id" value="993349f8-9403-474c-b1e2-109a868ded61" />
+                </action>
+                <action>
+                    <key name="id" value="2e5cdafc-ab87-4593-80fd-466d1a0d70ab" />
+                </action>
+                <action>
+                    <key name="id" value="368e9d1c-21b7-4739-82a6-631092855c2b" />
+                </action>
+                <action>
+                    <key name="id" value="62377f6c-be79-4f72-bc91-64d355a29fb1" />
+                </action>
+                <action>
+                    <key name="id" value="dd0ecdae-77a2-4de6-9000-c2e8c0baac16" />
+                </action>
+                <action>
+                    <key name="id" value="9c65173c-c13f-4667-a6ed-e4c00ec02f0e" />
+                </action>
+                <action>
+                    <key name="id" value="0456e4d8-4220-48db-9430-a91524a4dad9" />
+                </action>
+                <action>
+                    <key name="id" value="3491d349-d4a2-4169-a3ca-309e34b99fce" />
+                </action>
+                <action>
+                    <key name="id" value="51ac2ae0-ab6b-424b-9925-24ffd8142f36" />
+                </action>
+                <action>
+                    <key name="id" value="37071d46-5d45-4c34-85bb-fb223eb94906" />
+                </action>
+                <action>
+                    <key name="id" value="e872f4c3-0977-4485-bae1-9cae3546dfeb" />
+                </action>
+                <action>
+                    <key name="id" value="b49691a5-c9df-49a2-8dba-2b61c22c6dc4" />
+                </action>
+                <action>
+                    <key name="id" value="34aecef8-da39-40af-ac75-2c56ed434963" />
+                </action>
+                <action>
+                    <key name="id" value="5675382c-68e1-4814-ab1d-4bb3e4656bee" />
+                </action>
+                <action>
+                    <key name="id" value="e3e8a76a-854f-4b44-b6df-467b8cdb3b9b" />
+                </action>
+                <action>
+                    <key name="id" value="abc4bae3-f2a4-42df-b53a-0d067512a494" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>BatchContract_yzjincrease_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_yzjincrease_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_yzjincrease_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="de472bd3-8da7-4291-96fc-329396ac9d08" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>D7N27$8W</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[D7N27$8W].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[D7N27$8W].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="b57b2a3f-e806-4c86-b7d3-ccc839e806ed" />
+                </action>
+            </actions>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="b9892f58-05d5-4c3f-8e1f-68c7b355875b" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+        <conditionRule>
+            <name>D7N2883F</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[D7N2883F].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[D7N2883F].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="b57b2a3f-e806-4c86-b7d3-ccc839e806ed" />
+                </action>
+                <action>
+                    <key name="id" value="b57b2a3f-e806-4c86-b7d3-ccc839e806ed" />
+                </action>
+            </actions>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="938fb949-f5b4-4f75-a279-fada2257ef0f" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_buildDate_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_buildDate" />
+            <lang locale="zh_HK" value="攜帶字段屬性_buildDate" />
+            <lang locale="zh_TW" value="攜帶字段屬性_buildDate" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_buildDate_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_capacity_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_capacity" />
+            <lang locale="zh_HK" value="攜帶字段屬性_capacity" />
+            <lang locale="zh_TW" value="攜帶字段屬性_capacity" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_capacity_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_farmAddress_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_address" />
+            <lang locale="zh_HK" value="攜帶字段屬性_address" />
+            <lang locale="zh_TW" value="攜帶字段屬性_address" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_farmAddress_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_farmer_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_theHeader" />
+            <lang locale="zh_HK" value="攜帶字段屬性_theHeader" />
+            <lang locale="zh_TW" value="攜帶字段屬性_theHeader" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_farmer_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_headerCell_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_telePhone" />
+            <lang locale="zh_HK" value="攜帶字段屬性_telePhone" />
+            <lang locale="zh_TW" value="攜帶字段屬性_telePhone" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_headerCell_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_header_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_theHeader" />
+            <lang locale="zh_HK" value="攜帶字段屬性_theHeader" />
+            <lang locale="zh_TW" value="攜帶字段屬性_theHeader" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_header_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_mManager_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_mManager" />
+            <lang locale="zh_HK" value="攜帶字段屬性_mManager" />
+            <lang locale="zh_TW" value="攜帶字段屬性_mManager" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_mManager_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_prohibitArea_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_prohibitArea" />
+            <lang locale="zh_HK" value="攜帶字段屬性_prohibitArea" />
+            <lang locale="zh_TW" value="攜帶字段屬性_prohibitArea" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_prohibitArea_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_yzjincrease_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_yzjincrease" />
+            <lang locale="zh_HK" value="攜帶字段屬性_yzjincrease" />
+            <lang locale="zh_TW" value="攜帶字段屬性_yzjincrease" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[BatchContract_yzjincrease_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MY$918].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MZ15RU].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MZ15RU].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MZ2QKN].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MZ2QKN].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MZ2QKO].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MZ2QKO].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MZ53MH].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7MZ53MH].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7N25QDK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算当日苗价" />
+            <lang locale="zh_HK" value="計算當日苗價" />
+            <lang locale="zh_TW" value="計算當日苗價" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7N25QDK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7N25QFH].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7N25QFH].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7N27Z4G].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7N27Z4G].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7N284SX].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7N284SX].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7O1T27V].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算保证金" />
+            <lang locale="zh_HK" value="計算保證金" />
+            <lang locale="zh_TW" value="計算保證金" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7O1T27V].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7O1T2AN].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7O1T2AN].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7O1TQ6M].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[D7O1TQ6M].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[DC__3BA4].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].actions.action[DC__3BA4].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContractD7MZ45SC].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="SetFieldPropEvent0001" />
+            <lang locale="zh_HK" value="SetFieldPropEvent0001" />
+            <lang locale="zh_TW" value="SetFieldPropEvent0001" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContractD7MZ45SC].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContractD7MZ45SC].extendedProperty.columnName">
+            <lang locale="en_US" value="successiveContract" />
+            <lang locale="zh_CN" value="successiveContract" />
+            <lang locale="zh_TW" value="successiveContract" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_buildDate_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_buildDate" />
+            <lang locale="zh_HK" value="攜帶字段屬性_buildDate" />
+            <lang locale="zh_TW" value="攜帶字段屬性_buildDate" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_buildDate_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_buildDate_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="farm" />
+            <lang locale="zh_CN" value="farm" />
+            <lang locale="zh_TW" value="farm" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_buildDate_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_capacity_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_capacity" />
+            <lang locale="zh_HK" value="攜帶字段屬性_capacity" />
+            <lang locale="zh_TW" value="攜帶字段屬性_capacity" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_capacity_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_capacity_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="farm" />
+            <lang locale="zh_CN" value="farm" />
+            <lang locale="zh_TW" value="farm" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_capacity_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_farmAddress_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_address" />
+            <lang locale="zh_HK" value="攜帶字段屬性_address" />
+            <lang locale="zh_TW" value="攜帶字段屬性_address" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_farmAddress_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_farmAddress_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="farm" />
+            <lang locale="zh_CN" value="farm" />
+            <lang locale="zh_TW" value="farm" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_farmAddress_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_farmer_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_theHeader" />
+            <lang locale="zh_HK" value="攜帶字段屬性_theHeader" />
+            <lang locale="zh_TW" value="攜帶字段屬性_theHeader" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_farmer_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_farmer_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="farm" />
+            <lang locale="zh_CN" value="farm" />
+            <lang locale="zh_TW" value="farm" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_farmer_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_headerCell_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_telePhone" />
+            <lang locale="zh_HK" value="攜帶字段屬性_telePhone" />
+            <lang locale="zh_TW" value="攜帶字段屬性_telePhone" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_headerCell_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_headerCell_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="farm" />
+            <lang locale="zh_CN" value="farm" />
+            <lang locale="zh_TW" value="farm" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_headerCell_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_mManager_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_mManager" />
+            <lang locale="zh_HK" value="攜帶字段屬性_mManager" />
+            <lang locale="zh_TW" value="攜帶字段屬性_mManager" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_mManager_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_mManager_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="farm" />
+            <lang locale="zh_CN" value="farm" />
+            <lang locale="zh_TW" value="farm" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_mManager_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_prohibitArea_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_prohibitArea" />
+            <lang locale="zh_HK" value="攜帶字段屬性_prohibitArea" />
+            <lang locale="zh_TW" value="攜帶字段屬性_prohibitArea" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_prohibitArea_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_prohibitArea_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="farm" />
+            <lang locale="zh_CN" value="farm" />
+            <lang locale="zh_TW" value="farm" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_prohibitArea_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_yzjincrease_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_yzjincrease" />
+            <lang locale="zh_HK" value="攜帶字段屬性_yzjincrease" />
+            <lang locale="zh_TW" value="攜帶字段屬性_yzjincrease" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_yzjincrease_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_yzjincrease_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="successiveContract" />
+            <lang locale="zh_CN" value="successiveContract" />
+            <lang locale="zh_TW" value="successiveContract" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[BatchContract_yzjincrease_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[D7N27$8W].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="CalculateEvent0002" />
+            <lang locale="zh_HK" value="CalculateEvent0002" />
+            <lang locale="zh_TW" value="CalculateEvent0002" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[D7N27$8W].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[D7N27$8W].extendedProperty.columnName">
+            <lang locale="en_US" value="hedgingPrice" />
+            <lang locale="zh_CN" value="hedgingPrice" />
+            <lang locale="zh_TW" value="hedgingPrice" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[D7N27U55].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="CalculateEvent0001" />
+            <lang locale="zh_HK" value="CalculateEvent0001" />
+            <lang locale="zh_TW" value="CalculateEvent0001" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[D7N27U55].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[D7N27U55].extendedProperty.columnName">
+            <lang locale="en_US" value="basePrice" />
+            <lang locale="zh_CN" value="basePrice" />
+            <lang locale="zh_TW" value="basePrice" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[D7N2883F].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="CalculateEvent0003" />
+            <lang locale="zh_HK" value="CalculateEvent0003" />
+            <lang locale="zh_TW" value="CalculateEvent0003" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[D7N2883F].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[D7N2883F].extendedProperty.columnName">
+            <lang locale="en_US" value="fixedCoeff" />
+            <lang locale="zh_CN" value="fixedCoeff" />
+            <lang locale="zh_TW" value="fixedCoeff" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[D7O1TG46].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="CalculateEvent0004" />
+            <lang locale="zh_HK" value="CalculateEvent0004" />
+            <lang locale="zh_TW" value="CalculateEvent0004" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[D7O1TG46].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[D7O1TG46].extendedProperty.columnName">
+            <lang locale="en_US" value="contractProAmt" />
+            <lang locale="zh_CN" value="contractProAmt" />
+            <lang locale="zh_TW" value="contractProAmt" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[D7O1TT7J].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="CalculateEvent0005" />
+            <lang locale="zh_HK" value="CalculateEvent0005" />
+            <lang locale="zh_TW" value="CalculateEvent0005" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[D7O1TT7J].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[D7O1TT7J].extendedProperty.columnName">
+            <lang locale="en_US" value="inQty" />
+            <lang locale="zh_CN" value="inQty" />
+            <lang locale="zh_TW" value="inQty" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[DC__3BA4].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="SetFieldPropEvent0006" />
+            <lang locale="zh_HK" value="SetFieldPropEvent0006" />
+            <lang locale="zh_TW" value="SetFieldPropEvent0006" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[DC__3BA4].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.contract.app.BatchContractRuleSet].rules.conditionRule[DC__3BA4].extendedProperty.columnName">
+            <lang locale="en_US" value="farm" />
+            <lang locale="zh_CN" value="farm" />
+            <lang locale="zh_TW" value="farm" />
+        </rs>
+    </resource>
+</ruleSet>
+

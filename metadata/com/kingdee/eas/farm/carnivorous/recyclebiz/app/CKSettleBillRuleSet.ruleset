@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.carnivorous.recyclebiz.app</package>
+    <name>CKSettleBillRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKSettleBillRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKSettleBillRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>e2ecf06d-aa8e-48c3-b629-e5838bd0c907</id>
+            <parentID />
+            <source>conFeedPolicySub=kbConFeedPolicy.subsidy</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>d07c2f9c-f261-457d-8cd4-0f54e365eaa1</id>
+            <parentID>e2ecf06d-aa8e-48c3-b629-e5838bd0c907</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>7e813a94-597d-47d4-a78a-6fec159fd931</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7e813a94-597d-47d4-a78a-6fec159fd931</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtconFeedPolicySub</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cbce63fa-3313-4a58-b535-38dcda81e686</id>
+            <parentID>e2ecf06d-aa8e-48c3-b629-e5838bd0c907</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>d7d3382d-31a6-400b-b53f-bbadce18fd18</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>7222a7a4-9f28-405b-8af1-e465315a9894</id>
+                        <expressionID>cf2997b9-2e95-41b4-84e8-44bc030236f5</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>a3b8357e-1791-466e-83b4-05b00b62cfc1</id>
+                        <expressionID>7be50ef6-9ead-4c41-9cb8-56a3d598de32</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d7d3382d-31a6-400b-b53f-bbadce18fd18</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cf2997b9-2e95-41b4-84e8-44bc030236f5</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>1c1ca04c-3e18-4f42-a6cf-e72d8b1e6fcd</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1c1ca04c-3e18-4f42-a6cf-e72d8b1e6fcd</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtkbConFeedPolicy</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7be50ef6-9ead-4c41-9cb8-56a3d598de32</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>subsidy</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>62c27799-fd21-4571-a6dc-f4fb1cae2eac</id>
+            <name>CKSettleBill_conFeedPolicySub_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKSettleBillRuleSet].actions.action[CKSettleBill_conFeedPolicySub_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKSettleBillRuleSet].actions.action[CKSettleBill_conFeedPolicySub_ActionInfo].description</description>
+            <expressionID>e2ecf06d-aa8e-48c3-b629-e5838bd0c907</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>CKSettleBill_conFeedPolicySub_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKSettleBillRuleSet].rules.conditionRule[CKSettleBill_conFeedPolicySub_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKSettleBillRuleSet].rules.conditionRule[CKSettleBill_conFeedPolicySub_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="62c27799-fd21-4571-a6dc-f4fb1cae2eac" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKSettleBillRuleSet].actions.action[CKSettleBill_conFeedPolicySub_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_subsidy" />
+            <lang locale="zh_HK" value="攜帶字段屬性_subsidy" />
+            <lang locale="zh_TW" value="攜帶字段屬性_subsidy" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKSettleBillRuleSet].actions.action[CKSettleBill_conFeedPolicySub_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKSettleBillRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKSettleBillRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKSettleBillRuleSet].rules.conditionRule[CKSettleBill_conFeedPolicySub_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_subsidy" />
+            <lang locale="zh_HK" value="攜帶字段屬性_subsidy" />
+            <lang locale="zh_TW" value="攜帶字段屬性_subsidy" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKSettleBillRuleSet].rules.conditionRule[CKSettleBill_conFeedPolicySub_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKSettleBillRuleSet].rules.conditionRule[CKSettleBill_conFeedPolicySub_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="kbConFeedPolicy" />
+            <lang locale="zh_CN" value="kbConFeedPolicy" />
+            <lang locale="zh_TW" value="kbConFeedPolicy" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKSettleBillRuleSet].rules.conditionRule[CKSettleBill_conFeedPolicySub_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

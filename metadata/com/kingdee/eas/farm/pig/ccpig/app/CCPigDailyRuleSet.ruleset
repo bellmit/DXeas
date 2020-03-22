@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.pig.ccpig.app</package>
+    <name>CCPigDailyRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>62dcd12f-b455-4739-a383-05802f10e72a</id>
+            <parentID />
+            <source>entrys.materialName=entrys.material.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>7c17d5b0-527b-4c38-b445-e489450ab66e</id>
+            <parentID>62dcd12f-b455-4739-a383-05802f10e72a</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>ef87e515-699d-40c3-918b-5fe130a5b61a</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ef87e515-699d-40c3-918b-5fe130a5b61a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"materialName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>613051f2-9211-4e8a-9576-21be4056d553</id>
+            <parentID>62dcd12f-b455-4739-a383-05802f10e72a</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>c769978f-a591-4b5e-b627-c4d63a637799</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>4c3ffa9f-6dde-444f-a0ad-461fc1c2d934</id>
+                        <expressionID>fdb809ca-f769-47a7-8e3c-b880bf69d1df</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>df88c0ff-d6da-4ab2-8128-3329fa12f308</id>
+                        <expressionID>c565e9b6-2763-4074-a21a-3371f848e5ae</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c769978f-a591-4b5e-b627-c4d63a637799</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fdb809ca-f769-47a7-8e3c-b880bf69d1df</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>274fe8e4-f371-444e-bb55-6c3a8d107e4b</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>274fe8e4-f371-444e-bb55-6c3a8d107e4b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c565e9b6-2763-4074-a21a-3371f848e5ae</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>80467299-d974-45f9-a979-fc333c8ca25c</id>
+            <parentID />
+            <source>ImmuneEntrys.unit=ImmuneEntrys.material.baseUnit.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>a15f1a58-1b6a-43d9-ba9d-df4c0c7ccd41</id>
+            <parentID>80467299-d974-45f9-a979-fc333c8ca25c</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>edf50d45-7c38-4d27-8087-c8ba500984d9</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>edf50d45-7c38-4d27-8087-c8ba500984d9</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtImmuneEntrys.getCell(rowIndex,"unit")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>475d92b3-a9eb-425e-9f60-e684b53e104b</id>
+            <parentID>80467299-d974-45f9-a979-fc333c8ca25c</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>7fa8e1cc-1b63-4525-a3a1-c8a8219dad77</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>e6bb0c58-0b8e-4cb2-8142-ae1162335bcb</id>
+                        <expressionID>4b5d05eb-fcff-46be-adb9-26217f5e9a05</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>143f193a-8079-48e3-870c-92402964a191</id>
+                        <expressionID>878498f8-5dde-4f4c-9b18-2b5430dcf238</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7fa8e1cc-1b63-4525-a3a1-c8a8219dad77</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4b5d05eb-fcff-46be-adb9-26217f5e9a05</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>f833afce-2594-4fc8-a111-3adce10cbfd7</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f833afce-2594-4fc8-a111-3adce10cbfd7</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtImmuneEntrys.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>878498f8-5dde-4f4c-9b18-2b5430dcf238</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>baseUnit.name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>0be9aa15-9685-48a2-b277-b6427697960d</id>
+            <parentID />
+            <source>ImmuneEntrys.materialName=ImmuneEntrys.material.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>28cdfcaf-7e2f-4451-8ce4-faa11e7e0be3</id>
+            <parentID>0be9aa15-9685-48a2-b277-b6427697960d</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>aacbea9b-f6d8-4a8e-adbd-c8c51261ae7d</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>aacbea9b-f6d8-4a8e-adbd-c8c51261ae7d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtImmuneEntrys.getCell(rowIndex,"materialName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>686eab4f-44bf-49fa-8833-842d8f4d4d5a</id>
+            <parentID>0be9aa15-9685-48a2-b277-b6427697960d</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>4647d81d-bf7f-429e-9e6c-3b8950f1a6ea</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>aae578aa-ff96-4ea2-97a9-a04b986ac5ec</id>
+                        <expressionID>e31c2884-600f-4b88-9b02-186fda7f66e4</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>96300317-d288-47f0-a6a1-75f1710b0974</id>
+                        <expressionID>099e926f-7586-40be-af14-784ebe3c704f</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4647d81d-bf7f-429e-9e6c-3b8950f1a6ea</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e31c2884-600f-4b88-9b02-186fda7f66e4</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>474e8297-df94-475f-bb1f-273594bdaa7c</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>474e8297-df94-475f-bb1f-273594bdaa7c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtImmuneEntrys.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>099e926f-7586-40be-af14-784ebe3c704f</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>95f8371f-fc0c-4479-83d7-4e4729a2e764</id>
+            <parentID />
+            <source>ImmuneEntrys.materialName=ImmuneEntrys.material.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>9077e2c6-d0af-44ec-874e-3b3adbab2605</id>
+            <parentID>95f8371f-fc0c-4479-83d7-4e4729a2e764</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>4d807126-9d91-47ab-83e6-e396078c70d1</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4d807126-9d91-47ab-83e6-e396078c70d1</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtImmuneEntrys.getCell(rowIndex,"materialName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ff684b76-cf48-462b-8db0-f66cca9d6891</id>
+            <parentID>95f8371f-fc0c-4479-83d7-4e4729a2e764</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>4de2741c-c72c-4b62-bae6-ff51019a7a22</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>2e7aff02-7b1d-454e-8f77-afedf5556908</id>
+                        <expressionID>6c2eecaf-7cbc-4852-89d4-6dd205d2cf4f</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>f6498403-ef6e-4887-b2e8-836243b2e082</id>
+                        <expressionID>04109091-d94e-4490-a099-557a402b3c5b</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4de2741c-c72c-4b62-bae6-ff51019a7a22</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6c2eecaf-7cbc-4852-89d4-6dd205d2cf4f</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>0f2af1fe-2122-487f-9751-5b3fbb97eaeb</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0f2af1fe-2122-487f-9751-5b3fbb97eaeb</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtImmuneEntrys.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>04109091-d94e-4490-a099-557a402b3c5b</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>ed8d485d-ba51-4ec9-a386-9de7d823804b</id>
+            <name>entrys_materialName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].actions.action[entrys_materialName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].actions.action[entrys_materialName_ActionInfo].description</description>
+            <expressionID>62dcd12f-b455-4739-a383-05802f10e72a</expressionID>
+        </action>
+        <action>
+            <id>c44ab9d0-bece-4881-a10f-e7538685ac1c</id>
+            <name>ImmuneEntrys_unit_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].actions.action[ImmuneEntrys_unit_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].actions.action[ImmuneEntrys_unit_ActionInfo].description</description>
+            <expressionID>80467299-d974-45f9-a979-fc333c8ca25c</expressionID>
+        </action>
+        <action>
+            <id>4535ac31-733f-466e-958d-e716e08eec20</id>
+            <name>ImmuneEntrys_materialName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].actions.action[ImmuneEntrys_materialName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].actions.action[ImmuneEntrys_materialName_ActionInfo].description</description>
+            <expressionID>0be9aa15-9685-48a2-b277-b6427697960d</expressionID>
+        </action>
+        <action>
+            <id>fc27456a-d7a3-4d84-b0a9-31eacba2d5b8</id>
+            <name>ImmuneEntrys_materialName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].actions.action[ImmuneEntrys_materialName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].actions.action[ImmuneEntrys_materialName_ActionInfo].description</description>
+            <expressionID>95f8371f-fc0c-4479-83d7-4e4729a2e764</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>ImmuneEntrys_unit_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].rules.conditionRule[ImmuneEntrys_unit_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].rules.conditionRule[ImmuneEntrys_unit_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="c44ab9d0-bece-4881-a10f-e7538685ac1c" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>ImmuneEntrys_materialName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].rules.conditionRule[ImmuneEntrys_materialName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].rules.conditionRule[ImmuneEntrys_materialName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="fc27456a-d7a3-4d84-b0a9-31eacba2d5b8" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>entrys_materialName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].rules.conditionRule[entrys_materialName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].rules.conditionRule[entrys_materialName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="ed8d485d-ba51-4ec9-a386-9de7d823804b" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].actions.action[ImmuneEntrys_materialName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].actions.action[ImmuneEntrys_materialName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].actions.action[ImmuneEntrys_unit_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_baseUnit" />
+            <lang locale="zh_HK" value="攜帶字段屬性_baseUnit" />
+            <lang locale="zh_TW" value="攜帶字段屬性_baseUnit" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].actions.action[ImmuneEntrys_unit_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].actions.action[entrys_materialName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].actions.action[entrys_materialName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].rules.conditionRule[ImmuneEntrys_materialName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].rules.conditionRule[ImmuneEntrys_materialName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].rules.conditionRule[ImmuneEntrys_materialName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="material" />
+            <lang locale="zh_CN" value="material" />
+            <lang locale="zh_TW" value="material" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].rules.conditionRule[ImmuneEntrys_materialName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].rules.conditionRule[ImmuneEntrys_unit_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_baseUnit" />
+            <lang locale="zh_HK" value="攜帶字段屬性_baseUnit" />
+            <lang locale="zh_TW" value="攜帶字段屬性_baseUnit" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].rules.conditionRule[ImmuneEntrys_unit_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].rules.conditionRule[ImmuneEntrys_unit_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="material" />
+            <lang locale="zh_CN" value="material" />
+            <lang locale="zh_TW" value="material" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].rules.conditionRule[ImmuneEntrys_unit_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].rules.conditionRule[entrys_materialName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].rules.conditionRule[entrys_materialName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].rules.conditionRule[entrys_materialName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="material" />
+            <lang locale="zh_CN" value="material" />
+            <lang locale="zh_TW" value="material" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.ccpig.app.CCPigDailyRuleSet].rules.conditionRule[entrys_materialName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

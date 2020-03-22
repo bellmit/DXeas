@@ -1,0 +1,3707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.wages.app</package>
+    <name>MonthWagesQuery</name>
+    <alias>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].alias</alias>
+    <description>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].description</description>
+    <userDefined>true</userDefined>
+    <reportDataSource />
+    <bizUnitPK>com.kingdee.eas.custom.wages.MonthWages</bizUnitPK>
+    <connectionProvider />
+    <subObjects>
+        <subEntity>
+            <name>MonthWages</name>
+            <alias>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].subObjects.subEntity[MonthWages].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWages" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>auditor</name>
+            <alias>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].subObjects.subEntity[auditor].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="User" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>creator</name>
+            <alias>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].subObjects.subEntity[creator].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="User" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>lastUpdateUser</name>
+            <alias>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].subObjects.subEntity[lastUpdateUser].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="User" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>handler</name>
+            <alias>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].subObjects.subEntity[handler].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="User" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>company</name>
+            <alias>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].subObjects.subEntity[company].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="CompanyOrgUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>Entry</name>
+            <alias>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].subObjects.subEntity[Entry].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesEntry" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>Entry_person</name>
+            <alias>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].subObjects.subEntity[Entry_person].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.person.app" />
+                <key name="name" value="Person" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>Entry_personPost</name>
+            <alias>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].subObjects.subEntity[Entry_personPost].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="BasicPost" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>Entry_theGroup</name>
+            <alias>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].subObjects.subEntity[Entry_theGroup].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="WageOrganization" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>Entry_worknature</name>
+            <alias>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].subObjects.subEntity[Entry_worknature].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.hr.base.app" />
+                <key name="name" value="EmployeePropert" />
+            </entityRef>
+        </subEntity>
+    </subObjects>
+    <units>
+        <propertyUnit>
+            <name>NewUnit0</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[NewUnit0].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit0" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="MonthWages" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="auditor" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit1</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[NewUnit1].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit1" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="auditor" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit2</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[NewUnit2].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit2" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="MonthWages" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="creator" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit3</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[NewUnit3].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit3" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="creator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit4</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[NewUnit4].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit4" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="MonthWages" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="lastUpdateUser" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit5</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[NewUnit5].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit5" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="lastUpdateUser" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="MonthWages" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="MonthWages" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bizDate</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[bizDate].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="bizDate" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="MonthWages" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bizDate" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>description</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[description].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="description" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="MonthWages" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="description" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>billStatus</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[billStatus].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>3ebf43a1-b475-49ad-9cb4-75c25bfd5285</key>
+                    <parentUnit>
+                        <key name="name" value="billStatus" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="MonthWages" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="billStatus" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Fivouchered</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Fivouchered].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Boolean</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="Fivouchered" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="MonthWages" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="Fivouchered" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>createTime</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[createTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Timestamp</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="createTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="MonthWages" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="createTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>lastUpdateTime</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[lastUpdateTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Timestamp</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="lastUpdateTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="MonthWages" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="lastUpdateTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>auditor.number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[auditor.number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="auditor.number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="auditor" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>auditor.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[auditor.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="auditor.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="auditor" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>creator.number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[creator.number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="creator.number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="creator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>creator.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[creator.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="creator.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="creator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>lastUpdateUser.number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[lastUpdateUser.number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="lastUpdateUser.number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="lastUpdateUser" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>lastUpdateUser.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[lastUpdateUser.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="lastUpdateUser.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="lastUpdateUser" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>handler.number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[handler.number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="handler.number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="handler" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>handler.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[handler.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="handler.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="handler" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>NewUnit9</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[NewUnit9].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit9" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="MonthWages" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="handler" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit8</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[NewUnit8].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit8" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="handler" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>auditTime</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[auditTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>baee25ef-a554-45c7-882e-4d060c7a2d57</key>
+                    <parentUnit>
+                        <key name="name" value="auditTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="MonthWages" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="auditTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>company.name</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[company.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>d7508001-b759-40f3-9018-a732c64c5342</key>
+                    <parentUnit>
+                        <key name="name" value="company.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="company" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>670c1d57-df78-4233-acdf-2d13811db386</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[670c1d57-df78-4233-acdf-2d13811db386].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>61a3974d-72ee-43a4-9ac6-bca8c4561f3c</key>
+                    <parentUnit>
+                        <key name="name" value="670c1d57-df78-4233-acdf-2d13811db386" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="MonthWages" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="company" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>5c406d2f-0b18-4b92-8c8b-e455e74ba54a</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[5c406d2f-0b18-4b92-8c8b-e455e74ba54a].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>957276fc-34e8-418a-a5e4-79622da88918</key>
+                    <parentUnit>
+                        <key name="name" value="5c406d2f-0b18-4b92-8c8b-e455e74ba54a" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="company" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>score</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[score].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>a158243d-bab9-4192-be90-6a8d3f37bf2d</key>
+                    <parentUnit>
+                        <key name="name" value="score" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="MonthWages" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="score" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.seq</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.seq].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>961ab911-0389-4d15-ba25-688a3f639591</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.seq" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="seq" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>c898f451-685b-4132-bba4-3ee00571840a</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[c898f451-685b-4132-bba4-3ee00571840a].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>4414011a-a28c-412d-a325-f4d1b1edfb00</key>
+                    <parentUnit>
+                        <key name="name" value="c898f451-685b-4132-bba4-3ee00571840a" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="MonthWages" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>ad9fa73e-1044-4245-b27b-15e73a80a413</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[ad9fa73e-1044-4245-b27b-15e73a80a413].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>5695832c-6a84-492b-8cd8-c34552251e9d</key>
+                    <parentUnit>
+                        <key name="name" value="ad9fa73e-1044-4245-b27b-15e73a80a413" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="parent" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>Entry.person.number</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.person.number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>dca9fc02-9f82-4d24-8416-7574d68466f3</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.person.number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry_person" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>0493d981-472e-4604-804f-581a17914667</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[0493d981-472e-4604-804f-581a17914667].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>46a1018e-db41-4c4e-adad-5b548777aaa9</key>
+                    <parentUnit>
+                        <key name="name" value="0493d981-472e-4604-804f-581a17914667" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="person" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>b988e45a-b0a7-4c05-8f93-2972cfa029fc</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[b988e45a-b0a7-4c05-8f93-2972cfa029fc].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>c6e956af-8b74-4077-b426-f2ad87147960</key>
+                    <parentUnit>
+                        <key name="name" value="b988e45a-b0a7-4c05-8f93-2972cfa029fc" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry_person" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>Entry.personName</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.personName].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>a4e648da-1c09-4d8c-af1c-a847df96312f</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.personName" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="personName" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.personPost.postname</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.personPost.postname].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>45304dbb-09ce-4564-8d2c-ac60615c8cae</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.personPost.postname" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry_personPost" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="postname" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>33e0d0c9-a382-47dc-a674-4187c2b67edb</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[33e0d0c9-a382-47dc-a674-4187c2b67edb].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>eead4db0-b143-446e-9e35-5d34c09fff7e</key>
+                    <parentUnit>
+                        <key name="name" value="33e0d0c9-a382-47dc-a674-4187c2b67edb" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="personPost" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>e1ffa8b1-1b9c-4551-beda-59c906266b0f</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[e1ffa8b1-1b9c-4551-beda-59c906266b0f].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>370a238f-99ee-40a6-8f08-2d48e41d85e0</key>
+                    <parentUnit>
+                        <key name="name" value="e1ffa8b1-1b9c-4551-beda-59c906266b0f" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry_personPost" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>Entry.fractionWages</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.fractionWages].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>3a574ca6-c1c6-4a46-80b1-f99f5ef16954</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.fractionWages" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="fractionWages" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.bythejobWages</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.bythejobWages].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>75f1e0c3-9900-44ff-b17d-8398fbe6a970</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.bythejobWages" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bythejobWages" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.seniorityWages</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.seniorityWages].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>2a39d515-be96-4aa1-be24-8dbdbebf4a92</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.seniorityWages" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="seniorityWages" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.sanctionWages</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.sanctionWages].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>7bcd3898-9c71-4f60-8aa2-86b4e99a12ea</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.sanctionWages" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="sanctionWages" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.attendanceWages</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.attendanceWages].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>e5eff776-2ba2-44c6-b42e-fc56ad59f09b</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.attendanceWages" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="attendanceWages" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.lifeWages</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.lifeWages].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>152bdc74-f8f2-434b-b7fb-0fd5a5466a8d</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.lifeWages" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="lifeWages" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.postWages</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.postWages].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>f7d45024-6b33-419b-8c4d-ea1b4e4bb153</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.postWages" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="postWages" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.introduceWages</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.introduceWages].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>40557883-5845-4640-b17f-ccba33a0fc9e</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.introduceWages" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="introduceWages" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.adjustmentWages</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.adjustmentWages].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>82cdffd8-01af-4859-849f-eea583d3e6f2</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.adjustmentWages" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="adjustmentWages" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.allWags</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.allWags].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>3de9ed47-633d-48ff-8640-17ba16d5d546</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.allWags" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="allWags" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>workDays</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[workDays].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>cd881b58-7b13-4564-a005-fe540024734d</key>
+                    <parentUnit>
+                        <key name="name" value="workDays" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="MonthWages" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="workDays" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.fractionQty</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.fractionQty].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>c0fda353-2857-438e-aaa7-27865bf83fd1</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.fractionQty" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="fractionQty" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.basicWages</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.basicWages].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>af2c104c-174f-4e11-898d-bacfe4a1d032</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.basicWages" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="basicWages" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.BankCard</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.BankCard].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>45d2c739-82e4-491e-9a32-e0fa3e7b5b57</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.BankCard" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="BankCard" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.IDCard</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.IDCard].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>3e9467e0-ae43-4882-a4cc-cc373b4576e8</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.IDCard" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="IDCard" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.PhoneNumber</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.PhoneNumber].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>9c45c3f9-31f1-42e6-bb38-95ae2e8aebd4</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.PhoneNumber" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="PhoneNumber" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>4020801f-aa2e-423a-a627-b2a3f7dc1cd7</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>workDay</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[workDay].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>9042d06a-6318-4f6f-a5b3-63be1a165146</key>
+                    <parentUnit>
+                        <key name="name" value="workDay" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="MonthWages" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="workDay" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.workDay0</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.workDay0].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>46241d41-c3bc-4685-978f-d9f5b85c6079</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.workDay0" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="workDay" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>workDayss</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[workDayss].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>4568ce68-8ecd-4b0f-af23-9eabd4e37641</key>
+                    <parentUnit>
+                        <key name="name" value="workDayss" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="MonthWages" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="workDayss" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.theGroup.name</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.theGroup.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>fcddae8e-d8fa-4ec3-9c1b-cbc791b47b26</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.theGroup.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry_theGroup" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>c0dfe805-df56-4d62-9dde-bfe075429dc0</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[c0dfe805-df56-4d62-9dde-bfe075429dc0].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>cbf36d85-4321-46f1-bf8d-b660d6ae86cc</key>
+                    <parentUnit>
+                        <key name="name" value="c0dfe805-df56-4d62-9dde-bfe075429dc0" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="theGroup" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>4832a720-04d9-436c-9b5f-012c98b03e13</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[4832a720-04d9-436c-9b5f-012c98b03e13].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>39575622-2b6e-47a1-9380-439995313d2e</key>
+                    <parentUnit>
+                        <key name="name" value="4832a720-04d9-436c-9b5f-012c98b03e13" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry_theGroup" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>Entry.inDate</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.inDate].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>4d5019a0-0ed1-4280-8641-4b261d292b58</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.inDate" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="inDate" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.EmployerInsurance</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.EmployerInsurance].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>58878eee-f49b-4f87-a42c-5c35f7bae3f6</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.EmployerInsurance" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="EmployerInsurance" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.PersonTax</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.PersonTax].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>93a9ab81-c486-4aff-8adb-e8137dfa27ed</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.PersonTax" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="PersonTax" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.Payroll</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.Payroll].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>83f6284f-36a8-4d3a-9519-2ffcfea6665e</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.Payroll" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="Payroll" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.Welfare</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.Welfare].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>65d2ed9e-8014-4ab0-a60f-94857b1fe6e9</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.Welfare" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="Welfare" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.worknature.name</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.worknature.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>900a24ac-3af4-4f10-a490-7342c9328415</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.worknature.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry_worknature" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>96f565ff-7cc7-47ce-bac4-3f4a105423ec</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[96f565ff-7cc7-47ce-bac4-3f4a105423ec].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>3c8e5c62-331c-4a3e-8789-bd0ba0773b7a</key>
+                    <parentUnit>
+                        <key name="name" value="96f565ff-7cc7-47ce-bac4-3f4a105423ec" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="worknature" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>a26cca72-821c-48ca-ae35-e4b1e15e7bfd</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[a26cca72-821c-48ca-ae35-e4b1e15e7bfd].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>75af77a2-2ee2-434f-9c55-aa80332c155c</key>
+                    <parentUnit>
+                        <key name="name" value="a26cca72-821c-48ca-ae35-e4b1e15e7bfd" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry_worknature" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </propertyUnit>
+    </units>
+    <defaultFilter>
+        <name>defaultFilter</name>
+        <formulaString />
+        <query>
+            <key name="package" value="com.kingdee.eas.custom.wages.app" />
+            <key name="name" value="MonthWagesQuery" />
+        </query>
+    </defaultFilter>
+    <defaultSorters>
+        <querySorterItem>
+            <propertyName>number</propertyName>
+            <sortType>ASC</sortType>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+            <configured>false</configured>
+        </querySorterItem>
+    </defaultSorters>
+    <queryPK>
+        <name>QueryPK</name>
+        <alias>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].queryPK[QueryPK].alias</alias>
+        <description>joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].queryPK[QueryPK].description</description>
+        <keyProperties>
+            <queryField>
+                <key name="name" value="id" />
+            </queryField>
+            <queryField>
+                <key name="name" value="Entry.id" />
+            </queryField>
+        </keyProperties>
+    </queryPK>
+    <isDistinct>false</isDistinct>
+    <joins>
+        <join>
+            <name>NewJoin0</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="MonthWages" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="auditor" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>0</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="NewUnit0" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="NewUnit1" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="NewJoin0" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </join>
+        <join>
+            <name>NewJoin1</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="MonthWages" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="creator" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>0</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="NewUnit2" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="NewUnit3" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="NewJoin1" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </join>
+        <join>
+            <name>NewJoin2</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="MonthWages" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="lastUpdateUser" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>0</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="NewUnit4" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="NewUnit5" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="NewJoin2" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </join>
+        <join>
+            <name>NewJoin4</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="MonthWages" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="handler" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>0</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="NewUnit9" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="NewUnit8" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="NewJoin4" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </join>
+        <join>
+            <name>61775816-0654-40bf-9634-38f0e59ce71b</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="MonthWages" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="company" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>23a067c3-625b-4143-883f-f741500be8f0</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="670c1d57-df78-4233-acdf-2d13811db386" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="5c406d2f-0b18-4b92-8c8b-e455e74ba54a" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="61775816-0654-40bf-9634-38f0e59ce71b" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </join>
+        <join>
+            <name>0130bb29-aa2a-4ea6-a659-db3614e049ed</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="MonthWages" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="Entry" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>b7fe8f6d-59f0-41a7-b228-82345a953c43</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="c898f451-685b-4132-bba4-3ee00571840a" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="ad9fa73e-1044-4245-b27b-15e73a80a413" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="0130bb29-aa2a-4ea6-a659-db3614e049ed" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </join>
+        <join>
+            <name>a0ed7db6-29d7-464e-be6a-fa2f8cd3defb</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="Entry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="Entry_person" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>79a19f07-845e-4bd7-8871-170e2b7d4044</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="0493d981-472e-4604-804f-581a17914667" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="b988e45a-b0a7-4c05-8f93-2972cfa029fc" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="a0ed7db6-29d7-464e-be6a-fa2f8cd3defb" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </join>
+        <join>
+            <name>16e443b7-3fc0-4610-82db-dd72f04bf6ca</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="Entry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="Entry_personPost" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>c2c93e38-b852-49ff-bf8d-2fc1fcb114a7</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="33e0d0c9-a382-47dc-a674-4187c2b67edb" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="e1ffa8b1-1b9c-4551-beda-59c906266b0f" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="16e443b7-3fc0-4610-82db-dd72f04bf6ca" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </join>
+        <join>
+            <name>95cbf25a-e61d-4767-853e-f5a3478ea19e</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="Entry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="Entry_theGroup" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>f7637554-c984-433a-b5aa-9f306e552074</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="c0dfe805-df56-4d62-9dde-bfe075429dc0" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="4832a720-04d9-436c-9b5f-012c98b03e13" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="95cbf25a-e61d-4767-853e-f5a3478ea19e" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </join>
+        <join>
+            <name>43f4a68d-3bd7-4d6d-9fce-931b98d91f68</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="Entry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="Entry_worknature" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>09f318f8-0a7c-402a-9af3-2ab73a6f61b7</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="96f565ff-7cc7-47ce-bac4-3f4a105423ec" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="a26cca72-821c-48ca-ae35-e4b1e15e7bfd" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="43f4a68d-3bd7-4d6d-9fce-931b98d91f68" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.wages.app" />
+                <key name="name" value="MonthWagesQuery" />
+            </query>
+        </join>
+    </joins>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="太合月工资计算单" />
+            <lang locale="zh_HK" value="太合月工資計算單" />
+            <lang locale="zh_TW" value="太合月工資計算單" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].defaultSorters.querySorterItemextendedProperty.f7WindowTitle">
+            <lang locale="en_US" value="多分录基础单据模板" />
+            <lang locale="zh_CN" value="多分录基础单据模板" />
+            <lang locale="zh_TW" value="多分录基础单据模板" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="多分录基础单据查询" />
+            <lang locale="zh_HK" value="多分錄基礎單據查詢" />
+            <lang locale="zh_TW" value="多分錄基礎單據查詢" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].extendedProperty.F7WindowTitle">
+            <lang locale="en_US" value="com.kingdee.eas.custom.wages.client.WagesResource.MonthWagesQueryF7WindowTitle" />
+            <lang locale="zh_CN" value="com.kingdee.eas.custom.wages.client.WagesResource.MonthWagesQueryF7WindowTitle" />
+            <lang locale="zh_TW" value="com.kingdee.eas.custom.wages.client.WagesResource.MonthWagesQueryF7WindowTitle" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].extendedProperty.bizDateField">
+            <lang locale="en_US" value="bizDate" />
+            <lang locale="zh_CN" value="bizDate" />
+            <lang locale="zh_TW" value="bizDate" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].extendedProperty.f7WindowTitle">
+            <lang locale="en_US" value="太合月工资计算单" />
+            <lang locale="zh_CN" value="太合月工资计算单" />
+            <lang locale="zh_TW" value="太合月工资计算单" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].queryPK[QueryPK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].queryPK[QueryPK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].subObjects.subEntity[Entry].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].subObjects.subEntity[Entry_personPost].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].subObjects.subEntity[Entry_person].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].subObjects.subEntity[Entry_theGroup].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].subObjects.subEntity[Entry_worknature].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].subObjects.subEntity[MonthWages].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].subObjects.subEntity[auditor].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].subObjects.subEntity[company].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].subObjects.subEntity[creator].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].subObjects.subEntity[handler].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].subObjects.subEntity[lastUpdateUser].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[0493d981-472e-4604-804f-581a17914667].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[33e0d0c9-a382-47dc-a674-4187c2b67edb].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[4832a720-04d9-436c-9b5f-012c98b03e13].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[5c406d2f-0b18-4b92-8c8b-e455e74ba54a].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[670c1d57-df78-4233-acdf-2d13811db386].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[96f565ff-7cc7-47ce-bac4-3f4a105423ec].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[NewUnit0].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[NewUnit1].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[NewUnit2].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[NewUnit3].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[NewUnit4].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[NewUnit5].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[NewUnit8].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[NewUnit9].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[a26cca72-821c-48ca-ae35-e4b1e15e7bfd].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[ad9fa73e-1044-4245-b27b-15e73a80a413].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[b988e45a-b0a7-4c05-8f93-2972cfa029fc].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[c0dfe805-df56-4d62-9dde-bfe075429dc0].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[c898f451-685b-4132-bba4-3ee00571840a].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.propertyUnit[e1ffa8b1-1b9c-4551-beda-59c906266b0f].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.BankCard].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="银行卡号" />
+            <lang locale="zh_HK" value="銀行卡號" />
+            <lang locale="zh_TW" value="銀行卡號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.BankCard].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.BankCard].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.EmployerInsurance].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="雇主责任险" />
+            <lang locale="zh_HK" value="雇主責任險" />
+            <lang locale="zh_TW" value="雇主責任險" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.EmployerInsurance].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.EmployerInsurance].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.IDCard].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="身份证号" />
+            <lang locale="zh_HK" value="身份證號" />
+            <lang locale="zh_TW" value="身份證號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.IDCard].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.IDCard].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.Payroll].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="实发工资" />
+            <lang locale="zh_HK" value="實發工資" />
+            <lang locale="zh_TW" value="實發工資" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.Payroll].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.Payroll].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.PersonTax].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="个人所得税" />
+            <lang locale="zh_HK" value="個人所得稅" />
+            <lang locale="zh_TW" value="個人所得稅" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.PersonTax].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.PersonTax].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.PhoneNumber].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="手机号码" />
+            <lang locale="zh_HK" value="手機號碼" />
+            <lang locale="zh_TW" value="手機號碼" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.PhoneNumber].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.PhoneNumber].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.Welfare].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="福利费" />
+            <lang locale="zh_HK" value="福利費" />
+            <lang locale="zh_TW" value="福利費" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.Welfare].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.Welfare].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.adjustmentWages].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="调整工资" />
+            <lang locale="zh_HK" value="調整工資" />
+            <lang locale="zh_TW" value="調整工資" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.adjustmentWages].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.adjustmentWages].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.adjustmentWages].extendedProperty.isSumField">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.allWags].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="总工资" />
+            <lang locale="zh_HK" value="總工資" />
+            <lang locale="zh_TW" value="總工資" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.allWags].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.allWags].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.allWags].extendedProperty.isSumField">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.attendanceWages].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="全勤补助" />
+            <lang locale="zh_HK" value="全勤補助" />
+            <lang locale="zh_TW" value="全勤補助" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.attendanceWages].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.attendanceWages].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.attendanceWages].extendedProperty.isSumField">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.basicWages].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="基本工资" />
+            <lang locale="zh_HK" value="基本工資" />
+            <lang locale="zh_TW" value="基本工資" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.basicWages].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.basicWages].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.basicWages].extendedProperty.isSumField">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.bythejobWages].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计件工资" />
+            <lang locale="zh_HK" value="計件工資" />
+            <lang locale="zh_TW" value="計件工資" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.bythejobWages].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.bythejobWages].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.bythejobWages].extendedProperty.isSumField">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.fractionQty].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="当月分数" />
+            <lang locale="zh_HK" value="當月分數" />
+            <lang locale="zh_TW" value="當月分數" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.fractionQty].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.fractionQty].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.fractionWages].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="分数工资" />
+            <lang locale="zh_HK" value="分數工資" />
+            <lang locale="zh_TW" value="分數工資" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.fractionWages].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.fractionWages].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.fractionWages].extendedProperty.isSumField">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.inDate].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="员工入职时间" />
+            <lang locale="zh_HK" value="員工入職時間" />
+            <lang locale="zh_TW" value="員工入職時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.inDate].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.inDate].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.introduceWages].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="介绍费" />
+            <lang locale="zh_HK" value="介紹費" />
+            <lang locale="zh_TW" value="介紹費" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.introduceWages].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.introduceWages].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.introduceWages].extendedProperty.isSumField">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.lifeWages].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="生活补助" />
+            <lang locale="zh_HK" value="生活補助" />
+            <lang locale="zh_TW" value="生活補助" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.lifeWages].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.lifeWages].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.lifeWages].extendedProperty.isSumField">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.person.number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="员工编码" />
+            <lang locale="zh_HK" value="員工編碼" />
+            <lang locale="zh_TW" value="員工編碼" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.person.number].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.person.number].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.person.number].extendedProperty.isQuickSearchField">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.person.number].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.personName].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="员工姓名" />
+            <lang locale="zh_HK" value="員工姓名" />
+            <lang locale="zh_TW" value="員工姓名" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.personName].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.personName].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.personName].extendedProperty.isQuickSearchField">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.personPost.postname].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="员工岗位" />
+            <lang locale="zh_HK" value="員工崗位" />
+            <lang locale="zh_TW" value="員工崗位" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.personPost.postname].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.personPost.postname].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.personPost.postname].extendedProperty.isQuickSearchField">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.personPost.postname].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.postWages].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="岗位补助" />
+            <lang locale="zh_HK" value="崗位補助" />
+            <lang locale="zh_TW" value="崗位補助" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.postWages].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.postWages].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.postWages].extendedProperty.isSumField">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.sanctionWages].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="奖罚工资" />
+            <lang locale="zh_HK" value="獎罰工資" />
+            <lang locale="zh_TW" value="獎罰工資" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.sanctionWages].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.sanctionWages].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.sanctionWages].extendedProperty.isSumField">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.seniorityWages].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工龄奖" />
+            <lang locale="zh_HK" value="工齡獎" />
+            <lang locale="zh_TW" value="工齡獎" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.seniorityWages].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.seniorityWages].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.seniorityWages].extendedProperty.isSumField">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.seq].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据分录序列号" />
+            <lang locale="zh_HK" value="單據分錄序列號" />
+            <lang locale="zh_TW" value="單據分錄序列號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.seq].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.seq].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.theGroup.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="所属班组" />
+            <lang locale="zh_HK" value="所屬班組" />
+            <lang locale="zh_TW" value="所屬班組" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.theGroup.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.theGroup.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.theGroup.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.workDay0].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出勤天数" />
+            <lang locale="zh_HK" value="出勤天數" />
+            <lang locale="zh_TW" value="出勤天數" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.workDay0].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.workDay0].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.worknature.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用工性质" />
+            <lang locale="zh_HK" value="用工性質" />
+            <lang locale="zh_TW" value="用工性質" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.worknature.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.worknature.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Entry.worknature.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Fivouchered].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否生成凭证" />
+            <lang locale="zh_HK" value="是否生成憑證" />
+            <lang locale="zh_TW" value="是否生成憑證" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Fivouchered].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[Fivouchered].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[auditTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审核时间" />
+            <lang locale="zh_HK" value="審核時間" />
+            <lang locale="zh_TW" value="審核時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[auditTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[auditTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[auditor.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="别名" />
+            <lang locale="zh_HK" value="別名" />
+            <lang locale="zh_TW" value="別名" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[auditor.number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用户名" />
+            <lang locale="zh_HK" value="用戶名" />
+            <lang locale="zh_TW" value="用戶名" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[billStatus].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据状态" />
+            <lang locale="zh_HK" value="單據狀態" />
+            <lang locale="zh_TW" value="單據狀態" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[billStatus].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[billStatus].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[bizDate].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务日期" />
+            <lang locale="zh_HK" value="業務日期" />
+            <lang locale="zh_TW" value="業務日期" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[bizDate].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[bizDate].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[bizDate].extendedProperty.isQuickSearchField">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[company.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[company.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[company.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[company.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[createTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建时间" />
+            <lang locale="zh_HK" value="創建時間" />
+            <lang locale="zh_TW" value="創建時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[createTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[createTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[creator.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="别名" />
+            <lang locale="zh_HK" value="別名" />
+            <lang locale="zh_TW" value="別名" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[creator.number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用户名" />
+            <lang locale="zh_HK" value="用戶名" />
+            <lang locale="zh_TW" value="用戶名" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[description].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="参考信息" />
+            <lang locale="zh_HK" value="參考信息" />
+            <lang locale="zh_TW" value="參考信息" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[description].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[description].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[handler.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="别名" />
+            <lang locale="zh_HK" value="別名" />
+            <lang locale="zh_TW" value="別名" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[handler.number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用户名" />
+            <lang locale="zh_HK" value="用戶名" />
+            <lang locale="zh_TW" value="用戶名" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[id].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[lastUpdateTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最后修改时间" />
+            <lang locale="zh_HK" value="最後修改時間" />
+            <lang locale="zh_TW" value="最後修改時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[lastUpdateTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[lastUpdateTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[lastUpdateUser.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="别名" />
+            <lang locale="zh_HK" value="別名" />
+            <lang locale="zh_TW" value="別名" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[lastUpdateUser.number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用户名" />
+            <lang locale="zh_HK" value="用戶名" />
+            <lang locale="zh_TW" value="用戶名" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据编号" />
+            <lang locale="zh_HK" value="單據編號" />
+            <lang locale="zh_TW" value="單據編號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[number].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[number].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[number].extendedProperty.isQuickSearchField">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[score].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="分值" />
+            <lang locale="zh_HK" value="分值" />
+            <lang locale="zh_TW" value="分值" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[score].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[score].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[workDay].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="应出勤天数" />
+            <lang locale="zh_HK" value="應出勤天數" />
+            <lang locale="zh_TW" value="應出勤天數" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[workDay].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[workDay].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[workDays].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="应出勤天数" />
+            <lang locale="zh_HK" value="應出勤天數" />
+            <lang locale="zh_TW" value="應出勤天數" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[workDays].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[workDays].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[workDayss].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="应出勤天数" />
+            <lang locale="zh_HK" value="應出勤天數" />
+            <lang locale="zh_TW" value="應出勤天數" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[workDayss].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.wages.app.MonthWagesQuery].units.queryField[workDayss].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</joinQuery>
+

@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.carnivorous.basebiz.app</package>
+    <name>MarginUnlockBillRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>fa613136-0f84-403c-af33-cd14b414d9d0</id>
+            <parentID />
+            <source>entrys.actualInDate=entrys.batchContract.actualBreedDate</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>89c2727a-5996-470c-be2b-14962acde283</id>
+            <parentID>fa613136-0f84-403c-af33-cd14b414d9d0</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Date</valueType>
+            <value />
+            <property>
+                <ownerID>f4ffbf42-6800-41fe-b6ff-7c591f635926</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f4ffbf42-6800-41fe-b6ff-7c591f635926</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"actualInDate")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>88ddcb3d-8261-45c3-b70b-315e2d350cf2</id>
+            <parentID>fa613136-0f84-403c-af33-cd14b414d9d0</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Date</valueType>
+            <value />
+            <method>
+                <ownerID>0f65c992-1722-4f6f-8378-5ee116a81e8d</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>47cc77bb-feea-4b9b-9cbc-5a3ebb9a3288</id>
+                        <expressionID>1d1968ef-17b3-4fad-a8f7-313887cf7175</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>1d4eaf56-1932-488d-b6f3-026195ca040e</id>
+                        <expressionID>8c7a2524-a3e2-4256-aab2-3830098d04c0</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0f65c992-1722-4f6f-8378-5ee116a81e8d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1d1968ef-17b3-4fad-a8f7-313887cf7175</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>e9a208bd-b260-468a-9de8-986dea7486b6</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e9a208bd-b260-468a-9de8-986dea7486b6</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"batchContract")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8c7a2524-a3e2-4256-aab2-3830098d04c0</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>actualBreedDate</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>5f6f2d7f-0f21-4e13-997d-aa30418c1a3d</id>
+            <parentID />
+            <source>entrys.inQty=entrys.batchContract.femaleBreedQty</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>773a6564-37c9-43b4-bc18-e0767eda12a0</id>
+            <parentID>5f6f2d7f-0f21-4e13-997d-aa30418c1a3d</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>f868fdbd-6a23-418f-989a-2500131dcd04</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f868fdbd-6a23-418f-989a-2500131dcd04</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"inQty")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>01ba53eb-6711-4db3-a62f-2a29f0a2e639</id>
+            <parentID>5f6f2d7f-0f21-4e13-997d-aa30418c1a3d</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>53ef86e2-8f1f-4820-840e-e35265f2813d</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>98e3b98b-c47c-4f70-a269-fbc0b0f839a5</id>
+                        <expressionID>9fdab928-59d0-4bbd-abae-19198a58cb62</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>80f096ba-080f-420c-a589-5a4a8be3b2cb</id>
+                        <expressionID>59f4a3bc-8301-4b71-aca9-b0b84541fb95</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>53ef86e2-8f1f-4820-840e-e35265f2813d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9fdab928-59d0-4bbd-abae-19198a58cb62</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>1b2f0dd5-3561-4a4a-acb2-935ac3c59bc8</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1b2f0dd5-3561-4a4a-acb2-935ac3c59bc8</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"batchContract")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>59f4a3bc-8301-4b71-aca9-b0b84541fb95</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>femaleBreedQty</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>df4ab029-0f63-4ac8-8305-b913b0bf703b</id>
+            <parentID />
+            <source>entrys.minMargin=entrys.batchContract.standardMargin</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>d6b4f0bd-f820-4d3a-bee0-f6727ba38e89</id>
+            <parentID>df4ab029-0f63-4ac8-8305-b913b0bf703b</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>65109e87-dbff-487b-ae18-8c59ddcb2a1a</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>65109e87-dbff-487b-ae18-8c59ddcb2a1a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"minMargin")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b0bb470b-bda5-4191-ac22-bbdeaff21146</id>
+            <parentID>df4ab029-0f63-4ac8-8305-b913b0bf703b</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>55c31a7a-e7a0-4623-bdcc-b46b64c9e8b2</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>d752bc63-b02e-4ffb-a33a-21d311b3f81a</id>
+                        <expressionID>db5c07a6-ed1c-40fb-8731-8d3a5bccb3d7</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>6536af41-6c6d-4ed1-b14c-137f8cbd9021</id>
+                        <expressionID>52525f49-d558-44f4-b103-a6926ef1ca92</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>55c31a7a-e7a0-4623-bdcc-b46b64c9e8b2</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>db5c07a6-ed1c-40fb-8731-8d3a5bccb3d7</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>6695f3e9-04e6-494d-81dc-8b9f25b593f0</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6695f3e9-04e6-494d-81dc-8b9f25b593f0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"batchContract")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>52525f49-d558-44f4-b103-a6926ef1ca92</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>standardMargin</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>33b15ade-04a2-4f0c-9b73-37f5239b06fc</id>
+            <parentID />
+            <source>entrys.actualUsedMargin=entrys.batchContract.usedMargin</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>9733ed0c-3798-4386-a9c9-522ef3766f51</id>
+            <parentID>33b15ade-04a2-4f0c-9b73-37f5239b06fc</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>365f1860-9f07-4505-9bd7-cb8413b3d03f</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>365f1860-9f07-4505-9bd7-cb8413b3d03f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"actualUsedMargin")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>18dd10d9-134b-4485-8522-f3e9e32aeec1</id>
+            <parentID>33b15ade-04a2-4f0c-9b73-37f5239b06fc</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>b3351370-4730-4cdd-b733-b1e504f5a60a</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>44fc70e7-9861-418b-b9d6-255906bdf8f6</id>
+                        <expressionID>fcc4cc6d-cc3d-4c9f-bd04-ba076dedf34d</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>fa747baf-374f-4bd6-8992-f7cf1c50804e</id>
+                        <expressionID>6d7454d4-d479-4b95-8178-1964330ff042</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b3351370-4730-4cdd-b733-b1e504f5a60a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fcc4cc6d-cc3d-4c9f-bd04-ba076dedf34d</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>9ca3ece4-816f-4539-8f63-04bfddc8c3cf</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9ca3ece4-816f-4539-8f63-04bfddc8c3cf</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"batchContract")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6d7454d4-d479-4b95-8178-1964330ff042</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>usedMargin</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>eb06c754-7c35-4076-ba65-ba2ed9f22631</id>
+            <parentID />
+            <source>entrys.standardMargin=entrys.batchContract.standardMargin</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>17a89867-1b0a-4311-8de1-a89b588ff4c1</id>
+            <parentID>eb06c754-7c35-4076-ba65-ba2ed9f22631</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>928ecc71-eb82-4a5e-a55c-fd1d144b72fa</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>928ecc71-eb82-4a5e-a55c-fd1d144b72fa</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"standardMargin")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a527f19d-ec79-4132-a70c-f99612d67741</id>
+            <parentID>eb06c754-7c35-4076-ba65-ba2ed9f22631</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>692bd913-98ff-4cd4-8394-4bec0205c1b4</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>c8c40d12-2b20-4b18-b643-5abd8ca3ed06</id>
+                        <expressionID>e6909ca0-e011-42d9-968e-3ce879d8d69b</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>84de69dd-e130-4375-8731-2a6951e04d67</id>
+                        <expressionID>88f3bc74-f83e-4a30-8c0b-d707c3e26def</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>692bd913-98ff-4cd4-8394-4bec0205c1b4</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e6909ca0-e011-42d9-968e-3ce879d8d69b</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>047264a2-8a18-441f-87cc-2b4e30e4d5d4</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>047264a2-8a18-441f-87cc-2b4e30e4d5d4</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"batchContract")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>88f3bc74-f83e-4a30-8c0b-d707c3e26def</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>standardMargin</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>dd81403c-0e27-45ac-a699-5fe98a43ac8d</id>
+            <parentID />
+            <source>entrys.standardMargin=entrys.batchContract.standardMargin</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>bd621c1a-c186-4c46-bb27-86262b3e7d29</id>
+            <parentID>dd81403c-0e27-45ac-a699-5fe98a43ac8d</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>03220ede-bda5-4c4e-b8a6-d7126c607029</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>03220ede-bda5-4c4e-b8a6-d7126c607029</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"standardMargin")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4341447f-d711-455a-9ec5-5bb1c2f4bc7b</id>
+            <parentID>dd81403c-0e27-45ac-a699-5fe98a43ac8d</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>63ab66f9-c78e-49eb-bce5-a546d56ab372</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>60c35282-2c6b-41e9-a0ee-d1bbde2db068</id>
+                        <expressionID>cc089ef5-0b5e-453f-b882-7cae21fd1fe4</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>e1b73a6e-421f-466a-ab29-c172192fb7b6</id>
+                        <expressionID>98322c3c-6731-4c59-980e-a5f116bc4e34</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>63ab66f9-c78e-49eb-bce5-a546d56ab372</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cc089ef5-0b5e-453f-b882-7cae21fd1fe4</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>8e7ee21a-a0bd-4ea4-b1f2-1eba278ccafe</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8e7ee21a-a0bd-4ea4-b1f2-1eba278ccafe</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"batchContract")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>98322c3c-6731-4c59-980e-a5f116bc4e34</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>standardMargin</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>ad5da902-2377-4674-a648-ac21ca75dd07</id>
+            <name>entrys_actualInDate_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].actions.action[entrys_actualInDate_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].actions.action[entrys_actualInDate_ActionInfo].description</description>
+            <expressionID>fa613136-0f84-403c-af33-cd14b414d9d0</expressionID>
+        </action>
+        <action>
+            <id>2f0446e3-b020-48e1-8b23-f2bcb2436f7d</id>
+            <name>entrys_inQty_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].actions.action[entrys_inQty_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].actions.action[entrys_inQty_ActionInfo].description</description>
+            <expressionID>5f6f2d7f-0f21-4e13-997d-aa30418c1a3d</expressionID>
+        </action>
+        <action>
+            <id>24c9a1fa-1c8f-4f22-a8bb-bd73d6c91647</id>
+            <name>entrys_minMargin_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].actions.action[entrys_minMargin_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].actions.action[entrys_minMargin_ActionInfo].description</description>
+            <expressionID>df4ab029-0f63-4ac8-8305-b913b0bf703b</expressionID>
+        </action>
+        <action>
+            <id>6c4afa7f-68b9-40bb-beaa-a3a4d322dcc3</id>
+            <name>entrys_actualUsedMargin_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].actions.action[entrys_actualUsedMargin_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].actions.action[entrys_actualUsedMargin_ActionInfo].description</description>
+            <expressionID>33b15ade-04a2-4f0c-9b73-37f5239b06fc</expressionID>
+        </action>
+        <action>
+            <id>558a5629-e7d1-4e63-a85e-9221d98540c5</id>
+            <name>entrys_standardMargin_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].actions.action[entrys_standardMargin_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].actions.action[entrys_standardMargin_ActionInfo].description</description>
+            <expressionID>eb06c754-7c35-4076-ba65-ba2ed9f22631</expressionID>
+        </action>
+        <action>
+            <id>7ea6a9c3-e7bc-49f4-a446-ec23c72ff635</id>
+            <name>entrys_standardMargin_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].actions.action[entrys_standardMargin_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].actions.action[entrys_standardMargin_ActionInfo].description</description>
+            <expressionID>dd81403c-0e27-45ac-a699-5fe98a43ac8d</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>entrys_actualInDate_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].rules.conditionRule[entrys_actualInDate_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].rules.conditionRule[entrys_actualInDate_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="ad5da902-2377-4674-a648-ac21ca75dd07" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].actions.action[entrys_actualInDate_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_actualBreedDate" />
+            <lang locale="zh_HK" value="攜帶字段屬性_actualBreedDate" />
+            <lang locale="zh_TW" value="攜帶字段屬性_actualBreedDate" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].actions.action[entrys_actualInDate_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].actions.action[entrys_actualUsedMargin_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_usedMargin" />
+            <lang locale="zh_HK" value="攜帶字段屬性_usedMargin" />
+            <lang locale="zh_TW" value="攜帶字段屬性_usedMargin" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].actions.action[entrys_actualUsedMargin_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].actions.action[entrys_inQty_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_femaleBreedQty" />
+            <lang locale="zh_HK" value="攜帶字段屬性_femaleBreedQty" />
+            <lang locale="zh_TW" value="攜帶字段屬性_femaleBreedQty" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].actions.action[entrys_inQty_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].actions.action[entrys_minMargin_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_standardMargin" />
+            <lang locale="zh_HK" value="攜帶字段屬性_standardMargin" />
+            <lang locale="zh_TW" value="攜帶字段屬性_standardMargin" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].actions.action[entrys_minMargin_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].actions.action[entrys_standardMargin_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_standardMargin" />
+            <lang locale="zh_HK" value="攜帶字段屬性_standardMargin" />
+            <lang locale="zh_TW" value="攜帶字段屬性_standardMargin" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].actions.action[entrys_standardMargin_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].rules.conditionRule[entrys_actualInDate_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_actualBreedDate" />
+            <lang locale="zh_HK" value="攜帶字段屬性_actualBreedDate" />
+            <lang locale="zh_TW" value="攜帶字段屬性_actualBreedDate" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].rules.conditionRule[entrys_actualInDate_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].rules.conditionRule[entrys_actualInDate_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="batchContract" />
+            <lang locale="zh_CN" value="batchContract" />
+            <lang locale="zh_TW" value="batchContract" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MarginUnlockBillRuleSet].rules.conditionRule[entrys_actualInDate_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

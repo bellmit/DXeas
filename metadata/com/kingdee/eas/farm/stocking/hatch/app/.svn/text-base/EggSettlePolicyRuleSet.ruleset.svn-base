@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.stocking.hatch.app</package>
+    <name>EggSettlePolicyRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.stocking.hatch.app.EggSettlePolicyRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.stocking.hatch.app.EggSettlePolicyRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>ec08e90b-fbfa-45af-894b-c0f78537db92</id>
+            <parentID />
+            <source>PolicyEntry.unit = PolicyEntry.settleItem.settleUnit</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>c0852ccb-9afa-4b8a-8c45-c516af556d40</id>
+            <parentID>ec08e90b-fbfa-45af-894b-c0f78537db92</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType />
+            <value />
+            <property>
+                <ownerID>2d65479f-19ad-42ea-824a-d3ec57179ee5</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2d65479f-19ad-42ea-824a-d3ec57179ee5</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPolicyEntry.getCell(rowIndex,"unit")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0ee21169-d95a-4e7c-8aa2-e391c7a3d0e9</id>
+            <parentID>ec08e90b-fbfa-45af-894b-c0f78537db92</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType />
+            <value />
+            <method>
+                <ownerID>8fb0ef0f-f2de-4a4a-b508-000909b83e63</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>3bff44ed-2081-421c-845a-a76ddac298b9</id>
+                        <expressionID>bc3a89bd-5528-4bbf-b09c-5bdfa819b22a</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>10ce3ee2-acd2-4cf6-a637-a7be80d4027f</id>
+                        <expressionID>726c4622-e774-473e-b25b-94465ad3fff0</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8fb0ef0f-f2de-4a4a-b508-000909b83e63</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bc3a89bd-5528-4bbf-b09c-5bdfa819b22a</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>e6e848b4-dfe6-4f1c-976b-a2018e275108</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e6e848b4-dfe6-4f1c-976b-a2018e275108</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtPolicyEntry.getCell(rowIndex,"settleItem")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>726c4622-e774-473e-b25b-94465ad3fff0</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>settleUnit</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>eca638ba-6a3a-4cdf-b991-dcf191321035</id>
+            <name>D0_7JQCK</name>
+            <alias>ruleSet[com.kingdee.eas.farm.stocking.hatch.app.EggSettlePolicyRuleSet].actions.action[D0_7JQCK].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.stocking.hatch.app.EggSettlePolicyRuleSet].actions.action[D0_7JQCK].description</description>
+            <expressionID>ec08e90b-fbfa-45af-894b-c0f78537db92</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>D0_7JQCK</name>
+            <alias>ruleSet[com.kingdee.eas.farm.stocking.hatch.app.EggSettlePolicyRuleSet].rules.conditionRule[D0_7JQCK].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.stocking.hatch.app.EggSettlePolicyRuleSet].rules.conditionRule[D0_7JQCK].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="eca638ba-6a3a-4cdf-b991-dcf191321035" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.stocking.hatch.app.EggSettlePolicyRuleSet].actions.action[D0_7JQCK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.stocking.hatch.app.EggSettlePolicyRuleSet].actions.action[D0_7JQCK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.stocking.hatch.app.EggSettlePolicyRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.stocking.hatch.app.EggSettlePolicyRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.stocking.hatch.app.EggSettlePolicyRuleSet].rules.conditionRule[D0_7JQCK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="SetFieldPropEvent0001" />
+            <lang locale="zh_HK" value="SetFieldPropEvent0001" />
+            <lang locale="zh_TW" value="SetFieldPropEvent0001" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.stocking.hatch.app.EggSettlePolicyRuleSet].rules.conditionRule[D0_7JQCK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.stocking.hatch.app.EggSettlePolicyRuleSet].rules.conditionRule[D0_7JQCK].extendedProperty.columnName">
+            <lang locale="en_US" value="settleItem" />
+            <lang locale="zh_CN" value="settleItem" />
+            <lang locale="zh_TW" value="settleItem" />
+        </rs>
+    </resource>
+</ruleSet>
+

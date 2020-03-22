@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.carnivorous.feedbiz.app</package>
+    <name>DrugApplyBillRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.DrugApplyBillRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.DrugApplyBillRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>c79e4445-eae1-4c6d-962f-3661fd88f1d1</id>
+            <parentID />
+            <source>entrys.materialName=entrys.materialNum.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>cb02826d-9adf-4d9e-8929-d432ede6c3b1</id>
+            <parentID>c79e4445-eae1-4c6d-962f-3661fd88f1d1</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>f22c0076-234f-4849-b323-dfb840295627</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f22c0076-234f-4849-b323-dfb840295627</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"materialName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c2f66a39-ed65-4f5a-b44e-b7d581db0061</id>
+            <parentID>c79e4445-eae1-4c6d-962f-3661fd88f1d1</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>d35877d8-b3ba-48c4-ada5-9b14ad10bf7e</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>0322bedf-8158-4c81-a959-1b7160a81eb1</id>
+                        <expressionID>71cf7ade-b520-450c-8e88-b7327bfc487b</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>799aad57-00a2-48a2-b835-2488cf90f2be</id>
+                        <expressionID>0415c2fd-7bb7-4b69-bec7-1bf86f73f838</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d35877d8-b3ba-48c4-ada5-9b14ad10bf7e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>71cf7ade-b520-450c-8e88-b7327bfc487b</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>b8a2ca1e-650b-4283-9d81-048dafd4ddeb</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b8a2ca1e-650b-4283-9d81-048dafd4ddeb</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"materialNum")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0415c2fd-7bb7-4b69-bec7-1bf86f73f838</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>ae8cf6d7-0b6a-46d0-98b1-0ce4f2af39cf</id>
+            <parentID />
+            <source>entrys.unit=entrys.materialNum.baseUnit.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>8c0b3b01-c355-49ef-940b-aa6250acbb4b</id>
+            <parentID>ae8cf6d7-0b6a-46d0-98b1-0ce4f2af39cf</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>668dc666-7ebe-4705-82d8-516d78ba67e5</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>668dc666-7ebe-4705-82d8-516d78ba67e5</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"unit")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5d67d1b9-7806-4ffe-ac14-630bb72f2894</id>
+            <parentID>ae8cf6d7-0b6a-46d0-98b1-0ce4f2af39cf</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>5c415359-9419-4bcf-a59e-1b1a7173142c</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>b5de585c-5ec2-41f5-bd0d-dbb0bfdc3d0e</id>
+                        <expressionID>25ccfe4e-04b1-4008-883f-b64350cf6406</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>58ce0526-13fd-491c-a083-77b17233dd29</id>
+                        <expressionID>6d6663c0-3f55-4721-a556-982da8ddb8ab</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5c415359-9419-4bcf-a59e-1b1a7173142c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>25ccfe4e-04b1-4008-883f-b64350cf6406</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>0b1b756d-be61-48a5-add9-3e17a040b798</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0b1b756d-be61-48a5-add9-3e17a040b798</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"materialNum")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6d6663c0-3f55-4721-a556-982da8ddb8ab</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>baseUnit.name</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>2d2e3804-4972-4101-be4e-00fdcc152fc1</id>
+            <name>entrys_materialName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.DrugApplyBillRuleSet].actions.action[entrys_materialName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.DrugApplyBillRuleSet].actions.action[entrys_materialName_ActionInfo].description</description>
+            <expressionID>c79e4445-eae1-4c6d-962f-3661fd88f1d1</expressionID>
+        </action>
+        <action>
+            <id>3875aaca-ce9c-455c-89cd-5a340d79bd34</id>
+            <name>entrys_unit_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.DrugApplyBillRuleSet].actions.action[entrys_unit_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.DrugApplyBillRuleSet].actions.action[entrys_unit_ActionInfo].description</description>
+            <expressionID>ae8cf6d7-0b6a-46d0-98b1-0ce4f2af39cf</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>entrys_materialName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.DrugApplyBillRuleSet].rules.conditionRule[entrys_materialName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.DrugApplyBillRuleSet].rules.conditionRule[entrys_materialName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="2d2e3804-4972-4101-be4e-00fdcc152fc1" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>entrys_unit_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.DrugApplyBillRuleSet].rules.conditionRule[entrys_unit_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.DrugApplyBillRuleSet].rules.conditionRule[entrys_unit_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="3875aaca-ce9c-455c-89cd-5a340d79bd34" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.DrugApplyBillRuleSet].actions.action[entrys_materialName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.DrugApplyBillRuleSet].actions.action[entrys_materialName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.DrugApplyBillRuleSet].actions.action[entrys_unit_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_baseUnit" />
+            <lang locale="zh_HK" value="攜帶字段屬性_baseUnit" />
+            <lang locale="zh_TW" value="攜帶字段屬性_baseUnit" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.DrugApplyBillRuleSet].actions.action[entrys_unit_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.DrugApplyBillRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.DrugApplyBillRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.DrugApplyBillRuleSet].rules.conditionRule[entrys_materialName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.DrugApplyBillRuleSet].rules.conditionRule[entrys_materialName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.DrugApplyBillRuleSet].rules.conditionRule[entrys_materialName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="materialNum" />
+            <lang locale="zh_CN" value="materialNum" />
+            <lang locale="zh_TW" value="materialNum" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.DrugApplyBillRuleSet].rules.conditionRule[entrys_materialName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.DrugApplyBillRuleSet].rules.conditionRule[entrys_unit_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_baseUnit" />
+            <lang locale="zh_HK" value="攜帶字段屬性_baseUnit" />
+            <lang locale="zh_TW" value="攜帶字段屬性_baseUnit" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.DrugApplyBillRuleSet].rules.conditionRule[entrys_unit_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.DrugApplyBillRuleSet].rules.conditionRule[entrys_unit_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="materialNum" />
+            <lang locale="zh_CN" value="materialNum" />
+            <lang locale="zh_TW" value="materialNum" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.DrugApplyBillRuleSet].rules.conditionRule[entrys_unit_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

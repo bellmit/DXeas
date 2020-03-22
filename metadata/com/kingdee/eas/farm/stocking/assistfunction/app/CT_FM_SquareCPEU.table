@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataTable xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.stocking.assistfunction.app</package>
+    <name>CT_FM_SquareCPEU</name>
+    <alias>dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].alias</alias>
+    <description>dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].description</description>
+    <userDefined>true</userDefined>
+    <bizUnitPK />
+    <columns>
+        <column>
+            <name>FID</name>
+            <alias>dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].columns.column[FID].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].columns.column[FID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>false</isNullable>
+            <defaultValue>''</defaultValue>
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FSeq</name>
+            <alias>dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].columns.column[FSeq].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].columns.column[FSeq].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>false</isNullable>
+            <defaultValue>0</defaultValue>
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>4</precision>
+        </column>
+        <column>
+            <name>FParentID</name>
+            <alias>dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].columns.column[FParentID].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].columns.column[FParentID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>false</isNullable>
+            <defaultValue>''</defaultValue>
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFSeq</name>
+            <alias>dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].columns.column[CFSeq].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].columns.column[CFSeq].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>0</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFUserID</name>
+            <alias>dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].columns.column[CFUserID].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].columns.column[CFUserID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFUserName</name>
+            <alias>dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].columns.column[CFUserName].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].columns.column[CFUserName].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+    </columns>
+    <primaryKey>
+        <name>CPK_FM_SquareCP6rh</name>
+        <userDefined>true</userDefined>
+        <primaryKeyColumns>
+            <primaryKeyColumn>
+                <indexID>0</indexID>
+                <sortType />
+                <column>
+                    <key name="name" value="FID" />
+                </column>
+            </primaryKeyColumn>
+        </primaryKeyColumns>
+    </primaryKey>
+    <foreignKeys>
+        <foreignKey>
+            <name>CFK_FM_FM_Squarerj</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="T_PM_User" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="CFUserID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+    </foreignKeys>
+    <resource>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用户分录" />
+            <lang locale="zh_HK" value="用戶分錄" />
+            <lang locale="zh_TW" value="用戶分錄" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].columns.column[CFSeq].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据分录序列号" />
+            <lang locale="zh_HK" value="單據分錄序列號" />
+            <lang locale="zh_TW" value="單據分錄序列號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].columns.column[CFSeq].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].columns.column[CFUserID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用户" />
+            <lang locale="zh_HK" value="用戶" />
+            <lang locale="zh_TW" value="用戶" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].columns.column[CFUserID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用户" />
+            <lang locale="zh_HK" value="用戶" />
+            <lang locale="zh_TW" value="用戶" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].columns.column[CFUserName].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用户实名" />
+            <lang locale="zh_HK" value="用戶實名" />
+            <lang locale="zh_TW" value="用戶實名" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].columns.column[CFUserName].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用户实名" />
+            <lang locale="zh_HK" value="用戶實名" />
+            <lang locale="zh_TW" value="用戶實名" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].columns.column[FID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].columns.column[FID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].columns.column[FParentID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].columns.column[FParentID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].columns.column[FSeq].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].columns.column[FSeq].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.assistfunction.app.CT_FM_SquareCPEU].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</dataTable>
+

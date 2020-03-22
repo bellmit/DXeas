@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.salepayment.app</package>
+    <name>AreaTargetRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.salepayment.app.AreaTargetRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.salepayment.app.AreaTargetRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>abef861c-e2e4-4ba4-b6ac-b2599e741a85</id>
+            <parentID />
+            <source>SalerEntry.salerName=SalerEntry.saler.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>eff0ed9b-666e-485f-840a-98aaff63f982</id>
+            <parentID>abef861c-e2e4-4ba4-b6ac-b2599e741a85</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>f259e776-94f6-47fa-8963-1534dd9542f1</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f259e776-94f6-47fa-8963-1534dd9542f1</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtSalerEntry.getCell(rowIndex,"salerName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f1e2e712-9c04-44b1-b821-f80d1c8bdb92</id>
+            <parentID>abef861c-e2e4-4ba4-b6ac-b2599e741a85</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>71b6e6b7-9e6c-462c-a029-9257c02bf8c9</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>96c7fd28-850a-47f6-8ad3-6daf5fe3afa4</id>
+                        <expressionID>5bb833bc-d4cd-4dee-9bf0-3627ad7befec</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>0bb03324-4cac-492f-bd22-6d1b16f84d80</id>
+                        <expressionID>39236c2f-c635-4ac2-a0ae-2dddf659876b</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>71b6e6b7-9e6c-462c-a029-9257c02bf8c9</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5bb833bc-d4cd-4dee-9bf0-3627ad7befec</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>2a45f628-9b68-4c82-82ba-92fd9507a78b</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2a45f628-9b68-4c82-82ba-92fd9507a78b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtSalerEntry.getCell(rowIndex,"saler")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>39236c2f-c635-4ac2-a0ae-2dddf659876b</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>c6a266d7-3dfc-461b-b6c7-6f85910b79f0</id>
+            <name>SalerEntry_salerName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salepayment.app.AreaTargetRuleSet].actions.action[SalerEntry_salerName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salepayment.app.AreaTargetRuleSet].actions.action[SalerEntry_salerName_ActionInfo].description</description>
+            <expressionID>abef861c-e2e4-4ba4-b6ac-b2599e741a85</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>SalerEntry_salerName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salepayment.app.AreaTargetRuleSet].rules.conditionRule[SalerEntry_salerName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salepayment.app.AreaTargetRuleSet].rules.conditionRule[SalerEntry_salerName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="c6a266d7-3dfc-461b-b6c7-6f85910b79f0" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.AreaTargetRuleSet].actions.action[SalerEntry_salerName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.AreaTargetRuleSet].actions.action[SalerEntry_salerName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.AreaTargetRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.AreaTargetRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.AreaTargetRuleSet].rules.conditionRule[SalerEntry_salerName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.AreaTargetRuleSet].rules.conditionRule[SalerEntry_salerName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.AreaTargetRuleSet].rules.conditionRule[SalerEntry_salerName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="saler" />
+            <lang locale="zh_CN" value="saler" />
+            <lang locale="zh_TW" value="saler" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.AreaTargetRuleSet].rules.conditionRule[SalerEntry_salerName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

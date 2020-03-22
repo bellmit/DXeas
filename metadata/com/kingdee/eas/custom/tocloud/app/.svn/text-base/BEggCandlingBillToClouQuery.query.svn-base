@@ -1,0 +1,1695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.tocloud.app</package>
+    <name>BEggCandlingBillToClouQuery</name>
+    <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].alias</alias>
+    <description>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].description</description>
+    <userDefined>true</userDefined>
+    <reportDataSource />
+    <bizUnitPK />
+    <connectionProvider />
+    <subObjects>
+        <subEntity>
+            <name>BEggCandlingBillEggEntry</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].subObjects.subEntity[BEggCandlingBillEggEntry].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.hatch.app" />
+                <key name="name" value="BEggCandlingBillEggEntry" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>outBatch</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].subObjects.subEntity[outBatch].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.stocking.basedata.app" />
+                <key name="name" value="StockingBatch" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>material</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].subObjects.subEntity[material].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.master.material.app" />
+                <key name="name" value="Material" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>incubator</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].subObjects.subEntity[incubator].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.hatch.app" />
+                <key name="name" value="Incubator" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>parent</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].subObjects.subEntity[parent].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.hatch.app" />
+                <key name="name" value="BEggCandlingBill" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>operator</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].subObjects.subEntity[operator].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.person.app" />
+                <key name="name" value="Person" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>outHouse</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].subObjects.subEntity[outHouse].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.stocking.basedata.app" />
+                <key name="name" value="FarmHouseEntry" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>hatchFactory</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].subObjects.subEntity[hatchFactory].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.hatch.app" />
+                <key name="name" value="HatchBaseData" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>hatchFactory1</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].subObjects.subEntity[hatchFactory1].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="StorageOrgUnit" />
+            </entityRef>
+        </subEntity>
+    </subObjects>
+    <units>
+        <propertyUnit>
+            <name>f8dfccd8-027f-46ff-a48f-3f4d1ff4734a</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[f8dfccd8-027f-46ff-a48f-3f4d1ff4734a].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>f3eeab89-9c21-4130-a3cc-5b603e155415</key>
+                    <parentUnit>
+                        <key name="name" value="f8dfccd8-027f-46ff-a48f-3f4d1ff4734a" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BEggCandlingBillEggEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="outBatch" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>fb107317-88ed-4a15-bfa4-752d834d2f71</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[fb107317-88ed-4a15-bfa4-752d834d2f71].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>95ba0d03-144e-4e5a-95e7-a569fb468127</key>
+                    <parentUnit>
+                        <key name="name" value="fb107317-88ed-4a15-bfa4-752d834d2f71" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="outBatch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>3bf09c1a-e579-4ea2-82a1-276c5c625cca</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[3bf09c1a-e579-4ea2-82a1-276c5c625cca].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>d1b59e3b-890a-44dd-b038-d2e9ac9568b9</key>
+                    <parentUnit>
+                        <key name="name" value="3bf09c1a-e579-4ea2-82a1-276c5c625cca" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BEggCandlingBillEggEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="material" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>842a47a0-37e2-4128-944c-4b4931d19d38</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[842a47a0-37e2-4128-944c-4b4931d19d38].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>2e0e0c60-d2dd-43a4-84d6-257353dffa39</key>
+                    <parentUnit>
+                        <key name="name" value="842a47a0-37e2-4128-944c-4b4931d19d38" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="material" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>776a7d36-35f0-4037-a340-483ff6447da4</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[776a7d36-35f0-4037-a340-483ff6447da4].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>12300baa-0b9b-4af0-91ba-8bf69401855e</key>
+                    <parentUnit>
+                        <key name="name" value="776a7d36-35f0-4037-a340-483ff6447da4" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BEggCandlingBillEggEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="incubator" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>7d961e23-59cb-441a-a3fc-4d50d4977e43</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[7d961e23-59cb-441a-a3fc-4d50d4977e43].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0999f177-120a-4944-bb23-9d7981e2e5c4</key>
+                    <parentUnit>
+                        <key name="name" value="7d961e23-59cb-441a-a3fc-4d50d4977e43" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="incubator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>06fc800a-62bc-40e6-98ab-be8c3cf8814a</key>
+                    <parentUnit>
+                        <key name="name" value="id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BEggCandlingBillEggEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>stockingid</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[stockingid].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>a99b1689-9688-42c2-b156-3a0840492e90</key>
+                    <parentUnit>
+                        <key name="name" value="stockingid" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>d45432c2-1078-4447-92d3-a2357de8bfc3</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[d45432c2-1078-4447-92d3-a2357de8bfc3].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>94e69eb3-8e1e-4f0f-a6c5-e18da76ca1c8</key>
+                    <parentUnit>
+                        <key name="name" value="d45432c2-1078-4447-92d3-a2357de8bfc3" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BEggCandlingBillEggEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="parent" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>b6ac8f93-6966-4026-aea9-c6cf9f380671</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[b6ac8f93-6966-4026-aea9-c6cf9f380671].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>d32ac6bf-9631-4793-95bc-9175d6ab9817</key>
+                    <parentUnit>
+                        <key name="name" value="b6ac8f93-6966-4026-aea9-c6cf9f380671" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>c57255a7-43a4-44f6-a891-fc58866779a4</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[c57255a7-43a4-44f6-a891-fc58866779a4].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>a53469a8-14d1-4b9b-b583-25c5f74c3cf5</key>
+                    <parentUnit>
+                        <key name="name" value="c57255a7-43a4-44f6-a891-fc58866779a4" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="operator" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>1801132f-1f9e-48f5-ad1b-c4db5df606fd</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[1801132f-1f9e-48f5-ad1b-c4db5df606fd].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>bc918488-6418-496e-880a-5b062d5d1f33</key>
+                    <parentUnit>
+                        <key name="name" value="1801132f-1f9e-48f5-ad1b-c4db5df606fd" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="operator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>companyid</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[companyid].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>9e5e1b3f-6956-40eb-a02d-375752512d11</key>
+                    <parentUnit>
+                        <key name="name" value="companyid" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="hatchFactory1" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bizdate</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[bizdate].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0722785c-98cd-44f0-8485-8987012d8147</key>
+                    <parentUnit>
+                        <key name="name" value="bizdate" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bizDate" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>billNum</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[billNum].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>86405ce2-1ef1-4443-b10d-c3fe5ceb82f6</key>
+                    <parentUnit>
+                        <key name="name" value="billNum" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>operatorName</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[operatorName].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>aedd69b0-f1cd-4b3e-95a7-96caf2b703c5</key>
+                    <parentUnit>
+                        <key name="name" value="operatorName" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="operator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bateStatus</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[bateStatus].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>09526130-b25f-4f9d-b912-8c48e9e736ab</key>
+                    <parentUnit>
+                        <key name="name" value="bateStatus" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="baseStatus" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>incubatorName</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[incubatorName].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>7195df28-813c-4ebb-89a4-1f87d0f3c25f</key>
+                    <parentUnit>
+                        <key name="name" value="incubatorName" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="incubator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>batch</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[batch].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b807fd02-fd4c-404f-9a83-594c1cea6048</key>
+                    <parentUnit>
+                        <key name="name" value="batch" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="outBatch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>farmHouseName</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[farmHouseName].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0a751103-4ab8-42d0-8808-aa278ab290e7</key>
+                    <parentUnit>
+                        <key name="name" value="farmHouseName" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="outHouse" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>eggQtyhjh</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[eggQtyhjh].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>77443fdc-c4ab-4726-89a2-2c5785d703ea</key>
+                    <parentUnit>
+                        <key name="name" value="eggQtyhjh" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BEggCandlingBillEggEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="eggQty" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>cc758fc2-242e-43df-8387-66caf23fc6b3</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[cc758fc2-242e-43df-8387-66caf23fc6b3].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>2668053f-0cb2-49d6-8721-e862d294cced</key>
+                    <parentUnit>
+                        <key name="name" value="cc758fc2-242e-43df-8387-66caf23fc6b3" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BEggCandlingBillEggEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="outHouse" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>fbce435e-b5e9-4bd1-ad92-e41850b4d915</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[fbce435e-b5e9-4bd1-ad92-e41850b4d915].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>1f245894-d1e9-4632-ac27-d6172318c53d</key>
+                    <parentUnit>
+                        <key name="name" value="fbce435e-b5e9-4bd1-ad92-e41850b4d915" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="outHouse" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>healthEggQtyhjh</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[healthEggQtyhjh].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>414922a9-d580-4485-aef0-0465a25b299c</key>
+                    <parentUnit>
+                        <key name="name" value="healthEggQtyhjh" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BEggCandlingBillEggEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="healthEggQty" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>noFertileEggQtyhjh</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[noFertileEggQtyhjh].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>9096c4e2-dc98-4fba-babe-be67646d5d19</key>
+                    <parentUnit>
+                        <key name="name" value="noFertileEggQtyhjh" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BEggCandlingBillEggEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="noFertileEggQty" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>deathEggQtyhjh</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[deathEggQtyhjh].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>6766f987-522e-43ae-b85a-e040ee8f6358</key>
+                    <parentUnit>
+                        <key name="name" value="deathEggQtyhjh" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BEggCandlingBillEggEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="addleEggQty" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>rottenEggQtyhjh</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[rottenEggQtyhjh].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>39688e5f-9391-4b18-8dfe-715a570b82b1</key>
+                    <parentUnit>
+                        <key name="name" value="rottenEggQtyhjh" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BEggCandlingBillEggEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="rottenEggQty" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>brokenEggQtyhjh</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[brokenEggQtyhjh].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>584f4bba-374d-4010-ab3d-c965a744fd30</key>
+                    <parentUnit>
+                        <key name="name" value="brokenEggQtyhjh" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BEggCandlingBillEggEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="brokenEggQty" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>b62d055a-5721-4787-a358-0523074a0dec</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[b62d055a-5721-4787-a358-0523074a0dec].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>adeddfdd-28b8-4bb2-a65a-b0bc43cb1bdd</key>
+                    <parentUnit>
+                        <key name="name" value="b62d055a-5721-4787-a358-0523074a0dec" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="hatchFactory" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>4c2cff9c-97fd-4121-97da-9a53d8870dda</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[4c2cff9c-97fd-4121-97da-9a53d8870dda].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>31822dc3-24cc-4a9e-8be1-808397591fd8</key>
+                    <parentUnit>
+                        <key name="name" value="4c2cff9c-97fd-4121-97da-9a53d8870dda" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="hatchFactory" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>26f4f913-e357-40d9-92dc-71ab896a80e5</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[26f4f913-e357-40d9-92dc-71ab896a80e5].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>23301c76-ff50-4afb-a31c-8524c60b62e2</key>
+                    <parentUnit>
+                        <key name="name" value="26f4f913-e357-40d9-92dc-71ab896a80e5" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="hatchFactory" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="hatchFactory" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>a106e1d6-2a3d-41ee-851b-81abbc34739c</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[a106e1d6-2a3d-41ee-851b-81abbc34739c].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>1d352b38-398f-441f-a37f-84f2fbb3c3dd</key>
+                    <parentUnit>
+                        <key name="name" value="a106e1d6-2a3d-41ee-851b-81abbc34739c" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="hatchFactory1" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>batchid</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[batchid].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>f44b0e74-ccd1-449d-b000-add81924c240</key>
+                    <parentUnit>
+                        <key name="name" value="batchid" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="outBatch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </queryField>
+    </units>
+    <defaultFilter>
+        <name>defaultFilter</name>
+        <formulaString />
+        <query>
+            <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+            <key name="name" value="BEggCandlingBillToClouQuery" />
+        </query>
+    </defaultFilter>
+    <queryPK>
+        <name>QueryPK</name>
+        <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].queryPK[QueryPK].alias</alias>
+        <description>joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].queryPK[QueryPK].description</description>
+        <keyProperties>
+            <queryField>
+                <key name="name" value="id" />
+            </queryField>
+        </keyProperties>
+    </queryPK>
+    <isDistinct>false</isDistinct>
+    <joins>
+        <join>
+            <name>097fc7c7-bc53-4cf9-8305-1c5e5809355a</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="BEggCandlingBillEggEntry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="outBatch" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>9b318acb-f225-4ed4-bfe0-45254725c961</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="f8dfccd8-027f-46ff-a48f-3f4d1ff4734a" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="fb107317-88ed-4a15-bfa4-752d834d2f71" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="097fc7c7-bc53-4cf9-8305-1c5e5809355a" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </join>
+        <join>
+            <name>664b0ac9-45b1-4f84-a1f1-ff52ebf58d65</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="BEggCandlingBillEggEntry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="material" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>5c10b63e-ec38-47d8-adbd-394ce7d0a664</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="3bf09c1a-e579-4ea2-82a1-276c5c625cca" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="842a47a0-37e2-4128-944c-4b4931d19d38" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="664b0ac9-45b1-4f84-a1f1-ff52ebf58d65" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </join>
+        <join>
+            <name>9598f337-61e4-42a8-bf59-e9364c47fb38</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="BEggCandlingBillEggEntry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="incubator" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>a13ca233-5787-4dc5-b805-226626eafc8e</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="776a7d36-35f0-4037-a340-483ff6447da4" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="7d961e23-59cb-441a-a3fc-4d50d4977e43" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="9598f337-61e4-42a8-bf59-e9364c47fb38" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </join>
+        <join>
+            <name>bd655571-ee8c-45a6-8886-4dbd1af2f310</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="BEggCandlingBillEggEntry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="parent" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>820a8596-8839-4022-9e69-edb144e9ea0d</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="d45432c2-1078-4447-92d3-a2357de8bfc3" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="b6ac8f93-6966-4026-aea9-c6cf9f380671" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="bd655571-ee8c-45a6-8886-4dbd1af2f310" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </join>
+        <join>
+            <name>1baeeda8-a496-4152-bd56-5f64c9f5afe5</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="parent" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="operator" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>0ffe5e35-38a9-4b68-b8f5-6cdf09dca42d</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="c57255a7-43a4-44f6-a891-fc58866779a4" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="1801132f-1f9e-48f5-ad1b-c4db5df606fd" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="1baeeda8-a496-4152-bd56-5f64c9f5afe5" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </join>
+        <join>
+            <name>8b238538-e67e-41ef-8263-c87085eacdd3</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="BEggCandlingBillEggEntry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="outHouse" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>b513f9c0-cc2d-4435-979c-786e04503063</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="cc758fc2-242e-43df-8387-66caf23fc6b3" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="fbce435e-b5e9-4bd1-ad92-e41850b4d915" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="8b238538-e67e-41ef-8263-c87085eacdd3" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </join>
+        <join>
+            <name>b260e9e8-90e7-4348-add1-3cf38b389a26</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="parent" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="hatchFactory" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>c95aa10b-d5ad-4da9-967d-86a88ac19c7b</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="b62d055a-5721-4787-a358-0523074a0dec" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="4c2cff9c-97fd-4121-97da-9a53d8870dda" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="b260e9e8-90e7-4348-add1-3cf38b389a26" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </join>
+        <join>
+            <name>38116aba-72b1-4c59-aa2e-98158435471a</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="hatchFactory" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="hatchFactory1" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>60aacb4e-0f0e-417f-a49c-b153faa61f2c</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="26f4f913-e357-40d9-92dc-71ab896a80e5" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="a106e1d6-2a3d-41ee-851b-81abbc34739c" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="38116aba-72b1-4c59-aa2e-98158435471a" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BEggCandlingBillToClouQuery" />
+            </query>
+        </join>
+    </joins>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="照蛋记录单同步其他入库单" />
+            <lang locale="zh_HK" value="照蛋記錄單同步其他入庫單" />
+            <lang locale="zh_TW" value="照蛋記錄單同步其他入庫單" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].queryPK[QueryPK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].queryPK[QueryPK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].subObjects.subEntity[BEggCandlingBillEggEntry].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].subObjects.subEntity[hatchFactory1].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].subObjects.subEntity[hatchFactory].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].subObjects.subEntity[incubator].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].subObjects.subEntity[material].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].subObjects.subEntity[operator].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].subObjects.subEntity[outBatch].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].subObjects.subEntity[outHouse].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].subObjects.subEntity[parent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[1801132f-1f9e-48f5-ad1b-c4db5df606fd].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[26f4f913-e357-40d9-92dc-71ab896a80e5].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[3bf09c1a-e579-4ea2-82a1-276c5c625cca].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[4c2cff9c-97fd-4121-97da-9a53d8870dda].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[776a7d36-35f0-4037-a340-483ff6447da4].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[7d961e23-59cb-441a-a3fc-4d50d4977e43].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[842a47a0-37e2-4128-944c-4b4931d19d38].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[a106e1d6-2a3d-41ee-851b-81abbc34739c].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[b62d055a-5721-4787-a358-0523074a0dec].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[b6ac8f93-6966-4026-aea9-c6cf9f380671].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[c57255a7-43a4-44f6-a891-fc58866779a4].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[cc758fc2-242e-43df-8387-66caf23fc6b3].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[d45432c2-1078-4447-92d3-a2357de8bfc3].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[f8dfccd8-027f-46ff-a48f-3f4d1ff4734a].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[fb107317-88ed-4a15-bfa4-752d834d2f71].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.propertyUnit[fbce435e-b5e9-4bd1-ad92-e41850b4d915].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[batch].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="批次" />
+            <lang locale="zh_HK" value="批次" />
+            <lang locale="zh_TW" value="批次" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[batchid].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="批次id" />
+            <lang locale="zh_HK" value="批次id" />
+            <lang locale="zh_TW" value="批次id" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[bateStatus].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据状态" />
+            <lang locale="zh_HK" value="單據狀態" />
+            <lang locale="zh_TW" value="單據狀態" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[billNum].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据编号" />
+            <lang locale="zh_HK" value="單據編號" />
+            <lang locale="zh_TW" value="單據編號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[bizdate].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="照蛋日期" />
+            <lang locale="zh_HK" value="照蛋日期" />
+            <lang locale="zh_TW" value="照蛋日期" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[brokenEggQtyhjh].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="破损蛋" />
+            <lang locale="zh_HK" value="破損蛋" />
+            <lang locale="zh_TW" value="破損蛋" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[companyid].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="库存组织" />
+            <lang locale="zh_HK" value="庫存組織" />
+            <lang locale="zh_TW" value="庫存組織" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[deathEggQtyhjh].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="死精蛋" />
+            <lang locale="zh_HK" value="死精蛋" />
+            <lang locale="zh_TW" value="死精蛋" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[eggQtyhjh].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="上孵数量" />
+            <lang locale="zh_HK" value="上孵數量" />
+            <lang locale="zh_TW" value="上孵數量" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[farmHouseName].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="棚舍" />
+            <lang locale="zh_HK" value="棚舍" />
+            <lang locale="zh_TW" value="棚舍" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[healthEggQtyhjh].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="照蛋活胚" />
+            <lang locale="zh_HK" value="照蛋活胚" />
+            <lang locale="zh_TW" value="照蛋活胚" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="照蛋记录单分录id" />
+            <lang locale="zh_HK" value="照蛋記錄單分錄id" />
+            <lang locale="zh_TW" value="照蛋記錄單分錄id" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[incubatorName].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="孵化箱" />
+            <lang locale="zh_HK" value="孵化箱" />
+            <lang locale="zh_TW" value="孵化箱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[noFertileEggQtyhjh].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="无精蛋" />
+            <lang locale="zh_HK" value="無精蛋" />
+            <lang locale="zh_TW" value="無精蛋" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[operatorName].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="操作员" />
+            <lang locale="zh_HK" value="操作員" />
+            <lang locale="zh_TW" value="操作員" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[rottenEggQtyhjh].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="臭蛋" />
+            <lang locale="zh_HK" value="臭蛋" />
+            <lang locale="zh_TW" value="臭蛋" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BEggCandlingBillToClouQuery].units.queryField[stockingid].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="种蛋上孵单id" />
+            <lang locale="zh_HK" value="種蛋上孵單id" />
+            <lang locale="zh_TW" value="種蛋上孵單id" />
+        </rs>
+    </resource>
+</joinQuery>
+

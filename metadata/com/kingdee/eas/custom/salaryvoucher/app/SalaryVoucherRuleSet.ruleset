@@ -1,0 +1,1551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.salaryvoucher.app</package>
+    <name>SalaryVoucherRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>3df096b4-1760-4f6d-9f19-8e6a04ee44e3</id>
+            <parentID />
+            <source>entrys.CmpItem.cmpItemName=entrys.CmpItem.cmpItemNum.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>8fa2184d-c7a3-4732-b776-7e77540ed52d</id>
+            <parentID>3df096b4-1760-4f6d-9f19-8e6a04ee44e3</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>b538946b-09f3-4099-8851-c747b13d56a8</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b538946b-09f3-4099-8851-c747b13d56a8</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtCmpItem.getCell(rowIndex,"cmpItemName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>af16a426-9160-48bc-8d24-b33662f2624b</id>
+            <parentID>3df096b4-1760-4f6d-9f19-8e6a04ee44e3</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>e0947e25-88b5-4292-856d-2817ef157126</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>c94f8598-2919-46c5-a91f-e25e3bd21c6e</id>
+                        <expressionID>0e19799f-48cd-4655-adff-db22c5fcd9b5</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>f4f4efcc-43a8-4e24-aab9-839c8be0462e</id>
+                        <expressionID>fda230d0-aa6c-4216-81e1-01eba2fab5b0</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e0947e25-88b5-4292-856d-2817ef157126</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0e19799f-48cd-4655-adff-db22c5fcd9b5</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>809259a4-7fad-478d-ab87-9ec600e1d151</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>809259a4-7fad-478d-ab87-9ec600e1d151</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtCmpItem.getCell(rowIndex,"cmpItemNum")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fda230d0-aa6c-4216-81e1-01eba2fab5b0</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>a81106d3-4266-4dba-9044-db1f7159f242</id>
+            <parentID />
+            <source>entrys.AssistActItem.AssistActItemNumber=entrys.AssistActItem.assistActItem.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>6619b09e-69de-4ee1-9dfb-86efe46ab042</id>
+            <parentID>a81106d3-4266-4dba-9044-db1f7159f242</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>0a4abd68-344e-4c76-a1d7-f45976bc9c26</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0a4abd68-344e-4c76-a1d7-f45976bc9c26</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtAssistActItem.getCell(rowIndex,"AssistActItemNumber")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>091674c4-fbda-454b-ac1a-2beb17a535b5</id>
+            <parentID>a81106d3-4266-4dba-9044-db1f7159f242</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>b586fed4-165a-4668-8ae8-b4f945c10b96</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>ef611e70-ee44-41f1-b90a-da337ac3aa57</id>
+                        <expressionID>a136a542-3082-45a6-becb-22c40c1f8cb6</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>d2602351-4872-4ce5-a48a-7c35880b20ab</id>
+                        <expressionID>c812fd7d-e352-4205-927c-577792566293</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b586fed4-165a-4668-8ae8-b4f945c10b96</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a136a542-3082-45a6-becb-22c40c1f8cb6</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>24acf4f7-0997-42d6-8450-a56ba175088a</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>24acf4f7-0997-42d6-8450-a56ba175088a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtAssistActItem.getCell(rowIndex,"assistActItem")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c812fd7d-e352-4205-927c-577792566293</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>91c57398-9be7-447e-acfb-93cd5b082b95</id>
+            <parentID />
+            <source>entrys.AssistActItem.AssistActItemName=entrys.AssistActItem.assistActItem.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>95085840-e82b-4582-965a-ccd05195eb14</id>
+            <parentID>91c57398-9be7-447e-acfb-93cd5b082b95</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>e9ae73c7-d382-45c6-b65a-5450f1774f01</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e9ae73c7-d382-45c6-b65a-5450f1774f01</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtAssistActItem.getCell(rowIndex,"AssistActItemName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>29f9bb19-fbd8-4dfd-a769-740644a4fe54</id>
+            <parentID>91c57398-9be7-447e-acfb-93cd5b082b95</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>f16bdd25-6646-4a7e-ad6d-9b0cd9275fe1</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>cb9bb7fa-406e-4828-b5ec-1e07a244787b</id>
+                        <expressionID>1f573b8b-f017-4967-aa52-b540386b4373</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>9e534ea8-b51c-4206-a72c-406d3faead89</id>
+                        <expressionID>2b6c94d9-367f-4ca5-9e0b-827d0d4b9aa8</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f16bdd25-6646-4a7e-ad6d-9b0cd9275fe1</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1f573b8b-f017-4967-aa52-b540386b4373</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>2070a6a5-869c-4cee-b9ab-fb88791ee1fa</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2070a6a5-869c-4cee-b9ab-fb88791ee1fa</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtAssistActItem.getCell(rowIndex,"assistActItem")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2b6c94d9-367f-4ca5-9e0b-827d0d4b9aa8</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>0e86a068-d8a7-48a9-abb6-bfbdf6d8f6dc</id>
+            <parentID />
+            <source>Person.name=Person.number.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>a1d0c15b-aa00-45f1-9091-73cd322df4cc</id>
+            <parentID>0e86a068-d8a7-48a9-abb6-bfbdf6d8f6dc</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>e9e9ae6f-904d-42e6-ace9-7dd3432bd5f8</ownerID>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e9e9ae6f-904d-42e6-ace9-7dd3432bd5f8</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPerson</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>565edd8c-10f4-43cc-9d63-6788c252cfc2</id>
+            <parentID>0e86a068-d8a7-48a9-abb6-bfbdf6d8f6dc</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>78fe623f-9cb7-4890-8d1f-36d179a28d4e</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>40a8472a-2911-4ba9-8589-704eb3192769</id>
+                        <expressionID>7856debb-2d80-44df-96f5-9898f8cdc964</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>a62a96f2-0767-417f-ada6-7c129eb38278</id>
+                        <expressionID>72f2e324-9402-4feb-9ee3-f9e2d62f08e9</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>78fe623f-9cb7-4890-8d1f-36d179a28d4e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7856debb-2d80-44df-96f5-9898f8cdc964</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>c96388e1-a2c9-448e-bcda-1c94e6588ea8</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c96388e1-a2c9-448e-bcda-1c94e6588ea8</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtPerson.getCell(rowIndex,"number")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>72f2e324-9402-4feb-9ee3-f9e2d62f08e9</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>636b9a85-25a5-4dc2-a60d-2704b1fee23d</id>
+            <parentID />
+            <source>Person.GreenDreamProjectCode=Person.GreenDreamProject.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>e526616a-c3cb-44aa-b17e-10c8c5acc051</id>
+            <parentID>636b9a85-25a5-4dc2-a60d-2704b1fee23d</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>cdfff2b6-a252-42d8-b799-2e818b0cb669</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cdfff2b6-a252-42d8-b799-2e818b0cb669</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPerson.getCell(rowIndex,"GreenDreamProjectCode")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1d731a9b-53f4-4d4a-ae5e-820603f3da10</id>
+            <parentID>636b9a85-25a5-4dc2-a60d-2704b1fee23d</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>2743b3c9-18e1-423b-a523-a0f668649f82</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>2aaa5379-349d-4508-8bf4-0862ab84bbd3</id>
+                        <expressionID>19537e56-79aa-4844-9e26-2c6e61b3401f</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>4f296612-0725-432f-9b3b-cf54a72bd907</id>
+                        <expressionID>2e191e1c-5984-45ae-82fc-e3c82202929b</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2743b3c9-18e1-423b-a523-a0f668649f82</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>19537e56-79aa-4844-9e26-2c6e61b3401f</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>0109c7c6-c405-4411-bb0a-33584a2fd3d6</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0109c7c6-c405-4411-bb0a-33584a2fd3d6</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtPerson.getCell(rowIndex,"GreenDreamProject")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2e191e1c-5984-45ae-82fc-e3c82202929b</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>26ce6a3e-0bc8-4f58-b491-e2f84b1c1877</id>
+            <parentID />
+            <source>Person.GreenDreamProjectName=Person.GreenDreamProject.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>2ab60441-7e80-44e2-9e96-d6709f454434</id>
+            <parentID>26ce6a3e-0bc8-4f58-b491-e2f84b1c1877</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>4a040dd4-cf57-4ab2-a824-d1ac3d86e5bb</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4a040dd4-cf57-4ab2-a824-d1ac3d86e5bb</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPerson.getCell(rowIndex,"GreenDreamProjectName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>97223f1a-b48c-4d0d-9c38-6a0eaaccc3c9</id>
+            <parentID>26ce6a3e-0bc8-4f58-b491-e2f84b1c1877</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>257bed7d-f246-4bf0-ab49-480028bd716b</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>c3e0f5f5-b27e-4a9a-bd6a-c91ba61765c6</id>
+                        <expressionID>b699292b-909b-4a2e-89dc-cc1971018905</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>7fe1f333-2109-4db1-9cb5-415e7b819c2c</id>
+                        <expressionID>03964bee-12e4-4624-8792-f1259c00618c</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>257bed7d-f246-4bf0-ab49-480028bd716b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b699292b-909b-4a2e-89dc-cc1971018905</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>fb605bec-1e4a-499a-950e-a88bb1282d8f</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fb605bec-1e4a-499a-950e-a88bb1282d8f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtPerson.getCell(rowIndex,"GreenDreamProject")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>03964bee-12e4-4624-8792-f1259c00618c</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>18cae1fc-eaf3-4b86-bea5-1080ff6d934a</id>
+            <parentID />
+            <source>Person.GeneralAsstActTypeGroupCode=Person.GeneralAsstActTypeGroup.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>ecbef8bb-42db-49c8-9020-86a890a5ddeb</id>
+            <parentID>18cae1fc-eaf3-4b86-bea5-1080ff6d934a</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>3f6eb1b4-d0cd-4f1c-9b62-8bde3a330659</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3f6eb1b4-d0cd-4f1c-9b62-8bde3a330659</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPerson.getCell(rowIndex,"GeneralAsstActTypeGroupCode")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bc313f69-83ec-48ac-b88a-bea78c5d02d6</id>
+            <parentID>18cae1fc-eaf3-4b86-bea5-1080ff6d934a</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>36c44981-39da-49a1-a277-72cd2dc8327b</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>62d641e0-498a-4a86-bee2-2d73de5b69f2</id>
+                        <expressionID>8913d979-3ab9-4a70-8453-80e036f9afa6</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>e2a969d1-dff6-4bbc-a25c-f8419c20fcb7</id>
+                        <expressionID>312005df-9e21-491c-bbc0-876ac0a70cd9</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>36c44981-39da-49a1-a277-72cd2dc8327b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8913d979-3ab9-4a70-8453-80e036f9afa6</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>68331625-42ac-4b1d-b164-1eebe7d63662</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>68331625-42ac-4b1d-b164-1eebe7d63662</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtPerson.getCell(rowIndex,"GeneralAsstActTypeGroup")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>312005df-9e21-491c-bbc0-876ac0a70cd9</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>8c28a3e0-2fc3-47f3-9d95-3f71d8cbc786</id>
+            <parentID />
+            <source>Person.GeneralAsstActTypeGroupName=Person.GeneralAsstActTypeGroup.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>7ef78403-5bd6-4823-bb95-a7003ad9b227</id>
+            <parentID>8c28a3e0-2fc3-47f3-9d95-3f71d8cbc786</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>7be9b555-b476-40b5-8326-ed34d95d536e</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7be9b555-b476-40b5-8326-ed34d95d536e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPerson.getCell(rowIndex,"GeneralAsstActTypeGroupName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ab0b52b5-7bb0-45d1-b8c0-f5aaa7561d57</id>
+            <parentID>8c28a3e0-2fc3-47f3-9d95-3f71d8cbc786</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>b2e1ddec-8863-49c9-b4b2-c2f798ff3a45</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>b7acf4a0-039e-4859-86b8-3dd94a525ae7</id>
+                        <expressionID>4a1d7ca6-36e0-4db8-a2ec-d5b9abcc6d8f</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>3a244672-4374-45b6-82d3-82834694ec65</id>
+                        <expressionID>7975666c-7cb4-46ca-9b66-be785a02b883</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b2e1ddec-8863-49c9-b4b2-c2f798ff3a45</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4a1d7ca6-36e0-4db8-a2ec-d5b9abcc6d8f</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>497d6310-4265-480f-87fd-d5334e68d310</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>497d6310-4265-480f-87fd-d5334e68d310</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtPerson.getCell(rowIndex,"GeneralAsstActTypeGroup")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7975666c-7cb4-46ca-9b66-be785a02b883</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>730aeed8-ccc0-4bb0-9195-307a2b283977</id>
+            <parentID />
+            <source>Person.GreenDreamProjectcCode=Person.GreenDreamProject.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>7ee968be-29e6-4f0f-be10-b8390a938ac1</id>
+            <parentID>730aeed8-ccc0-4bb0-9195-307a2b283977</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>2d276b31-531e-4c03-a8e8-429429ec6639</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2d276b31-531e-4c03-a8e8-429429ec6639</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPerson.getCell(rowIndex,"GreenDreamProjectcCode")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>da2a4b1c-68c9-450a-882a-76fccdeb1f75</id>
+            <parentID>730aeed8-ccc0-4bb0-9195-307a2b283977</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>1c5238d0-1c78-4baf-a8e8-be157b06bd02</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>4b44b71b-be9f-44a4-985e-8ec440b404fd</id>
+                        <expressionID>6cb86a65-c6a5-42c3-af8b-8813f51fc070</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>6c17755e-4437-42bf-9ab5-e13e1f5ca619</id>
+                        <expressionID>2cfa1187-d64b-414d-8dec-87dffe7c37cd</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1c5238d0-1c78-4baf-a8e8-be157b06bd02</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6cb86a65-c6a5-42c3-af8b-8813f51fc070</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>7ee96884-3b14-48cd-8a80-5ce255fef62d</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7ee96884-3b14-48cd-8a80-5ce255fef62d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtPerson.getCell(rowIndex,"GreenDreamProject")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2cfa1187-d64b-414d-8dec-87dffe7c37cd</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>c06c25b0-b0c6-4d47-b7e0-b7893a9b83de</id>
+            <parentID />
+            <source>Person.GreenDreamProjectName=Person.GreenDreamProject.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>9a238733-b352-479a-b4bc-e4165bbb371c</id>
+            <parentID>c06c25b0-b0c6-4d47-b7e0-b7893a9b83de</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>09d31f9f-72fd-4577-a5c7-7e09038e9488</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>09d31f9f-72fd-4577-a5c7-7e09038e9488</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPerson.getCell(rowIndex,"GreenDreamProjectName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>52b1ab78-08e4-4f2c-a562-02f0bfffa851</id>
+            <parentID>c06c25b0-b0c6-4d47-b7e0-b7893a9b83de</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>2bedc1c5-e4fb-4471-91f5-f9a25de3a8ac</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>60c9b99b-9a10-47bc-91f3-d7ae44fbbf05</id>
+                        <expressionID>4ff3fd2c-4ea5-40a1-86c5-43805e302880</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>2323c725-838e-4cb2-89ce-80e51ca89a5e</id>
+                        <expressionID>cd634c5f-1dc4-4342-ac6b-da0edef7e83c</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2bedc1c5-e4fb-4471-91f5-f9a25de3a8ac</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4ff3fd2c-4ea5-40a1-86c5-43805e302880</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>23d1f335-3c5d-44cb-b181-b326745eb535</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>23d1f335-3c5d-44cb-b181-b326745eb535</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtPerson.getCell(rowIndex,"GreenDreamProject")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cd634c5f-1dc4-4342-ac6b-da0edef7e83c</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>c436e9b0-25b4-42a9-9de7-013e5682deb5</id>
+            <parentID />
+            <source>Person.GreenDreamProjectCode=Person.GreenDreamProject.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>e97f0df4-b325-4b7b-9574-28c69a34f669</id>
+            <parentID>c436e9b0-25b4-42a9-9de7-013e5682deb5</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>f92b53ef-3062-42a3-aa86-37270093197b</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f92b53ef-3062-42a3-aa86-37270093197b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPerson.getCell(rowIndex,"GreenDreamProjectCode")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3d5cae07-0993-4f08-9af5-44438cdc0dbf</id>
+            <parentID>c436e9b0-25b4-42a9-9de7-013e5682deb5</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>321db8e2-ca49-4852-b58f-fe40a4b5f8c6</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>02ef17ee-49df-4d01-960b-cc80febe0b1e</id>
+                        <expressionID>bb738c8b-8151-4328-943a-8cc1702ebf69</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>71f1a732-f9d7-4d3a-9c54-ba878341798f</id>
+                        <expressionID>35cd667e-a6d4-417d-a77f-0bbfbe3e8964</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>321db8e2-ca49-4852-b58f-fe40a4b5f8c6</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bb738c8b-8151-4328-943a-8cc1702ebf69</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>8fe9f0e5-aaeb-4439-8a6e-7fea68277252</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8fe9f0e5-aaeb-4439-8a6e-7fea68277252</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtPerson.getCell(rowIndex,"GreenDreamProject")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>35cd667e-a6d4-417d-a77f-0bbfbe3e8964</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>9ab70dc5-3c3c-492b-8286-3196bd9270d6</id>
+            <parentID />
+            <source>Person.GreenDreamProjectName=Person.GreenDreamProject.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>96caa0d6-8e0d-400f-8a84-db559a71565f</id>
+            <parentID>9ab70dc5-3c3c-492b-8286-3196bd9270d6</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>847ffe13-2e9f-45d3-8d66-3ad436134050</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>847ffe13-2e9f-45d3-8d66-3ad436134050</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPerson.getCell(rowIndex,"GreenDreamProjectName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b2ddaa53-967a-4897-b361-033451addc14</id>
+            <parentID>9ab70dc5-3c3c-492b-8286-3196bd9270d6</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>b8eb2698-100f-4f7a-bb58-f59f93a44c28</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>02281e96-1bd7-4f8a-9a6f-5545b44da39b</id>
+                        <expressionID>276c4feb-498b-4ee9-959e-911d393fc6df</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>c655a53b-4deb-4c35-a3c7-d3e39e2ca2f7</id>
+                        <expressionID>1d45257c-5501-4fdf-960b-f421be7a4ef2</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b8eb2698-100f-4f7a-bb58-f59f93a44c28</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>276c4feb-498b-4ee9-959e-911d393fc6df</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>814cca66-b19a-4f3e-9f74-0ad1596e808b</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>814cca66-b19a-4f3e-9f74-0ad1596e808b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtPerson.getCell(rowIndex,"GreenDreamProject")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1d45257c-5501-4fdf-960b-f421be7a4ef2</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>744b270f-aac0-4bb4-98c2-9a30776a48d0</id>
+            <parentID />
+            <source>entrys.CmpItem.cmpItemCode=entrys.CmpItem.cmpItemNum.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>3ea2ccc0-f9e6-47e0-86d6-f0632763a159</id>
+            <parentID>744b270f-aac0-4bb4-98c2-9a30776a48d0</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>1434c5ff-8bf6-4c20-8c8d-9146d6d6506f</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1434c5ff-8bf6-4c20-8c8d-9146d6d6506f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtCmpItem.getCell(rowIndex,"cmpItemCode")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>47763e30-0dc6-4bf0-8d15-893ddee5743a</id>
+            <parentID>744b270f-aac0-4bb4-98c2-9a30776a48d0</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>7ead9cb3-38c3-4c85-b9fd-e5451a62048f</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>3610672c-7320-4cb2-9868-c3fc3467da36</id>
+                        <expressionID>1f9223b0-b936-4fee-8e8a-54dcc7f84da4</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>ef217362-57e2-4d9c-b0d4-a9e2c3acde43</id>
+                        <expressionID>694e5f31-c7a4-4ab7-8a49-94ec0286a910</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7ead9cb3-38c3-4c85-b9fd-e5451a62048f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1f9223b0-b936-4fee-8e8a-54dcc7f84da4</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>b0c2e9f3-b517-4513-be8a-6e699f7b9d45</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b0c2e9f3-b517-4513-be8a-6e699f7b9d45</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtCmpItem.getCell(rowIndex,"cmpItemNum")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>694e5f31-c7a4-4ab7-8a49-94ec0286a910</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>8b959617-dae2-4b1b-b277-cd99efaaf217</id>
+            <name>CmpItem_cmpItemName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[CmpItem_cmpItemName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[CmpItem_cmpItemName_ActionInfo].description</description>
+            <expressionID>3df096b4-1760-4f6d-9f19-8e6a04ee44e3</expressionID>
+        </action>
+        <action>
+            <id>d30a9836-f3ef-4643-a859-0d2b94045cc4</id>
+            <name>AssistActItem_AssistActItemNumber_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[AssistActItem_AssistActItemNumber_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[AssistActItem_AssistActItemNumber_ActionInfo].description</description>
+            <expressionID>a81106d3-4266-4dba-9044-db1f7159f242</expressionID>
+        </action>
+        <action>
+            <id>120954a7-0f3d-4499-9cb9-57e92f04d1ec</id>
+            <name>AssistActItem_AssistActItemName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[AssistActItem_AssistActItemName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[AssistActItem_AssistActItemName_ActionInfo].description</description>
+            <expressionID>91c57398-9be7-447e-acfb-93cd5b082b95</expressionID>
+        </action>
+        <action>
+            <id>af4f324f-2346-40cf-89f5-b60e649dd9df</id>
+            <name>Person_name_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_name_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_name_ActionInfo].description</description>
+            <expressionID>0e86a068-d8a7-48a9-abb6-bfbdf6d8f6dc</expressionID>
+        </action>
+        <action>
+            <id>f85bb44d-29c5-4c27-ad1d-ac172341465b</id>
+            <name>Person_GreenDreamProjectCode_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GreenDreamProjectCode_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GreenDreamProjectCode_ActionInfo].description</description>
+            <expressionID>636b9a85-25a5-4dc2-a60d-2704b1fee23d</expressionID>
+        </action>
+        <action>
+            <id>1e70a127-799c-47ff-a592-b6100914a873</id>
+            <name>Person_GreenDreamProjectName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GreenDreamProjectName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GreenDreamProjectName_ActionInfo].description</description>
+            <expressionID>26ce6a3e-0bc8-4f58-b491-e2f84b1c1877</expressionID>
+        </action>
+        <action>
+            <id>ccbf05b2-6d2f-426d-853a-e6d8deca91a0</id>
+            <name>Person_GeneralAsstActTypeGroupCode_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GeneralAsstActTypeGroupCode_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GeneralAsstActTypeGroupCode_ActionInfo].description</description>
+            <expressionID>18cae1fc-eaf3-4b86-bea5-1080ff6d934a</expressionID>
+        </action>
+        <action>
+            <id>8c6377e0-a8cb-4029-9e2b-3d19d3767d0c</id>
+            <name>Person_GeneralAsstActTypeGroupName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GeneralAsstActTypeGroupName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GeneralAsstActTypeGroupName_ActionInfo].description</description>
+            <expressionID>8c28a3e0-2fc3-47f3-9d95-3f71d8cbc786</expressionID>
+        </action>
+        <action>
+            <id>3328fa68-7457-4a27-91fe-4ed2b329616d</id>
+            <name>Person_GreenDreamProjectcCode_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GreenDreamProjectcCode_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GreenDreamProjectcCode_ActionInfo].description</description>
+            <expressionID>730aeed8-ccc0-4bb0-9195-307a2b283977</expressionID>
+        </action>
+        <action>
+            <id>c3caa37e-4e00-4406-9539-d7a5c14f1e44</id>
+            <name>Person_GreenDreamProjectName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GreenDreamProjectName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GreenDreamProjectName_ActionInfo].description</description>
+            <expressionID>c06c25b0-b0c6-4d47-b7e0-b7893a9b83de</expressionID>
+        </action>
+        <action>
+            <id>c692c6ef-556b-4922-8d06-3b215cfa984f</id>
+            <name>Person_GreenDreamProjectCode_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GreenDreamProjectCode_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GreenDreamProjectCode_ActionInfo].description</description>
+            <expressionID>c436e9b0-25b4-42a9-9de7-013e5682deb5</expressionID>
+        </action>
+        <action>
+            <id>d9d5a2cb-6b8c-4101-909a-f17420644a5b</id>
+            <name>Person_GreenDreamProjectName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GreenDreamProjectName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GreenDreamProjectName_ActionInfo].description</description>
+            <expressionID>9ab70dc5-3c3c-492b-8286-3196bd9270d6</expressionID>
+        </action>
+        <action>
+            <id>6510fabc-734b-4b66-9768-e79bcecce877</id>
+            <name>CmpItem_cmpItemCode_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[CmpItem_cmpItemCode_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[CmpItem_cmpItemCode_ActionInfo].description</description>
+            <expressionID>744b270f-aac0-4bb4-98c2-9a30776a48d0</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>Person_name_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[Person_name_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[Person_name_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="af4f324f-2346-40cf-89f5-b60e649dd9df" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>Person_GreenDreamProjectCode_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[Person_GreenDreamProjectCode_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[Person_GreenDreamProjectCode_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="c692c6ef-556b-4922-8d06-3b215cfa984f" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>Person_GreenDreamProjectName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[Person_GreenDreamProjectName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[Person_GreenDreamProjectName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="d9d5a2cb-6b8c-4101-909a-f17420644a5b" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>CmpItem_cmpItemName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[CmpItem_cmpItemName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[CmpItem_cmpItemName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="8b959617-dae2-4b1b-b277-cd99efaaf217" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>CmpItem_cmpItemCode_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[CmpItem_cmpItemCode_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[CmpItem_cmpItemCode_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="6510fabc-734b-4b66-9768-e79bcecce877" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[AssistActItem_AssistActItemName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[AssistActItem_AssistActItemName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[AssistActItem_AssistActItemNumber_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[AssistActItem_AssistActItemNumber_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[CmpItem_cmpItemCode_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[CmpItem_cmpItemCode_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[CmpItem_cmpItemName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[CmpItem_cmpItemName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GeneralAsstActTypeGroupCode_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GeneralAsstActTypeGroupCode_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GeneralAsstActTypeGroupName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GeneralAsstActTypeGroupName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GreenDreamProjectCode_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GreenDreamProjectCode_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GreenDreamProjectName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GreenDreamProjectName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GreenDreamProjectcCode_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_GreenDreamProjectcCode_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_name_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].actions.action[Person_name_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[CmpItem_cmpItemCode_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[CmpItem_cmpItemCode_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[CmpItem_cmpItemCode_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="cmpItemNum" />
+            <lang locale="zh_CN" value="cmpItemNum" />
+            <lang locale="zh_TW" value="cmpItemNum" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[CmpItem_cmpItemCode_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[CmpItem_cmpItemName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[CmpItem_cmpItemName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[CmpItem_cmpItemName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="cmpItemNum" />
+            <lang locale="zh_CN" value="cmpItemNum" />
+            <lang locale="zh_TW" value="cmpItemNum" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[CmpItem_cmpItemName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[Person_GreenDreamProjectCode_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[Person_GreenDreamProjectCode_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[Person_GreenDreamProjectCode_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="GreenDreamProject" />
+            <lang locale="zh_CN" value="GreenDreamProject" />
+            <lang locale="zh_TW" value="GreenDreamProject" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[Person_GreenDreamProjectCode_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[Person_GreenDreamProjectName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[Person_GreenDreamProjectName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[Person_GreenDreamProjectName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="GreenDreamProject" />
+            <lang locale="zh_CN" value="GreenDreamProject" />
+            <lang locale="zh_TW" value="GreenDreamProject" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[Person_GreenDreamProjectName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[Person_name_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[Person_name_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[Person_name_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="number" />
+            <lang locale="zh_CN" value="number" />
+            <lang locale="zh_TW" value="number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.SalaryVoucherRuleSet].rules.conditionRule[Person_name_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

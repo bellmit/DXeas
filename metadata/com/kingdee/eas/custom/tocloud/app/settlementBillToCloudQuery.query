@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.tocloud.app</package>
+    <name>settlementBillToCloudQuery</name>
+    <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].alias</alias>
+    <description>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].description</description>
+    <userDefined>true</userDefined>
+    <reportDataSource />
+    <bizUnitPK />
+    <connectionProvider />
+    <subObjects>
+        <subEntity>
+            <name>AccountPolicy</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].subObjects.subEntity[AccountPolicy].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.recyclebiz.app" />
+                <key name="name" value="AccountPolicy" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>company</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].subObjects.subEntity[company].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="CompanyOrgUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>batch</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].subObjects.subEntity[batch].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="Batch" />
+            </entityRef>
+        </subEntity>
+    </subObjects>
+    <units>
+        <queryField>
+            <name>id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b1e7d8e5-b4b1-4a1f-a479-266fff812f89</key>
+                    <parentUnit>
+                        <key name="name" value="id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AccountPolicy" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>cb29058a-8321-40a4-bccf-670e202ede65</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.propertyUnit[cb29058a-8321-40a4-bccf-670e202ede65].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>7084cb90-f927-4284-b113-574b3d9eac05</key>
+                    <parentUnit>
+                        <key name="name" value="cb29058a-8321-40a4-bccf-670e202ede65" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AccountPolicy" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="company" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>4fd472db-5913-4374-a07f-c5ca525ca3ea</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.propertyUnit[4fd472db-5913-4374-a07f-c5ca525ca3ea].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>3a460286-bbd5-408d-a8e2-55a892642ad7</key>
+                    <parentUnit>
+                        <key name="name" value="4fd472db-5913-4374-a07f-c5ca525ca3ea" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="company" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>60fb25d3-d73f-4ea6-a490-2b8cbcd6557b</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.propertyUnit[60fb25d3-d73f-4ea6-a490-2b8cbcd6557b].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>cddd4bc6-8e98-4494-be75-54d939b32861</key>
+                    <parentUnit>
+                        <key name="name" value="60fb25d3-d73f-4ea6-a490-2b8cbcd6557b" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AccountPolicy" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="batch" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>6bdf56f6-41d0-43c8-a099-e8d528a321e5</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.propertyUnit[6bdf56f6-41d0-43c8-a099-e8d528a321e5].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>707a09df-af43-4f5c-9d75-449f2d46c76e</key>
+                    <parentUnit>
+                        <key name="name" value="6bdf56f6-41d0-43c8-a099-e8d528a321e5" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="batch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>companyid</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[companyid].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>70dafe81-1959-4fb4-9cb0-124a6cd7388c</key>
+                    <parentUnit>
+                        <key name="name" value="companyid" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="company" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>companyName</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[companyName].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>20cd54c6-3969-4448-8057-d7e662a8db36</key>
+                    <parentUnit>
+                        <key name="name" value="companyName" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="company" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>batchid</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[batchid].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>a0ad5edf-5b6d-4a3f-8c26-b90c647cd0d4</key>
+                    <parentUnit>
+                        <key name="name" value="batchid" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="batch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>batch</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[batch].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>e300632f-b186-4ad9-a65f-c5832de071df</key>
+                    <parentUnit>
+                        <key name="name" value="batch" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="batch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bateStatus</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[bateStatus].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>10c370c5-f9c1-4f60-8c31-249b3bb6f91d</key>
+                    <parentUnit>
+                        <key name="name" value="bateStatus" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AccountPolicy" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="billStatus" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bizdate</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[bizdate].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>f3ea7d88-6118-414b-a41f-c51cb7f278e8</key>
+                    <parentUnit>
+                        <key name="name" value="bizdate" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AccountPolicy" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bizDate" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>stockingid</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[stockingid].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>39c9136e-0213-4aea-ab36-2584f022ea13</key>
+                    <parentUnit>
+                        <key name="name" value="stockingid" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AccountPolicy" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>billNum</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[billNum].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>f817184f-5348-4da3-8518-a5abff5d04da</key>
+                    <parentUnit>
+                        <key name="name" value="billNum" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AccountPolicy" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>companyCosthjh</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[companyCosthjh].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>f8763d68-01c4-4ae1-8fe5-c1a5c11b1aef</key>
+                    <parentUnit>
+                        <key name="name" value="companyCosthjh" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AccountPolicy" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="companyCost" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>feedCostAccounthjh</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[feedCostAccounthjh].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>a998fe26-eec4-4bdb-8840-e5c771689ec1</key>
+                    <parentUnit>
+                        <key name="name" value="feedCostAccounthjh" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AccountPolicy" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="feedCostAccount" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>dragCostAccounthjh</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[dragCostAccounthjh].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>2f3e90c1-abf5-421c-9174-69e71fd4a80a</key>
+                    <parentUnit>
+                        <key name="name" value="dragCostAccounthjh" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AccountPolicy" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="dragCostAccount" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>henCostAccounthjh</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[henCostAccounthjh].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>585db88d-23d7-457b-b296-0e6dc00980f3</key>
+                    <parentUnit>
+                        <key name="name" value="henCostAccounthjh" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AccountPolicy" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="henCostAccount" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>otherMatCostAccounthjh</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[otherMatCostAccounthjh].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>9040b0c1-eeb7-469c-8f20-99d555dceb87</key>
+                    <parentUnit>
+                        <key name="name" value="otherMatCostAccounthjh" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AccountPolicy" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="otherMatCostAccount" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>directPersonCosthjh</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[directPersonCosthjh].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>2fb47507-b589-4194-9884-ee5848174ab6</key>
+                    <parentUnit>
+                        <key name="name" value="directPersonCosthjh" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AccountPolicy" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="directPersonCost" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>farmerPrefithjh</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[farmerPrefithjh].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b1d4e706-d920-4de8-bbb8-4fd34ddd5bfa</key>
+                    <parentUnit>
+                        <key name="name" value="farmerPrefithjh" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AccountPolicy" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="farmerPrefit" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>isReturn</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[isReturn].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>bfabf5fa-7434-499a-994c-7bf56a562900</key>
+                    <parentUnit>
+                        <key name="name" value="isReturn" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="AccountPolicy" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="billType" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+        </queryField>
+    </units>
+    <defaultFilter>
+        <name>defaultFilter</name>
+        <formulaString />
+        <query>
+            <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+            <key name="name" value="settlementBillToCloudQuery" />
+        </query>
+    </defaultFilter>
+    <queryPK>
+        <name>QueryPK</name>
+        <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].queryPK[QueryPK].alias</alias>
+        <description>joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].queryPK[QueryPK].description</description>
+        <keyProperties>
+            <queryField>
+                <key name="name" value="id" />
+            </queryField>
+        </keyProperties>
+    </queryPK>
+    <isDistinct>false</isDistinct>
+    <joins>
+        <join>
+            <name>923cc0c3-53ce-419b-afed-f51ef865dbeb</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="AccountPolicy" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="company" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>448e0bcf-92bc-4d78-acb5-b39c70bddf3e</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="cb29058a-8321-40a4-bccf-670e202ede65" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="4fd472db-5913-4374-a07f-c5ca525ca3ea" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="923cc0c3-53ce-419b-afed-f51ef865dbeb" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+        </join>
+        <join>
+            <name>32a5b0d5-97fb-4b63-896c-86cbe33c3c26</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="AccountPolicy" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="batch" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>8dfe3ab8-73b4-44de-97ea-5090cf857ef9</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="60fb25d3-d73f-4ea6-a490-2b8cbcd6557b" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="6bdf56f6-41d0-43c8-a099-e8d528a321e5" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="32a5b0d5-97fb-4b63-896c-86cbe33c3c26" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="settlementBillToCloudQuery" />
+            </query>
+        </join>
+    </joins>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="结算单同步cloud凭证Query" />
+            <lang locale="zh_HK" value="結算單同步cloud憑證Query" />
+            <lang locale="zh_TW" value="結算單同步cloud憑證Query" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].queryPK[QueryPK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].queryPK[QueryPK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].subObjects.subEntity[AccountPolicy].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].subObjects.subEntity[batch].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].subObjects.subEntity[company].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.propertyUnit[4fd472db-5913-4374-a07f-c5ca525ca3ea].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.propertyUnit[60fb25d3-d73f-4ea6-a490-2b8cbcd6557b].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.propertyUnit[6bdf56f6-41d0-43c8-a099-e8d528a321e5].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.propertyUnit[cb29058a-8321-40a4-bccf-670e202ede65].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[batch].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="名称" />
+            <lang locale="zh_HK" value="名稱" />
+            <lang locale="zh_TW" value="名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[batchid].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[bateStatus].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据状态" />
+            <lang locale="zh_HK" value="單據狀態" />
+            <lang locale="zh_TW" value="單據狀態" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[billNum].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据编号" />
+            <lang locale="zh_HK" value="單據編號" />
+            <lang locale="zh_TW" value="單據編號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[bizdate].displayName">
+            <lang locale="en_US" value="" />
+            <lang locale="zh_CN" value="业务日期" />
+            <lang locale="zh_HK" value="業務日期" />
+            <lang locale="zh_TW" value="業務日期" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[companyCosthjh].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司成本" />
+            <lang locale="zh_HK" value="公司成本" />
+            <lang locale="zh_TW" value="公司成本" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[companyName].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="名称" />
+            <lang locale="zh_HK" value="名稱" />
+            <lang locale="zh_TW" value="名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[companyid].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[directPersonCosthjh].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="直接人工" />
+            <lang locale="zh_HK" value="直接人工" />
+            <lang locale="zh_TW" value="直接人工" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[dragCostAccounthjh].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="药品成本金额" />
+            <lang locale="zh_HK" value="藥品成本金額" />
+            <lang locale="zh_TW" value="藥品成本金額" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[farmerPrefithjh].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="养殖户利润" />
+            <lang locale="zh_HK" value="養殖戶利潤" />
+            <lang locale="zh_TW" value="養殖戶利潤" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[feedCostAccounthjh].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="饲料成本金额" />
+            <lang locale="zh_HK" value="飼料成本金額" />
+            <lang locale="zh_TW" value="飼料成本金額" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[henCostAccounthjh].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="鸡苗成本金额" />
+            <lang locale="zh_HK" value="雞苗成本金額" />
+            <lang locale="zh_TW" value="雞苗成本金額" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[isReturn].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="结算类型" />
+            <lang locale="zh_HK" value="結算類型" />
+            <lang locale="zh_TW" value="結算類型" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[otherMatCostAccounthjh].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="物料成本" />
+            <lang locale="zh_HK" value="物料成本" />
+            <lang locale="zh_TW" value="物料成本" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.settlementBillToCloudQuery].units.queryField[stockingid].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+    </resource>
+</joinQuery>
+

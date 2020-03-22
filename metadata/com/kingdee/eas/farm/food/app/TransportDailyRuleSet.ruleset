@@ -1,0 +1,3647 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.food.app</package>
+    <name>TransportDailyRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>ce20418a-04e0-4662-8972-dce1ca937152</id>
+            <parentID />
+            <source>Entrys.materialName=Entrys.material.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>8705cd19-77e9-4d96-a29a-3196976857eb</id>
+            <parentID>ce20418a-04e0-4662-8972-dce1ca937152</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>9565d357-6b21-4994-964d-228c73100d92</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9565d357-6b21-4994-964d-228c73100d92</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"materialName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ad5a3d0d-f898-4872-a798-8fa89df0c7e8</id>
+            <parentID>ce20418a-04e0-4662-8972-dce1ca937152</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>d38866b5-ca61-40fd-b2d3-d0bcc96a2c10</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>2a017622-d8c6-42a3-86d5-c5e1355ce247</id>
+                        <expressionID>4b4f0de7-b6ec-45a0-8e56-26b228303580</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>48f2c995-0d27-482b-ac85-dd40587b98b2</id>
+                        <expressionID>6ef6265a-a476-44f1-986f-1ee0b442d87d</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d38866b5-ca61-40fd-b2d3-d0bcc96a2c10</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4b4f0de7-b6ec-45a0-8e56-26b228303580</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>43638f7e-40e1-4f46-b01b-5f411b08d6e0</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>43638f7e-40e1-4f46-b01b-5f411b08d6e0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6ef6265a-a476-44f1-986f-1ee0b442d87d</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>4f1045a8-ce8a-4acb-a73c-4c7ff1d0645c</id>
+            <parentID />
+            <source>Entrys.model=Entrys.material.model</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>b8cfcaf9-6258-4f20-b2a3-64882aac3768</id>
+            <parentID>4f1045a8-ce8a-4acb-a73c-4c7ff1d0645c</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>aae88cd0-fd8a-4226-ba97-8a2aaf0fd021</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>aae88cd0-fd8a-4226-ba97-8a2aaf0fd021</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"model")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>16a8061c-9534-4ad3-84c3-8d8f7fcb1554</id>
+            <parentID>4f1045a8-ce8a-4acb-a73c-4c7ff1d0645c</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>13d29aeb-95fa-4d17-b1f3-a2949724d5bd</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>10e97a86-9048-46a7-9d1d-b6020b09194b</id>
+                        <expressionID>cede43dd-a03c-45dd-b409-e1e6e70649ab</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>e316c1c0-cc9e-4ab8-baa3-007e386cb851</id>
+                        <expressionID>a987f683-305b-48a4-a940-579584c124ea</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>13d29aeb-95fa-4d17-b1f3-a2949724d5bd</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cede43dd-a03c-45dd-b409-e1e6e70649ab</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>8958bb9f-fe1c-43d5-85d9-03c96dca532f</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8958bb9f-fe1c-43d5-85d9-03c96dca532f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a987f683-305b-48a4-a940-579584c124ea</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>model</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>452684e0-e28d-4865-b0c2-0dc8712ca2bb</id>
+            <parentID />
+            <source>Entrys.unit = Entrys.material.baseUnit</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>fc80858c-b69c-41ce-a5c5-896030c88b9b</id>
+            <parentID>452684e0-e28d-4865-b0c2-0dc8712ca2bb</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType />
+            <value />
+            <property>
+                <ownerID>28769a69-8787-43c8-8775-78738b4881ac</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>28769a69-8787-43c8-8775-78738b4881ac</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"unit")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b25dde7f-9197-4158-99a6-3583e0aa6eeb</id>
+            <parentID>452684e0-e28d-4865-b0c2-0dc8712ca2bb</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType />
+            <value />
+            <method>
+                <ownerID>9cb72b0b-f130-4fcb-9103-ba1b81a71f1f</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>10c5103a-d00f-4a6a-9ddc-6e1164f6fef5</id>
+                        <expressionID>a4de7f97-3161-4d53-90b3-316d855cc485</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>da7947a6-68ba-49dc-8cdf-0326f785e862</id>
+                        <expressionID>242903b2-10d1-48b9-b73c-f9af36031703</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9cb72b0b-f130-4fcb-9103-ba1b81a71f1f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a4de7f97-3161-4d53-90b3-316d855cc485</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>4b8c34a0-3ce8-425d-848f-fa8335835302</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4b8c34a0-3ce8-425d-848f-fa8335835302</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>242903b2-10d1-48b9-b73c-f9af36031703</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>baseUnit</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fd4e2e7d-9feb-4aaf-bd94-4c38a33965b8</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>61d11082-6e6c-404a-9589-de0c8e750eae</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>69aa73f1-71d7-44f8-8707-18bd0707f72e</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>2f93e9d2-af76-4cc9-813c-3476c4d0439f</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>7325f675-8919-4f23-8725-23350a427ad9</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>f0f757a0-b3ef-4353-9c29-c153201fbfc9</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>fa1a1276-c479-42b1-aa20-2eeab5040261</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>a665583a-0667-4173-8708-768d7d19a829</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>70fcb9ae-c638-49b2-9759-0b283758c275</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>887b64fc-b6ec-45fd-9179-9b832b9912f1</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>43f4ee13-3ff0-461b-8a0d-3c01c7541c52</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>90a23574-929b-4f2d-b6a3-c54577571156</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>9617ce48-0f3a-4e88-9117-d758fa22fdab</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>64c75c87-a358-428a-95f2-66d3123b2413</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <groupExpression>
+            <id>b750b5d7-6ccd-4a86-8c6d-2e316bcbe171</id>
+            <parentID />
+            <source>[Entrys.allAmount] = [Entrys.taxPrice] * [Entrys.qty]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>959b9a0b-fa22-4cd5-824e-8b9c144a7581</id>
+            <parentID>b750b5d7-6ccd-4a86-8c6d-2e316bcbe171</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>da7d2c73-5c4d-4dda-ab65-7b2b4ef74615</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>da7d2c73-5c4d-4dda-ab65-7b2b4ef74615</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"allAmount")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>a9206aca-43a5-477e-86e8-b06ffb460bf3</id>
+            <parentID>b750b5d7-6ccd-4a86-8c6d-2e316bcbe171</parentID>
+            <source />
+            <operator>*</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>4baa45eb-ed98-4cf3-9e4d-82549b1e9fc4</id>
+            <parentID>a9206aca-43a5-477e-86e8-b06ffb460bf3</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>589742a1-a0f4-4135-a8e2-9b673c584347</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>589742a1-a0f4-4135-a8e2-9b673c584347</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"taxPrice")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ab2ed263-9d1d-4545-837b-0b6767695288</id>
+            <parentID>a9206aca-43a5-477e-86e8-b06ffb460bf3</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>ae9f85f9-80d0-4635-a3a2-c6cb56b415c3</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ae9f85f9-80d0-4635-a3a2-c6cb56b415c3</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"qty")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>befcc828-53d3-49e9-b7ad-0d05f0286c37</id>
+            <parentID />
+            <source>[Entrys.amount] = [Entrys.price] * [Entrys.qty]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>1f0b21fb-4469-49b8-9a52-fcb124e5d1ff</id>
+            <parentID>befcc828-53d3-49e9-b7ad-0d05f0286c37</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>eafcb8fb-5ddf-481b-a24b-90a8f662a29d</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>eafcb8fb-5ddf-481b-a24b-90a8f662a29d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"amount")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>90c121b1-78a5-4b11-a259-884d15e39f82</id>
+            <parentID>befcc828-53d3-49e9-b7ad-0d05f0286c37</parentID>
+            <source />
+            <operator>*</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>5aeef700-1ede-42b4-924a-f66b24ec20b0</id>
+            <parentID>90c121b1-78a5-4b11-a259-884d15e39f82</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>5880eef4-c9e3-4669-a9c8-71a8deb88b43</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5880eef4-c9e3-4669-a9c8-71a8deb88b43</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"price")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>712a4ddf-0e8a-4bfa-ad73-e3ad0da6ae00</id>
+            <parentID>90c121b1-78a5-4b11-a259-884d15e39f82</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>320ca130-16af-4ee9-9627-f4948a6161c0</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>320ca130-16af-4ee9-9627-f4948a6161c0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"qty")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ff89f0cb-d038-4f5c-ae74-ea3abd795ff5</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>5ea6ec80-70b2-4ff3-ab10-10f77fe44d7c</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <groupExpression>
+            <id>2c3e7e6d-2d57-412b-9c7f-c16fa6bc4c2e</id>
+            <parentID />
+            <source>[Entrys.taxPrice] = [Entrys.price] *(1+ [Entrys.rate] /100)</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>e1de4f86-8da6-458f-a0c9-325d790c2529</id>
+            <parentID>2c3e7e6d-2d57-412b-9c7f-c16fa6bc4c2e</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>67e8908c-06be-47b4-aeaa-c19f57d5ad8e</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>67e8908c-06be-47b4-aeaa-c19f57d5ad8e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"taxPrice")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>f0492e43-822a-4fb0-9463-1ee30d79521f</id>
+            <parentID>2c3e7e6d-2d57-412b-9c7f-c16fa6bc4c2e</parentID>
+            <source />
+            <operator>*</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>91ee995e-a3b6-47df-9217-a2966aef0a32</id>
+            <parentID>f0492e43-822a-4fb0-9463-1ee30d79521f</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>c835336f-04f1-43d1-ab45-7051f570a1ad</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c835336f-04f1-43d1-ab45-7051f570a1ad</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"price")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>1b6503e2-5bea-486b-b657-25b6b73bbf6c</id>
+            <parentID>f0492e43-822a-4fb0-9463-1ee30d79521f</parentID>
+            <source />
+            <operator>+</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>75e2f46c-d04b-4ce9-b942-2aa16236ccd2</id>
+            <parentID>1b6503e2-5bea-486b-b657-25b6b73bbf6c</parentID>
+            <source />
+            <type>CONST</type>
+            <valueType>Int</valueType>
+            <value>1</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>5aa08932-f691-479d-8ca9-736c1c1e6b67</id>
+            <parentID>1b6503e2-5bea-486b-b657-25b6b73bbf6c</parentID>
+            <source />
+            <operator>/</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>db68db71-8015-402d-a398-84d67a3e9de7</id>
+            <parentID>5aa08932-f691-479d-8ca9-736c1c1e6b67</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>bdc3e9d5-7b02-486d-8e0a-1e2ad804decb</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bdc3e9d5-7b02-486d-8e0a-1e2ad804decb</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"rate")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>df07e6cf-aa26-4841-b1ad-0980a47a8f4a</id>
+            <parentID>5aa08932-f691-479d-8ca9-736c1c1e6b67</parentID>
+            <source />
+            <type>CONST</type>
+            <valueType>Int</valueType>
+            <value>100</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>8350a3d7-69c8-4a98-badf-c76b85658d73</id>
+            <parentID />
+            <source>[Entrys.allAmount] = [Entrys.taxPrice] * [Entrys.qty]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>fde002a6-8193-4f66-9101-34acf9ad1665</id>
+            <parentID>8350a3d7-69c8-4a98-badf-c76b85658d73</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>f72199eb-771b-4859-970c-c21b7fc4511d</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f72199eb-771b-4859-970c-c21b7fc4511d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"allAmount")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>cd88ae6d-1874-4445-be08-9a2d8deb456b</id>
+            <parentID>8350a3d7-69c8-4a98-badf-c76b85658d73</parentID>
+            <source />
+            <operator>*</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>5b75a0af-5ffb-45a1-8e59-34f0508dd09f</id>
+            <parentID>cd88ae6d-1874-4445-be08-9a2d8deb456b</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>9b79fd10-766f-4969-b819-bc13aa2644cc</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9b79fd10-766f-4969-b819-bc13aa2644cc</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"taxPrice")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b4437f66-a960-4872-8593-7d28d77a962b</id>
+            <parentID>cd88ae6d-1874-4445-be08-9a2d8deb456b</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>88a99957-0beb-4150-8d11-7de310421d84</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>88a99957-0beb-4150-8d11-7de310421d84</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"qty")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>99f6bc47-8865-4918-85b1-c481ce6a5da4</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <groupExpression>
+            <id>b5546d74-89b2-4f3b-bc77-6e1f64e58da4</id>
+            <parentID />
+            <source>[Entrys.taxAmount] = [Entrys.allAmount] - [Entrys.amount]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>2c147a32-4758-48ec-a158-ec44a6891337</id>
+            <parentID>b5546d74-89b2-4f3b-bc77-6e1f64e58da4</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>f1416f34-45c5-4d5f-85a3-fc10c9ba00f0</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f1416f34-45c5-4d5f-85a3-fc10c9ba00f0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"taxAmount")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>36a76277-a010-4189-a92c-33ad21ef49d9</id>
+            <parentID>b5546d74-89b2-4f3b-bc77-6e1f64e58da4</parentID>
+            <source />
+            <operator>-</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>f5c4455d-f3a6-4a3f-ac67-f0f8bd54ab51</id>
+            <parentID>36a76277-a010-4189-a92c-33ad21ef49d9</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>5132aa65-90f9-4cf5-9867-7a9426c388cf</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5132aa65-90f9-4cf5-9867-7a9426c388cf</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"allAmount")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3f2f205a-af76-40a1-953c-89186e2d4d22</id>
+            <parentID>36a76277-a010-4189-a92c-33ad21ef49d9</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>dc2377dd-d33c-4ef4-9a45-80f90efdb5e2</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>dc2377dd-d33c-4ef4-9a45-80f90efdb5e2</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"amount")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>ca25d5dc-ab94-497a-acc1-a1634fc04582</id>
+            <parentID />
+            <source>[Entrys.price] = [Entrys.taxPrice] /(1+ [Entrys.rate] /100)</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>dd3a889b-addd-4c59-add1-ee587877b2b6</id>
+            <parentID>ca25d5dc-ab94-497a-acc1-a1634fc04582</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>70c4cd05-5e11-4445-8564-384e5d810e7c</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>70c4cd05-5e11-4445-8564-384e5d810e7c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"price")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>47b5deb2-0b07-4e59-b678-3d7bb98d4c35</id>
+            <parentID>ca25d5dc-ab94-497a-acc1-a1634fc04582</parentID>
+            <source />
+            <operator>/</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>99237571-9920-496c-b8e1-ff236180a062</id>
+            <parentID>47b5deb2-0b07-4e59-b678-3d7bb98d4c35</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>7607b32f-e35d-4532-9636-895fca570106</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7607b32f-e35d-4532-9636-895fca570106</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"taxPrice")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>19d866fa-5220-4a23-8814-ff228e3a875e</id>
+            <parentID>47b5deb2-0b07-4e59-b678-3d7bb98d4c35</parentID>
+            <source />
+            <operator>+</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>f3e56ffe-4622-48f5-acc9-6225e75b8196</id>
+            <parentID>19d866fa-5220-4a23-8814-ff228e3a875e</parentID>
+            <source />
+            <type>CONST</type>
+            <valueType>Int</valueType>
+            <value>1</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>1aea7a84-6bbc-4979-a6d0-69c120bb255c</id>
+            <parentID>19d866fa-5220-4a23-8814-ff228e3a875e</parentID>
+            <source />
+            <operator>/</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>f428975d-3c27-40f2-b593-06df332fe5c6</id>
+            <parentID>1aea7a84-6bbc-4979-a6d0-69c120bb255c</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>13016129-e725-4d21-aee7-9e472176c520</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>13016129-e725-4d21-aee7-9e472176c520</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"rate")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>070c364a-54ed-4af6-abc3-cee05ea64ff6</id>
+            <parentID>1aea7a84-6bbc-4979-a6d0-69c120bb255c</parentID>
+            <source />
+            <type>CONST</type>
+            <valueType>Int</valueType>
+            <value>100</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2c7d1168-23f9-460a-b028-6fc14360966e</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>8cf6ac88-9c48-48cf-9a83-b428c6d79559</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>895b6e97-b02f-4ee3-ac20-9c2373732ec0</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>f1ce342f-7cdd-4f10-bd98-8599f66505d6</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <groupExpression>
+            <id>9c50471f-94c2-4b13-bb4f-f781dbb7932e</id>
+            <parentID />
+            <source>[Entrys.assistUnitWeight] = [Entrys.qty] / [Entrys.assistQty]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>8ce76f0c-e98d-4d37-b3f8-2c10fca4a31b</id>
+            <parentID>9c50471f-94c2-4b13-bb4f-f781dbb7932e</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>44e377fd-584e-4a55-8f3a-111506e5a83d</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>44e377fd-584e-4a55-8f3a-111506e5a83d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"assistUnitWeight")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>6d51cb68-2f1d-4d92-b2e0-06017d24d923</id>
+            <parentID>9c50471f-94c2-4b13-bb4f-f781dbb7932e</parentID>
+            <source />
+            <operator>/</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>d1db8483-0e12-459a-8066-8134dd35a127</id>
+            <parentID>6d51cb68-2f1d-4d92-b2e0-06017d24d923</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>6b0e1d63-fc8f-48a6-807b-cd774d0a731a</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6b0e1d63-fc8f-48a6-807b-cd774d0a731a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"qty")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d3756bd6-f7f0-4100-81f9-e2756dc1d873</id>
+            <parentID>6d51cb68-2f1d-4d92-b2e0-06017d24d923</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>e84c1f2b-ee55-4271-a0f0-90146d05a48d</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e84c1f2b-ee55-4271-a0f0-90146d05a48d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"assistQty")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>41f839b0-e105-4148-9c79-74bd0d8b587f</id>
+            <parentID />
+            <source>[Entrys.assistQty] = [Entrys.qty] / [Entrys.assistUnitWeight]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>2c6dc471-f991-4811-8deb-bf09b4f5d3ef</id>
+            <parentID>41f839b0-e105-4148-9c79-74bd0d8b587f</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>7eae3d0c-60d6-445a-a3d0-39ecd5351ec2</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7eae3d0c-60d6-445a-a3d0-39ecd5351ec2</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"assistQty")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>3731f68b-5f73-450a-9d4b-fd47822495c4</id>
+            <parentID>41f839b0-e105-4148-9c79-74bd0d8b587f</parentID>
+            <source />
+            <operator>/</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>9785a872-8116-454b-b186-b20435fbe71a</id>
+            <parentID>3731f68b-5f73-450a-9d4b-fd47822495c4</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>0f892332-285b-42f5-bdbb-3e182155b012</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0f892332-285b-42f5-bdbb-3e182155b012</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"qty")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f5a9c39e-0915-4215-8a05-367d4ab55bd9</id>
+            <parentID>3731f68b-5f73-450a-9d4b-fd47822495c4</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>62322c44-72ef-4707-adf4-65131a29fa60</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>62322c44-72ef-4707-adf4-65131a29fa60</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"assistUnitWeight")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>9dd816ca-f388-404b-a7e3-0ef2f25e2be8</id>
+            <parentID />
+            <source>Entry.beginStation=Entry.DeliveryLine.beginStation.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>b7b56919-6e0b-43f9-88db-44fe243a80c1</id>
+            <parentID>9dd816ca-f388-404b-a7e3-0ef2f25e2be8</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>fcfaec5d-4b3d-4b09-985a-e49e5d7cf566</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fcfaec5d-4b3d-4b09-985a-e49e5d7cf566</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"beginStation")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1619aa12-1734-47bc-a00e-bd4c8f62bca6</id>
+            <parentID>9dd816ca-f388-404b-a7e3-0ef2f25e2be8</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>2538498e-0a5e-4d3d-9182-252bdede8200</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>7e70a954-7228-4e4d-b083-db653856d185</id>
+                        <expressionID>56fe2610-0484-44b8-981b-b6656a2d6382</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>01921ec2-21d1-4e4d-b191-83a7a8da9da7</id>
+                        <expressionID>ce8097ed-949b-411d-a602-2a2348ac1135</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2538498e-0a5e-4d3d-9182-252bdede8200</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>56fe2610-0484-44b8-981b-b6656a2d6382</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>02565836-94a9-43fd-bc47-9d9e39ffc867</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>02565836-94a9-43fd-bc47-9d9e39ffc867</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntry.getCell(rowIndex,"DeliveryLine")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ce8097ed-949b-411d-a602-2a2348ac1135</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>beginStation.name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>7903b558-f3ef-4e47-839c-26095341138a</id>
+            <parentID />
+            <source>Entry.endStation=Entry.DeliveryLine.endStation.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>adca3450-49f6-4fe9-9630-5224f6039470</id>
+            <parentID>7903b558-f3ef-4e47-839c-26095341138a</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>372b0c12-54a2-4a5d-a3f2-00b3e9b324af</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>372b0c12-54a2-4a5d-a3f2-00b3e9b324af</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"endStation")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>50f77d6b-ffaa-4e42-9201-471bb6221e6d</id>
+            <parentID>7903b558-f3ef-4e47-839c-26095341138a</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>57a3630c-aa1c-430f-af80-729e23b408d0</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>0475eef0-c75b-4497-91b7-d2113c034f8d</id>
+                        <expressionID>80974cdd-a1a3-486c-960b-ad65e700fee8</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>6285dda6-ad26-4f3a-8017-db925a85fe19</id>
+                        <expressionID>cfcd5136-c517-417a-a5e0-c7168add19bf</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>57a3630c-aa1c-430f-af80-729e23b408d0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>80974cdd-a1a3-486c-960b-ad65e700fee8</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>4acf23e5-6070-493c-aa09-e1931454a260</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4acf23e5-6070-493c-aa09-e1931454a260</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntry.getCell(rowIndex,"DeliveryLine")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cfcd5136-c517-417a-a5e0-c7168add19bf</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>endStation.name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>a63c06f7-b777-40c4-a7fe-469e55882893</id>
+            <parentID />
+            <source>Entry.mileage=Entry.DeliveryLine.totalMileage</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>0928fcb5-be66-410d-a757-ad77a497dc88</id>
+            <parentID>a63c06f7-b777-40c4-a7fe-469e55882893</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>649739b0-382e-44d0-b84d-37f3e7943b1b</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>649739b0-382e-44d0-b84d-37f3e7943b1b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"mileage")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c683b945-10be-4055-82cc-bb0fc5d7b24c</id>
+            <parentID>a63c06f7-b777-40c4-a7fe-469e55882893</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>74ed2dce-0e4e-4e78-9614-374f8789f79c</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>e7b347fe-72eb-4be9-af19-1af027fb59dd</id>
+                        <expressionID>ea821907-1e9d-47f5-94b4-5d83e78caf38</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>a5516c9a-b31c-466a-971e-40d5b78958d1</id>
+                        <expressionID>0ddc4e56-9fd2-40b9-8e80-cace612d1830</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>74ed2dce-0e4e-4e78-9614-374f8789f79c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ea821907-1e9d-47f5-94b4-5d83e78caf38</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>14ea0bb3-1581-43e7-8050-fb11856a24e0</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>14ea0bb3-1581-43e7-8050-fb11856a24e0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntry.getCell(rowIndex,"DeliveryLine")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0ddc4e56-9fd2-40b9-8e80-cace612d1830</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>totalMileage</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>148a158d-2744-416f-83e5-ff999cd38004</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>12068f08-f2e7-4a52-90b7-ea93e24b1492</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>49044a76-53d9-480d-8c70-a8372e11c23c</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <groupExpression>
+            <id>27d416fb-1461-4548-b3de-1a3156d127b1</id>
+            <parentID />
+            <source>[Entry.todayMileage] = [Entry.endMileage] - [Entry.startMileage]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>303fc095-0480-401c-a547-32494257de95</id>
+            <parentID>27d416fb-1461-4548-b3de-1a3156d127b1</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>d4d02665-f3c6-49be-ae7c-b2446e4f9a73</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d4d02665-f3c6-49be-ae7c-b2446e4f9a73</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"todayMileage")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>ab9fb36f-5b34-48b3-90c1-be0fae4eafdf</id>
+            <parentID>27d416fb-1461-4548-b3de-1a3156d127b1</parentID>
+            <source />
+            <operator>-</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>d28d6d01-bb0a-43f7-9b0e-7eb249654958</id>
+            <parentID>ab9fb36f-5b34-48b3-90c1-be0fae4eafdf</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>bf78fe3f-3d95-496f-b696-05615cc02af8</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bf78fe3f-3d95-496f-b696-05615cc02af8</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"endMileage")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>839deba8-5bf8-41db-9c99-aeda3a865a72</id>
+            <parentID>ab9fb36f-5b34-48b3-90c1-be0fae4eafdf</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>5fe34503-d905-499b-80e7-898d66d428bb</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5fe34503-d905-499b-80e7-898d66d428bb</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"startMileage")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>fda757f4-b96e-41fe-b59a-2b8e44c6d63e</id>
+            <parentID />
+            <source>[Entry.avgMileage] = [Entry.todayMileage] /  [Entry.count]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>faa2941b-0d63-4518-a875-d67e8454d8ee</id>
+            <parentID>fda757f4-b96e-41fe-b59a-2b8e44c6d63e</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>037339fc-481c-402d-86fd-ddb7de93fbff</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>037339fc-481c-402d-86fd-ddb7de93fbff</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"avgMileage")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>210a0d00-f6df-4958-a219-aecbdb99fadc</id>
+            <parentID>fda757f4-b96e-41fe-b59a-2b8e44c6d63e</parentID>
+            <source />
+            <operator>/</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>06654c48-67e9-4456-a67d-139d4fe0714f</id>
+            <parentID>210a0d00-f6df-4958-a219-aecbdb99fadc</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>a60cc244-b0e1-4be5-a717-2aeef6cd1102</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a60cc244-b0e1-4be5-a717-2aeef6cd1102</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"todayMileage")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ff780bfa-212f-4a9c-ba77-c428e6b27f5f</id>
+            <parentID>210a0d00-f6df-4958-a219-aecbdb99fadc</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Integer</valueType>
+            <value />
+            <property>
+                <ownerID>d03785f3-4e4f-4963-ab63-9665c395e3c6</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d03785f3-4e4f-4963-ab63-9665c395e3c6</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"count")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>48e63931-8ccb-4932-801c-c7fac94a053a</id>
+            <parentID />
+            <source>[Entry.todayMPG] = [Entry.avgMPG] * [Entry.todayMileage]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>8e08a027-c8b5-4a00-82b6-28c086627cc8</id>
+            <parentID>48e63931-8ccb-4932-801c-c7fac94a053a</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>2ad41621-99ee-40cb-a77f-9c31ea27d384</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2ad41621-99ee-40cb-a77f-9c31ea27d384</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"todayMPG")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>ec2f7e47-2a47-482f-849f-4851ce22fffb</id>
+            <parentID>48e63931-8ccb-4932-801c-c7fac94a053a</parentID>
+            <source />
+            <operator>*</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>cdc679b6-4964-4f46-8299-b3474c0f93d9</id>
+            <parentID>ec2f7e47-2a47-482f-849f-4851ce22fffb</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>ad83e79a-1fbd-4653-9eed-a43c4a7ae3b0</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ad83e79a-1fbd-4653-9eed-a43c4a7ae3b0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"avgMPG")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>98f53e93-c623-46c8-8d0b-599ac96ad863</id>
+            <parentID>ec2f7e47-2a47-482f-849f-4851ce22fffb</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>86034829-8875-4521-b11f-769bdc3ff0e3</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>86034829-8875-4521-b11f-769bdc3ff0e3</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"todayMileage")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>5df3535f-4260-4efc-ad5f-9f848629f096</id>
+            <parentID />
+            <source>[Entry.todayMPG] = [Entry.todayMileage] * [Entry.avgMPG]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>bd8d6171-4b84-418a-a9c3-6df2aa97b5f5</id>
+            <parentID>5df3535f-4260-4efc-ad5f-9f848629f096</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>038cd636-8f23-411c-a0f7-9761cde09f1f</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>038cd636-8f23-411c-a0f7-9761cde09f1f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"todayMPG")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>6615fe8c-1fa3-4c33-90e3-1da02811c5cf</id>
+            <parentID>5df3535f-4260-4efc-ad5f-9f848629f096</parentID>
+            <source />
+            <operator>*</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>7d4685e1-f40e-4b5f-a8de-1e6e387a8d1f</id>
+            <parentID>6615fe8c-1fa3-4c33-90e3-1da02811c5cf</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>7646ba49-8eb0-45c7-86c5-6ef1a7718a19</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7646ba49-8eb0-45c7-86c5-6ef1a7718a19</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"todayMileage")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>27a7e644-30fb-4a22-8065-9f75e87705fc</id>
+            <parentID>6615fe8c-1fa3-4c33-90e3-1da02811c5cf</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>e07133c4-c040-40ff-b5ed-ca6c0e9107a0</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e07133c4-c040-40ff-b5ed-ca6c0e9107a0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"avgMPG")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>439d1f6d-9fc9-4aa8-9a76-c132a06b1e50</id>
+            <parentID />
+            <source>[Entry.todayMPG] = [Entry.todayMileage] * [Entry.avgMPG]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>9f60951a-98e9-4ec6-8023-c9da4800ed27</id>
+            <parentID>439d1f6d-9fc9-4aa8-9a76-c132a06b1e50</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>b843bdd4-9ecc-4b9b-b3a7-e50c5ffdb3ca</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b843bdd4-9ecc-4b9b-b3a7-e50c5ffdb3ca</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"todayMPG")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>6dcc11f6-07a2-4cb1-b352-31cc6af2bcd0</id>
+            <parentID>439d1f6d-9fc9-4aa8-9a76-c132a06b1e50</parentID>
+            <source />
+            <operator>*</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>9e65698e-b5ee-452b-a6ef-85f2af9cebaf</id>
+            <parentID>6dcc11f6-07a2-4cb1-b352-31cc6af2bcd0</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>f3049a9f-b2bb-43db-acd2-c5dccdf23a9d</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f3049a9f-b2bb-43db-acd2-c5dccdf23a9d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"todayMileage")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>12c9028e-17c5-4c88-9b42-cd49ba299b0a</id>
+            <parentID>6dcc11f6-07a2-4cb1-b352-31cc6af2bcd0</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>a5268680-1666-4f88-ad52-63e61c6e80a6</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a5268680-1666-4f88-ad52-63e61c6e80a6</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"avgMPG")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7503adfe-d197-47e3-9b6e-dfd5c73089f1</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>dd5cc721-ae27-4e02-ad0b-8d29ed95cf72</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <groupExpression>
+            <id>6ba5ddce-5407-4eb7-9ada-31bf54d5f492</id>
+            <parentID />
+            <source>[Entry.avgMPG] = [Entry.todayMPG] / [Entry.count]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>9ef2d7f6-f92f-417c-83df-ffcbe1475f12</id>
+            <parentID>6ba5ddce-5407-4eb7-9ada-31bf54d5f492</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>a247af07-330e-4871-83b3-2851314a7b5e</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a247af07-330e-4871-83b3-2851314a7b5e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"avgMPG")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>39ba04f8-5649-4457-95ae-5e9ba4de617b</id>
+            <parentID>6ba5ddce-5407-4eb7-9ada-31bf54d5f492</parentID>
+            <source />
+            <operator>/</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>bd70431a-da3d-4535-a11b-19ec03277f8b</id>
+            <parentID>39ba04f8-5649-4457-95ae-5e9ba4de617b</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>98cecc33-fc10-4d0d-bb85-b3bbf7409809</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>98cecc33-fc10-4d0d-bb85-b3bbf7409809</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"todayMPG")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ba770b47-8154-436c-aeb8-65440ddf4e38</id>
+            <parentID>39ba04f8-5649-4457-95ae-5e9ba4de617b</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Integer</valueType>
+            <value />
+            <property>
+                <ownerID>9b4414ed-1590-4b32-96d6-113aafae0e7d</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9b4414ed-1590-4b32-96d6-113aafae0e7d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"count")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>c74920ea-2859-45ca-b61f-da30e6c51e8d</id>
+            <parentID />
+            <source>[OilEntry.qty] = [OilEntry.amount] / [OilEntry.price]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>61992ff5-9a90-4563-80ff-2f8e6278ed1d</id>
+            <parentID>c74920ea-2859-45ca-b61f-da30e6c51e8d</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>f5cc1b83-8d1c-407f-b151-a0044f03e0e6</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f5cc1b83-8d1c-407f-b151-a0044f03e0e6</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtOilEntry.getCell(rowIndex,"qty")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>0ebd51a6-3868-46a6-ba37-63a9390b630b</id>
+            <parentID>c74920ea-2859-45ca-b61f-da30e6c51e8d</parentID>
+            <source />
+            <operator>/</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>e907bfbf-a030-4ec3-973e-6d4d28ffb5ad</id>
+            <parentID>0ebd51a6-3868-46a6-ba37-63a9390b630b</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>17fc0fc9-bf3c-4566-b8fa-f40d60648177</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>17fc0fc9-bf3c-4566-b8fa-f40d60648177</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtOilEntry.getCell(rowIndex,"amount")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>05b358dc-77e8-4be2-bc16-96630703cbab</id>
+            <parentID>0ebd51a6-3868-46a6-ba37-63a9390b630b</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>ab2e0b45-e0df-4edf-9897-c3c1413120f8</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ab2e0b45-e0df-4edf-9897-c3c1413120f8</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtOilEntry.getCell(rowIndex,"price")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>c39bbbab-c6ee-4ef9-b88e-290aa21b981f</id>
+            <parentID />
+            <source>[Entry.count] &gt; 0</source>
+            <operator>&gt;</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>a9615a53-ed72-4572-9e26-37851344b97c</id>
+            <parentID>c39bbbab-c6ee-4ef9-b88e-290aa21b981f</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Integer</valueType>
+            <value />
+            <property>
+                <ownerID>0a1183b6-f130-41ba-8a6c-5f0f723817ec</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0a1183b6-f130-41ba-8a6c-5f0f723817ec</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"count")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2538e2b3-c09d-48df-8ee4-67fd45c8bc5c</id>
+            <parentID>c39bbbab-c6ee-4ef9-b88e-290aa21b981f</parentID>
+            <source />
+            <type>CONST</type>
+            <valueType>Int</valueType>
+            <value>0</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>84c5d746-e40d-420a-ac27-c2fde97316af</id>
+            <parentID />
+            <source>[Entry.count] &gt; 0</source>
+            <operator>&gt;</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>01b961c1-1a33-469b-9c06-76395d981c57</id>
+            <parentID>84c5d746-e40d-420a-ac27-c2fde97316af</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Integer</valueType>
+            <value />
+            <property>
+                <ownerID>f1da865a-fa5f-4c88-9188-119f93d01dd4</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f1da865a-fa5f-4c88-9188-119f93d01dd4</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"count")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6939ba57-0efc-4f20-abd1-ebf8a1f30b4b</id>
+            <parentID>84c5d746-e40d-420a-ac27-c2fde97316af</parentID>
+            <source />
+            <type>CONST</type>
+            <valueType>Int</valueType>
+            <value>0</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>d6b1ab21-dd97-4f73-a2f6-0d0c041662a2</id>
+            <parentID />
+            <source>[Entry.count] &gt;0</source>
+            <operator>&gt;</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>96c6f07b-dabd-45d2-a2b3-c345f899abbc</id>
+            <parentID>d6b1ab21-dd97-4f73-a2f6-0d0c041662a2</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Integer</valueType>
+            <value />
+            <property>
+                <ownerID>4ddcb4ca-ce09-4ed3-ada1-0573fd8b06ad</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4ddcb4ca-ce09-4ed3-ada1-0573fd8b06ad</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"count")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>556ecbf5-b3ce-4ced-b60c-80e84e46373c</id>
+            <parentID>d6b1ab21-dd97-4f73-a2f6-0d0c041662a2</parentID>
+            <source />
+            <type>CONST</type>
+            <valueType>Int</valueType>
+            <value>0</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>f7079350-01e0-4e24-b065-69d08e6ba369</id>
+            <parentID />
+            <source>[Entry.count]  &gt; 0</source>
+            <operator>&gt;</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>ab603c68-5a02-414c-a858-2f8e3bf0d9f5</id>
+            <parentID>f7079350-01e0-4e24-b065-69d08e6ba369</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Integer</valueType>
+            <value />
+            <property>
+                <ownerID>5c451b7e-b315-4fbc-906d-4da76825c833</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5c451b7e-b315-4fbc-906d-4da76825c833</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"count")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1c0198f5-5eb1-4e93-878e-aa23571144cc</id>
+            <parentID>f7079350-01e0-4e24-b065-69d08e6ba369</parentID>
+            <source />
+            <type>CONST</type>
+            <valueType>Int</valueType>
+            <value>0</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>faefdd5d-5a01-45d6-bfc2-a837b6517ab6</id>
+            <parentID />
+            <source>[Entry.count] &gt;0</source>
+            <operator>&gt;</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>10df3e73-253d-46ce-8c66-c4ae2dc57f16</id>
+            <parentID>faefdd5d-5a01-45d6-bfc2-a837b6517ab6</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Integer</valueType>
+            <value />
+            <property>
+                <ownerID>604ac642-388d-4f95-86f0-645abd707775</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>604ac642-388d-4f95-86f0-645abd707775</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"count")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ed000aa7-7375-4b73-a0c6-387ed50683d2</id>
+            <parentID>faefdd5d-5a01-45d6-bfc2-a837b6517ab6</parentID>
+            <source />
+            <type>CONST</type>
+            <valueType>Int</valueType>
+            <value>0</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>b6940973-fe4b-4b6e-93b1-d1df2dee7b66</id>
+            <parentID />
+            <source>[OilEntry.price] &gt;0</source>
+            <operator>&gt;</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>fa9be5f9-036e-4fb9-b788-a018243b3e8e</id>
+            <parentID>b6940973-fe4b-4b6e-93b1-d1df2dee7b66</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>310771ca-f0a9-4762-9937-7686a9e7c3be</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>310771ca-f0a9-4762-9937-7686a9e7c3be</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtOilEntry.getCell(rowIndex,"price")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>29bdbc1d-1ac9-42fc-9e10-aa4d9673fafe</id>
+            <parentID>b6940973-fe4b-4b6e-93b1-d1df2dee7b66</parentID>
+            <source />
+            <type>CONST</type>
+            <valueType>Int</valueType>
+            <value>0</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>9719d724-2372-4ccb-b761-1043ed935106</id>
+            <name>Entrys_materialName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[Entrys_materialName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[Entrys_materialName_ActionInfo].description</description>
+            <expressionID>ce20418a-04e0-4662-8972-dce1ca937152</expressionID>
+        </action>
+        <action>
+            <id>162f05a8-53b5-4c3c-b34b-53d1a706c5e9</id>
+            <name>Entrys_model_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[Entrys_model_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[Entrys_model_ActionInfo].description</description>
+            <expressionID>4f1045a8-ce8a-4acb-a73c-4c7ff1d0645c</expressionID>
+        </action>
+        <action>
+            <id>8ce84504-b99b-4208-a3e6-91daade90a3b</id>
+            <name>CIHO5CM5</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHO5CM5].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHO5CM5].description</description>
+            <expressionID>452684e0-e28d-4865-b0c2-0dc8712ca2bb</expressionID>
+        </action>
+        <action>
+            <id>ba27daa5-6ac1-4dd5-befb-9dd70045059c</id>
+            <name>CIHOCGJM</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOCGJM].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOCGJM].description</description>
+            <expressionID>fd4e2e7d-9feb-4aaf-bd94-4c38a33965b8</expressionID>
+        </action>
+        <action>
+            <id>a1127748-82c9-4fd1-be95-f0f4b6f80d7e</id>
+            <name>CIHODOQV</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHODOQV].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHODOQV].description</description>
+            <expressionID>61d11082-6e6c-404a-9589-de0c8e750eae</expressionID>
+        </action>
+        <action>
+            <id>edfdfc45-3ca7-438f-a4e4-7c4e0cb21f8e</id>
+            <name>CIHOE615</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOE615].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOE615].description</description>
+            <expressionID>69aa73f1-71d7-44f8-8707-18bd0707f72e</expressionID>
+        </action>
+        <action>
+            <id>a813a5cd-2c65-4b10-9fdf-1b09c0b80194</id>
+            <name>CIHOFP9$</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOFP9$].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOFP9$].description</description>
+            <expressionID>2f93e9d2-af76-4cc9-813c-3476c4d0439f</expressionID>
+        </action>
+        <action>
+            <id>d51e0a11-baf7-456d-8df3-42399c058242</id>
+            <name>CIHOGODU</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOGODU].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOGODU].description</description>
+            <expressionID>7325f675-8919-4f23-8725-23350a427ad9</expressionID>
+        </action>
+        <action>
+            <id>717136fb-0782-4926-a3f5-51f4acf0ae73</id>
+            <name>CIHOHL9Z</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOHL9Z].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOHL9Z].description</description>
+            <expressionID>f0f757a0-b3ef-4353-9c29-c153201fbfc9</expressionID>
+        </action>
+        <action>
+            <id>228cc175-5cf1-461d-b07b-6a06819df64f</id>
+            <name>CIHOGTX0</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOGTX0].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOGTX0].description</description>
+            <expressionID>fa1a1276-c479-42b1-aa20-2eeab5040261</expressionID>
+        </action>
+        <action>
+            <id>d5b88155-f0bd-4289-aa54-00fcbbd53a8c</id>
+            <name>CIHOI_Y2</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOI_Y2].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOI_Y2].description</description>
+            <expressionID>a665583a-0667-4173-8708-768d7d19a829</expressionID>
+        </action>
+        <action>
+            <id>f38d246b-55b1-412d-87db-70c647be8102</id>
+            <name>CIHOJZ82</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOJZ82].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOJZ82].description</description>
+            <expressionID>70fcb9ae-c638-49b2-9759-0b283758c275</expressionID>
+        </action>
+        <action>
+            <id>9fa918f0-3819-4569-b4a9-ac957bb45ce0</id>
+            <name>CIHOK1P0</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOK1P0].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOK1P0].description</description>
+            <expressionID>887b64fc-b6ec-45fd-9179-9b832b9912f1</expressionID>
+        </action>
+        <action>
+            <id>bc6fc577-1a01-4210-880b-466e86318942</id>
+            <name>CIHOK63L</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOK63L].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOK63L].description</description>
+            <expressionID>43f4ee13-3ff0-461b-8a0d-3c01c7541c52</expressionID>
+        </action>
+        <action>
+            <id>6a67d77d-d2a5-4606-888b-1d41d4fb5267</id>
+            <name>CIHOKQ83</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOKQ83].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOKQ83].description</description>
+            <expressionID>90a23574-929b-4f2d-b6a3-c54577571156</expressionID>
+        </action>
+        <action>
+            <id>cefd9d32-e507-458f-9f4d-d80e6a198e3c</id>
+            <name>CIHOK$4_</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOK$4_].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOK$4_].description</description>
+            <expressionID>9617ce48-0f3a-4e88-9117-d758fa22fdab</expressionID>
+        </action>
+        <action>
+            <id>0e26fe79-c210-4d12-a0e8-95470aa2a6bc</id>
+            <name>CIHOL4VG</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOL4VG].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOL4VG].description</description>
+            <expressionID>64c75c87-a358-428a-95f2-66d3123b2413</expressionID>
+        </action>
+        <action>
+            <id>8df6883e-2c93-4536-bd8b-6d29a6f602bb</id>
+            <name>CIISBG5U</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIISBG5U].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIISBG5U].description</description>
+            <expressionID>b750b5d7-6ccd-4a86-8c6d-2e316bcbe171</expressionID>
+        </action>
+        <action>
+            <id>a5c687a7-f30f-4de0-aaa6-f7f3beb6b10a</id>
+            <name>CIISAR3N</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIISAR3N].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIISAR3N].description</description>
+            <expressionID>befcc828-53d3-49e9-b7ad-0d05f0286c37</expressionID>
+        </action>
+        <action>
+            <id>454c2597-8015-4764-9612-db47122957fc</id>
+            <name>CIIS9RC6</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIIS9RC6].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIIS9RC6].description</description>
+            <expressionID>ff89f0cb-d038-4f5c-ae74-ea3abd795ff5</expressionID>
+        </action>
+        <action>
+            <id>bce64a08-b10a-4e91-b4ff-240f506674ee</id>
+            <name>CIISG27W</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIISG27W].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIISG27W].description</description>
+            <expressionID>5ea6ec80-70b2-4ff3-ab10-10f77fe44d7c</expressionID>
+        </action>
+        <action>
+            <id>2d910312-8c1e-454b-8f0d-31ef1f07fbe6</id>
+            <name>CIHOI_WU</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOI_WU].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOI_WU].description</description>
+            <expressionID>2c3e7e6d-2d57-412b-9c7f-c16fa6bc4c2e</expressionID>
+        </action>
+        <action>
+            <id>f5cb8fbd-2d40-4acd-99ef-76a8ff62747c</id>
+            <name>CIHOCGI8</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOCGI8].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOCGI8].description</description>
+            <expressionID>8350a3d7-69c8-4a98-badf-c76b85658d73</expressionID>
+        </action>
+        <action>
+            <id>c91e96f8-832c-4cb7-be36-ed50b529e2b4</id>
+            <name>CIISNNMY</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIISNNMY].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIISNNMY].description</description>
+            <expressionID>99f6bc47-8865-4918-85b1-c481ce6a5da4</expressionID>
+        </action>
+        <action>
+            <id>96400666-d504-4fb5-b4c8-aeb05453deab</id>
+            <name>CIHOE5$X</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOE5$X].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOE5$X].description</description>
+            <expressionID>b5546d74-89b2-4f3b-bc77-6e1f64e58da4</expressionID>
+        </action>
+        <action>
+            <id>6f035f17-81c4-4ea4-9ed2-c3eb22a445c7</id>
+            <name>CIHOFP8O</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOFP8O].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOFP8O].description</description>
+            <expressionID>ca25d5dc-ab94-497a-acc1-a1634fc04582</expressionID>
+        </action>
+        <action>
+            <id>6f2547b2-6c00-4521-8441-9fd010de9346</id>
+            <name>CIISPTID</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIISPTID].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIISPTID].description</description>
+            <expressionID>2c7d1168-23f9-460a-b028-6fc14360966e</expressionID>
+        </action>
+        <action>
+            <id>1a7e4668-aa5d-4166-9c45-a1b9de672a33</id>
+            <name>CILLS8IH</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CILLS8IH].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CILLS8IH].description</description>
+            <expressionID>8cf6ac88-9c48-48cf-9a83-b428c6d79559</expressionID>
+        </action>
+        <action>
+            <id>b9bb2320-2f37-4e52-b56b-2e10e500c353</id>
+            <name>CILLTW9F</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CILLTW9F].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CILLTW9F].description</description>
+            <expressionID>895b6e97-b02f-4ee3-ac20-9c2373732ec0</expressionID>
+        </action>
+        <action>
+            <id>606d3245-da8d-4a2d-a25e-c0551427a03b</id>
+            <name>CILLUE3U</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CILLUE3U].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CILLUE3U].description</description>
+            <expressionID>f1ce342f-7cdd-4f10-bd98-8599f66505d6</expressionID>
+        </action>
+        <action>
+            <id>4ea42f2e-8fb5-4960-ae97-a6eb4be0773d</id>
+            <name>CILLTZ43</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CILLTZ43].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CILLTZ43].description</description>
+            <expressionID>9c50471f-94c2-4b13-bb4f-f781dbb7932e</expressionID>
+        </action>
+        <action>
+            <id>6e67e5d5-74e1-4b03-8745-1e4e332604cf</id>
+            <name>CIVM287O</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIVM287O].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIVM287O].description</description>
+            <expressionID>41f839b0-e105-4148-9c79-74bd0d8b587f</expressionID>
+        </action>
+        <action>
+            <id>4a7f5286-9f3a-4c3d-bf8e-200b29a5b07a</id>
+            <name>Entry_beginStation_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[Entry_beginStation_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[Entry_beginStation_ActionInfo].description</description>
+            <expressionID>9dd816ca-f388-404b-a7e3-0ef2f25e2be8</expressionID>
+        </action>
+        <action>
+            <id>52df9574-7edb-4740-bffa-75e24e60073e</id>
+            <name>Entry_endStation_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[Entry_endStation_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[Entry_endStation_ActionInfo].description</description>
+            <expressionID>7903b558-f3ef-4e47-839c-26095341138a</expressionID>
+        </action>
+        <action>
+            <id>2b3eed45-3f4e-403a-8bcb-31d8e98bb5ab</id>
+            <name>Entry_mileage_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[Entry_mileage_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[Entry_mileage_ActionInfo].description</description>
+            <expressionID>a63c06f7-b777-40c4-a7fe-469e55882893</expressionID>
+        </action>
+        <action>
+            <id>358af0fc-4922-4d72-944b-0f13ff954218</id>
+            <name>CJY7L828</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CJY7L828].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CJY7L828].description</description>
+            <expressionID>148a158d-2744-416f-83e5-ff999cd38004</expressionID>
+        </action>
+        <action>
+            <id>9594cafd-25bc-450c-8664-a90e7d7157e8</id>
+            <name>CJY7MME7</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CJY7MME7].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CJY7MME7].description</description>
+            <expressionID>12068f08-f2e7-4a52-90b7-ea93e24b1492</expressionID>
+        </action>
+        <action>
+            <id>e5ba51f0-e555-4729-924f-9358a7b543f2</id>
+            <name>CK2B4OSR</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CK2B4OSR].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CK2B4OSR].description</description>
+            <expressionID>49044a76-53d9-480d-8c70-a8372e11c23c</expressionID>
+        </action>
+        <action>
+            <id>7c01ff2e-8ad7-493a-824e-8eb7e91618d7</id>
+            <name>CJY7L811</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CJY7L811].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CJY7L811].description</description>
+            <expressionID>27d416fb-1461-4548-b3de-1a3156d127b1</expressionID>
+        </action>
+        <action>
+            <id>a57b9257-7dbc-466e-a57f-ab6e17458451</id>
+            <name>CJY87LZ7</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CJY87LZ7].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CJY87LZ7].description</description>
+            <expressionID>fda757f4-b96e-41fe-b59a-2b8e44c6d63e</expressionID>
+        </action>
+        <action>
+            <id>0612c7d2-7ac6-4075-b9e6-58a56377d639</id>
+            <name>CK2B4ORN</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CK2B4ORN].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CK2B4ORN].description</description>
+            <expressionID>48e63931-8ccb-4932-801c-c7fac94a053a</expressionID>
+        </action>
+        <action>
+            <id>4e0b8187-fc69-4669-a2b1-1ece6167d6da</id>
+            <name>CKG_KN_P</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CKG_KN_P].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CKG_KN_P].description</description>
+            <expressionID>5df3535f-4260-4efc-ad5f-9f848629f096</expressionID>
+        </action>
+        <action>
+            <id>6a8a761f-0a6d-4e53-84f0-0bc949cd10b8</id>
+            <name>CKG_LB_$</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CKG_LB_$].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CKG_LB_$].description</description>
+            <expressionID>439d1f6d-9fc9-4aa8-9a76-c132a06b1e50</expressionID>
+        </action>
+        <action>
+            <id>974b9769-f603-42aa-9025-8174806a6c9c</id>
+            <name>CKG_LB$P</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CKG_LB$P].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CKG_LB$P].description</description>
+            <expressionID>7503adfe-d197-47e3-9b6e-dfd5c73089f1</expressionID>
+        </action>
+        <action>
+            <id>d16590dc-c96e-47f5-9bad-d135a83d3f9b</id>
+            <name>CKG_KN$C</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CKG_KN$C].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CKG_KN$C].description</description>
+            <expressionID>dd5cc721-ae27-4e02-ad0b-8d29ed95cf72</expressionID>
+        </action>
+        <action>
+            <id>15c9e873-94d5-43a3-a5c2-62ca9bd35ae1</id>
+            <name>CKG_SQR5</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CKG_SQR5].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CKG_SQR5].description</description>
+            <expressionID>6ba5ddce-5407-4eb7-9ada-31bf54d5f492</expressionID>
+        </action>
+        <action>
+            <id>9a8f1fcb-e721-43aa-b1fe-d47dac1b38c2</id>
+            <name>CKPQZJJ5</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CKPQZJJ5].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CKPQZJJ5].description</description>
+            <expressionID>c74920ea-2859-45ca-b61f-da30e6c51e8d</expressionID>
+        </action>
+    </actions>
+    <conditions>
+        <baseCondition>
+            <id>3849eca7-72fd-49d3-8aa4-0197a5a585ed</id>
+            <name />
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].conditions.baseConditionalias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].conditions.baseConditiondescription</description>
+            <expressionID>c39bbbab-c6ee-4ef9-b88e-290aa21b981f</expressionID>
+        </baseCondition>
+        <baseCondition>
+            <id>b846e8de-15f2-4a8e-ab5e-61dce697742f</id>
+            <name>CJY8A6WI</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].conditions.baseCondition[CJY8A6WI].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].conditions.baseCondition[CJY8A6WI].description</description>
+            <expressionID>84c5d746-e40d-420a-ac27-c2fde97316af</expressionID>
+        </baseCondition>
+        <baseCondition>
+            <id>576d5e4f-a5a8-4d80-bdfd-ac92e3302106</id>
+            <name>CJY84J6Z</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].conditions.baseCondition[CJY84J6Z].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].conditions.baseCondition[CJY84J6Z].description</description>
+            <expressionID>d6b1ab21-dd97-4f73-a2f6-0d0c041662a2</expressionID>
+        </baseCondition>
+        <baseCondition>
+            <id>a9e7f372-9e31-484c-b6fb-3add3e494641</id>
+            <name>CJY87RTK</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].conditions.baseCondition[CJY87RTK].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].conditions.baseCondition[CJY87RTK].description</description>
+            <expressionID>f7079350-01e0-4e24-b065-69d08e6ba369</expressionID>
+        </baseCondition>
+        <baseCondition>
+            <id>265759f3-6ede-4905-8dc6-670162e7d542</id>
+            <name>CKG_QRJ9</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].conditions.baseCondition[CKG_QRJ9].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].conditions.baseCondition[CKG_QRJ9].description</description>
+            <expressionID>faefdd5d-5a01-45d6-bfc2-a837b6517ab6</expressionID>
+        </baseCondition>
+        <baseCondition>
+            <id>2994d4fe-d38f-46f2-9964-619074a3b781</id>
+            <name>CKPQ_950</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].conditions.baseCondition[CKPQ_950].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].conditions.baseCondition[CKPQ_950].description</description>
+            <expressionID>b6940973-fe4b-4b6e-93b1-d1df2dee7b66</expressionID>
+        </baseCondition>
+    </conditions>
+    <rules>
+        <conditionRule>
+            <name>TransportDailyCKFVFBVC</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKFVFBVC].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKFVFBVC].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <condition>
+                <key name="id" value="576d5e4f-a5a8-4d80-bdfd-ac92e3302106" />
+            </condition>
+            <actions>
+                <action>
+                    <key name="id" value="a57b9257-7dbc-466e-a57f-ab6e17458451" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>Entry_beginStation_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[Entry_beginStation_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[Entry_beginStation_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="4a7f5286-9f3a-4c3d-bf8e-200b29a5b07a" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>Entry_endStation_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[Entry_endStation_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[Entry_endStation_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="52df9574-7edb-4740-bffa-75e24e60073e" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>Entry_mileage_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[Entry_mileage_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[Entry_mileage_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="2b3eed45-3f4e-403a-8bcb-31d8e98bb5ab" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>TransportDailyCKFVEFXI</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKFVEFXI].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKFVEFXI].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="7c01ff2e-8ad7-493a-824e-8eb7e91618d7" />
+                </action>
+            </actions>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="358af0fc-4922-4d72-944b-0f13ff954218" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+        <conditionRule>
+            <name>TransportDailyCKG_I_D6</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKG_I_D6].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKG_I_D6].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <condition>
+                <key name="id" value="a9e7f372-9e31-484c-b6fb-3add3e494641" />
+            </condition>
+            <actions>
+                <action>
+                    <key name="id" value="a57b9257-7dbc-466e-a57f-ab6e17458451" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>CKG_LHVY</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[CKG_LHVY].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[CKG_LHVY].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="6a8a761f-0a6d-4e53-84f0-0bc949cd10b8" />
+                </action>
+            </actions>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="974b9769-f603-42aa-9025-8174806a6c9c" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+        <conditionRule>
+            <name>TransportDailyCKFVD_T2</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKFVD_T2].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKFVD_T2].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="7c01ff2e-8ad7-493a-824e-8eb7e91618d7" />
+                </action>
+            </actions>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="9594cafd-25bc-450c-8664-a90e7d7157e8" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+        <conditionRule>
+            <name>TransportDailyCKFVDTU_</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKFVDTU_].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKFVDTU_].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <condition>
+                <key name="id" value="b846e8de-15f2-4a8e-ab5e-61dce697742f" />
+            </condition>
+            <actions>
+                <action>
+                    <key name="id" value="a57b9257-7dbc-466e-a57f-ab6e17458451" />
+                </action>
+                <action>
+                    <key name="id" value="a57b9257-7dbc-466e-a57f-ab6e17458451" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>CKG_L1DU</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[CKG_L1DU].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[CKG_L1DU].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="4e0b8187-fc69-4669-a2b1-1ece6167d6da" />
+                </action>
+            </actions>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="d16590dc-c96e-47f5-9bad-d135a83d3f9b" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+        <conditionRule>
+            <name>TransportDailyCKG_SQRK</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKG_SQRK].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKG_SQRK].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <condition>
+                <key name="id" value="265759f3-6ede-4905-8dc6-670162e7d542" />
+            </condition>
+            <actions>
+                <action>
+                    <key name="id" value="15c9e873-94d5-43a3-a5c2-62ca9bd35ae1" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>TransportDailyCKG_K05J</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKG_K05J].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKG_K05J].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="0612c7d2-7ac6-4075-b9e6-58a56377d639" />
+                </action>
+            </actions>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="e5ba51f0-e555-4729-924f-9358a7b543f2" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+        <conditionRule>
+            <name>CKPQ_950</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[CKPQ_950].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[CKPQ_950].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <condition>
+                <key name="id" value="2994d4fe-d38f-46f2-9964-619074a3b781" />
+            </condition>
+            <actions>
+                <action>
+                    <key name="id" value="9a8f1fcb-e721-43aa-b1fe-d47dac1b38c2" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>CKPQ_UA6</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[CKPQ_UA6].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[CKPQ_UA6].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <condition>
+                <key name="id" value="2994d4fe-d38f-46f2-9964-619074a3b781" />
+            </condition>
+            <actions>
+                <action>
+                    <key name="id" value="9a8f1fcb-e721-43aa-b1fe-d47dac1b38c2" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHO5CM5].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHO5CM5].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOCGI8].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算含税金额" />
+            <lang locale="zh_HK" value="計算含稅金額" />
+            <lang locale="zh_TW" value="計算含稅金額" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOCGI8].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOCGJM].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOCGJM].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHODOQV].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHODOQV].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOE5$X].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算税额" />
+            <lang locale="zh_HK" value="計算稅額" />
+            <lang locale="zh_TW" value="計算稅額" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOE5$X].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOE615].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOE615].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOFP8O].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算不含税单价" />
+            <lang locale="zh_HK" value="計算不含稅單價" />
+            <lang locale="zh_TW" value="計算不含稅單價" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOFP8O].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOFP9$].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOFP9$].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOGODU].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOGODU].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOGTX0].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOGTX0].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOHL9Z].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOHL9Z].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOI_WU].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算含税单价" />
+            <lang locale="zh_HK" value="計算含稅單價" />
+            <lang locale="zh_TW" value="計算含稅單價" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOI_WU].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOI_Y2].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOI_Y2].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOJZ82].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOJZ82].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOK$4_].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOK$4_].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOK1P0].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOK1P0].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOK63L].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOK63L].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOKQ83].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOKQ83].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOL4VG].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIHOL4VG].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIIS9RC6].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIIS9RC6].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIISAR3N].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算不含税金额" />
+            <lang locale="zh_HK" value="計算不含稅金額" />
+            <lang locale="zh_TW" value="計算不含稅金額" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIISAR3N].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIISBG5U].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIISBG5U].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIISG27W].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIISG27W].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIISNNMY].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIISNNMY].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIISPTID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIISPTID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CILLS8IH].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CILLS8IH].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CILLTW9F].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CILLTW9F].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CILLTZ43].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算预估单位重量" />
+            <lang locale="zh_HK" value="計算預估單位重量" />
+            <lang locale="zh_TW" value="計算預估單位重量" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CILLTZ43].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CILLUE3U].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CILLUE3U].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIVM287O].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算预估只数" />
+            <lang locale="zh_HK" value="計算預估只數" />
+            <lang locale="zh_TW" value="計算預估只數" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CIVM287O].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CJY7L811].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算今日里程" />
+            <lang locale="zh_HK" value="計算今日裏程" />
+            <lang locale="zh_TW" value="計算今日裏程" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CJY7L811].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CJY7L828].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CJY7L828].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CJY7MME7].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CJY7MME7].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CJY87LZ7].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="calAvgMil" />
+            <lang locale="zh_HK" value="calAvgMil" />
+            <lang locale="zh_TW" value="calAvgMil" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CJY87LZ7].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CK2B4ORN].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算总油耗" />
+            <lang locale="zh_HK" value="計算總油耗" />
+            <lang locale="zh_TW" value="計算總油耗" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CK2B4ORN].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CK2B4OSR].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CK2B4OSR].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CKG_KN$C].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CKG_KN$C].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CKG_KN_P].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CKG_KN_P].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CKG_LB$P].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CKG_LB$P].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CKG_LB_$].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CKG_LB_$].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CKG_SQR5].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算平均油耗" />
+            <lang locale="zh_HK" value="計算平均油耗" />
+            <lang locale="zh_TW" value="計算平均油耗" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CKG_SQR5].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CKPQZJJ5].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算油耗" />
+            <lang locale="zh_HK" value="計算油耗" />
+            <lang locale="zh_TW" value="計算油耗" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[CKPQZJJ5].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[Entry_beginStation_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_beginStation" />
+            <lang locale="zh_HK" value="攜帶字段屬性_beginStation" />
+            <lang locale="zh_TW" value="攜帶字段屬性_beginStation" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[Entry_beginStation_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[Entry_endStation_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_endStation" />
+            <lang locale="zh_HK" value="攜帶字段屬性_endStation" />
+            <lang locale="zh_TW" value="攜帶字段屬性_endStation" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[Entry_endStation_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[Entry_mileage_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_totalMileage" />
+            <lang locale="zh_HK" value="攜帶字段屬性_totalMileage" />
+            <lang locale="zh_TW" value="攜帶字段屬性_totalMileage" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[Entry_mileage_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[Entrys_materialName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[Entrys_materialName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[Entrys_model_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].actions.action[Entrys_model_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].conditions.baseCondition[CJY84J6Z].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="count&gt;0" />
+            <lang locale="zh_HK" value="count&gt;0" />
+            <lang locale="zh_TW" value="count&gt;0" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].conditions.baseCondition[CJY84J6Z].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].conditions.baseCondition[CJY87RTK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].conditions.baseCondition[CJY87RTK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].conditions.baseCondition[CJY8A6WI].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].conditions.baseCondition[CJY8A6WI].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].conditions.baseCondition[CKG_QRJ9].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].conditions.baseCondition[CKG_QRJ9].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].conditions.baseCondition[CKPQ_950].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单价大于0" />
+            <lang locale="zh_HK" value="單價大於0" />
+            <lang locale="zh_TW" value="單價大於0" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].conditions.baseCondition[CKPQ_950].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].conditions.baseConditionalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="次数大于0" />
+            <lang locale="zh_HK" value="次數大於0" />
+            <lang locale="zh_TW" value="次數大於0" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].conditions.baseConditiondescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[CKG_L1DU].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算总油耗" />
+            <lang locale="zh_HK" value="計算總油耗" />
+            <lang locale="zh_TW" value="計算總油耗" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[CKG_L1DU].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[CKG_L1DU].extendedProperty.columnName">
+            <lang locale="en_US" value="endMileage" />
+            <lang locale="zh_CN" value="endMileage" />
+            <lang locale="zh_TW" value="endMileage" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[CKG_LHVY].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算总油耗" />
+            <lang locale="zh_HK" value="計算總油耗" />
+            <lang locale="zh_TW" value="計算總油耗" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[CKG_LHVY].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[CKG_LHVY].extendedProperty.columnName">
+            <lang locale="en_US" value="startMileage" />
+            <lang locale="zh_CN" value="startMileage" />
+            <lang locale="zh_TW" value="startMileage" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[CKPQ_950].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算油耗" />
+            <lang locale="zh_HK" value="計算油耗" />
+            <lang locale="zh_TW" value="計算油耗" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[CKPQ_950].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[CKPQ_950].extendedProperty.columnName">
+            <lang locale="en_US" value="price" />
+            <lang locale="zh_CN" value="price" />
+            <lang locale="zh_TW" value="price" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[CKPQ_UA6].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算油耗" />
+            <lang locale="zh_HK" value="計算油耗" />
+            <lang locale="zh_TW" value="計算油耗" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[CKPQ_UA6].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[CKPQ_UA6].extendedProperty.columnName">
+            <lang locale="en_US" value="amount" />
+            <lang locale="zh_CN" value="amount" />
+            <lang locale="zh_TW" value="amount" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[Entry_beginStation_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_beginStation" />
+            <lang locale="zh_HK" value="攜帶字段屬性_beginStation" />
+            <lang locale="zh_TW" value="攜帶字段屬性_beginStation" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[Entry_beginStation_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[Entry_beginStation_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="DeliveryLine" />
+            <lang locale="zh_CN" value="DeliveryLine" />
+            <lang locale="zh_TW" value="DeliveryLine" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[Entry_beginStation_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[Entry_endStation_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_endStation" />
+            <lang locale="zh_HK" value="攜帶字段屬性_endStation" />
+            <lang locale="zh_TW" value="攜帶字段屬性_endStation" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[Entry_endStation_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[Entry_endStation_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="DeliveryLine" />
+            <lang locale="zh_CN" value="DeliveryLine" />
+            <lang locale="zh_TW" value="DeliveryLine" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[Entry_endStation_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[Entry_mileage_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_totalMileage" />
+            <lang locale="zh_HK" value="攜帶字段屬性_totalMileage" />
+            <lang locale="zh_TW" value="攜帶字段屬性_totalMileage" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[Entry_mileage_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[Entry_mileage_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="DeliveryLine" />
+            <lang locale="zh_CN" value="DeliveryLine" />
+            <lang locale="zh_TW" value="DeliveryLine" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[Entry_mileage_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKFVDTU_].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="平均里程" />
+            <lang locale="zh_HK" value="平均裏程" />
+            <lang locale="zh_TW" value="平均裏程" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKFVDTU_].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKFVDTU_].extendedProperty.columnName">
+            <lang locale="en_US" value="endMileage" />
+            <lang locale="zh_CN" value="endMileage" />
+            <lang locale="zh_TW" value="endMileage" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKFVD_T2].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="今日里程" />
+            <lang locale="zh_HK" value="今日裏程" />
+            <lang locale="zh_TW" value="今日裏程" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKFVD_T2].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKFVD_T2].extendedProperty.columnName">
+            <lang locale="en_US" value="endMileage" />
+            <lang locale="zh_CN" value="endMileage" />
+            <lang locale="zh_TW" value="endMileage" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKFVEFXI].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="今日里程" />
+            <lang locale="zh_HK" value="今日裏程" />
+            <lang locale="zh_TW" value="今日裏程" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKFVEFXI].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKFVEFXI].extendedProperty.columnName">
+            <lang locale="en_US" value="startMileage" />
+            <lang locale="zh_CN" value="startMileage" />
+            <lang locale="zh_TW" value="startMileage" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKFVFBVC].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="平均里程" />
+            <lang locale="zh_HK" value="平均裏程" />
+            <lang locale="zh_TW" value="平均裏程" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKFVFBVC].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKFVFBVC].extendedProperty.columnName">
+            <lang locale="en_US" value="count" />
+            <lang locale="zh_CN" value="count" />
+            <lang locale="zh_TW" value="count" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKG_I_D6].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="平均里程" />
+            <lang locale="zh_HK" value="平均裏程" />
+            <lang locale="zh_TW" value="平均裏程" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKG_I_D6].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKG_I_D6].extendedProperty.columnName">
+            <lang locale="en_US" value="startMileage" />
+            <lang locale="zh_CN" value="startMileage" />
+            <lang locale="zh_TW" value="startMileage" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKG_K05J].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算油耗" />
+            <lang locale="zh_HK" value="計算油耗" />
+            <lang locale="zh_TW" value="計算油耗" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKG_K05J].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKG_K05J].extendedProperty.columnName">
+            <lang locale="en_US" value="avgMPG" />
+            <lang locale="zh_CN" value="avgMPG" />
+            <lang locale="zh_TW" value="avgMPG" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKG_SQRK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算平均油耗" />
+            <lang locale="zh_HK" value="計算平均油耗" />
+            <lang locale="zh_TW" value="計算平均油耗" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKG_SQRK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.TransportDailyRuleSet].rules.conditionRule[TransportDailyCKG_SQRK].extendedProperty.columnName">
+            <lang locale="en_US" value="todayMPG" />
+            <lang locale="zh_CN" value="todayMPG" />
+            <lang locale="zh_TW" value="todayMPG" />
+        </rs>
+    </resource>
+</ruleSet>
+

@@ -1,0 +1,1219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.szcount.app</package>
+    <name>MaterialConversionRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>5bee8461-a663-4d15-a21d-16037d3b3a94</id>
+            <parentID />
+            <source>materialNumber=materialName.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>b42f1416-7bef-4061-b449-706deb1827ad</id>
+            <parentID>5bee8461-a663-4d15-a21d-16037d3b3a94</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>5e1eaeef-39c3-425f-a0c0-23a8195b502f</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5e1eaeef-39c3-425f-a0c0-23a8195b502f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtmaterialNumber</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>dea19a2e-ff56-4260-b550-3891482afb8e</id>
+            <parentID>5bee8461-a663-4d15-a21d-16037d3b3a94</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>96574839-262e-483b-bdd8-8f3a954e9c9b</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>44486dc0-7869-4de3-a090-9dc0a70240c2</id>
+                        <expressionID>121552c6-11d7-49da-a91b-3f11f0bda300</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>969d497e-5397-4455-9f2f-a458995dff3e</id>
+                        <expressionID>dd2659c4-8deb-4e3d-9866-93e1fd910057</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>96574839-262e-483b-bdd8-8f3a954e9c9b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>121552c6-11d7-49da-a91b-3f11f0bda300</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>48141829-b489-4def-9d63-64953a0fa901</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>48141829-b489-4def-9d63-64953a0fa901</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtmaterialName</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>dd2659c4-8deb-4e3d-9866-93e1fd910057</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>8b2bbbdf-204a-471d-81ae-5d5e81dc4e03</id>
+            <parentID />
+            <source>specifications=materialName.model</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>075384ac-c2b6-41c1-9caa-3ac8658901be</id>
+            <parentID>8b2bbbdf-204a-471d-81ae-5d5e81dc4e03</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>0e5686d8-5389-4ea9-b74f-0ac021db608a</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0e5686d8-5389-4ea9-b74f-0ac021db608a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtspecifications</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>de7e9f33-9e26-4adc-9fcc-7a8d90850863</id>
+            <parentID>8b2bbbdf-204a-471d-81ae-5d5e81dc4e03</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>9493c4fc-2c8d-4a72-9821-dbb8d43c0ce3</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>a298adbe-c2f9-4c51-81ab-be588ffe2b1a</id>
+                        <expressionID>969d13c7-aa50-441c-8400-a4dd21cda89c</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>b09639b9-8018-4d1e-9977-ff9b5bab4138</id>
+                        <expressionID>cfde1a7b-a928-4f7a-af07-af87ca4e7bcb</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9493c4fc-2c8d-4a72-9821-dbb8d43c0ce3</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>969d13c7-aa50-441c-8400-a4dd21cda89c</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>c4a0b8e0-58fb-4084-8d2b-530ff3572c59</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c4a0b8e0-58fb-4084-8d2b-530ff3572c59</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtmaterialName</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cfde1a7b-a928-4f7a-af07-af87ca4e7bcb</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>model</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>59050707-8e54-4aa2-a9e7-3178265ab5c5</id>
+            <parentID />
+            <source>materialNumber=materialName.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>42e45df0-2955-4b7e-a30c-c5d92255883c</id>
+            <parentID>59050707-8e54-4aa2-a9e7-3178265ab5c5</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>e5b676a4-571b-4b1a-8ff4-7bf8df2fc8c4</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e5b676a4-571b-4b1a-8ff4-7bf8df2fc8c4</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtmaterialNumber</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>86fdada9-68b7-436e-920a-59420566ff93</id>
+            <parentID>59050707-8e54-4aa2-a9e7-3178265ab5c5</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>f81cc3c1-630b-4e14-88a8-5013ce7d52d2</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>ca0b61a2-8809-42d7-b851-56084d5cc87c</id>
+                        <expressionID>6076e146-b94a-4bb8-9897-63695ee31a48</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>f4209cc8-0e95-4932-b56c-c9568d91aa13</id>
+                        <expressionID>3f2858fa-d2d0-487f-8baa-a32697e056b1</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f81cc3c1-630b-4e14-88a8-5013ce7d52d2</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6076e146-b94a-4bb8-9897-63695ee31a48</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>d1f9d86e-ad5d-4b77-9b85-f381d2456f53</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d1f9d86e-ad5d-4b77-9b85-f381d2456f53</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtmaterialName</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3f2858fa-d2d0-487f-8baa-a32697e056b1</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>f5a3cf75-fb03-4d1c-ac6b-5703a341193f</id>
+            <parentID />
+            <source>specifications=materialName.model</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>ae50b37d-f4c1-44ec-95ee-cbc2b027e1d0</id>
+            <parentID>f5a3cf75-fb03-4d1c-ac6b-5703a341193f</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>593d65cc-eea8-4738-a889-8ff52babf771</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>593d65cc-eea8-4738-a889-8ff52babf771</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtspecifications</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>42a28864-4b97-4b8b-9070-c2303f52677f</id>
+            <parentID>f5a3cf75-fb03-4d1c-ac6b-5703a341193f</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>ad397025-35fd-436d-80ee-9a9efeded173</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>4fd1a2f2-daa1-4442-804f-965b7645a752</id>
+                        <expressionID>dd94196f-f04a-49fa-ac81-5c1037e2e073</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>cfbfcc17-bc23-45f0-bf16-c0274724d739</id>
+                        <expressionID>2b254590-1f5a-4f94-b9fa-47f5b6607a84</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ad397025-35fd-436d-80ee-9a9efeded173</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>dd94196f-f04a-49fa-ac81-5c1037e2e073</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>59eca44f-42bf-4649-8bd8-344864042a72</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>59eca44f-42bf-4649-8bd8-344864042a72</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtmaterialName</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2b254590-1f5a-4f94-b9fa-47f5b6607a84</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>model</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>52967ba4-a8c7-48da-85d7-65a742dc8839</id>
+            <parentID />
+            <source>materials=materialName.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>651346c3-c0e3-438e-b967-ac033b617ca0</id>
+            <parentID>52967ba4-a8c7-48da-85d7-65a742dc8839</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>cd101f8a-cc02-489b-a4eb-81dd72af397a</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cd101f8a-cc02-489b-a4eb-81dd72af397a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtmaterials</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e5f1b4ee-71d1-4652-8dd5-1e18008649d0</id>
+            <parentID>52967ba4-a8c7-48da-85d7-65a742dc8839</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>467d3fbd-1535-4d42-a5c0-16c619d5914f</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>6f31dc5f-9897-4e6f-aa79-ec4c86d742b9</id>
+                        <expressionID>6dca6910-a498-4027-8ba1-9b22e840afe5</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>ec0ac9cc-6eaa-4ae8-84ea-3a00e6855592</id>
+                        <expressionID>701d4904-8cb5-4154-9f27-8fbabca56cd4</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>467d3fbd-1535-4d42-a5c0-16c619d5914f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6dca6910-a498-4027-8ba1-9b22e840afe5</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>47993e16-7676-49a0-ab86-2e8fe8cd8013</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>47993e16-7676-49a0-ab86-2e8fe8cd8013</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtmaterialName</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>701d4904-8cb5-4154-9f27-8fbabca56cd4</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>87ed297e-7814-408d-975c-8ac0e282ff1b</id>
+            <parentID />
+            <source>materialNumber=materialName.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>2c11fa61-a74e-4641-98f8-0f196c0524ad</id>
+            <parentID>87ed297e-7814-408d-975c-8ac0e282ff1b</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>663ea4aa-154e-4ee4-8400-92f18def4045</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>663ea4aa-154e-4ee4-8400-92f18def4045</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtmaterialNumber</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>006f4968-0d68-4783-a5c5-18ada47fb371</id>
+            <parentID>87ed297e-7814-408d-975c-8ac0e282ff1b</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>4d260531-0001-4eee-bb7c-46438f80a714</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>09a11e82-8ffc-4125-994c-7803d600f048</id>
+                        <expressionID>3971d5e5-0872-45e9-93bc-0c65602e8756</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>3c1578ea-a465-4831-9630-ca347f5a2cb3</id>
+                        <expressionID>56326da0-267c-40ef-8c55-00a838c9b335</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4d260531-0001-4eee-bb7c-46438f80a714</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3971d5e5-0872-45e9-93bc-0c65602e8756</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>e63cf571-9ea9-44e6-91ed-c745912e8566</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e63cf571-9ea9-44e6-91ed-c745912e8566</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtmaterialName</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>56326da0-267c-40ef-8c55-00a838c9b335</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>f82dc8aa-cbcb-4d7d-928d-34709efaaa63</id>
+            <parentID />
+            <source>specifications=materialName.model</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>1cbcc09f-5b8f-48eb-bc34-9ae8ecbcd5d9</id>
+            <parentID>f82dc8aa-cbcb-4d7d-928d-34709efaaa63</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>f6e0d403-033b-43bc-b636-aad0302baf3a</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f6e0d403-033b-43bc-b636-aad0302baf3a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtspecifications</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>927b195e-c60b-4bb5-a8e6-7b8a9d7b6512</id>
+            <parentID>f82dc8aa-cbcb-4d7d-928d-34709efaaa63</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>61a60f05-cf83-4e2f-a300-69f2a92aca01</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>18064db7-e2ff-4728-91c1-bd664fed88f9</id>
+                        <expressionID>f3c6d0d0-5de8-474e-bd00-b9f35a0565eb</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>0ad86add-1be5-4e9e-9e5b-ab647832cab4</id>
+                        <expressionID>9ebeb768-fd6f-4b68-ac20-00c243d07fc1</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>61a60f05-cf83-4e2f-a300-69f2a92aca01</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f3c6d0d0-5de8-474e-bd00-b9f35a0565eb</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>52cd9fec-dc91-4c43-bb3b-0eaae195635c</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>52cd9fec-dc91-4c43-bb3b-0eaae195635c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtmaterialName</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9ebeb768-fd6f-4b68-ac20-00c243d07fc1</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>model</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>bb3d1bb2-d178-4ff3-b028-e0607c7c6e8d</id>
+            <parentID />
+            <source>materials=materialName.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>2f4412f2-8500-4004-8828-c7ef278a434a</id>
+            <parentID>bb3d1bb2-d178-4ff3-b028-e0607c7c6e8d</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>e1fb5f0a-157e-4f2e-8262-7120bbdafcf6</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e1fb5f0a-157e-4f2e-8262-7120bbdafcf6</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtmaterials</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2c33c9e1-b5fc-4ae2-8abf-10da4aace31b</id>
+            <parentID>bb3d1bb2-d178-4ff3-b028-e0607c7c6e8d</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>250afc0d-7d53-441e-9c4c-12ea54889f6f</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>07e0c0cb-47b3-46b9-9794-e5fb894d4b49</id>
+                        <expressionID>b7c6bcff-afd3-435e-81b6-d07629048241</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>71b89d9e-edce-4c12-b841-8d0a8dd7095e</id>
+                        <expressionID>770eca95-3c51-4be2-9ea5-6fe6cf333f16</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>250afc0d-7d53-441e-9c4c-12ea54889f6f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b7c6bcff-afd3-435e-81b6-d07629048241</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>6db7979b-7b31-4b38-a78d-089988385d03</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6db7979b-7b31-4b38-a78d-089988385d03</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtmaterialName</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>770eca95-3c51-4be2-9ea5-6fe6cf333f16</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>f7d944a4-3c1c-4336-b245-d8ceba3e6e38</id>
+            <parentID />
+            <source>materialName=material.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>23823050-7ffd-42f8-a6f4-61deadb21080</id>
+            <parentID>f7d944a4-3c1c-4336-b245-d8ceba3e6e38</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>12c50f6a-2a37-49a4-9969-ff179641ef7a</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>12c50f6a-2a37-49a4-9969-ff179641ef7a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtmaterialName</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>aa215057-10ab-4d33-9977-d68c2d1de572</id>
+            <parentID>f7d944a4-3c1c-4336-b245-d8ceba3e6e38</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>9c47561b-cd5f-4484-87e0-54022aee2c90</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>8dc66e63-fd8a-4ef6-95ff-a2ac7103bad9</id>
+                        <expressionID>1589cc5c-11ef-4543-acc0-3ae4c7556d2a</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>9a7ba1cf-df3c-4ebf-894d-ca06edd0726f</id>
+                        <expressionID>6797a0ec-efea-4161-9fd4-2876adbfae9e</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9c47561b-cd5f-4484-87e0-54022aee2c90</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1589cc5c-11ef-4543-acc0-3ae4c7556d2a</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>c190726e-9eab-4302-8bf1-01345239478f</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c190726e-9eab-4302-8bf1-01345239478f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtmaterial</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6797a0ec-efea-4161-9fd4-2876adbfae9e</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>bbed6d2e-14c1-4a0d-8596-6a56c28ee6bf</id>
+            <parentID />
+            <source>materialNumber=material.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>94902861-6bda-4257-beb1-2e9627098d95</id>
+            <parentID>bbed6d2e-14c1-4a0d-8596-6a56c28ee6bf</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>e29783d8-d772-4be6-ada5-d885774bd8b2</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e29783d8-d772-4be6-ada5-d885774bd8b2</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtmaterialNumber</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>85957e35-a237-43b5-b816-23cfb70382c7</id>
+            <parentID>bbed6d2e-14c1-4a0d-8596-6a56c28ee6bf</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>2da8f5d6-6244-4aa1-9460-1830e8f692e7</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>1084e8d6-52e1-4715-ba05-3bca53b8bcfa</id>
+                        <expressionID>63693d7f-d2b2-4538-8ae8-354cf3bf1305</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>82e89dc2-ba1b-4b91-a5dd-df07852a3b80</id>
+                        <expressionID>f352acd4-d0e6-4b5b-b986-b38669a7d622</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2da8f5d6-6244-4aa1-9460-1830e8f692e7</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>63693d7f-d2b2-4538-8ae8-354cf3bf1305</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>8b9f67b0-7321-48a3-973a-db8e2024f4bd</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8b9f67b0-7321-48a3-973a-db8e2024f4bd</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtmaterial</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f352acd4-d0e6-4b5b-b986-b38669a7d622</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>d1515b9e-8de1-4098-8d92-8e2d15411afc</id>
+            <parentID />
+            <source>specifications=material.model</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>946621d8-9a64-451f-9999-15150b5e62f9</id>
+            <parentID>d1515b9e-8de1-4098-8d92-8e2d15411afc</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>3dc73532-bec3-4cab-9fea-7448e7981056</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3dc73532-bec3-4cab-9fea-7448e7981056</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtspecifications</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5e61d78b-0221-48c0-af18-b9320065ac3e</id>
+            <parentID>d1515b9e-8de1-4098-8d92-8e2d15411afc</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>67ecf4a2-c068-4584-b71f-615cb92217af</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>3e9ba261-b6a1-49f2-85ad-c9a55d81f787</id>
+                        <expressionID>7debbadd-39cb-40fd-a96a-71bdf7f684fa</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>575786c4-44cd-4c04-b0f3-53abae239c95</id>
+                        <expressionID>1a4847d3-db2c-4a8a-a88c-93406d325f83</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>67ecf4a2-c068-4584-b71f-615cb92217af</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7debbadd-39cb-40fd-a96a-71bdf7f684fa</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>a3667955-2675-4d9b-80b6-aca9c0a184dc</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a3667955-2675-4d9b-80b6-aca9c0a184dc</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtmaterial</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1a4847d3-db2c-4a8a-a88c-93406d325f83</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>model</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>8fa5fb4d-4ac6-4900-a945-d702b28d5760</id>
+            <name>MaterialConversion_materialNumber_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_materialNumber_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_materialNumber_ActionInfo].description</description>
+            <expressionID>5bee8461-a663-4d15-a21d-16037d3b3a94</expressionID>
+        </action>
+        <action>
+            <id>3ff163eb-9403-44bf-8152-ef728f5368eb</id>
+            <name>MaterialConversion_specifications_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_specifications_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_specifications_ActionInfo].description</description>
+            <expressionID>8b2bbbdf-204a-471d-81ae-5d5e81dc4e03</expressionID>
+        </action>
+        <action>
+            <id>fba9dc57-2391-45dc-b409-d5039ca58700</id>
+            <name>MaterialConversion_materialNumber_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_materialNumber_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_materialNumber_ActionInfo].description</description>
+            <expressionID>59050707-8e54-4aa2-a9e7-3178265ab5c5</expressionID>
+        </action>
+        <action>
+            <id>1e7417b2-0307-451c-b1fe-976c04b19833</id>
+            <name>MaterialConversion_specifications_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_specifications_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_specifications_ActionInfo].description</description>
+            <expressionID>f5a3cf75-fb03-4d1c-ac6b-5703a341193f</expressionID>
+        </action>
+        <action>
+            <id>bf6a7b20-22bc-40af-90e6-60da35429a43</id>
+            <name>MaterialConversion_materials_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_materials_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_materials_ActionInfo].description</description>
+            <expressionID>52967ba4-a8c7-48da-85d7-65a742dc8839</expressionID>
+        </action>
+        <action>
+            <id>694fe361-3926-49ad-9812-2d884cd06bce</id>
+            <name>MaterialConversion_materialNumber_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_materialNumber_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_materialNumber_ActionInfo].description</description>
+            <expressionID>87ed297e-7814-408d-975c-8ac0e282ff1b</expressionID>
+        </action>
+        <action>
+            <id>8af853b5-eaaf-47b7-bd82-991f10265e36</id>
+            <name>MaterialConversion_specifications_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_specifications_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_specifications_ActionInfo].description</description>
+            <expressionID>f82dc8aa-cbcb-4d7d-928d-34709efaaa63</expressionID>
+        </action>
+        <action>
+            <id>e46f883b-36c3-4416-851f-01b5e5df1546</id>
+            <name>MaterialConversion_materials_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_materials_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_materials_ActionInfo].description</description>
+            <expressionID>bb3d1bb2-d178-4ff3-b028-e0607c7c6e8d</expressionID>
+        </action>
+        <action>
+            <id>027af4b4-f662-4d52-b456-54481509dcce</id>
+            <name>MaterialConversion_materialName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_materialName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_materialName_ActionInfo].description</description>
+            <expressionID>f7d944a4-3c1c-4336-b245-d8ceba3e6e38</expressionID>
+        </action>
+        <action>
+            <id>fbda14f5-20e3-4abf-80eb-8a630b4302c6</id>
+            <name>MaterialConversion_materialNumber_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_materialNumber_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_materialNumber_ActionInfo].description</description>
+            <expressionID>bbed6d2e-14c1-4a0d-8596-6a56c28ee6bf</expressionID>
+        </action>
+        <action>
+            <id>08990664-0990-4a2e-ba8a-cca5180e275e</id>
+            <name>MaterialConversion_specifications_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_specifications_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_specifications_ActionInfo].description</description>
+            <expressionID>d1515b9e-8de1-4098-8d92-8e2d15411afc</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>MaterialConversion_materialName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].rules.conditionRule[MaterialConversion_materialName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].rules.conditionRule[MaterialConversion_materialName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="027af4b4-f662-4d52-b456-54481509dcce" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>MaterialConversion_materialNumber_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].rules.conditionRule[MaterialConversion_materialNumber_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].rules.conditionRule[MaterialConversion_materialNumber_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="fbda14f5-20e3-4abf-80eb-8a630b4302c6" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>MaterialConversion_specifications_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].rules.conditionRule[MaterialConversion_specifications_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].rules.conditionRule[MaterialConversion_specifications_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="08990664-0990-4a2e-ba8a-cca5180e275e" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_materialName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_materialName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_materialNumber_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_materialNumber_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_materials_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_materials_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_specifications_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].actions.action[MaterialConversion_specifications_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].rules.conditionRule[MaterialConversion_materialName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].rules.conditionRule[MaterialConversion_materialName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].rules.conditionRule[MaterialConversion_materialName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="material" />
+            <lang locale="zh_CN" value="material" />
+            <lang locale="zh_TW" value="material" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].rules.conditionRule[MaterialConversion_materialName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].rules.conditionRule[MaterialConversion_materialNumber_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].rules.conditionRule[MaterialConversion_materialNumber_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].rules.conditionRule[MaterialConversion_materialNumber_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="material" />
+            <lang locale="zh_CN" value="material" />
+            <lang locale="zh_TW" value="material" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].rules.conditionRule[MaterialConversion_materialNumber_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].rules.conditionRule[MaterialConversion_specifications_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].rules.conditionRule[MaterialConversion_specifications_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].rules.conditionRule[MaterialConversion_specifications_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="material" />
+            <lang locale="zh_CN" value="material" />
+            <lang locale="zh_TW" value="material" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.MaterialConversionRuleSet].rules.conditionRule[MaterialConversion_specifications_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

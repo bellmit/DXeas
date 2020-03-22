@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.taihe.vehicledetection.app</package>
+    <name>VcWhiteListRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.taihe.vehicledetection.app.VcWhiteListRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.taihe.vehicledetection.app.VcWhiteListRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>2cf1f6c8-ba5f-4bf0-9311-3a973553e824</id>
+            <parentID />
+            <source>carNum = car.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>ceda8e0b-5c42-45e5-ab6c-89b6faca9d16</id>
+            <parentID>2cf1f6c8-ba5f-4bf0-9311-3a973553e824</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>df731de1-ef64-4e27-a9e0-c2278e90d7bb</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>df731de1-ef64-4e27-a9e0-c2278e90d7bb</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtcarNum</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>10376551-0de8-4eb5-ab4a-87cd87f2a347</id>
+            <parentID>2cf1f6c8-ba5f-4bf0-9311-3a973553e824</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>c3706050-ea5d-4229-b314-10f7b1861351</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>6319cdf9-8ce7-4bec-aa78-66b5734bbef1</id>
+                        <expressionID>0a5e23e7-d49c-4129-a101-a1150949b397</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>76a96146-5df1-4b80-ace3-52f842dd3a08</id>
+                        <expressionID>431fb2f8-84bf-4ebc-9727-8e92a0e2ace8</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c3706050-ea5d-4229-b314-10f7b1861351</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0a5e23e7-d49c-4129-a101-a1150949b397</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>1dbb2dcf-9c42-465e-9c67-19d92fd5de25</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1dbb2dcf-9c42-465e-9c67-19d92fd5de25</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtcar</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>431fb2f8-84bf-4ebc-9727-8e92a0e2ace8</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>9d823320-c67c-4143-9e6d-372c98a268e7</id>
+            <name>D6H6ABQV</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.vehicledetection.app.VcWhiteListRuleSet].actions.action[D6H6ABQV].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.vehicledetection.app.VcWhiteListRuleSet].actions.action[D6H6ABQV].description</description>
+            <expressionID>2cf1f6c8-ba5f-4bf0-9311-3a973553e824</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>D6H6ABQV</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.vehicledetection.app.VcWhiteListRuleSet].rules.conditionRule[D6H6ABQV].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.vehicledetection.app.VcWhiteListRuleSet].rules.conditionRule[D6H6ABQV].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="9d823320-c67c-4143-9e6d-372c98a268e7" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.vehicledetection.app.VcWhiteListRuleSet].actions.action[D6H6ABQV].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.vehicledetection.app.VcWhiteListRuleSet].actions.action[D6H6ABQV].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.vehicledetection.app.VcWhiteListRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.vehicledetection.app.VcWhiteListRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.vehicledetection.app.VcWhiteListRuleSet].rules.conditionRule[D6H6ABQV].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="SetFieldPropEvent0001" />
+            <lang locale="zh_HK" value="SetFieldPropEvent0001" />
+            <lang locale="zh_TW" value="SetFieldPropEvent0001" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.vehicledetection.app.VcWhiteListRuleSet].rules.conditionRule[D6H6ABQV].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.vehicledetection.app.VcWhiteListRuleSet].rules.conditionRule[D6H6ABQV].extendedProperty.columnName">
+            <lang locale="en_US" value="car" />
+            <lang locale="zh_CN" value="car" />
+            <lang locale="zh_TW" value="car" />
+        </rs>
+    </resource>
+</ruleSet>
+

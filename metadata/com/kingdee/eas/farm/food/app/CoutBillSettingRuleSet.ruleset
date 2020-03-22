@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.food.app</package>
+    <name>CoutBillSettingRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.food.app.CoutBillSettingRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.food.app.CoutBillSettingRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>b4b91497-08ad-42f2-ace7-b156f2ae8f15</id>
+            <parentID />
+            <source>MaterialEntry.materlaName=MaterialEntry.material.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>38a01f45-7226-4595-8d1e-6b4af6c1821a</id>
+            <parentID>b4b91497-08ad-42f2-ace7-b156f2ae8f15</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>b815e6f3-0f0b-4750-ad5a-c96bd1a2a132</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b815e6f3-0f0b-4750-ad5a-c96bd1a2a132</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtMaterialEntry.getCell(rowIndex,"materlaName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>efe7c292-687e-45b8-9cc3-ba0f425f3cc9</id>
+            <parentID>b4b91497-08ad-42f2-ace7-b156f2ae8f15</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>2fabbe45-150f-4557-8f0f-6d38b8907f34</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>c640ba0d-189c-4fca-bc08-fb0be0207c1f</id>
+                        <expressionID>ab35a703-1f7c-47e0-88c3-d09d12989804</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>c7afa8f8-563d-4525-9ac2-4ad169512323</id>
+                        <expressionID>2aad9499-2bf3-43ee-815a-586f52483bf9</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2fabbe45-150f-4557-8f0f-6d38b8907f34</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ab35a703-1f7c-47e0-88c3-d09d12989804</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>f1cdca41-ebbf-48f7-9b23-1f1bcc2112f4</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f1cdca41-ebbf-48f7-9b23-1f1bcc2112f4</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtMaterialEntry.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2aad9499-2bf3-43ee-815a-586f52483bf9</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>145e7d5b-4b13-42bf-9227-2aaa4c9b67bd</id>
+            <parentID />
+            <source>MaterialEntry.model=MaterialEntry.material.model</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>8b364e61-e691-4a14-be98-65b66ebd8077</id>
+            <parentID>145e7d5b-4b13-42bf-9227-2aaa4c9b67bd</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>834512a8-7770-4056-876a-b98c62479731</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>834512a8-7770-4056-876a-b98c62479731</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtMaterialEntry.getCell(rowIndex,"model")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>27eaaee9-ccc4-4540-abb6-bb8b748b7d2f</id>
+            <parentID>145e7d5b-4b13-42bf-9227-2aaa4c9b67bd</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>935453b2-8c08-48b0-9397-5d8017f44b02</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>9c6841e0-bbd7-4284-9af4-dded3ca0ea41</id>
+                        <expressionID>b0394a24-d62e-4e0a-8f0f-20dd81b8d307</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>c3825a06-606a-41dc-a374-2260b0830216</id>
+                        <expressionID>48b5115b-462f-457d-ac9a-84e2b6bbe75d</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>935453b2-8c08-48b0-9397-5d8017f44b02</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b0394a24-d62e-4e0a-8f0f-20dd81b8d307</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>98c627cd-3a49-47a8-95e4-cd8854965ce3</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>98c627cd-3a49-47a8-95e4-cd8854965ce3</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtMaterialEntry.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>48b5115b-462f-457d-ac9a-84e2b6bbe75d</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>model</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>ff888946-cc3b-497e-ad32-be633306878c</id>
+            <name>MaterialEntry_materlaName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.CoutBillSettingRuleSet].actions.action[MaterialEntry_materlaName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.CoutBillSettingRuleSet].actions.action[MaterialEntry_materlaName_ActionInfo].description</description>
+            <expressionID>b4b91497-08ad-42f2-ace7-b156f2ae8f15</expressionID>
+        </action>
+        <action>
+            <id>57beac84-809c-4d46-b634-14780f92be80</id>
+            <name>MaterialEntry_model_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.CoutBillSettingRuleSet].actions.action[MaterialEntry_model_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.CoutBillSettingRuleSet].actions.action[MaterialEntry_model_ActionInfo].description</description>
+            <expressionID>145e7d5b-4b13-42bf-9227-2aaa4c9b67bd</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>MaterialEntry_materlaName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.CoutBillSettingRuleSet].rules.conditionRule[MaterialEntry_materlaName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.CoutBillSettingRuleSet].rules.conditionRule[MaterialEntry_materlaName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="ff888946-cc3b-497e-ad32-be633306878c" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>MaterialEntry_model_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.CoutBillSettingRuleSet].rules.conditionRule[MaterialEntry_model_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.CoutBillSettingRuleSet].rules.conditionRule[MaterialEntry_model_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="57beac84-809c-4d46-b634-14780f92be80" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.CoutBillSettingRuleSet].actions.action[MaterialEntry_materlaName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.CoutBillSettingRuleSet].actions.action[MaterialEntry_materlaName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.CoutBillSettingRuleSet].actions.action[MaterialEntry_model_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.CoutBillSettingRuleSet].actions.action[MaterialEntry_model_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.CoutBillSettingRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.CoutBillSettingRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.CoutBillSettingRuleSet].rules.conditionRule[MaterialEntry_materlaName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.CoutBillSettingRuleSet].rules.conditionRule[MaterialEntry_materlaName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.CoutBillSettingRuleSet].rules.conditionRule[MaterialEntry_materlaName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="material" />
+            <lang locale="zh_CN" value="material" />
+            <lang locale="zh_TW" value="material" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.CoutBillSettingRuleSet].rules.conditionRule[MaterialEntry_materlaName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.CoutBillSettingRuleSet].rules.conditionRule[MaterialEntry_model_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.CoutBillSettingRuleSet].rules.conditionRule[MaterialEntry_model_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.CoutBillSettingRuleSet].rules.conditionRule[MaterialEntry_model_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="material" />
+            <lang locale="zh_CN" value="material" />
+            <lang locale="zh_TW" value="material" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.CoutBillSettingRuleSet].rules.conditionRule[MaterialEntry_model_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

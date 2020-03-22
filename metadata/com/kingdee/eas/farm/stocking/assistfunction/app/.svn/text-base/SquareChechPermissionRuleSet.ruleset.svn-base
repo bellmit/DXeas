@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.stocking.assistfunction.app</package>
+    <name>SquareChechPermissionRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.stocking.assistfunction.app.SquareChechPermissionRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.stocking.assistfunction.app.SquareChechPermissionRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>112f42e3-e584-4748-b591-8c6223076829</id>
+            <parentID />
+            <source>EntryUser.userName=EntryUser.user.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>32fe7d64-c0f3-4b7e-836c-0b6c2fe37cc4</id>
+            <parentID>112f42e3-e584-4748-b591-8c6223076829</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>f7095ec2-e450-4868-8c49-9e48778c5a79</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f7095ec2-e450-4868-8c49-9e48778c5a79</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntryUser.getCell(rowIndex,"userName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>67deb787-7ff9-4f91-af7e-e6c3105833c2</id>
+            <parentID>112f42e3-e584-4748-b591-8c6223076829</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>f8f3231c-7aa0-4ed4-b3c0-68776862093a</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>c065348d-6bde-4c91-879b-4b25348c8e77</id>
+                        <expressionID>75b29e4c-86a0-4cad-b78a-f7b90250a5b5</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>1169e69e-62ee-44fa-a290-eb91dd428b07</id>
+                        <expressionID>ff9c445c-0ac2-4a14-87a8-3a0831e7ba31</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f8f3231c-7aa0-4ed4-b3c0-68776862093a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>75b29e4c-86a0-4cad-b78a-f7b90250a5b5</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>b898fbc2-3921-4118-8efd-cd06e54858e3</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b898fbc2-3921-4118-8efd-cd06e54858e3</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntryUser.getCell(rowIndex,"user")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ff9c445c-0ac2-4a14-87a8-3a0831e7ba31</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>9843b056-8723-4807-b42d-84acff073669</id>
+            <name>EntryUser_userName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.stocking.assistfunction.app.SquareChechPermissionRuleSet].actions.action[EntryUser_userName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.stocking.assistfunction.app.SquareChechPermissionRuleSet].actions.action[EntryUser_userName_ActionInfo].description</description>
+            <expressionID>112f42e3-e584-4748-b591-8c6223076829</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>EntryUser_userName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.stocking.assistfunction.app.SquareChechPermissionRuleSet].rules.conditionRule[EntryUser_userName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.stocking.assistfunction.app.SquareChechPermissionRuleSet].rules.conditionRule[EntryUser_userName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="9843b056-8723-4807-b42d-84acff073669" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.stocking.assistfunction.app.SquareChechPermissionRuleSet].actions.action[EntryUser_userName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.stocking.assistfunction.app.SquareChechPermissionRuleSet].actions.action[EntryUser_userName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.stocking.assistfunction.app.SquareChechPermissionRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.stocking.assistfunction.app.SquareChechPermissionRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.stocking.assistfunction.app.SquareChechPermissionRuleSet].rules.conditionRule[EntryUser_userName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.stocking.assistfunction.app.SquareChechPermissionRuleSet].rules.conditionRule[EntryUser_userName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.stocking.assistfunction.app.SquareChechPermissionRuleSet].rules.conditionRule[EntryUser_userName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="user" />
+            <lang locale="zh_CN" value="user" />
+            <lang locale="zh_TW" value="user" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.stocking.assistfunction.app.SquareChechPermissionRuleSet].rules.conditionRule[EntryUser_userName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

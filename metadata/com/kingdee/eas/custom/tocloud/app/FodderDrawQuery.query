@@ -1,0 +1,1523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.tocloud.app</package>
+    <name>FodderDrawQuery</name>
+    <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].alias</alias>
+    <description>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].description</description>
+    <userDefined>true</userDefined>
+    <reportDataSource />
+    <bizUnitPK />
+    <connectionProvider />
+    <subObjects>
+        <subEntity>
+            <name>FodderReceptionEntry</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].subObjects.subEntity[FodderReceptionEntry].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.feedbiz.app" />
+                <key name="name" value="FodderReceptionEntry" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>warehouse</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].subObjects.subEntity[warehouse].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.scm.im.inv.app" />
+                <key name="name" value="Warehouse" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>material</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].subObjects.subEntity[material].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.master.material.app" />
+                <key name="name" value="Material" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>parent</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].subObjects.subEntity[parent].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.feedbiz.app" />
+                <key name="name" value="FodderReception" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>batchContract</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].subObjects.subEntity[batchContract].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.feedbiz.app" />
+                <key name="name" value="BatchContractBill" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>company</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].subObjects.subEntity[company].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="CompanyOrgUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>batch1</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].subObjects.subEntity[batch1].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="Batch" />
+            </entityRef>
+        </subEntity>
+    </subObjects>
+    <units>
+        <propertyUnit>
+            <name>6eced114-323d-4661-94b8-ee1f99e64b13</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.propertyUnit[6eced114-323d-4661-94b8-ee1f99e64b13].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>56fb399a-d2a0-4399-806d-db01e2a6680d</key>
+                    <parentUnit>
+                        <key name="name" value="6eced114-323d-4661-94b8-ee1f99e64b13" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FodderReceptionEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="warehouse" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>0092e8be-8b25-4efc-ac30-427b48f8bd26</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.propertyUnit[0092e8be-8b25-4efc-ac30-427b48f8bd26].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>b05b9817-6886-417c-82de-15540e000a0c</key>
+                    <parentUnit>
+                        <key name="name" value="0092e8be-8b25-4efc-ac30-427b48f8bd26" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="warehouse" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>9097563e-5641-4d31-890e-9e6c2bd80392</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.propertyUnit[9097563e-5641-4d31-890e-9e6c2bd80392].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>8ea4dcae-df19-4719-b1b8-fb12b6c2c791</key>
+                    <parentUnit>
+                        <key name="name" value="9097563e-5641-4d31-890e-9e6c2bd80392" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FodderReceptionEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="material" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>debeafbe-794e-4aca-b895-d0d91c39511e</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.propertyUnit[debeafbe-794e-4aca-b895-d0d91c39511e].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>06d05246-ef31-4396-9b1b-f9a9f6527b56</key>
+                    <parentUnit>
+                        <key name="name" value="debeafbe-794e-4aca-b895-d0d91c39511e" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="material" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>7a1b457b-c220-4e86-af18-618516142f9b</key>
+                    <parentUnit>
+                        <key name="name" value="id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FodderReceptionEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>1bf612b6-803f-4da2-a704-c8a863eab151</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.propertyUnit[1bf612b6-803f-4da2-a704-c8a863eab151].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>8a047193-b66d-49c4-aeb1-9efd76a109ad</key>
+                    <parentUnit>
+                        <key name="name" value="1bf612b6-803f-4da2-a704-c8a863eab151" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FodderReceptionEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="parent" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>7757abd6-00ce-4f5a-b9a1-bc8ecf96f854</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.propertyUnit[7757abd6-00ce-4f5a-b9a1-bc8ecf96f854].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>6c2df8aa-1175-4524-bd78-529021f38a89</key>
+                    <parentUnit>
+                        <key name="name" value="7757abd6-00ce-4f5a-b9a1-bc8ecf96f854" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>fa3ca7f0-870d-4941-b4a1-c2436779b56a</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.propertyUnit[fa3ca7f0-870d-4941-b4a1-c2436779b56a].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>b339f93e-9281-42c4-8b10-f13a4d6b6e5d</key>
+                    <parentUnit>
+                        <key name="name" value="fa3ca7f0-870d-4941-b4a1-c2436779b56a" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="batchContract" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>5b556cdb-6cd3-48d7-aaa0-28c9083a4729</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.propertyUnit[5b556cdb-6cd3-48d7-aaa0-28c9083a4729].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>484d3c5d-b7b5-4411-9878-53bb9a530d9a</key>
+                    <parentUnit>
+                        <key name="name" value="5b556cdb-6cd3-48d7-aaa0-28c9083a4729" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="batchContract" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>9d98f185-f1ee-41bf-87c5-1cdb76d6d4eb</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.propertyUnit[9d98f185-f1ee-41bf-87c5-1cdb76d6d4eb].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>087e2088-957d-4df8-a84f-81839dc2bb98</key>
+                    <parentUnit>
+                        <key name="name" value="9d98f185-f1ee-41bf-87c5-1cdb76d6d4eb" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="company" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>98954dd4-36ca-4cb7-87eb-a05c5956f568</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.propertyUnit[98954dd4-36ca-4cb7-87eb-a05c5956f568].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>5444cd90-efb0-4e94-a081-5291af9149fc</key>
+                    <parentUnit>
+                        <key name="name" value="98954dd4-36ca-4cb7-87eb-a05c5956f568" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="company" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>stockingid</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[stockingid].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>1a715f29-b2ed-411c-b51b-2d78ecd95dca</key>
+                    <parentUnit>
+                        <key name="name" value="stockingid" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bizdate</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[bizdate].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>c25b846c-b824-46ae-80e0-fec541970c59</key>
+                    <parentUnit>
+                        <key name="name" value="bizdate" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bizDate" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bateStatus</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[bateStatus].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>3f868077-02f9-43c4-a019-c4760b674770</key>
+                    <parentUnit>
+                        <key name="name" value="bateStatus" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="billStatus" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>billNum</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[billNum].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>aa9038d0-72e7-45d9-8ea5-0efdfe772221</key>
+                    <parentUnit>
+                        <key name="name" value="billNum" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>batch</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[batch].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>089a47ea-c4f3-40bb-8780-79d110018d00</key>
+                    <parentUnit>
+                        <key name="name" value="batch" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="batchContract" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>companyName</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[companyName].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>2b42e25d-c86b-4f78-b9b2-54ddeedf06bc</key>
+                    <parentUnit>
+                        <key name="name" value="companyName" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="company" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>companyid</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[companyid].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>2e2f549a-b2c6-4169-8d7b-928b079d3a97</key>
+                    <parentUnit>
+                        <key name="name" value="companyid" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="company" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>material.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[material.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b090be92-678a-4dc6-a43c-6113f4a4827e</key>
+                    <parentUnit>
+                        <key name="name" value="material.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="material" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>receiveQtyhjh</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[receiveQtyhjh].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>c898376e-e018-4fe1-8a94-a23d93aa644f</key>
+                    <parentUnit>
+                        <key name="name" value="receiveQtyhjh" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FodderReceptionEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="receiveQty" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>costPrice</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[costPrice].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>15f33f1c-36ab-4b64-a742-5e039c13d3de</key>
+                    <parentUnit>
+                        <key name="name" value="costPrice" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FodderReceptionEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="costPrice" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>contractPrice</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[contractPrice].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b5bc45fc-05db-48bb-bc00-a1b670c2dddc</key>
+                    <parentUnit>
+                        <key name="name" value="contractPrice" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FodderReceptionEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="contractPrice" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>marketPrice</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[marketPrice].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>81a900a8-5363-4425-bcda-9b1ebc7fa2da</key>
+                    <parentUnit>
+                        <key name="name" value="marketPrice" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FodderReceptionEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="marketPrice" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>costAmounthjh</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[costAmounthjh].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>f73aa1a2-dc5e-449f-84b0-79f39612b021</key>
+                    <parentUnit>
+                        <key name="name" value="costAmounthjh" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FodderReceptionEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="costAmount" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>contractAmounthjh</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[contractAmounthjh].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>5f22b6c6-1f19-4d9b-bfdd-3e833de3bcf7</key>
+                    <parentUnit>
+                        <key name="name" value="contractAmounthjh" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FodderReceptionEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="contractAmount" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>marketAmounthjh</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[marketAmounthjh].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>dedad6c2-351a-4820-b427-ae8c8f0f3e7e</key>
+                    <parentUnit>
+                        <key name="name" value="marketAmounthjh" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FodderReceptionEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="marketAmount" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>warehouse.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[warehouse.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>c44ade0f-d4c3-48fe-bed7-ea3f99f6febd</key>
+                    <parentUnit>
+                        <key name="name" value="warehouse.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="warehouse" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>910dc9f3-0112-43f8-8e19-7d05074b313b</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.propertyUnit[910dc9f3-0112-43f8-8e19-7d05074b313b].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>2384211c-3c7d-4487-987a-a45d46e47263</key>
+                    <parentUnit>
+                        <key name="name" value="910dc9f3-0112-43f8-8e19-7d05074b313b" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="batch" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>4f5259b7-1e5e-40e5-8f99-f64ce8ff9d6f</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.propertyUnit[4f5259b7-1e5e-40e5-8f99-f64ce8ff9d6f].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>daa113d1-2adc-466f-8d42-3e6c8cd3d693</key>
+                    <parentUnit>
+                        <key name="name" value="4f5259b7-1e5e-40e5-8f99-f64ce8ff9d6f" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="batch1" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>batchid</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[batchid].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>a7f89d40-e437-45e6-ae8b-0dd47699320b</key>
+                    <parentUnit>
+                        <key name="name" value="batchid" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="batch1" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>isReturn</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[isReturn].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>5adfb6fd-c893-4786-9c0d-5c5561be0889</key>
+                    <parentUnit>
+                        <key name="name" value="isReturn" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="billType" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </queryField>
+    </units>
+    <defaultFilter>
+        <name>defaultFilter</name>
+        <formulaString />
+        <query>
+            <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+            <key name="name" value="FodderDrawQuery" />
+        </query>
+    </defaultFilter>
+    <queryPK>
+        <name>QueryPK</name>
+        <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].queryPK[QueryPK].alias</alias>
+        <description>joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].queryPK[QueryPK].description</description>
+        <keyProperties>
+            <queryField>
+                <key name="name" value="id" />
+            </queryField>
+        </keyProperties>
+    </queryPK>
+    <isDistinct>false</isDistinct>
+    <joins>
+        <join>
+            <name>26d3c6af-fec6-466a-b7b5-1cb19b17c515</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="FodderReceptionEntry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="warehouse" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>17bd75c0-5b35-4283-9120-55f138065675</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="6eced114-323d-4661-94b8-ee1f99e64b13" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="0092e8be-8b25-4efc-ac30-427b48f8bd26" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="26d3c6af-fec6-466a-b7b5-1cb19b17c515" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </join>
+        <join>
+            <name>df7b1d5e-c277-4feb-9962-b50472f78ff9</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="FodderReceptionEntry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="material" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>7deddbe6-fef1-4343-b4e9-004c4e5472c8</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="9097563e-5641-4d31-890e-9e6c2bd80392" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="debeafbe-794e-4aca-b895-d0d91c39511e" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="df7b1d5e-c277-4feb-9962-b50472f78ff9" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </join>
+        <join>
+            <name>41f92002-058d-48fe-a4f1-73750b9c3468</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="FodderReceptionEntry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="parent" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>39517e1c-d034-45eb-937d-d8aa3355f663</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="1bf612b6-803f-4da2-a704-c8a863eab151" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="7757abd6-00ce-4f5a-b9a1-bc8ecf96f854" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="41f92002-058d-48fe-a4f1-73750b9c3468" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </join>
+        <join>
+            <name>1921999d-8946-48ee-b703-b208286b2267</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="parent" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="batchContract" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>248b5ad4-65db-46ed-a48c-6aa86bf75485</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="fa3ca7f0-870d-4941-b4a1-c2436779b56a" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="5b556cdb-6cd3-48d7-aaa0-28c9083a4729" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="1921999d-8946-48ee-b703-b208286b2267" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </join>
+        <join>
+            <name>09001538-2e03-4203-885a-d47012b71d2c</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="parent" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="company" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>0124b4cd-bf34-47e2-90fa-050602f2c1a2</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="9d98f185-f1ee-41bf-87c5-1cdb76d6d4eb" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="98954dd4-36ca-4cb7-87eb-a05c5956f568" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="09001538-2e03-4203-885a-d47012b71d2c" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </join>
+        <join>
+            <name>8820d47f-4a72-40ed-a6ad-a1f70a297aff</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="parent" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="batch1" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>4b55d18c-f6aa-45a4-9b06-773c6feac7da</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="910dc9f3-0112-43f8-8e19-7d05074b313b" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="4f5259b7-1e5e-40e5-8f99-f64ce8ff9d6f" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="8820d47f-4a72-40ed-a6ad-a1f70a297aff" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="FodderDrawQuery" />
+            </query>
+        </join>
+    </joins>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="饲料领用单同步领料出库单Query" />
+            <lang locale="zh_HK" value="飼料領用單同步領料出庫單Query" />
+            <lang locale="zh_TW" value="飼料領用單同步領料出庫單Query" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].queryPK[QueryPK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].queryPK[QueryPK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].subObjects.subEntity[FodderReceptionEntry].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].subObjects.subEntity[batch1].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].subObjects.subEntity[batchContract].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].subObjects.subEntity[company].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].subObjects.subEntity[material].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].subObjects.subEntity[parent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].subObjects.subEntity[warehouse].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.propertyUnit[0092e8be-8b25-4efc-ac30-427b48f8bd26].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.propertyUnit[1bf612b6-803f-4da2-a704-c8a863eab151].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.propertyUnit[4f5259b7-1e5e-40e5-8f99-f64ce8ff9d6f].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.propertyUnit[5b556cdb-6cd3-48d7-aaa0-28c9083a4729].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.propertyUnit[6eced114-323d-4661-94b8-ee1f99e64b13].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.propertyUnit[7757abd6-00ce-4f5a-b9a1-bc8ecf96f854].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.propertyUnit[9097563e-5641-4d31-890e-9e6c2bd80392].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.propertyUnit[910dc9f3-0112-43f8-8e19-7d05074b313b].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.propertyUnit[98954dd4-36ca-4cb7-87eb-a05c5956f568].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.propertyUnit[9d98f185-f1ee-41bf-87c5-1cdb76d6d4eb].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.propertyUnit[debeafbe-794e-4aca-b895-d0d91c39511e].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.propertyUnit[fa3ca7f0-870d-4941-b4a1-c2436779b56a].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[batch].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="批次" />
+            <lang locale="zh_HK" value="批次" />
+            <lang locale="zh_TW" value="批次" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[batchid].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[bateStatus].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据状态" />
+            <lang locale="zh_HK" value="單據狀態" />
+            <lang locale="zh_TW" value="單據狀態" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[billNum].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据编号" />
+            <lang locale="zh_HK" value="單據編號" />
+            <lang locale="zh_TW" value="單據編號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[bizdate].displayName">
+            <lang locale="en_US" value="" />
+            <lang locale="zh_CN" value="业务日期" />
+            <lang locale="zh_HK" value="業務日期" />
+            <lang locale="zh_TW" value="業務日期" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[companyName].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="财务组织" />
+            <lang locale="zh_HK" value="財務組織" />
+            <lang locale="zh_TW" value="財務組織" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[companyid].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="财务组织id " />
+            <lang locale="zh_HK" value="財務組織id " />
+            <lang locale="zh_TW" value="財務組織id " />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[contractAmounthjh].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="合同结算金额" />
+            <lang locale="zh_HK" value="合同結算金額" />
+            <lang locale="zh_TW" value="合同結算金額" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[contractPrice].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="合同结算价格" />
+            <lang locale="zh_HK" value="合同結算價格" />
+            <lang locale="zh_TW" value="合同結算價格" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[costAmounthjh].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="成本金额" />
+            <lang locale="zh_HK" value="成本金額" />
+            <lang locale="zh_TW" value="成本金額" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[costPrice].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="成本价格" />
+            <lang locale="zh_HK" value="成本價格" />
+            <lang locale="zh_TW" value="成本價格" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[isReturn].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务类型" />
+            <lang locale="zh_HK" value="業務類型" />
+            <lang locale="zh_TW" value="業務類型" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[marketAmounthjh].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="市场结算金额" />
+            <lang locale="zh_HK" value="市場結算金額" />
+            <lang locale="zh_TW" value="市場結算金額" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[marketPrice].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="市场结算价格" />
+            <lang locale="zh_HK" value="市場結算價格" />
+            <lang locale="zh_TW" value="市場結算價格" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[material.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="饲料名称" />
+            <lang locale="zh_HK" value="飼料名稱" />
+            <lang locale="zh_TW" value="飼料名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[receiveQtyhjh].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="领用数量" />
+            <lang locale="zh_HK" value="領用數量" />
+            <lang locale="zh_TW" value="領用數量" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[stockingid].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.FodderDrawQuery].units.queryField[warehouse.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="仓库" />
+            <lang locale="zh_HK" value="倉庫" />
+            <lang locale="zh_TW" value="倉庫" />
+        </rs>
+    </resource>
+</joinQuery>
+

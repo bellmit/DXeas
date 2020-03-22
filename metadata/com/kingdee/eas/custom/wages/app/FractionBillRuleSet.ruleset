@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.wages.app</package>
+    <name>FractionBillRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>c3335bac-78cc-42cd-b3b6-8ab228a467a2</id>
+            <parentID />
+            <source>Entry.personName=Entry.person.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>9854694e-9206-464b-8c6a-95a87b717eeb</id>
+            <parentID>c3335bac-78cc-42cd-b3b6-8ab228a467a2</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>c3f5eb1c-686c-48ae-94cc-4593a966daa4</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c3f5eb1c-686c-48ae-94cc-4593a966daa4</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"personName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>82823897-44a0-4834-a17e-ac85bdc1ea7d</id>
+            <parentID>c3335bac-78cc-42cd-b3b6-8ab228a467a2</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>dd516f7e-61f3-4fee-b763-951ff1f0e0d3</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>6551b634-abc5-4fea-8bd9-85381d3b9a85</id>
+                        <expressionID>13bd71f7-359a-4fda-9875-5637eb9eaa28</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>87bc245f-7a4e-40ae-970f-686bf9a78dd5</id>
+                        <expressionID>f60d7294-7267-4ffa-a9c7-a98cae0c847d</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>dd516f7e-61f3-4fee-b763-951ff1f0e0d3</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>13bd71f7-359a-4fda-9875-5637eb9eaa28</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>e8404e50-9075-477a-bbfa-19b0ce1e53e8</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e8404e50-9075-477a-bbfa-19b0ce1e53e8</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntry.getCell(rowIndex,"person")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f60d7294-7267-4ffa-a9c7-a98cae0c847d</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>335849bb-76b1-4996-a909-f938ed776bde</id>
+            <parentID />
+            <source>Entry.slaughterCt=Entry.personPost.slaughter</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>4cf67fc6-3687-4d25-a34e-8d1e0edb9074</id>
+            <parentID>335849bb-76b1-4996-a909-f938ed776bde</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>eb7fc4bc-4aa1-4783-a65c-336d6f890fd9</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>eb7fc4bc-4aa1-4783-a65c-336d6f890fd9</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"slaughterCt")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5136ddd6-24f8-4a83-afa2-3bd004739595</id>
+            <parentID>335849bb-76b1-4996-a909-f938ed776bde</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>9537cdc8-fa13-4d87-b50d-67cead34eee8</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>378b4b48-53ab-4f7f-90d7-53de1df2f3de</id>
+                        <expressionID>66de489f-d8c0-4ff2-9c94-446c3d73a4c9</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>ae31b467-0ffa-4e42-907d-54dc1a3bb282</id>
+                        <expressionID>d45da60f-19e9-4545-a612-531e63664f9d</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9537cdc8-fa13-4d87-b50d-67cead34eee8</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>66de489f-d8c0-4ff2-9c94-446c3d73a4c9</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>5c0d346d-01ef-4066-8137-0a8271ab39df</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5c0d346d-01ef-4066-8137-0a8271ab39df</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntry.getCell(rowIndex,"personPost")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d45da60f-19e9-4545-a612-531e63664f9d</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>slaughter</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>28254d9d-e245-455c-8c42-671360a8d125</id>
+            <parentID />
+            <source>Entry.fractionUnit=Entry.personPost.UnitMetering</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>a89e6fba-4a30-4a48-95f2-a831bafe9b78</id>
+            <parentID>28254d9d-e245-455c-8c42-671360a8d125</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>c7284562-bc79-4c4a-998d-49752c5a105e</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c7284562-bc79-4c4a-998d-49752c5a105e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"fractionUnit")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d415ec25-ab6e-49c1-80b9-891e84b3219b</id>
+            <parentID>28254d9d-e245-455c-8c42-671360a8d125</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Enum</valueType>
+            <value />
+            <method>
+                <ownerID>d8f241f5-eca6-4491-81fb-e68eed7e0775</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>12af2bcc-f03f-4244-8cb8-b40455a185d7</id>
+                        <expressionID>438117d7-e675-4ad4-b663-24ba6d5dfc3b</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>a45ac18a-3d44-464b-9e3f-89ba57c483fb</id>
+                        <expressionID>90d843a6-efa2-41b9-af79-99f82ddc0cc3</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d8f241f5-eca6-4491-81fb-e68eed7e0775</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>438117d7-e675-4ad4-b663-24ba6d5dfc3b</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>ed22c170-8119-4bf5-b98e-eb020efccf7d</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ed22c170-8119-4bf5-b98e-eb020efccf7d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntry.getCell(rowIndex,"personPost")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>90d843a6-efa2-41b9-af79-99f82ddc0cc3</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>UnitMetering</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>c027bdf5-31c4-4bee-8cb7-b83fe26ed6d4</id>
+            <parentID />
+            <source>Entry.postRatio = Entry.personPost.CoefficientRate.CoefficientRate</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>84dd661a-b5f2-4b84-9232-1fcf8a8acfbb</id>
+            <parentID>c027bdf5-31c4-4bee-8cb7-b83fe26ed6d4</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>1e225aed-9032-47a1-8225-b4add841f190</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1e225aed-9032-47a1-8225-b4add841f190</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"postRatio")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>af2c464b-5c39-4308-97dc-be83485c2a93</id>
+            <parentID>c027bdf5-31c4-4bee-8cb7-b83fe26ed6d4</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>95818c23-ba4c-45e2-b50d-b8c5a9e10d97</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>4e7df999-c7b4-4bb7-9570-15a497f4b28c</id>
+                        <expressionID>6e6b765b-0319-4cb6-b919-7e970f82ffa4</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>bece5280-7d37-49da-a9c1-921978bbd5e8</id>
+                        <expressionID>9845b023-f394-410c-9591-97e0dc1e2093</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>95818c23-ba4c-45e2-b50d-b8c5a9e10d97</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6e6b765b-0319-4cb6-b919-7e970f82ffa4</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>f9f2934a-d73d-4854-a5af-09e17ee2c167</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f9f2934a-d73d-4854-a5af-09e17ee2c167</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntry.getCell(rowIndex,"personPost")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9845b023-f394-410c-9591-97e0dc1e2093</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>CoefficientRate.CoefficientRate</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>cc6e56c3-dd05-482e-9eea-e21452e1b240</id>
+            <name>Entry_personName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].actions.action[Entry_personName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].actions.action[Entry_personName_ActionInfo].description</description>
+            <expressionID>c3335bac-78cc-42cd-b3b6-8ab228a467a2</expressionID>
+        </action>
+        <action>
+            <id>8317c5b2-dd02-461f-957c-2a6d32054210</id>
+            <name>Entry_slaughterCt_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].actions.action[Entry_slaughterCt_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].actions.action[Entry_slaughterCt_ActionInfo].description</description>
+            <expressionID>335849bb-76b1-4996-a909-f938ed776bde</expressionID>
+        </action>
+        <action>
+            <id>6640e789-1177-4083-a6b1-ed8be2c2b5ef</id>
+            <name>Entry_fractionUnit_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].actions.action[Entry_fractionUnit_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].actions.action[Entry_fractionUnit_ActionInfo].description</description>
+            <expressionID>28254d9d-e245-455c-8c42-671360a8d125</expressionID>
+        </action>
+        <action>
+            <id>ac67ec2c-5623-404d-b704-d4936cd072ce</id>
+            <name>Entry_postRatio_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].actions.action[Entry_postRatio_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].actions.action[Entry_postRatio_ActionInfo].description</description>
+            <expressionID>c027bdf5-31c4-4bee-8cb7-b83fe26ed6d4</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>Entry_personName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].rules.conditionRule[Entry_personName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].rules.conditionRule[Entry_personName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="cc6e56c3-dd05-482e-9eea-e21452e1b240" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>Entry_slaughterCt_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].rules.conditionRule[Entry_slaughterCt_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].rules.conditionRule[Entry_slaughterCt_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="8317c5b2-dd02-461f-957c-2a6d32054210" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>Entry_fractionUnit_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].rules.conditionRule[Entry_fractionUnit_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].rules.conditionRule[Entry_fractionUnit_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="6640e789-1177-4083-a6b1-ed8be2c2b5ef" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>FractionBillDCS2_TZV</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].rules.conditionRule[FractionBillDCS2_TZV].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].rules.conditionRule[FractionBillDCS2_TZV].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="ac67ec2c-5623-404d-b704-d4936cd072ce" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].actions.action[Entry_fractionUnit_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_UnitMetering" />
+            <lang locale="zh_HK" value="攜帶字段屬性_UnitMetering" />
+            <lang locale="zh_TW" value="攜帶字段屬性_UnitMetering" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].actions.action[Entry_fractionUnit_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].actions.action[Entry_personName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].actions.action[Entry_personName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].actions.action[Entry_postRatio_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_coefficient" />
+            <lang locale="zh_HK" value="攜帶字段屬性_coefficient" />
+            <lang locale="zh_TW" value="攜帶字段屬性_coefficient" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].actions.action[Entry_postRatio_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].actions.action[Entry_slaughterCt_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_slaughter" />
+            <lang locale="zh_HK" value="攜帶字段屬性_slaughter" />
+            <lang locale="zh_TW" value="攜帶字段屬性_slaughter" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].actions.action[Entry_slaughterCt_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].rules.conditionRule[Entry_fractionUnit_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_UnitMetering" />
+            <lang locale="zh_HK" value="攜帶字段屬性_UnitMetering" />
+            <lang locale="zh_TW" value="攜帶字段屬性_UnitMetering" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].rules.conditionRule[Entry_fractionUnit_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].rules.conditionRule[Entry_fractionUnit_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="personPost" />
+            <lang locale="zh_CN" value="personPost" />
+            <lang locale="zh_TW" value="personPost" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].rules.conditionRule[Entry_fractionUnit_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].rules.conditionRule[Entry_personName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].rules.conditionRule[Entry_personName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].rules.conditionRule[Entry_personName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="person" />
+            <lang locale="zh_CN" value="person" />
+            <lang locale="zh_TW" value="person" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].rules.conditionRule[Entry_personName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].rules.conditionRule[Entry_slaughterCt_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_slaughter" />
+            <lang locale="zh_HK" value="攜帶字段屬性_slaughter" />
+            <lang locale="zh_TW" value="攜帶字段屬性_slaughter" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].rules.conditionRule[Entry_slaughterCt_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].rules.conditionRule[Entry_slaughterCt_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="personPost" />
+            <lang locale="zh_CN" value="personPost" />
+            <lang locale="zh_TW" value="personPost" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].rules.conditionRule[Entry_slaughterCt_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].rules.conditionRule[FractionBillDCS2_TZV].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_coefficient" />
+            <lang locale="zh_HK" value="攜帶字段屬性_coefficient" />
+            <lang locale="zh_TW" value="攜帶字段屬性_coefficient" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].rules.conditionRule[FractionBillDCS2_TZV].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].rules.conditionRule[FractionBillDCS2_TZV].extendedProperty.columnName">
+            <lang locale="en_US" value="personPost" />
+            <lang locale="zh_CN" value="personPost" />
+            <lang locale="zh_TW" value="personPost" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.FractionBillRuleSet].rules.conditionRule[FractionBillDCS2_TZV].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

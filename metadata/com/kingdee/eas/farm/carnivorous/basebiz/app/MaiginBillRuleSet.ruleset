@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.carnivorous.basebiz.app</package>
+    <name>MaiginBillRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginBillRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginBillRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>8da0dfa4-3c33-434e-818b-7b02a324c63c</id>
+            <parentID />
+            <source>bEBankAddress=bEBank.Adress</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>e76d7c1a-2661-4525-85e0-851f97ed0336</id>
+            <parentID>8da0dfa4-3c33-434e-818b-7b02a324c63c</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>4e70e07b-b9e2-4e04-b8d9-c34013565016</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4e70e07b-b9e2-4e04-b8d9-c34013565016</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtbEBankAddress</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>980eba8c-e19f-4227-b127-28b815682eb6</id>
+            <parentID>8da0dfa4-3c33-434e-818b-7b02a324c63c</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>13d57949-782d-4202-8bf5-da366f829054</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>de8829e7-c60a-480f-9e6f-1016bd837853</id>
+                        <expressionID>37b7664a-c7d9-44c2-9cd0-0abb78657438</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>bc7caa0f-f03a-4258-8865-bcb87c3131bc</id>
+                        <expressionID>7b5e6d29-0c54-4ca2-bfe8-808d892a538c</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>13d57949-782d-4202-8bf5-da366f829054</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>37b7664a-c7d9-44c2-9cd0-0abb78657438</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>c1abd142-0656-411e-bf25-15f894770118</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c1abd142-0656-411e-bf25-15f894770118</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtbEBank</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7b5e6d29-0c54-4ca2-bfe8-808d892a538c</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>Adress</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>072baab6-64cf-4e86-b9d5-d8642c79619d</id>
+            <name>MaiginBill_bEBankAddress_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginBillRuleSet].actions.action[MaiginBill_bEBankAddress_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginBillRuleSet].actions.action[MaiginBill_bEBankAddress_ActionInfo].description</description>
+            <expressionID>8da0dfa4-3c33-434e-818b-7b02a324c63c</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>MaiginBill_bEBankAddress_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginBillRuleSet].rules.conditionRule[MaiginBill_bEBankAddress_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginBillRuleSet].rules.conditionRule[MaiginBill_bEBankAddress_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="072baab6-64cf-4e86-b9d5-d8642c79619d" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginBillRuleSet].actions.action[MaiginBill_bEBankAddress_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_Adress" />
+            <lang locale="zh_HK" value="攜帶字段屬性_Adress" />
+            <lang locale="zh_TW" value="攜帶字段屬性_Adress" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginBillRuleSet].actions.action[MaiginBill_bEBankAddress_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginBillRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginBillRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginBillRuleSet].rules.conditionRule[MaiginBill_bEBankAddress_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_Adress" />
+            <lang locale="zh_HK" value="攜帶字段屬性_Adress" />
+            <lang locale="zh_TW" value="攜帶字段屬性_Adress" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginBillRuleSet].rules.conditionRule[MaiginBill_bEBankAddress_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginBillRuleSet].rules.conditionRule[MaiginBill_bEBankAddress_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="bEBank" />
+            <lang locale="zh_CN" value="bEBank" />
+            <lang locale="zh_TW" value="bEBank" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginBillRuleSet].rules.conditionRule[MaiginBill_bEBankAddress_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

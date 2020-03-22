@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.festival.app</package>
+    <name>FactoryCalendarRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.festival.app.FactoryCalendarRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.festival.app.FactoryCalendarRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>7bff074b-0958-4321-82de-bd78b0c3558f</id>
+            <parentID />
+            <source>entrys.isLegalFestivalA=entrys.festivalA.isLegalHolidays</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>17569934-9eac-4015-9732-300d331d3dee</id>
+            <parentID>7bff074b-0958-4321-82de-bd78b0c3558f</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>520dd696-fbc1-445e-ad0e-66bc71ad9c85</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>520dd696-fbc1-445e-ad0e-66bc71ad9c85</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"isLegalFestivalA")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a14cb4ab-876f-4beb-801d-31003754363a</id>
+            <parentID>7bff074b-0958-4321-82de-bd78b0c3558f</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>boolean</valueType>
+            <value />
+            <method>
+                <ownerID>b1e878df-a90d-4e7a-a73a-dcfba4de3d3b</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>fd9ba4ff-5459-46c1-b153-8f614f3a7a73</id>
+                        <expressionID>02781aac-5ef2-42e1-b9ca-b587a25b36f6</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>7bd968cd-35c2-41a2-98c8-5f3e50f7cd5b</id>
+                        <expressionID>147ad66d-403a-4331-a418-f89467222297</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b1e878df-a90d-4e7a-a73a-dcfba4de3d3b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>02781aac-5ef2-42e1-b9ca-b587a25b36f6</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>dbd9c911-7463-4e12-9eec-b7594e283c1e</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>dbd9c911-7463-4e12-9eec-b7594e283c1e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"festivalA")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>147ad66d-403a-4331-a418-f89467222297</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>isLegalHolidays</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>83141a12-76dc-40d9-ad03-ce357eea80d4</id>
+            <parentID />
+            <source>entrys.isLegalFestivalB=entrys.festivalB.isLegalHolidays</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>d103cbbc-2271-4242-b8c2-aea3e8b2fc3b</id>
+            <parentID>83141a12-76dc-40d9-ad03-ce357eea80d4</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>32501e5f-603e-4134-844e-f2a14b8c5bbb</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>32501e5f-603e-4134-844e-f2a14b8c5bbb</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"isLegalFestivalB")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>53076400-19a8-4090-9f5c-b02f07db81ee</id>
+            <parentID>83141a12-76dc-40d9-ad03-ce357eea80d4</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>boolean</valueType>
+            <value />
+            <method>
+                <ownerID>4f9b080f-3ac9-4d10-8ed4-3ee33e8df8ba</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>d0cbf031-3371-4cfe-a92f-a5be2da3ba37</id>
+                        <expressionID>320ef8e7-95ff-4929-810c-982d476066db</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>e9abecc4-bed6-434a-be71-e5841e64a4f9</id>
+                        <expressionID>4d805c89-b60a-41b4-9b61-38bebb223481</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4f9b080f-3ac9-4d10-8ed4-3ee33e8df8ba</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>320ef8e7-95ff-4929-810c-982d476066db</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>6a6a34f9-43f9-4453-807e-117e971a83ca</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6a6a34f9-43f9-4453-807e-117e971a83ca</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"festivalB")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4d805c89-b60a-41b4-9b61-38bebb223481</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>isLegalHolidays</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>1fc6b5b5-3451-4fd6-81f0-3acd7be68b8d</id>
+            <parentID />
+            <source>entrys.isLegalFestivalC=entrys.festivalC.isLegalHolidays</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>488c2150-dba8-41d6-9e13-3b954bba85d7</id>
+            <parentID>1fc6b5b5-3451-4fd6-81f0-3acd7be68b8d</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>b534c2ac-0d31-422f-8e93-bf7096b7b62f</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b534c2ac-0d31-422f-8e93-bf7096b7b62f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"isLegalFestivalC")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>857f8a88-96a3-48e5-85dc-61d78021085d</id>
+            <parentID>1fc6b5b5-3451-4fd6-81f0-3acd7be68b8d</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>boolean</valueType>
+            <value />
+            <method>
+                <ownerID>21f045ee-d633-44cd-b25d-1859a6266a76</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>a6c804bb-9c5b-47e0-8ad5-46c1f7bd4b7f</id>
+                        <expressionID>a9baf35a-43f8-4d6d-8724-356966364136</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>12f834f9-8202-4d35-af66-f2acc733d726</id>
+                        <expressionID>0ee27708-0a51-4a56-b0b9-6da374059850</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>21f045ee-d633-44cd-b25d-1859a6266a76</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a9baf35a-43f8-4d6d-8724-356966364136</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>f085ae36-aabb-4d95-b347-7cfc7dee925b</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f085ae36-aabb-4d95-b347-7cfc7dee925b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"festivalC")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0ee27708-0a51-4a56-b0b9-6da374059850</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>isLegalHolidays</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>f06d8b20-2275-4605-83c1-a876acd804dc</id>
+            <name>entrys_isLegalFestivalA_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.festival.app.FactoryCalendarRuleSet].actions.action[entrys_isLegalFestivalA_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.festival.app.FactoryCalendarRuleSet].actions.action[entrys_isLegalFestivalA_ActionInfo].description</description>
+            <expressionID>7bff074b-0958-4321-82de-bd78b0c3558f</expressionID>
+        </action>
+        <action>
+            <id>03751b7e-32c0-48ed-894d-859169edb1d1</id>
+            <name>entrys_isLegalFestivalB_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.festival.app.FactoryCalendarRuleSet].actions.action[entrys_isLegalFestivalB_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.festival.app.FactoryCalendarRuleSet].actions.action[entrys_isLegalFestivalB_ActionInfo].description</description>
+            <expressionID>83141a12-76dc-40d9-ad03-ce357eea80d4</expressionID>
+        </action>
+        <action>
+            <id>92fe8034-9c5a-42e5-be60-5069a80bcc3d</id>
+            <name>entrys_isLegalFestivalC_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.festival.app.FactoryCalendarRuleSet].actions.action[entrys_isLegalFestivalC_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.festival.app.FactoryCalendarRuleSet].actions.action[entrys_isLegalFestivalC_ActionInfo].description</description>
+            <expressionID>1fc6b5b5-3451-4fd6-81f0-3acd7be68b8d</expressionID>
+        </action>
+    </actions>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.festival.app.FactoryCalendarRuleSet].actions.action[entrys_isLegalFestivalA_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_isLegalHolidays" />
+            <lang locale="zh_HK" value="攜帶字段屬性_isLegalHolidays" />
+            <lang locale="zh_TW" value="攜帶字段屬性_isLegalHolidays" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.festival.app.FactoryCalendarRuleSet].actions.action[entrys_isLegalFestivalA_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.festival.app.FactoryCalendarRuleSet].actions.action[entrys_isLegalFestivalB_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_isLegalHolidays" />
+            <lang locale="zh_HK" value="攜帶字段屬性_isLegalHolidays" />
+            <lang locale="zh_TW" value="攜帶字段屬性_isLegalHolidays" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.festival.app.FactoryCalendarRuleSet].actions.action[entrys_isLegalFestivalB_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.festival.app.FactoryCalendarRuleSet].actions.action[entrys_isLegalFestivalC_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_isLegalHolidays" />
+            <lang locale="zh_HK" value="攜帶字段屬性_isLegalHolidays" />
+            <lang locale="zh_TW" value="攜帶字段屬性_isLegalHolidays" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.festival.app.FactoryCalendarRuleSet].actions.action[entrys_isLegalFestivalC_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.festival.app.FactoryCalendarRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.festival.app.FactoryCalendarRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</ruleSet>
+

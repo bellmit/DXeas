@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataTable xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.stocking.hatch.app</package>
+    <name>T_FM_EggReceiveBillPickDetail</name>
+    <alias>dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].alias</alias>
+    <description>dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].description</description>
+    <userDefined>false</userDefined>
+    <bizUnitPK />
+    <columns>
+        <column>
+            <name>FID</name>
+            <alias>dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].columns.column[FID].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].columns.column[FID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>false</isNullable>
+            <defaultValue>''</defaultValue>
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FSeq</name>
+            <alias>dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].columns.column[FSeq].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].columns.column[FSeq].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>false</isNullable>
+            <defaultValue>0</defaultValue>
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>4</precision>
+        </column>
+        <column>
+            <name>FParentID</name>
+            <alias>dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].columns.column[FParentID].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].columns.column[FParentID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>false</isNullable>
+            <defaultValue>''</defaultValue>
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FFSeq0</name>
+            <alias>dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].columns.column[FFSeq0].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].columns.column[FFSeq0].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>0</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FPickPersonID</name>
+            <alias>dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].columns.column[FPickPersonID].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].columns.column[FPickPersonID].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FQty</name>
+            <alias>dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].columns.column[FQty].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].columns.column[FQty].description</description>
+            <userDefined>false</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>10</precision>
+        </column>
+    </columns>
+    <primaryKey>
+        <name>PK_FM_EggRBPDIDk5r</name>
+        <userDefined>false</userDefined>
+        <primaryKeyColumns>
+            <primaryKeyColumn>
+                <indexID>0</indexID>
+                <sortType />
+                <column>
+                    <key name="name" value="FID" />
+                </column>
+            </primaryKeyColumn>
+        </primaryKeyColumns>
+    </primaryKey>
+    <foreignKeys>
+        <foreignKey>
+            <name>FK_FM_EggRBPDIck4k</name>
+            <userDefined>false</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.person" />
+                <key name="name" value="T_BD_Person" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FPickPersonID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+    </foreignKeys>
+    <resource>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="挑选明细" />
+            <lang locale="zh_HK" value="挑選明細" />
+            <lang locale="zh_TW" value="挑選明細" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].columns.column[FFSeq0].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据分录序列号" />
+            <lang locale="zh_HK" value="單據分錄序列號" />
+            <lang locale="zh_TW" value="單據分錄序列號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].columns.column[FFSeq0].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].columns.column[FID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].columns.column[FID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].columns.column[FParentID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].columns.column[FParentID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].columns.column[FPickPersonID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="挑选人" />
+            <lang locale="zh_HK" value="挑選人" />
+            <lang locale="zh_TW" value="挑選人" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].columns.column[FPickPersonID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="挑选人" />
+            <lang locale="zh_HK" value="挑選人" />
+            <lang locale="zh_TW" value="挑選人" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].columns.column[FQty].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="挑选蛋数" />
+            <lang locale="zh_HK" value="挑選蛋數" />
+            <lang locale="zh_TW" value="挑選蛋數" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].columns.column[FQty].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="挑选蛋数" />
+            <lang locale="zh_HK" value="挑選蛋數" />
+            <lang locale="zh_TW" value="挑選蛋數" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].columns.column[FSeq].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据分录序列号" />
+            <lang locale="zh_HK" value="單據分錄序列號" />
+            <lang locale="zh_TW" value="單據分錄序列號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].columns.column[FSeq].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据分录序列号（定义为序列属性即使用{seq}）" />
+            <lang locale="zh_HK" value="單據分錄序列號（定義為序列屬性即使用{seq}）" />
+            <lang locale="zh_TW" value="單據分錄序列號（定義為序列屬性即使用{seq}）" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.stocking.hatch.app.T_FM_EggReceiveBillPickDetail].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</dataTable>
+

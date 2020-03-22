@@ -1,0 +1,1372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.feedfactory.app</package>
+    <name>FFTruckPlanTruckPrintQuery</name>
+    <alias>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].alias</alias>
+    <description>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].description</description>
+    <userDefined>true</userDefined>
+    <reportDataSource />
+    <bizUnitPK>com.kingdee.eas.farm.feedfactory.FeedFactoryTruckPlan</bizUnitPK>
+    <connectionProvider />
+    <subObjects>
+        <subEntity>
+            <name>FeedFactoryTruckPlan</name>
+            <alias>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].subObjects.subEntity[FeedFactoryTruckPlan].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FeedFactoryTruckPlan" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>TruckEntrys</name>
+            <alias>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].subObjects.subEntity[TruckEntrys].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FeedFactoryTruckPlanTruckEntry" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>truck</name>
+            <alias>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].subObjects.subEntity[truck].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FeedTruck" />
+            </entityRef>
+        </subEntity>
+    </subObjects>
+    <units>
+        <queryField>
+            <name>id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FeedFactoryTruckPlan" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FeedFactoryTruckPlan" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bizDate</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[bizDate].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="bizDate" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FeedFactoryTruckPlan" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bizDate" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>description</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[description].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="description" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FeedFactoryTruckPlan" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="description" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>createTime</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[createTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Timestamp</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="createTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FeedFactoryTruckPlan" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="createTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>lastUpdateTime</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[lastUpdateTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Timestamp</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="lastUpdateTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FeedFactoryTruckPlan" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="lastUpdateTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Fivouchered</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[Fivouchered].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Boolean</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="Fivouchered" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FeedFactoryTruckPlan" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="Fivouchered" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>auditTime</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[auditTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>842da3c0-fa1d-448e-a46a-c2e211c27aae</key>
+                    <parentUnit>
+                        <key name="name" value="auditTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FeedFactoryTruckPlan" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="auditTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>baseStatus</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[baseStatus].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>bd46e6fe-435b-4951-be51-fed83162fc01</key>
+                    <parentUnit>
+                        <key name="name" value="baseStatus" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FeedFactoryTruckPlan" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="baseStatus" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>beginTime</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[beginTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Time</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>cb251916-9300-4f1b-aaac-6b508aa7015e</key>
+                    <parentUnit>
+                        <key name="name" value="beginTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FeedFactoryTruckPlan" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="beginTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>lunchBeginTime</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[lunchBeginTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Time</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>261b2c4f-16b7-4caa-894e-3c6ad22f949a</key>
+                    <parentUnit>
+                        <key name="name" value="lunchBeginTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FeedFactoryTruckPlan" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="lunchBeginTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>lunchEndTime</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[lunchEndTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Time</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>c6a35cbc-31e8-46fb-b3ed-7dc3931be3cf</key>
+                    <parentUnit>
+                        <key name="name" value="lunchEndTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FeedFactoryTruckPlan" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="lunchEndTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>prepackedTruckCount</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[prepackedTruckCount].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0a79cb1e-580c-4e81-b28b-5c552a7796c3</key>
+                    <parentUnit>
+                        <key name="name" value="prepackedTruckCount" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FeedFactoryTruckPlan" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="prepackedTruckCount" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>orderByTruck</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[orderByTruck].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Boolean</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>d16d0ea1-7deb-4c97-8656-f905a49afc98</key>
+                    <parentUnit>
+                        <key name="name" value="orderByTruck" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FeedFactoryTruckPlan" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="orderByTruck" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>3764fb54-f302-4457-b3f8-4a1123efe60b</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.propertyUnit[3764fb54-f302-4457-b3f8-4a1123efe60b].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>c6585ee2-eb26-4f82-8b14-b447216eee6d</key>
+                    <parentUnit>
+                        <key name="name" value="3764fb54-f302-4457-b3f8-4a1123efe60b" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FeedFactoryTruckPlan" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>42371d8d-d9b1-4592-ba50-12cd1ebed340</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.propertyUnit[42371d8d-d9b1-4592-ba50-12cd1ebed340].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>e7837d5e-c8a4-4b8d-9325-bdcb163be7d4</key>
+                    <parentUnit>
+                        <key name="name" value="42371d8d-d9b1-4592-ba50-12cd1ebed340" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TruckEntrys" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="parent" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>2e617794-876b-4f61-8e60-10714f06d54f</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.propertyUnit[2e617794-876b-4f61-8e60-10714f06d54f].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>e277e3ba-d7ea-4b2a-9647-621194449f2c</key>
+                    <parentUnit>
+                        <key name="name" value="2e617794-876b-4f61-8e60-10714f06d54f" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TruckEntrys" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="truck" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>eb8b05b2-13d7-41ce-aa30-633d32994650</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.propertyUnit[eb8b05b2-13d7-41ce-aa30-633d32994650].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>501e4ddd-185e-47d7-963e-037fe3a379bc</key>
+                    <parentUnit>
+                        <key name="name" value="eb8b05b2-13d7-41ce-aa30-633d32994650" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="truck" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>TruckEntrys.allCount</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[TruckEntrys.allCount].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>07788c1f-df11-410c-a168-6463c25eb6c4</key>
+                    <parentUnit>
+                        <key name="name" value="TruckEntrys.allCount" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TruckEntrys" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="allCount" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>TruckEntrys.lunchPlace</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[TruckEntrys.lunchPlace].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>f6a32293-ce33-4d5d-98a6-5e522c324811</key>
+                    <parentUnit>
+                        <key name="name" value="TruckEntrys.lunchPlace" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TruckEntrys" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="lunchPlace" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>TruckEntrys.beginTime</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[TruckEntrys.beginTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Time</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b1d7f9dd-9bac-4985-96bb-db15c645f1c4</key>
+                    <parentUnit>
+                        <key name="name" value="TruckEntrys.beginTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TruckEntrys" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="beginTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>TruckEntrys.endTime</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[TruckEntrys.endTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Time</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>3cb82e04-57e1-40f3-8a8a-c3ca48433d17</key>
+                    <parentUnit>
+                        <key name="name" value="TruckEntrys.endTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TruckEntrys" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="endTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>truck.licensePlate</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[truck.licensePlate].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>adddd141-3b65-41c3-a30f-9211e20a316b</key>
+                    <parentUnit>
+                        <key name="name" value="truck.licensePlate" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="truck" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="licensePlate" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>truck.tare</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[truck.tare].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>79c9e043-cb6b-4dca-8669-5f42a9a50abc</key>
+                    <parentUnit>
+                        <key name="name" value="truck.tare" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="truck" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="tare" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>truck.driverTel</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[truck.driverTel].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>5ec5b0dd-943f-4d4a-a59b-ef326137f44e</key>
+                    <parentUnit>
+                        <key name="name" value="truck.driverTel" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="truck" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="driverTel" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>truck.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[truck.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>397489f9-383f-43fe-ba5f-e719b85186f1</key>
+                    <parentUnit>
+                        <key name="name" value="truck.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="truck" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>truck.number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[truck.number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>fb6d7ad8-3372-4df2-8803-a0370ac01c61</key>
+                    <parentUnit>
+                        <key name="name" value="truck.number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="truck" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>truck.id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[truck.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>5504ed57-6faa-480c-adaf-7b835ebf8f0f</key>
+                    <parentUnit>
+                        <key name="name" value="truck.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="truck" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </queryField>
+    </units>
+    <defaultFilter>
+        <name>defaultFilter</name>
+        <formulaString />
+        <query>
+            <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+            <key name="name" value="FFTruckPlanTruckPrintQuery" />
+        </query>
+    </defaultFilter>
+    <defaultSorters>
+        <querySorterItem>
+            <propertyName>number</propertyName>
+            <sortType>ASC</sortType>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+            <configured>false</configured>
+        </querySorterItem>
+    </defaultSorters>
+    <queryPK>
+        <name>QueryPK</name>
+        <alias>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].queryPK[QueryPK].alias</alias>
+        <description>joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].queryPK[QueryPK].description</description>
+        <keyProperties>
+            <queryField>
+                <key name="name" value="id" />
+            </queryField>
+        </keyProperties>
+    </queryPK>
+    <isDistinct>false</isDistinct>
+    <joins>
+        <join>
+            <name>3709994b-b979-4a67-9ff0-145f0b1e7385</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="FeedFactoryTruckPlan" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="TruckEntrys" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>263e8e3a-2581-4713-a674-47ca6aa0e45c</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="3764fb54-f302-4457-b3f8-4a1123efe60b" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="42371d8d-d9b1-4592-ba50-12cd1ebed340" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="3709994b-b979-4a67-9ff0-145f0b1e7385" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </join>
+        <join>
+            <name>6e7541fd-cc9a-4f32-8ca9-f441cb1ce4cc</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="TruckEntrys" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="truck" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>66b08e00-d427-462d-8f43-d4bdf8bacb73</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="2e617794-876b-4f61-8e60-10714f06d54f" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="eb8b05b2-13d7-41ce-aa30-633d32994650" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="6e7541fd-cc9a-4f32-8ca9-f441cb1ce4cc" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="FFTruckPlanTruckPrintQuery" />
+            </query>
+        </join>
+    </joins>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="饲料厂派车计划_车辆情况" />
+            <lang locale="zh_HK" value="飼料廠派車計畫_車輛情況" />
+            <lang locale="zh_TW" value="飼料廠派車計畫_車輛情況" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].defaultSorters.querySorterItemextendedProperty.f7WindowTitle">
+            <lang locale="en_US" value="多分录基础单据模板" />
+            <lang locale="zh_CN" value="多分录基础单据模板" />
+            <lang locale="zh_TW" value="多分录基础单据模板" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="多分錄基礎單據查詢" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].extendedProperty.F7WindowTitle">
+            <lang locale="en_US" value="com.kingdee.eas.farm.feedfactory.client.FeedfactoryResource.FeedFactoryTruckPlanQueryF7WindowTitle" />
+            <lang locale="zh_CN" value="com.kingdee.eas.farm.feedfactory.client.FeedfactoryResource.FeedFactoryTruckPlanQueryF7WindowTitle" />
+            <lang locale="zh_TW" value="com.kingdee.eas.farm.feedfactory.client.FeedfactoryResource.FeedFactoryTruckPlanQueryF7WindowTitle" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].extendedProperty.f7WindowTitle">
+            <lang locale="en_US" value="饲料厂派车计划" />
+            <lang locale="zh_CN" value="饲料厂派车计划" />
+            <lang locale="zh_TW" value="饲料厂派车计划" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].queryPK[QueryPK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].queryPK[QueryPK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].subObjects.subEntity[FeedFactoryTruckPlan].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].subObjects.subEntity[TruckEntrys].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].subObjects.subEntity[truck].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.propertyUnit[2e617794-876b-4f61-8e60-10714f06d54f].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.propertyUnit[3764fb54-f302-4457-b3f8-4a1123efe60b].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.propertyUnit[42371d8d-d9b1-4592-ba50-12cd1ebed340].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.propertyUnit[eb8b05b2-13d7-41ce-aa30-633d32994650].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[Fivouchered].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否生成凭证" />
+            <lang locale="zh_HK" value="是否生成憑證" />
+            <lang locale="zh_TW" value="是否生成憑證" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[Fivouchered].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[Fivouchered].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[TruckEntrys.allCount].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="总车次" />
+            <lang locale="zh_HK" value="總車次" />
+            <lang locale="zh_TW" value="總車次" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[TruckEntrys.beginTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出车时间" />
+            <lang locale="zh_HK" value="出車時間" />
+            <lang locale="zh_TW" value="出車時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[TruckEntrys.endTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收车时间" />
+            <lang locale="zh_HK" value="收車時間" />
+            <lang locale="zh_TW" value="收車時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[TruckEntrys.lunchPlace].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="预计午饭地点" />
+            <lang locale="zh_HK" value="預計午飯地點" />
+            <lang locale="zh_TW" value="預計午飯地點" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[auditTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审核时间" />
+            <lang locale="zh_HK" value="審核時間" />
+            <lang locale="zh_TW" value="審核時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[auditTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[auditTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[baseStatus].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="状态" />
+            <lang locale="zh_HK" value="狀態" />
+            <lang locale="zh_TW" value="狀態" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[baseStatus].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[baseStatus].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[beginTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="开始打料时间" />
+            <lang locale="zh_HK" value="開始打料時間" />
+            <lang locale="zh_TW" value="開始打料時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[beginTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[beginTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[bizDate].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务日期" />
+            <lang locale="zh_HK" value="業務日期" />
+            <lang locale="zh_TW" value="業務日期" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[bizDate].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[bizDate].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[createTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建时间" />
+            <lang locale="zh_HK" value="創建時間" />
+            <lang locale="zh_TW" value="創建時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[createTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[createTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[description].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="参考信息" />
+            <lang locale="zh_HK" value="參考信息" />
+            <lang locale="zh_TW" value="參考信息" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[description].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[description].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[lastUpdateTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最后修改时间" />
+            <lang locale="zh_HK" value="最後修改時間" />
+            <lang locale="zh_TW" value="最後修改時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[lastUpdateTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[lastUpdateTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[lunchBeginTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="午饭开始时间" />
+            <lang locale="zh_HK" value="午飯開始時間" />
+            <lang locale="zh_TW" value="午飯開始時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[lunchBeginTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[lunchBeginTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[lunchEndTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="午饭结束时间" />
+            <lang locale="zh_HK" value="午飯結束時間" />
+            <lang locale="zh_TW" value="午飯結束時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[lunchEndTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[lunchEndTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据编号" />
+            <lang locale="zh_HK" value="單據編號" />
+            <lang locale="zh_TW" value="單據編號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[number].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[number].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[orderByTruck].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="按饲料车排序" />
+            <lang locale="zh_HK" value="按飼料車排序" />
+            <lang locale="zh_TW" value="按飼料車排序" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[orderByTruck].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[orderByTruck].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[prepackedTruckCount].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="预装车数" />
+            <lang locale="zh_HK" value="預裝車數" />
+            <lang locale="zh_TW" value="預裝車數" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[prepackedTruckCount].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[prepackedTruckCount].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[truck.driverTel].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="司机电话" />
+            <lang locale="zh_HK" value="司機電話" />
+            <lang locale="zh_TW" value="司機電話" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[truck.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[truck.licensePlate].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="车牌号" />
+            <lang locale="zh_HK" value="車牌號" />
+            <lang locale="zh_TW" value="車牌號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[truck.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="名称" />
+            <lang locale="zh_HK" value="名稱" />
+            <lang locale="zh_TW" value="名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[truck.number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="编码" />
+            <lang locale="zh_HK" value="編碼" />
+            <lang locale="zh_TW" value="編碼" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.FFTruckPlanTruckPrintQuery].units.queryField[truck.tare].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="皮重(kg)" />
+            <lang locale="zh_HK" value="皮重(kg)" />
+            <lang locale="zh_TW" value="皮重(kg)" />
+        </rs>
+    </resource>
+</joinQuery>
+

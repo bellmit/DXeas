@@ -1,0 +1,1313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.signwasthetable.app</package>
+    <name>SignWasTheTableRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>575784dd-c971-4666-8782-54f03a5268c3</id>
+            <parentID />
+            <source>department=presentedPerson.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>3aa15c94-e54e-47b2-888f-f58e4f9d6f17</id>
+            <parentID>575784dd-c971-4666-8782-54f03a5268c3</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>b455d518-ed1e-4b8e-912b-6763d3c68b64</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b455d518-ed1e-4b8e-912b-6763d3c68b64</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtdepartment</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d5cc4cf9-5d0e-49d1-81e8-4477b87ff3ff</id>
+            <parentID>575784dd-c971-4666-8782-54f03a5268c3</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>117d6403-1ded-4c6d-af34-2cbcf3e147b9</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>0a470ef3-f3d3-4f22-94a3-afd1ffecc40c</id>
+                        <expressionID>039b36f7-3d07-4901-aad7-af95111c87b6</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>a70e7aec-eeb1-4bc9-aeef-9a748ce73252</id>
+                        <expressionID>d195bdc8-4af3-403f-8aa2-22b5ed6e97c4</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>117d6403-1ded-4c6d-af34-2cbcf3e147b9</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>039b36f7-3d07-4901-aad7-af95111c87b6</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>ee5148e1-df22-4ec6-b6e9-f5eae06d7413</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ee5148e1-df22-4ec6-b6e9-f5eae06d7413</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtpresentedPerson</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d195bdc8-4af3-403f-8aa2-22b5ed6e97c4</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>4a6237e3-580a-4748-8687-e005eb747cce</id>
+            <parentID />
+            <source>department=presentedPerson.hrOrgUnit.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>238592c0-99ab-40f2-9712-54d220444b7a</id>
+            <parentID>4a6237e3-580a-4748-8687-e005eb747cce</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>a68bd809-ed0e-4178-b1d2-82d0f4b5f505</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a68bd809-ed0e-4178-b1d2-82d0f4b5f505</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtdepartment</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>748f76bb-37b4-4fbb-9d4a-4f0aa2b6e33d</id>
+            <parentID>4a6237e3-580a-4748-8687-e005eb747cce</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>b000bbc9-f425-421c-bfe2-c8ac7f369a9a</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>fb8033d6-ffee-4354-94ed-f1bcccf127c3</id>
+                        <expressionID>26dae485-491e-409a-93d4-124e8aababb1</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>5c15de33-142d-4cd6-9d70-93eddca60fa7</id>
+                        <expressionID>5ae436d2-36a7-4e84-8a31-a2f9d4b75564</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b000bbc9-f425-421c-bfe2-c8ac7f369a9a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>26dae485-491e-409a-93d4-124e8aababb1</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>33cc5113-d756-49d9-822a-22471d761142</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>33cc5113-d756-49d9-822a-22471d761142</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtpresentedPerson</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5ae436d2-36a7-4e84-8a31-a2f9d4b75564</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>hrOrgUnit.name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>daf51def-4b91-4f58-8a18-55d63d0f8e68</id>
+            <parentID />
+            <source>department=presentedPerson.hrOrgUnit.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>f7cf9b12-0d91-4bec-9c85-606c8a728441</id>
+            <parentID>daf51def-4b91-4f58-8a18-55d63d0f8e68</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>57037376-1980-4760-af22-a15e3c5522f3</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>57037376-1980-4760-af22-a15e3c5522f3</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtdepartment</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>74a61756-4a53-495f-8666-63ee3dd360c1</id>
+            <parentID>daf51def-4b91-4f58-8a18-55d63d0f8e68</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>2f65c5e5-50fe-4c88-8eb0-5bc00c675f2d</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>f9babc7e-000b-4776-993d-b5b365cdd4dc</id>
+                        <expressionID>b983fafb-a2ed-4012-bdeb-f33e918c4013</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>5bbaeb6b-78bc-4c37-a501-baee6e92a4dc</id>
+                        <expressionID>547d0c53-ac6f-40d9-bac7-96626a736053</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2f65c5e5-50fe-4c88-8eb0-5bc00c675f2d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b983fafb-a2ed-4012-bdeb-f33e918c4013</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>5511c210-c84f-4555-a23a-01e482d493a8</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5511c210-c84f-4555-a23a-01e482d493a8</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtpresentedPerson</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>547d0c53-ac6f-40d9-bac7-96626a736053</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>hrOrgUnit.name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>d6980b95-d9ec-4b3f-96c7-9d6099e9b589</id>
+            <parentID />
+            <source>[Entry.Amount] = [Entry.Price] * [Entry.Quantity]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>b8b12168-e08e-4acd-9de8-4ecdb7af3d0e</id>
+            <parentID>d6980b95-d9ec-4b3f-96c7-9d6099e9b589</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>f5f9433f-2cc5-40c7-89f9-9c398b401175</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f5f9433f-2cc5-40c7-89f9-9c398b401175</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"Amount")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>ef57f0c7-c2b8-4547-bc5d-4743660fffeb</id>
+            <parentID>d6980b95-d9ec-4b3f-96c7-9d6099e9b589</parentID>
+            <source />
+            <operator>*</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>8fdd0704-8e81-4752-817c-492486a561b9</id>
+            <parentID>ef57f0c7-c2b8-4547-bc5d-4743660fffeb</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>c721bdc7-0d3f-4b8c-82c7-b8fc0254f851</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c721bdc7-0d3f-4b8c-82c7-b8fc0254f851</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"Price")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f1b30c31-3ba1-42a8-8515-7a650ca68c3d</id>
+            <parentID>ef57f0c7-c2b8-4547-bc5d-4743660fffeb</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>f80caeaa-7416-42c5-a82a-442077012293</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f80caeaa-7416-42c5-a82a-442077012293</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"Quantity")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>09320faa-fca0-42b5-8748-ebe81752925f</id>
+            <parentID />
+            <source>[Entry.Price] = [Entry.Amount] / [Entry.Quantity]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>eecdecb2-7792-473c-8751-876f8c4b513a</id>
+            <parentID>09320faa-fca0-42b5-8748-ebe81752925f</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>ab11b55f-af36-4c8b-bea9-7aa3db03c0a5</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ab11b55f-af36-4c8b-bea9-7aa3db03c0a5</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"Price")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>31fb0494-89f6-4630-a381-d2a44feecfcb</id>
+            <parentID>09320faa-fca0-42b5-8748-ebe81752925f</parentID>
+            <source />
+            <operator>/</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>297cde37-ad9c-4761-9a47-c0f75e812d03</id>
+            <parentID>31fb0494-89f6-4630-a381-d2a44feecfcb</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>45c003b7-a0fb-43b6-92b0-bb8a8a93df05</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>45c003b7-a0fb-43b6-92b0-bb8a8a93df05</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"Amount")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b3a7053f-af84-4678-a727-13bbb70798e3</id>
+            <parentID>31fb0494-89f6-4630-a381-d2a44feecfcb</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>f19c2aca-fabc-474b-a0af-2733ea4be6ad</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f19c2aca-fabc-474b-a0af-2733ea4be6ad</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"Quantity")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>9168e014-4719-45be-81c6-91f121d801f6</id>
+            <parentID />
+            <source>[Entry.Amount] = [Entry.Price] * [Entry.Quantity]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>cf78a4e7-2709-4c49-a172-850cd15d68f4</id>
+            <parentID>9168e014-4719-45be-81c6-91f121d801f6</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>53126ee7-4b0c-4256-a842-836bd8607e72</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>53126ee7-4b0c-4256-a842-836bd8607e72</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"Amount")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>0b4af1c7-4c67-4f50-95fd-7a0341fc1da7</id>
+            <parentID>9168e014-4719-45be-81c6-91f121d801f6</parentID>
+            <source />
+            <operator>*</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>6e88d6c8-b79a-41ef-afd3-c3912b093518</id>
+            <parentID>0b4af1c7-4c67-4f50-95fd-7a0341fc1da7</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>7685ae59-4303-4e14-a1f9-b5fc9e0809ee</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7685ae59-4303-4e14-a1f9-b5fc9e0809ee</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"Price")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>32eb3095-86e5-426b-b12a-6f037dd3d91e</id>
+            <parentID>0b4af1c7-4c67-4f50-95fd-7a0341fc1da7</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>94307642-5e97-4024-9bf0-49204776c720</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>94307642-5e97-4024-9bf0-49204776c720</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"Quantity")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>3cb0d2c7-b22c-4208-8f1b-952b7451b949</id>
+            <parentID />
+            <source>[Entry.Price] = [Entry.Amount] / [Entry.Quantity]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>1fe7774b-22f2-4576-8e29-c581aee1be93</id>
+            <parentID>3cb0d2c7-b22c-4208-8f1b-952b7451b949</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>ba98f1ba-740a-413b-a099-1aee4ef22ca1</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ba98f1ba-740a-413b-a099-1aee4ef22ca1</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"Price")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>fe35d46c-f4aa-4a83-981f-b76437dd8d7f</id>
+            <parentID>3cb0d2c7-b22c-4208-8f1b-952b7451b949</parentID>
+            <source />
+            <operator>/</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>a5030788-1ac1-4e5d-b645-234e737db610</id>
+            <parentID>fe35d46c-f4aa-4a83-981f-b76437dd8d7f</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>5062b6a1-8613-4824-8ad7-5eccd8b53d0e</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5062b6a1-8613-4824-8ad7-5eccd8b53d0e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"Amount")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>71682f0c-e7cb-43cb-9b1a-273e5e247864</id>
+            <parentID>fe35d46c-f4aa-4a83-981f-b76437dd8d7f</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>a5275dfc-751a-413f-9d55-7f49f34d0d04</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a5275dfc-751a-413f-9d55-7f49f34d0d04</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"Quantity")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>b2bb48b5-a872-40c6-9346-611051066601</id>
+            <parentID />
+            <source>ISNULL( [Entry.Price] ) OR ISNULL( [Entry.Quantity] )</source>
+            <operator>||</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>37dd75a0-7458-43ac-af6e-7dd112848adb</id>
+            <parentID>b2bb48b5-a872-40c6-9346-611051066601</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>boolean</valueType>
+            <value />
+            <method>
+                <ownerID>b504e7ed-c0a2-4d3d-8a4a-4ce4c33c367c</ownerID>
+                <name>isNull</name>
+                <type>boolean</type>
+                <parameters>
+                    <parameter>
+                        <id>cd31e141-b4b1-473b-831c-5ce8da217f21</id>
+                        <expressionID>dc40066f-3e8b-466a-908e-69cc0be21af2</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b504e7ed-c0a2-4d3d-8a4a-4ce4c33c367c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>dc40066f-3e8b-466a-908e-69cc0be21af2</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>6cfcc013-4412-4c70-99a7-88e85f5a11ce</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6cfcc013-4412-4c70-99a7-88e85f5a11ce</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"Price")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a7355300-835f-457d-8099-e157348a9a50</id>
+            <parentID>b2bb48b5-a872-40c6-9346-611051066601</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>boolean</valueType>
+            <value />
+            <method>
+                <ownerID>976b8ea2-1285-45e7-9722-f0851bde2ab0</ownerID>
+                <name>isNull</name>
+                <type>boolean</type>
+                <parameters>
+                    <parameter>
+                        <id>e073a8b1-9d75-4b6b-9779-85ee4a8a4baf</id>
+                        <expressionID>8dd70773-48db-4a07-be00-b4e46b643f5c</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>976b8ea2-1285-45e7-9722-f0851bde2ab0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8dd70773-48db-4a07-be00-b4e46b643f5c</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>1b2d3a6a-a95a-4714-8926-d61a0c92b5a4</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1b2d3a6a-a95a-4714-8926-d61a0c92b5a4</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"Quantity")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>422b34c6-3603-4f34-b869-b6e869833793</id>
+            <parentID />
+            <source>ISNULL( [Entry.Amount] ) OR ISNULL( [Entry.Quantity] )</source>
+            <operator>||</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>cc01721f-21c0-4fe2-8332-ce3db3485778</id>
+            <parentID>422b34c6-3603-4f34-b869-b6e869833793</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>boolean</valueType>
+            <value />
+            <method>
+                <ownerID>f1b1eba5-1bd7-4bd1-aa63-293f79ce483a</ownerID>
+                <name>isNull</name>
+                <type>boolean</type>
+                <parameters>
+                    <parameter>
+                        <id>1bb40faa-089d-4ba0-a915-509822d2a950</id>
+                        <expressionID>6189cbfa-1231-4168-8f3a-5ae2583f8291</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f1b1eba5-1bd7-4bd1-aa63-293f79ce483a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6189cbfa-1231-4168-8f3a-5ae2583f8291</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>059a17ea-c8b0-4f99-9704-de47c842ee44</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>059a17ea-c8b0-4f99-9704-de47c842ee44</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"Amount")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>68c56993-8535-44d7-9b5d-e98ffda28c6d</id>
+            <parentID>422b34c6-3603-4f34-b869-b6e869833793</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>boolean</valueType>
+            <value />
+            <method>
+                <ownerID>bcfbcefc-72ae-458b-8f44-68f4496ed2e6</ownerID>
+                <name>isNull</name>
+                <type>boolean</type>
+                <parameters>
+                    <parameter>
+                        <id>c83cef00-2007-4dfa-b106-4e5873592a20</id>
+                        <expressionID>0c377d98-d741-46ac-a816-1b3dc21175c6</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bcfbcefc-72ae-458b-8f44-68f4496ed2e6</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0c377d98-d741-46ac-a816-1b3dc21175c6</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>447c75fc-12ff-49e5-81ce-f72faa82c4bf</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>447c75fc-12ff-49e5-81ce-f72faa82c4bf</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"Quantity")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>3f25f0f0-d952-4397-a1bb-e782029c9ab1</id>
+            <parentID />
+            <source>ISNULL( [Entry.Price] ) OR ISNULL( [Entry.Quantity] )</source>
+            <operator>||</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>e1f5e02b-62f4-4cfc-af4e-7d8270c22301</id>
+            <parentID>3f25f0f0-d952-4397-a1bb-e782029c9ab1</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>boolean</valueType>
+            <value />
+            <method>
+                <ownerID>660efc52-1420-4a83-a769-fa86d49db097</ownerID>
+                <name>isNull</name>
+                <type>boolean</type>
+                <parameters>
+                    <parameter>
+                        <id>edc1b840-253b-4408-aff0-4474c937fc47</id>
+                        <expressionID>79113514-588f-4686-ac56-98df46dd21e5</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>660efc52-1420-4a83-a769-fa86d49db097</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>79113514-588f-4686-ac56-98df46dd21e5</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>8aebf74a-c1fa-4dff-827a-641fc75df602</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8aebf74a-c1fa-4dff-827a-641fc75df602</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"Price")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>dbbfc0c6-91d9-448c-8e10-5ca77ed8cb39</id>
+            <parentID>3f25f0f0-d952-4397-a1bb-e782029c9ab1</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>boolean</valueType>
+            <value />
+            <method>
+                <ownerID>b356331a-47ce-4748-9977-ed4203c89d98</ownerID>
+                <name>isNull</name>
+                <type>boolean</type>
+                <parameters>
+                    <parameter>
+                        <id>a2b13c4a-da7e-475c-b86f-013f10f4259c</id>
+                        <expressionID>7831ebab-0e3d-4018-b505-f2c9c603973e</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b356331a-47ce-4748-9977-ed4203c89d98</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7831ebab-0e3d-4018-b505-f2c9c603973e</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>02ed178c-60ac-4311-82da-0c0bf5b3f3ce</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>02ed178c-60ac-4311-82da-0c0bf5b3f3ce</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"Quantity")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>569f1a3c-cb27-4e8e-8d19-d266bf70da6a</id>
+            <parentID />
+            <source>ISNULL( [Entry.Amount] ) OR ISNULL( [Entry.Quantity] )</source>
+            <operator>||</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>6933215c-5004-4880-b568-7c2881067426</id>
+            <parentID>569f1a3c-cb27-4e8e-8d19-d266bf70da6a</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>boolean</valueType>
+            <value />
+            <method>
+                <ownerID>7024c787-3a74-43f1-bb86-dfd7d2582d63</ownerID>
+                <name>isNull</name>
+                <type>boolean</type>
+                <parameters>
+                    <parameter>
+                        <id>ed000934-6b52-42a5-a7ee-2a7d6a407ed3</id>
+                        <expressionID>c0253258-8b24-43e5-9c63-b1bdc487a021</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7024c787-3a74-43f1-bb86-dfd7d2582d63</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c0253258-8b24-43e5-9c63-b1bdc487a021</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>e4cfecf0-96e4-40d9-9d6c-11c82f2286b9</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e4cfecf0-96e4-40d9-9d6c-11c82f2286b9</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"Amount")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e3ef9b95-a0ee-4e46-89fc-9fc03bfa26c4</id>
+            <parentID>569f1a3c-cb27-4e8e-8d19-d266bf70da6a</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>boolean</valueType>
+            <value />
+            <method>
+                <ownerID>53334382-d6dd-4fc0-9354-4f2ff12206e5</ownerID>
+                <name>isNull</name>
+                <type>boolean</type>
+                <parameters>
+                    <parameter>
+                        <id>d3ecdd7f-2a92-42bc-a65f-4273cef10a4d</id>
+                        <expressionID>b4dca57b-5b94-4f8a-832d-19aa5753eca9</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>53334382-d6dd-4fc0-9354-4f2ff12206e5</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b4dca57b-5b94-4f8a-832d-19aa5753eca9</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>028b02c4-26db-4457-b874-94ba304364ce</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>028b02c4-26db-4457-b874-94ba304364ce</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"Quantity")</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>6e193eab-60f1-482c-9d7c-d376cd604f72</id>
+            <name>SignWasTheTable_department_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].actions.action[SignWasTheTable_department_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].actions.action[SignWasTheTable_department_ActionInfo].description</description>
+            <expressionID>575784dd-c971-4666-8782-54f03a5268c3</expressionID>
+        </action>
+        <action>
+            <id>b894f2e8-ba3c-49bf-8e60-b392abd949c3</id>
+            <name>SignWasTheTable_department_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].actions.action[SignWasTheTable_department_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].actions.action[SignWasTheTable_department_ActionInfo].description</description>
+            <expressionID>4a6237e3-580a-4748-8687-e005eb747cce</expressionID>
+        </action>
+        <action>
+            <id>59cdc375-27ca-4d27-9e99-11e32a7136a8</id>
+            <name>SignWasTheTable_department_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].actions.action[SignWasTheTable_department_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].actions.action[SignWasTheTable_department_ActionInfo].description</description>
+            <expressionID>daf51def-4b91-4f58-8a18-55d63d0f8e68</expressionID>
+        </action>
+        <action>
+            <id>f3b9d93a-3780-4206-b574-ea35c06383d7</id>
+            <name>CPLNXIYO</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].actions.action[CPLNXIYO].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].actions.action[CPLNXIYO].description</description>
+            <expressionID>d6980b95-d9ec-4b3f-96c7-9d6099e9b589</expressionID>
+        </action>
+        <action>
+            <id>3bbbae74-6048-4e78-a741-edf6852db958</id>
+            <name>CPLNZA42</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].actions.action[CPLNZA42].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].actions.action[CPLNZA42].description</description>
+            <expressionID>09320faa-fca0-42b5-8748-ebe81752925f</expressionID>
+        </action>
+        <action>
+            <id>fd14081a-f82c-41fe-9c60-bc301c8189ea</id>
+            <name>CPLOHWOW</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].actions.action[CPLOHWOW].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].actions.action[CPLOHWOW].description</description>
+            <expressionID>9168e014-4719-45be-81c6-91f121d801f6</expressionID>
+        </action>
+        <action>
+            <id>69aa88a2-4ca0-415d-8ce8-0a8e65745df2</id>
+            <name>CPLOJGYH</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].actions.action[CPLOJGYH].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].actions.action[CPLOJGYH].description</description>
+            <expressionID>3cb0d2c7-b22c-4208-8f1b-952b7451b949</expressionID>
+        </action>
+    </actions>
+    <conditions>
+        <baseCondition>
+            <id>b46d9e27-9a52-4da5-93f7-4e7ba1732fbd</id>
+            <name>CPLNYL4M</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].conditions.baseCondition[CPLNYL4M].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].conditions.baseCondition[CPLNYL4M].description</description>
+            <expressionID>b2bb48b5-a872-40c6-9346-611051066601</expressionID>
+        </baseCondition>
+        <baseCondition>
+            <id>55daa8d1-4db4-4db7-8295-2c42aee3acbd</id>
+            <name>CPLNZ$PG</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].conditions.baseCondition[CPLNZ$PG].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].conditions.baseCondition[CPLNZ$PG].description</description>
+            <expressionID>422b34c6-3603-4f34-b869-b6e869833793</expressionID>
+        </baseCondition>
+        <baseCondition>
+            <id>1d42a63f-9771-4d36-bbf5-9d468c8ed4ec</id>
+            <name>CPLOJBK7</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].conditions.baseCondition[CPLOJBK7].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].conditions.baseCondition[CPLOJBK7].description</description>
+            <expressionID>3f25f0f0-d952-4397-a1bb-e782029c9ab1</expressionID>
+        </baseCondition>
+        <baseCondition>
+            <id>5d162e4c-d82e-40dd-9088-83e0babaa8d6</id>
+            <name>CPLOK677</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].conditions.baseCondition[CPLOK677].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].conditions.baseCondition[CPLOK677].description</description>
+            <expressionID>569f1a3c-cb27-4e8e-8d19-d266bf70da6a</expressionID>
+        </baseCondition>
+    </conditions>
+    <rules>
+        <conditionRule>
+            <name>CPLOJBK3</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].rules.conditionRule[CPLOJBK3].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].rules.conditionRule[CPLOJBK3].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <condition>
+                <key name="id" value="1d42a63f-9771-4d36-bbf5-9d468c8ed4ec" />
+            </condition>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="fd14081a-f82c-41fe-9c60-bc301c8189ea" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+        <conditionRule>
+            <name>CPLOK677</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].rules.conditionRule[CPLOK677].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].rules.conditionRule[CPLOK677].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <condition>
+                <key name="id" value="5d162e4c-d82e-40dd-9088-83e0babaa8d6" />
+            </condition>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="69aa88a2-4ca0-415d-8ce8-0a8e65745df2" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+        <conditionRule>
+            <name>CPLNYL4M</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].rules.conditionRule[CPLNYL4M].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].rules.conditionRule[CPLNYL4M].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <condition>
+                <key name="id" value="b46d9e27-9a52-4da5-93f7-4e7ba1732fbd" />
+            </condition>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="f3b9d93a-3780-4206-b574-ea35c06383d7" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+        <conditionRule>
+            <name>CPLNZ$PG</name>
+            <alias>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].rules.conditionRule[CPLNZ$PG].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].rules.conditionRule[CPLNZ$PG].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <condition>
+                <key name="id" value="55daa8d1-4db4-4db7-8295-2c42aee3acbd" />
+            </condition>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="3bbbae74-6048-4e78-a741-edf6852db958" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].actions.action[CPLNXIYO].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].actions.action[CPLNXIYO].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].actions.action[CPLNZA42].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].actions.action[CPLNZA42].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].actions.action[CPLOHWOW].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].actions.action[CPLOHWOW].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].actions.action[CPLOJGYH].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].actions.action[CPLOJGYH].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].actions.action[SignWasTheTable_department_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_hrOrgUnit" />
+            <lang locale="zh_HK" value="攜帶字段屬性_hrOrgUnit" />
+            <lang locale="zh_TW" value="攜帶字段屬性_hrOrgUnit" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].actions.action[SignWasTheTable_department_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].conditions.baseCondition[CPLNYL4M].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].conditions.baseCondition[CPLNYL4M].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].conditions.baseCondition[CPLNZ$PG].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].conditions.baseCondition[CPLNZ$PG].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].conditions.baseCondition[CPLOJBK7].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].conditions.baseCondition[CPLOJBK7].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].conditions.baseCondition[CPLOK677].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].conditions.baseCondition[CPLOK677].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].rules.conditionRule[CPLNYL4M].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="toAmt" />
+            <lang locale="zh_HK" value="toAmt" />
+            <lang locale="zh_TW" value="toAmt" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].rules.conditionRule[CPLNYL4M].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].rules.conditionRule[CPLNYL4M].extendedProperty.columnName">
+            <lang locale="en_US" value="Price" />
+            <lang locale="zh_CN" value="Price" />
+            <lang locale="zh_TW" value="Price" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].rules.conditionRule[CPLNZ$PG].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="toPrice" />
+            <lang locale="zh_HK" value="toPrice" />
+            <lang locale="zh_TW" value="toPrice" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].rules.conditionRule[CPLNZ$PG].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].rules.conditionRule[CPLNZ$PG].extendedProperty.columnName">
+            <lang locale="en_US" value="Amount" />
+            <lang locale="zh_CN" value="Amount" />
+            <lang locale="zh_TW" value="Amount" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].rules.conditionRule[CPLOJBK3].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="toAmt" />
+            <lang locale="zh_HK" value="toAmt" />
+            <lang locale="zh_TW" value="toAmt" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].rules.conditionRule[CPLOJBK3].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].rules.conditionRule[CPLOJBK3].extendedProperty.columnName">
+            <lang locale="en_US" value="Quantity" />
+            <lang locale="zh_CN" value="Quantity" />
+            <lang locale="zh_TW" value="Quantity" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].rules.conditionRule[CPLOK677].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="toPrice" />
+            <lang locale="zh_HK" value="toPrice" />
+            <lang locale="zh_TW" value="toPrice" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].rules.conditionRule[CPLOK677].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.signwasthetable.app.SignWasTheTableRuleSet].rules.conditionRule[CPLOK677].extendedProperty.columnName">
+            <lang locale="en_US" value="Quantity" />
+            <lang locale="zh_CN" value="Quantity" />
+            <lang locale="zh_TW" value="Quantity" />
+        </rs>
+    </resource>
+</ruleSet>
+

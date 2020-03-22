@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.tocloud.app</package>
+    <name>MaterialUserEntryQuery</name>
+    <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].alias</alias>
+    <description>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].description</description>
+    <userDefined>true</userDefined>
+    <reportDataSource />
+    <bizUnitPK />
+    <connectionProvider />
+    <subObjects>
+        <subEntity>
+            <name>StockingBreedDailyMatUserEntry</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].subObjects.subEntity[StockingBreedDailyMatUserEntry].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.stocking.processbizill.app" />
+                <key name="name" value="StockingBreedDailyMatUserEntry" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>matNum</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].subObjects.subEntity[matNum].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.master.material.app" />
+                <key name="name" value="Material" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>parent</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].subObjects.subEntity[parent].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.stocking.processbizill.app" />
+                <key name="name" value="StockingBreedDaily" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>company</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].subObjects.subEntity[company].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="CompanyOrgUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>stockingBatch</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].subObjects.subEntity[stockingBatch].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.stocking.basedata.app" />
+                <key name="name" value="StockingBatch" />
+            </entityRef>
+        </subEntity>
+    </subObjects>
+    <units>
+        <propertyUnit>
+            <name>bae1b7f0-f111-45e3-a927-917e4769351d</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.propertyUnit[bae1b7f0-f111-45e3-a927-917e4769351d].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>fd85ae3f-2046-4213-8dd4-47ed9a09cf46</key>
+                    <parentUnit>
+                        <key name="name" value="bae1b7f0-f111-45e3-a927-917e4769351d" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="StockingBreedDailyMatUserEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="matNum" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>82ab17ea-e743-4f1a-99a5-d32050b7fb64</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.propertyUnit[82ab17ea-e743-4f1a-99a5-d32050b7fb64].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>4b8be383-e4e1-4dd9-923e-aa56702e0501</key>
+                    <parentUnit>
+                        <key name="name" value="82ab17ea-e743-4f1a-99a5-d32050b7fb64" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="matNum" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.queryField[id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>eb9e0d8b-1674-4531-bb08-26b5e2a811a0</key>
+                    <parentUnit>
+                        <key name="name" value="id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="StockingBreedDailyMatUserEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>companyName</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.queryField[companyName].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>ac810b05-5b38-4e67-9768-322c158b4c8c</key>
+                    <parentUnit>
+                        <key name="name" value="companyName" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="company" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bizdate</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.queryField[bizdate].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>e102c33f-da0e-44fc-99dd-12f369076787</key>
+                    <parentUnit>
+                        <key name="name" value="bizdate" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bizDate" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>batch</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.queryField[batch].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>6fc4299f-1713-4c27-a48f-5d7697792c38</key>
+                    <parentUnit>
+                        <key name="name" value="batch" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="stockingBatch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>materialName</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.queryField[materialName].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>d1f4d257-391b-4f9a-9824-f4a0fa309d44</key>
+                    <parentUnit>
+                        <key name="name" value="materialName" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="StockingBreedDailyMatUserEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="matName" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>materialQtyhjh</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.queryField[materialQtyhjh].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b18243cd-dadb-4478-83f1-3a71adb3a1fe</key>
+                    <parentUnit>
+                        <key name="name" value="materialQtyhjh" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="StockingBreedDailyMatUserEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="matQty" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>f266e1ec-ae58-4eaa-8472-72f75591a08f</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.propertyUnit[f266e1ec-ae58-4eaa-8472-72f75591a08f].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>9585ead3-7bf1-4d27-94b2-f271c5e16d09</key>
+                    <parentUnit>
+                        <key name="name" value="f266e1ec-ae58-4eaa-8472-72f75591a08f" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="StockingBreedDailyMatUserEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="parent" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>7cacea34-5305-4461-b634-42b51b3dd094</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.propertyUnit[7cacea34-5305-4461-b634-42b51b3dd094].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>8a910af4-636a-4604-82af-db5b3764afc7</key>
+                    <parentUnit>
+                        <key name="name" value="7cacea34-5305-4461-b634-42b51b3dd094" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>4a6493b2-6676-4b4c-9b8b-dd818578f3f9</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.propertyUnit[4a6493b2-6676-4b4c-9b8b-dd818578f3f9].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>3fb34b07-38ab-41c1-945b-2c53142b7fe8</key>
+                    <parentUnit>
+                        <key name="name" value="4a6493b2-6676-4b4c-9b8b-dd818578f3f9" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="company" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>5400489d-5cf1-49aa-b90c-4aa561a50731</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.propertyUnit[5400489d-5cf1-49aa-b90c-4aa561a50731].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>2c010394-5005-4c93-adcf-9056372346b3</key>
+                    <parentUnit>
+                        <key name="name" value="5400489d-5cf1-49aa-b90c-4aa561a50731" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="company" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>billNum</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.queryField[billNum].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>a766b624-f885-4fef-b6c0-0d49476d1ecd</key>
+                    <parentUnit>
+                        <key name="name" value="billNum" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>stockingid</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.queryField[stockingid].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>6f22ddc9-e497-4df9-b10e-a40ca1c1d553</key>
+                    <parentUnit>
+                        <key name="name" value="stockingid" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>companyid</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.queryField[companyid].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>3bd5970e-6ff3-44dc-bdf8-ca7a370c8bfe</key>
+                    <parentUnit>
+                        <key name="name" value="companyid" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="company" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bateStatus</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.queryField[bateStatus].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>27aa9d70-6239-4d8c-b899-06e8fbb60feb</key>
+                    <parentUnit>
+                        <key name="name" value="bateStatus" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="baseStatus" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>c65f8fdc-4d0d-4ca5-964e-c91b5b4d4b3b</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.propertyUnit[c65f8fdc-4d0d-4ca5-964e-c91b5b4d4b3b].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>b63f5e0e-0380-491d-89bf-c7ec15492710</key>
+                    <parentUnit>
+                        <key name="name" value="c65f8fdc-4d0d-4ca5-964e-c91b5b4d4b3b" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="stockingBatch" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>12504f1d-8d12-4168-ad2d-ccf31cee1cc1</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.propertyUnit[12504f1d-8d12-4168-ad2d-ccf31cee1cc1].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>fc65dc15-489d-4e71-8011-d9bbe12ca99b</key>
+                    <parentUnit>
+                        <key name="name" value="12504f1d-8d12-4168-ad2d-ccf31cee1cc1" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="stockingBatch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>batchid</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.queryField[batchid].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>cb1ba981-7a0b-441b-9e21-05d1fedc4cd3</key>
+                    <parentUnit>
+                        <key name="name" value="batchid" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="stockingBatch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+        </queryField>
+    </units>
+    <defaultFilter>
+        <name>defaultFilter</name>
+        <formulaString />
+        <query>
+            <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+            <key name="name" value="MaterialUserEntryQuery" />
+        </query>
+    </defaultFilter>
+    <queryPK>
+        <name>QueryPK</name>
+        <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].queryPK[QueryPK].alias</alias>
+        <description>joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].queryPK[QueryPK].description</description>
+        <keyProperties>
+            <queryField>
+                <key name="name" value="id" />
+            </queryField>
+        </keyProperties>
+    </queryPK>
+    <isDistinct>false</isDistinct>
+    <joins>
+        <join>
+            <name>dccecea9-7b9e-4d69-bd18-d9d89855bba9</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="StockingBreedDailyMatUserEntry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="matNum" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>427fda16-b6f8-4e61-8984-1bad78f1d481</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="bae1b7f0-f111-45e3-a927-917e4769351d" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="82ab17ea-e743-4f1a-99a5-d32050b7fb64" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="dccecea9-7b9e-4d69-bd18-d9d89855bba9" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+        </join>
+        <join>
+            <name>275dbb5a-08f6-4741-a73e-56112c837fc4</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="StockingBreedDailyMatUserEntry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="parent" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>224871b6-361c-4c65-9ba5-9d55e4ff4991</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="f266e1ec-ae58-4eaa-8472-72f75591a08f" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="7cacea34-5305-4461-b634-42b51b3dd094" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="275dbb5a-08f6-4741-a73e-56112c837fc4" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+        </join>
+        <join>
+            <name>7137f7f6-c211-481d-862a-5e022bc0cd35</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="parent" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="company" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>5e6e546c-8e92-4de8-8f3a-4654d219fef7</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="4a6493b2-6676-4b4c-9b8b-dd818578f3f9" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="5400489d-5cf1-49aa-b90c-4aa561a50731" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="7137f7f6-c211-481d-862a-5e022bc0cd35" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+        </join>
+        <join>
+            <name>e6ec2b05-a9a9-45a9-97e3-f4f261d7fd6b</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="parent" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="stockingBatch" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>716e161f-fb38-4167-9944-2dd92f96261c</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="c65f8fdc-4d0d-4ca5-964e-c91b5b4d4b3b" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="12504f1d-8d12-4168-ad2d-ccf31cee1cc1" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="e6ec2b05-a9a9-45a9-97e3-f4f261d7fd6b" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="MaterialUserEntryQuery" />
+            </query>
+        </join>
+    </joins>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="物料领用分录" />
+            <lang locale="zh_HK" value="物料領用分錄" />
+            <lang locale="zh_TW" value="物料領用分錄" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].queryPK[QueryPK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].queryPK[QueryPK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].subObjects.subEntity[StockingBreedDailyMatUserEntry].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].subObjects.subEntity[company].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].subObjects.subEntity[matNum].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].subObjects.subEntity[parent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].subObjects.subEntity[stockingBatch].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.propertyUnit[12504f1d-8d12-4168-ad2d-ccf31cee1cc1].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.propertyUnit[4a6493b2-6676-4b4c-9b8b-dd818578f3f9].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.propertyUnit[5400489d-5cf1-49aa-b90c-4aa561a50731].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.propertyUnit[7cacea34-5305-4461-b634-42b51b3dd094].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.propertyUnit[82ab17ea-e743-4f1a-99a5-d32050b7fb64].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.propertyUnit[bae1b7f0-f111-45e3-a927-917e4769351d].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.propertyUnit[c65f8fdc-4d0d-4ca5-964e-c91b5b4d4b3b].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.propertyUnit[f266e1ec-ae58-4eaa-8472-72f75591a08f].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.queryField[batch].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="批次" />
+            <lang locale="zh_HK" value="批次" />
+            <lang locale="zh_TW" value="批次" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.queryField[batchid].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="批次id" />
+            <lang locale="zh_HK" value="批次id" />
+            <lang locale="zh_TW" value="批次id" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.queryField[bateStatus].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据状态" />
+            <lang locale="zh_HK" value="單據狀態" />
+            <lang locale="zh_TW" value="單據狀態" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.queryField[billNum].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="养殖日报编号" />
+            <lang locale="zh_HK" value="養殖日報編號" />
+            <lang locale="zh_TW" value="養殖日報編號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.queryField[bizdate].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务日期" />
+            <lang locale="zh_HK" value="業務日期" />
+            <lang locale="zh_TW" value="業務日期" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.queryField[companyName].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司名称" />
+            <lang locale="zh_HK" value="公司名稱" />
+            <lang locale="zh_TW" value="公司名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.queryField[companyid].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司ID" />
+            <lang locale="zh_HK" value="公司ID" />
+            <lang locale="zh_TW" value="公司ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.queryField[id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="物料领用ID" />
+            <lang locale="zh_HK" value="物料領用ID" />
+            <lang locale="zh_TW" value="物料領用ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.queryField[materialName].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="物料名称" />
+            <lang locale="zh_HK" value="物料名稱" />
+            <lang locale="zh_TW" value="物料名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.queryField[materialQtyhjh].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="领用数量" />
+            <lang locale="zh_HK" value="領用數量" />
+            <lang locale="zh_TW" value="領用數量" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.MaterialUserEntryQuery].units.queryField[stockingid].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="养殖日报ID" />
+            <lang locale="zh_HK" value="養殖日報ID" />
+            <lang locale="zh_TW" value="養殖日報ID" />
+        </rs>
+    </resource>
+</joinQuery>
+

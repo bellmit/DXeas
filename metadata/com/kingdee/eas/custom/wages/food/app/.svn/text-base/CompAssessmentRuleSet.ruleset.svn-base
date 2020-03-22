@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.wages.food.app</package>
+    <name>CompAssessmentRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.wages.food.app.CompAssessmentRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.wages.food.app.CompAssessmentRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>ee99d55d-9f37-4a3d-bcf1-9d25f8b126c1</id>
+            <parentID />
+            <source>Entry.personnumber=Entry.person.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>1167b086-57a4-4b01-9009-2a5d7be85317</id>
+            <parentID>ee99d55d-9f37-4a3d-bcf1-9d25f8b126c1</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>45a89948-e304-4431-aeaf-1dc2e25e6bc6</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>45a89948-e304-4431-aeaf-1dc2e25e6bc6</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"personnumber")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5867ef14-f28a-4b49-9514-9e5e9d49c526</id>
+            <parentID>ee99d55d-9f37-4a3d-bcf1-9d25f8b126c1</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>4fbca5ce-89bd-4d59-82c5-c2502ffd0383</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>38ce0450-ece7-4755-b5d0-61aa1a9063dd</id>
+                        <expressionID>c0d2752a-92c4-4cc0-8ae6-58796f490ae0</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>0c414d24-47f8-46fc-ba6f-90035365ec8b</id>
+                        <expressionID>e4db62ef-f1d1-44c6-9fa8-30264995ae0b</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4fbca5ce-89bd-4d59-82c5-c2502ffd0383</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c0d2752a-92c4-4cc0-8ae6-58796f490ae0</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>31b9c98a-5baa-4891-ab1c-e14de306a24c</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>31b9c98a-5baa-4891-ab1c-e14de306a24c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntry.getCell(rowIndex,"person")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e4db62ef-f1d1-44c6-9fa8-30264995ae0b</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>6af633ee-001f-4491-9808-f698e26d60be</id>
+            <parentID />
+            <source>Entry.personnumber=Entry.person.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>4453757b-3d87-4353-9426-d4f02da93383</id>
+            <parentID>6af633ee-001f-4491-9808-f698e26d60be</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>d970992d-9b48-442c-bc28-7055a31e031e</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d970992d-9b48-442c-bc28-7055a31e031e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"personnumber")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4fcf46ff-0d8a-4e98-b442-9d3f12e03589</id>
+            <parentID>6af633ee-001f-4491-9808-f698e26d60be</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>11ce47d6-7d78-4866-8444-b00a75b4f451</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>e623a758-b7ca-40ef-9530-a4cc3c3700d9</id>
+                        <expressionID>c6fa8336-d8ac-4187-a38d-3cc430a3fe1e</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>24f189cc-c3f3-4bb1-83ee-4f4322f944fc</id>
+                        <expressionID>d16dac63-4298-4f72-9076-96ae3efbd270</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>11ce47d6-7d78-4866-8444-b00a75b4f451</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c6fa8336-d8ac-4187-a38d-3cc430a3fe1e</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>4eb809c2-d93e-4e7f-9ecc-b670ed6e8676</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4eb809c2-d93e-4e7f-9ecc-b670ed6e8676</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntry.getCell(rowIndex,"person")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d16dac63-4298-4f72-9076-96ae3efbd270</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>a0794392-b2a0-4692-bf49-d8740d3826d2</id>
+            <parentID />
+            <source>[Entry.Unitindex] = [Entry.StandardAward] * 0.3</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>c0456e5b-673f-48aa-b430-4a9d7030a98b</id>
+            <parentID>a0794392-b2a0-4692-bf49-d8740d3826d2</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>c0e1f503-69ab-43e8-8cf0-0b285beda3c7</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c0e1f503-69ab-43e8-8cf0-0b285beda3c7</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"Unitindex")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>4a52c009-c008-4842-be10-92c9dd48d330</id>
+            <parentID>a0794392-b2a0-4692-bf49-d8740d3826d2</parentID>
+            <source />
+            <operator>*</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>59aa8dd8-fae4-4836-a6cd-616384620ede</id>
+            <parentID>4a52c009-c008-4842-be10-92c9dd48d330</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>19125d11-eed8-4fa1-87bd-967a2a077b35</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>19125d11-eed8-4fa1-87bd-967a2a077b35</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"StandardAward")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b824f5f2-10ae-403d-82aa-aafa0f39b9d5</id>
+            <parentID>4a52c009-c008-4842-be10-92c9dd48d330</parentID>
+            <source />
+            <type>CONST</type>
+            <valueType>Double</valueType>
+            <value>0.3</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f2480f65-4b9f-47bd-93b5-e81c460f3488</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>8a574d80-143f-4716-8be0-ff5ee77ad394</id>
+            <name>Entry_personnumber_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.food.app.CompAssessmentRuleSet].actions.action[Entry_personnumber_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.food.app.CompAssessmentRuleSet].actions.action[Entry_personnumber_ActionInfo].description</description>
+            <expressionID>ee99d55d-9f37-4a3d-bcf1-9d25f8b126c1</expressionID>
+        </action>
+        <action>
+            <id>05d0764c-f4f6-4188-8a2f-fc6aa5f394be</id>
+            <name>Entry_personnumber_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.food.app.CompAssessmentRuleSet].actions.action[Entry_personnumber_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.food.app.CompAssessmentRuleSet].actions.action[Entry_personnumber_ActionInfo].description</description>
+            <expressionID>6af633ee-001f-4491-9808-f698e26d60be</expressionID>
+        </action>
+        <action>
+            <id>0cd50c21-b647-4a9f-96ac-5323f13ff11d</id>
+            <name>D9ROJ3Z1</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.food.app.CompAssessmentRuleSet].actions.action[D9ROJ3Z1].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.food.app.CompAssessmentRuleSet].actions.action[D9ROJ3Z1].description</description>
+            <expressionID>a0794392-b2a0-4692-bf49-d8740d3826d2</expressionID>
+        </action>
+        <action>
+            <id>bbc43ade-54bf-45ca-a42e-dbbf479918d2</id>
+            <name>D9ROJ3_R</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.food.app.CompAssessmentRuleSet].actions.action[D9ROJ3_R].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.food.app.CompAssessmentRuleSet].actions.action[D9ROJ3_R].description</description>
+            <expressionID>f2480f65-4b9f-47bd-93b5-e81c460f3488</expressionID>
+        </action>
+    </actions>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.food.app.CompAssessmentRuleSet].actions.action[D9ROJ3Z1].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.food.app.CompAssessmentRuleSet].actions.action[D9ROJ3Z1].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.food.app.CompAssessmentRuleSet].actions.action[D9ROJ3_R].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.food.app.CompAssessmentRuleSet].actions.action[D9ROJ3_R].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.food.app.CompAssessmentRuleSet].actions.action[Entry_personnumber_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.food.app.CompAssessmentRuleSet].actions.action[Entry_personnumber_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.food.app.CompAssessmentRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.food.app.CompAssessmentRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</ruleSet>
+

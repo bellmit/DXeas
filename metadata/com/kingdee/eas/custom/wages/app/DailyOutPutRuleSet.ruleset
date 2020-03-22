@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.wages.app</package>
+    <name>DailyOutPutRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>051bf2fd-34d9-44e3-840d-755216187154</id>
+            <parentID />
+            <source>OrganForeman=WageOrganization.Foremanname.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>88b8f509-6e70-45b5-abac-427eed152581</id>
+            <parentID>051bf2fd-34d9-44e3-840d-755216187154</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>98a6faed-29b1-44f5-91cb-a396ad56d044</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>98a6faed-29b1-44f5-91cb-a396ad56d044</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtOrganForeman</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>05d1663c-73c4-4143-aca6-6c0439339d06</id>
+            <parentID>051bf2fd-34d9-44e3-840d-755216187154</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>95d74d5c-5909-4f7d-a483-576343f5b372</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>75550b93-cc76-42db-882c-5fe5718bc022</id>
+                        <expressionID>8242f1fb-a7f1-468a-ad9d-0648c0daac20</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>cdba5ac0-414d-475d-b02f-1794b9699a58</id>
+                        <expressionID>0bbcdc07-be12-40c3-a0c6-04ae3f71289a</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>95d74d5c-5909-4f7d-a483-576343f5b372</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8242f1fb-a7f1-468a-ad9d-0648c0daac20</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>c9be1c88-9b54-432e-9f8a-e6d022aa1078</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c9be1c88-9b54-432e-9f8a-e6d022aa1078</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtWageOrganization</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0bbcdc07-be12-40c3-a0c6-04ae3f71289a</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>Foremanname.name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>163e9738-8e0a-4c83-b68b-79755684bcf8</id>
+            <parentID />
+            <source>entrys.personnumber=entrys.person.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>e25fee76-bbec-4868-bff5-a916d4956150</id>
+            <parentID>163e9738-8e0a-4c83-b68b-79755684bcf8</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>31b928e4-6b89-417f-927b-0e5571ca13db</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>31b928e4-6b89-417f-927b-0e5571ca13db</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"personnumber")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5c57c7ac-981b-44f2-96bb-d8292be68004</id>
+            <parentID>163e9738-8e0a-4c83-b68b-79755684bcf8</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>00215965-1123-433d-a3c6-46d2b6343878</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>8dac8873-bcc2-4f04-834d-4bec4e94e110</id>
+                        <expressionID>65304806-c33c-4d0b-8f99-fd7c440b8662</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>42065a3b-5154-4e3e-ae53-591abc3064c6</id>
+                        <expressionID>fe6a88a1-af20-47d0-beff-aa3acdd52874</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>00215965-1123-433d-a3c6-46d2b6343878</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>65304806-c33c-4d0b-8f99-fd7c440b8662</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>495eb967-341b-40dd-ae07-862c6bad3a12</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>495eb967-341b-40dd-ae07-862c6bad3a12</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"person")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fe6a88a1-af20-47d0-beff-aa3acdd52874</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>13321545-14c5-46e5-876b-38943d1762f7</id>
+            <parentID />
+            <source>entrys.productratio=entrys.frompost.ProductRatio</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>b9750e42-284f-4f85-8899-7f0270ac1a60</id>
+            <parentID>13321545-14c5-46e5-876b-38943d1762f7</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>6eb2ed3e-d7b9-4131-a461-d2e9cd6982cf</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6eb2ed3e-d7b9-4131-a461-d2e9cd6982cf</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"productratio")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>94f5d9a5-7c1f-4e2d-acdd-acdb4bc0e61a</id>
+            <parentID>13321545-14c5-46e5-876b-38943d1762f7</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>939f89ef-8c8b-44b5-92a4-eb3a42188192</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>6afefb69-bd18-47bd-a6a5-fad69bb5727d</id>
+                        <expressionID>bbaa3610-6806-49fe-a4ee-9cd9f9db19f8</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>d2fb23ac-7258-45a5-ac61-cd0110f3d0c3</id>
+                        <expressionID>d90c14a4-f95b-46da-9466-ec0bdb83b83b</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>939f89ef-8c8b-44b5-92a4-eb3a42188192</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bbaa3610-6806-49fe-a4ee-9cd9f9db19f8</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>33216df7-cd6f-41ce-9a4b-0213df1a8bb5</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>33216df7-cd6f-41ce-9a4b-0213df1a8bb5</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"frompost")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d90c14a4-f95b-46da-9466-ec0bdb83b83b</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>ProductRatio</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>16d9609e-465b-4a2b-b76c-65b4b3876db5</id>
+            <parentID />
+            <source>entrys.meteunit=entrys.frompost.UnitMetering</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>535f956a-df7d-4465-95d7-2475b5bfcda1</id>
+            <parentID>16d9609e-465b-4a2b-b76c-65b4b3876db5</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>36c7b54e-6efb-4f1d-b38c-3558e27aafd6</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>36c7b54e-6efb-4f1d-b38c-3558e27aafd6</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"meteunit")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1553db48-0f1a-4b26-a5ca-48bf6657b5f6</id>
+            <parentID>16d9609e-465b-4a2b-b76c-65b4b3876db5</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Enum</valueType>
+            <value />
+            <method>
+                <ownerID>d4c7d0fe-24e0-4559-a30a-443acaebc1ed</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>f566f6a1-cd70-49f9-b989-59a4df407bf2</id>
+                        <expressionID>d9119254-c19e-4da5-aa8c-4b7a65a614df</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>2218a42f-09f0-4e13-8b77-56d58cf82919</id>
+                        <expressionID>5010e89a-a1f3-4313-9d05-466dca5f5852</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d4c7d0fe-24e0-4559-a30a-443acaebc1ed</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d9119254-c19e-4da5-aa8c-4b7a65a614df</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>4b43e275-a874-48ad-96b7-3c7ae2ad7827</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4b43e275-a874-48ad-96b7-3c7ae2ad7827</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"frompost")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5010e89a-a1f3-4313-9d05-466dca5f5852</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>UnitMetering</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>b81aeab8-671e-4af3-84c0-e6dcd1005a76</id>
+            <name>DailyOutPut_OrganForeman_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].actions.action[DailyOutPut_OrganForeman_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].actions.action[DailyOutPut_OrganForeman_ActionInfo].description</description>
+            <expressionID>051bf2fd-34d9-44e3-840d-755216187154</expressionID>
+        </action>
+        <action>
+            <id>32afa863-c0da-4c1e-ab44-6e9fdf867564</id>
+            <name>entrys_personnumber_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].actions.action[entrys_personnumber_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].actions.action[entrys_personnumber_ActionInfo].description</description>
+            <expressionID>163e9738-8e0a-4c83-b68b-79755684bcf8</expressionID>
+        </action>
+        <action>
+            <id>f9dc0420-19d1-4185-a6d9-ecc8c4249164</id>
+            <name>entrys_productratio_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].actions.action[entrys_productratio_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].actions.action[entrys_productratio_ActionInfo].description</description>
+            <expressionID>13321545-14c5-46e5-876b-38943d1762f7</expressionID>
+        </action>
+        <action>
+            <id>1d35d58b-ff55-4714-b0b3-180439afac94</id>
+            <name>entrys_meteunit_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].actions.action[entrys_meteunit_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].actions.action[entrys_meteunit_ActionInfo].description</description>
+            <expressionID>16d9609e-465b-4a2b-b76c-65b4b3876db5</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>entrys_personnumber_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].rules.conditionRule[entrys_personnumber_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].rules.conditionRule[entrys_personnumber_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="32afa863-c0da-4c1e-ab44-6e9fdf867564" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>entrys_productratio_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].rules.conditionRule[entrys_productratio_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].rules.conditionRule[entrys_productratio_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="f9dc0420-19d1-4185-a6d9-ecc8c4249164" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>entrys_meteunit_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].rules.conditionRule[entrys_meteunit_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].rules.conditionRule[entrys_meteunit_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="1d35d58b-ff55-4714-b0b3-180439afac94" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>DailyOutPut_OrganForeman_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].rules.conditionRule[DailyOutPut_OrganForeman_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].rules.conditionRule[DailyOutPut_OrganForeman_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="b81aeab8-671e-4af3-84c0-e6dcd1005a76" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].actions.action[DailyOutPut_OrganForeman_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_Foremanname" />
+            <lang locale="zh_HK" value="攜帶字段屬性_Foremanname" />
+            <lang locale="zh_TW" value="攜帶字段屬性_Foremanname" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].actions.action[DailyOutPut_OrganForeman_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].actions.action[entrys_meteunit_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_UnitMetering" />
+            <lang locale="zh_HK" value="攜帶字段屬性_UnitMetering" />
+            <lang locale="zh_TW" value="攜帶字段屬性_UnitMetering" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].actions.action[entrys_meteunit_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].actions.action[entrys_personnumber_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].actions.action[entrys_personnumber_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].actions.action[entrys_productratio_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_ProductRatio" />
+            <lang locale="zh_HK" value="攜帶字段屬性_ProductRatio" />
+            <lang locale="zh_TW" value="攜帶字段屬性_ProductRatio" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].actions.action[entrys_productratio_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].rules.conditionRule[DailyOutPut_OrganForeman_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_Foremanname" />
+            <lang locale="zh_HK" value="攜帶字段屬性_Foremanname" />
+            <lang locale="zh_TW" value="攜帶字段屬性_Foremanname" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].rules.conditionRule[DailyOutPut_OrganForeman_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].rules.conditionRule[DailyOutPut_OrganForeman_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="WageOrganization" />
+            <lang locale="zh_CN" value="WageOrganization" />
+            <lang locale="zh_TW" value="WageOrganization" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].rules.conditionRule[DailyOutPut_OrganForeman_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].rules.conditionRule[entrys_meteunit_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_UnitMetering" />
+            <lang locale="zh_HK" value="攜帶字段屬性_UnitMetering" />
+            <lang locale="zh_TW" value="攜帶字段屬性_UnitMetering" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].rules.conditionRule[entrys_meteunit_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].rules.conditionRule[entrys_meteunit_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="frompost" />
+            <lang locale="zh_CN" value="frompost" />
+            <lang locale="zh_TW" value="frompost" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].rules.conditionRule[entrys_meteunit_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].rules.conditionRule[entrys_personnumber_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].rules.conditionRule[entrys_personnumber_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].rules.conditionRule[entrys_personnumber_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="person" />
+            <lang locale="zh_CN" value="person" />
+            <lang locale="zh_TW" value="person" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].rules.conditionRule[entrys_personnumber_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].rules.conditionRule[entrys_productratio_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_ProductRatio" />
+            <lang locale="zh_HK" value="攜帶字段屬性_ProductRatio" />
+            <lang locale="zh_TW" value="攜帶字段屬性_ProductRatio" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].rules.conditionRule[entrys_productratio_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].rules.conditionRule[entrys_productratio_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="frompost" />
+            <lang locale="zh_CN" value="frompost" />
+            <lang locale="zh_TW" value="frompost" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.DailyOutPutRuleSet].rules.conditionRule[entrys_productratio_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

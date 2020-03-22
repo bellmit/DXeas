@@ -1,0 +1,1375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.tocloud.app</package>
+    <name>DrugDrawQuery</name>
+    <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].alias</alias>
+    <description>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].description</description>
+    <userDefined>true</userDefined>
+    <reportDataSource />
+    <bizUnitPK />
+    <connectionProvider />
+    <subObjects>
+        <subEntity>
+            <name>DrugReceiveBillEntry</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].subObjects.subEntity[DrugReceiveBillEntry].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.feedbiz.app" />
+                <key name="name" value="DrugReceiveBillEntry" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>material</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].subObjects.subEntity[material].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.master.material.app" />
+                <key name="name" value="Material" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>warehouse</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].subObjects.subEntity[warehouse].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.scm.im.inv.app" />
+                <key name="name" value="Warehouse" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>parent</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].subObjects.subEntity[parent].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.feedbiz.app" />
+                <key name="name" value="DrugReceiveBill" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>company</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].subObjects.subEntity[company].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="CompanyOrgUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>batchContract</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].subObjects.subEntity[batchContract].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.feedbiz.app" />
+                <key name="name" value="BatchContractBill" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>batch</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].subObjects.subEntity[batch].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="Batch" />
+            </entityRef>
+        </subEntity>
+    </subObjects>
+    <units>
+        <propertyUnit>
+            <name>2bfb4ba9-5e43-46c5-a6e0-7e1f82e2968d</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.propertyUnit[2bfb4ba9-5e43-46c5-a6e0-7e1f82e2968d].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>15bcbe10-8198-43fa-9c89-c3b8ede4e7de</key>
+                    <parentUnit>
+                        <key name="name" value="2bfb4ba9-5e43-46c5-a6e0-7e1f82e2968d" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DrugReceiveBillEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="material" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>cb6c2389-14a3-48a3-8585-4f7c423d590a</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.propertyUnit[cb6c2389-14a3-48a3-8585-4f7c423d590a].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>64375218-7499-46b0-895c-f3c195138d02</key>
+                    <parentUnit>
+                        <key name="name" value="cb6c2389-14a3-48a3-8585-4f7c423d590a" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="material" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>e38ed919-f8bb-48a4-9ced-5c983a50d8fa</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.propertyUnit[e38ed919-f8bb-48a4-9ced-5c983a50d8fa].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>e41184a1-1d92-4c6a-a6a2-c6be0b5ff219</key>
+                    <parentUnit>
+                        <key name="name" value="e38ed919-f8bb-48a4-9ced-5c983a50d8fa" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DrugReceiveBillEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="warehouse" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>361e1317-a86b-49d7-8cd8-83cac2e13c32</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.propertyUnit[361e1317-a86b-49d7-8cd8-83cac2e13c32].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>2d8b3937-d6d4-4aea-92ee-5629e0ac303b</key>
+                    <parentUnit>
+                        <key name="name" value="361e1317-a86b-49d7-8cd8-83cac2e13c32" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="warehouse" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>7dea5516-23f7-4a23-8902-132933515d52</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.propertyUnit[7dea5516-23f7-4a23-8902-132933515d52].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>bf3c6c6c-001b-4cba-9f28-504788f5d354</key>
+                    <parentUnit>
+                        <key name="name" value="7dea5516-23f7-4a23-8902-132933515d52" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DrugReceiveBillEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="parent" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>5b8f3faf-0e65-4b0a-9ed5-7844c0a0553b</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.propertyUnit[5b8f3faf-0e65-4b0a-9ed5-7844c0a0553b].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>a76a95f9-d0b2-43ce-a13a-6e5277f60f80</key>
+                    <parentUnit>
+                        <key name="name" value="5b8f3faf-0e65-4b0a-9ed5-7844c0a0553b" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>cf7779fe-a7b0-428d-8552-347fbc38b4ee</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.propertyUnit[cf7779fe-a7b0-428d-8552-347fbc38b4ee].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>9c02036c-f3e5-437f-94cc-5a366dd79f93</key>
+                    <parentUnit>
+                        <key name="name" value="cf7779fe-a7b0-428d-8552-347fbc38b4ee" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="company" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>969d17e2-18ff-47da-ba77-6b92b16e1cc7</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.propertyUnit[969d17e2-18ff-47da-ba77-6b92b16e1cc7].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>3b17f983-1ac4-4e2d-9f1a-db535bdff57e</key>
+                    <parentUnit>
+                        <key name="name" value="969d17e2-18ff-47da-ba77-6b92b16e1cc7" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="company" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>396839b0-8859-476d-a60a-3b0679372cad</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.propertyUnit[396839b0-8859-476d-a60a-3b0679372cad].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>59dbe5f8-5ecf-47f4-b0d0-6321ad2124dc</key>
+                    <parentUnit>
+                        <key name="name" value="396839b0-8859-476d-a60a-3b0679372cad" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="batchContract" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>3ec01af1-0db2-4f86-96f4-14b8c6b3a80f</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.propertyUnit[3ec01af1-0db2-4f86-96f4-14b8c6b3a80f].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>2d9c360f-d026-4c99-ac43-f8553b940e2e</key>
+                    <parentUnit>
+                        <key name="name" value="3ec01af1-0db2-4f86-96f4-14b8c6b3a80f" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="batchContract" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>06166ecf-1bd2-4fa2-bfdc-12739c3dce9d</key>
+                    <parentUnit>
+                        <key name="name" value="id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DrugReceiveBillEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>stockingid</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[stockingid].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0f7beb5a-83c1-492d-b474-989441495507</key>
+                    <parentUnit>
+                        <key name="name" value="stockingid" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bizdate</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[bizdate].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b6fdd20e-5e74-43a7-bf6e-63f2ae0acd61</key>
+                    <parentUnit>
+                        <key name="name" value="bizdate" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bizDate" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bateStatus</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[bateStatus].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>827c6d06-696d-4126-9000-0c4cc6cc2d54</key>
+                    <parentUnit>
+                        <key name="name" value="bateStatus" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="billStatus" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>billNum</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[billNum].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>d685dda0-aa2c-42b5-9eb7-2af0bd46cf08</key>
+                    <parentUnit>
+                        <key name="name" value="billNum" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>batch</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[batch].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>115eba46-8c66-47fb-af25-75009b1c5c0b</key>
+                    <parentUnit>
+                        <key name="name" value="batch" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="batchContract" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>company.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[company.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>96e0fc9c-3cac-455b-ac83-f590e4bff0ee</key>
+                    <parentUnit>
+                        <key name="name" value="company.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="company" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>companyid</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[companyid].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>98e57b11-737c-48c1-923f-30bc39dbd9b2</key>
+                    <parentUnit>
+                        <key name="name" value="companyid" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="company" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>material.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[material.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>7c1d7c49-4dcc-4d0d-949c-2b03abd958ba</key>
+                    <parentUnit>
+                        <key name="name" value="material.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="material" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>receiveQtyhjh</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[receiveQtyhjh].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>e39a54a3-ab56-483c-a038-3c750a49d620</key>
+                    <parentUnit>
+                        <key name="name" value="receiveQtyhjh" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DrugReceiveBillEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="receiveQty" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>contractPrice</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[contractPrice].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>e68a8bf0-9fc7-4499-b5f5-f49cd52308d9</key>
+                    <parentUnit>
+                        <key name="name" value="contractPrice" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DrugReceiveBillEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="contractPrice" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>contractAmounthjh</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[contractAmounthjh].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>811fc389-efa8-40b8-b663-fb7f0a9f3339</key>
+                    <parentUnit>
+                        <key name="name" value="contractAmounthjh" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="DrugReceiveBillEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="contractAmount" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>warehouse.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[warehouse.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>6ff43014-1420-4274-8744-2a5f9f419fbc</key>
+                    <parentUnit>
+                        <key name="name" value="warehouse.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="warehouse" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>64a68f88-55c8-4c9f-8eac-6f0ca6da0dda</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.propertyUnit[64a68f88-55c8-4c9f-8eac-6f0ca6da0dda].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>26f03bda-6b2f-4ce6-b2cc-4fa67185445a</key>
+                    <parentUnit>
+                        <key name="name" value="64a68f88-55c8-4c9f-8eac-6f0ca6da0dda" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="batch" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>8a385004-b3f0-4888-a8a3-b28149ba6c13</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.propertyUnit[8a385004-b3f0-4888-a8a3-b28149ba6c13].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>2562aeeb-af90-48b2-a13b-f417b81d54e4</key>
+                    <parentUnit>
+                        <key name="name" value="8a385004-b3f0-4888-a8a3-b28149ba6c13" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="batch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>batchid</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[batchid].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>1722a72b-a8bf-4bd2-ab60-e4e9c5b1d2b7</key>
+                    <parentUnit>
+                        <key name="name" value="batchid" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="batch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>isReturn</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[isReturn].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>5448c108-57f2-4f2d-ae6f-b30ffc7c0c77</key>
+                    <parentUnit>
+                        <key name="name" value="isReturn" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bizType" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </queryField>
+    </units>
+    <defaultFilter>
+        <name>defaultFilter</name>
+        <formulaString />
+        <query>
+            <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+            <key name="name" value="DrugDrawQuery" />
+        </query>
+    </defaultFilter>
+    <queryPK>
+        <name>QueryPK</name>
+        <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].queryPK[QueryPK].alias</alias>
+        <description>joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].queryPK[QueryPK].description</description>
+        <keyProperties>
+            <queryField>
+                <key name="name" value="id" />
+            </queryField>
+        </keyProperties>
+    </queryPK>
+    <isDistinct>false</isDistinct>
+    <joins>
+        <join>
+            <name>78f6dc9d-0cc2-43a5-9576-353cd2c50eeb</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="DrugReceiveBillEntry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="material" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>08918f17-a193-43a6-8d4c-06307e42f19e</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="2bfb4ba9-5e43-46c5-a6e0-7e1f82e2968d" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="cb6c2389-14a3-48a3-8585-4f7c423d590a" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="78f6dc9d-0cc2-43a5-9576-353cd2c50eeb" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </join>
+        <join>
+            <name>5eaff632-7b83-47a3-a186-86e1dcf75b33</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="DrugReceiveBillEntry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="warehouse" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>7bd62871-f6d0-494a-bb8f-76197c9a2f31</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="e38ed919-f8bb-48a4-9ced-5c983a50d8fa" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="361e1317-a86b-49d7-8cd8-83cac2e13c32" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="5eaff632-7b83-47a3-a186-86e1dcf75b33" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </join>
+        <join>
+            <name>8641e9b0-6b2c-4334-bb19-33b2c2c59e9f</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="DrugReceiveBillEntry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="parent" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>de3b1970-5dab-4a8b-8c41-35fc1501b130</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="7dea5516-23f7-4a23-8902-132933515d52" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="5b8f3faf-0e65-4b0a-9ed5-7844c0a0553b" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="8641e9b0-6b2c-4334-bb19-33b2c2c59e9f" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </join>
+        <join>
+            <name>41ff6a99-d630-41a4-879a-3876f5f57fda</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="parent" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="company" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>47d8fdda-6b13-4d7b-9d3c-aebd65d44a7a</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="cf7779fe-a7b0-428d-8552-347fbc38b4ee" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="969d17e2-18ff-47da-ba77-6b92b16e1cc7" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="41ff6a99-d630-41a4-879a-3876f5f57fda" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </join>
+        <join>
+            <name>f8f887ab-ff9c-44e5-990c-9b0f667e6fce</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="parent" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="batchContract" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>3e0e962e-7501-4619-b358-68bdd3a7355c</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="396839b0-8859-476d-a60a-3b0679372cad" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="3ec01af1-0db2-4f86-96f4-14b8c6b3a80f" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="f8f887ab-ff9c-44e5-990c-9b0f667e6fce" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </join>
+        <join>
+            <name>c66d87a5-e545-4456-b355-f1ec2e809357</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="parent" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="batch" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>dee579a2-9a4d-4252-ab58-10d60cdf7b9f</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="64a68f88-55c8-4c9f-8eac-6f0ca6da0dda" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="8a385004-b3f0-4888-a8a3-b28149ba6c13" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="c66d87a5-e545-4456-b355-f1ec2e809357" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="DrugDrawQuery" />
+            </query>
+        </join>
+    </joins>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="药品处方单同步cloud领料出库单Query" />
+            <lang locale="zh_HK" value="藥品處方單同步cloud領料出庫單Query" />
+            <lang locale="zh_TW" value="藥品處方單同步cloud領料出庫單Query" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].queryPK[QueryPK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].queryPK[QueryPK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].subObjects.subEntity[DrugReceiveBillEntry].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].subObjects.subEntity[batchContract].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].subObjects.subEntity[batch].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].subObjects.subEntity[company].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].subObjects.subEntity[material].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].subObjects.subEntity[parent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].subObjects.subEntity[warehouse].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.propertyUnit[2bfb4ba9-5e43-46c5-a6e0-7e1f82e2968d].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.propertyUnit[361e1317-a86b-49d7-8cd8-83cac2e13c32].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.propertyUnit[396839b0-8859-476d-a60a-3b0679372cad].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.propertyUnit[3ec01af1-0db2-4f86-96f4-14b8c6b3a80f].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.propertyUnit[5b8f3faf-0e65-4b0a-9ed5-7844c0a0553b].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.propertyUnit[64a68f88-55c8-4c9f-8eac-6f0ca6da0dda].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.propertyUnit[7dea5516-23f7-4a23-8902-132933515d52].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.propertyUnit[8a385004-b3f0-4888-a8a3-b28149ba6c13].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.propertyUnit[969d17e2-18ff-47da-ba77-6b92b16e1cc7].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.propertyUnit[cb6c2389-14a3-48a3-8585-4f7c423d590a].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.propertyUnit[cf7779fe-a7b0-428d-8552-347fbc38b4ee].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.propertyUnit[e38ed919-f8bb-48a4-9ced-5c983a50d8fa].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[batch].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="批次" />
+            <lang locale="zh_HK" value="批次" />
+            <lang locale="zh_TW" value="批次" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[batchid].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[bateStatus].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据状态" />
+            <lang locale="zh_HK" value="單據狀態" />
+            <lang locale="zh_TW" value="單據狀態" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[billNum].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据编号" />
+            <lang locale="zh_HK" value="單據編號" />
+            <lang locale="zh_TW" value="單據編號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[bizdate].displayName">
+            <lang locale="en_US" value="" />
+            <lang locale="zh_CN" value="业务日期" />
+            <lang locale="zh_HK" value="業務日期" />
+            <lang locale="zh_TW" value="業務日期" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[company.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="财务组织" />
+            <lang locale="zh_HK" value="財務組織" />
+            <lang locale="zh_TW" value="財務組織" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[companyid].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[contractAmounthjh].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="合同结算金额" />
+            <lang locale="zh_HK" value="合同結算金額" />
+            <lang locale="zh_TW" value="合同結算金額" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[contractPrice].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="合同结算价格" />
+            <lang locale="zh_HK" value="合同結算價格" />
+            <lang locale="zh_TW" value="合同結算價格" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[isReturn].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务类型" />
+            <lang locale="zh_HK" value="業務類型" />
+            <lang locale="zh_TW" value="業務類型" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[material.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="药品" />
+            <lang locale="zh_HK" value="藥品" />
+            <lang locale="zh_TW" value="藥品" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[receiveQtyhjh].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="领用数量" />
+            <lang locale="zh_HK" value="領用數量" />
+            <lang locale="zh_TW" value="領用數量" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[stockingid].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.DrugDrawQuery].units.queryField[warehouse.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="仓库" />
+            <lang locale="zh_HK" value="倉庫" />
+            <lang locale="zh_TW" value="倉庫" />
+        </rs>
+    </resource>
+</joinQuery>
+

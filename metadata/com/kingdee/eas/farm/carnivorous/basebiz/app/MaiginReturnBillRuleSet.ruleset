@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.carnivorous.basebiz.app</package>
+    <name>MaiginReturnBillRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginReturnBillRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginReturnBillRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>2bcaae4e-7e79-4860-8f55-bfce3e4d380a</id>
+            <parentID />
+            <source>bEBankAddress=bEBank.Adress</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>39bbf405-f929-4c81-a9ca-d4b5e972e6a3</id>
+            <parentID>2bcaae4e-7e79-4860-8f55-bfce3e4d380a</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>9b3411fd-bc88-44a4-b10d-28c142195637</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9b3411fd-bc88-44a4-b10d-28c142195637</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtbEBankAddress</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a0aa18bc-1532-40aa-8732-16d3ee7afc01</id>
+            <parentID>2bcaae4e-7e79-4860-8f55-bfce3e4d380a</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>dd036429-6227-48b6-8373-7bd7deab5cb1</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>e0dbe68e-dc42-46af-9726-3c92c4c2b7ef</id>
+                        <expressionID>8e3e63ef-c29a-4c07-98f2-d2b847d7712e</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>bb0f0aab-fe49-47af-a154-acce61106180</id>
+                        <expressionID>bf99663a-919d-4b82-9443-68b3f9dc2604</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>dd036429-6227-48b6-8373-7bd7deab5cb1</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8e3e63ef-c29a-4c07-98f2-d2b847d7712e</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>d0dcc98d-1220-48d3-8a83-dc99d7ad7320</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d0dcc98d-1220-48d3-8a83-dc99d7ad7320</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtbEBank</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bf99663a-919d-4b82-9443-68b3f9dc2604</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>Adress</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>b0a34591-6de7-4a25-b80e-8b7a41c8eb48</id>
+            <name>MaiginReturnBill_bEBankAddress_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginReturnBillRuleSet].actions.action[MaiginReturnBill_bEBankAddress_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginReturnBillRuleSet].actions.action[MaiginReturnBill_bEBankAddress_ActionInfo].description</description>
+            <expressionID>2bcaae4e-7e79-4860-8f55-bfce3e4d380a</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>MaiginReturnBill_bEBankAddress_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginReturnBillRuleSet].rules.conditionRule[MaiginReturnBill_bEBankAddress_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginReturnBillRuleSet].rules.conditionRule[MaiginReturnBill_bEBankAddress_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="b0a34591-6de7-4a25-b80e-8b7a41c8eb48" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginReturnBillRuleSet].actions.action[MaiginReturnBill_bEBankAddress_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_Adress" />
+            <lang locale="zh_HK" value="攜帶字段屬性_Adress" />
+            <lang locale="zh_TW" value="攜帶字段屬性_Adress" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginReturnBillRuleSet].actions.action[MaiginReturnBill_bEBankAddress_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginReturnBillRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginReturnBillRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginReturnBillRuleSet].rules.conditionRule[MaiginReturnBill_bEBankAddress_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_Adress" />
+            <lang locale="zh_HK" value="攜帶字段屬性_Adress" />
+            <lang locale="zh_TW" value="攜帶字段屬性_Adress" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginReturnBillRuleSet].rules.conditionRule[MaiginReturnBill_bEBankAddress_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginReturnBillRuleSet].rules.conditionRule[MaiginReturnBill_bEBankAddress_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="bEBank" />
+            <lang locale="zh_CN" value="bEBank" />
+            <lang locale="zh_TW" value="bEBank" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basebiz.app.MaiginReturnBillRuleSet].rules.conditionRule[MaiginReturnBill_bEBankAddress_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

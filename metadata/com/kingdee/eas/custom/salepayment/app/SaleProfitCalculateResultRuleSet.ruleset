@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.salepayment.app</package>
+    <name>SaleProfitCalculateResultRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.salepayment.app.SaleProfitCalculateResultRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.salepayment.app.SaleProfitCalculateResultRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>d2d674bd-272b-4937-8a3e-f24a69560e8a</id>
+            <parentID />
+            <source>MonthEntry.month=MonthEntry.monthGrossProfit.month</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>0ed78862-c5db-4b57-aab3-c5236a68ed82</id>
+            <parentID>d2d674bd-272b-4937-8a3e-f24a69560e8a</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Integer</valueType>
+            <value />
+            <property>
+                <ownerID>7d0789b0-0b83-4d4d-99db-3ef87311b486</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7d0789b0-0b83-4d4d-99db-3ef87311b486</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtMonthEntry.getCell(rowIndex,"month")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>635a6e2a-94c8-40bf-89be-3e87f456f2c1</id>
+            <parentID>d2d674bd-272b-4937-8a3e-f24a69560e8a</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Integer</valueType>
+            <value />
+            <method>
+                <ownerID>5d4b99de-217c-4436-b149-0c348703644b</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>f40400d6-30b3-4df1-bba0-27e5e128d4c3</id>
+                        <expressionID>da07ff7e-50b8-4f25-a8c5-4a33c78b20de</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>38346ca9-38f9-4fb5-9f63-23958386ff1b</id>
+                        <expressionID>5a4bdff6-aecb-4b50-8b1a-d137a041dc28</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5d4b99de-217c-4436-b149-0c348703644b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>da07ff7e-50b8-4f25-a8c5-4a33c78b20de</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>c9ae92bf-3a7b-4de6-98ce-ac867c5d104f</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c9ae92bf-3a7b-4de6-98ce-ac867c5d104f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtMonthEntry.getCell(rowIndex,"monthGrossProfit")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5a4bdff6-aecb-4b50-8b1a-d137a041dc28</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>month</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>778973ed-ddd5-4eb2-881a-e8c7b9c95ea8</id>
+            <parentID />
+            <source>MonthEntry.grossProfit=MonthEntry.monthGrossProfit.allGrossProfit</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>a2c0de14-4824-4515-990f-1d52ad2199e4</id>
+            <parentID>778973ed-ddd5-4eb2-881a-e8c7b9c95ea8</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>60ffb580-d367-4cf5-a033-4df6994ee0f9</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>60ffb580-d367-4cf5-a033-4df6994ee0f9</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtMonthEntry.getCell(rowIndex,"grossProfit")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0bdc2766-6a7b-470c-9658-e3c8d378714a</id>
+            <parentID>778973ed-ddd5-4eb2-881a-e8c7b9c95ea8</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>dfb22b09-5f1d-41b4-8dd8-50496ddb9309</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>a8b3ef0c-4bc2-4b7c-90bb-bf186dc51179</id>
+                        <expressionID>0f627ffc-36cb-472e-8e00-2dcbedb7fab7</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>6e94986e-d205-4b3a-b725-d83085537590</id>
+                        <expressionID>de47fa29-cfea-4d76-82b0-2d79a1c15cf3</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>dfb22b09-5f1d-41b4-8dd8-50496ddb9309</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0f627ffc-36cb-472e-8e00-2dcbedb7fab7</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>dfef5d1c-ce24-4802-bfb1-e5bc96f19c3e</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>dfef5d1c-ce24-4802-bfb1-e5bc96f19c3e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtMonthEntry.getCell(rowIndex,"monthGrossProfit")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>de47fa29-cfea-4d76-82b0-2d79a1c15cf3</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>allGrossProfit</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>c4c8dfb7-4388-4dbb-abc4-ad6fc13218f6</id>
+            <name>MonthEntry_month_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salepayment.app.SaleProfitCalculateResultRuleSet].actions.action[MonthEntry_month_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salepayment.app.SaleProfitCalculateResultRuleSet].actions.action[MonthEntry_month_ActionInfo].description</description>
+            <expressionID>d2d674bd-272b-4937-8a3e-f24a69560e8a</expressionID>
+        </action>
+        <action>
+            <id>79862d27-bf9e-4fb3-9f67-eec220faec14</id>
+            <name>MonthEntry_grossProfit_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salepayment.app.SaleProfitCalculateResultRuleSet].actions.action[MonthEntry_grossProfit_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salepayment.app.SaleProfitCalculateResultRuleSet].actions.action[MonthEntry_grossProfit_ActionInfo].description</description>
+            <expressionID>778973ed-ddd5-4eb2-881a-e8c7b9c95ea8</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>MonthEntry_month_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salepayment.app.SaleProfitCalculateResultRuleSet].rules.conditionRule[MonthEntry_month_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salepayment.app.SaleProfitCalculateResultRuleSet].rules.conditionRule[MonthEntry_month_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="c4c8dfb7-4388-4dbb-abc4-ad6fc13218f6" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>MonthEntry_grossProfit_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salepayment.app.SaleProfitCalculateResultRuleSet].rules.conditionRule[MonthEntry_grossProfit_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salepayment.app.SaleProfitCalculateResultRuleSet].rules.conditionRule[MonthEntry_grossProfit_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="79862d27-bf9e-4fb3-9f67-eec220faec14" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.SaleProfitCalculateResultRuleSet].actions.action[MonthEntry_grossProfit_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_allGrossProfit" />
+            <lang locale="zh_HK" value="攜帶字段屬性_allGrossProfit" />
+            <lang locale="zh_TW" value="攜帶字段屬性_allGrossProfit" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.SaleProfitCalculateResultRuleSet].actions.action[MonthEntry_grossProfit_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.SaleProfitCalculateResultRuleSet].actions.action[MonthEntry_month_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_month" />
+            <lang locale="zh_HK" value="攜帶字段屬性_month" />
+            <lang locale="zh_TW" value="攜帶字段屬性_month" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.SaleProfitCalculateResultRuleSet].actions.action[MonthEntry_month_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.SaleProfitCalculateResultRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.SaleProfitCalculateResultRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.SaleProfitCalculateResultRuleSet].rules.conditionRule[MonthEntry_grossProfit_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_allGrossProfit" />
+            <lang locale="zh_HK" value="攜帶字段屬性_allGrossProfit" />
+            <lang locale="zh_TW" value="攜帶字段屬性_allGrossProfit" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.SaleProfitCalculateResultRuleSet].rules.conditionRule[MonthEntry_grossProfit_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.SaleProfitCalculateResultRuleSet].rules.conditionRule[MonthEntry_grossProfit_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="monthGrossProfit" />
+            <lang locale="zh_CN" value="monthGrossProfit" />
+            <lang locale="zh_TW" value="monthGrossProfit" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.SaleProfitCalculateResultRuleSet].rules.conditionRule[MonthEntry_grossProfit_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.SaleProfitCalculateResultRuleSet].rules.conditionRule[MonthEntry_month_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_month" />
+            <lang locale="zh_HK" value="攜帶字段屬性_month" />
+            <lang locale="zh_TW" value="攜帶字段屬性_month" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.SaleProfitCalculateResultRuleSet].rules.conditionRule[MonthEntry_month_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.SaleProfitCalculateResultRuleSet].rules.conditionRule[MonthEntry_month_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="monthGrossProfit" />
+            <lang locale="zh_CN" value="monthGrossProfit" />
+            <lang locale="zh_TW" value="monthGrossProfit" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.SaleProfitCalculateResultRuleSet].rules.conditionRule[MonthEntry_month_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

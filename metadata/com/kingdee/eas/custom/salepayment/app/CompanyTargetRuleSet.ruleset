@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.salepayment.app</package>
+    <name>CompanyTargetRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.salepayment.app.CompanyTargetRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.salepayment.app.CompanyTargetRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>d0cc3ff9-ac2d-4ec9-91d3-175106f24fee</id>
+            <parentID />
+            <source>AreaEntry.areaName=AreaEntry.area.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>4feec432-0cd4-45e8-afcb-1971cdd30a15</id>
+            <parentID>d0cc3ff9-ac2d-4ec9-91d3-175106f24fee</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>6d899bf4-7fde-48d5-b3d7-6f37d32266dd</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6d899bf4-7fde-48d5-b3d7-6f37d32266dd</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtAreaEntry.getCell(rowIndex,"areaName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6a300ef4-4463-4fb6-8f2e-83563e75d6bc</id>
+            <parentID>d0cc3ff9-ac2d-4ec9-91d3-175106f24fee</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>9131149b-33a6-428a-9783-c416c4403e9c</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>525b0731-70ff-48f7-aed4-6677288d3fc7</id>
+                        <expressionID>8d7ce1e9-7d33-4c2d-885e-206012ce3b73</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>358bc791-0676-47f4-91b9-5ec4c12964b1</id>
+                        <expressionID>1a447403-15e8-48de-99d4-44d6428e1ce7</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9131149b-33a6-428a-9783-c416c4403e9c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8d7ce1e9-7d33-4c2d-885e-206012ce3b73</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>462c5aa9-aa18-43a9-94ed-eab9973d8c7c</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>462c5aa9-aa18-43a9-94ed-eab9973d8c7c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtAreaEntry.getCell(rowIndex,"area")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1a447403-15e8-48de-99d4-44d6428e1ce7</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>93ef77e9-66f8-4879-bd98-e4d5002e6d99</id>
+            <parentID />
+            <source>AreaEntry.areaManager=AreaEntry.area.person.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>09e89e4b-4b16-4b4d-a443-429c948ae9bb</id>
+            <parentID>93ef77e9-66f8-4879-bd98-e4d5002e6d99</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>c9a9570d-f1b7-43f9-b99f-eeccc7556e2d</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c9a9570d-f1b7-43f9-b99f-eeccc7556e2d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtAreaEntry.getCell(rowIndex,"areaManager")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2c3e84ec-e07d-4cde-a548-ed8af12a9ddf</id>
+            <parentID>93ef77e9-66f8-4879-bd98-e4d5002e6d99</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>78d498ee-cb6f-4ac8-bd2a-ec0c63874d11</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>8057e30d-ffea-47d1-8809-b1f7565d54cc</id>
+                        <expressionID>051990a6-7df9-4e45-8af9-79007ac69761</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>4ec6dbed-e1a1-468f-87d7-30f321842ff3</id>
+                        <expressionID>1feb7cb5-a807-4406-aed1-24acd2fc99a6</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>78d498ee-cb6f-4ac8-bd2a-ec0c63874d11</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>051990a6-7df9-4e45-8af9-79007ac69761</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>fd2077a5-7e56-4c4c-913f-c5d0ec4b1c5d</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fd2077a5-7e56-4c4c-913f-c5d0ec4b1c5d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtAreaEntry.getCell(rowIndex,"area")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1feb7cb5-a807-4406-aed1-24acd2fc99a6</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>person.name</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>46be11fb-ced8-4796-b5b3-9db47b31baaf</id>
+            <name>AreaEntry_areaName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salepayment.app.CompanyTargetRuleSet].actions.action[AreaEntry_areaName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salepayment.app.CompanyTargetRuleSet].actions.action[AreaEntry_areaName_ActionInfo].description</description>
+            <expressionID>d0cc3ff9-ac2d-4ec9-91d3-175106f24fee</expressionID>
+        </action>
+        <action>
+            <id>93357979-c705-411f-9e27-99ce6a55c360</id>
+            <name>AreaEntry_areaManager_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salepayment.app.CompanyTargetRuleSet].actions.action[AreaEntry_areaManager_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salepayment.app.CompanyTargetRuleSet].actions.action[AreaEntry_areaManager_ActionInfo].description</description>
+            <expressionID>93ef77e9-66f8-4879-bd98-e4d5002e6d99</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>AreaEntry_areaName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salepayment.app.CompanyTargetRuleSet].rules.conditionRule[AreaEntry_areaName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salepayment.app.CompanyTargetRuleSet].rules.conditionRule[AreaEntry_areaName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="46be11fb-ced8-4796-b5b3-9db47b31baaf" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>AreaEntry_areaManager_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salepayment.app.CompanyTargetRuleSet].rules.conditionRule[AreaEntry_areaManager_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salepayment.app.CompanyTargetRuleSet].rules.conditionRule[AreaEntry_areaManager_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="93357979-c705-411f-9e27-99ce6a55c360" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.CompanyTargetRuleSet].actions.action[AreaEntry_areaManager_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_person" />
+            <lang locale="zh_HK" value="攜帶字段屬性_person" />
+            <lang locale="zh_TW" value="攜帶字段屬性_person" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.CompanyTargetRuleSet].actions.action[AreaEntry_areaManager_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.CompanyTargetRuleSet].actions.action[AreaEntry_areaName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.CompanyTargetRuleSet].actions.action[AreaEntry_areaName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.CompanyTargetRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.CompanyTargetRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.CompanyTargetRuleSet].rules.conditionRule[AreaEntry_areaManager_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_person" />
+            <lang locale="zh_HK" value="攜帶字段屬性_person" />
+            <lang locale="zh_TW" value="攜帶字段屬性_person" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.CompanyTargetRuleSet].rules.conditionRule[AreaEntry_areaManager_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.CompanyTargetRuleSet].rules.conditionRule[AreaEntry_areaManager_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="area" />
+            <lang locale="zh_CN" value="area" />
+            <lang locale="zh_TW" value="area" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.CompanyTargetRuleSet].rules.conditionRule[AreaEntry_areaManager_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.CompanyTargetRuleSet].rules.conditionRule[AreaEntry_areaName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.CompanyTargetRuleSet].rules.conditionRule[AreaEntry_areaName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.CompanyTargetRuleSet].rules.conditionRule[AreaEntry_areaName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="area" />
+            <lang locale="zh_CN" value="area" />
+            <lang locale="zh_TW" value="area" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.CompanyTargetRuleSet].rules.conditionRule[AreaEntry_areaName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

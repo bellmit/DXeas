@@ -1,0 +1,1301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.tocloud.app</package>
+    <name>EggInformationQuery</name>
+    <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].alias</alias>
+    <description>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].description</description>
+    <userDefined>true</userDefined>
+    <reportDataSource />
+    <bizUnitPK />
+    <connectionProvider />
+    <subObjects>
+        <subEntity>
+            <name>StockingBreedDailyEggEntry</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].subObjects.subEntity[StockingBreedDailyEggEntry].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.stocking.processbizill.app" />
+                <key name="name" value="StockingBreedDailyEggEntry" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>material</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].subObjects.subEntity[material].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.master.material.app" />
+                <key name="name" value="Material" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>house</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].subObjects.subEntity[house].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.stocking.basedata.app" />
+                <key name="name" value="FarmHouseEntry" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>unit</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].subObjects.subEntity[unit].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.assistant.app" />
+                <key name="name" value="MeasureUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>parent</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].subObjects.subEntity[parent].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.stocking.processbizill.app" />
+                <key name="name" value="StockingBreedDaily" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>company</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].subObjects.subEntity[company].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="CompanyOrgUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>stockingBatch</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].subObjects.subEntity[stockingBatch].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.stocking.basedata.app" />
+                <key name="name" value="StockingBatch" />
+            </entityRef>
+        </subEntity>
+    </subObjects>
+    <units>
+        <propertyUnit>
+            <name>43135c80-33d3-4c4e-ab56-63bc1ad26290</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.propertyUnit[43135c80-33d3-4c4e-ab56-63bc1ad26290].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>216ef6f6-0a49-40bf-812d-19937a363c4f</key>
+                    <parentUnit>
+                        <key name="name" value="43135c80-33d3-4c4e-ab56-63bc1ad26290" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="StockingBreedDailyEggEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="material" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>38e5ff76-9734-4353-8e86-577f18aec7b4</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.propertyUnit[38e5ff76-9734-4353-8e86-577f18aec7b4].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>313bef8a-35bd-4bf8-9e8f-12e0859c06a0</key>
+                    <parentUnit>
+                        <key name="name" value="38e5ff76-9734-4353-8e86-577f18aec7b4" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="material" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>35d8efac-5279-4b4c-a850-93b5946080b8</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.propertyUnit[35d8efac-5279-4b4c-a850-93b5946080b8].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>7c2e891b-3f4c-4900-98b5-6db845d7bc79</key>
+                    <parentUnit>
+                        <key name="name" value="35d8efac-5279-4b4c-a850-93b5946080b8" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="StockingBreedDailyEggEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="house" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>3476ad12-d018-482e-98d0-54fe1214fcbc</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.propertyUnit[3476ad12-d018-482e-98d0-54fe1214fcbc].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>1b3054e6-50b6-458b-9275-0c1843eb0c26</key>
+                    <parentUnit>
+                        <key name="name" value="3476ad12-d018-482e-98d0-54fe1214fcbc" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="house" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>8442161c-c603-4b29-88ff-310c8f67aa1b</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.propertyUnit[8442161c-c603-4b29-88ff-310c8f67aa1b].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>1134fdd4-6a8f-4b1f-bcae-c3ab7d1a499c</key>
+                    <parentUnit>
+                        <key name="name" value="8442161c-c603-4b29-88ff-310c8f67aa1b" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="StockingBreedDailyEggEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="unit" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>bbbc6986-73b9-4b20-897f-16ef2af44558</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.propertyUnit[bbbc6986-73b9-4b20-897f-16ef2af44558].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>544cb62d-b4c7-477c-b2c8-e011cb0c51aa</key>
+                    <parentUnit>
+                        <key name="name" value="bbbc6986-73b9-4b20-897f-16ef2af44558" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="unit" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>5b968c61-6100-458b-8d05-516801842783</key>
+                    <parentUnit>
+                        <key name="name" value="id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="StockingBreedDailyEggEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>companyName</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[companyName].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>2ee422ff-9339-468a-976e-c9d4e1fb6484</key>
+                    <parentUnit>
+                        <key name="name" value="companyName" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="company" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bizdate</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[bizdate].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>7f01cd55-7d6a-4673-8f91-691042b2d846</key>
+                    <parentUnit>
+                        <key name="name" value="bizdate" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bizDate" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>houseName</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[houseName].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>ffe8378b-b1ce-445d-9f8b-7fc9ade57ff5</key>
+                    <parentUnit>
+                        <key name="name" value="houseName" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="house" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>allEggQtyhjh</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[allEggQtyhjh].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>4b7afb13-7a40-47e4-89cd-bffc4642af64</key>
+                    <parentUnit>
+                        <key name="name" value="allEggQtyhjh" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="StockingBreedDailyEggEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="allQty" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>runQtyhjh</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[runQtyhjh].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>11ad4143-3487-44ce-8da2-89c1fb12826a</key>
+                    <parentUnit>
+                        <key name="name" value="runQtyhjh" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="StockingBreedDailyEggEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="runQty" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>qcEggQtyhjh</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[qcEggQtyhjh].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>bf8c4948-024e-41df-a042-71084b85929f</key>
+                    <parentUnit>
+                        <key name="name" value="qcEggQtyhjh" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="StockingBreedDailyEggEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="qcEggQty" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>cc15406a-a9ca-4b61-921e-13eab581b244</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.propertyUnit[cc15406a-a9ca-4b61-921e-13eab581b244].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>423d6f54-79ab-4a05-b122-e6ad1fb06f4f</key>
+                    <parentUnit>
+                        <key name="name" value="cc15406a-a9ca-4b61-921e-13eab581b244" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="StockingBreedDailyEggEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="parent" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>2758f557-73f2-4f7d-ba71-c30c16359af8</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.propertyUnit[2758f557-73f2-4f7d-ba71-c30c16359af8].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>2283ba9b-168a-4794-8021-83e85b3c7d58</key>
+                    <parentUnit>
+                        <key name="name" value="2758f557-73f2-4f7d-ba71-c30c16359af8" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>0f148b7a-3ca0-468b-8120-3ce7f4a9a764</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.propertyUnit[0f148b7a-3ca0-468b-8120-3ce7f4a9a764].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>a6041731-6555-4279-939f-95e162993939</key>
+                    <parentUnit>
+                        <key name="name" value="0f148b7a-3ca0-468b-8120-3ce7f4a9a764" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="company" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>be1fcd69-1b14-43de-b29d-b65d811ccca9</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.propertyUnit[be1fcd69-1b14-43de-b29d-b65d811ccca9].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>4eb531ae-f305-4058-af08-250f5be5f3b9</key>
+                    <parentUnit>
+                        <key name="name" value="be1fcd69-1b14-43de-b29d-b65d811ccca9" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="company" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>billNum</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[billNum].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>6e51222a-a0ef-4a91-a2e8-34c653e52695</key>
+                    <parentUnit>
+                        <key name="name" value="billNum" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>stockingid</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[stockingid].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>e86e7913-cf93-493d-8cfc-5205160e64de</key>
+                    <parentUnit>
+                        <key name="name" value="stockingid" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>companyid</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[companyid].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>ae873fd0-6665-4add-9945-963757d086a2</key>
+                    <parentUnit>
+                        <key name="name" value="companyid" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="company" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bateStatus</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[bateStatus].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0abc5368-751a-4758-b616-4d577fe2db08</key>
+                    <parentUnit>
+                        <key name="name" value="bateStatus" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="baseStatus" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>6c0a2bd0-410e-4513-95b0-733e62ad9a4f</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.propertyUnit[6c0a2bd0-410e-4513-95b0-733e62ad9a4f].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>530e7325-123a-409f-b3b5-d1827b2ab70c</key>
+                    <parentUnit>
+                        <key name="name" value="6c0a2bd0-410e-4513-95b0-733e62ad9a4f" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="stockingBatch" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>0a50fc76-5dca-445e-b092-4695588f8488</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.propertyUnit[0a50fc76-5dca-445e-b092-4695588f8488].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>3e94b707-be2c-4562-819f-774e81af794b</key>
+                    <parentUnit>
+                        <key name="name" value="0a50fc76-5dca-445e-b092-4695588f8488" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="stockingBatch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>batch</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[batch].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>6f7c524d-aabd-4db1-bee9-36bc11a8ec7e</key>
+                    <parentUnit>
+                        <key name="name" value="batch" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="stockingBatch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>batchid</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[batchid].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>1bd77aaf-d108-46b1-943e-cb4d53d46d98</key>
+                    <parentUnit>
+                        <key name="name" value="batchid" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="stockingBatch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </queryField>
+    </units>
+    <defaultFilter>
+        <name>defaultFilter</name>
+        <formulaString />
+        <query>
+            <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+            <key name="name" value="EggInformationQuery" />
+        </query>
+    </defaultFilter>
+    <queryPK>
+        <name>QueryPK</name>
+        <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].queryPK[QueryPK].alias</alias>
+        <description>joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].queryPK[QueryPK].description</description>
+        <keyProperties>
+            <queryField>
+                <key name="name" value="id" />
+            </queryField>
+        </keyProperties>
+    </queryPK>
+    <isDistinct>false</isDistinct>
+    <joins>
+        <join>
+            <name>ff6d7ac9-2121-4b89-a1a7-5600d1957488</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="StockingBreedDailyEggEntry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="material" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>fda2ee55-7b53-43bc-85d2-275f74874195</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="43135c80-33d3-4c4e-ab56-63bc1ad26290" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="38e5ff76-9734-4353-8e86-577f18aec7b4" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="ff6d7ac9-2121-4b89-a1a7-5600d1957488" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </join>
+        <join>
+            <name>56ee1d18-53d3-49f7-98b5-16b8622fe55c</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="StockingBreedDailyEggEntry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="house" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>d0e9c365-1e23-4c40-88f0-0e21535d01ed</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="35d8efac-5279-4b4c-a850-93b5946080b8" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="3476ad12-d018-482e-98d0-54fe1214fcbc" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="56ee1d18-53d3-49f7-98b5-16b8622fe55c" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </join>
+        <join>
+            <name>e8e835fc-7a87-4120-a50d-1427be0e93e3</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="StockingBreedDailyEggEntry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="unit" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>d2788506-2ea6-4362-b028-45d2f922f8e0</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="8442161c-c603-4b29-88ff-310c8f67aa1b" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="bbbc6986-73b9-4b20-897f-16ef2af44558" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="e8e835fc-7a87-4120-a50d-1427be0e93e3" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </join>
+        <join>
+            <name>150f04d7-bb3e-460a-8390-ad0d76949f9d</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="StockingBreedDailyEggEntry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="parent" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>a4a1c27b-2e04-46a0-ae93-65bd35f04b65</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="cc15406a-a9ca-4b61-921e-13eab581b244" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="2758f557-73f2-4f7d-ba71-c30c16359af8" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="150f04d7-bb3e-460a-8390-ad0d76949f9d" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </join>
+        <join>
+            <name>ff463695-a837-46a6-8465-42eab34185dd</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="parent" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="company" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>84130ee6-e309-4e3d-a841-bd71b3bebd87</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="0f148b7a-3ca0-468b-8120-3ce7f4a9a764" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="be1fcd69-1b14-43de-b29d-b65d811ccca9" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="ff463695-a837-46a6-8465-42eab34185dd" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </join>
+        <join>
+            <name>9d32abb8-f212-4244-8399-0ef4cd3d7817</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="parent" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="stockingBatch" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>89a3a76a-5bdb-48c5-9822-5585b56508ef</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="6c0a2bd0-410e-4513-95b0-733e62ad9a4f" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="0a50fc76-5dca-445e-b092-4695588f8488" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="9d32abb8-f212-4244-8399-0ef4cd3d7817" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="EggInformationQuery" />
+            </query>
+        </join>
+    </joins>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="产蛋信息分录合格蛋类型" />
+            <lang locale="zh_HK" value="產蛋信息分錄合格蛋類型" />
+            <lang locale="zh_TW" value="產蛋信息分錄合格蛋類型" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].queryPK[QueryPK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].queryPK[QueryPK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].subObjects.subEntity[StockingBreedDailyEggEntry].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].subObjects.subEntity[company].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].subObjects.subEntity[house].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].subObjects.subEntity[material].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].subObjects.subEntity[parent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].subObjects.subEntity[stockingBatch].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].subObjects.subEntity[unit].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.propertyUnit[0a50fc76-5dca-445e-b092-4695588f8488].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.propertyUnit[0f148b7a-3ca0-468b-8120-3ce7f4a9a764].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.propertyUnit[2758f557-73f2-4f7d-ba71-c30c16359af8].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.propertyUnit[3476ad12-d018-482e-98d0-54fe1214fcbc].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.propertyUnit[35d8efac-5279-4b4c-a850-93b5946080b8].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.propertyUnit[38e5ff76-9734-4353-8e86-577f18aec7b4].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.propertyUnit[43135c80-33d3-4c4e-ab56-63bc1ad26290].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.propertyUnit[6c0a2bd0-410e-4513-95b0-733e62ad9a4f].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.propertyUnit[8442161c-c603-4b29-88ff-310c8f67aa1b].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.propertyUnit[bbbc6986-73b9-4b20-897f-16ef2af44558].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.propertyUnit[be1fcd69-1b14-43de-b29d-b65d811ccca9].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.propertyUnit[cc15406a-a9ca-4b61-921e-13eab581b244].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[allEggQtyhjh].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="总蛋数" />
+            <lang locale="zh_HK" value="總蛋數" />
+            <lang locale="zh_TW" value="總蛋數" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[batch].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="批次" />
+            <lang locale="zh_HK" value="批次" />
+            <lang locale="zh_TW" value="批次" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[batchid].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="批次id" />
+            <lang locale="zh_HK" value="批次id" />
+            <lang locale="zh_TW" value="批次id" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[bateStatus].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据状态" />
+            <lang locale="zh_HK" value="單據狀態" />
+            <lang locale="zh_TW" value="單據狀態" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[billNum].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="养殖日报编号" />
+            <lang locale="zh_HK" value="養殖日報編號" />
+            <lang locale="zh_TW" value="養殖日報編號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[bizdate].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务日期" />
+            <lang locale="zh_HK" value="業務日期" />
+            <lang locale="zh_TW" value="業務日期" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[companyName].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司名称" />
+            <lang locale="zh_HK" value="公司名稱" />
+            <lang locale="zh_TW" value="公司名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[companyid].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司ID" />
+            <lang locale="zh_HK" value="公司ID" />
+            <lang locale="zh_TW" value="公司ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[houseName].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="棚舍" />
+            <lang locale="zh_HK" value="棚舍" />
+            <lang locale="zh_TW" value="棚舍" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="产蛋信息id" />
+            <lang locale="zh_HK" value="產蛋信息id" />
+            <lang locale="zh_TW" value="產蛋信息id" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[qcEggQtyhjh].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="合格蛋数" />
+            <lang locale="zh_HK" value="合格蛋數" />
+            <lang locale="zh_TW" value="合格蛋數" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[runQtyhjh].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="蛋重" />
+            <lang locale="zh_HK" value="蛋重" />
+            <lang locale="zh_TW" value="蛋重" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.EggInformationQuery].units.queryField[stockingid].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="养殖日报id" />
+            <lang locale="zh_HK" value="養殖日報id" />
+            <lang locale="zh_TW" value="養殖日報id" />
+        </rs>
+    </resource>
+</joinQuery>
+

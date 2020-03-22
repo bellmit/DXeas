@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.salaryvoucher.app</package>
+    <name>OrganizationRelationRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.OrganizationRelationRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.OrganizationRelationRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>f654aec1-a28d-4c8f-afdf-7c86450a9545</id>
+            <parentID />
+            <source>adminOrgName=adminOrg.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>d50c7281-002c-4c9c-a17d-3511edab73ac</id>
+            <parentID>f654aec1-a28d-4c8f-afdf-7c86450a9545</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>15be3b6f-3c0f-4479-8a11-c13492831944</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>15be3b6f-3c0f-4479-8a11-c13492831944</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtadminOrgName</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c7d7833e-3be4-407b-880d-e1c3ea8a6d7c</id>
+            <parentID>f654aec1-a28d-4c8f-afdf-7c86450a9545</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>ccea2170-c656-4652-8bf9-469bfc5acd1f</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>ef46e716-8884-49f0-b1ba-8d95e5ba3226</id>
+                        <expressionID>d6066d66-bcd5-4ecc-aa2c-b212fae72377</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>41e08321-c726-4669-9953-d0f1046e4a2a</id>
+                        <expressionID>62bb8ce8-42f9-407e-8df9-06856ebbb9f5</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ccea2170-c656-4652-8bf9-469bfc5acd1f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d6066d66-bcd5-4ecc-aa2c-b212fae72377</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>cec0271b-655d-4329-ab0e-8fa27b5e48f1</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cec0271b-655d-4329-ab0e-8fa27b5e48f1</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtadminOrg</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>62bb8ce8-42f9-407e-8df9-06856ebbb9f5</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>f4591208-963b-4f88-927e-83743f3d75fa</id>
+            <name>OrganizationRelation_adminOrgName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.OrganizationRelationRuleSet].actions.action[OrganizationRelation_adminOrgName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.OrganizationRelationRuleSet].actions.action[OrganizationRelation_adminOrgName_ActionInfo].description</description>
+            <expressionID>f654aec1-a28d-4c8f-afdf-7c86450a9545</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>OrganizationRelation_adminOrgName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.OrganizationRelationRuleSet].rules.conditionRule[OrganizationRelation_adminOrgName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salaryvoucher.app.OrganizationRelationRuleSet].rules.conditionRule[OrganizationRelation_adminOrgName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="f4591208-963b-4f88-927e-83743f3d75fa" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.OrganizationRelationRuleSet].actions.action[OrganizationRelation_adminOrgName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.OrganizationRelationRuleSet].actions.action[OrganizationRelation_adminOrgName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.OrganizationRelationRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.OrganizationRelationRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.OrganizationRelationRuleSet].rules.conditionRule[OrganizationRelation_adminOrgName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.OrganizationRelationRuleSet].rules.conditionRule[OrganizationRelation_adminOrgName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.OrganizationRelationRuleSet].rules.conditionRule[OrganizationRelation_adminOrgName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="adminOrg" />
+            <lang locale="zh_CN" value="adminOrg" />
+            <lang locale="zh_TW" value="adminOrg" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salaryvoucher.app.OrganizationRelationRuleSet].rules.conditionRule[OrganizationRelation_adminOrgName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

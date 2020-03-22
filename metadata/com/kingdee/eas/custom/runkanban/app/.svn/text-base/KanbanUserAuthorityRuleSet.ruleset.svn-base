@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.runkanban.app</package>
+    <name>KanbanUserAuthorityRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.runkanban.app.KanbanUserAuthorityRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.runkanban.app.KanbanUserAuthorityRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>e4109f62-342d-4ceb-b3db-057b1888dc87</id>
+            <parentID />
+            <source>entrys.AuthorityDesc=entrys.AuthorityName.description</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>5cbf7223-00bf-42fa-bdff-c4d8940e791e</id>
+            <parentID>e4109f62-342d-4ceb-b3db-057b1888dc87</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>b6a0a9d5-0756-435f-893a-6ff63d093619</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b6a0a9d5-0756-435f-893a-6ff63d093619</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"AuthorityDesc")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f3c5ba97-f8db-4182-9d15-3eab1619a060</id>
+            <parentID>e4109f62-342d-4ceb-b3db-057b1888dc87</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>9a6b698c-a3a5-4065-a3ff-5131a0aa9636</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>0c192991-1cfa-4398-9eec-fba15af8f1b5</id>
+                        <expressionID>96129d50-11f4-4afc-bc65-ab651b76777b</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>51146e65-969f-4634-abd7-95304b8969b5</id>
+                        <expressionID>fcd7585a-508d-4838-9896-d54048d2c400</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9a6b698c-a3a5-4065-a3ff-5131a0aa9636</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>96129d50-11f4-4afc-bc65-ab651b76777b</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>64b6515a-c9be-47a8-8bc0-a403f1c2c61e</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>64b6515a-c9be-47a8-8bc0-a403f1c2c61e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"AuthorityName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fcd7585a-508d-4838-9896-d54048d2c400</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>description</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>621b68c7-a70f-474d-bc9f-c830b3e8419e</id>
+            <parentID />
+            <source>entrys.authoritynumber=entrys.AuthorityName.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>3ad40bcb-fcee-40de-96f4-0d2cacfcab86</id>
+            <parentID>621b68c7-a70f-474d-bc9f-c830b3e8419e</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>2a032f6a-d779-401f-bdcd-faa96edeb56d</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2a032f6a-d779-401f-bdcd-faa96edeb56d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"authoritynumber")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>066bb39a-ef78-44e7-9913-6b225908da6a</id>
+            <parentID>621b68c7-a70f-474d-bc9f-c830b3e8419e</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>6a0daafe-d804-43b9-a7c7-e80e2b40c5eb</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>b89ecaab-79e1-4572-8152-1c1ebbf65033</id>
+                        <expressionID>3f6a47e9-99a1-44af-8a8a-752f86ea9151</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>80f83894-656c-4064-85db-54886a1eee82</id>
+                        <expressionID>d80020cd-1205-4c8d-ac08-8b9314696a65</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6a0daafe-d804-43b9-a7c7-e80e2b40c5eb</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3f6a47e9-99a1-44af-8a8a-752f86ea9151</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>04cd1370-ad28-4e58-bbe1-68c367874e5f</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>04cd1370-ad28-4e58-bbe1-68c367874e5f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"AuthorityName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d80020cd-1205-4c8d-ac08-8b9314696a65</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>c88e84cd-fc39-44a4-8076-d6dc9f67f3a1</id>
+            <name>entrys_AuthorityDesc_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.runkanban.app.KanbanUserAuthorityRuleSet].actions.action[entrys_AuthorityDesc_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.runkanban.app.KanbanUserAuthorityRuleSet].actions.action[entrys_AuthorityDesc_ActionInfo].description</description>
+            <expressionID>e4109f62-342d-4ceb-b3db-057b1888dc87</expressionID>
+        </action>
+        <action>
+            <id>f1c764c8-be24-46f4-91fb-3d47a46a031c</id>
+            <name>entrys_authoritynumber_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.runkanban.app.KanbanUserAuthorityRuleSet].actions.action[entrys_authoritynumber_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.runkanban.app.KanbanUserAuthorityRuleSet].actions.action[entrys_authoritynumber_ActionInfo].description</description>
+            <expressionID>621b68c7-a70f-474d-bc9f-c830b3e8419e</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>entrys_AuthorityDesc_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.runkanban.app.KanbanUserAuthorityRuleSet].rules.conditionRule[entrys_AuthorityDesc_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.runkanban.app.KanbanUserAuthorityRuleSet].rules.conditionRule[entrys_AuthorityDesc_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="c88e84cd-fc39-44a4-8076-d6dc9f67f3a1" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>entrys_authoritynumber_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.runkanban.app.KanbanUserAuthorityRuleSet].rules.conditionRule[entrys_authoritynumber_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.runkanban.app.KanbanUserAuthorityRuleSet].rules.conditionRule[entrys_authoritynumber_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="f1c764c8-be24-46f4-91fb-3d47a46a031c" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.runkanban.app.KanbanUserAuthorityRuleSet].actions.action[entrys_AuthorityDesc_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_description" />
+            <lang locale="zh_HK" value="攜帶字段屬性_description" />
+            <lang locale="zh_TW" value="攜帶字段屬性_description" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.runkanban.app.KanbanUserAuthorityRuleSet].actions.action[entrys_AuthorityDesc_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.runkanban.app.KanbanUserAuthorityRuleSet].actions.action[entrys_authoritynumber_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.runkanban.app.KanbanUserAuthorityRuleSet].actions.action[entrys_authoritynumber_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.runkanban.app.KanbanUserAuthorityRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.runkanban.app.KanbanUserAuthorityRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.runkanban.app.KanbanUserAuthorityRuleSet].rules.conditionRule[entrys_AuthorityDesc_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_description" />
+            <lang locale="zh_HK" value="攜帶字段屬性_description" />
+            <lang locale="zh_TW" value="攜帶字段屬性_description" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.runkanban.app.KanbanUserAuthorityRuleSet].rules.conditionRule[entrys_AuthorityDesc_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.runkanban.app.KanbanUserAuthorityRuleSet].rules.conditionRule[entrys_AuthorityDesc_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="AuthorityName" />
+            <lang locale="zh_CN" value="AuthorityName" />
+            <lang locale="zh_TW" value="AuthorityName" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.runkanban.app.KanbanUserAuthorityRuleSet].rules.conditionRule[entrys_AuthorityDesc_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.runkanban.app.KanbanUserAuthorityRuleSet].rules.conditionRule[entrys_authoritynumber_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.runkanban.app.KanbanUserAuthorityRuleSet].rules.conditionRule[entrys_authoritynumber_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.runkanban.app.KanbanUserAuthorityRuleSet].rules.conditionRule[entrys_authoritynumber_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="AuthorityName" />
+            <lang locale="zh_CN" value="AuthorityName" />
+            <lang locale="zh_TW" value="AuthorityName" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.runkanban.app.KanbanUserAuthorityRuleSet].rules.conditionRule[entrys_authoritynumber_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

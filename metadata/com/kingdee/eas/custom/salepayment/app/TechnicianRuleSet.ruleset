@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.salepayment.app</package>
+    <name>TechnicianRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.salepayment.app.TechnicianRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.salepayment.app.TechnicianRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>405a0a0f-cd72-4ef6-bf54-bd119f6cc173</id>
+            <parentID />
+            <source>CustomerEntry.customerName=CustomerEntry.customer.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>1372164b-a69e-4083-b829-e5f29b64ae83</id>
+            <parentID>405a0a0f-cd72-4ef6-bf54-bd119f6cc173</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>f814f2ed-aa06-4459-b614-e5063e47c6e9</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f814f2ed-aa06-4459-b614-e5063e47c6e9</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtCustomerEntry.getCell(rowIndex,"customerName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3714be80-15ac-4100-b254-5bcfd6f4835a</id>
+            <parentID>405a0a0f-cd72-4ef6-bf54-bd119f6cc173</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>57999f74-76b9-4142-90cf-ce4b0b9b7fd7</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>44fec9f7-590c-4119-9154-27ccb20dff6a</id>
+                        <expressionID>34f0fb1d-d3e8-48f0-b571-7483c8e7f6f7</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>9ab7d4c3-7242-40c2-96cf-488aba95728f</id>
+                        <expressionID>ebe829de-340d-495b-93f8-6e7c75dae98b</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>57999f74-76b9-4142-90cf-ce4b0b9b7fd7</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>34f0fb1d-d3e8-48f0-b571-7483c8e7f6f7</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>be7a1f33-0902-4cb6-87d7-da788125891e</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>be7a1f33-0902-4cb6-87d7-da788125891e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtCustomerEntry.getCell(rowIndex,"customer")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ebe829de-340d-495b-93f8-6e7c75dae98b</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>714f29e5-902d-4064-8e6f-a48af6966416</id>
+            <parentID />
+            <source>CustomerEntry.customerName=CustomerEntry.customer.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>7e56a574-3b8b-4d74-9e72-73c006b74d52</id>
+            <parentID>714f29e5-902d-4064-8e6f-a48af6966416</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>3697f066-634c-41cf-917d-19dc742c6910</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3697f066-634c-41cf-917d-19dc742c6910</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtCustomerEntry.getCell(rowIndex,"customerName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>91cc6f9a-6acf-46ae-a22d-58267c7507c4</id>
+            <parentID>714f29e5-902d-4064-8e6f-a48af6966416</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>93ef4b2e-ebab-4e10-8cd4-36f0da728f36</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>27e29041-d23c-4358-b6de-69c7676baac5</id>
+                        <expressionID>06743358-74c9-44de-8b2e-4e37e0324b13</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>52e61b15-ccd4-4cc1-9bae-18a59a5283ce</id>
+                        <expressionID>d4dda8f7-4899-49f0-95a1-5f9255b35f43</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>93ef4b2e-ebab-4e10-8cd4-36f0da728f36</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>06743358-74c9-44de-8b2e-4e37e0324b13</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>d74f7a8f-a98e-4aba-9637-c0e1c480d149</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d74f7a8f-a98e-4aba-9637-c0e1c480d149</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtCustomerEntry.getCell(rowIndex,"customer")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d4dda8f7-4899-49f0-95a1-5f9255b35f43</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>99ae5923-636e-4263-a444-6bfa8fb4d6a9</id>
+            <name>CustomerEntry_customerName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salepayment.app.TechnicianRuleSet].actions.action[CustomerEntry_customerName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salepayment.app.TechnicianRuleSet].actions.action[CustomerEntry_customerName_ActionInfo].description</description>
+            <expressionID>405a0a0f-cd72-4ef6-bf54-bd119f6cc173</expressionID>
+        </action>
+        <action>
+            <id>8977b14d-6495-4c19-89f0-ac27d7c88d59</id>
+            <name>CustomerEntry_customerName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salepayment.app.TechnicianRuleSet].actions.action[CustomerEntry_customerName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salepayment.app.TechnicianRuleSet].actions.action[CustomerEntry_customerName_ActionInfo].description</description>
+            <expressionID>714f29e5-902d-4064-8e6f-a48af6966416</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>CustomerEntry_customerName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.salepayment.app.TechnicianRuleSet].rules.conditionRule[CustomerEntry_customerName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.salepayment.app.TechnicianRuleSet].rules.conditionRule[CustomerEntry_customerName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="8977b14d-6495-4c19-89f0-ac27d7c88d59" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.TechnicianRuleSet].actions.action[CustomerEntry_customerName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.TechnicianRuleSet].actions.action[CustomerEntry_customerName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.TechnicianRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.TechnicianRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.TechnicianRuleSet].rules.conditionRule[CustomerEntry_customerName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.TechnicianRuleSet].rules.conditionRule[CustomerEntry_customerName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.TechnicianRuleSet].rules.conditionRule[CustomerEntry_customerName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="customer" />
+            <lang locale="zh_CN" value="customer" />
+            <lang locale="zh_TW" value="customer" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.salepayment.app.TechnicianRuleSet].rules.conditionRule[CustomerEntry_customerName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

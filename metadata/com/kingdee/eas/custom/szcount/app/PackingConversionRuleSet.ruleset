@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.szcount.app</package>
+    <name>PackingConversionRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>653797aa-c265-4772-ab1d-67b74f569c5b</id>
+            <parentID />
+            <source>productNumber=materialProduct.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>de115836-4fe3-4e8f-a2d2-2be7a323b795</id>
+            <parentID>653797aa-c265-4772-ab1d-67b74f569c5b</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>c2fa0d46-2880-488d-85a9-476a7b6c72c5</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c2fa0d46-2880-488d-85a9-476a7b6c72c5</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtproductNumber</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7e542835-f837-44a7-918b-aae0ac18adad</id>
+            <parentID>653797aa-c265-4772-ab1d-67b74f569c5b</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>a72b6ceb-45f9-4fbe-919c-bac2334ff865</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>56001508-1fed-4894-91c5-916b2066b726</id>
+                        <expressionID>357ec3af-8535-40bb-b812-0b7e9f620920</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>12c81e78-aa64-402f-b8e5-281b1cf52635</id>
+                        <expressionID>b8d0cb64-b72e-419d-aad6-0846a2e0876a</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a72b6ceb-45f9-4fbe-919c-bac2334ff865</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>357ec3af-8535-40bb-b812-0b7e9f620920</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>f33f5b69-9881-4d10-b838-f603796f57c7</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f33f5b69-9881-4d10-b838-f603796f57c7</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtmaterialProduct</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b8d0cb64-b72e-419d-aad6-0846a2e0876a</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>959e9cb3-1701-475b-9b72-b75577b62ed4</id>
+            <parentID />
+            <source>productModel=materialProduct.model</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>2fb705dc-1ecc-4c24-a787-0829d849bde6</id>
+            <parentID>959e9cb3-1701-475b-9b72-b75577b62ed4</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>d0cc86d0-db3a-4120-ada9-0c498e173424</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d0cc86d0-db3a-4120-ada9-0c498e173424</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtproductModel</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f80b4bc1-9cf7-4da7-87fc-f09e6177eb46</id>
+            <parentID>959e9cb3-1701-475b-9b72-b75577b62ed4</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>0a96f28c-3e41-43ac-b83e-87af16199a37</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>ae1d7bd6-1309-46c6-823c-1b51e9c59399</id>
+                        <expressionID>440a0d53-9493-41bf-b209-3e696f770ad6</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>68fadbb3-1357-478a-ae60-a313dd7acad2</id>
+                        <expressionID>2938642d-f27f-468a-897f-da4bd45b2d3f</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0a96f28c-3e41-43ac-b83e-87af16199a37</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>440a0d53-9493-41bf-b209-3e696f770ad6</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>13feae40-fb9f-45ac-acec-d8f8d4003859</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>13feae40-fb9f-45ac-acec-d8f8d4003859</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtmaterialProduct</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2938642d-f27f-468a-897f-da4bd45b2d3f</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>model</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>cbd8d1f5-b36a-41aa-b4b7-5307de4c4f08</id>
+            <parentID />
+            <source>packingNumber=materialPacking.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>bffb9a41-59e2-4c39-8b5a-eb97209f4006</id>
+            <parentID>cbd8d1f5-b36a-41aa-b4b7-5307de4c4f08</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>8bf14034-4e73-4325-a9a1-edb1edce9f04</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8bf14034-4e73-4325-a9a1-edb1edce9f04</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtpackingNumber</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e604eb8c-fd8c-4d1e-90b5-5c4d14f37097</id>
+            <parentID>cbd8d1f5-b36a-41aa-b4b7-5307de4c4f08</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>b32e3288-38b1-4d4f-b105-d929a4437890</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>214d9fe6-f5d7-4417-97f2-f135be5e34ec</id>
+                        <expressionID>70bb2fd7-99ae-4c97-9280-e3b92cb09179</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>4e26b529-5006-457b-8b76-e796c7619578</id>
+                        <expressionID>d5044e99-bbcc-4c93-a3cc-58eed8204ab0</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b32e3288-38b1-4d4f-b105-d929a4437890</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>70bb2fd7-99ae-4c97-9280-e3b92cb09179</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>b5c16066-e880-4868-83b0-8c7175c21ff3</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b5c16066-e880-4868-83b0-8c7175c21ff3</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtmaterialPacking</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d5044e99-bbcc-4c93-a3cc-58eed8204ab0</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>a1daeb2b-a95a-4a23-987c-0ccf8be35c67</id>
+            <parentID />
+            <source>packingModel=materialPacking.model</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>dfab39f5-b19e-4a5b-a312-1c34b8a714a3</id>
+            <parentID>a1daeb2b-a95a-4a23-987c-0ccf8be35c67</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>c3182527-024a-4423-9300-05f764dab616</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c3182527-024a-4423-9300-05f764dab616</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtpackingModel</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0e44304a-81e9-4df9-aed4-10aef3f21c93</id>
+            <parentID>a1daeb2b-a95a-4a23-987c-0ccf8be35c67</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>ea9f3769-02ed-4d9b-9c11-2e5efc2408bc</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>a062a60b-2980-46e0-a065-f389c12754b9</id>
+                        <expressionID>a6824a52-83f9-4e43-bcf6-416279763c53</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>93ca8a93-806c-4edb-9c66-aeb1cae0081b</id>
+                        <expressionID>9ad31ee5-cea4-4f8d-8a33-74e44b9879c8</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ea9f3769-02ed-4d9b-9c11-2e5efc2408bc</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a6824a52-83f9-4e43-bcf6-416279763c53</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>c341bc03-178d-4077-a3b6-ffd37a261e96</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c341bc03-178d-4077-a3b6-ffd37a261e96</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtmaterialPacking</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9ad31ee5-cea4-4f8d-8a33-74e44b9879c8</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>model</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>5ad55327-0a36-48ce-afc1-bdaaf49ee6a4</id>
+            <parentID />
+            <source>packingNumber=materialPacking.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>bab89198-9107-4bba-8959-1685aa60ae50</id>
+            <parentID>5ad55327-0a36-48ce-afc1-bdaaf49ee6a4</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>a145038e-9183-4dee-9502-580eea552283</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a145038e-9183-4dee-9502-580eea552283</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtpackingNumber</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8e4ce709-4067-4310-9076-ddc4b99127d0</id>
+            <parentID>5ad55327-0a36-48ce-afc1-bdaaf49ee6a4</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>5de94f6b-c24f-444f-a8b3-22d69065dc4e</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>12d4078e-9fc7-467b-acf9-7a9ef6e262bd</id>
+                        <expressionID>a064be84-aa14-4433-b578-704b6a9b6a7a</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>4d60fe87-0a4a-4b8d-9821-32318ba58107</id>
+                        <expressionID>ea90dc71-1218-44e9-9bd0-e63234ad9ab2</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5de94f6b-c24f-444f-a8b3-22d69065dc4e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a064be84-aa14-4433-b578-704b6a9b6a7a</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>a1a070ad-a355-45db-991b-0a843ace41cd</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a1a070ad-a355-45db-991b-0a843ace41cd</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtmaterialPacking</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ea90dc71-1218-44e9-9bd0-e63234ad9ab2</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>dd06a183-b33c-4754-b5b8-13b095366258</id>
+            <parentID />
+            <source>materialPackingN=materialPacking2.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>32550a9c-05f4-4e2b-899f-35be8ad1ca29</id>
+            <parentID>dd06a183-b33c-4754-b5b8-13b095366258</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>9d69b61f-3018-4062-9f21-53b26162b1fc</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9d69b61f-3018-4062-9f21-53b26162b1fc</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtmaterialPackingN</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3d6a2205-34eb-4ace-b14a-50dea6b20ca3</id>
+            <parentID>dd06a183-b33c-4754-b5b8-13b095366258</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>c3a8ed9a-b8b6-461e-9a05-0bec4768bb31</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>5db05911-0543-4efa-93a0-1192822bef86</id>
+                        <expressionID>9a8b7e66-0dda-4847-b4be-d2ac39b56319</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>2fbef335-d5db-47f1-9f23-018d0904d758</id>
+                        <expressionID>2c47e4aa-2bd7-4692-85a9-6661c693a641</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c3a8ed9a-b8b6-461e-9a05-0bec4768bb31</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9a8b7e66-0dda-4847-b4be-d2ac39b56319</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>274ee4df-5787-4ddb-bdfa-0dbe293d9938</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>274ee4df-5787-4ddb-bdfa-0dbe293d9938</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtmaterialPacking2</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2c47e4aa-2bd7-4692-85a9-6661c693a641</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>ca990252-0789-4733-a974-0bec67b4f7c1</id>
+            <name>PackingConversion_productNumber_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].actions.action[PackingConversion_productNumber_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].actions.action[PackingConversion_productNumber_ActionInfo].description</description>
+            <expressionID>653797aa-c265-4772-ab1d-67b74f569c5b</expressionID>
+        </action>
+        <action>
+            <id>3baaf123-395e-4a8e-81a1-d9ea572d6f6d</id>
+            <name>PackingConversion_productModel_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].actions.action[PackingConversion_productModel_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].actions.action[PackingConversion_productModel_ActionInfo].description</description>
+            <expressionID>959e9cb3-1701-475b-9b72-b75577b62ed4</expressionID>
+        </action>
+        <action>
+            <id>f3a77980-52b8-49f2-af47-2cc37e74d63d</id>
+            <name>PackingConversion_packingNumber_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].actions.action[PackingConversion_packingNumber_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].actions.action[PackingConversion_packingNumber_ActionInfo].description</description>
+            <expressionID>cbd8d1f5-b36a-41aa-b4b7-5307de4c4f08</expressionID>
+        </action>
+        <action>
+            <id>20389ad9-18a9-435f-9e47-770212b1acf0</id>
+            <name>PackingConversion_packingModel_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].actions.action[PackingConversion_packingModel_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].actions.action[PackingConversion_packingModel_ActionInfo].description</description>
+            <expressionID>a1daeb2b-a95a-4a23-987c-0ccf8be35c67</expressionID>
+        </action>
+        <action>
+            <id>2f87b746-c1bf-47b7-98cc-f2d2c28483e0</id>
+            <name>PackingConversion_packingNumber_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].actions.action[PackingConversion_packingNumber_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].actions.action[PackingConversion_packingNumber_ActionInfo].description</description>
+            <expressionID>5ad55327-0a36-48ce-afc1-bdaaf49ee6a4</expressionID>
+        </action>
+        <action>
+            <id>4d2a2273-fe66-4861-aa8a-c76cb9260e4c</id>
+            <name>PackingConversion_materialPackingN_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].actions.action[PackingConversion_materialPackingN_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].actions.action[PackingConversion_materialPackingN_ActionInfo].description</description>
+            <expressionID>dd06a183-b33c-4754-b5b8-13b095366258</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>PackingConversion_productNumber_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_productNumber_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_productNumber_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="ca990252-0789-4733-a974-0bec67b4f7c1" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>PackingConversion_productModel_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_productModel_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_productModel_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="3baaf123-395e-4a8e-81a1-d9ea572d6f6d" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>PackingConversion_packingModel_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_packingModel_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_packingModel_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="20389ad9-18a9-435f-9e47-770212b1acf0" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>PackingConversion_packingNumber_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_packingNumber_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_packingNumber_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="2f87b746-c1bf-47b7-98cc-f2d2c28483e0" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>PackingConversion_materialPackingN_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_materialPackingN_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_materialPackingN_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="4d2a2273-fe66-4861-aa8a-c76cb9260e4c" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].actions.action[PackingConversion_materialPackingN_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].actions.action[PackingConversion_materialPackingN_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].actions.action[PackingConversion_packingModel_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].actions.action[PackingConversion_packingModel_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].actions.action[PackingConversion_packingNumber_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].actions.action[PackingConversion_packingNumber_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].actions.action[PackingConversion_productModel_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].actions.action[PackingConversion_productModel_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].actions.action[PackingConversion_productNumber_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].actions.action[PackingConversion_productNumber_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_materialPackingN_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_materialPackingN_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_materialPackingN_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="materialPacking2" />
+            <lang locale="zh_CN" value="materialPacking2" />
+            <lang locale="zh_TW" value="materialPacking2" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_materialPackingN_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_packingModel_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_packingModel_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_packingModel_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="materialPacking" />
+            <lang locale="zh_CN" value="materialPacking" />
+            <lang locale="zh_TW" value="materialPacking" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_packingModel_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_packingNumber_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_packingNumber_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_packingNumber_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="materialPacking" />
+            <lang locale="zh_CN" value="materialPacking" />
+            <lang locale="zh_TW" value="materialPacking" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_packingNumber_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_productModel_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_productModel_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_productModel_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="materialProduct" />
+            <lang locale="zh_CN" value="materialProduct" />
+            <lang locale="zh_TW" value="materialProduct" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_productModel_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_productNumber_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_productNumber_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_productNumber_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="materialProduct" />
+            <lang locale="zh_CN" value="materialProduct" />
+            <lang locale="zh_TW" value="materialProduct" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.PackingConversionRuleSet].rules.conditionRule[PackingConversion_productNumber_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

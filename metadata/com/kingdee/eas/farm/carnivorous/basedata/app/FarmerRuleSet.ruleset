@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.carnivorous.basedata.app</package>
+    <name>FarmerRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.carnivorous.basedata.app.FarmerRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.carnivorous.basedata.app.FarmerRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>f3668f16-e18a-4ed0-9e5d-67f3d74884b9</id>
+            <parentID />
+            <source>FarmEntry.memoryCode=FarmEntry.farm.mnemonicCode</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>f3791ba1-3904-40bd-ac34-93216697cc34</id>
+            <parentID>f3668f16-e18a-4ed0-9e5d-67f3d74884b9</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>2709c900-4c4e-487f-a8d7-75f438f1a691</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2709c900-4c4e-487f-a8d7-75f438f1a691</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtFarmEntry.getCell(rowIndex,"memoryCode")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a831b043-fd0a-475e-812c-52ac8ac6d10e</id>
+            <parentID>f3668f16-e18a-4ed0-9e5d-67f3d74884b9</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>20d8a02f-3613-4db9-961f-0479ce30dedb</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>55204ba3-c0ec-43bd-84b4-d2a966e14081</id>
+                        <expressionID>ff197e87-2ff8-4aec-9fc9-ac17ffdad5b6</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>019450d3-6aa3-4916-8b5d-0e68b9613dc5</id>
+                        <expressionID>1b32525c-28b0-43d1-ad4c-320090db980e</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>20d8a02f-3613-4db9-961f-0479ce30dedb</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ff197e87-2ff8-4aec-9fc9-ac17ffdad5b6</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>87889621-6d85-4cc5-92b2-4895182f72e2</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>87889621-6d85-4cc5-92b2-4895182f72e2</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtFarmEntry.getCell(rowIndex,"farm")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1b32525c-28b0-43d1-ad4c-320090db980e</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>mnemonicCode</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>ce2d9579-96bf-48c9-a5a0-72490a66d800</id>
+            <name>FarmEntry_memoryCode_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.basedata.app.FarmerRuleSet].actions.action[FarmEntry_memoryCode_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.basedata.app.FarmerRuleSet].actions.action[FarmEntry_memoryCode_ActionInfo].description</description>
+            <expressionID>f3668f16-e18a-4ed0-9e5d-67f3d74884b9</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>FarmEntry_memoryCode_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.basedata.app.FarmerRuleSet].rules.conditionRule[FarmEntry_memoryCode_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.basedata.app.FarmerRuleSet].rules.conditionRule[FarmEntry_memoryCode_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="ce2d9579-96bf-48c9-a5a0-72490a66d800" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basedata.app.FarmerRuleSet].actions.action[FarmEntry_memoryCode_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_mnemonicCode" />
+            <lang locale="zh_HK" value="攜帶字段屬性_mnemonicCode" />
+            <lang locale="zh_TW" value="攜帶字段屬性_mnemonicCode" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basedata.app.FarmerRuleSet].actions.action[FarmEntry_memoryCode_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basedata.app.FarmerRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basedata.app.FarmerRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basedata.app.FarmerRuleSet].rules.conditionRule[FarmEntry_memoryCode_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_mnemonicCode" />
+            <lang locale="zh_HK" value="攜帶字段屬性_mnemonicCode" />
+            <lang locale="zh_TW" value="攜帶字段屬性_mnemonicCode" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basedata.app.FarmerRuleSet].rules.conditionRule[FarmEntry_memoryCode_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basedata.app.FarmerRuleSet].rules.conditionRule[FarmEntry_memoryCode_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="farm" />
+            <lang locale="zh_CN" value="farm" />
+            <lang locale="zh_TW" value="farm" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.basedata.app.FarmerRuleSet].rules.conditionRule[FarmEntry_memoryCode_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

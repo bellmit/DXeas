@@ -1,0 +1,1323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facade xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.lhsm.app</package>
+    <name>ForecastOrderFacade</name>
+    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].alias</alias>
+    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].description</description>
+    <userDefined>true</userDefined>
+    <bosType>C1925C00</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.custom.lhsm.ForecastOrderFacade</businessImplName>
+    <businessControllerName>com.kingdee.eas.custom.lhsm.app.ForecastOrderFacadeController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>getSqlData</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSqlData].alias</alias>
+            <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSqlData].description</description>
+            <innerID>128918ea-7e9b-4998-bf83-14c73a41c600</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>RowSet</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>sql</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSqlData].parameters.parameter[sql].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSqlData].parameters.parameter[sql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <exceptions>
+                <bizException>
+                    <key name="package" value="com.kingdee.eas.common" />
+                    <key name="name" value="EASBizException" />
+                </bizException>
+            </exceptions>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>transToOrder</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[transToOrder].alias</alias>
+            <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[transToOrder].description</description>
+            <innerID>7470153a-14ec-4aa9-9d83-1b3f1c65329e</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>String[]</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>forecastId</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[transToOrder].parameters.parameter[forecastId].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[transToOrder].parameters.parameter[forecastId].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>storageOrgId</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[transToOrder].parameters.parameter[storageOrgId].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[transToOrder].parameters.parameter[storageOrgId].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>currOrgUnitId</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[transToOrder].parameters.parameter[currOrgUnitId].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[transToOrder].parameters.parameter[currOrgUnitId].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <exceptions>
+                <bizException>
+                    <key name="package" value="com.kingdee.eas.common" />
+                    <key name="name" value="EASBizException" />
+                </bizException>
+            </exceptions>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>rejectForecast</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[rejectForecast].alias</alias>
+            <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[rejectForecast].description</description>
+            <innerID>5487adde-2d33-466d-8ed7-40b88e74b562</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>String[]</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>forecasId</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[rejectForecast].parameters.parameter[forecasId].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[rejectForecast].parameters.parameter[forecasId].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <exceptions>
+                <bizException>
+                    <key name="package" value="com.kingdee.eas.common" />
+                    <key name="name" value="EASBizException" />
+                </bizException>
+            </exceptions>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>execSql</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[execSql].alias</alias>
+            <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[execSql].description</description>
+            <innerID>323482f9-5c20-4971-801d-c8cbb00e8bd3</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>Boolean</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>sql</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[execSql].parameters.parameter[sql].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[execSql].parameters.parameter[sql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>saleorder</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[saleorder].alias</alias>
+            <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[saleorder].description</description>
+            <innerID>9e84b192-8e1f-4bbf-b7d5-b9962a85b6f6</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>id</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[saleorder].parameters.parameter[id].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[saleorder].parameters.parameter[id].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>companyInv</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[companyInv].alias</alias>
+            <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[companyInv].description</description>
+            <innerID>b4375a74-066e-4ed5-80dc-65f3f71fc4ec</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>cuid</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[companyInv].parameters.parameter[cuid].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[companyInv].parameters.parameter[cuid].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>materialid</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[companyInv].parameters.parameter[materialid].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[companyInv].parameters.parameter[materialid].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>addSaleForecast</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[addSaleForecast].alias</alias>
+            <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[addSaleForecast].description</description>
+            <innerID>138d1ae4-b729-48e9-a538-831e5e711d5f</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>updateSaleForecast</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[updateSaleForecast].alias</alias>
+            <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[updateSaleForecast].description</description>
+            <innerID>8ed32b71-367a-4025-974d-aacb19639c4f</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>id</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[updateSaleForecast].parameters.parameter[id].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[updateSaleForecast].parameters.parameter[id].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>exportData</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[exportData].alias</alias>
+            <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[exportData].description</description>
+            <innerID>14d5ebca-578d-43bf-9a67-38750574ca8d</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>cuid</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[exportData].parameters.parameter[cuid].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[exportData].parameters.parameter[cuid].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>type</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[exportData].parameters.parameter[type].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[exportData].parameters.parameter[type].description</description>
+                    <direction>in</direction>
+                    <dataType>Integer</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>fid</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[exportData].parameters.parameter[fid].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[exportData].parameters.parameter[fid].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>fstatus</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[exportData].parameters.parameter[fstatus].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[exportData].parameters.parameter[fstatus].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>downloadBillData</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[downloadBillData].alias</alias>
+            <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[downloadBillData].description</description>
+            <innerID>86a47c8d-a0fe-4570-b4e3-7b42ccc12f6b</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>String</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>jsonStr</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[downloadBillData].parameters.parameter[jsonStr].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[downloadBillData].parameters.parameter[jsonStr].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>uploadBillData</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[uploadBillData].alias</alias>
+            <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[uploadBillData].description</description>
+            <innerID>30d1f499-07b9-4a40-8df3-ef7f22dd8110</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>String</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>jsonStr</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[uploadBillData].parameters.parameter[jsonStr].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[uploadBillData].parameters.parameter[jsonStr].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>downloadBillList</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[downloadBillList].alias</alias>
+            <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[downloadBillList].description</description>
+            <innerID>c249041f-45af-4bc7-9e0b-82f0c64db0f2</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>String</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>jsonStr</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[downloadBillList].parameters.parameter[jsonStr].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[downloadBillList].parameters.parameter[jsonStr].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getOrgUnitRangeByUserNum</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getOrgUnitRangeByUserNum].alias</alias>
+            <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getOrgUnitRangeByUserNum].description</description>
+            <innerID>9a57b22c-9af8-4bed-8553-84ee73d7e91d</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>String</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>parma</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getOrgUnitRangeByUserNum].parameters.parameter[parma].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getOrgUnitRangeByUserNum].parameters.parameter[parma].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getMaterialByOrg</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getMaterialByOrg].alias</alias>
+            <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getMaterialByOrg].description</description>
+            <innerID>3aac8b52-facd-4f10-82d7-6beb11f32fe3</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>String</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>jsonStr</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getMaterialByOrg].parameters.parameter[jsonStr].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getMaterialByOrg].parameters.parameter[jsonStr].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>createNewForecastOrder</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[createNewForecastOrder].alias</alias>
+            <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[createNewForecastOrder].description</description>
+            <innerID>d5a7703a-3800-4a76-b380-3ea9eb270dbd</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>String</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>param</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[createNewForecastOrder].parameters.parameter[param].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[createNewForecastOrder].parameters.parameter[param].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getPaymentType</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getPaymentType].alias</alias>
+            <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getPaymentType].description</description>
+            <innerID>a4aff5f0-6b57-4235-ad5c-de1b9a48787a</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>String</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>param</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getPaymentType].parameters.parameter[param].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getPaymentType].parameters.parameter[param].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCustomerBySaleOrg</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getCustomerBySaleOrg].alias</alias>
+            <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getCustomerBySaleOrg].description</description>
+            <innerID>a329db47-4b74-4d89-bb0d-f9c233197b45</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>String</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>param</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getCustomerBySaleOrg].parameters.parameter[param].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getCustomerBySaleOrg].parameters.parameter[param].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getSaleGroupBySaleOrg</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSaleGroupBySaleOrg].alias</alias>
+            <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSaleGroupBySaleOrg].description</description>
+            <innerID>e3e5137b-c1f4-49ec-b759-a10ba1960714</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>String</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>param</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSaleGroupBySaleOrg].parameters.parameter[param].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSaleGroupBySaleOrg].parameters.parameter[param].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getSalePerson</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSalePerson].alias</alias>
+            <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSalePerson].description</description>
+            <innerID>813b3bc9-2f28-4613-9385-fee9341f87ac</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>String</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>param</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSalePerson].parameters.parameter[param].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSalePerson].parameters.parameter[param].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getForecastDetailInfo</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getForecastDetailInfo].alias</alias>
+            <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getForecastDetailInfo].description</description>
+            <innerID>204ac159-a1b3-4188-937a-016b9772023e</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>String</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>param</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getForecastDetailInfo].parameters.parameter[param].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getForecastDetailInfo].parameters.parameter[param].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getMaterialPrice</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getMaterialPrice].alias</alias>
+            <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getMaterialPrice].description</description>
+            <innerID>48a61fec-7f47-420a-a9ea-dd6f58c6cb06</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>String</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>param</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getMaterialPrice].parameters.parameter[param].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getMaterialPrice].parameters.parameter[param].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getWareHouseList</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getWareHouseList].alias</alias>
+            <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getWareHouseList].description</description>
+            <innerID>d1455e91-38b8-45ad-b3e2-bb1be224a4fd</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>String</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>param</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getWareHouseList].parameters.parameter[param].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getWareHouseList].parameters.parameter[param].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getSalePersonOrgUnitRange</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSalePersonOrgUnitRange].alias</alias>
+            <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSalePersonOrgUnitRange].description</description>
+            <innerID>c4a8b95c-fba6-498a-aa55-aa1c6f2ddd96</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>String</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>param</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSalePersonOrgUnitRange].parameters.parameter[param].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSalePersonOrgUnitRange].parameters.parameter[param].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getSaleForecastBillPro</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSaleForecastBillPro].alias</alias>
+            <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSaleForecastBillPro].description</description>
+            <innerID>af6091cd-b87a-4403-a6c9-eaff8a0b1e47</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>String</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>param</name>
+                    <alias>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSaleForecastBillPro].parameters.parameter[param].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSaleForecastBillPro].parameters.parameter[param].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <resource>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="熟食销售流程 功能接口" />
+            <lang locale="zh_HK" value="熟食銷售流程 功能介面" />
+            <lang locale="zh_TW" value="熟食銷售流程 功能介面" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].extendedProperty.genBusinessImplCode">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[addSaleForecast].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[addSaleForecast].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[companyInv].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[companyInv].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[companyInv].parameters.parameter[cuid].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="cuid" />
+            <lang locale="zh_HK" value="cuid" />
+            <lang locale="zh_TW" value="cuid" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[companyInv].parameters.parameter[cuid].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[companyInv].parameters.parameter[materialid].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="materialid" />
+            <lang locale="zh_HK" value="materialid" />
+            <lang locale="zh_TW" value="materialid" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[companyInv].parameters.parameter[materialid].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[createNewForecastOrder].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="生成销售预报单" />
+            <lang locale="zh_HK" value="生成銷售預報單" />
+            <lang locale="zh_TW" value="生成銷售預報單" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[createNewForecastOrder].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[createNewForecastOrder].parameters.parameter[param].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="参数" />
+            <lang locale="zh_HK" value="參數" />
+            <lang locale="zh_TW" value="參數" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[createNewForecastOrder].parameters.parameter[param].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[downloadBillData].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="移动端下载单据" />
+            <lang locale="zh_HK" value="移動端下載單據" />
+            <lang locale="zh_TW" value="移動端下載單據" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[downloadBillData].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[downloadBillData].parameters.parameter[jsonStr].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[downloadBillData].parameters.parameter[jsonStr].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[downloadBillList].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="移动端下载单据列表" />
+            <lang locale="zh_HK" value="移動端下載單據列表" />
+            <lang locale="zh_TW" value="移動端下載單據列表" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[downloadBillList].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[downloadBillList].parameters.parameter[jsonStr].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[downloadBillList].parameters.parameter[jsonStr].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[execSql].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="执行Update，delete语句" />
+            <lang locale="zh_HK" value="執行Update，delete語句" />
+            <lang locale="zh_TW" value="執行Update，delete語句" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[execSql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[execSql].parameters.parameter[sql].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="sql" />
+            <lang locale="zh_HK" value="sql" />
+            <lang locale="zh_TW" value="sql" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[execSql].parameters.parameter[sql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[exportData].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[exportData].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[exportData].parameters.parameter[cuid].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="cuid" />
+            <lang locale="zh_HK" value="cuid" />
+            <lang locale="zh_TW" value="cuid" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[exportData].parameters.parameter[cuid].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[exportData].parameters.parameter[fid].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="fid" />
+            <lang locale="zh_HK" value="fid" />
+            <lang locale="zh_TW" value="fid" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[exportData].parameters.parameter[fid].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[exportData].parameters.parameter[fstatus].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="fstatus" />
+            <lang locale="zh_HK" value="fstatus" />
+            <lang locale="zh_TW" value="fstatus" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[exportData].parameters.parameter[fstatus].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[exportData].parameters.parameter[type].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="type" />
+            <lang locale="zh_HK" value="type" />
+            <lang locale="zh_TW" value="type" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[exportData].parameters.parameter[type].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getCustomerBySaleOrg].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="根据销售组织获取客户" />
+            <lang locale="zh_HK" value="根據銷售組織獲取客戶" />
+            <lang locale="zh_TW" value="根據銷售組織獲取客戶" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getCustomerBySaleOrg].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getCustomerBySaleOrg].parameters.parameter[param].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="参数" />
+            <lang locale="zh_HK" value="參數" />
+            <lang locale="zh_TW" value="參數" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getCustomerBySaleOrg].parameters.parameter[param].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getForecastDetailInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="获取销售预报单详细信息" />
+            <lang locale="zh_HK" value="獲取銷售預報單詳細信息" />
+            <lang locale="zh_TW" value="獲取銷售預報單詳細信息" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getForecastDetailInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getForecastDetailInfo].parameters.parameter[param].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="参数" />
+            <lang locale="zh_HK" value="參數" />
+            <lang locale="zh_TW" value="參數" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getForecastDetailInfo].parameters.parameter[param].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getMaterialByOrg].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="根据销售组织获取物料" />
+            <lang locale="zh_HK" value="根據銷售組織獲取物料" />
+            <lang locale="zh_TW" value="根據銷售組織獲取物料" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getMaterialByOrg].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getMaterialByOrg].parameters.parameter[jsonStr].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="参数" />
+            <lang locale="zh_HK" value="參數" />
+            <lang locale="zh_TW" value="參數" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getMaterialByOrg].parameters.parameter[jsonStr].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getMaterialPrice].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getMaterialPrice].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getMaterialPrice].parameters.parameter[param].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="参数" />
+            <lang locale="zh_HK" value="參數" />
+            <lang locale="zh_TW" value="參數" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getMaterialPrice].parameters.parameter[param].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getOrgUnitRangeByUserNum].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="获取用户组织范围内的销售组织" />
+            <lang locale="zh_HK" value="獲取用戶組織範圍內的銷售組織" />
+            <lang locale="zh_TW" value="獲取用戶組織範圍內的銷售組織" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getOrgUnitRangeByUserNum].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getOrgUnitRangeByUserNum].parameters.parameter[parma].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="参数" />
+            <lang locale="zh_HK" value="參數" />
+            <lang locale="zh_TW" value="參數" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getOrgUnitRangeByUserNum].parameters.parameter[parma].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getPaymentType].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="获取付款方式" />
+            <lang locale="zh_HK" value="獲取付款方式" />
+            <lang locale="zh_TW" value="獲取付款方式" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getPaymentType].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getPaymentType].parameters.parameter[param].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="参数" />
+            <lang locale="zh_HK" value="參數" />
+            <lang locale="zh_TW" value="參數" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getPaymentType].parameters.parameter[param].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSaleForecastBillPro].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="获取销售预报单进度" />
+            <lang locale="zh_HK" value="獲取銷售預報單進度" />
+            <lang locale="zh_TW" value="獲取銷售預報單進度" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSaleForecastBillPro].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSaleForecastBillPro].parameters.parameter[param].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="参数" />
+            <lang locale="zh_HK" value="參數" />
+            <lang locale="zh_TW" value="參數" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSaleForecastBillPro].parameters.parameter[param].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSaleGroupBySaleOrg].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="根据销售组织获取销售组" />
+            <lang locale="zh_HK" value="根據銷售組織獲取銷售組" />
+            <lang locale="zh_TW" value="根據銷售組織獲取銷售組" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSaleGroupBySaleOrg].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSaleGroupBySaleOrg].parameters.parameter[param].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="参数" />
+            <lang locale="zh_HK" value="參數" />
+            <lang locale="zh_TW" value="參數" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSaleGroupBySaleOrg].parameters.parameter[param].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSalePersonOrgUnitRange].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="获取当前员工组织范围" />
+            <lang locale="zh_HK" value="獲取當前員工組織範圍" />
+            <lang locale="zh_TW" value="獲取當前員工組織範圍" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSalePersonOrgUnitRange].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSalePersonOrgUnitRange].parameters.parameter[param].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="参数" />
+            <lang locale="zh_HK" value="參數" />
+            <lang locale="zh_TW" value="參數" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSalePersonOrgUnitRange].parameters.parameter[param].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSalePerson].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="获取销售员" />
+            <lang locale="zh_HK" value="獲取銷售員" />
+            <lang locale="zh_TW" value="獲取銷售員" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSalePerson].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSalePerson].parameters.parameter[param].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="参数" />
+            <lang locale="zh_HK" value="參數" />
+            <lang locale="zh_TW" value="參數" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSalePerson].parameters.parameter[param].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSqlData].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSqlData].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSqlData].parameters.parameter[sql].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="sql" />
+            <lang locale="zh_HK" value="sql" />
+            <lang locale="zh_TW" value="sql" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getSqlData].parameters.parameter[sql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getWareHouseList].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="根据公司获取仓库" />
+            <lang locale="zh_HK" value="根據公司獲取倉庫" />
+            <lang locale="zh_TW" value="根據公司獲取倉庫" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getWareHouseList].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getWareHouseList].parameters.parameter[param].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="参数" />
+            <lang locale="zh_HK" value="參數" />
+            <lang locale="zh_TW" value="參數" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[getWareHouseList].parameters.parameter[param].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[rejectForecast].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[rejectForecast].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[rejectForecast].parameters.parameter[forecasId].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[rejectForecast].parameters.parameter[forecasId].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[saleorder].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[saleorder].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[saleorder].parameters.parameter[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="id" />
+            <lang locale="zh_HK" value="id" />
+            <lang locale="zh_TW" value="id" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[saleorder].parameters.parameter[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[transToOrder].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[transToOrder].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[transToOrder].parameters.parameter[currOrgUnitId].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="currOrgUnit" />
+            <lang locale="zh_HK" value="currOrgUnit" />
+            <lang locale="zh_TW" value="currOrgUnit" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[transToOrder].parameters.parameter[currOrgUnitId].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[transToOrder].parameters.parameter[forecastId].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[transToOrder].parameters.parameter[forecastId].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[transToOrder].parameters.parameter[storageOrgId].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[transToOrder].parameters.parameter[storageOrgId].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[updateSaleForecast].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[updateSaleForecast].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[updateSaleForecast].parameters.parameter[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="id" />
+            <lang locale="zh_HK" value="id" />
+            <lang locale="zh_TW" value="id" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[updateSaleForecast].parameters.parameter[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[uploadBillData].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="移动端上传单据" />
+            <lang locale="zh_HK" value="移動端上傳單據" />
+            <lang locale="zh_TW" value="移動端上傳單據" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[uploadBillData].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[uploadBillData].parameters.parameter[jsonStr].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.lhsm.app.ForecastOrderFacade].methods.method[uploadBillData].parameters.parameter[jsonStr].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</facade>
+

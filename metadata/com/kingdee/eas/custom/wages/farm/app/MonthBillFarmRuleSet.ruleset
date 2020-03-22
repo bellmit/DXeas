@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.wages.farm.app</package>
+    <name>MonthBillFarmRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.wages.farm.app.MonthBillFarmRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.wages.farm.app.MonthBillFarmRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>8c55b675-ac30-4cac-b0ab-c5e9a1d2c5b8</id>
+            <parentID />
+            <source>[entrys.checkworkwages] = ( [entrys.actualattenday] - [entrys.attendanceday] )*( [entrys.basicwages] + [entrys.Dailyevaluation]/30 )</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>622f8964-54fa-4af7-b74d-b168af9ee549</id>
+            <parentID>8c55b675-ac30-4cac-b0ab-c5e9a1d2c5b8</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>de3934a0-dddb-435b-a49f-d7f1310ddb8b</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>de3934a0-dddb-435b-a49f-d7f1310ddb8b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"checkworkwages")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>4059313f-dd80-4d7d-807e-bc43eed86526</id>
+            <parentID>8c55b675-ac30-4cac-b0ab-c5e9a1d2c5b8</parentID>
+            <source />
+            <operator>*</operator>
+        </groupExpression>
+        <groupExpression>
+            <id>a9b1b9cd-bb1a-429b-8bab-a5cdf48e8320</id>
+            <parentID>4059313f-dd80-4d7d-807e-bc43eed86526</parentID>
+            <source />
+            <operator>-</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>df9958d8-4360-4fc3-9d09-0aa9ffc5d6b2</id>
+            <parentID>a9b1b9cd-bb1a-429b-8bab-a5cdf48e8320</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>921c99ca-7e15-4d42-a663-9c5a68846aee</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>921c99ca-7e15-4d42-a663-9c5a68846aee</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"actualattenday")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c6a04636-f4a1-4b98-9d48-73fabb03f38d</id>
+            <parentID>a9b1b9cd-bb1a-429b-8bab-a5cdf48e8320</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>5badae70-53bc-40be-953b-a09a1d9390e6</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5badae70-53bc-40be-953b-a09a1d9390e6</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"attendanceday")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>caf008c0-1a20-404e-8f05-71db0370d166</id>
+            <parentID>4059313f-dd80-4d7d-807e-bc43eed86526</parentID>
+            <source />
+            <operator>+</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>237a54b5-2733-46fb-af83-7a646f24bcda</id>
+            <parentID>caf008c0-1a20-404e-8f05-71db0370d166</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>ca9fea81-90b0-40fe-9bc7-a0da46439341</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ca9fea81-90b0-40fe-9bc7-a0da46439341</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"basicwages")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>6c63982b-c812-42e4-858a-d29f4e4b7009</id>
+            <parentID>caf008c0-1a20-404e-8f05-71db0370d166</parentID>
+            <source />
+            <operator>/</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>610776e7-5878-4b26-b929-b166c4af8224</id>
+            <parentID>6c63982b-c812-42e4-858a-d29f4e4b7009</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>096a9683-e714-49b3-be47-ab4e86fc51be</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>096a9683-e714-49b3-be47-ab4e86fc51be</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"Dailyevaluation")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f8f405e7-718e-49ec-b030-4fe38e1f1f1c</id>
+            <parentID>6c63982b-c812-42e4-858a-d29f4e4b7009</parentID>
+            <source />
+            <type>CONST</type>
+            <valueType>Int</valueType>
+            <value>30</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4ca890d1-56ff-4f38-b629-2d4be680a4fe</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>980ff960-087f-4d65-b597-d8c21b5343ad</id>
+            <name>D9XDQQ4G</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.farm.app.MonthBillFarmRuleSet].actions.action[D9XDQQ4G].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.farm.app.MonthBillFarmRuleSet].actions.action[D9XDQQ4G].description</description>
+            <expressionID>8c55b675-ac30-4cac-b0ab-c5e9a1d2c5b8</expressionID>
+        </action>
+        <action>
+            <id>7a9ca8b3-ff0a-486a-804a-ec2d48625abc</id>
+            <name>D9XDQQ6T</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.farm.app.MonthBillFarmRuleSet].actions.action[D9XDQQ6T].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.farm.app.MonthBillFarmRuleSet].actions.action[D9XDQQ6T].description</description>
+            <expressionID>4ca890d1-56ff-4f38-b629-2d4be680a4fe</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>D9XDS0LM</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.farm.app.MonthBillFarmRuleSet].rules.conditionRule[D9XDS0LM].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.farm.app.MonthBillFarmRuleSet].rules.conditionRule[D9XDS0LM].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="980ff960-087f-4d65-b597-d8c21b5343ad" />
+                </action>
+            </actions>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="7a9ca8b3-ff0a-486a-804a-ec2d48625abc" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.farm.app.MonthBillFarmRuleSet].actions.action[D9XDQQ4G].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.farm.app.MonthBillFarmRuleSet].actions.action[D9XDQQ4G].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.farm.app.MonthBillFarmRuleSet].actions.action[D9XDQQ6T].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.farm.app.MonthBillFarmRuleSet].actions.action[D9XDQQ6T].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.farm.app.MonthBillFarmRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.farm.app.MonthBillFarmRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.farm.app.MonthBillFarmRuleSet].rules.conditionRule[D9XDS0LM].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="Cal1" />
+            <lang locale="zh_HK" value="Cal1" />
+            <lang locale="zh_TW" value="Cal1" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.farm.app.MonthBillFarmRuleSet].rules.conditionRule[D9XDS0LM].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.farm.app.MonthBillFarmRuleSet].rules.conditionRule[D9XDS0LM].extendedProperty.columnName">
+            <lang locale="en_US" value="Dailyevaluation" />
+            <lang locale="zh_CN" value="Dailyevaluation" />
+            <lang locale="zh_TW" value="Dailyevaluation" />
+        </rs>
+    </resource>
+</ruleSet>
+

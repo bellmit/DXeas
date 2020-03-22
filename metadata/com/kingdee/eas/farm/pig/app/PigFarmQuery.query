@@ -1,0 +1,2963 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.pig.app</package>
+    <name>PigFarmQuery</name>
+    <alias>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].alias</alias>
+    <description>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].description</description>
+    <userDefined>true</userDefined>
+    <reportDataSource />
+    <bizUnitPK>com.kingdee.eas.farm.pig.PigFarm</bizUnitPK>
+    <connectionProvider />
+    <subObjects>
+        <subEntity>
+            <name>PigFarm</name>
+            <alias>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[PigFarm].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarm" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>creator</name>
+            <alias>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[creator].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="User" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>lastUpdateUser</name>
+            <alias>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[lastUpdateUser].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="User" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>treeid</name>
+            <alias>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[treeid].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmTree" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>stoOrgUnit</name>
+            <alias>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[stoOrgUnit].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="StorageOrgUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>costObject</name>
+            <alias>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[costObject].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="CostCenterOrgUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>farmHeader</name>
+            <alias>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[farmHeader].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.person.app" />
+                <key name="name" value="Person" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>fodderStoOrg</name>
+            <alias>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[fodderStoOrg].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="StorageOrgUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>immuneStoOrg</name>
+            <alias>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[immuneStoOrg].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="StorageOrgUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>fodderWarehouse</name>
+            <alias>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[fodderWarehouse].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.scm.im.inv.app" />
+                <key name="name" value="Warehouse" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>immuneWarehouse</name>
+            <alias>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[immuneWarehouse].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.scm.im.inv.app" />
+                <key name="name" value="Warehouse" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>pigStoOrg</name>
+            <alias>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[pigStoOrg].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="StorageOrgUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>pigWarehouse</name>
+            <alias>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[pigWarehouse].alias</alias>
+            <userDefined>false</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.scm.im.inv.app" />
+                <key name="name" value="Warehouse" />
+            </entityRef>
+        </subEntity>
+    </subObjects>
+    <units>
+        <propertyUnit>
+            <name>NewUnit0</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[NewUnit0].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit0" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PigFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="creator" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit1</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[NewUnit1].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit1" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="creator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit2</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[NewUnit2].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit2" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PigFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="lastUpdateUser" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit3</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[NewUnit3].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit3" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="lastUpdateUser" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit4</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[NewUnit4].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit4" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PigFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="treeid" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>NewUnit5</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[NewUnit5].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="NewUnit5" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="treeid" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PigFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PigFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PigFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>description</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[description].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="description" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PigFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="description" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>simpleName</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[simpleName].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="simpleName" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PigFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="simpleName" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>createTime</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[createTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Timestamp</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="createTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PigFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="createTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>creator.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[creator.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="creator.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="creator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>lastUpdateTime</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[lastUpdateTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Timestamp</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="lastUpdateTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PigFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="lastUpdateTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>lastUpdateUser.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[lastUpdateUser.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="lastUpdateUser.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="lastUpdateUser" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>treeid.id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[treeid.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0</key>
+                    <parentUnit>
+                        <key name="name" value="treeid.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="treeid" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>tel</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[tel].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>d1d61c77-6fd2-4f23-9ded-66d14e36fc78</key>
+                    <parentUnit>
+                        <key name="name" value="tel" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PigFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="tel" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>address</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[address].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>e15e01eb-905f-4fa1-bb63-721fb9b71114</key>
+                    <parentUnit>
+                        <key name="name" value="address" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PigFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="address" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>buildDate</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[buildDate].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>6bba1ca4-aa1d-40db-8344-34487e927e1d</key>
+                    <parentUnit>
+                        <key name="name" value="buildDate" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PigFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="buildDate" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>pigType</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[pigType].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0b726c57-ea7f-4b59-8c9d-36895fc29ec3</key>
+                    <parentUnit>
+                        <key name="name" value="pigType" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PigFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="pigType" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>stoOrgUnit.name</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[stoOrgUnit.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b790a944-0ba6-4b64-8608-7c4aaa331136</key>
+                    <parentUnit>
+                        <key name="name" value="stoOrgUnit.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="stoOrgUnit" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>a4280b81-a8b1-421f-8013-19fddb8fff95</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[a4280b81-a8b1-421f-8013-19fddb8fff95].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>174f29f3-9274-41e3-b771-d75255f37dbd</key>
+                    <parentUnit>
+                        <key name="name" value="a4280b81-a8b1-421f-8013-19fddb8fff95" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PigFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="stoOrgUnit" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>1cd28e17-ab79-43b3-a4f4-5070a2a3a0ba</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[1cd28e17-ab79-43b3-a4f4-5070a2a3a0ba].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>3deb302a-1606-4436-b9b9-5e0311882877</key>
+                    <parentUnit>
+                        <key name="name" value="1cd28e17-ab79-43b3-a4f4-5070a2a3a0ba" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="stoOrgUnit" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>costObject.name</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[costObject.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>34be3f07-7a7b-4355-b164-93f7a161f77f</key>
+                    <parentUnit>
+                        <key name="name" value="costObject.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="costObject" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>306326fe-6442-470a-b534-42a3aa86a2d9</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[306326fe-6442-470a-b534-42a3aa86a2d9].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>71443092-260c-4aaa-96c4-0e9d4b812aa4</key>
+                    <parentUnit>
+                        <key name="name" value="306326fe-6442-470a-b534-42a3aa86a2d9" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PigFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="costObject" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>3a669ce6-3090-4771-bfea-d886a17f3ad8</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[3a669ce6-3090-4771-bfea-d886a17f3ad8].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>fb01604f-4f2f-4eda-90aa-2b4c6dd03cba</key>
+                    <parentUnit>
+                        <key name="name" value="3a669ce6-3090-4771-bfea-d886a17f3ad8" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="costObject" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>farmHeaderName</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[farmHeaderName].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>4e6774c6-5e19-49d4-bf7e-57fbe6964b01</key>
+                    <parentUnit>
+                        <key name="name" value="farmHeaderName" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PigFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="farmHeaderName" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>farmHeader.name</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[farmHeader.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>5dd35269-d8a7-4fac-ad80-ad69ac642c7f</key>
+                    <parentUnit>
+                        <key name="name" value="farmHeader.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="farmHeader" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>40410826-1640-4060-bae2-dc9766885c31</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[40410826-1640-4060-bae2-dc9766885c31].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>d7e79387-6bd6-418d-9805-e5b349f5e9e9</key>
+                    <parentUnit>
+                        <key name="name" value="40410826-1640-4060-bae2-dc9766885c31" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PigFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="farmHeader" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>015c2517-27ba-4808-97bc-8baaf5022fff</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[015c2517-27ba-4808-97bc-8baaf5022fff].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>d6d8bb98-d9ca-408c-8a5e-bd44faf056f0</key>
+                    <parentUnit>
+                        <key name="name" value="015c2517-27ba-4808-97bc-8baaf5022fff" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="farmHeader" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>fodderStoOrg.name</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[fodderStoOrg.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b8210d96-ee99-4b26-b258-317ca0aaee92</key>
+                    <parentUnit>
+                        <key name="name" value="fodderStoOrg.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="fodderStoOrg" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>64ee126f-23a7-45a7-b2a1-507e8a8faa2c</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[64ee126f-23a7-45a7-b2a1-507e8a8faa2c].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>a4b6f117-0c90-48a4-91ec-224e8e5e11f5</key>
+                    <parentUnit>
+                        <key name="name" value="64ee126f-23a7-45a7-b2a1-507e8a8faa2c" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PigFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="fodderStoOrg" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>44ffe0df-4779-4989-8afd-763e97460a08</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[44ffe0df-4779-4989-8afd-763e97460a08].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>d2a81f0e-9ebe-4a56-942b-0ad89dac0403</key>
+                    <parentUnit>
+                        <key name="name" value="44ffe0df-4779-4989-8afd-763e97460a08" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="fodderStoOrg" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>immuneStoOrg.name</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[immuneStoOrg.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b4e5362c-22f5-4fc2-92ef-711308f8f0b9</key>
+                    <parentUnit>
+                        <key name="name" value="immuneStoOrg.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="immuneStoOrg" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>1a8e3468-c0e1-49ce-b7cd-89d3ffba6b4d</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[1a8e3468-c0e1-49ce-b7cd-89d3ffba6b4d].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>4dbe9daf-c117-4bbc-b925-7b02e9900a6c</key>
+                    <parentUnit>
+                        <key name="name" value="1a8e3468-c0e1-49ce-b7cd-89d3ffba6b4d" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PigFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="immuneStoOrg" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>ec71558e-4d22-4005-82ae-6d9db2a99808</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[ec71558e-4d22-4005-82ae-6d9db2a99808].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>40842a45-f219-47df-a868-b08f2111bad4</key>
+                    <parentUnit>
+                        <key name="name" value="ec71558e-4d22-4005-82ae-6d9db2a99808" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="immuneStoOrg" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>initBatchCount</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[initBatchCount].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>76489c1b-a874-4359-92f3-e1a51f64f919</key>
+                    <parentUnit>
+                        <key name="name" value="initBatchCount" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PigFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="initBatchCount" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>fodderWarehouse.name</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[fodderWarehouse.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>017c9d8c-42fb-4915-a76a-2f319ce43a73</key>
+                    <parentUnit>
+                        <key name="name" value="fodderWarehouse.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="fodderWarehouse" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>95d31c52-100d-44cf-b540-db574b2ddaa3</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[95d31c52-100d-44cf-b540-db574b2ddaa3].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>bec4317e-996c-4246-9b41-32b174a01549</key>
+                    <parentUnit>
+                        <key name="name" value="95d31c52-100d-44cf-b540-db574b2ddaa3" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PigFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="fodderWarehouse" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>3f636d97-9ca6-4903-9ab4-e563264b760b</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[3f636d97-9ca6-4903-9ab4-e563264b760b].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>779a5633-7dc4-4897-843c-159a3c2d34ea</key>
+                    <parentUnit>
+                        <key name="name" value="3f636d97-9ca6-4903-9ab4-e563264b760b" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="fodderWarehouse" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>immuneWarehouse.name</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[immuneWarehouse.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>054cf92d-42f0-4b02-825c-7400783a0fc4</key>
+                    <parentUnit>
+                        <key name="name" value="immuneWarehouse.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="immuneWarehouse" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>d8144f7e-a146-4d58-8c2e-5a069503bf88</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[d8144f7e-a146-4d58-8c2e-5a069503bf88].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>394e3eae-c95c-49f3-a2e9-45a8306175dc</key>
+                    <parentUnit>
+                        <key name="name" value="d8144f7e-a146-4d58-8c2e-5a069503bf88" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PigFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="immuneWarehouse" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>ac748d3b-9bed-4b2a-88ff-ed57da3fa535</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[ac748d3b-9bed-4b2a-88ff-ed57da3fa535].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>bf305019-b71d-4258-82d1-3e6152b60d33</key>
+                    <parentUnit>
+                        <key name="name" value="ac748d3b-9bed-4b2a-88ff-ed57da3fa535" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="immuneWarehouse" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>pigStoOrg.name</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[pigStoOrg.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>55c58b74-d0ae-4f43-991a-6fe4f6a04776</key>
+                    <parentUnit>
+                        <key name="name" value="pigStoOrg.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="pigStoOrg" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>0022d046-ce13-4e04-8a6a-bf6ae2cb769b</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[0022d046-ce13-4e04-8a6a-bf6ae2cb769b].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>198dec3e-fefa-4bb8-b22d-702623f29f6f</key>
+                    <parentUnit>
+                        <key name="name" value="0022d046-ce13-4e04-8a6a-bf6ae2cb769b" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PigFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="pigStoOrg" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>3a5f111b-278a-4751-9d0c-590033897ac6</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[3a5f111b-278a-4751-9d0c-590033897ac6].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>4f223283-d435-4f14-b753-505c12018919</key>
+                    <parentUnit>
+                        <key name="name" value="3a5f111b-278a-4751-9d0c-590033897ac6" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="pigStoOrg" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>pigWarehouse.name</name>
+            <userDefined>false</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[pigWarehouse.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>386ad712-52e4-4180-a7fb-0cbc70664436</key>
+                    <parentUnit>
+                        <key name="name" value="pigWarehouse.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="pigWarehouse" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>2c0066cd-cc9c-4838-a6c2-cde71c240a09</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[2c0066cd-cc9c-4838-a6c2-cde71c240a09].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>4e225218-6cf9-4596-8436-8bb9babc20f3</key>
+                    <parentUnit>
+                        <key name="name" value="2c0066cd-cc9c-4838-a6c2-cde71c240a09" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PigFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="pigWarehouse" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>dc78364b-1781-4666-be94-a9ac9640c9c0</name>
+            <userDefined>false</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[dc78364b-1781-4666-be94-a9ac9640c9c0].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>6405d5fb-64ab-47b5-bef4-18d251b97af5</key>
+                    <parentUnit>
+                        <key name="name" value="dc78364b-1781-4666-be94-a9ac9640c9c0" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="pigWarehouse" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </propertyUnit>
+    </units>
+    <defaultFilter>
+        <name>defaultFilter</name>
+        <formulaString />
+        <query>
+            <key name="package" value="com.kingdee.eas.farm.pig.app" />
+            <key name="name" value="PigFarmQuery" />
+        </query>
+    </defaultFilter>
+    <queryPK>
+        <name>QueryPK</name>
+        <alias>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].queryPK[QueryPK].alias</alias>
+        <description>joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].queryPK[QueryPK].description</description>
+        <keyProperties>
+            <queryField>
+                <key name="name" value="id" />
+            </queryField>
+        </keyProperties>
+    </queryPK>
+    <isDistinct>false</isDistinct>
+    <joins>
+        <join>
+            <name>NewJoin0</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="PigFarm" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="creator" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>0</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="NewUnit0" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="NewUnit1" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="NewJoin0" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </join>
+        <join>
+            <name>NewJoin1</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="PigFarm" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="lastUpdateUser" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>0</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="NewUnit2" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="NewUnit3" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="NewJoin0" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </join>
+        <join>
+            <name>NewJoin2</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="PigFarm" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="treeid" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>0</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="NewUnit4" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="NewUnit5" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="NewJoin0" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </join>
+        <join>
+            <name>a942f31e-c326-4388-8c5c-7be91e07358b</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="PigFarm" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="stoOrgUnit" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>b1d64915-3feb-40ab-9ef6-d269fcd96ffe</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="a4280b81-a8b1-421f-8013-19fddb8fff95" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="1cd28e17-ab79-43b3-a4f4-5070a2a3a0ba" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="a942f31e-c326-4388-8c5c-7be91e07358b" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </join>
+        <join>
+            <name>2c5fbb69-f5e6-48bb-9cc9-b394d2e04489</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="PigFarm" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="costObject" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>36a5e670-89a9-4cfe-8815-8a7c5643c49b</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="306326fe-6442-470a-b534-42a3aa86a2d9" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="3a669ce6-3090-4771-bfea-d886a17f3ad8" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="2c5fbb69-f5e6-48bb-9cc9-b394d2e04489" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </join>
+        <join>
+            <name>a73a278d-c2bd-4e82-9cbf-3bd6b36074f6</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="PigFarm" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="farmHeader" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>a0d0349c-5cee-45a5-8f9f-95e82a04cbbb</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="40410826-1640-4060-bae2-dc9766885c31" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="015c2517-27ba-4808-97bc-8baaf5022fff" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="a73a278d-c2bd-4e82-9cbf-3bd6b36074f6" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </join>
+        <join>
+            <name>e46b9741-bf3a-4a67-a1b8-56461043bfbb</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="PigFarm" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="fodderStoOrg" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>c24cb29f-d8a2-40c5-9ccc-83a957962288</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="64ee126f-23a7-45a7-b2a1-507e8a8faa2c" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="44ffe0df-4779-4989-8afd-763e97460a08" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="e46b9741-bf3a-4a67-a1b8-56461043bfbb" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </join>
+        <join>
+            <name>7f8b07f3-7014-49dc-a953-e4008d287e4e</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="PigFarm" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="immuneStoOrg" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>eababe6e-490b-4e41-a06c-9d454273ef7b</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="1a8e3468-c0e1-49ce-b7cd-89d3ffba6b4d" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="ec71558e-4d22-4005-82ae-6d9db2a99808" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="7f8b07f3-7014-49dc-a953-e4008d287e4e" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </join>
+        <join>
+            <name>c787b1a6-2de2-4fc7-a7c3-3d6e23715fbc</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="PigFarm" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="fodderWarehouse" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>6d1de581-a21a-4545-af56-f8737a9cbfd9</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="95d31c52-100d-44cf-b540-db574b2ddaa3" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="3f636d97-9ca6-4903-9ab4-e563264b760b" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="c787b1a6-2de2-4fc7-a7c3-3d6e23715fbc" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </join>
+        <join>
+            <name>ac8af86e-c5ab-42e2-b4e6-dfc1909e8d96</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="PigFarm" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="immuneWarehouse" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>faba5434-6975-4ec1-8904-055da4ba9ba9</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="d8144f7e-a146-4d58-8c2e-5a069503bf88" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="ac748d3b-9bed-4b2a-88ff-ed57da3fa535" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="ac8af86e-c5ab-42e2-b4e6-dfc1909e8d96" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </join>
+        <join>
+            <name>684ae017-ac90-4d7d-83de-75ded80e4e63</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="PigFarm" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="pigStoOrg" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>c1bb8a64-f287-41c1-988f-0f3429ddeb0c</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="0022d046-ce13-4e04-8a6a-bf6ae2cb769b" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="3a5f111b-278a-4751-9d0c-590033897ac6" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="684ae017-ac90-4d7d-83de-75ded80e4e63" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </join>
+        <join>
+            <name>a6a12b6f-1924-485b-ac6f-cd62779a0e28</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="PigFarm" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="pigWarehouse" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>c24c3947-37bc-4fc7-9868-a4568a96b8fc</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="2c0066cd-cc9c-4838-a6c2-cde71c240a09" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="dc78364b-1781-4666-be94-a9ac9640c9c0" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="a6a12b6f-1924-485b-ac6f-cd62779a0e28" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.pig.app" />
+                <key name="name" value="PigFarmQuery" />
+            </query>
+        </join>
+    </joins>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="养猪场" />
+            <lang locale="zh_HK" value="養豬場" />
+            <lang locale="zh_TW" value="養豬場" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="分组基础资料查询" />
+            <lang locale="zh_HK" value="分組基礎資料查詢" />
+            <lang locale="zh_TW" value="分組基礎資料查詢" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].extendedProperty.F7WindowTitle">
+            <lang locale="en_US" value="com.kingdee.eas.farm.pig.client.PigResource.PigFarmQueryF7WindowTitle" />
+            <lang locale="zh_CN" value="com.kingdee.eas.farm.pig.client.PigResource.PigFarmQueryF7WindowTitle" />
+            <lang locale="zh_TW" value="com.kingdee.eas.farm.pig.client.PigResource.PigFarmQueryF7WindowTitle" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].extendedProperty.f7WindowTitle">
+            <lang locale="en_US" value="养猪场" />
+            <lang locale="zh_CN" value="养猪场" />
+            <lang locale="zh_TW" value="养猪场" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].queryPK[QueryPK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].queryPK[QueryPK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[PigFarm].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[costObject].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[creator].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[farmHeader].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[fodderStoOrg].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[fodderWarehouse].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[immuneStoOrg].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[immuneWarehouse].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[lastUpdateUser].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[pigStoOrg].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[pigWarehouse].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[stoOrgUnit].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].subObjects.subEntity[treeid].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[0022d046-ce13-4e04-8a6a-bf6ae2cb769b].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[015c2517-27ba-4808-97bc-8baaf5022fff].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[1a8e3468-c0e1-49ce-b7cd-89d3ffba6b4d].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[1cd28e17-ab79-43b3-a4f4-5070a2a3a0ba].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[2c0066cd-cc9c-4838-a6c2-cde71c240a09].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[306326fe-6442-470a-b534-42a3aa86a2d9].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[3a5f111b-278a-4751-9d0c-590033897ac6].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[3a669ce6-3090-4771-bfea-d886a17f3ad8].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[3f636d97-9ca6-4903-9ab4-e563264b760b].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[40410826-1640-4060-bae2-dc9766885c31].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[44ffe0df-4779-4989-8afd-763e97460a08].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[64ee126f-23a7-45a7-b2a1-507e8a8faa2c].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[95d31c52-100d-44cf-b540-db574b2ddaa3].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[NewUnit0].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[NewUnit1].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[NewUnit2].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[NewUnit3].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[NewUnit4].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[NewUnit5].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[a4280b81-a8b1-421f-8013-19fddb8fff95].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[ac748d3b-9bed-4b2a-88ff-ed57da3fa535].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[d8144f7e-a146-4d58-8c2e-5a069503bf88].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[dc78364b-1781-4666-be94-a9ac9640c9c0].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.propertyUnit[ec71558e-4d22-4005-82ae-6d9db2a99808].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[address].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="地址" />
+            <lang locale="zh_HK" value="地址" />
+            <lang locale="zh_TW" value="地址" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[address].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[address].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[buildDate].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="建场日期" />
+            <lang locale="zh_HK" value="建場日期" />
+            <lang locale="zh_TW" value="建場日期" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[buildDate].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[buildDate].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[costObject.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="成本中心" />
+            <lang locale="zh_HK" value="成本中心" />
+            <lang locale="zh_TW" value="成本中心" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[costObject.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[costObject.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[costObject.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[createTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建时间" />
+            <lang locale="zh_HK" value="創建時間" />
+            <lang locale="zh_TW" value="創建時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[createTime].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[createTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[createTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[createTime].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[createTime].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[creator.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建人" />
+            <lang locale="zh_HK" value="創建人" />
+            <lang locale="zh_TW" value="創建人" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[creator.name].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[creator.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[creator.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[creator.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[creator.name].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[description].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="描述" />
+            <lang locale="zh_HK" value="描述" />
+            <lang locale="zh_TW" value="描述" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[description].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[description].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[description].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[description].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[description].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[farmHeader.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="场长对应职员" />
+            <lang locale="zh_HK" value="場長對應職員" />
+            <lang locale="zh_TW" value="場長對應職員" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[farmHeader.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[farmHeader.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[farmHeader.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[farmHeaderName].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="厂长" />
+            <lang locale="zh_HK" value="廠長" />
+            <lang locale="zh_TW" value="廠長" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[farmHeaderName].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[farmHeaderName].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[fodderStoOrg.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="饲料核算库存组织" />
+            <lang locale="zh_HK" value="飼料核算庫存組織" />
+            <lang locale="zh_TW" value="飼料核算庫存組織" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[fodderStoOrg.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[fodderStoOrg.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[fodderStoOrg.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[fodderWarehouse.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="饲料仓库" />
+            <lang locale="zh_HK" value="飼料倉庫" />
+            <lang locale="zh_TW" value="飼料倉庫" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[fodderWarehouse.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[fodderWarehouse.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[fodderWarehouse.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[id].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[id].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[id].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[id].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[id].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[immuneStoOrg.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="疫苗库存组织" />
+            <lang locale="zh_HK" value="疫苗庫存組織" />
+            <lang locale="zh_TW" value="疫苗庫存組織" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[immuneStoOrg.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[immuneStoOrg.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[immuneStoOrg.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[immuneWarehouse.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="疫苗仓库" />
+            <lang locale="zh_HK" value="疫苗倉庫" />
+            <lang locale="zh_TW" value="疫苗倉庫" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[immuneWarehouse.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[immuneWarehouse.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[immuneWarehouse.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[initBatchCount].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="初始批次数" />
+            <lang locale="zh_HK" value="初始批次數" />
+            <lang locale="zh_TW" value="初始批次數" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[initBatchCount].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[initBatchCount].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[lastUpdateTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最后修改时间" />
+            <lang locale="zh_HK" value="最後修改時間" />
+            <lang locale="zh_TW" value="最後修改時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[lastUpdateTime].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[lastUpdateTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[lastUpdateTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[lastUpdateTime].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[lastUpdateTime].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[lastUpdateUser.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="修改人" />
+            <lang locale="zh_HK" value="修改人" />
+            <lang locale="zh_TW" value="修改人" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[lastUpdateUser.name].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[lastUpdateUser.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[lastUpdateUser.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[lastUpdateUser.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[lastUpdateUser.name].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="名称" />
+            <lang locale="zh_HK" value="名稱" />
+            <lang locale="zh_TW" value="名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[name].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[name].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="编码" />
+            <lang locale="zh_HK" value="編碼" />
+            <lang locale="zh_TW" value="編碼" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[number].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[number].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[number].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[number].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[number].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[pigStoOrg.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="库存猪库存组织" />
+            <lang locale="zh_HK" value="庫存豬庫存組織" />
+            <lang locale="zh_TW" value="庫存豬庫存組織" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[pigStoOrg.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[pigStoOrg.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[pigStoOrg.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[pigType].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="猪场类型" />
+            <lang locale="zh_HK" value="豬場類型" />
+            <lang locale="zh_TW" value="豬場類型" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[pigType].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[pigType].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[pigWarehouse.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="库存猪仓库" />
+            <lang locale="zh_HK" value="庫存豬倉庫" />
+            <lang locale="zh_TW" value="庫存豬倉庫" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[pigWarehouse.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[pigWarehouse.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[pigWarehouse.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[simpleName].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="简称" />
+            <lang locale="zh_HK" value="簡稱" />
+            <lang locale="zh_TW" value="簡稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[simpleName].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[simpleName].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[simpleName].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[simpleName].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[simpleName].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[stoOrgUnit.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="对应库存组织" />
+            <lang locale="zh_HK" value="對應庫存組織" />
+            <lang locale="zh_TW" value="對應庫存組織" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[stoOrgUnit.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[stoOrgUnit.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[stoOrgUnit.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[tel].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="电话" />
+            <lang locale="zh_HK" value="電話" />
+            <lang locale="zh_TW" value="電話" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[tel].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[tel].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[treeid.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[treeid.id].extendedProperty.colWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[treeid.id].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[treeid.id].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[treeid.id].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.pig.app.PigFarmQuery].units.queryField[treeid.id].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</joinQuery>
+

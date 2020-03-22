@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facade xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.app</package>
+    <name>payReqBillFacade</name>
+    <alias>facade[com.kingdee.eas.custom.app.payReqBillFacade].alias</alias>
+    <description>facade[com.kingdee.eas.custom.app.payReqBillFacade].description</description>
+    <userDefined>false</userDefined>
+    <bosType>E367431C</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.custom.payReqBillFacade</businessImplName>
+    <businessControllerName>com.kingdee.eas.custom.app.payReqBillFacadeController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>setPayReqBillCloseStatus</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.custom.app.payReqBillFacade].methods.method[setPayReqBillCloseStatus].alias</alias>
+            <description>facade[com.kingdee.eas.custom.app.payReqBillFacade].methods.method[setPayReqBillCloseStatus].description</description>
+            <innerID>7a702a40-1d32-4c7a-9e1f-8c15a4dcb3ca</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>Date</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>false</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>payRequestBillID</name>
+                    <alias>facade[com.kingdee.eas.custom.app.payReqBillFacade].methods.method[setPayReqBillCloseStatus].parameters.parameter[payRequestBillID].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.app.payReqBillFacade].methods.method[setPayReqBillCloseStatus].parameters.parameter[payRequestBillID].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+                <parameter>
+                    <name>closeStatus</name>
+                    <alias>facade[com.kingdee.eas.custom.app.payReqBillFacade].methods.method[setPayReqBillCloseStatus].parameters.parameter[closeStatus].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.app.payReqBillFacade].methods.method[setPayReqBillCloseStatus].parameters.parameter[closeStatus].description</description>
+                    <direction>in</direction>
+                    <dataType>Boolean</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+                <parameter>
+                    <name>closeUser</name>
+                    <alias>facade[com.kingdee.eas.custom.app.payReqBillFacade].methods.method[setPayReqBillCloseStatus].parameters.parameter[closeUser].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.app.payReqBillFacade].methods.method[setPayReqBillCloseStatus].parameters.parameter[closeUser].description</description>
+                    <direction>in</direction>
+                    <dataType>ObjectValue</dataType>
+                    <metadataRef>com.kingdee.eas.base.permission.app.User</metadataRef>
+                    <userDefined>false</userDefined>
+                </parameter>
+                <parameter>
+                    <name>closeDate</name>
+                    <alias>facade[com.kingdee.eas.custom.app.payReqBillFacade].methods.method[setPayReqBillCloseStatus].parameters.parameter[closeDate].alias</alias>
+                    <description>facade[com.kingdee.eas.custom.app.payReqBillFacade].methods.method[setPayReqBillCloseStatus].parameters.parameter[closeDate].description</description>
+                    <direction>in</direction>
+                    <dataType>Date</dataType>
+                    <metadataRef />
+                    <userDefined>false</userDefined>
+                </parameter>
+            </parameters>
+            <exceptions>
+                <bizException>
+                    <key name="package" value="com.kingdee.eas.common" />
+                    <key name="name" value="EASBizException" />
+                </bizException>
+            </exceptions>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <resource>
+        <rs key="facade[com.kingdee.eas.custom.app.payReqBillFacade].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="付款申请单" />
+            <lang locale="zh_HK" value="付款申請單" />
+            <lang locale="zh_TW" value="付款申請單" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.app.payReqBillFacade].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.app.payReqBillFacade].methods.method[setPayReqBillCloseStatus].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="修改付款申请单的关闭状态" />
+            <lang locale="zh_HK" value="修改付款申請單的關閉狀態" />
+            <lang locale="zh_TW" value="修改付款申請單的關閉狀態" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.app.payReqBillFacade].methods.method[setPayReqBillCloseStatus].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.app.payReqBillFacade].methods.method[setPayReqBillCloseStatus].parameters.parameter[closeDate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="关闭时间" />
+            <lang locale="zh_HK" value="關閉時間" />
+            <lang locale="zh_TW" value="關閉時間" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.app.payReqBillFacade].methods.method[setPayReqBillCloseStatus].parameters.parameter[closeDate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.app.payReqBillFacade].methods.method[setPayReqBillCloseStatus].parameters.parameter[closeStatus].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="关闭状态" />
+            <lang locale="zh_HK" value="關閉狀態" />
+            <lang locale="zh_TW" value="關閉狀態" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.app.payReqBillFacade].methods.method[setPayReqBillCloseStatus].parameters.parameter[closeStatus].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.app.payReqBillFacade].methods.method[setPayReqBillCloseStatus].parameters.parameter[closeUser].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="关闭人" />
+            <lang locale="zh_HK" value="關閉人" />
+            <lang locale="zh_TW" value="關閉人" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.app.payReqBillFacade].methods.method[setPayReqBillCloseStatus].parameters.parameter[closeUser].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.app.payReqBillFacade].methods.method[setPayReqBillCloseStatus].parameters.parameter[payRequestBillID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="付款申请单ID" />
+            <lang locale="zh_HK" value="付款申請單ID" />
+            <lang locale="zh_TW" value="付款申請單ID" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.custom.app.payReqBillFacade].methods.method[setPayReqBillCloseStatus].parameters.parameter[payRequestBillID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</facade>
+

@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.szcount.app</package>
+    <name>SzCountPositionSetRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>1fca78c2-31d3-4d92-8bed-280b3acbef21</id>
+            <parentID />
+            <source>MaterialEntry.materialtype=MaterialEntry.material.model</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>e3b0dad1-c0fd-4d2e-b7f8-c32980952aeb</id>
+            <parentID>1fca78c2-31d3-4d92-8bed-280b3acbef21</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>1f039dcd-7d6c-44f1-a8ae-19704cd228a6</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1f039dcd-7d6c-44f1-a8ae-19704cd228a6</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtMaterialEntry.getCell(rowIndex,"materialtype")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bf53e767-d5f6-45cf-8fb9-2b572155b299</id>
+            <parentID>1fca78c2-31d3-4d92-8bed-280b3acbef21</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>0012d3c1-995e-4b7a-996e-a5a5c9a5a77a</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>c8764ad3-ae9f-4883-92cc-a7ac635dcf24</id>
+                        <expressionID>c960126c-092a-48ac-b8c1-27fe97604c35</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>ce46fe90-5cd9-4781-bdbc-102237959cb2</id>
+                        <expressionID>d917fef6-9fe2-43a9-ab51-20a1d8562a28</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0012d3c1-995e-4b7a-996e-a5a5c9a5a77a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c960126c-092a-48ac-b8c1-27fe97604c35</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>13149904-7acf-4850-a7e0-b6c2f0425607</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>13149904-7acf-4850-a7e0-b6c2f0425607</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtMaterialEntry.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d917fef6-9fe2-43a9-ab51-20a1d8562a28</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>model</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>f2ed829a-4492-41c9-b2ef-26c805ebbeaf</id>
+            <parentID />
+            <source>MaterialEntry.baseUnit=MaterialEntry.material.baseUnit.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>f5b8a3ec-851b-4451-9bea-97aae862ae17</id>
+            <parentID>f2ed829a-4492-41c9-b2ef-26c805ebbeaf</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>54a12b45-102b-40df-be82-fd6ed40013a5</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>54a12b45-102b-40df-be82-fd6ed40013a5</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtMaterialEntry.getCell(rowIndex,"baseUnit")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8ab07a82-68c9-4d48-9d6f-e0fe128d9b89</id>
+            <parentID>f2ed829a-4492-41c9-b2ef-26c805ebbeaf</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>cb22e20d-8c7e-4d5f-ad4f-5bf52c66d10e</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>4b9a8157-2217-4e0d-b71e-4a90b6887d66</id>
+                        <expressionID>9a18024c-1462-406b-b28b-7bfa07f1d3c2</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>1bd0a8e3-1a6e-4dcb-86d9-503c829a12a9</id>
+                        <expressionID>92fb6fb9-81f8-41d3-b4c1-b7248ead4b1b</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cb22e20d-8c7e-4d5f-ad4f-5bf52c66d10e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9a18024c-1462-406b-b28b-7bfa07f1d3c2</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>84f9577c-7715-4611-8233-6720bae49ab9</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>84f9577c-7715-4611-8233-6720bae49ab9</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtMaterialEntry.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>92fb6fb9-81f8-41d3-b4c1-b7248ead4b1b</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>baseUnit.name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>dfbf46d5-6750-48de-aae4-2cba08ba8c78</id>
+            <parentID />
+            <source>MaterialEntry.inventoryUnit=MaterialEntry.material.baseUnit.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>a4523dae-06d0-42cd-8b3d-a32d562d89a3</id>
+            <parentID>dfbf46d5-6750-48de-aae4-2cba08ba8c78</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>38d32ac1-266e-49d1-9add-5d636e029707</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>38d32ac1-266e-49d1-9add-5d636e029707</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtMaterialEntry.getCell(rowIndex,"inventoryUnit")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>814413af-93ab-4244-9542-64520866f5f9</id>
+            <parentID>dfbf46d5-6750-48de-aae4-2cba08ba8c78</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>5ddbbc55-d326-4057-b3f6-3108ae1f136c</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>9452ccca-f2e0-4240-982b-9a94de83e04a</id>
+                        <expressionID>2539bbb8-8a92-4f10-9915-ec71e9978fc9</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>4bb163ff-b08a-43b7-b2ef-ef86a89fa784</id>
+                        <expressionID>ebdbf5c5-4ddc-4270-b768-1c0c203bb20b</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5ddbbc55-d326-4057-b3f6-3108ae1f136c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2539bbb8-8a92-4f10-9915-ec71e9978fc9</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>b707f94e-dec4-4845-9b56-5b1ea9f8cc66</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b707f94e-dec4-4845-9b56-5b1ea9f8cc66</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtMaterialEntry.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ebdbf5c5-4ddc-4270-b768-1c0c203bb20b</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>baseUnit.name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>708bc68c-20b2-435f-8fa5-18b8d37b63cb</id>
+            <parentID />
+            <source>MaterialEntry.materialNum=MaterialEntry.material.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>ba2b09bd-e261-4d62-80d4-35fd4e8980ba</id>
+            <parentID>708bc68c-20b2-435f-8fa5-18b8d37b63cb</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>f401484d-55c2-43e1-82ad-317a4e5a4530</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f401484d-55c2-43e1-82ad-317a4e5a4530</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtMaterialEntry.getCell(rowIndex,"materialNum")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b90eb89e-0951-4572-ac6f-8f440d99edaf</id>
+            <parentID>708bc68c-20b2-435f-8fa5-18b8d37b63cb</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>3bea8582-2ad0-4b69-b4c2-d262e7720750</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>4f2e355f-8663-4482-8854-ac38635fd16b</id>
+                        <expressionID>ed3cbfe3-fe8e-4f7d-9da3-214919695c6e</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>67192fcc-cd80-4fb3-9b39-cac6d7fbec91</id>
+                        <expressionID>3ff10523-3ba7-4867-9c45-d0700245827a</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3bea8582-2ad0-4b69-b4c2-d262e7720750</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ed3cbfe3-fe8e-4f7d-9da3-214919695c6e</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>97e4291a-b3c2-4392-94fc-3ed1dffa6887</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>97e4291a-b3c2-4392-94fc-3ed1dffa6887</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtMaterialEntry.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3ff10523-3ba7-4867-9c45-d0700245827a</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>b3b1bc7b-c0c1-4468-a82e-433dcf97503f</id>
+            <name>MaterialEntry_materialtype_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].actions.action[MaterialEntry_materialtype_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].actions.action[MaterialEntry_materialtype_ActionInfo].description</description>
+            <expressionID>1fca78c2-31d3-4d92-8bed-280b3acbef21</expressionID>
+        </action>
+        <action>
+            <id>c5dd6725-2aaf-445a-b72b-f7db94890861</id>
+            <name>MaterialEntry_baseUnit_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].actions.action[MaterialEntry_baseUnit_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].actions.action[MaterialEntry_baseUnit_ActionInfo].description</description>
+            <expressionID>f2ed829a-4492-41c9-b2ef-26c805ebbeaf</expressionID>
+        </action>
+        <action>
+            <id>7f1c73c6-a72f-4da9-ab3b-14c30fef42d1</id>
+            <name>MaterialEntry_inventoryUnit_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].actions.action[MaterialEntry_inventoryUnit_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].actions.action[MaterialEntry_inventoryUnit_ActionInfo].description</description>
+            <expressionID>dfbf46d5-6750-48de-aae4-2cba08ba8c78</expressionID>
+        </action>
+        <action>
+            <id>6f775e75-d534-4cd2-91b6-3ff1d53104bb</id>
+            <name>MaterialEntry_materialNum_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].actions.action[MaterialEntry_materialNum_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].actions.action[MaterialEntry_materialNum_ActionInfo].description</description>
+            <expressionID>708bc68c-20b2-435f-8fa5-18b8d37b63cb</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>MaterialEntry_materialtype_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].rules.conditionRule[MaterialEntry_materialtype_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].rules.conditionRule[MaterialEntry_materialtype_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="b3b1bc7b-c0c1-4468-a82e-433dcf97503f" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>MaterialEntry_baseUnit_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].rules.conditionRule[MaterialEntry_baseUnit_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].rules.conditionRule[MaterialEntry_baseUnit_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="c5dd6725-2aaf-445a-b72b-f7db94890861" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>MaterialEntry_inventoryUnit_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].rules.conditionRule[MaterialEntry_inventoryUnit_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].rules.conditionRule[MaterialEntry_inventoryUnit_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="7f1c73c6-a72f-4da9-ab3b-14c30fef42d1" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>MaterialEntry_materialNum_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].rules.conditionRule[MaterialEntry_materialNum_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].rules.conditionRule[MaterialEntry_materialNum_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="6f775e75-d534-4cd2-91b6-3ff1d53104bb" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].actions.action[MaterialEntry_baseUnit_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_baseUnit" />
+            <lang locale="zh_HK" value="攜帶字段屬性_baseUnit" />
+            <lang locale="zh_TW" value="攜帶字段屬性_baseUnit" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].actions.action[MaterialEntry_baseUnit_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].actions.action[MaterialEntry_inventoryUnit_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_baseUnit" />
+            <lang locale="zh_HK" value="攜帶字段屬性_baseUnit" />
+            <lang locale="zh_TW" value="攜帶字段屬性_baseUnit" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].actions.action[MaterialEntry_inventoryUnit_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].actions.action[MaterialEntry_materialNum_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].actions.action[MaterialEntry_materialNum_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].actions.action[MaterialEntry_materialtype_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].actions.action[MaterialEntry_materialtype_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].rules.conditionRule[MaterialEntry_baseUnit_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_baseUnit" />
+            <lang locale="zh_HK" value="攜帶字段屬性_baseUnit" />
+            <lang locale="zh_TW" value="攜帶字段屬性_baseUnit" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].rules.conditionRule[MaterialEntry_baseUnit_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].rules.conditionRule[MaterialEntry_baseUnit_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="material" />
+            <lang locale="zh_CN" value="material" />
+            <lang locale="zh_TW" value="material" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].rules.conditionRule[MaterialEntry_baseUnit_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].rules.conditionRule[MaterialEntry_inventoryUnit_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_baseUnit" />
+            <lang locale="zh_HK" value="攜帶字段屬性_baseUnit" />
+            <lang locale="zh_TW" value="攜帶字段屬性_baseUnit" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].rules.conditionRule[MaterialEntry_inventoryUnit_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].rules.conditionRule[MaterialEntry_inventoryUnit_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="material" />
+            <lang locale="zh_CN" value="material" />
+            <lang locale="zh_TW" value="material" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].rules.conditionRule[MaterialEntry_inventoryUnit_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].rules.conditionRule[MaterialEntry_materialNum_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].rules.conditionRule[MaterialEntry_materialNum_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].rules.conditionRule[MaterialEntry_materialNum_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="material" />
+            <lang locale="zh_CN" value="material" />
+            <lang locale="zh_TW" value="material" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].rules.conditionRule[MaterialEntry_materialNum_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].rules.conditionRule[MaterialEntry_materialtype_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].rules.conditionRule[MaterialEntry_materialtype_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].rules.conditionRule[MaterialEntry_materialtype_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="material" />
+            <lang locale="zh_CN" value="material" />
+            <lang locale="zh_TW" value="material" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.szcount.app.SzCountPositionSetRuleSet].rules.conditionRule[MaterialEntry_materialtype_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

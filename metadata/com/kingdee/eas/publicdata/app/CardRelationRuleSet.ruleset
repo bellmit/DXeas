@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.publicdata.app</package>
+    <name>CardRelationRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.publicdata.app.CardRelationRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.publicdata.app.CardRelationRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>8b44afe5-9046-46d0-a98e-dedcf79256b3</id>
+            <parentID />
+            <source>baseDataName=baseData.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>a83eeec3-c061-4e7b-992c-e943c1767cc6</id>
+            <parentID>8b44afe5-9046-46d0-a98e-dedcf79256b3</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>8ca3002b-f253-4f86-8b97-a274015bba45</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8ca3002b-f253-4f86-8b97-a274015bba45</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtbaseDataName</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ad641cee-5f18-4c6d-bef2-67563132e2fb</id>
+            <parentID>8b44afe5-9046-46d0-a98e-dedcf79256b3</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>9b0a5a73-64f2-43a5-85bc-bd6b49d1b3fc</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>2a3259ad-c43c-4da1-b875-0c6e4fa1c2a3</id>
+                        <expressionID>f7cbefa9-cd69-4fe0-8089-8bac82fa4932</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>5ae4f147-9ed5-42e5-b27d-b274ffd781ea</id>
+                        <expressionID>0cb9bd41-367f-40e9-a64f-272e5d60c634</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9b0a5a73-64f2-43a5-85bc-bd6b49d1b3fc</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f7cbefa9-cd69-4fe0-8089-8bac82fa4932</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>b15f29c2-6e79-4d5f-a50a-5a1d792864d6</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b15f29c2-6e79-4d5f-a50a-5a1d792864d6</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtbaseData</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0cb9bd41-367f-40e9-a64f-272e5d60c634</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>13736ede-5729-4d64-a036-6be1d6499fb2</id>
+            <name>CardRelation_baseDataName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.publicdata.app.CardRelationRuleSet].actions.action[CardRelation_baseDataName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.publicdata.app.CardRelationRuleSet].actions.action[CardRelation_baseDataName_ActionInfo].description</description>
+            <expressionID>8b44afe5-9046-46d0-a98e-dedcf79256b3</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>CardRelation_baseDataName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.publicdata.app.CardRelationRuleSet].rules.conditionRule[CardRelation_baseDataName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.publicdata.app.CardRelationRuleSet].rules.conditionRule[CardRelation_baseDataName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="13736ede-5729-4d64-a036-6be1d6499fb2" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.publicdata.app.CardRelationRuleSet].actions.action[CardRelation_baseDataName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.publicdata.app.CardRelationRuleSet].actions.action[CardRelation_baseDataName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.publicdata.app.CardRelationRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.publicdata.app.CardRelationRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.publicdata.app.CardRelationRuleSet].rules.conditionRule[CardRelation_baseDataName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.publicdata.app.CardRelationRuleSet].rules.conditionRule[CardRelation_baseDataName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.publicdata.app.CardRelationRuleSet].rules.conditionRule[CardRelation_baseDataName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="baseData" />
+            <lang locale="zh_CN" value="baseData" />
+            <lang locale="zh_TW" value="baseData" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.publicdata.app.CardRelationRuleSet].rules.conditionRule[CardRelation_baseDataName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

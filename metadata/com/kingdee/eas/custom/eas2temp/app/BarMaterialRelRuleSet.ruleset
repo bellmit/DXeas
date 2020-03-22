@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.eas2temp.app</package>
+    <name>BarMaterialRelRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.eas2temp.app.BarMaterialRelRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.eas2temp.app.BarMaterialRelRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>92cd486a-f924-435c-95af-f4e2c6c50cba</id>
+            <parentID />
+            <source>easMaterialName=easMaterial.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>fed3de06-709a-47b6-95f2-deaf5337ce7d</id>
+            <parentID>92cd486a-f924-435c-95af-f4e2c6c50cba</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>1a30801a-5512-4f77-90c6-33695b3a5fc3</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1a30801a-5512-4f77-90c6-33695b3a5fc3</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txteasMaterialName</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>684637bc-9a25-48a4-ad3e-542cd568ca31</id>
+            <parentID>92cd486a-f924-435c-95af-f4e2c6c50cba</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>2c3cf1df-c82c-480e-83e3-e5c598602d87</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>c538cb2b-069f-4bd2-a698-1a718e117cf8</id>
+                        <expressionID>a8fee69f-2b44-4e21-b4f0-bb6781d8f976</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>f7b2d51a-7124-4aaf-8eaa-bbb7fa3b5f87</id>
+                        <expressionID>aa3e9655-383a-4c0c-b39b-f98292004c00</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2c3cf1df-c82c-480e-83e3-e5c598602d87</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a8fee69f-2b44-4e21-b4f0-bb6781d8f976</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>c02c15ab-b405-4cbb-9a72-348f698107b2</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c02c15ab-b405-4cbb-9a72-348f698107b2</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmteasMaterial</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>aa3e9655-383a-4c0c-b39b-f98292004c00</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>a1f54af9-00cb-4773-9156-aa10ce1a3420</id>
+            <name>MaterialBarRel_easMaterialName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.eas2temp.app.BarMaterialRelRuleSet].actions.action[MaterialBarRel_easMaterialName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.eas2temp.app.BarMaterialRelRuleSet].actions.action[MaterialBarRel_easMaterialName_ActionInfo].description</description>
+            <expressionID>92cd486a-f924-435c-95af-f4e2c6c50cba</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>MaterialBarRel_easMaterialName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.eas2temp.app.BarMaterialRelRuleSet].rules.conditionRule[MaterialBarRel_easMaterialName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.eas2temp.app.BarMaterialRelRuleSet].rules.conditionRule[MaterialBarRel_easMaterialName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="a1f54af9-00cb-4773-9156-aa10ce1a3420" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.eas2temp.app.BarMaterialRelRuleSet].actions.action[MaterialBarRel_easMaterialName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.eas2temp.app.BarMaterialRelRuleSet].actions.action[MaterialBarRel_easMaterialName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.eas2temp.app.BarMaterialRelRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.eas2temp.app.BarMaterialRelRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.eas2temp.app.BarMaterialRelRuleSet].rules.conditionRule[MaterialBarRel_easMaterialName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.eas2temp.app.BarMaterialRelRuleSet].rules.conditionRule[MaterialBarRel_easMaterialName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.eas2temp.app.BarMaterialRelRuleSet].rules.conditionRule[MaterialBarRel_easMaterialName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="easMaterial" />
+            <lang locale="zh_CN" value="easMaterial" />
+            <lang locale="zh_TW" value="easMaterial" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.eas2temp.app.BarMaterialRelRuleSet].rules.conditionRule[MaterialBarRel_easMaterialName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

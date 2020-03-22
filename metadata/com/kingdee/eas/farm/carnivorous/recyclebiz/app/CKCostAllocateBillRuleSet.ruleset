@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.carnivorous.recyclebiz.app</package>
+    <name>CKCostAllocateBillRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>386b3b2f-adde-40a2-8e5a-d4cc7a78a27a</id>
+            <parentID />
+            <source>PeriodEntry.accountViewName=PeriodEntry.accountViewNum.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>b133ae07-17c5-455c-a9ca-49017cc90d06</id>
+            <parentID>386b3b2f-adde-40a2-8e5a-d4cc7a78a27a</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>d990ff3c-646c-400b-84d8-f2f91e6826a3</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d990ff3c-646c-400b-84d8-f2f91e6826a3</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPeriodEntry.getCell(rowIndex,"accountViewName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d2ca8671-7a3d-4659-b0af-23a0e1fb092a</id>
+            <parentID>386b3b2f-adde-40a2-8e5a-d4cc7a78a27a</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>e99d668b-4e58-4d96-aa5e-040e02a1ccd7</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>a1f416f9-ff4d-4914-b049-1518ac2adeca</id>
+                        <expressionID>207f4196-6593-42d8-ba55-ee74196fbede</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>7e755bce-8e19-41a8-878d-b51f1fc61c85</id>
+                        <expressionID>4ded0f87-dd60-4cef-ab3b-543dc9c97bd4</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e99d668b-4e58-4d96-aa5e-040e02a1ccd7</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>207f4196-6593-42d8-ba55-ee74196fbede</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>0e37adee-588b-4c1f-99b6-5b1defd9c58e</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0e37adee-588b-4c1f-99b6-5b1defd9c58e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtPeriodEntry.getCell(rowIndex,"accountViewNum")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4ded0f87-dd60-4cef-ab3b-543dc9c97bd4</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>f6586e7f-89e7-428c-b9a4-8c91fbe7f597</id>
+            <parentID />
+            <source>PeriodEntry.accountName=PeriodEntry.accountView.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>2c0cb36d-14b9-447e-ae02-0efa935952b4</id>
+            <parentID>f6586e7f-89e7-428c-b9a4-8c91fbe7f597</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>49b50d91-e567-4730-a9c9-81e78c78cd2a</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>49b50d91-e567-4730-a9c9-81e78c78cd2a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtPeriodEntry.getCell(rowIndex,"accountName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>70e4a98d-83fb-4f15-af3a-b09c63ab03d8</id>
+            <parentID>f6586e7f-89e7-428c-b9a4-8c91fbe7f597</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>cdd30a04-4c61-4ff6-8565-8df1c223d882</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>f113a8bd-a9ea-43b8-9d40-6fab1f5adfc2</id>
+                        <expressionID>d45b9778-c8a5-44a4-ba59-15c7cca47970</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>f3e6c0c9-2311-4fd9-a6cb-2252ec3cb97c</id>
+                        <expressionID>a494e201-cc90-4d9f-81c1-cd46721e67e0</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cdd30a04-4c61-4ff6-8565-8df1c223d882</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d45b9778-c8a5-44a4-ba59-15c7cca47970</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>043b827b-c601-4bde-8ce2-28c760e5f590</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>043b827b-c601-4bde-8ce2-28c760e5f590</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtPeriodEntry.getCell(rowIndex,"accountView")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a494e201-cc90-4d9f-81c1-cd46721e67e0</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>e9da81a2-de4d-4c89-a80d-a0cbe468c81b</id>
+            <name>PeriodEntry_accountViewName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillRuleSet].actions.action[PeriodEntry_accountViewName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillRuleSet].actions.action[PeriodEntry_accountViewName_ActionInfo].description</description>
+            <expressionID>386b3b2f-adde-40a2-8e5a-d4cc7a78a27a</expressionID>
+        </action>
+        <action>
+            <id>a6e6d76a-c88e-4bb4-9879-78196efef75f</id>
+            <name>PeriodEntry_accountName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillRuleSet].actions.action[PeriodEntry_accountName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillRuleSet].actions.action[PeriodEntry_accountName_ActionInfo].description</description>
+            <expressionID>f6586e7f-89e7-428c-b9a4-8c91fbe7f597</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>PeriodEntry_accountName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillRuleSet].rules.conditionRule[PeriodEntry_accountName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillRuleSet].rules.conditionRule[PeriodEntry_accountName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="a6e6d76a-c88e-4bb4-9879-78196efef75f" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillRuleSet].actions.action[PeriodEntry_accountName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillRuleSet].actions.action[PeriodEntry_accountName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillRuleSet].actions.action[PeriodEntry_accountViewName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillRuleSet].actions.action[PeriodEntry_accountViewName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillRuleSet].rules.conditionRule[PeriodEntry_accountName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillRuleSet].rules.conditionRule[PeriodEntry_accountName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillRuleSet].rules.conditionRule[PeriodEntry_accountName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="accountView" />
+            <lang locale="zh_CN" value="accountView" />
+            <lang locale="zh_TW" value="accountView" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillRuleSet].rules.conditionRule[PeriodEntry_accountName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.taihe.workshopmanager.app</package>
+    <name>LoadingBillRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.taihe.workshopmanager.app.LoadingBillRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.taihe.workshopmanager.app.LoadingBillRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>b389dbd5-e674-48eb-8016-c38e2f4431b5</id>
+            <parentID />
+            <source>Entry.materialName=Entry.material.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>733afb8c-84e7-40b1-9981-2de8b303b5f2</id>
+            <parentID>b389dbd5-e674-48eb-8016-c38e2f4431b5</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>8f226424-d300-4563-a3a4-22ff635806b0</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8f226424-d300-4563-a3a4-22ff635806b0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"materialName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d20e8f73-4316-4d40-94cc-31556bde9cc6</id>
+            <parentID>b389dbd5-e674-48eb-8016-c38e2f4431b5</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>1f948022-0907-468f-8e17-49547c8858b0</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>d55d21dd-8a25-48eb-ad61-974ef90b12cf</id>
+                        <expressionID>3191078a-1494-4fb3-a8ee-808c4b2923ef</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>d86b3248-f7e5-4e6b-b0c3-52ef794dddcf</id>
+                        <expressionID>69d8cfd9-4c8d-422e-9d6f-9eb75cf02394</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>1f948022-0907-468f-8e17-49547c8858b0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3191078a-1494-4fb3-a8ee-808c4b2923ef</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>6a0a31ab-d0c0-4de5-912a-e50642687174</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6a0a31ab-d0c0-4de5-912a-e50642687174</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntry.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>69d8cfd9-4c8d-422e-9d6f-9eb75cf02394</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>e6b9d007-72f0-4344-a8f2-c750b4caccdc</id>
+            <parentID />
+            <source>Entry.model=Entry.material.model</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>5be75b14-9451-44d5-abc7-326dc6ad6818</id>
+            <parentID>e6b9d007-72f0-4344-a8f2-c750b4caccdc</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>4934f7d6-1111-4d93-a209-81beaad7cf5b</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4934f7d6-1111-4d93-a209-81beaad7cf5b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"model")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>135da489-aec1-4989-b1a8-8d075c2915c4</id>
+            <parentID>e6b9d007-72f0-4344-a8f2-c750b4caccdc</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>e108315c-6293-4089-a999-a129fa39ded2</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>e2f9ff2e-7ae0-4a77-8846-7680f4b67b44</id>
+                        <expressionID>dde8df1a-04b8-47a9-9033-f9c78be264a2</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>79494018-0bb0-4b4e-8993-13d5107d2283</id>
+                        <expressionID>c83f132d-5542-4237-a26c-14682610b03e</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e108315c-6293-4089-a999-a129fa39ded2</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>dde8df1a-04b8-47a9-9033-f9c78be264a2</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>369819f6-4309-48bf-80f6-5c6fafb7eb72</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>369819f6-4309-48bf-80f6-5c6fafb7eb72</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntry.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c83f132d-5542-4237-a26c-14682610b03e</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>model</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>6b0a213e-a360-4ae2-ace8-a647b50f50a3</id>
+            <name>Entry_materialName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.workshopmanager.app.LoadingBillRuleSet].actions.action[Entry_materialName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.workshopmanager.app.LoadingBillRuleSet].actions.action[Entry_materialName_ActionInfo].description</description>
+            <expressionID>b389dbd5-e674-48eb-8016-c38e2f4431b5</expressionID>
+        </action>
+        <action>
+            <id>ed8956c6-0f9f-4e5f-91bc-ec0cc8c63a13</id>
+            <name>Entry_model_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.workshopmanager.app.LoadingBillRuleSet].actions.action[Entry_model_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.workshopmanager.app.LoadingBillRuleSet].actions.action[Entry_model_ActionInfo].description</description>
+            <expressionID>e6b9d007-72f0-4344-a8f2-c750b4caccdc</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>Entry_materialName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.workshopmanager.app.LoadingBillRuleSet].rules.conditionRule[Entry_materialName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.workshopmanager.app.LoadingBillRuleSet].rules.conditionRule[Entry_materialName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="6b0a213e-a360-4ae2-ace8-a647b50f50a3" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>Entry_model_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.taihe.workshopmanager.app.LoadingBillRuleSet].rules.conditionRule[Entry_model_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.taihe.workshopmanager.app.LoadingBillRuleSet].rules.conditionRule[Entry_model_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="ed8956c6-0f9f-4e5f-91bc-ec0cc8c63a13" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.workshopmanager.app.LoadingBillRuleSet].actions.action[Entry_materialName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.workshopmanager.app.LoadingBillRuleSet].actions.action[Entry_materialName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.workshopmanager.app.LoadingBillRuleSet].actions.action[Entry_model_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.workshopmanager.app.LoadingBillRuleSet].actions.action[Entry_model_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.workshopmanager.app.LoadingBillRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.workshopmanager.app.LoadingBillRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.workshopmanager.app.LoadingBillRuleSet].rules.conditionRule[Entry_materialName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.workshopmanager.app.LoadingBillRuleSet].rules.conditionRule[Entry_materialName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.workshopmanager.app.LoadingBillRuleSet].rules.conditionRule[Entry_materialName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="material" />
+            <lang locale="zh_CN" value="material" />
+            <lang locale="zh_TW" value="material" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.workshopmanager.app.LoadingBillRuleSet].rules.conditionRule[Entry_materialName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.workshopmanager.app.LoadingBillRuleSet].rules.conditionRule[Entry_model_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.workshopmanager.app.LoadingBillRuleSet].rules.conditionRule[Entry_model_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.workshopmanager.app.LoadingBillRuleSet].rules.conditionRule[Entry_model_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="material" />
+            <lang locale="zh_CN" value="material" />
+            <lang locale="zh_TW" value="material" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.taihe.workshopmanager.app.LoadingBillRuleSet].rules.conditionRule[Entry_model_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

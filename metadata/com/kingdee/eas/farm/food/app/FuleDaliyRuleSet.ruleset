@@ -1,0 +1,2335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.food.app</package>
+    <name>FuleDaliyRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>ce20418a-04e0-4662-8972-dce1ca937152</id>
+            <parentID />
+            <source>Entrys.materialName=Entrys.material.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>8705cd19-77e9-4d96-a29a-3196976857eb</id>
+            <parentID>ce20418a-04e0-4662-8972-dce1ca937152</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>9565d357-6b21-4994-964d-228c73100d92</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9565d357-6b21-4994-964d-228c73100d92</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"materialName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ad5a3d0d-f898-4872-a798-8fa89df0c7e8</id>
+            <parentID>ce20418a-04e0-4662-8972-dce1ca937152</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>d38866b5-ca61-40fd-b2d3-d0bcc96a2c10</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>2a017622-d8c6-42a3-86d5-c5e1355ce247</id>
+                        <expressionID>4b4f0de7-b6ec-45a0-8e56-26b228303580</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>48f2c995-0d27-482b-ac85-dd40587b98b2</id>
+                        <expressionID>6ef6265a-a476-44f1-986f-1ee0b442d87d</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d38866b5-ca61-40fd-b2d3-d0bcc96a2c10</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4b4f0de7-b6ec-45a0-8e56-26b228303580</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>43638f7e-40e1-4f46-b01b-5f411b08d6e0</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>43638f7e-40e1-4f46-b01b-5f411b08d6e0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6ef6265a-a476-44f1-986f-1ee0b442d87d</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>4f1045a8-ce8a-4acb-a73c-4c7ff1d0645c</id>
+            <parentID />
+            <source>Entrys.model=Entrys.material.model</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>b8cfcaf9-6258-4f20-b2a3-64882aac3768</id>
+            <parentID>4f1045a8-ce8a-4acb-a73c-4c7ff1d0645c</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>aae88cd0-fd8a-4226-ba97-8a2aaf0fd021</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>aae88cd0-fd8a-4226-ba97-8a2aaf0fd021</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"model")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>16a8061c-9534-4ad3-84c3-8d8f7fcb1554</id>
+            <parentID>4f1045a8-ce8a-4acb-a73c-4c7ff1d0645c</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>13d29aeb-95fa-4d17-b1f3-a2949724d5bd</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>10e97a86-9048-46a7-9d1d-b6020b09194b</id>
+                        <expressionID>cede43dd-a03c-45dd-b409-e1e6e70649ab</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>e316c1c0-cc9e-4ab8-baa3-007e386cb851</id>
+                        <expressionID>a987f683-305b-48a4-a940-579584c124ea</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>13d29aeb-95fa-4d17-b1f3-a2949724d5bd</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cede43dd-a03c-45dd-b409-e1e6e70649ab</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>8958bb9f-fe1c-43d5-85d9-03c96dca532f</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8958bb9f-fe1c-43d5-85d9-03c96dca532f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a987f683-305b-48a4-a940-579584c124ea</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>model</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>452684e0-e28d-4865-b0c2-0dc8712ca2bb</id>
+            <parentID />
+            <source>Entrys.unit = Entrys.material.baseUnit</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>fc80858c-b69c-41ce-a5c5-896030c88b9b</id>
+            <parentID>452684e0-e28d-4865-b0c2-0dc8712ca2bb</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType />
+            <value />
+            <property>
+                <ownerID>28769a69-8787-43c8-8775-78738b4881ac</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>28769a69-8787-43c8-8775-78738b4881ac</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"unit")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b25dde7f-9197-4158-99a6-3583e0aa6eeb</id>
+            <parentID>452684e0-e28d-4865-b0c2-0dc8712ca2bb</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType />
+            <value />
+            <method>
+                <ownerID>9cb72b0b-f130-4fcb-9103-ba1b81a71f1f</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>10c5103a-d00f-4a6a-9ddc-6e1164f6fef5</id>
+                        <expressionID>a4de7f97-3161-4d53-90b3-316d855cc485</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>da7947a6-68ba-49dc-8cdf-0326f785e862</id>
+                        <expressionID>242903b2-10d1-48b9-b73c-f9af36031703</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9cb72b0b-f130-4fcb-9103-ba1b81a71f1f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a4de7f97-3161-4d53-90b3-316d855cc485</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>4b8c34a0-3ce8-425d-848f-fa8335835302</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4b8c34a0-3ce8-425d-848f-fa8335835302</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>242903b2-10d1-48b9-b73c-f9af36031703</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>baseUnit</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fd4e2e7d-9feb-4aaf-bd94-4c38a33965b8</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>61d11082-6e6c-404a-9589-de0c8e750eae</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>69aa73f1-71d7-44f8-8707-18bd0707f72e</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>2f93e9d2-af76-4cc9-813c-3476c4d0439f</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>7325f675-8919-4f23-8725-23350a427ad9</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>f0f757a0-b3ef-4353-9c29-c153201fbfc9</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>fa1a1276-c479-42b1-aa20-2eeab5040261</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>a665583a-0667-4173-8708-768d7d19a829</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>70fcb9ae-c638-49b2-9759-0b283758c275</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>887b64fc-b6ec-45fd-9179-9b832b9912f1</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>43f4ee13-3ff0-461b-8a0d-3c01c7541c52</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>90a23574-929b-4f2d-b6a3-c54577571156</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>9617ce48-0f3a-4e88-9117-d758fa22fdab</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>64c75c87-a358-428a-95f2-66d3123b2413</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <groupExpression>
+            <id>b750b5d7-6ccd-4a86-8c6d-2e316bcbe171</id>
+            <parentID />
+            <source>[Entrys.allAmount] = [Entrys.taxPrice] * [Entrys.qty]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>959b9a0b-fa22-4cd5-824e-8b9c144a7581</id>
+            <parentID>b750b5d7-6ccd-4a86-8c6d-2e316bcbe171</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>da7d2c73-5c4d-4dda-ab65-7b2b4ef74615</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>da7d2c73-5c4d-4dda-ab65-7b2b4ef74615</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"allAmount")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>a9206aca-43a5-477e-86e8-b06ffb460bf3</id>
+            <parentID>b750b5d7-6ccd-4a86-8c6d-2e316bcbe171</parentID>
+            <source />
+            <operator>*</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>4baa45eb-ed98-4cf3-9e4d-82549b1e9fc4</id>
+            <parentID>a9206aca-43a5-477e-86e8-b06ffb460bf3</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>589742a1-a0f4-4135-a8e2-9b673c584347</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>589742a1-a0f4-4135-a8e2-9b673c584347</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"taxPrice")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ab2ed263-9d1d-4545-837b-0b6767695288</id>
+            <parentID>a9206aca-43a5-477e-86e8-b06ffb460bf3</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>ae9f85f9-80d0-4635-a3a2-c6cb56b415c3</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ae9f85f9-80d0-4635-a3a2-c6cb56b415c3</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"qty")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>befcc828-53d3-49e9-b7ad-0d05f0286c37</id>
+            <parentID />
+            <source>[Entrys.amount] = [Entrys.price] * [Entrys.qty]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>1f0b21fb-4469-49b8-9a52-fcb124e5d1ff</id>
+            <parentID>befcc828-53d3-49e9-b7ad-0d05f0286c37</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>eafcb8fb-5ddf-481b-a24b-90a8f662a29d</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>eafcb8fb-5ddf-481b-a24b-90a8f662a29d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"amount")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>90c121b1-78a5-4b11-a259-884d15e39f82</id>
+            <parentID>befcc828-53d3-49e9-b7ad-0d05f0286c37</parentID>
+            <source />
+            <operator>*</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>5aeef700-1ede-42b4-924a-f66b24ec20b0</id>
+            <parentID>90c121b1-78a5-4b11-a259-884d15e39f82</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>5880eef4-c9e3-4669-a9c8-71a8deb88b43</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5880eef4-c9e3-4669-a9c8-71a8deb88b43</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"price")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>712a4ddf-0e8a-4bfa-ad73-e3ad0da6ae00</id>
+            <parentID>90c121b1-78a5-4b11-a259-884d15e39f82</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>320ca130-16af-4ee9-9627-f4948a6161c0</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>320ca130-16af-4ee9-9627-f4948a6161c0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"qty")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ff89f0cb-d038-4f5c-ae74-ea3abd795ff5</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>5ea6ec80-70b2-4ff3-ab10-10f77fe44d7c</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <groupExpression>
+            <id>2c3e7e6d-2d57-412b-9c7f-c16fa6bc4c2e</id>
+            <parentID />
+            <source>[Entrys.taxPrice] = [Entrys.price] *(1+ [Entrys.rate] /100)</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>e1de4f86-8da6-458f-a0c9-325d790c2529</id>
+            <parentID>2c3e7e6d-2d57-412b-9c7f-c16fa6bc4c2e</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>67e8908c-06be-47b4-aeaa-c19f57d5ad8e</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>67e8908c-06be-47b4-aeaa-c19f57d5ad8e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"taxPrice")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>f0492e43-822a-4fb0-9463-1ee30d79521f</id>
+            <parentID>2c3e7e6d-2d57-412b-9c7f-c16fa6bc4c2e</parentID>
+            <source />
+            <operator>*</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>91ee995e-a3b6-47df-9217-a2966aef0a32</id>
+            <parentID>f0492e43-822a-4fb0-9463-1ee30d79521f</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>c835336f-04f1-43d1-ab45-7051f570a1ad</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c835336f-04f1-43d1-ab45-7051f570a1ad</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"price")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>1b6503e2-5bea-486b-b657-25b6b73bbf6c</id>
+            <parentID>f0492e43-822a-4fb0-9463-1ee30d79521f</parentID>
+            <source />
+            <operator>+</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>75e2f46c-d04b-4ce9-b942-2aa16236ccd2</id>
+            <parentID>1b6503e2-5bea-486b-b657-25b6b73bbf6c</parentID>
+            <source />
+            <type>CONST</type>
+            <valueType>Int</valueType>
+            <value>1</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>5aa08932-f691-479d-8ca9-736c1c1e6b67</id>
+            <parentID>1b6503e2-5bea-486b-b657-25b6b73bbf6c</parentID>
+            <source />
+            <operator>/</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>db68db71-8015-402d-a398-84d67a3e9de7</id>
+            <parentID>5aa08932-f691-479d-8ca9-736c1c1e6b67</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>bdc3e9d5-7b02-486d-8e0a-1e2ad804decb</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bdc3e9d5-7b02-486d-8e0a-1e2ad804decb</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"rate")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>df07e6cf-aa26-4841-b1ad-0980a47a8f4a</id>
+            <parentID>5aa08932-f691-479d-8ca9-736c1c1e6b67</parentID>
+            <source />
+            <type>CONST</type>
+            <valueType>Int</valueType>
+            <value>100</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>8350a3d7-69c8-4a98-badf-c76b85658d73</id>
+            <parentID />
+            <source>[Entrys.allAmount] = [Entrys.taxPrice] * [Entrys.qty]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>fde002a6-8193-4f66-9101-34acf9ad1665</id>
+            <parentID>8350a3d7-69c8-4a98-badf-c76b85658d73</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>f72199eb-771b-4859-970c-c21b7fc4511d</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f72199eb-771b-4859-970c-c21b7fc4511d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"allAmount")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>cd88ae6d-1874-4445-be08-9a2d8deb456b</id>
+            <parentID>8350a3d7-69c8-4a98-badf-c76b85658d73</parentID>
+            <source />
+            <operator>*</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>5b75a0af-5ffb-45a1-8e59-34f0508dd09f</id>
+            <parentID>cd88ae6d-1874-4445-be08-9a2d8deb456b</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>9b79fd10-766f-4969-b819-bc13aa2644cc</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9b79fd10-766f-4969-b819-bc13aa2644cc</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"taxPrice")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b4437f66-a960-4872-8593-7d28d77a962b</id>
+            <parentID>cd88ae6d-1874-4445-be08-9a2d8deb456b</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>88a99957-0beb-4150-8d11-7de310421d84</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>88a99957-0beb-4150-8d11-7de310421d84</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"qty")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>99f6bc47-8865-4918-85b1-c481ce6a5da4</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <groupExpression>
+            <id>b5546d74-89b2-4f3b-bc77-6e1f64e58da4</id>
+            <parentID />
+            <source>[Entrys.taxAmount] = [Entrys.allAmount] - [Entrys.amount]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>2c147a32-4758-48ec-a158-ec44a6891337</id>
+            <parentID>b5546d74-89b2-4f3b-bc77-6e1f64e58da4</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>f1416f34-45c5-4d5f-85a3-fc10c9ba00f0</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f1416f34-45c5-4d5f-85a3-fc10c9ba00f0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"taxAmount")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>36a76277-a010-4189-a92c-33ad21ef49d9</id>
+            <parentID>b5546d74-89b2-4f3b-bc77-6e1f64e58da4</parentID>
+            <source />
+            <operator>-</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>f5c4455d-f3a6-4a3f-ac67-f0f8bd54ab51</id>
+            <parentID>36a76277-a010-4189-a92c-33ad21ef49d9</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>5132aa65-90f9-4cf5-9867-7a9426c388cf</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5132aa65-90f9-4cf5-9867-7a9426c388cf</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"allAmount")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3f2f205a-af76-40a1-953c-89186e2d4d22</id>
+            <parentID>36a76277-a010-4189-a92c-33ad21ef49d9</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>dc2377dd-d33c-4ef4-9a45-80f90efdb5e2</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>dc2377dd-d33c-4ef4-9a45-80f90efdb5e2</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"amount")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>ca25d5dc-ab94-497a-acc1-a1634fc04582</id>
+            <parentID />
+            <source>[Entrys.price] = [Entrys.taxPrice] /(1+ [Entrys.rate] /100)</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>dd3a889b-addd-4c59-add1-ee587877b2b6</id>
+            <parentID>ca25d5dc-ab94-497a-acc1-a1634fc04582</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>70c4cd05-5e11-4445-8564-384e5d810e7c</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>70c4cd05-5e11-4445-8564-384e5d810e7c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"price")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>47b5deb2-0b07-4e59-b678-3d7bb98d4c35</id>
+            <parentID>ca25d5dc-ab94-497a-acc1-a1634fc04582</parentID>
+            <source />
+            <operator>/</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>99237571-9920-496c-b8e1-ff236180a062</id>
+            <parentID>47b5deb2-0b07-4e59-b678-3d7bb98d4c35</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>7607b32f-e35d-4532-9636-895fca570106</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7607b32f-e35d-4532-9636-895fca570106</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"taxPrice")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>19d866fa-5220-4a23-8814-ff228e3a875e</id>
+            <parentID>47b5deb2-0b07-4e59-b678-3d7bb98d4c35</parentID>
+            <source />
+            <operator>+</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>f3e56ffe-4622-48f5-acc9-6225e75b8196</id>
+            <parentID>19d866fa-5220-4a23-8814-ff228e3a875e</parentID>
+            <source />
+            <type>CONST</type>
+            <valueType>Int</valueType>
+            <value>1</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>1aea7a84-6bbc-4979-a6d0-69c120bb255c</id>
+            <parentID>19d866fa-5220-4a23-8814-ff228e3a875e</parentID>
+            <source />
+            <operator>/</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>f428975d-3c27-40f2-b593-06df332fe5c6</id>
+            <parentID>1aea7a84-6bbc-4979-a6d0-69c120bb255c</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>13016129-e725-4d21-aee7-9e472176c520</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>13016129-e725-4d21-aee7-9e472176c520</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"rate")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>070c364a-54ed-4af6-abc3-cee05ea64ff6</id>
+            <parentID>1aea7a84-6bbc-4979-a6d0-69c120bb255c</parentID>
+            <source />
+            <type>CONST</type>
+            <valueType>Int</valueType>
+            <value>100</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2c7d1168-23f9-460a-b028-6fc14360966e</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>8cf6ac88-9c48-48cf-9a83-b428c6d79559</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>895b6e97-b02f-4ee3-ac20-9c2373732ec0</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>f1ce342f-7cdd-4f10-bd98-8599f66505d6</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <groupExpression>
+            <id>9c50471f-94c2-4b13-bb4f-f781dbb7932e</id>
+            <parentID />
+            <source>[Entrys.assistUnitWeight] = [Entrys.qty] / [Entrys.assistQty]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>8ce76f0c-e98d-4d37-b3f8-2c10fca4a31b</id>
+            <parentID>9c50471f-94c2-4b13-bb4f-f781dbb7932e</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>44e377fd-584e-4a55-8f3a-111506e5a83d</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>44e377fd-584e-4a55-8f3a-111506e5a83d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"assistUnitWeight")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>6d51cb68-2f1d-4d92-b2e0-06017d24d923</id>
+            <parentID>9c50471f-94c2-4b13-bb4f-f781dbb7932e</parentID>
+            <source />
+            <operator>/</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>d1db8483-0e12-459a-8066-8134dd35a127</id>
+            <parentID>6d51cb68-2f1d-4d92-b2e0-06017d24d923</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>6b0e1d63-fc8f-48a6-807b-cd774d0a731a</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6b0e1d63-fc8f-48a6-807b-cd774d0a731a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"qty")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d3756bd6-f7f0-4100-81f9-e2756dc1d873</id>
+            <parentID>6d51cb68-2f1d-4d92-b2e0-06017d24d923</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>e84c1f2b-ee55-4271-a0f0-90146d05a48d</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e84c1f2b-ee55-4271-a0f0-90146d05a48d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"assistQty")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>41f839b0-e105-4148-9c79-74bd0d8b587f</id>
+            <parentID />
+            <source>[Entrys.assistQty] = [Entrys.qty] / [Entrys.assistUnitWeight]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>2c6dc471-f991-4811-8deb-bf09b4f5d3ef</id>
+            <parentID>41f839b0-e105-4148-9c79-74bd0d8b587f</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>7eae3d0c-60d6-445a-a3d0-39ecd5351ec2</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7eae3d0c-60d6-445a-a3d0-39ecd5351ec2</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"assistQty")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>3731f68b-5f73-450a-9d4b-fd47822495c4</id>
+            <parentID>41f839b0-e105-4148-9c79-74bd0d8b587f</parentID>
+            <source />
+            <operator>/</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>9785a872-8116-454b-b186-b20435fbe71a</id>
+            <parentID>3731f68b-5f73-450a-9d4b-fd47822495c4</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>0f892332-285b-42f5-bdbb-3e182155b012</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0f892332-285b-42f5-bdbb-3e182155b012</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"qty")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f5a9c39e-0915-4215-8a05-367d4ab55bd9</id>
+            <parentID>3731f68b-5f73-450a-9d4b-fd47822495c4</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>62322c44-72ef-4707-adf4-65131a29fa60</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>62322c44-72ef-4707-adf4-65131a29fa60</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"assistUnitWeight")</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>1af6f5c6-0293-4306-a7d0-4d2f3dfb9783</id>
+            <parentID />
+            <source>[dormElectricity] = [eastHostelElectricity] + [westHostelElectricity]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>212dec47-541e-4388-9015-f0433fbcf59d</id>
+            <parentID>1af6f5c6-0293-4306-a7d0-4d2f3dfb9783</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>937b7339-1420-401a-9a91-082d0049d8bd</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>937b7339-1420-401a-9a91-082d0049d8bd</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtdormElectricity</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>ec6f000e-07d4-4dd0-9778-ae7cbef5e95d</id>
+            <parentID>1af6f5c6-0293-4306-a7d0-4d2f3dfb9783</parentID>
+            <source />
+            <operator>+</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>addb6b8e-fd2f-4464-981b-cde8085c39c1</id>
+            <parentID>ec6f000e-07d4-4dd0-9778-ae7cbef5e95d</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>f80e4dcf-b24f-4a0a-ac87-d618c4a8d34f</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f80e4dcf-b24f-4a0a-ac87-d618c4a8d34f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txteastHostelElectricity</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4feaf632-87ca-45e8-ab38-042d9835bebe</id>
+            <parentID>ec6f000e-07d4-4dd0-9778-ae7cbef5e95d</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>ee4fd568-211b-45de-8815-59961dc3c4e8</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ee4fd568-211b-45de-8815-59961dc3c4e8</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtwestHostelElectricity</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>b0bb66b4-bde5-4348-8741-f8cf20629ac3</id>
+            <parentID />
+            <source>[dormElectricity] = [eastHostelElectricity] + [westHostelElectricity]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>2d99f1fb-97eb-4f5f-8a5e-37ad9ac5ec24</id>
+            <parentID>b0bb66b4-bde5-4348-8741-f8cf20629ac3</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>d78c7046-a084-4f42-b3e4-29f1c6db9630</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d78c7046-a084-4f42-b3e4-29f1c6db9630</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtdormElectricity</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>2c54ff32-ef80-47b3-96b0-aa00ca26c1a0</id>
+            <parentID>b0bb66b4-bde5-4348-8741-f8cf20629ac3</parentID>
+            <source />
+            <operator>+</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>8f7d4427-03ee-4659-9780-d3ad23e39a7d</id>
+            <parentID>2c54ff32-ef80-47b3-96b0-aa00ca26c1a0</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>b6a0c200-8c43-4c2b-9983-8977e9a44e58</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b6a0c200-8c43-4c2b-9983-8977e9a44e58</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txteastHostelElectricity</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cb74994a-4d2f-4845-b865-aeac601eaf81</id>
+            <parentID>2c54ff32-ef80-47b3-96b0-aa00ca26c1a0</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>cf171445-b1aa-4111-9735-f6be643c4784</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cf171445-b1aa-4111-9735-f6be643c4784</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtwestHostelElectricity</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0acd38d2-50c7-4b93-8018-ab0ee4812d2c</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <simpleExpression>
+            <id>7b0f1a9a-991a-402f-a92a-a915e6f9b502</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+        <groupExpression>
+            <id>5aec628c-5fc4-41e9-8f1e-bbdb395b7f58</id>
+            <parentID />
+            <source>[waterVolume] = [groundWater] + [cityWater]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>1f4f7078-932e-40d7-96c4-d18ec8f67880</id>
+            <parentID>5aec628c-5fc4-41e9-8f1e-bbdb395b7f58</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>31c85c23-50fd-4700-8cae-779fd18825e0</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>31c85c23-50fd-4700-8cae-779fd18825e0</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtwaterVolume</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>5324844e-54f3-4eba-ad1d-ee707cfd732a</id>
+            <parentID>5aec628c-5fc4-41e9-8f1e-bbdb395b7f58</parentID>
+            <source />
+            <operator>+</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>10f5f92c-d47f-47fc-a671-dd278e6ed1f7</id>
+            <parentID>5324844e-54f3-4eba-ad1d-ee707cfd732a</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>745795e6-7b3c-4f0d-9d63-bb755a6498ea</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>745795e6-7b3c-4f0d-9d63-bb755a6498ea</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtgroundWater</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>44c774c3-a9c3-4356-8a97-079c06d6bf28</id>
+            <parentID>5324844e-54f3-4eba-ad1d-ee707cfd732a</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>9f45b936-282e-46e1-8db2-1c0817cc76dd</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9f45b936-282e-46e1-8db2-1c0817cc76dd</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtcityWater</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>2b174e8f-6b4c-4fdd-835c-7cc89c8961fa</id>
+            <parentID />
+            <source>[waterVolume] = [groundWater] + [cityWater]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>e9b7cbd1-d709-433f-a447-6973819ad630</id>
+            <parentID>2b174e8f-6b4c-4fdd-835c-7cc89c8961fa</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>127bfc17-4cb5-409d-bd8a-300aca885019</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>127bfc17-4cb5-409d-bd8a-300aca885019</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtwaterVolume</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>9ce94267-b6c6-46bc-9a9d-2642960508ef</id>
+            <parentID>2b174e8f-6b4c-4fdd-835c-7cc89c8961fa</parentID>
+            <source />
+            <operator>+</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>c493a025-78c3-4355-b960-80382e71a66f</id>
+            <parentID>9ce94267-b6c6-46bc-9a9d-2642960508ef</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>9397e669-4ee3-41e1-9dd3-d4b4dc196d28</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9397e669-4ee3-41e1-9dd3-d4b4dc196d28</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtgroundWater</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>14835d34-2316-4370-af7d-a9ed2686d8fd</id>
+            <parentID>9ce94267-b6c6-46bc-9a9d-2642960508ef</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>cf08ffe6-e4fe-460a-90f9-e01856a5c792</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cf08ffe6-e4fe-460a-90f9-e01856a5c792</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtcityWater</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5a6c8909-f875-4a36-8ac1-5f546770cf5a</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>9719d724-2372-4ccb-b761-1043ed935106</id>
+            <name>Entrys_materialName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[Entrys_materialName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[Entrys_materialName_ActionInfo].description</description>
+            <expressionID>ce20418a-04e0-4662-8972-dce1ca937152</expressionID>
+        </action>
+        <action>
+            <id>162f05a8-53b5-4c3c-b34b-53d1a706c5e9</id>
+            <name>Entrys_model_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[Entrys_model_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[Entrys_model_ActionInfo].description</description>
+            <expressionID>4f1045a8-ce8a-4acb-a73c-4c7ff1d0645c</expressionID>
+        </action>
+        <action>
+            <id>8ce84504-b99b-4208-a3e6-91daade90a3b</id>
+            <name>CIHO5CM5</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHO5CM5].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHO5CM5].description</description>
+            <expressionID>452684e0-e28d-4865-b0c2-0dc8712ca2bb</expressionID>
+        </action>
+        <action>
+            <id>ba27daa5-6ac1-4dd5-befb-9dd70045059c</id>
+            <name>CIHOCGJM</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOCGJM].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOCGJM].description</description>
+            <expressionID>fd4e2e7d-9feb-4aaf-bd94-4c38a33965b8</expressionID>
+        </action>
+        <action>
+            <id>a1127748-82c9-4fd1-be95-f0f4b6f80d7e</id>
+            <name>CIHODOQV</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHODOQV].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHODOQV].description</description>
+            <expressionID>61d11082-6e6c-404a-9589-de0c8e750eae</expressionID>
+        </action>
+        <action>
+            <id>edfdfc45-3ca7-438f-a4e4-7c4e0cb21f8e</id>
+            <name>CIHOE615</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOE615].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOE615].description</description>
+            <expressionID>69aa73f1-71d7-44f8-8707-18bd0707f72e</expressionID>
+        </action>
+        <action>
+            <id>a813a5cd-2c65-4b10-9fdf-1b09c0b80194</id>
+            <name>CIHOFP9$</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOFP9$].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOFP9$].description</description>
+            <expressionID>2f93e9d2-af76-4cc9-813c-3476c4d0439f</expressionID>
+        </action>
+        <action>
+            <id>d51e0a11-baf7-456d-8df3-42399c058242</id>
+            <name>CIHOGODU</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOGODU].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOGODU].description</description>
+            <expressionID>7325f675-8919-4f23-8725-23350a427ad9</expressionID>
+        </action>
+        <action>
+            <id>717136fb-0782-4926-a3f5-51f4acf0ae73</id>
+            <name>CIHOHL9Z</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOHL9Z].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOHL9Z].description</description>
+            <expressionID>f0f757a0-b3ef-4353-9c29-c153201fbfc9</expressionID>
+        </action>
+        <action>
+            <id>228cc175-5cf1-461d-b07b-6a06819df64f</id>
+            <name>CIHOGTX0</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOGTX0].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOGTX0].description</description>
+            <expressionID>fa1a1276-c479-42b1-aa20-2eeab5040261</expressionID>
+        </action>
+        <action>
+            <id>d5b88155-f0bd-4289-aa54-00fcbbd53a8c</id>
+            <name>CIHOI_Y2</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOI_Y2].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOI_Y2].description</description>
+            <expressionID>a665583a-0667-4173-8708-768d7d19a829</expressionID>
+        </action>
+        <action>
+            <id>f38d246b-55b1-412d-87db-70c647be8102</id>
+            <name>CIHOJZ82</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOJZ82].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOJZ82].description</description>
+            <expressionID>70fcb9ae-c638-49b2-9759-0b283758c275</expressionID>
+        </action>
+        <action>
+            <id>9fa918f0-3819-4569-b4a9-ac957bb45ce0</id>
+            <name>CIHOK1P0</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOK1P0].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOK1P0].description</description>
+            <expressionID>887b64fc-b6ec-45fd-9179-9b832b9912f1</expressionID>
+        </action>
+        <action>
+            <id>bc6fc577-1a01-4210-880b-466e86318942</id>
+            <name>CIHOK63L</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOK63L].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOK63L].description</description>
+            <expressionID>43f4ee13-3ff0-461b-8a0d-3c01c7541c52</expressionID>
+        </action>
+        <action>
+            <id>6a67d77d-d2a5-4606-888b-1d41d4fb5267</id>
+            <name>CIHOKQ83</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOKQ83].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOKQ83].description</description>
+            <expressionID>90a23574-929b-4f2d-b6a3-c54577571156</expressionID>
+        </action>
+        <action>
+            <id>cefd9d32-e507-458f-9f4d-d80e6a198e3c</id>
+            <name>CIHOK$4_</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOK$4_].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOK$4_].description</description>
+            <expressionID>9617ce48-0f3a-4e88-9117-d758fa22fdab</expressionID>
+        </action>
+        <action>
+            <id>0e26fe79-c210-4d12-a0e8-95470aa2a6bc</id>
+            <name>CIHOL4VG</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOL4VG].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOL4VG].description</description>
+            <expressionID>64c75c87-a358-428a-95f2-66d3123b2413</expressionID>
+        </action>
+        <action>
+            <id>8df6883e-2c93-4536-bd8b-6d29a6f602bb</id>
+            <name>CIISBG5U</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIISBG5U].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIISBG5U].description</description>
+            <expressionID>b750b5d7-6ccd-4a86-8c6d-2e316bcbe171</expressionID>
+        </action>
+        <action>
+            <id>a5c687a7-f30f-4de0-aaa6-f7f3beb6b10a</id>
+            <name>CIISAR3N</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIISAR3N].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIISAR3N].description</description>
+            <expressionID>befcc828-53d3-49e9-b7ad-0d05f0286c37</expressionID>
+        </action>
+        <action>
+            <id>454c2597-8015-4764-9612-db47122957fc</id>
+            <name>CIIS9RC6</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIIS9RC6].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIIS9RC6].description</description>
+            <expressionID>ff89f0cb-d038-4f5c-ae74-ea3abd795ff5</expressionID>
+        </action>
+        <action>
+            <id>bce64a08-b10a-4e91-b4ff-240f506674ee</id>
+            <name>CIISG27W</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIISG27W].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIISG27W].description</description>
+            <expressionID>5ea6ec80-70b2-4ff3-ab10-10f77fe44d7c</expressionID>
+        </action>
+        <action>
+            <id>2d910312-8c1e-454b-8f0d-31ef1f07fbe6</id>
+            <name>CIHOI_WU</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOI_WU].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOI_WU].description</description>
+            <expressionID>2c3e7e6d-2d57-412b-9c7f-c16fa6bc4c2e</expressionID>
+        </action>
+        <action>
+            <id>f5cb8fbd-2d40-4acd-99ef-76a8ff62747c</id>
+            <name>CIHOCGI8</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOCGI8].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOCGI8].description</description>
+            <expressionID>8350a3d7-69c8-4a98-badf-c76b85658d73</expressionID>
+        </action>
+        <action>
+            <id>c91e96f8-832c-4cb7-be36-ed50b529e2b4</id>
+            <name>CIISNNMY</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIISNNMY].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIISNNMY].description</description>
+            <expressionID>99f6bc47-8865-4918-85b1-c481ce6a5da4</expressionID>
+        </action>
+        <action>
+            <id>96400666-d504-4fb5-b4c8-aeb05453deab</id>
+            <name>CIHOE5$X</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOE5$X].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOE5$X].description</description>
+            <expressionID>b5546d74-89b2-4f3b-bc77-6e1f64e58da4</expressionID>
+        </action>
+        <action>
+            <id>6f035f17-81c4-4ea4-9ed2-c3eb22a445c7</id>
+            <name>CIHOFP8O</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOFP8O].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOFP8O].description</description>
+            <expressionID>ca25d5dc-ab94-497a-acc1-a1634fc04582</expressionID>
+        </action>
+        <action>
+            <id>6f2547b2-6c00-4521-8441-9fd010de9346</id>
+            <name>CIISPTID</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIISPTID].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIISPTID].description</description>
+            <expressionID>2c7d1168-23f9-460a-b028-6fc14360966e</expressionID>
+        </action>
+        <action>
+            <id>1a7e4668-aa5d-4166-9c45-a1b9de672a33</id>
+            <name>CILLS8IH</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CILLS8IH].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CILLS8IH].description</description>
+            <expressionID>8cf6ac88-9c48-48cf-9a83-b428c6d79559</expressionID>
+        </action>
+        <action>
+            <id>b9bb2320-2f37-4e52-b56b-2e10e500c353</id>
+            <name>CILLTW9F</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CILLTW9F].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CILLTW9F].description</description>
+            <expressionID>895b6e97-b02f-4ee3-ac20-9c2373732ec0</expressionID>
+        </action>
+        <action>
+            <id>606d3245-da8d-4a2d-a25e-c0551427a03b</id>
+            <name>CILLUE3U</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CILLUE3U].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CILLUE3U].description</description>
+            <expressionID>f1ce342f-7cdd-4f10-bd98-8599f66505d6</expressionID>
+        </action>
+        <action>
+            <id>4ea42f2e-8fb5-4960-ae97-a6eb4be0773d</id>
+            <name>CILLTZ43</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CILLTZ43].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CILLTZ43].description</description>
+            <expressionID>9c50471f-94c2-4b13-bb4f-f781dbb7932e</expressionID>
+        </action>
+        <action>
+            <id>6e67e5d5-74e1-4b03-8745-1e4e332604cf</id>
+            <name>CIVM287O</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIVM287O].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIVM287O].description</description>
+            <expressionID>41f839b0-e105-4148-9c79-74bd0d8b587f</expressionID>
+        </action>
+        <action>
+            <id>58939e35-8791-467e-bede-59e9255039c4</id>
+            <name>CWXN_W7P</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXN_W7P].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXN_W7P].description</description>
+            <expressionID>1af6f5c6-0293-4306-a7d0-4d2f3dfb9783</expressionID>
+        </action>
+        <action>
+            <id>41d4da36-0bf3-4cf9-835a-6ab0d36cb502</id>
+            <name>CWXNZSK$</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXNZSK$].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXNZSK$].description</description>
+            <expressionID>b0bb66b4-bde5-4348-8741-f8cf20629ac3</expressionID>
+        </action>
+        <action>
+            <id>ab0a571c-23fa-4b11-b383-9474c9c829b4</id>
+            <name>CWXN$KWL</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXN$KWL].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXN$KWL].description</description>
+            <expressionID>0acd38d2-50c7-4b93-8018-ab0ee4812d2c</expressionID>
+        </action>
+        <action>
+            <id>6181c9ec-002f-4199-b719-c8f1859b48f1</id>
+            <name>CWXN$4$D</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXN$4$D].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXN$4$D].description</description>
+            <expressionID>7b0f1a9a-991a-402f-a92a-a915e6f9b502</expressionID>
+        </action>
+        <action>
+            <id>fb32f63f-5c2c-4626-9800-b2fd2ac76aa8</id>
+            <name>CWXN$YT6</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXN$YT6].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXN$YT6].description</description>
+            <expressionID>5aec628c-5fc4-41e9-8f1e-bbdb395b7f58</expressionID>
+        </action>
+        <action>
+            <id>14f75309-8b67-4691-948b-d181dafa8645</id>
+            <name>CWXO0BKT</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXO0BKT].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXO0BKT].description</description>
+            <expressionID>2b174e8f-6b4c-4fdd-835c-7cc89c8961fa</expressionID>
+        </action>
+        <action>
+            <id>42bc09a6-894d-468f-a607-fd411c7b9080</id>
+            <name>CWXN$Y_5</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXN$Y_5].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXN$Y_5].description</description>
+            <expressionID>5a6c8909-f875-4a36-8ac1-5f546770cf5a</expressionID>
+        </action>
+    </actions>
+    <conditions>
+        <baseCondition>
+            <id>f8a613d4-5c43-485c-9c81-6d8b029b81c8</id>
+            <name>CWXO0LO0</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].conditions.baseCondition[CWXO0LO0].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].conditions.baseCondition[CWXO0LO0].description</description>
+            <expressionID />
+        </baseCondition>
+    </conditions>
+    <rules>
+        <conditionRule>
+            <name>FuleDaliyCWXN$J5A</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].rules.conditionRule[FuleDaliyCWXN$J5A].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].rules.conditionRule[FuleDaliyCWXN$J5A].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="41d4da36-0bf3-4cf9-835a-6ab0d36cb502" />
+                </action>
+            </actions>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="ab0a571c-23fa-4b11-b383-9474c9c829b4" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+        <conditionRule>
+            <name>CWXN$6R8</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].rules.conditionRule[CWXN$6R8].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].rules.conditionRule[CWXN$6R8].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="58939e35-8791-467e-bede-59e9255039c4" />
+                </action>
+            </actions>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="6181c9ec-002f-4199-b719-c8f1859b48f1" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+        <conditionRule>
+            <name>CWXO0LN_</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].rules.conditionRule[CWXO0LN_].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].rules.conditionRule[CWXO0LN_].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <condition>
+                <key name="id" value="f8a613d4-5c43-485c-9c81-6d8b029b81c8" />
+            </condition>
+            <actions>
+                <action>
+                    <key name="id" value="14f75309-8b67-4691-948b-d181dafa8645" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>CWXO05OT</name>
+            <alias>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].rules.conditionRule[CWXO05OT].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].rules.conditionRule[CWXO05OT].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="fb32f63f-5c2c-4626-9800-b2fd2ac76aa8" />
+                </action>
+            </actions>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="42bc09a6-894d-468f-a607-fd411c7b9080" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHO5CM5].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHO5CM5].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOCGI8].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算含税金额" />
+            <lang locale="zh_HK" value="計算含稅金額" />
+            <lang locale="zh_TW" value="計算含稅金額" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOCGI8].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOCGJM].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOCGJM].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHODOQV].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHODOQV].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOE5$X].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算税额" />
+            <lang locale="zh_HK" value="計算稅額" />
+            <lang locale="zh_TW" value="計算稅額" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOE5$X].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOE615].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOE615].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOFP8O].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算不含税单价" />
+            <lang locale="zh_HK" value="計算不含稅單價" />
+            <lang locale="zh_TW" value="計算不含稅單價" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOFP8O].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOFP9$].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOFP9$].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOGODU].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOGODU].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOGTX0].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOGTX0].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOHL9Z].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOHL9Z].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOI_WU].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算含税单价" />
+            <lang locale="zh_HK" value="計算含稅單價" />
+            <lang locale="zh_TW" value="計算含稅單價" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOI_WU].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOI_Y2].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOI_Y2].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOJZ82].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOJZ82].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOK$4_].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOK$4_].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOK1P0].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOK1P0].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOK63L].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOK63L].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOKQ83].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOKQ83].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOL4VG].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIHOL4VG].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIIS9RC6].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIIS9RC6].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIISAR3N].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算不含税金额" />
+            <lang locale="zh_HK" value="計算不含稅金額" />
+            <lang locale="zh_TW" value="計算不含稅金額" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIISAR3N].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIISBG5U].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIISBG5U].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIISG27W].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIISG27W].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIISNNMY].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIISNNMY].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIISPTID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIISPTID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CILLS8IH].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CILLS8IH].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CILLTW9F].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CILLTW9F].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CILLTZ43].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算预估单位重量" />
+            <lang locale="zh_HK" value="計算預估單位重量" />
+            <lang locale="zh_TW" value="計算預估單位重量" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CILLTZ43].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CILLUE3U].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CILLUE3U].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIVM287O].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="计算预估只数" />
+            <lang locale="zh_HK" value="計算預估只數" />
+            <lang locale="zh_TW" value="計算預估只數" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CIVM287O].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXN$4$D].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXN$4$D].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXN$KWL].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXN$KWL].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXN$YT6].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXN$YT6].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXN$Y_5].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXN$Y_5].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXNZSK$].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXNZSK$].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXN_W7P].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXN_W7P].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXO0BKT].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[CWXO0BKT].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[Entrys_materialName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[Entrys_materialName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[Entrys_model_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].actions.action[Entrys_model_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].conditions.baseCondition[CWXO0LO0].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].conditions.baseCondition[CWXO0LO0].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].rules.conditionRule[CWXN$6R8].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="CalculateEvent0002" />
+            <lang locale="zh_HK" value="CalculateEvent0002" />
+            <lang locale="zh_TW" value="CalculateEvent0002" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].rules.conditionRule[CWXN$6R8].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].rules.conditionRule[CWXN$6R8].extendedProperty.columnName">
+            <lang locale="en_US" value="westHostelElectricity" />
+            <lang locale="zh_CN" value="westHostelElectricity" />
+            <lang locale="zh_TW" value="westHostelElectricity" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].rules.conditionRule[CWXO05OT].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="CalculateEvent0001" />
+            <lang locale="zh_HK" value="CalculateEvent0001" />
+            <lang locale="zh_TW" value="CalculateEvent0001" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].rules.conditionRule[CWXO05OT].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].rules.conditionRule[CWXO05OT].extendedProperty.columnName">
+            <lang locale="en_US" value="cityWater" />
+            <lang locale="zh_CN" value="cityWater" />
+            <lang locale="zh_TW" value="cityWater" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].rules.conditionRule[CWXO0LN_].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="CalculateEvent0002" />
+            <lang locale="zh_HK" value="CalculateEvent0002" />
+            <lang locale="zh_TW" value="CalculateEvent0002" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].rules.conditionRule[CWXO0LN_].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].rules.conditionRule[CWXO0LN_].extendedProperty.columnName">
+            <lang locale="en_US" value="groundWater" />
+            <lang locale="zh_CN" value="groundWater" />
+            <lang locale="zh_TW" value="groundWater" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].rules.conditionRule[FuleDaliyCWXN$J5A].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="CalculateEvent0001" />
+            <lang locale="zh_HK" value="CalculateEvent0001" />
+            <lang locale="zh_TW" value="CalculateEvent0001" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].rules.conditionRule[FuleDaliyCWXN$J5A].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.food.app.FuleDaliyRuleSet].rules.conditionRule[FuleDaliyCWXN$J5A].extendedProperty.columnName">
+            <lang locale="en_US" value="eastHostelElectricity" />
+            <lang locale="zh_CN" value="eastHostelElectricity" />
+            <lang locale="zh_TW" value="eastHostelElectricity" />
+        </rs>
+    </resource>
+</ruleSet>
+

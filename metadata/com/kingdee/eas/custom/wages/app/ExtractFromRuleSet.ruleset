@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.wages.app</package>
+    <name>ExtractFromRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.wages.app.ExtractFromRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.wages.app.ExtractFromRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>89cf4077-2224-4504-a5e3-5a5400c47285</id>
+            <parentID />
+            <source>Entry.mnumber=Entry.materiel.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>137807b3-655d-47bb-a3a5-ebdf80272c35</id>
+            <parentID>89cf4077-2224-4504-a5e3-5a5400c47285</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>cbb76134-bb27-440a-8f5e-4737b679bba3</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cbb76134-bb27-440a-8f5e-4737b679bba3</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"mnumber")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>23f80612-b599-42a9-a4f8-101e32df6a4b</id>
+            <parentID>89cf4077-2224-4504-a5e3-5a5400c47285</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>56408958-8844-42ad-833b-07580944dfb5</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>ab67b364-60f4-48d3-8d21-2ca0bd310315</id>
+                        <expressionID>b9337529-7741-4d99-88fe-61b2c3be6f05</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>a0cf6d8a-85b4-4c45-ba81-a3560fe9918c</id>
+                        <expressionID>2ac71805-34f2-4b7c-bcd8-2a2226c56bc1</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>56408958-8844-42ad-833b-07580944dfb5</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b9337529-7741-4d99-88fe-61b2c3be6f05</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>24aa902f-4e12-4585-8604-c2d04476da56</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>24aa902f-4e12-4585-8604-c2d04476da56</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntry.getCell(rowIndex,"materiel")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2ac71805-34f2-4b7c-bcd8-2a2226c56bc1</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>a44aa989-b516-4fc7-b4cd-d0051086f466</id>
+            <parentID />
+            <source>Entry.mtype=Entry.materiel.model</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>e976fe9f-5004-493f-a1a5-7277d5e58857</id>
+            <parentID>a44aa989-b516-4fc7-b4cd-d0051086f466</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>c33d033e-b488-46e8-a4ce-72041c0241d3</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c33d033e-b488-46e8-a4ce-72041c0241d3</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntry.getCell(rowIndex,"mtype")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ba89d9c6-ca3a-4999-90f1-0e2f74c4d475</id>
+            <parentID>a44aa989-b516-4fc7-b4cd-d0051086f466</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>164dd641-f890-432b-be75-720d7374f2f9</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>ac7e8620-75e3-43df-acdf-bd21b1e71104</id>
+                        <expressionID>87fd1665-6e37-4719-a9f2-430f7e00eb12</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>4d9159db-b090-4a24-920b-c4e8587c49fc</id>
+                        <expressionID>17289698-61a5-4a38-a3f0-f0671654cd29</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>164dd641-f890-432b-be75-720d7374f2f9</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>87fd1665-6e37-4719-a9f2-430f7e00eb12</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>7515573d-aebe-49e2-9f74-741283088435</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7515573d-aebe-49e2-9f74-741283088435</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntry.getCell(rowIndex,"materiel")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>17289698-61a5-4a38-a3f0-f0671654cd29</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>model</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>2e9279d2-ac3f-4e7c-bf0b-12794bc1bbd4</id>
+            <name>Entry_mnumber_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.app.ExtractFromRuleSet].actions.action[Entry_mnumber_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.app.ExtractFromRuleSet].actions.action[Entry_mnumber_ActionInfo].description</description>
+            <expressionID>89cf4077-2224-4504-a5e3-5a5400c47285</expressionID>
+        </action>
+        <action>
+            <id>fc900cd2-4d05-43be-88a2-4fd4f83d07df</id>
+            <name>Entry_mtype_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.app.ExtractFromRuleSet].actions.action[Entry_mtype_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.app.ExtractFromRuleSet].actions.action[Entry_mtype_ActionInfo].description</description>
+            <expressionID>a44aa989-b516-4fc7-b4cd-d0051086f466</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>Entry_mnumber_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.app.ExtractFromRuleSet].rules.conditionRule[Entry_mnumber_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.app.ExtractFromRuleSet].rules.conditionRule[Entry_mnumber_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="2e9279d2-ac3f-4e7c-bf0b-12794bc1bbd4" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>Entry_mtype_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.wages.app.ExtractFromRuleSet].rules.conditionRule[Entry_mtype_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.wages.app.ExtractFromRuleSet].rules.conditionRule[Entry_mtype_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="fc900cd2-4d05-43be-88a2-4fd4f83d07df" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.ExtractFromRuleSet].actions.action[Entry_mnumber_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.ExtractFromRuleSet].actions.action[Entry_mnumber_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.ExtractFromRuleSet].actions.action[Entry_mtype_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.ExtractFromRuleSet].actions.action[Entry_mtype_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.ExtractFromRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.ExtractFromRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.ExtractFromRuleSet].rules.conditionRule[Entry_mnumber_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.ExtractFromRuleSet].rules.conditionRule[Entry_mnumber_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.ExtractFromRuleSet].rules.conditionRule[Entry_mnumber_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="materiel" />
+            <lang locale="zh_CN" value="materiel" />
+            <lang locale="zh_TW" value="materiel" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.ExtractFromRuleSet].rules.conditionRule[Entry_mnumber_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.ExtractFromRuleSet].rules.conditionRule[Entry_mtype_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.ExtractFromRuleSet].rules.conditionRule[Entry_mtype_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.ExtractFromRuleSet].rules.conditionRule[Entry_mtype_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="materiel" />
+            <lang locale="zh_CN" value="materiel" />
+            <lang locale="zh_TW" value="materiel" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.wages.app.ExtractFromRuleSet].rules.conditionRule[Entry_mtype_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

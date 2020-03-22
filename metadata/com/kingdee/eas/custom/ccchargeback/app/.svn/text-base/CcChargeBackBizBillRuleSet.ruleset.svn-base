@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.ccchargeback.app</package>
+    <name>CcChargeBackBizBillRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.custom.ccchargeback.app.CcChargeBackBizBillRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.custom.ccchargeback.app.CcChargeBackBizBillRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>27006ca6-5abb-4618-9af6-3ee88facf75d</id>
+            <parentID />
+            <source>entrys.henHouseName=entrys.henHouse.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>94c97a9a-9349-47c2-a9df-2cdf92b6908a</id>
+            <parentID>27006ca6-5abb-4618-9af6-3ee88facf75d</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>ed13b190-161d-4fe5-bf69-f73fe6fe740e</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ed13b190-161d-4fe5-bf69-f73fe6fe740e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"henHouseName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>70b7b99b-5171-480c-a0eb-3018d94bb7da</id>
+            <parentID>27006ca6-5abb-4618-9af6-3ee88facf75d</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>ae198715-63a2-4b7c-bb2c-f9b5be186a8d</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>d85d39b9-4935-4df5-8e60-0ce752be8834</id>
+                        <expressionID>f316d85f-9e3f-4269-915f-e9e25c09726e</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>44fda005-9789-4929-97b9-20aca25042cd</id>
+                        <expressionID>731d93de-6e08-4cc8-a77d-50d4c805e087</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ae198715-63a2-4b7c-bb2c-f9b5be186a8d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f316d85f-9e3f-4269-915f-e9e25c09726e</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>f9bf5f02-6449-459f-874c-16f61e3e4df1</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f9bf5f02-6449-459f-874c-16f61e3e4df1</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"henHouse")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>731d93de-6e08-4cc8-a77d-50d4c805e087</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>84d8afaa-cca0-4f81-8f41-0387f9e10fbf</id>
+            <name>entrys_henHouseName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.ccchargeback.app.CcChargeBackBizBillRuleSet].actions.action[entrys_henHouseName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.ccchargeback.app.CcChargeBackBizBillRuleSet].actions.action[entrys_henHouseName_ActionInfo].description</description>
+            <expressionID>27006ca6-5abb-4618-9af6-3ee88facf75d</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>entrys_henHouseName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.custom.ccchargeback.app.CcChargeBackBizBillRuleSet].rules.conditionRule[entrys_henHouseName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.custom.ccchargeback.app.CcChargeBackBizBillRuleSet].rules.conditionRule[entrys_henHouseName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="84d8afaa-cca0-4f81-8f41-0387f9e10fbf" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.custom.ccchargeback.app.CcChargeBackBizBillRuleSet].actions.action[entrys_henHouseName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.ccchargeback.app.CcChargeBackBizBillRuleSet].actions.action[entrys_henHouseName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.ccchargeback.app.CcChargeBackBizBillRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.ccchargeback.app.CcChargeBackBizBillRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.ccchargeback.app.CcChargeBackBizBillRuleSet].rules.conditionRule[entrys_henHouseName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.ccchargeback.app.CcChargeBackBizBillRuleSet].rules.conditionRule[entrys_henHouseName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.ccchargeback.app.CcChargeBackBizBillRuleSet].rules.conditionRule[entrys_henHouseName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="henHouse" />
+            <lang locale="zh_CN" value="henHouse" />
+            <lang locale="zh_TW" value="henHouse" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.custom.ccchargeback.app.CcChargeBackBizBillRuleSet].rules.conditionRule[entrys_henHouseName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

@@ -1,0 +1,1104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.tocloud.app</package>
+    <name>BHatchBabyBillImmuneToMatReqQuery</name>
+    <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].alias</alias>
+    <description>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].description</description>
+    <userDefined>true</userDefined>
+    <reportDataSource />
+    <bizUnitPK />
+    <connectionProvider />
+    <subObjects>
+        <subEntity>
+            <name>BHatchBabyBillImmuneEntry</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].subObjects.subEntity[BHatchBabyBillImmuneEntry].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.hatch.app" />
+                <key name="name" value="BHatchBabyBillImmuneEntry" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>immuneMaterial</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].subObjects.subEntity[immuneMaterial].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.master.material.app" />
+                <key name="name" value="Material" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>parent</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].subObjects.subEntity[parent].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.hatch.app" />
+                <key name="name" value="BHatchBabyBill" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>storageOrg</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].subObjects.subEntity[storageOrg].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="StorageOrgUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>entrys</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].subObjects.subEntity[entrys].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.hatch.app" />
+                <key name="name" value="BHatchBabyBillEntry" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>strockbatch</name>
+            <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].subObjects.subEntity[strockbatch].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.stocking.basedata.app" />
+                <key name="name" value="StockingBatch" />
+            </entityRef>
+        </subEntity>
+    </subObjects>
+    <units>
+        <propertyUnit>
+            <name>4a9931fd-4dca-4785-8f5d-5c73a0113163</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.propertyUnit[4a9931fd-4dca-4785-8f5d-5c73a0113163].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>fdd37d14-2e67-4889-ac18-0b7a40ffc9f0</key>
+                    <parentUnit>
+                        <key name="name" value="4a9931fd-4dca-4785-8f5d-5c73a0113163" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BHatchBabyBillImmuneEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="immuneMaterial" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>2e191ea6-fa84-492c-a49e-41acc24768d7</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.propertyUnit[2e191ea6-fa84-492c-a49e-41acc24768d7].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>b4d3365c-6ea3-4f77-b03c-2e67ea6a1fae</key>
+                    <parentUnit>
+                        <key name="name" value="2e191ea6-fa84-492c-a49e-41acc24768d7" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="immuneMaterial" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.queryField[id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>c9c1a9c7-9a64-4a37-9c1b-0cfa654b6606</key>
+                    <parentUnit>
+                        <key name="name" value="id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BHatchBabyBillImmuneEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>billNum</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.queryField[billNum].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>417fee73-f5fa-45b8-bc0d-76a962311fbe</key>
+                    <parentUnit>
+                        <key name="name" value="billNum" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bizdate</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.queryField[bizdate].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0d5a7206-eceb-4c6d-ae73-dc58f6b702f4</key>
+                    <parentUnit>
+                        <key name="name" value="bizdate" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bizDate" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>batch</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.queryField[batch].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>6183b024-45db-4f2b-a133-a255b6f14b7e</key>
+                    <parentUnit>
+                        <key name="name" value="batch" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="strockbatch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>storageOrg.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.queryField[storageOrg.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>7e391ef4-2a50-4f66-98a5-371de99d7b53</key>
+                    <parentUnit>
+                        <key name="name" value="storageOrg.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="storageOrg" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>immuneMaterial.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.queryField[immuneMaterial.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b46e68b7-9e3e-466d-96b8-1e112d279349</key>
+                    <parentUnit>
+                        <key name="name" value="immuneMaterial.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="immuneMaterial" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>589b3b15-eccf-40c6-b3a1-cf3e15b73b45</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.propertyUnit[589b3b15-eccf-40c6-b3a1-cf3e15b73b45].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>4b3c7b60-81ba-4bf8-85bc-ede80b73346b</key>
+                    <parentUnit>
+                        <key name="name" value="589b3b15-eccf-40c6-b3a1-cf3e15b73b45" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BHatchBabyBillImmuneEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="parent" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>c01fbc83-5f46-40f3-abb9-f5a9b3986db4</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.propertyUnit[c01fbc83-5f46-40f3-abb9-f5a9b3986db4].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>24597795-65bc-487c-a73d-af811226abd3</key>
+                    <parentUnit>
+                        <key name="name" value="c01fbc83-5f46-40f3-abb9-f5a9b3986db4" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>db52f2f9-1986-4b09-879f-d9ee20cafead</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.propertyUnit[db52f2f9-1986-4b09-879f-d9ee20cafead].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>3a908a48-3bd6-4739-8444-df31de1988d1</key>
+                    <parentUnit>
+                        <key name="name" value="db52f2f9-1986-4b09-879f-d9ee20cafead" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="storageOrg" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>b5904732-8bc8-4712-9fbd-656cb80e5efa</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.propertyUnit[b5904732-8bc8-4712-9fbd-656cb80e5efa].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>1e325819-1f08-412c-8967-c9de22ed8e26</key>
+                    <parentUnit>
+                        <key name="name" value="b5904732-8bc8-4712-9fbd-656cb80e5efa" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="storageOrg" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>stockingid</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.queryField[stockingid].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>d1033ecd-0208-4f4e-82bf-22d1f1d11460</key>
+                    <parentUnit>
+                        <key name="name" value="stockingid" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>companyid</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.queryField[companyid].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>55c12d00-da92-47f8-98a6-53fc1086def2</key>
+                    <parentUnit>
+                        <key name="name" value="companyid" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="storageOrg" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bateStatus</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.queryField[bateStatus].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b60fe0c9-cfba-4a65-8965-4f4983c0763c</key>
+                    <parentUnit>
+                        <key name="name" value="bateStatus" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="baseStatus" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>c67b8255-064c-46d5-b73d-a795b3874094</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.propertyUnit[c67b8255-064c-46d5-b73d-a795b3874094].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>a40a4cd5-c281-42bb-b522-bd8c2d48295c</key>
+                    <parentUnit>
+                        <key name="name" value="c67b8255-064c-46d5-b73d-a795b3874094" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="parent" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>ff7218f2-4c7c-421d-8906-db339cd0032d</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.propertyUnit[ff7218f2-4c7c-421d-8906-db339cd0032d].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>2ae8affa-98db-4a6f-b6fe-7b03a7c7fdbb</key>
+                    <parentUnit>
+                        <key name="name" value="ff7218f2-4c7c-421d-8906-db339cd0032d" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="entrys" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="parent" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>1da40014-622f-42f1-9fe0-dd261be75777</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.propertyUnit[1da40014-622f-42f1-9fe0-dd261be75777].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>d707945e-0d65-4d45-bb29-ccebca62fde7</key>
+                    <parentUnit>
+                        <key name="name" value="1da40014-622f-42f1-9fe0-dd261be75777" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="entrys" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="strockbatch" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>1b1135ff-eadf-4745-894f-55fc5c4b9c9a</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.propertyUnit[1b1135ff-eadf-4745-894f-55fc5c4b9c9a].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>f2dabcf1-db07-489c-bd1b-5de8697f8536</key>
+                    <parentUnit>
+                        <key name="name" value="1b1135ff-eadf-4745-894f-55fc5c4b9c9a" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="strockbatch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>batchid</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.queryField[batchid].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>de5d1f20-1ac4-4a68-a3fd-7dfabccd5bd2</key>
+                    <parentUnit>
+                        <key name="name" value="batchid" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="strockbatch" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>immuneUserQtyhjh</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.queryField[immuneUserQtyhjh].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>53fdfa75-db3e-4589-b535-13e7fe9ac940</key>
+                    <parentUnit>
+                        <key name="name" value="immuneUserQtyhjh" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BHatchBabyBillImmuneEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="immuneUserQty" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </queryField>
+    </units>
+    <defaultFilter>
+        <name>defaultFilter</name>
+        <formulaString />
+        <query>
+            <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+            <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+        </query>
+    </defaultFilter>
+    <queryPK>
+        <name>QueryPK</name>
+        <alias>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].queryPK[QueryPK].alias</alias>
+        <description>joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].queryPK[QueryPK].description</description>
+        <keyProperties>
+            <queryField>
+                <key name="name" value="id" />
+            </queryField>
+        </keyProperties>
+    </queryPK>
+    <isDistinct>false</isDistinct>
+    <joins>
+        <join>
+            <name>7c51e4f8-edce-48a0-ab10-fb943a199764</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="BHatchBabyBillImmuneEntry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="immuneMaterial" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>8914e5a4-ce17-40f2-b923-d34516be9cac</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="4a9931fd-4dca-4785-8f5d-5c73a0113163" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="2e191ea6-fa84-492c-a49e-41acc24768d7" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="7c51e4f8-edce-48a0-ab10-fb943a199764" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </join>
+        <join>
+            <name>37257d09-99e1-459b-8749-b29928107a8c</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="BHatchBabyBillImmuneEntry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="parent" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>b3f30217-4434-4052-87e8-b84930125a2a</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="589b3b15-eccf-40c6-b3a1-cf3e15b73b45" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="c01fbc83-5f46-40f3-abb9-f5a9b3986db4" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="37257d09-99e1-459b-8749-b29928107a8c" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </join>
+        <join>
+            <name>f5e52a53-a090-47e4-972a-28d9264c0231</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="parent" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="storageOrg" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>b873ecac-28fe-4068-808a-cd85994a790a</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="db52f2f9-1986-4b09-879f-d9ee20cafead" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="b5904732-8bc8-4712-9fbd-656cb80e5efa" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="f5e52a53-a090-47e4-972a-28d9264c0231" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </join>
+        <join>
+            <name>10cb5df1-8dbf-491d-b5cc-847c8492b92e</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="parent" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="entrys" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>20ecd458-7137-4853-a376-28699384bef6</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="c67b8255-064c-46d5-b73d-a795b3874094" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="ff7218f2-4c7c-421d-8906-db339cd0032d" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="10cb5df1-8dbf-491d-b5cc-847c8492b92e" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </join>
+        <join>
+            <name>dbcd3773-79d7-4802-b5f1-af112da0c221</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="entrys" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="strockbatch" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>9e784600-cad7-44f3-8af9-1a01fff4f184</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="1da40014-622f-42f1-9fe0-dd261be75777" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="1b1135ff-eadf-4745-894f-55fc5c4b9c9a" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="dbcd3773-79d7-4802-b5f1-af112da0c221" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.custom.tocloud.app" />
+                <key name="name" value="BHatchBabyBillImmuneToMatReqQuery" />
+            </query>
+        </join>
+    </joins>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出雏单免疫信息分录同步Cloud领料出库单" />
+            <lang locale="zh_HK" value="出雛單免疫信息分錄同步Cloud領料出庫單" />
+            <lang locale="zh_TW" value="出雛單免疫信息分錄同步Cloud領料出庫單" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].queryPK[QueryPK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].queryPK[QueryPK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].subObjects.subEntity[BHatchBabyBillImmuneEntry].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].subObjects.subEntity[entrys].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].subObjects.subEntity[immuneMaterial].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].subObjects.subEntity[parent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].subObjects.subEntity[storageOrg].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].subObjects.subEntity[strockbatch].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.propertyUnit[1b1135ff-eadf-4745-894f-55fc5c4b9c9a].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.propertyUnit[1da40014-622f-42f1-9fe0-dd261be75777].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.propertyUnit[2e191ea6-fa84-492c-a49e-41acc24768d7].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.propertyUnit[4a9931fd-4dca-4785-8f5d-5c73a0113163].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.propertyUnit[589b3b15-eccf-40c6-b3a1-cf3e15b73b45].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.propertyUnit[b5904732-8bc8-4712-9fbd-656cb80e5efa].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.propertyUnit[c01fbc83-5f46-40f3-abb9-f5a9b3986db4].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.propertyUnit[c67b8255-064c-46d5-b73d-a795b3874094].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.propertyUnit[db52f2f9-1986-4b09-879f-d9ee20cafead].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.propertyUnit[ff7218f2-4c7c-421d-8906-db339cd0032d].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.queryField[batch].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="批次" />
+            <lang locale="zh_HK" value="批次" />
+            <lang locale="zh_TW" value="批次" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.queryField[batchid].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.queryField[bateStatus].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="状态" />
+            <lang locale="zh_HK" value="狀態" />
+            <lang locale="zh_TW" value="狀態" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.queryField[billNum].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据编号" />
+            <lang locale="zh_HK" value="單據編號" />
+            <lang locale="zh_TW" value="單據編號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.queryField[bizdate].displayName">
+            <lang locale="en_US" value="" />
+            <lang locale="zh_CN" value="业务日期" />
+            <lang locale="zh_HK" value="業務日期" />
+            <lang locale="zh_TW" value="業務日期" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.queryField[companyid].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.queryField[id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.queryField[immuneMaterial.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="物料" />
+            <lang locale="zh_HK" value="物料" />
+            <lang locale="zh_TW" value="物料" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.queryField[immuneUserQtyhjh].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="使用量" />
+            <lang locale="zh_HK" value="使用量" />
+            <lang locale="zh_TW" value="使用量" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.queryField[stockingid].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出雏单id" />
+            <lang locale="zh_HK" value="出雛單id" />
+            <lang locale="zh_TW" value="出雛單id" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.custom.tocloud.app.BHatchBabyBillImmuneToMatReqQuery].units.queryField[storageOrg.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="名称" />
+            <lang locale="zh_HK" value="名稱" />
+            <lang locale="zh_TW" value="名稱" />
+        </rs>
+    </resource>
+</joinQuery>
+

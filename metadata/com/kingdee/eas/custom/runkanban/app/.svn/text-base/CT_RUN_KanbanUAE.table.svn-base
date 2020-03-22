@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataTable xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.custom.runkanban.app</package>
+    <name>CT_RUN_KanbanUAE</name>
+    <alias>dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].alias</alias>
+    <description>dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].description</description>
+    <userDefined>true</userDefined>
+    <bizUnitPK />
+    <columns>
+        <column>
+            <name>FSeq</name>
+            <alias>dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].columns.column[FSeq].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].columns.column[FSeq].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>4</precision>
+        </column>
+        <column>
+            <name>FID</name>
+            <alias>dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].columns.column[FID].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].columns.column[FID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>false</isNullable>
+            <defaultValue>''</defaultValue>
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>44</precision>
+        </column>
+        <column>
+            <name>FParentID</name>
+            <alias>dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].columns.column[FParentID].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].columns.column[FParentID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>44</precision>
+        </column>
+        <column>
+            <name>CFAuthorityNameID</name>
+            <alias>dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].columns.column[CFAuthorityNameID].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].columns.column[CFAuthorityNameID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFAuthorityDesc</name>
+            <alias>dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].columns.column[CFAuthorityDesc].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].columns.column[CFAuthorityDesc].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFAuthoritynumber</name>
+            <alias>dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].columns.column[CFAuthoritynumber].alias</alias>
+            <description>dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].columns.column[CFAuthoritynumber].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+    </columns>
+    <primaryKey>
+        <name>CPK_RUN_KanbanU59q</name>
+        <userDefined>true</userDefined>
+        <primaryKeyColumns>
+            <primaryKeyColumn>
+                <indexID>0</indexID>
+                <sortType>ASC</sortType>
+                <column>
+                    <key name="name" value="FID" />
+                </column>
+            </primaryKeyColumn>
+        </primaryKeyColumns>
+    </primaryKey>
+    <foreignKeys>
+        <foreignKey>
+            <name>CFK_RUN_RUNKUAEPc2</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.custom.runkanban.app" />
+                <key name="name" value="CT_RUN_KanbanUserAuthority" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FParentID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>CFK_RUN_RUNKUAEU6u</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.custom.runkanban.app" />
+                <key name="name" value="CT_RUN_KanbanAuthroity" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="CFAuthorityNameID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+    </foreignKeys>
+    <resource>
+        <rs key="dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="分录" />
+            <lang locale="zh_HK" value="分錄" />
+            <lang locale="zh_TW" value="分錄" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].columns.column[CFAuthorityDesc].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="权限描述" />
+            <lang locale="zh_HK" value="許可權描述" />
+            <lang locale="zh_TW" value="許可權描述" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].columns.column[CFAuthorityDesc].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="权限描述" />
+            <lang locale="zh_HK" value="許可權描述" />
+            <lang locale="zh_TW" value="許可權描述" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].columns.column[CFAuthorityNameID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="权限名称" />
+            <lang locale="zh_HK" value="許可權名稱" />
+            <lang locale="zh_TW" value="許可權名稱" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].columns.column[CFAuthorityNameID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="权限名称" />
+            <lang locale="zh_HK" value="許可權名稱" />
+            <lang locale="zh_TW" value="許可權名稱" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].columns.column[CFAuthoritynumber].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="权限编码" />
+            <lang locale="zh_HK" value="許可權編碼" />
+            <lang locale="zh_TW" value="許可權編碼" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].columns.column[CFAuthoritynumber].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="权限编码" />
+            <lang locale="zh_HK" value="許可權編碼" />
+            <lang locale="zh_TW" value="許可權編碼" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].columns.column[FID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].columns.column[FID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].columns.column[FParentID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].columns.column[FParentID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].columns.column[FSeq].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据分录序列号" />
+            <lang locale="zh_HK" value="單據分錄序列號" />
+            <lang locale="zh_TW" value="單據分錄序列號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].columns.column[FSeq].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据分录序列号（定义为序列属性即使用{seq}）" />
+            <lang locale="zh_HK" value="單據分錄序列號（定義為序列屬性即使用{seq}）" />
+            <lang locale="zh_TW" value="單據分錄序列號（定義為序列屬性即使用{seq}）" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.custom.runkanban.app.CT_RUN_KanbanUAE].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</dataTable>
+

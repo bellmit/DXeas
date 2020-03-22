@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.feedfactory.app</package>
+    <name>FeedFactoryTruckPlanRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.feedfactory.app.FeedFactoryTruckPlanRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.feedfactory.app.FeedFactoryTruckPlanRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>13090ec0-3899-4e3f-8052-4b0eb47112c3</id>
+            <parentID />
+            <source>entrys.drive=entrys.truck.driver.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>505805e7-c07f-4d48-87b1-f173153ec3be</id>
+            <parentID>13090ec0-3899-4e3f-8052-4b0eb47112c3</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>488f9df9-2ec8-4678-87d0-9d95d63f46c1</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>488f9df9-2ec8-4678-87d0-9d95d63f46c1</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"drive")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a6fd73b1-898f-4766-8ce5-de2d9934cc79</id>
+            <parentID>13090ec0-3899-4e3f-8052-4b0eb47112c3</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>55b30f83-021f-4ed5-bff4-2052452d424e</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>b552def9-e736-4a4e-8276-c431e5c13c7d</id>
+                        <expressionID>fcd33526-7b46-4b06-9cc8-4317cf03e157</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>198e358e-b5bb-4428-91d1-0cc782663486</id>
+                        <expressionID>ebe764f2-6cb0-4eea-bea6-9b906293ee55</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>55b30f83-021f-4ed5-bff4-2052452d424e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fcd33526-7b46-4b06-9cc8-4317cf03e157</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>ecdc768a-5b9e-430b-a291-2e7bb8b0357b</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ecdc768a-5b9e-430b-a291-2e7bb8b0357b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"truck")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ebe764f2-6cb0-4eea-bea6-9b906293ee55</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>driver.name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>f032e45f-8393-40c2-8565-c02d4cdc3a37</id>
+            <parentID />
+            <source>entrys.tel=entrys.truck.driverTel</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>9b5bf76d-8bd4-42be-98cd-80e07372904d</id>
+            <parentID>f032e45f-8393-40c2-8565-c02d4cdc3a37</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>2e7041b0-bf34-495e-b78f-b538a1e14372</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2e7041b0-bf34-495e-b78f-b538a1e14372</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"tel")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f7492e16-1861-42b5-8c72-03d4d59db123</id>
+            <parentID>f032e45f-8393-40c2-8565-c02d4cdc3a37</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>ab7d75ad-95fd-4c82-b5ff-bda94253c77e</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>9cca023c-bf5d-445f-94ba-5a3052af47ef</id>
+                        <expressionID>d28db1fc-1e97-47b2-9368-eb24e9483019</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>a914fd6b-2dce-4a88-ae3c-a1657442e695</id>
+                        <expressionID>7c8365a9-aa58-48bd-a9ec-1d356602095f</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ab7d75ad-95fd-4c82-b5ff-bda94253c77e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d28db1fc-1e97-47b2-9368-eb24e9483019</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>3cc5b4f6-6ce5-400e-95b9-8c479b974976</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3cc5b4f6-6ce5-400e-95b9-8c479b974976</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"truck")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7c8365a9-aa58-48bd-a9ec-1d356602095f</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>driverTel</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>1bcac0a0-902a-4186-8c6e-c71d8dcdd001</id>
+            <name>entrys_drive_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.feedfactory.app.FeedFactoryTruckPlanRuleSet].actions.action[entrys_drive_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.feedfactory.app.FeedFactoryTruckPlanRuleSet].actions.action[entrys_drive_ActionInfo].description</description>
+            <expressionID>13090ec0-3899-4e3f-8052-4b0eb47112c3</expressionID>
+        </action>
+        <action>
+            <id>4a2fdc88-45b3-4ca9-b7de-fcaa9986fbef</id>
+            <name>entrys_tel_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.feedfactory.app.FeedFactoryTruckPlanRuleSet].actions.action[entrys_tel_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.feedfactory.app.FeedFactoryTruckPlanRuleSet].actions.action[entrys_tel_ActionInfo].description</description>
+            <expressionID>f032e45f-8393-40c2-8565-c02d4cdc3a37</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>entrys_drive_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.feedfactory.app.FeedFactoryTruckPlanRuleSet].rules.conditionRule[entrys_drive_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.feedfactory.app.FeedFactoryTruckPlanRuleSet].rules.conditionRule[entrys_drive_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="1bcac0a0-902a-4186-8c6e-c71d8dcdd001" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>entrys_tel_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.feedfactory.app.FeedFactoryTruckPlanRuleSet].rules.conditionRule[entrys_tel_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.feedfactory.app.FeedFactoryTruckPlanRuleSet].rules.conditionRule[entrys_tel_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="4a2fdc88-45b3-4ca9-b7de-fcaa9986fbef" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.feedfactory.app.FeedFactoryTruckPlanRuleSet].actions.action[entrys_drive_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_driver" />
+            <lang locale="zh_HK" value="攜帶字段屬性_driver" />
+            <lang locale="zh_TW" value="攜帶字段屬性_driver" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.feedfactory.app.FeedFactoryTruckPlanRuleSet].actions.action[entrys_drive_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.feedfactory.app.FeedFactoryTruckPlanRuleSet].actions.action[entrys_tel_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_driverTel" />
+            <lang locale="zh_HK" value="攜帶字段屬性_driverTel" />
+            <lang locale="zh_TW" value="攜帶字段屬性_driverTel" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.feedfactory.app.FeedFactoryTruckPlanRuleSet].actions.action[entrys_tel_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.feedfactory.app.FeedFactoryTruckPlanRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.feedfactory.app.FeedFactoryTruckPlanRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.feedfactory.app.FeedFactoryTruckPlanRuleSet].rules.conditionRule[entrys_drive_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_driver" />
+            <lang locale="zh_HK" value="攜帶字段屬性_driver" />
+            <lang locale="zh_TW" value="攜帶字段屬性_driver" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.feedfactory.app.FeedFactoryTruckPlanRuleSet].rules.conditionRule[entrys_drive_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.feedfactory.app.FeedFactoryTruckPlanRuleSet].rules.conditionRule[entrys_drive_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="truck" />
+            <lang locale="zh_CN" value="truck" />
+            <lang locale="zh_TW" value="truck" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.feedfactory.app.FeedFactoryTruckPlanRuleSet].rules.conditionRule[entrys_drive_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.feedfactory.app.FeedFactoryTruckPlanRuleSet].rules.conditionRule[entrys_tel_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_driverTel" />
+            <lang locale="zh_HK" value="攜帶字段屬性_driverTel" />
+            <lang locale="zh_TW" value="攜帶字段屬性_driverTel" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.feedfactory.app.FeedFactoryTruckPlanRuleSet].rules.conditionRule[entrys_tel_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.feedfactory.app.FeedFactoryTruckPlanRuleSet].rules.conditionRule[entrys_tel_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="truck" />
+            <lang locale="zh_CN" value="truck" />
+            <lang locale="zh_TW" value="truck" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.feedfactory.app.FeedFactoryTruckPlanRuleSet].rules.conditionRule[entrys_tel_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

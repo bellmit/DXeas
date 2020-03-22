@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.carnivorous.recyclebiz.app</package>
+    <name>CSlaughterBillRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>80b45f1a-f731-4e43-8927-28e8b6ad3612</id>
+            <parentID />
+            <source>farmerPhone=farmer.mobileTel</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>a3a54ed8-66f6-479f-b015-c4b8bf348222</id>
+            <parentID>80b45f1a-f731-4e43-8927-28e8b6ad3612</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>673b49cf-84d2-4e19-b3d7-f19c792a81ee</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>673b49cf-84d2-4e19-b3d7-f19c792a81ee</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtfarmerPhone</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>766cd6f2-4c23-41cc-8e3b-841ab1e938f3</id>
+            <parentID>80b45f1a-f731-4e43-8927-28e8b6ad3612</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>24d72734-c198-4eb0-bf83-03fe45dacc02</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>f8a65ea8-b4ac-4c09-bf28-868ebe58513b</id>
+                        <expressionID>60ddd3e3-d891-4f9c-876e-ad91459c6880</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>eab95747-6835-4aca-9279-f030b3b83c5e</id>
+                        <expressionID>51805080-2e4f-4173-b1de-373ed01066da</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>24d72734-c198-4eb0-bf83-03fe45dacc02</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>60ddd3e3-d891-4f9c-876e-ad91459c6880</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>c8003e5a-3f0d-4f61-a095-b7566b5f6673</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c8003e5a-3f0d-4f61-a095-b7566b5f6673</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtfarmer</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>51805080-2e4f-4173-b1de-373ed01066da</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>mobileTel</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>3e141829-8a06-4ad7-b0eb-cb1372c0647a</id>
+            <parentID />
+            <source>farmAddress=farm.address</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>9d4e07bd-20c6-488d-93ab-048efb70f048</id>
+            <parentID>3e141829-8a06-4ad7-b0eb-cb1372c0647a</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>cc0afb2a-fdde-4f7f-bd6a-0c7c9238b5c7</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cc0afb2a-fdde-4f7f-bd6a-0c7c9238b5c7</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtfarmAddress</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e9ba217f-3ad6-48c3-aeb0-b87cdc95f614</id>
+            <parentID>3e141829-8a06-4ad7-b0eb-cb1372c0647a</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>52810c21-3358-46b3-978f-4a881826a8c7</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>a8143b2a-08a5-42b1-a00a-c34da77fca69</id>
+                        <expressionID>cd3840a4-b061-4550-8e09-96f0167c7af9</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>5399191f-bfde-40b2-b8a2-d763ae3b2c91</id>
+                        <expressionID>a9190d8e-0aec-463d-b5d1-c60e341c1484</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>52810c21-3358-46b3-978f-4a881826a8c7</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cd3840a4-b061-4550-8e09-96f0167c7af9</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>b5951822-060b-426c-b0a7-cf9d1cfa2488</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b5951822-060b-426c-b0a7-cf9d1cfa2488</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtfarm</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a9190d8e-0aec-463d-b5d1-c60e341c1484</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>address</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>4eb96f2c-7492-4657-a26e-22fb360123dd</id>
+            <parentID />
+            <source>farmType=farm.faemsType</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>727b389e-5a2c-4803-a4d7-d4fc93e43a49</id>
+            <parentID>4eb96f2c-7492-4657-a26e-22fb360123dd</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>fbd3c1f7-49ef-49de-8407-75d195389483</ownerID>
+                <name>selectedItem</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fbd3c1f7-49ef-49de-8407-75d195389483</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>farmType</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e9623155-7aba-40dd-b39f-6c53607f08ca</id>
+            <parentID>4eb96f2c-7492-4657-a26e-22fb360123dd</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Enum</valueType>
+            <value />
+            <method>
+                <ownerID>5903ad3e-9bbb-4e4c-96a9-70e4cdc69b5e</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>ee899082-da83-45ae-a420-30bfbd40f49f</id>
+                        <expressionID>2b949d62-622f-4a62-90ae-6199e78edc47</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>d111f744-a52d-4a79-81f6-ab32adce76bd</id>
+                        <expressionID>23b8090f-56e0-4434-b0d1-634fba08f633</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5903ad3e-9bbb-4e4c-96a9-70e4cdc69b5e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>2b949d62-622f-4a62-90ae-6199e78edc47</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>01037ec7-3f15-41d5-b7d3-b6ad8f7ba9c7</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>01037ec7-3f15-41d5-b7d3-b6ad8f7ba9c7</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtfarm</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>23b8090f-56e0-4434-b0d1-634fba08f633</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>faemsType</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>9f65baad-8d31-47ea-a31f-de1bd4612a8b</id>
+            <parentID />
+            <source>Entrys.driverPhone=Entrys.driver.driverphone</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>81e9f995-ed8c-4171-b9f7-21d26af73a4a</id>
+            <parentID>9f65baad-8d31-47ea-a31f-de1bd4612a8b</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>19d9a2b1-eac7-4bbc-a1b5-11177c223c95</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>19d9a2b1-eac7-4bbc-a1b5-11177c223c95</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"driverPhone")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>505be0f3-a6da-4a5b-a4ea-853a93be359c</id>
+            <parentID>9f65baad-8d31-47ea-a31f-de1bd4612a8b</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>37fdf225-511c-4aa3-bdba-a480f75f3f47</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>034a1a53-7778-4288-b296-ef242735082b</id>
+                        <expressionID>dd35dd03-0050-4a2d-90e8-3188c81e7bc4</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>07955a85-0a8b-4891-8210-a7966b750190</id>
+                        <expressionID>bad69a3f-1007-4b02-8dbf-5fabf01fafb6</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>37fdf225-511c-4aa3-bdba-a480f75f3f47</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>dd35dd03-0050-4a2d-90e8-3188c81e7bc4</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>3113f6fe-ab66-4172-9b5b-274bb50c7720</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3113f6fe-ab66-4172-9b5b-274bb50c7720</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"driver")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bad69a3f-1007-4b02-8dbf-5fabf01fafb6</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>driverphone</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>f3634054-9488-4923-97ac-4c3d7fc90b4a</id>
+            <parentID />
+            <source>driverPhone=driver.driverphone</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>e625a997-a82a-4139-9109-b15de758b9d0</id>
+            <parentID>f3634054-9488-4923-97ac-4c3d7fc90b4a</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>b577070b-6d66-4a98-98c5-64b91024aaad</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b577070b-6d66-4a98-98c5-64b91024aaad</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtdriverPhone</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f3df42a3-fcf5-4f0f-84fa-7856c2082e84</id>
+            <parentID>f3634054-9488-4923-97ac-4c3d7fc90b4a</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>cabeb2b3-383e-4dbf-ae89-a8e141b1b34b</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>fcc77623-62b1-4d52-8160-b7ff4d1ee996</id>
+                        <expressionID>30eca462-5224-4b8b-922c-507531b05c23</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>ce05ca6f-3bb8-4266-b0f1-0f81269b0504</id>
+                        <expressionID>72bc7552-3952-4b42-8bdc-4646ac145fcb</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>cabeb2b3-383e-4dbf-ae89-a8e141b1b34b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>30eca462-5224-4b8b-922c-507531b05c23</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>502c9626-6760-42e6-8706-8a03aa2b024d</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>502c9626-6760-42e6-8706-8a03aa2b024d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtdriver</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>72bc7552-3952-4b42-8bdc-4646ac145fcb</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>driverphone</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>a01e1b24-1aef-48ec-8ec5-d2b1854474c4</id>
+            <parentID />
+            <source>QCEntrys.randPType=QCEntrys.QCItem.punishType</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>86082fc7-c4e6-4fe0-92a0-8ebd24e509ec</id>
+            <parentID>a01e1b24-1aef-48ec-8ec5-d2b1854474c4</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>0cf9bbd8-1c27-42f9-a3de-c0c31247ed3e</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0cf9bbd8-1c27-42f9-a3de-c0c31247ed3e</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtQCEntrys.getCell(rowIndex,"randPType")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>062fd695-1a1c-4e0b-b4b7-611a6a5428a6</id>
+            <parentID>a01e1b24-1aef-48ec-8ec5-d2b1854474c4</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Enum</valueType>
+            <value />
+            <method>
+                <ownerID>0eee06a9-f5a1-4482-96bd-c6d695d920b1</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>fb03b211-117e-47f9-9c14-58ab35187912</id>
+                        <expressionID>544469ce-e40e-4978-a4bb-517b499c4e41</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>09b98258-ebf7-49d8-b8ff-3c00861db491</id>
+                        <expressionID>e7165bbc-cbf3-4fad-b948-45a35a7346ec</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0eee06a9-f5a1-4482-96bd-c6d695d920b1</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>544469ce-e40e-4978-a4bb-517b499c4e41</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>a85ef4d9-2690-427d-9ef1-a5b56c77d12a</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a85ef4d9-2690-427d-9ef1-a5b56c77d12a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtQCEntrys.getCell(rowIndex,"QCItem")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e7165bbc-cbf3-4fad-b948-45a35a7346ec</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>punishType</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>897da19b-5ac4-43f4-a388-68c82efc209b</id>
+            <name>ChickenRecBill_farmerPhone_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].actions.action[ChickenRecBill_farmerPhone_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].actions.action[ChickenRecBill_farmerPhone_ActionInfo].description</description>
+            <expressionID>80b45f1a-f731-4e43-8927-28e8b6ad3612</expressionID>
+        </action>
+        <action>
+            <id>d620a259-396a-4f1d-b74d-291ab407aa8a</id>
+            <name>ChickenRecBill_farmAddress_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].actions.action[ChickenRecBill_farmAddress_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].actions.action[ChickenRecBill_farmAddress_ActionInfo].description</description>
+            <expressionID>3e141829-8a06-4ad7-b0eb-cb1372c0647a</expressionID>
+        </action>
+        <action>
+            <id>89109a3a-fdd3-447a-8d55-53837812c2db</id>
+            <name>ChickenRecBill_farmType_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].actions.action[ChickenRecBill_farmType_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].actions.action[ChickenRecBill_farmType_ActionInfo].description</description>
+            <expressionID>4eb96f2c-7492-4657-a26e-22fb360123dd</expressionID>
+        </action>
+        <action>
+            <id>4c9badf4-059b-458d-8f57-5a3dbd6e3202</id>
+            <name>Entrys_driverPhone_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].actions.action[Entrys_driverPhone_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].actions.action[Entrys_driverPhone_ActionInfo].description</description>
+            <expressionID>9f65baad-8d31-47ea-a31f-de1bd4612a8b</expressionID>
+        </action>
+        <action>
+            <id>95dbd9df-f49a-45c4-b961-1b16f6007855</id>
+            <name>PreHouseWgtBill_driverPhone_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].actions.action[PreHouseWgtBill_driverPhone_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].actions.action[PreHouseWgtBill_driverPhone_ActionInfo].description</description>
+            <expressionID>f3634054-9488-4923-97ac-4c3d7fc90b4a</expressionID>
+        </action>
+        <action>
+            <id>7fba1c19-e643-4b48-807a-7de17e0c0a82</id>
+            <name>QCEntrys_randPType_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].actions.action[QCEntrys_randPType_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].actions.action[QCEntrys_randPType_ActionInfo].description</description>
+            <expressionID>a01e1b24-1aef-48ec-8ec5-d2b1854474c4</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>ChickenRecBill_farmerPhone_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[ChickenRecBill_farmerPhone_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[ChickenRecBill_farmerPhone_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="897da19b-5ac4-43f4-a388-68c82efc209b" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>ChickenRecBill_farmAddress_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[ChickenRecBill_farmAddress_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[ChickenRecBill_farmAddress_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="d620a259-396a-4f1d-b74d-291ab407aa8a" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>ChickenRecBill_farmType_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[ChickenRecBill_farmType_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[ChickenRecBill_farmType_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="89109a3a-fdd3-447a-8d55-53837812c2db" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>PreHouseWgtBill_driverPhone_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[PreHouseWgtBill_driverPhone_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[PreHouseWgtBill_driverPhone_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="95dbd9df-f49a-45c4-b961-1b16f6007855" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>QCEntrys_randPType_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[QCEntrys_randPType_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[QCEntrys_randPType_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="7fba1c19-e643-4b48-807a-7de17e0c0a82" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].actions.action[ChickenRecBill_farmAddress_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_address" />
+            <lang locale="zh_HK" value="攜帶字段屬性_address" />
+            <lang locale="zh_TW" value="攜帶字段屬性_address" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].actions.action[ChickenRecBill_farmAddress_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].actions.action[ChickenRecBill_farmType_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_faemsType" />
+            <lang locale="zh_HK" value="攜帶字段屬性_faemsType" />
+            <lang locale="zh_TW" value="攜帶字段屬性_faemsType" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].actions.action[ChickenRecBill_farmType_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].actions.action[ChickenRecBill_farmerPhone_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_mobileTel" />
+            <lang locale="zh_HK" value="攜帶字段屬性_mobileTel" />
+            <lang locale="zh_TW" value="攜帶字段屬性_mobileTel" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].actions.action[ChickenRecBill_farmerPhone_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].actions.action[Entrys_driverPhone_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_driverphone" />
+            <lang locale="zh_HK" value="攜帶字段屬性_driverphone" />
+            <lang locale="zh_TW" value="攜帶字段屬性_driverphone" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].actions.action[Entrys_driverPhone_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].actions.action[PreHouseWgtBill_driverPhone_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_driverphone" />
+            <lang locale="zh_HK" value="攜帶字段屬性_driverphone" />
+            <lang locale="zh_TW" value="攜帶字段屬性_driverphone" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].actions.action[PreHouseWgtBill_driverPhone_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].actions.action[QCEntrys_randPType_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_punishType" />
+            <lang locale="zh_HK" value="攜帶字段屬性_punishType" />
+            <lang locale="zh_TW" value="攜帶字段屬性_punishType" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].actions.action[QCEntrys_randPType_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[ChickenRecBill_farmAddress_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_address" />
+            <lang locale="zh_HK" value="攜帶字段屬性_address" />
+            <lang locale="zh_TW" value="攜帶字段屬性_address" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[ChickenRecBill_farmAddress_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[ChickenRecBill_farmAddress_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="farm" />
+            <lang locale="zh_CN" value="farm" />
+            <lang locale="zh_TW" value="farm" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[ChickenRecBill_farmAddress_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[ChickenRecBill_farmType_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_faemsType" />
+            <lang locale="zh_HK" value="攜帶字段屬性_faemsType" />
+            <lang locale="zh_TW" value="攜帶字段屬性_faemsType" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[ChickenRecBill_farmType_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[ChickenRecBill_farmType_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="farm" />
+            <lang locale="zh_CN" value="farm" />
+            <lang locale="zh_TW" value="farm" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[ChickenRecBill_farmType_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[ChickenRecBill_farmerPhone_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_mobileTel" />
+            <lang locale="zh_HK" value="攜帶字段屬性_mobileTel" />
+            <lang locale="zh_TW" value="攜帶字段屬性_mobileTel" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[ChickenRecBill_farmerPhone_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[ChickenRecBill_farmerPhone_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="farmer" />
+            <lang locale="zh_CN" value="farmer" />
+            <lang locale="zh_TW" value="farmer" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[ChickenRecBill_farmerPhone_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[PreHouseWgtBill_driverPhone_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_driverphone" />
+            <lang locale="zh_HK" value="攜帶字段屬性_driverphone" />
+            <lang locale="zh_TW" value="攜帶字段屬性_driverphone" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[PreHouseWgtBill_driverPhone_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[PreHouseWgtBill_driverPhone_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="driver" />
+            <lang locale="zh_CN" value="driver" />
+            <lang locale="zh_TW" value="driver" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[PreHouseWgtBill_driverPhone_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[QCEntrys_randPType_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_punishType" />
+            <lang locale="zh_HK" value="攜帶字段屬性_punishType" />
+            <lang locale="zh_TW" value="攜帶字段屬性_punishType" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[QCEntrys_randPType_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[QCEntrys_randPType_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="QCItem" />
+            <lang locale="zh_CN" value="QCItem" />
+            <lang locale="zh_TW" value="QCItem" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CSlaughterBillRuleSet].rules.conditionRule[QCEntrys_randPType_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

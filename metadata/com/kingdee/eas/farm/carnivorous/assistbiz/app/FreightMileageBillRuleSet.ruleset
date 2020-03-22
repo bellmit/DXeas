@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.carnivorous.assistbiz.app</package>
+    <name>FreightMileageBillRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.carnivorous.assistbiz.app.FreightMileageBillRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.carnivorous.assistbiz.app.FreightMileageBillRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>ec51ebde-30ae-4a4d-9c51-62825bd7b39f</id>
+            <parentID />
+            <source>Entrys.farmAddress=Entrys.farm.address</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>f2205652-89ef-4c5b-9993-1711e5d22dee</id>
+            <parentID>ec51ebde-30ae-4a4d-9c51-62825bd7b39f</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>78515ce8-1703-4d7e-a064-96c1668e503a</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>78515ce8-1703-4d7e-a064-96c1668e503a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"farmAddress")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5da0f61a-b66f-45ba-aa48-09cfefb4fe45</id>
+            <parentID>ec51ebde-30ae-4a4d-9c51-62825bd7b39f</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>467f1785-05e9-4cb0-b5d3-e1f4c45f65a2</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>374fca9f-83bb-4adc-b36d-ccf9f28e45d3</id>
+                        <expressionID>d4bac623-4521-48c9-a3b9-758f51c074de</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>13f6a491-7e9f-4842-8239-5a12681cbedf</id>
+                        <expressionID>b0a880a2-2430-4bed-a8eb-eb3c28fafeb7</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>467f1785-05e9-4cb0-b5d3-e1f4c45f65a2</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d4bac623-4521-48c9-a3b9-758f51c074de</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>c702d9c4-a691-4407-bf8d-65a9e69b56f3</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c702d9c4-a691-4407-bf8d-65a9e69b56f3</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"farm")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b0a880a2-2430-4bed-a8eb-eb3c28fafeb7</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>address</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>0863f4d1-1847-49c2-9ec4-03cea6680fd6</id>
+            <name>Entrys_farmAddress_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.assistbiz.app.FreightMileageBillRuleSet].actions.action[Entrys_farmAddress_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.assistbiz.app.FreightMileageBillRuleSet].actions.action[Entrys_farmAddress_ActionInfo].description</description>
+            <expressionID>ec51ebde-30ae-4a4d-9c51-62825bd7b39f</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>Entrys_farmAddress_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.assistbiz.app.FreightMileageBillRuleSet].rules.conditionRule[Entrys_farmAddress_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.assistbiz.app.FreightMileageBillRuleSet].rules.conditionRule[Entrys_farmAddress_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="0863f4d1-1847-49c2-9ec4-03cea6680fd6" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.assistbiz.app.FreightMileageBillRuleSet].actions.action[Entrys_farmAddress_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_address" />
+            <lang locale="zh_HK" value="攜帶字段屬性_address" />
+            <lang locale="zh_TW" value="攜帶字段屬性_address" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.assistbiz.app.FreightMileageBillRuleSet].actions.action[Entrys_farmAddress_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.assistbiz.app.FreightMileageBillRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.assistbiz.app.FreightMileageBillRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.assistbiz.app.FreightMileageBillRuleSet].rules.conditionRule[Entrys_farmAddress_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_address" />
+            <lang locale="zh_HK" value="攜帶字段屬性_address" />
+            <lang locale="zh_TW" value="攜帶字段屬性_address" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.assistbiz.app.FreightMileageBillRuleSet].rules.conditionRule[Entrys_farmAddress_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.assistbiz.app.FreightMileageBillRuleSet].rules.conditionRule[Entrys_farmAddress_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="farm" />
+            <lang locale="zh_CN" value="farm" />
+            <lang locale="zh_TW" value="farm" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.assistbiz.app.FreightMileageBillRuleSet].rules.conditionRule[Entrys_farmAddress_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

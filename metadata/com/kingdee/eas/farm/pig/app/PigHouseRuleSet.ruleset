@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.pig.app</package>
+    <name>PigHouseRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.pig.app.PigHouseRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.pig.app.PigHouseRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>1179eff8-1b96-42d2-8df4-55d620614404</id>
+            <parentID />
+            <source>accountStoOrgUnit=pigFarm.accountStoOrtUnit.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>5cf3fa59-057f-4a43-9de0-d1a543218a93</id>
+            <parentID>1179eff8-1b96-42d2-8df4-55d620614404</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>c243e488-4ce3-4108-be28-234051f016eb</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c243e488-4ce3-4108-be28-234051f016eb</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtaccountStoOrgUnit</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8a577aa5-5ed5-4e36-8c11-3130939c0d69</id>
+            <parentID>1179eff8-1b96-42d2-8df4-55d620614404</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>442e5aa1-9375-444a-b989-8e7ab031ed2b</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>3d67b0f7-4910-4443-89e2-525c22999679</id>
+                        <expressionID>33434f0e-36ad-4d1b-9c08-2802e0fcc6de</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>93e24a18-e1bb-4427-85fe-96edfd566c38</id>
+                        <expressionID>db77bced-bbde-424e-89f0-4c1b62cbe005</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>442e5aa1-9375-444a-b989-8e7ab031ed2b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>33434f0e-36ad-4d1b-9c08-2802e0fcc6de</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>8145fb2e-b916-4338-801c-c8084d49a727</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8145fb2e-b916-4338-801c-c8084d49a727</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtpigFarm</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>db77bced-bbde-424e-89f0-4c1b62cbe005</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>accountStoOrtUnit.name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>5016e1c5-eaf3-47e6-ae8e-15286ca2eb8b</id>
+            <parentID />
+            <source>farmCostCenter=pigFarm.costObject.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>927e313b-5e57-43e2-b667-1dcdb29c0096</id>
+            <parentID>5016e1c5-eaf3-47e6-ae8e-15286ca2eb8b</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>9a95c411-5640-4574-bd50-b6b7a236e049</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9a95c411-5640-4574-bd50-b6b7a236e049</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtfarmCostCenter</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>053a83c7-8497-46e4-9c9b-804a86ab3d07</id>
+            <parentID>5016e1c5-eaf3-47e6-ae8e-15286ca2eb8b</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>9b3e313f-086f-41c9-9531-054d945a38b7</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>0d02df84-a85b-4629-919a-49258cc16ae3</id>
+                        <expressionID>357c62d4-38da-4711-9af5-aae0cef7141d</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>02b467cc-444e-47ca-89c6-343b41c36165</id>
+                        <expressionID>c315e8a6-2d3e-4585-bbf7-e5b5875c017e</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>9b3e313f-086f-41c9-9531-054d945a38b7</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>357c62d4-38da-4711-9af5-aae0cef7141d</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>bce00c07-3d61-49e0-8b35-a27cb2935578</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bce00c07-3d61-49e0-8b35-a27cb2935578</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtpigFarm</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c315e8a6-2d3e-4585-bbf7-e5b5875c017e</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>costObject.name</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>49e9be5f-efbb-4be4-bc50-6577fbe15929</id>
+            <name>PigHouse_accountStoOrgUnit_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.app.PigHouseRuleSet].actions.action[PigHouse_accountStoOrgUnit_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.app.PigHouseRuleSet].actions.action[PigHouse_accountStoOrgUnit_ActionInfo].description</description>
+            <expressionID>1179eff8-1b96-42d2-8df4-55d620614404</expressionID>
+        </action>
+        <action>
+            <id>c7338dcc-f320-48d4-9b38-118877fa3795</id>
+            <name>PigHouse_farmCostCenter_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.pig.app.PigHouseRuleSet].actions.action[PigHouse_farmCostCenter_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.pig.app.PigHouseRuleSet].actions.action[PigHouse_farmCostCenter_ActionInfo].description</description>
+            <expressionID>5016e1c5-eaf3-47e6-ae8e-15286ca2eb8b</expressionID>
+        </action>
+    </actions>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.app.PigHouseRuleSet].actions.action[PigHouse_accountStoOrgUnit_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_accountStoOrtUnit" />
+            <lang locale="zh_HK" value="攜帶字段屬性_accountStoOrtUnit" />
+            <lang locale="zh_TW" value="攜帶字段屬性_accountStoOrtUnit" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.app.PigHouseRuleSet].actions.action[PigHouse_accountStoOrgUnit_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.app.PigHouseRuleSet].actions.action[PigHouse_farmCostCenter_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_costObject" />
+            <lang locale="zh_HK" value="攜帶字段屬性_costObject" />
+            <lang locale="zh_TW" value="攜帶字段屬性_costObject" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.app.PigHouseRuleSet].actions.action[PigHouse_farmCostCenter_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.app.PigHouseRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.pig.app.PigHouseRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</ruleSet>
+

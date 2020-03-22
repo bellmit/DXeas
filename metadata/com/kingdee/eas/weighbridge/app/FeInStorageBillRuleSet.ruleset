@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.weighbridge.app</package>
+    <name>FeInStorageBillRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>b56ebe07-798b-48bb-b246-5a94a85fa777</id>
+            <parentID />
+            <source>entrys.mateiralName=entrys.material.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>476b4536-03d0-4e57-a26c-cdacd942a30e</id>
+            <parentID>b56ebe07-798b-48bb-b246-5a94a85fa777</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>f489ab0d-aa35-42be-85b7-95c29f1c12d8</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f489ab0d-aa35-42be-85b7-95c29f1c12d8</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"mateiralName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5e8f6203-6ded-4faa-9fee-e707fa3fc622</id>
+            <parentID>b56ebe07-798b-48bb-b246-5a94a85fa777</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>842e1a9b-133d-4b2b-a10a-eaf56c1271d3</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>fe3b7b2b-8ca5-4e38-8c2f-456e5dd78563</id>
+                        <expressionID>d0520dc6-9010-4840-b147-592ac4be86c0</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>e1cdbb36-944a-411e-bf05-698890c42c6f</id>
+                        <expressionID>eeacd3d9-c8d8-4aab-a855-b86fb607a9fe</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>842e1a9b-133d-4b2b-a10a-eaf56c1271d3</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d0520dc6-9010-4840-b147-592ac4be86c0</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>ece2baa0-94e5-483f-a887-aa3743f5a309</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ece2baa0-94e5-483f-a887-aa3743f5a309</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>eeacd3d9-c8d8-4aab-a855-b86fb607a9fe</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>687c8b7b-7026-4615-bafe-dbf85e0d6dc8</id>
+            <parentID />
+            <source>entrys.model=entrys.material.model</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>b30ab121-a60f-43c1-a3c5-affa081683c0</id>
+            <parentID>687c8b7b-7026-4615-bafe-dbf85e0d6dc8</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>41343ca2-4394-4132-b693-cc2cce90698b</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>41343ca2-4394-4132-b693-cc2cce90698b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"model")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b40653bc-3ea0-4910-b473-7a56e4968fd4</id>
+            <parentID>687c8b7b-7026-4615-bafe-dbf85e0d6dc8</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>979ef424-1bea-4717-b5e5-8fc8c661b8d5</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>1751a700-70d6-4e60-a5f2-abd4e123a265</id>
+                        <expressionID>379804a4-bd3b-439d-9670-551b0fea69b6</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>8e8850e2-0d4d-4479-ada9-a6cb4b92188d</id>
+                        <expressionID>5d33e269-b98a-45c8-a6f5-8240bf317949</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>979ef424-1bea-4717-b5e5-8fc8c661b8d5</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>379804a4-bd3b-439d-9670-551b0fea69b6</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>8f53d962-479f-4d51-9996-394e36b34db8</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>8f53d962-479f-4d51-9996-394e36b34db8</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>5d33e269-b98a-45c8-a6f5-8240bf317949</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>model</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>b2a2e07f-6432-4037-9cf0-b95e15d70a7c</id>
+            <parentID />
+            <source>[tareWeight] = [car.tare]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>8626ec09-b99e-4eed-bcd7-cb4f85dffb99</id>
+            <parentID>b2a2e07f-6432-4037-9cf0-b95e15d70a7c</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <property>
+                <ownerID>41c91054-2048-4890-8dbd-82e9b7b0037f</ownerID>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>41c91054-2048-4890-8dbd-82e9b7b0037f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txttareWeight</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>44468e23-cd09-48e6-93b6-c2253026b498</id>
+            <parentID>b2a2e07f-6432-4037-9cf0-b95e15d70a7c</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>BigDecimal</valueType>
+            <value />
+            <method>
+                <ownerID>6e3cfe3e-dcba-4102-9d1b-1e53c6a57b0a</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>422a71e2-9c11-4ded-a568-d739ab8849c2</id>
+                        <expressionID>05811271-8ad0-43c3-8ae2-d82c84d51df6</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>9133a601-1107-440e-84f8-0753f6660ee5</id>
+                        <expressionID>98335d47-b126-4441-854a-ab0053837042</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6e3cfe3e-dcba-4102-9d1b-1e53c6a57b0a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>05811271-8ad0-43c3-8ae2-d82c84d51df6</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>f9b4ef13-ffae-4078-84ac-2620d5ee908d</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>f9b4ef13-ffae-4078-84ac-2620d5ee908d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtcar</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>98335d47-b126-4441-854a-ab0053837042</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>tare</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e47385ee-cd6c-4110-8abf-e67fdaee0cc0</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>ef574e63-68d2-4e00-bfd3-516c678832b1</id>
+            <name>entrys_mateiralName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].actions.action[entrys_mateiralName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].actions.action[entrys_mateiralName_ActionInfo].description</description>
+            <expressionID>b56ebe07-798b-48bb-b246-5a94a85fa777</expressionID>
+        </action>
+        <action>
+            <id>78fbe51e-ba79-446d-b5d7-b332082f76c6</id>
+            <name>entrys_model_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].actions.action[entrys_model_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].actions.action[entrys_model_ActionInfo].description</description>
+            <expressionID>687c8b7b-7026-4615-bafe-dbf85e0d6dc8</expressionID>
+        </action>
+        <action>
+            <id>d97d05d3-f018-4bcc-b476-bc9fda95f918</id>
+            <name>CHRYR7Z_</name>
+            <alias>ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].actions.action[CHRYR7Z_].alias</alias>
+            <description>ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].actions.action[CHRYR7Z_].description</description>
+            <expressionID>b2a2e07f-6432-4037-9cf0-b95e15d70a7c</expressionID>
+        </action>
+        <action>
+            <id>d5f74a3b-b862-40be-9ca6-2a0d4b9cd92b</id>
+            <name>CHRYR7_K</name>
+            <alias>ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].actions.action[CHRYR7_K].alias</alias>
+            <description>ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].actions.action[CHRYR7_K].description</description>
+            <expressionID>e47385ee-cd6c-4110-8abf-e67fdaee0cc0</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>entrys_mateiralName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].rules.conditionRule[entrys_mateiralName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].rules.conditionRule[entrys_mateiralName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="ef574e63-68d2-4e00-bfd3-516c678832b1" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>entrys_model_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].rules.conditionRule[entrys_model_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].rules.conditionRule[entrys_model_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="78fbe51e-ba79-446d-b5d7-b332082f76c6" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>CHRYRMG6</name>
+            <alias>ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].rules.conditionRule[CHRYRMG6].alias</alias>
+            <description>ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].rules.conditionRule[CHRYRMG6].description</description>
+            <ruleType>calculate</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="d97d05d3-f018-4bcc-b476-bc9fda95f918" />
+                </action>
+            </actions>
+            <exceptionActions>
+                <action>
+                    <key name="id" value="d5f74a3b-b862-40be-9ca6-2a0d4b9cd92b" />
+                </action>
+            </exceptionActions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].actions.action[CHRYR7Z_].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="带出皮重" />
+            <lang locale="zh_HK" value="帶出皮重" />
+            <lang locale="zh_TW" value="帶出皮重" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].actions.action[CHRYR7Z_].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].actions.action[CHRYR7_K].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].actions.action[CHRYR7_K].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].actions.action[entrys_mateiralName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].actions.action[entrys_mateiralName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].actions.action[entrys_model_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].actions.action[entrys_model_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].rules.conditionRule[CHRYRMG6].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="getTare" />
+            <lang locale="zh_HK" value="getTare" />
+            <lang locale="zh_TW" value="getTare" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].rules.conditionRule[CHRYRMG6].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].rules.conditionRule[CHRYRMG6].extendedProperty.columnName">
+            <lang locale="en_US" value="car" />
+            <lang locale="zh_CN" value="car" />
+            <lang locale="zh_TW" value="car" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].rules.conditionRule[entrys_mateiralName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].rules.conditionRule[entrys_mateiralName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].rules.conditionRule[entrys_mateiralName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="material" />
+            <lang locale="zh_CN" value="material" />
+            <lang locale="zh_TW" value="material" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].rules.conditionRule[entrys_mateiralName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].rules.conditionRule[entrys_model_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].rules.conditionRule[entrys_model_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].rules.conditionRule[entrys_model_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="material" />
+            <lang locale="zh_CN" value="material" />
+            <lang locale="zh_TW" value="material" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.weighbridge.app.FeInStorageBillRuleSet].rules.conditionRule[entrys_model_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

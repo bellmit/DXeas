@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.bdm.bdapply.app</package>
+    <name>SupplierReqRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.bdm.bdapply.app.SupplierReqRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.bdm.bdapply.app.SupplierReqRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>3e69b641-4ca8-42d5-8502-1aa5505343c0</id>
+            <parentID />
+            <source>[entrys.supplierGroupFullName] = [entrys.suppliGroup.supplierGroupDetails.supplierGroupFullName]</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>f8372c81-0a9d-4078-b0e0-93f79922ba55</id>
+            <parentID>3e69b641-4ca8-42d5-8502-1aa5505343c0</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>e58ea0f1-28ad-4fea-9e47-706348a8e047</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e58ea0f1-28ad-4fea-9e47-706348a8e047</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtEntrys.getCell(rowIndex,"supplierGroupFullName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c51bb60f-969a-4a43-a3e3-929d01226a67</id>
+            <parentID>3e69b641-4ca8-42d5-8502-1aa5505343c0</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>276e1f99-9feb-4df0-bdb2-5951799dcbaf</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>347f34b5-6432-44fc-974b-8fb6764a2fbe</id>
+                        <expressionID>383a15e9-326f-4bec-a412-882ca11833cd</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>739bc12e-3829-4370-bd00-1503eacb70d5</id>
+                        <expressionID>4290a141-85e8-4db4-a776-0fd1b22e4865</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>276e1f99-9feb-4df0-bdb2-5951799dcbaf</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>383a15e9-326f-4bec-a412-882ca11833cd</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>83301dd9-60c0-490f-a3f2-e540faf2f962</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>83301dd9-60c0-490f-a3f2-e540faf2f962</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtEntrys.getCell(rowIndex,"suppliGroup")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>4290a141-85e8-4db4-a776-0fd1b22e4865</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>supplierGroupDetails.supplierGroupFullName</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>ab67df8a-3786-4ce1-bf45-0b14c3019220</id>
+            <parentID />
+            <source />
+            <type />
+            <valueType />
+            <value />
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>5afe30e2-6d79-441b-8ee6-4a759ff6b256</id>
+            <name>B5SO55K2</name>
+            <alias>ruleSet[com.kingdee.eas.bdm.bdapply.app.SupplierReqRuleSet].actions.action[B5SO55K2].alias</alias>
+            <description>ruleSet[com.kingdee.eas.bdm.bdapply.app.SupplierReqRuleSet].actions.action[B5SO55K2].description</description>
+            <expressionID>3e69b641-4ca8-42d5-8502-1aa5505343c0</expressionID>
+        </action>
+        <action>
+            <id>a1be7750-49aa-41f0-9d7b-30bf851dab28</id>
+            <name>B5SO55K$</name>
+            <alias>ruleSet[com.kingdee.eas.bdm.bdapply.app.SupplierReqRuleSet].actions.action[B5SO55K$].alias</alias>
+            <description>ruleSet[com.kingdee.eas.bdm.bdapply.app.SupplierReqRuleSet].actions.action[B5SO55K$].description</description>
+            <expressionID>ab67df8a-3786-4ce1-bf45-0b14c3019220</expressionID>
+        </action>
+    </actions>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.bdm.bdapply.app.SupplierReqRuleSet].actions.action[B5SO55K$].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.bdm.bdapply.app.SupplierReqRuleSet].actions.action[B5SO55K$].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.bdm.bdapply.app.SupplierReqRuleSet].actions.action[B5SO55K2].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.bdm.bdapply.app.SupplierReqRuleSet].actions.action[B5SO55K2].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.bdm.bdapply.app.SupplierReqRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.bdm.bdapply.app.SupplierReqRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</ruleSet>
+
