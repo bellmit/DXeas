@@ -1,0 +1,1174 @@
+/**
+ * output package name
+ */
+package com.kingdee.eas.custom.szcount.client;
+
+import org.apache.log4j.*;
+
+import java.awt.*;
+import java.awt.event.*;
+import java.util.*;
+import javax.swing.border.*;
+import javax.swing.BorderFactory;
+import javax.swing.event.*;
+import javax.swing.KeyStroke;
+
+import com.kingdee.bos.ctrl.swing.*;
+import com.kingdee.bos.ctrl.kdf.table.*;
+import com.kingdee.bos.ctrl.kdf.data.event.*;
+import com.kingdee.bos.dao.*;
+import com.kingdee.bos.dao.query.*;
+import com.kingdee.bos.metadata.*;
+import com.kingdee.bos.metadata.entity.*;
+import com.kingdee.bos.ui.face.*;
+import com.kingdee.bos.ui.util.ResourceBundleHelper;
+import com.kingdee.bos.util.BOSUuid;
+import com.kingdee.bos.service.ServiceContext;
+import com.kingdee.jdbc.rowset.IRowSet;
+import com.kingdee.util.enums.EnumUtils;
+import com.kingdee.bos.ui.face.UIRuleUtil;
+import com.kingdee.bos.ctrl.swing.event.*;
+import com.kingdee.bos.ctrl.kdf.table.event.*;
+import com.kingdee.bos.ctrl.extendcontrols.*;
+import com.kingdee.bos.ctrl.kdf.util.render.*;
+import com.kingdee.bos.ui.face.IItemAction;
+import com.kingdee.eas.framework.batchHandler.RequestContext;
+import com.kingdee.bos.ui.util.IUIActionPostman;
+import com.kingdee.bos.appframework.client.servicebinding.ActionProxyFactory;
+import com.kingdee.bos.appframework.uistatemanage.ActionStateConst;
+import com.kingdee.bos.appframework.validator.ValidateHelper;
+import com.kingdee.bos.appframework.uip.UINavigator;
+
+
+/**
+ * output class name
+ */
+public abstract class AbstractSzSemiCountOperateUI extends com.kingdee.eas.framework.client.CoreUI
+{
+    private static final Logger logger = CoreUIObject.getLogger(AbstractSzSemiCountOperateUI.class);
+    protected com.kingdee.bos.ctrl.kdf.table.KDTable kDTable1;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer startdate;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer enddate;
+    protected com.kingdee.bos.ctrl.swing.KDButton select;
+    protected com.kingdee.bos.ctrl.swing.KDPanel kDPanel1;
+    protected com.kingdee.bos.ctrl.swing.KDButton selectmaterial;
+    protected com.kingdee.bos.ctrl.swing.KDButton xlselect;
+    protected com.kingdee.bos.ctrl.swing.KDButton tlselect;
+    protected com.kingdee.bos.ctrl.swing.KDButton clselect;
+    protected com.kingdee.bos.ctrl.swing.KDButton jjselect;
+    protected com.kingdee.bos.ctrl.swing.KDButton qtselect;
+    protected com.kingdee.bos.ctrl.swing.KDDatePicker kDDatePicker2;
+    protected com.kingdee.bos.ctrl.swing.KDDatePicker kDDatePicker3;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer bizdate1;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer countpoint;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer countperson;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer materialunit;
+    protected com.kingdee.bos.ctrl.swing.KDWorkButton cancel;
+    protected com.kingdee.bos.ctrl.swing.KDWorkButton QyBtn;
+    protected com.kingdee.bos.ctrl.swing.KDWorkButton clear;
+    protected com.kingdee.bos.ctrl.swing.KDLabel kDLabel1;
+    protected com.kingdee.bos.ctrl.swing.KDTextField weight;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox material;
+    protected com.kingdee.bos.ctrl.swing.KDLabel kDLabel2;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer materialunittype;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contDate;
+    protected com.kingdee.bos.ctrl.swing.KDWorkButton HyBtn;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer inventoryUnit;
+    protected com.kingdee.bos.ctrl.swing.KDWorkButton kDWorkButton2;
+    protected com.kingdee.bos.ctrl.swing.KDComboBox classes;
+    protected com.kingdee.bos.ctrl.swing.KDLabel classtxt;
+    protected com.kingdee.bos.ctrl.swing.KDDatePicker bizdate;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox countpointf7;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox countpersonf7;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox materialunitf7;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox materialunittypef7;
+    protected com.kingdee.bos.ctrl.swing.KDDatePicker productDateF7;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox inventoryUnitF7;
+    protected ActionQY actionQY = null;
+    protected ActionHY actionHY = null;
+    protected ActionCheck actionCheck = null;
+    protected actionclselect actionClselect = null;
+    protected actionxlselect actionXlselect = null;
+    protected actiontlselect actionTlselect = null;
+    protected actionjjselect actionJjselect = null;
+    protected actionqtselect actionQtselect = null;
+    /**
+     * output class constructor
+     */
+    public AbstractSzSemiCountOperateUI() throws Exception
+    {
+        super();
+        jbInit();
+        
+        initUIP();
+    }
+
+    /**
+     * output jbInit method
+     */
+    private void jbInit() throws Exception
+    {
+        this.resHelper = new ResourceBundleHelper(AbstractSzSemiCountOperateUI.class.getName());
+        this.setUITitle(resHelper.getString("this.title"));
+        //actionQY
+        this.actionQY = new ActionQY(this);
+        getActionManager().registerAction("actionQY", actionQY);
+         this.actionQY.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+        //actionHY
+        this.actionHY = new ActionHY(this);
+        getActionManager().registerAction("actionHY", actionHY);
+         this.actionHY.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+        //actionCheck
+        this.actionCheck = new ActionCheck(this);
+        getActionManager().registerAction("actionCheck", actionCheck);
+         this.actionCheck.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+        //actionClselect
+        this.actionClselect = new actionclselect(this);
+        getActionManager().registerAction("actionClselect", actionClselect);
+         this.actionClselect.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+        //actionXlselect
+        this.actionXlselect = new actionxlselect(this);
+        getActionManager().registerAction("actionXlselect", actionXlselect);
+         this.actionXlselect.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+        //actionTlselect
+        this.actionTlselect = new actiontlselect(this);
+        getActionManager().registerAction("actionTlselect", actionTlselect);
+         this.actionTlselect.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+        //actionJjselect
+        this.actionJjselect = new actionjjselect(this);
+        getActionManager().registerAction("actionJjselect", actionJjselect);
+         this.actionJjselect.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+        //actionQtselect
+        this.actionQtselect = new actionqtselect(this);
+        getActionManager().registerAction("actionQtselect", actionQtselect);
+         this.actionQtselect.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+        this.kDTable1 = new com.kingdee.bos.ctrl.kdf.table.KDTable();
+        this.startdate = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.enddate = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.select = new com.kingdee.bos.ctrl.swing.KDButton();
+        this.kDPanel1 = new com.kingdee.bos.ctrl.swing.KDPanel();
+        this.selectmaterial = new com.kingdee.bos.ctrl.swing.KDButton();
+        this.xlselect = new com.kingdee.bos.ctrl.swing.KDButton();
+        this.tlselect = new com.kingdee.bos.ctrl.swing.KDButton();
+        this.clselect = new com.kingdee.bos.ctrl.swing.KDButton();
+        this.jjselect = new com.kingdee.bos.ctrl.swing.KDButton();
+        this.qtselect = new com.kingdee.bos.ctrl.swing.KDButton();
+        this.kDDatePicker2 = new com.kingdee.bos.ctrl.swing.KDDatePicker();
+        this.kDDatePicker3 = new com.kingdee.bos.ctrl.swing.KDDatePicker();
+        this.bizdate1 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.countpoint = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.countperson = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.materialunit = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.cancel = new com.kingdee.bos.ctrl.swing.KDWorkButton();
+        this.QyBtn = new com.kingdee.bos.ctrl.swing.KDWorkButton();
+        this.clear = new com.kingdee.bos.ctrl.swing.KDWorkButton();
+        this.kDLabel1 = new com.kingdee.bos.ctrl.swing.KDLabel();
+        this.weight = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.material = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
+        this.kDLabel2 = new com.kingdee.bos.ctrl.swing.KDLabel();
+        this.materialunittype = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contDate = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.HyBtn = new com.kingdee.bos.ctrl.swing.KDWorkButton();
+        this.inventoryUnit = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDWorkButton2 = new com.kingdee.bos.ctrl.swing.KDWorkButton();
+        this.classes = new com.kingdee.bos.ctrl.swing.KDComboBox();
+        this.classtxt = new com.kingdee.bos.ctrl.swing.KDLabel();
+        this.bizdate = new com.kingdee.bos.ctrl.swing.KDDatePicker();
+        this.countpointf7 = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
+        this.countpersonf7 = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
+        this.materialunitf7 = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
+        this.materialunittypef7 = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
+        this.productDateF7 = new com.kingdee.bos.ctrl.swing.KDDatePicker();
+        this.inventoryUnitF7 = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
+        this.kDTable1.setName("kDTable1");
+        this.startdate.setName("startdate");
+        this.enddate.setName("enddate");
+        this.select.setName("select");
+        this.kDPanel1.setName("kDPanel1");
+        this.selectmaterial.setName("selectmaterial");
+        this.xlselect.setName("xlselect");
+        this.tlselect.setName("tlselect");
+        this.clselect.setName("clselect");
+        this.jjselect.setName("jjselect");
+        this.qtselect.setName("qtselect");
+        this.kDDatePicker2.setName("kDDatePicker2");
+        this.kDDatePicker3.setName("kDDatePicker3");
+        this.bizdate1.setName("bizdate1");
+        this.countpoint.setName("countpoint");
+        this.countperson.setName("countperson");
+        this.materialunit.setName("materialunit");
+        this.cancel.setName("cancel");
+        this.QyBtn.setName("QyBtn");
+        this.clear.setName("clear");
+        this.kDLabel1.setName("kDLabel1");
+        this.weight.setName("weight");
+        this.material.setName("material");
+        this.kDLabel2.setName("kDLabel2");
+        this.materialunittype.setName("materialunittype");
+        this.contDate.setName("contDate");
+        this.HyBtn.setName("HyBtn");
+        this.inventoryUnit.setName("inventoryUnit");
+        this.kDWorkButton2.setName("kDWorkButton2");
+        this.classes.setName("classes");
+        this.classtxt.setName("classtxt");
+        this.bizdate.setName("bizdate");
+        this.countpointf7.setName("countpointf7");
+        this.countpersonf7.setName("countpersonf7");
+        this.materialunitf7.setName("materialunitf7");
+        this.materialunittypef7.setName("materialunittypef7");
+        this.productDateF7.setName("productDateF7");
+        this.inventoryUnitF7.setName("inventoryUnitF7");
+        // CoreUI		
+        this.btnPageSetup.setVisible(false);		
+        this.btnCloud.setVisible(false);		
+        this.btnXunTong.setVisible(false);		
+        this.kDSeparatorCloud.setVisible(false);		
+        this.menuItemPageSetup.setVisible(false);		
+        this.menuItemCloudFeed.setVisible(false);		
+        this.menuItemCloudScreen.setEnabled(false);		
+        this.menuItemCloudScreen.setVisible(false);		
+        this.menuItemCloudShare.setVisible(false);		
+        this.kdSeparatorFWFile1.setVisible(false);
+        // kDTable1
+		String kDTable1StrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles /><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"column1\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"column2\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"column3\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"column4\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header1\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{column1}</t:Cell><t:Cell>$Resource{column2}</t:Cell><t:Cell>$Resource{column3}</t:Cell><t:Cell>$Resource{column4}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
+		
+        this.kDTable1.setFormatXml(resHelper.translateString("kDTable1",kDTable1StrXML));
+
+        
+
+        // startdate		
+        this.startdate.setBoundLabelText(resHelper.getString("startdate.boundLabelText"));		
+        this.startdate.setBoundLabelUnderline(true);		
+        this.startdate.setBoundLabelLength(60);
+        // enddate		
+        this.enddate.setBoundLabelText(resHelper.getString("enddate.boundLabelText"));		
+        this.enddate.setBoundLabelUnderline(true);		
+        this.enddate.setBoundLabelLength(60);
+        // select
+        this.select.setAction((IItemAction)ActionProxyFactory.getProxy(actionCheck, new Class[] { IItemAction.class }, getServiceContext()));		
+        this.select.setText(resHelper.getString("select.text"));
+        // kDPanel1		
+        this.kDPanel1.setBorder(new TitledBorder(BorderFactory.createEtchedBorder(new Color(255,255,255),new Color(148,145,140)), resHelper.getString("kDPanel1.border.title")));
+        // selectmaterial		
+        this.selectmaterial.setText(resHelper.getString("selectmaterial.text"));		
+        this.selectmaterial.setFont(resHelper.getFont("selectmaterial.font"));
+        this.selectmaterial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                beforeActionPerformed(e);
+                try {
+                    selectmaterial_actionPerformed(e);
+                } catch (Exception exc) {
+                    handUIException(exc);
+                } finally {
+                    afterActionPerformed(e);
+                }
+            }
+        });
+        // xlselect
+        this.xlselect.setAction((IItemAction)ActionProxyFactory.getProxy(actionXlselect, new Class[] { IItemAction.class }, getServiceContext()));		
+        this.xlselect.setText(resHelper.getString("xlselect.text"));
+        this.xlselect.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                beforeActionPerformed(e);
+                try {
+                    xlselect_actionPerformed(e);
+                } catch (Exception exc) {
+                    handUIException(exc);
+                } finally {
+                    afterActionPerformed(e);
+                }
+            }
+        });
+        // tlselect
+        this.tlselect.setAction((IItemAction)ActionProxyFactory.getProxy(actionTlselect, new Class[] { IItemAction.class }, getServiceContext()));		
+        this.tlselect.setText(resHelper.getString("tlselect.text"));
+        this.tlselect.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                beforeActionPerformed(e);
+                try {
+                    tlselect_actionPerformed(e);
+                } catch (Exception exc) {
+                    handUIException(exc);
+                } finally {
+                    afterActionPerformed(e);
+                }
+            }
+        });
+        // clselect
+        this.clselect.setAction((IItemAction)ActionProxyFactory.getProxy(actionClselect, new Class[] { IItemAction.class }, getServiceContext()));		
+        this.clselect.setText(resHelper.getString("clselect.text"));
+        this.clselect.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                beforeActionPerformed(e);
+                try {
+                    clselect_actionPerformed(e);
+                } catch (Exception exc) {
+                    handUIException(exc);
+                } finally {
+                    afterActionPerformed(e);
+                }
+            }
+        });
+        // jjselect
+        this.jjselect.setAction((IItemAction)ActionProxyFactory.getProxy(actionJjselect, new Class[] { IItemAction.class }, getServiceContext()));		
+        this.jjselect.setText(resHelper.getString("jjselect.text"));
+        this.jjselect.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                beforeActionPerformed(e);
+                try {
+                    jjselect_actionPerformed(e);
+                } catch (Exception exc) {
+                    handUIException(exc);
+                } finally {
+                    afterActionPerformed(e);
+                }
+            }
+        });
+        // qtselect
+        this.qtselect.setAction((IItemAction)ActionProxyFactory.getProxy(actionQtselect, new Class[] { IItemAction.class }, getServiceContext()));		
+        this.qtselect.setText(resHelper.getString("qtselect.text"));
+        this.qtselect.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                beforeActionPerformed(e);
+                try {
+                    qtselect_actionPerformed(e);
+                } catch (Exception exc) {
+                    handUIException(exc);
+                } finally {
+                    afterActionPerformed(e);
+                }
+            }
+        });
+        // kDDatePicker2
+        // kDDatePicker3
+        // bizdate1		
+        this.bizdate1.setBoundLabelText(resHelper.getString("bizdate1.boundLabelText"));		
+        this.bizdate1.setBoundLabelUnderline(true);		
+        this.bizdate1.setBoundLabelLength(100);
+        // countpoint		
+        this.countpoint.setBoundLabelText(resHelper.getString("countpoint.boundLabelText"));		
+        this.countpoint.setBoundLabelUnderline(true);		
+        this.countpoint.setBoundLabelLength(100);
+        // countperson		
+        this.countperson.setBoundLabelText(resHelper.getString("countperson.boundLabelText"));		
+        this.countperson.setBoundLabelUnderline(true);		
+        this.countperson.setBoundLabelLength(100);
+        // materialunit		
+        this.materialunit.setBoundLabelText(resHelper.getString("materialunit.boundLabelText"));		
+        this.materialunit.setBoundLabelUnderline(true);		
+        this.materialunit.setBoundLabelLength(100);
+        // cancel		
+        this.cancel.setText(resHelper.getString("cancel.text"));		
+        this.cancel.setFont(resHelper.getFont("cancel.font"));
+        this.cancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                beforeActionPerformed(e);
+                try {
+                    cancel_actionPerformed(e);
+                } catch (Exception exc) {
+                    handUIException(exc);
+                } finally {
+                    afterActionPerformed(e);
+                }
+            }
+        });
+        // QyBtn
+        this.QyBtn.setAction((IItemAction)ActionProxyFactory.getProxy(actionQY, new Class[] { IItemAction.class }, getServiceContext()));		
+        this.QyBtn.setText(resHelper.getString("QyBtn.text"));		
+        this.QyBtn.setFont(resHelper.getFont("QyBtn.font"));
+        this.QyBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                beforeActionPerformed(e);
+                try {
+                    QyBtn_actionPerformed(e);
+                } catch (Exception exc) {
+                    handUIException(exc);
+                } finally {
+                    afterActionPerformed(e);
+                }
+            }
+        });
+        // clear		
+        this.clear.setText(resHelper.getString("clear.text"));		
+        this.clear.setFont(resHelper.getFont("clear.font"));
+        this.clear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                beforeActionPerformed(e);
+                try {
+                    clear_actionPerformed(e);
+                } catch (Exception exc) {
+                    handUIException(exc);
+                } finally {
+                    afterActionPerformed(e);
+                }
+            }
+        });
+        // kDLabel1		
+        this.kDLabel1.setText(resHelper.getString("kDLabel1.text"));		
+        this.kDLabel1.setFont(resHelper.getFont("kDLabel1.font"));		
+        this.kDLabel1.setBackground(new java.awt.Color(255,0,0));		
+        this.kDLabel1.setForeground(new java.awt.Color(255,0,0));
+        // weight
+        // material
+        // kDLabel2		
+        this.kDLabel2.setText(resHelper.getString("kDLabel2.text"));		
+        this.kDLabel2.setFont(resHelper.getFont("kDLabel2.font"));		
+        this.kDLabel2.setBackground(new java.awt.Color(255,0,0));		
+        this.kDLabel2.setForeground(new java.awt.Color(255,0,0));
+        // materialunittype		
+        this.materialunittype.setBoundLabelText(resHelper.getString("materialunittype.boundLabelText"));		
+        this.materialunittype.setBoundLabelUnderline(true);		
+        this.materialunittype.setBoundLabelLength(100);
+        // contDate		
+        this.contDate.setBoundLabelText(resHelper.getString("contDate.boundLabelText"));
+        // HyBtn
+        this.HyBtn.setAction((IItemAction)ActionProxyFactory.getProxy(actionHY, new Class[] { IItemAction.class }, getServiceContext()));		
+        this.HyBtn.setText(resHelper.getString("HyBtn.text"));		
+        this.HyBtn.setFont(resHelper.getFont("HyBtn.font"));
+        // inventoryUnit		
+        this.inventoryUnit.setBoundLabelText(resHelper.getString("inventoryUnit.boundLabelText"));
+        // kDWorkButton2		
+        this.kDWorkButton2.setText(resHelper.getString("kDWorkButton2.text"));		
+        this.kDWorkButton2.setFont(resHelper.getFont("kDWorkButton2.font"));
+        this.kDWorkButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                beforeActionPerformed(e);
+                try {
+                    print_actionPerformed(e);
+                } catch (Exception exc) {
+                    handUIException(exc);
+                } finally {
+                    afterActionPerformed(e);
+                }
+            }
+        });
+        // classes
+        // classtxt		
+        this.classtxt.setText(resHelper.getString("classtxt.text"));		
+        this.classtxt.setFont(resHelper.getFont("classtxt.font"));
+        // bizdate		
+        this.bizdate.setEnabled(false);
+        // countpointf7		
+        this.countpointf7.setEnabled(false);
+        // countpersonf7		
+        this.countpersonf7.setEnabled(false);
+        // materialunitf7		
+        this.materialunitf7.setEnabled(false);
+        // materialunittypef7		
+        this.materialunittypef7.setEnabled(false);
+        // productDateF7
+        // inventoryUnitF7
+		//Register control's property binding
+		registerBindings();
+		registerUIState();
+
+
+    }
+
+	public com.kingdee.bos.ctrl.swing.KDToolBar[] getUIMultiToolBar(){
+		java.util.List list = new java.util.ArrayList();
+		com.kingdee.bos.ctrl.swing.KDToolBar[] bars = super.getUIMultiToolBar();
+		if (bars != null) {
+			list.addAll(java.util.Arrays.asList(bars));
+		}
+		return (com.kingdee.bos.ctrl.swing.KDToolBar[])list.toArray(new com.kingdee.bos.ctrl.swing.KDToolBar[list.size()]);
+	}
+
+
+
+
+    /**
+     * output initUIContentLayout method
+     */
+    public void initUIContentLayout()
+    {
+        this.setBounds(new Rectangle(10, 10, 1200, 629));
+        this.setLayout(new KDLayout());
+        this.putClientProperty("OriginalBounds", new Rectangle(10, 10, 1200, 629));
+        kDTable1.setBounds(new Rectangle(16, 73, 567, 549));
+        this.add(kDTable1, new KDLayout.Constraints(16, 73, 567, 549, 0));
+        startdate.setBounds(new Rectangle(20, 10, 187, 19));
+        this.add(startdate, new KDLayout.Constraints(20, 10, 187, 19, 0));
+        enddate.setBounds(new Rectangle(228, 11, 187, 19));
+        this.add(enddate, new KDLayout.Constraints(228, 11, 187, 19, 0));
+        select.setBounds(new Rectangle(465, 11, 73, 21));
+        this.add(select, new KDLayout.Constraints(465, 11, 73, 21, 0));
+        kDPanel1.setBounds(new Rectangle(632, 37, 460, 551));
+        this.add(kDPanel1, new KDLayout.Constraints(632, 37, 460, 551, 0));
+        selectmaterial.setBounds(new Rectangle(579, 243, 48, 41));
+        this.add(selectmaterial, new KDLayout.Constraints(579, 243, 48, 41, KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        xlselect.setBounds(new Rectangle(36, 42, 73, 21));
+        this.add(xlselect, new KDLayout.Constraints(36, 42, 73, 21, 0));
+        tlselect.setBounds(new Rectangle(157, 42, 73, 21));
+        this.add(tlselect, new KDLayout.Constraints(157, 42, 73, 21, 0));
+        clselect.setBounds(new Rectangle(279, 42, 73, 21));
+        this.add(clselect, new KDLayout.Constraints(279, 42, 73, 21, 0));
+        jjselect.setBounds(new Rectangle(401, 42, 73, 21));
+        this.add(jjselect, new KDLayout.Constraints(401, 42, 73, 21, 0));
+        qtselect.setBounds(new Rectangle(505, 42, 73, 21));
+        this.add(qtselect, new KDLayout.Constraints(505, 42, 73, 21, 0));
+        //startdate
+        startdate.setBoundEditor(kDDatePicker2);
+        //enddate
+        enddate.setBoundEditor(kDDatePicker3);
+        //kDPanel1
+        kDPanel1.setLayout(new KDLayout());
+        kDPanel1.putClientProperty("OriginalBounds", new Rectangle(632, 37, 460, 551));        bizdate1.setBounds(new Rectangle(30, 37, 368, 25));
+        kDPanel1.add(bizdate1, new KDLayout.Constraints(30, 37, 368, 25, 0));
+        countpoint.setBounds(new Rectangle(30, 74, 368, 19));
+        kDPanel1.add(countpoint, new KDLayout.Constraints(30, 74, 368, 19, 0));
+        countperson.setBounds(new Rectangle(30, 107, 368, 19));
+        kDPanel1.add(countperson, new KDLayout.Constraints(30, 107, 368, 19, 0));
+        materialunit.setBounds(new Rectangle(29, 252, 368, 19));
+        kDPanel1.add(materialunit, new KDLayout.Constraints(29, 252, 368, 19, 0));
+        cancel.setBounds(new Rectangle(318, 480, 114, 55));
+        kDPanel1.add(cancel, new KDLayout.Constraints(318, 480, 114, 55, 0));
+        QyBtn.setBounds(new Rectangle(10, 134, 130, 58));
+        kDPanel1.add(QyBtn, new KDLayout.Constraints(10, 134, 130, 58, 0));
+        clear.setBounds(new Rectangle(18, 479, 115, 55));
+        kDPanel1.add(clear, new KDLayout.Constraints(18, 479, 115, 55, 0));
+        kDLabel1.setBounds(new Rectangle(20, 336, 121, 74));
+        kDPanel1.add(kDLabel1, new KDLayout.Constraints(20, 336, 121, 74, 0));
+        weight.setBounds(new Rectangle(133, 348, 262, 48));
+        kDPanel1.add(weight, new KDLayout.Constraints(133, 348, 262, 48, 0));
+        material.setBounds(new Rectangle(133, 199, 262, 48));
+        kDPanel1.add(material, new KDLayout.Constraints(133, 199, 262, 48, 0));
+        kDLabel2.setBounds(new Rectangle(26, 191, 97, 54));
+        kDPanel1.add(kDLabel2, new KDLayout.Constraints(26, 191, 97, 54, 0));
+        materialunittype.setBounds(new Rectangle(30, 304, 368, 19));
+        kDPanel1.add(materialunittype, new KDLayout.Constraints(30, 304, 368, 19, 0));
+        contDate.setBounds(new Rectangle(146, 153, 169, 19));
+        kDPanel1.add(contDate, new KDLayout.Constraints(146, 153, 169, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        HyBtn.setBounds(new Rectangle(317, 133, 130, 58));
+        kDPanel1.add(HyBtn, new KDLayout.Constraints(317, 133, 130, 58, 0));
+        inventoryUnit.setBounds(new Rectangle(30, 280, 368, 19));
+        kDPanel1.add(inventoryUnit, new KDLayout.Constraints(30, 280, 368, 19, 0));
+        kDWorkButton2.setBounds(new Rectangle(152, 439, 149, 77));
+        kDPanel1.add(kDWorkButton2, new KDLayout.Constraints(152, 439, 149, 77, 0));
+        classes.setBounds(new Rectangle(269, 413, 126, 19));
+        kDPanel1.add(classes, new KDLayout.Constraints(269, 413, 126, 19, 0));
+        classtxt.setBounds(new Rectangle(214, 408, 69, 29));
+        kDPanel1.add(classtxt, new KDLayout.Constraints(214, 408, 69, 29, 0));
+        //bizdate1
+        bizdate1.setBoundEditor(bizdate);
+        //countpoint
+        countpoint.setBoundEditor(countpointf7);
+        //countperson
+        countperson.setBoundEditor(countpersonf7);
+        //materialunit
+        materialunit.setBoundEditor(materialunitf7);
+        //materialunittype
+        materialunittype.setBoundEditor(materialunittypef7);
+        //contDate
+        contDate.setBoundEditor(productDateF7);
+        //inventoryUnit
+        inventoryUnit.setBoundEditor(inventoryUnitF7);
+
+    }
+
+
+    /**
+     * output initUIMenuBarLayout method
+     */
+    public void initUIMenuBarLayout()
+    {
+        this.menuBar.add(menuFile);
+        this.menuBar.add(menuTool);
+        this.menuBar.add(MenuService);
+        this.menuBar.add(menuHelp);
+        //menuFile
+        menuFile.add(menuItemPageSetup);
+        menuFile.add(kDSeparator1);
+        menuFile.add(menuItemCloudFeed);
+        menuFile.add(menuItemCloudScreen);
+        menuFile.add(menuItemCloudShare);
+        menuFile.add(kdSeparatorFWFile1);
+        menuFile.add(menuItemExitCurrent);
+        //menuTool
+        menuTool.add(menuItemSendMessage);
+        menuTool.add(menuItemCalculator);
+        menuTool.add(menuItemToolBarCustom);
+        //MenuService
+        MenuService.add(MenuItemKnowStore);
+        MenuService.add(MenuItemAnwser);
+        MenuService.add(SepratorService);
+        MenuService.add(MenuItemRemoteAssist);
+        //menuHelp
+        menuHelp.add(menuItemHelp);
+        menuHelp.add(kDSeparator12);
+        menuHelp.add(menuItemRegPro);
+        menuHelp.add(menuItemPersonalSite);
+        menuHelp.add(helpseparatorDiv);
+        menuHelp.add(menuitemProductval);
+        menuHelp.add(kDSeparatorProduct);
+        menuHelp.add(menuItemAbout);
+
+    }
+
+    /**
+     * output initUIToolBarLayout method
+     */
+    public void initUIToolBarLayout()
+    {
+        this.toolBar.add(btnPageSetup);
+        this.toolBar.add(btnCloud);
+        this.toolBar.add(btnXunTong);
+        this.toolBar.add(kDSeparatorCloud);
+
+
+    }
+
+	//Regiester control's property binding.
+	private void registerBindings(){		
+	}
+	//Regiester UI State
+	private void registerUIState(){		
+	}
+	public String getUIHandlerClassName() {
+	    return "com.kingdee.eas.custom.szcount.app.SzSemiCountOperateUIHandler";
+	}
+	public IUIActionPostman prepareInit() {
+		IUIActionPostman clientHanlder = super.prepareInit();
+		if (clientHanlder != null) {
+			RequestContext request = new RequestContext();
+    		request.setClassName(getUIHandlerClassName());
+			clientHanlder.setRequestContext(request);
+		}
+		return clientHanlder;
+    }
+	
+	public boolean isPrepareInit() {
+    	return false;
+    }
+    protected void initUIP() {
+        super.initUIP();
+    }
+
+
+
+	
+	
+
+    /**
+     * output setDataObject method
+     */
+    public void setDataObject(IObjectValue dataObject)
+    {
+        IObjectValue ov = dataObject;        	    	
+        super.setDataObject(ov);
+    }
+
+    /**
+     * output loadFields method
+     */
+    public void loadFields()
+    {
+        dataBinder.loadFields();
+    }
+    /**
+     * output storeFields method
+     */
+    public void storeFields()
+    {
+		dataBinder.storeFields();
+    }
+
+	/**
+	 * ????????§µ??
+	 */
+	protected void registerValidator() {
+    	getValidateHelper().setCustomValidator( getValidator() );		
+	}
+
+
+
+    /**
+     * output setOprtState method
+     */
+    public void setOprtState(String oprtType)
+    {
+        super.setOprtState(oprtType);
+    }
+
+    /**
+     * output selectmaterial_actionPerformed method
+     */
+    protected void selectmaterial_actionPerformed(java.awt.event.ActionEvent e) throws Exception
+    {
+    }
+
+    /**
+     * output xlselect_actionPerformed method
+     */
+    protected void xlselect_actionPerformed(java.awt.event.ActionEvent e) throws Exception
+    {
+    }
+
+    /**
+     * output tlselect_actionPerformed method
+     */
+    protected void tlselect_actionPerformed(java.awt.event.ActionEvent e) throws Exception
+    {
+    }
+
+    /**
+     * output clselect_actionPerformed method
+     */
+    protected void clselect_actionPerformed(java.awt.event.ActionEvent e) throws Exception
+    {
+    }
+
+    /**
+     * output jjselect_actionPerformed method
+     */
+    protected void jjselect_actionPerformed(java.awt.event.ActionEvent e) throws Exception
+    {
+    }
+
+    /**
+     * output qtselect_actionPerformed method
+     */
+    protected void qtselect_actionPerformed(java.awt.event.ActionEvent e) throws Exception
+    {
+    }
+
+    /**
+     * output cancel_actionPerformed method
+     */
+    protected void cancel_actionPerformed(java.awt.event.ActionEvent e) throws Exception
+    {
+    }
+
+    /**
+     * output QyBtn_actionPerformed method
+     */
+    protected void QyBtn_actionPerformed(java.awt.event.ActionEvent e) throws Exception
+    {
+    }
+
+    /**
+     * output clear_actionPerformed method
+     */
+    protected void clear_actionPerformed(java.awt.event.ActionEvent e) throws Exception
+    {
+    }
+
+    /**
+     * output print_actionPerformed method
+     */
+    protected void print_actionPerformed(java.awt.event.ActionEvent e) throws Exception
+    {
+    }
+
+    	
+
+    /**
+     * output actionQY_actionPerformed method
+     */
+    public void actionQY_actionPerformed(ActionEvent e) throws Exception
+    {
+    }
+    	
+
+    /**
+     * output actionHY_actionPerformed method
+     */
+    public void actionHY_actionPerformed(ActionEvent e) throws Exception
+    {
+    }
+    	
+
+    /**
+     * output actionCheck_actionPerformed method
+     */
+    public void actionCheck_actionPerformed(ActionEvent e) throws Exception
+    {
+    }
+    	
+
+    /**
+     * output actionclselect_actionPerformed method
+     */
+    public void actionclselect_actionPerformed(ActionEvent e) throws Exception
+    {
+    }
+    	
+
+    /**
+     * output actionxlselect_actionPerformed method
+     */
+    public void actionxlselect_actionPerformed(ActionEvent e) throws Exception
+    {
+    }
+    	
+
+    /**
+     * output actiontlselect_actionPerformed method
+     */
+    public void actiontlselect_actionPerformed(ActionEvent e) throws Exception
+    {
+    }
+    	
+
+    /**
+     * output actionjjselect_actionPerformed method
+     */
+    public void actionjjselect_actionPerformed(ActionEvent e) throws Exception
+    {
+    }
+    	
+
+    /**
+     * output actionqtselect_actionPerformed method
+     */
+    public void actionqtselect_actionPerformed(ActionEvent e) throws Exception
+    {
+    }
+	public RequestContext prepareActionQY(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareActionQY() {
+    	return false;
+    }
+	public RequestContext prepareActionHY(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareActionHY() {
+    	return false;
+    }
+	public RequestContext prepareActionCheck(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareActionCheck() {
+    	return false;
+    }
+	public RequestContext prepareactionclselect(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareactionclselect() {
+    	return false;
+    }
+	public RequestContext prepareactionxlselect(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareactionxlselect() {
+    	return false;
+    }
+	public RequestContext prepareactiontlselect(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareactiontlselect() {
+    	return false;
+    }
+	public RequestContext prepareactionjjselect(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareactionjjselect() {
+    	return false;
+    }
+	public RequestContext prepareactionqtselect(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareactionqtselect() {
+    	return false;
+    }
+
+    /**
+     * output ActionQY class
+     */     
+    protected class ActionQY extends ItemAction {     
+    
+        public ActionQY()
+        {
+            this(null);
+        }
+
+        public ActionQY(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            this.setEnabled(false);
+            _tempStr = resHelper.getString("ActionQY.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionQY.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionQY.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractSzSemiCountOperateUI.this, "ActionQY", "actionQY_actionPerformed", e);
+        }
+    }
+
+    /**
+     * output ActionHY class
+     */     
+    protected class ActionHY extends ItemAction {     
+    
+        public ActionHY()
+        {
+            this(null);
+        }
+
+        public ActionHY(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            this.setEnabled(false);
+            _tempStr = resHelper.getString("ActionHY.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionHY.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionHY.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractSzSemiCountOperateUI.this, "ActionHY", "actionHY_actionPerformed", e);
+        }
+    }
+
+    /**
+     * output ActionCheck class
+     */     
+    protected class ActionCheck extends ItemAction {     
+    
+        public ActionCheck()
+        {
+            this(null);
+        }
+
+        public ActionCheck(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            _tempStr = resHelper.getString("ActionCheck.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionCheck.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionCheck.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractSzSemiCountOperateUI.this, "ActionCheck", "actionCheck_actionPerformed", e);
+        }
+    }
+
+    /**
+     * output actionclselect class
+     */     
+    protected class actionclselect extends ItemAction {     
+    
+        public actionclselect()
+        {
+            this(null);
+        }
+
+        public actionclselect(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            this.setEnabled(false);
+            _tempStr = resHelper.getString("actionclselect.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("actionclselect.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("actionclselect.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractSzSemiCountOperateUI.this, "actionclselect", "actionclselect_actionPerformed", e);
+        }
+    }
+
+    /**
+     * output actionxlselect class
+     */     
+    protected class actionxlselect extends ItemAction {     
+    
+        public actionxlselect()
+        {
+            this(null);
+        }
+
+        public actionxlselect(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            this.setEnabled(false);
+            _tempStr = resHelper.getString("actionxlselect.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("actionxlselect.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("actionxlselect.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractSzSemiCountOperateUI.this, "actionxlselect", "actionxlselect_actionPerformed", e);
+        }
+    }
+
+    /**
+     * output actiontlselect class
+     */     
+    protected class actiontlselect extends ItemAction {     
+    
+        public actiontlselect()
+        {
+            this(null);
+        }
+
+        public actiontlselect(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            this.setEnabled(false);
+            _tempStr = resHelper.getString("actiontlselect.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("actiontlselect.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("actiontlselect.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractSzSemiCountOperateUI.this, "actiontlselect", "actiontlselect_actionPerformed", e);
+        }
+    }
+
+    /**
+     * output actionjjselect class
+     */     
+    protected class actionjjselect extends ItemAction {     
+    
+        public actionjjselect()
+        {
+            this(null);
+        }
+
+        public actionjjselect(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            this.setEnabled(false);
+            _tempStr = resHelper.getString("actionjjselect.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("actionjjselect.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("actionjjselect.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractSzSemiCountOperateUI.this, "actionjjselect", "actionjjselect_actionPerformed", e);
+        }
+    }
+
+    /**
+     * output actionqtselect class
+     */     
+    protected class actionqtselect extends ItemAction {     
+    
+        public actionqtselect()
+        {
+            this(null);
+        }
+
+        public actionqtselect(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            this.setEnabled(false);
+            _tempStr = resHelper.getString("actionqtselect.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("actionqtselect.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("actionqtselect.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractSzSemiCountOperateUI.this, "actionqtselect", "actionqtselect_actionPerformed", e);
+        }
+    }
+
+    /**
+     * output getMetaDataPK method
+     */
+    public IMetaDataPK getMetaDataPK()
+    {
+        return new MetaDataPK("com.kingdee.eas.custom.szcount.client", "SzSemiCountOperateUI");
+    }
+
+
+
+
+}
