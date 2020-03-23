@@ -148,62 +148,6 @@
             <precision>0</precision>
         </column>
         <column>
-            <name>FTreeID</name>
-            <alias>dataTable[com.kingdee.eas.farm.feedfactory.app.CT_FM_LocalPurMATPrice].columns.column[FTreeID].alias</alias>
-            <description>dataTable[com.kingdee.eas.farm.feedfactory.app.CT_FM_LocalPurMATPrice].columns.column[FTreeID].description</description>
-            <userDefined>true</userDefined>
-            <isMultilingual>false</isMultilingual>
-            <isEncoded>false</isEncoded>
-            <isNullable>true</isNullable>
-            <defaultValue />
-            <sqlType>VARCHAR</sqlType>
-            <length>44</length>
-            <scale>0</scale>
-            <precision>0</precision>
-        </column>
-        <column>
-            <name>FApproveTime</name>
-            <alias>dataTable[com.kingdee.eas.farm.feedfactory.app.CT_FM_LocalPurMATPrice].columns.column[FApproveTime].alias</alias>
-            <description>dataTable[com.kingdee.eas.farm.feedfactory.app.CT_FM_LocalPurMATPrice].columns.column[FApproveTime].description</description>
-            <userDefined>true</userDefined>
-            <isMultilingual>false</isMultilingual>
-            <isEncoded>false</isEncoded>
-            <isNullable>true</isNullable>
-            <defaultValue />
-            <sqlType>DATETIME</sqlType>
-            <length>8</length>
-            <scale>0</scale>
-            <precision>0</precision>
-        </column>
-        <column>
-            <name>FApproverID</name>
-            <alias>dataTable[com.kingdee.eas.farm.feedfactory.app.CT_FM_LocalPurMATPrice].columns.column[FApproverID].alias</alias>
-            <description>dataTable[com.kingdee.eas.farm.feedfactory.app.CT_FM_LocalPurMATPrice].columns.column[FApproverID].description</description>
-            <userDefined>true</userDefined>
-            <isMultilingual>false</isMultilingual>
-            <isEncoded>false</isEncoded>
-            <isNullable>true</isNullable>
-            <defaultValue />
-            <sqlType>VARCHAR</sqlType>
-            <length>44</length>
-            <scale>0</scale>
-            <precision>0</precision>
-        </column>
-        <column>
-            <name>FBaseStatus</name>
-            <alias>dataTable[com.kingdee.eas.farm.feedfactory.app.CT_FM_LocalPurMATPrice].columns.column[FBaseStatus].alias</alias>
-            <description>dataTable[com.kingdee.eas.farm.feedfactory.app.CT_FM_LocalPurMATPrice].columns.column[FBaseStatus].description</description>
-            <userDefined>true</userDefined>
-            <isMultilingual>false</isMultilingual>
-            <isEncoded>false</isEncoded>
-            <isNullable>false</isNullable>
-            <defaultValue>0</defaultValue>
-            <sqlType>INT</sqlType>
-            <length>4</length>
-            <scale>0</scale>
-            <precision>0</precision>
-        </column>
-        <column>
             <name>CFCompanyID</name>
             <alias>dataTable[com.kingdee.eas.farm.feedfactory.app.CT_FM_LocalPurMATPrice].columns.column[CFCompanyID].alias</alias>
             <description>dataTable[com.kingdee.eas.farm.feedfactory.app.CT_FM_LocalPurMATPrice].columns.column[CFCompanyID].description</description>
@@ -214,6 +158,20 @@
             <defaultValue />
             <sqlType>VARCHAR</sqlType>
             <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFBaseStatus</name>
+            <alias>dataTable[com.kingdee.eas.farm.feedfactory.app.CT_FM_LocalPurMATPrice].columns.column[CFBaseStatus].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.feedfactory.app.CT_FM_LocalPurMATPrice].columns.column[CFBaseStatus].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>0</length>
             <scale>0</scale>
             <precision>0</precision>
         </column>
@@ -247,7 +205,7 @@
         </column>
     </columns>
     <primaryKey>
-        <name>CPK_FM_LclPMATP3b8</name>
+        <name>CPK_FM_LclPMATPlok</name>
         <userDefined>true</userDefined>
         <primaryKeyColumns>
             <primaryKeyColumn>
@@ -261,7 +219,7 @@
     </primaryKey>
     <foreignKeys>
         <foreignKey>
-            <name>CFK_FM_FMLPMATPC3b</name>
+            <name>CFK_FM_FMLPMATPClo</name>
             <userDefined>true</userDefined>
             <refTable>
                 <key name="package" value="com.kingdee.eas.base.permission.app" />
@@ -280,7 +238,7 @@
             </fkColumnPairs>
         </foreignKey>
         <foreignKey>
-            <name>CFK_FM_FMLPMATPL3b</name>
+            <name>CFK_FM_FMLPMATPLlo</name>
             <userDefined>true</userDefined>
             <refTable>
                 <key name="package" value="com.kingdee.eas.base.permission.app" />
@@ -299,7 +257,7 @@
             </fkColumnPairs>
         </foreignKey>
         <foreignKey>
-            <name>CFK_FM_FMLPMATPC3b</name>
+            <name>CFK_FM_FMLPMATPCmo</name>
             <userDefined>true</userDefined>
             <refTable>
                 <key name="package" value="com.kingdee.eas.basedata.org" />
@@ -318,7 +276,7 @@
             </fkColumnPairs>
         </foreignKey>
         <foreignKey>
-            <name>CFK_FM_FMLPMATPOe8</name>
+            <name>CFK_FM_FMLPMATPOci</name>
             <userDefined>true</userDefined>
             <refTable>
                 <key name="package" value="com.kingdee.eas.basedata.org" />
@@ -343,6 +301,18 @@
             <lang locale="zh_CN" value="本地收购物料价格维护" />
             <lang locale="zh_HK" value="本地收購物料價格維護" />
             <lang locale="zh_TW" value="本地收購物料價格維護" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.feedfactory.app.CT_FM_LocalPurMATPrice].columns.column[CFBaseStatus].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据状态" />
+            <lang locale="zh_HK" value="單據狀態" />
+            <lang locale="zh_TW" value="單據狀態" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.feedfactory.app.CT_FM_LocalPurMATPrice].columns.column[CFBaseStatus].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据状态" />
+            <lang locale="zh_HK" value="單據狀態" />
+            <lang locale="zh_TW" value="單據狀態" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.farm.feedfactory.app.CT_FM_LocalPurMATPrice].columns.column[CFBeginDate].alias">
             <lang locale="en_US" value="null" />
@@ -379,41 +349,6 @@
             <lang locale="zh_CN" value="失效日期" />
             <lang locale="zh_HK" value="失效日期" />
             <lang locale="zh_TW" value="失效日期" />
-        </rs>
-        <rs key="dataTable[com.kingdee.eas.farm.feedfactory.app.CT_FM_LocalPurMATPrice].columns.column[FApproveTime].alias">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="核准时间" />
-            <lang locale="zh_HK" value="核準時間" />
-            <lang locale="zh_TW" value="核準時間" />
-        </rs>
-        <rs key="dataTable[com.kingdee.eas.farm.feedfactory.app.CT_FM_LocalPurMATPrice].columns.column[FApproveTime].description">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="核准时间" />
-            <lang locale="zh_HK" value="核準時間" />
-            <lang locale="zh_TW" value="核準時間" />
-        </rs>
-        <rs key="dataTable[com.kingdee.eas.farm.feedfactory.app.CT_FM_LocalPurMATPrice].columns.column[FApproverID].alias">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="核准人" />
-            <lang locale="zh_HK" value="核准人" />
-            <lang locale="zh_TW" value="核准人" />
-        </rs>
-        <rs key="dataTable[com.kingdee.eas.farm.feedfactory.app.CT_FM_LocalPurMATPrice].columns.column[FApproverID].description">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="核准人" />
-            <lang locale="zh_HK" value="核准人" />
-            <lang locale="zh_TW" value="核准人" />
-        </rs>
-        <rs key="dataTable[com.kingdee.eas.farm.feedfactory.app.CT_FM_LocalPurMATPrice].columns.column[FBaseStatus].alias">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="单据状态" />
-            <lang locale="zh_HK" value="單據狀態" />
-            <lang locale="zh_TW" value="單據狀態" />
-        </rs>
-        <rs key="dataTable[com.kingdee.eas.farm.feedfactory.app.CT_FM_LocalPurMATPrice].columns.column[FBaseStatus].description">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="" />
-            <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.farm.feedfactory.app.CT_FM_LocalPurMATPrice].columns.column[FControlUnitID].alias">
             <lang locale="en_US" value="null" />
@@ -534,18 +469,6 @@
             <lang locale="zh_CN" value="简称" />
             <lang locale="zh_HK" value="簡稱" />
             <lang locale="zh_TW" value="簡稱" />
-        </rs>
-        <rs key="dataTable[com.kingdee.eas.farm.feedfactory.app.CT_FM_LocalPurMATPrice].columns.column[FTreeID].alias">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="组别" />
-            <lang locale="zh_HK" value="組別" />
-            <lang locale="zh_TW" value="組別" />
-        </rs>
-        <rs key="dataTable[com.kingdee.eas.farm.feedfactory.app.CT_FM_LocalPurMATPrice].columns.column[FTreeID].description">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="组别" />
-            <lang locale="zh_HK" value="組別" />
-            <lang locale="zh_TW" value="組別" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.farm.feedfactory.app.CT_FM_LocalPurMATPrice].description">
             <lang locale="en_US" value="null" />

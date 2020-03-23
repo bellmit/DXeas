@@ -49,19 +49,6 @@
             </entityRef>
         </subEntity>
         <subEntity>
-            <name>approver</name>
-            <alias>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].subObjects.subEntity[approver].alias</alias>
-            <userDefined>true</userDefined>
-            <query>
-                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
-                <key name="name" value="LocalPurMATPriceQuery" />
-            </query>
-            <entityRef>
-                <key name="package" value="com.kingdee.eas.base.permission.app" />
-                <key name="name" value="User" />
-            </entityRef>
-        </subEntity>
-        <subEntity>
             <name>company</name>
             <alias>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].subObjects.subEntity[company].alias</alias>
             <userDefined>true</userDefined>
@@ -581,161 +568,6 @@
             </query>
         </queryField>
         <queryField>
-            <name>baseStatus</name>
-            <userDefined>true</userDefined>
-            <formulaString />
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[baseStatus].displayName</displayName>
-            <groupType />
-            <isSelector>true</isSelector>
-            <isFilter>true</isFilter>
-            <isSorter>false</isSorter>
-            <isParameter>false</isParameter>
-            <returnType>Int</returnType>
-            <propertyRefs>
-                <propertyRef>
-                    <key>658f5ced-cc6c-4931-ad34-1e7d859aa465</key>
-                    <parentUnit>
-                        <key name="name" value="baseStatus" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="LocalPurMATPrice" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="baseStatus" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
-                <key name="name" value="LocalPurMATPriceQuery" />
-            </query>
-        </queryField>
-        <queryField>
-            <name>approveTime</name>
-            <userDefined>true</userDefined>
-            <formulaString />
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[approveTime].displayName</displayName>
-            <groupType />
-            <isSelector>true</isSelector>
-            <isFilter>true</isFilter>
-            <isSorter>false</isSorter>
-            <isParameter>false</isParameter>
-            <returnType>Date</returnType>
-            <propertyRefs>
-                <propertyRef>
-                    <key>18ea43f6-93a0-4b58-8901-95fcfafc88a6</key>
-                    <parentUnit>
-                        <key name="name" value="approveTime" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="LocalPurMATPrice" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="approveTime" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
-                <key name="name" value="LocalPurMATPriceQuery" />
-            </query>
-        </queryField>
-        <queryField>
-            <name>approver.name</name>
-            <userDefined>true</userDefined>
-            <formulaString />
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[approver.name].displayName</displayName>
-            <groupType />
-            <isSelector>true</isSelector>
-            <isFilter>true</isFilter>
-            <isSorter>false</isSorter>
-            <isParameter>false</isParameter>
-            <returnType>String</returnType>
-            <propertyRefs>
-                <propertyRef>
-                    <key>21e522a6-b3d9-4785-91b2-70c888e3514f</key>
-                    <parentUnit>
-                        <key name="name" value="approver.name" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="approver" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="name" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
-                <key name="name" value="LocalPurMATPriceQuery" />
-            </query>
-        </queryField>
-        <propertyUnit>
-            <name>9ca17690-77a3-4045-b2b7-a38bcfb550c8</name>
-            <userDefined>true</userDefined>
-            <formulaString />
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[9ca17690-77a3-4045-b2b7-a38bcfb550c8].displayName</displayName>
-            <groupType />
-            <isSelector>false</isSelector>
-            <isFilter>false</isFilter>
-            <isSorter>false</isSorter>
-            <isParameter>false</isParameter>
-            <returnType>String</returnType>
-            <propertyRefs>
-                <propertyRef>
-                    <key>22d84d97-1c44-4a80-b317-dd33f9ea67dc</key>
-                    <parentUnit>
-                        <key name="name" value="9ca17690-77a3-4045-b2b7-a38bcfb550c8" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="LocalPurMATPrice" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="approver" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
-                <key name="name" value="LocalPurMATPriceQuery" />
-            </query>
-        </propertyUnit>
-        <propertyUnit>
-            <name>7855f904-f22b-4f1f-a952-af12633d1e6c</name>
-            <userDefined>true</userDefined>
-            <formulaString />
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[7855f904-f22b-4f1f-a952-af12633d1e6c].displayName</displayName>
-            <groupType />
-            <isSelector>false</isSelector>
-            <isFilter>false</isFilter>
-            <isSorter>false</isSorter>
-            <isParameter>false</isParameter>
-            <returnType>String</returnType>
-            <propertyRefs>
-                <propertyRef>
-                    <key>299ce4a8-335d-4d80-9097-f6c680573e2c</key>
-                    <parentUnit>
-                        <key name="name" value="7855f904-f22b-4f1f-a952-af12633d1e6c" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="approver" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="id" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
-                <key name="name" value="LocalPurMATPriceQuery" />
-            </query>
-        </propertyUnit>
-        <queryField>
             <name>company.name</name>
             <userDefined>true</userDefined>
             <formulaString>#0</formulaString>
@@ -749,7 +581,7 @@
             <returnType>String</returnType>
             <propertyRefs>
                 <propertyRef>
-                    <key>e9d5df1a-12d0-4796-b012-6a509b9f502d</key>
+                    <key>63f5dc2a-48b2-4906-abe1-fd288babda6b</key>
                     <parentUnit>
                         <key name="name" value="company.name" />
                     </parentUnit>
@@ -767,11 +599,11 @@
             </query>
         </queryField>
         <propertyUnit>
-            <name>1d0174ad-5f21-4122-97e3-e4b4d89b01f6</name>
+            <name>a136b92e-46de-455d-960e-b9dfc23a3ae0</name>
             <userDefined>true</userDefined>
             <formulaString />
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[1d0174ad-5f21-4122-97e3-e4b4d89b01f6].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[a136b92e-46de-455d-960e-b9dfc23a3ae0].displayName</displayName>
             <groupType />
             <isSelector>false</isSelector>
             <isFilter>false</isFilter>
@@ -780,9 +612,9 @@
             <returnType />
             <propertyRefs>
                 <propertyRef>
-                    <key>35c61cb9-42d1-45f9-82f7-ff262024c9b7</key>
+                    <key>cfa47bac-accd-46f0-aa9d-71b769aca375</key>
                     <parentUnit>
-                        <key name="name" value="1d0174ad-5f21-4122-97e3-e4b4d89b01f6" />
+                        <key name="name" value="a136b92e-46de-455d-960e-b9dfc23a3ae0" />
                     </parentUnit>
                     <subEntity>
                         <key name="name" value="LocalPurMATPrice" />
@@ -798,11 +630,11 @@
             </query>
         </propertyUnit>
         <propertyUnit>
-            <name>b36a3aac-7424-4bf2-8912-9eafbe515263</name>
+            <name>a25ea048-352d-4360-b97b-7e15506b2c86</name>
             <userDefined>true</userDefined>
             <formulaString />
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[b36a3aac-7424-4bf2-8912-9eafbe515263].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[a25ea048-352d-4360-b97b-7e15506b2c86].displayName</displayName>
             <groupType />
             <isSelector>false</isSelector>
             <isFilter>false</isFilter>
@@ -811,9 +643,9 @@
             <returnType />
             <propertyRefs>
                 <propertyRef>
-                    <key>121c1880-40d0-45ed-a479-34f080d0e314</key>
+                    <key>0c172e70-c65a-46ff-8bd4-7f700866ed13</key>
                     <parentUnit>
-                        <key name="name" value="b36a3aac-7424-4bf2-8912-9eafbe515263" />
+                        <key name="name" value="a25ea048-352d-4360-b97b-7e15506b2c86" />
                     </parentUnit>
                     <subEntity>
                         <key name="name" value="company" />
@@ -829,11 +661,11 @@
             </query>
         </propertyUnit>
         <queryField>
-            <name>Entry.seq</name>
+            <name>baseStatus</name>
             <userDefined>true</userDefined>
             <formulaString>#0</formulaString>
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[Entry.seq].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[baseStatus].displayName</displayName>
             <groupType />
             <isSelector>true</isSelector>
             <isFilter>true</isFilter>
@@ -842,325 +674,15 @@
             <returnType>Int</returnType>
             <propertyRefs>
                 <propertyRef>
-                    <key>78221210-42c0-476e-a3ea-469414f28282</key>
+                    <key>312bd8f6-ae99-4397-b756-ff34cbf976ab</key>
                     <parentUnit>
-                        <key name="name" value="Entry.seq" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="Entry" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="seq" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
-                <key name="name" value="LocalPurMATPriceQuery" />
-            </query>
-        </queryField>
-        <propertyUnit>
-            <name>3fca0190-9dca-4d0f-856b-b625a574952f</name>
-            <userDefined>true</userDefined>
-            <formulaString />
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[3fca0190-9dca-4d0f-856b-b625a574952f].displayName</displayName>
-            <groupType />
-            <isSelector>false</isSelector>
-            <isFilter>false</isFilter>
-            <isSorter>false</isSorter>
-            <isParameter>false</isParameter>
-            <returnType />
-            <propertyRefs>
-                <propertyRef>
-                    <key>d6d04ad3-ca18-447d-82fb-d0e75203bc50</key>
-                    <parentUnit>
-                        <key name="name" value="3fca0190-9dca-4d0f-856b-b625a574952f" />
+                        <key name="name" value="baseStatus" />
                     </parentUnit>
                     <subEntity>
                         <key name="name" value="LocalPurMATPrice" />
                     </subEntity>
                     <refProperty>
-                        <key name="name" value="id" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
-                <key name="name" value="LocalPurMATPriceQuery" />
-            </query>
-        </propertyUnit>
-        <propertyUnit>
-            <name>42a62256-06fd-4a43-8fae-37120a46187c</name>
-            <userDefined>true</userDefined>
-            <formulaString />
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[42a62256-06fd-4a43-8fae-37120a46187c].displayName</displayName>
-            <groupType />
-            <isSelector>false</isSelector>
-            <isFilter>false</isFilter>
-            <isSorter>false</isSorter>
-            <isParameter>false</isParameter>
-            <returnType />
-            <propertyRefs>
-                <propertyRef>
-                    <key>fe892dba-7265-4707-ad42-7ed07af97859</key>
-                    <parentUnit>
-                        <key name="name" value="42a62256-06fd-4a43-8fae-37120a46187c" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="Entry" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="parent" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
-                <key name="name" value="LocalPurMATPriceQuery" />
-            </query>
-        </propertyUnit>
-        <queryField>
-            <name>Entry.material.number</name>
-            <userDefined>true</userDefined>
-            <formulaString>#0</formulaString>
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[Entry.material.number].displayName</displayName>
-            <groupType />
-            <isSelector>true</isSelector>
-            <isFilter>true</isFilter>
-            <isSorter>true</isSorter>
-            <isParameter>false</isParameter>
-            <returnType>String</returnType>
-            <propertyRefs>
-                <propertyRef>
-                    <key>d65bb320-f1a1-46c9-aa89-a961f3f17d86</key>
-                    <parentUnit>
-                        <key name="name" value="Entry.material.number" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="Entry_material" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="number" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
-                <key name="name" value="LocalPurMATPriceQuery" />
-            </query>
-        </queryField>
-        <propertyUnit>
-            <name>52d6d73d-46a7-41ea-8d51-f79c89fffcad</name>
-            <userDefined>true</userDefined>
-            <formulaString />
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[52d6d73d-46a7-41ea-8d51-f79c89fffcad].displayName</displayName>
-            <groupType />
-            <isSelector>false</isSelector>
-            <isFilter>false</isFilter>
-            <isSorter>false</isSorter>
-            <isParameter>false</isParameter>
-            <returnType />
-            <propertyRefs>
-                <propertyRef>
-                    <key>df1bc528-bb5d-4fc0-8ce6-cf633f913f66</key>
-                    <parentUnit>
-                        <key name="name" value="52d6d73d-46a7-41ea-8d51-f79c89fffcad" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="Entry" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="material" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
-                <key name="name" value="LocalPurMATPriceQuery" />
-            </query>
-        </propertyUnit>
-        <propertyUnit>
-            <name>817c0878-7d3f-4215-8ee5-aed01ba98525</name>
-            <userDefined>true</userDefined>
-            <formulaString />
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[817c0878-7d3f-4215-8ee5-aed01ba98525].displayName</displayName>
-            <groupType />
-            <isSelector>false</isSelector>
-            <isFilter>false</isFilter>
-            <isSorter>false</isSorter>
-            <isParameter>false</isParameter>
-            <returnType />
-            <propertyRefs>
-                <propertyRef>
-                    <key>0e90b926-031b-40f9-8d75-1263a9657ec8</key>
-                    <parentUnit>
-                        <key name="name" value="817c0878-7d3f-4215-8ee5-aed01ba98525" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="Entry_material" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="id" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
-                <key name="name" value="LocalPurMATPriceQuery" />
-            </query>
-        </propertyUnit>
-        <queryField>
-            <name>Entry.materialName</name>
-            <userDefined>true</userDefined>
-            <formulaString>#0</formulaString>
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[Entry.materialName].displayName</displayName>
-            <groupType />
-            <isSelector>true</isSelector>
-            <isFilter>true</isFilter>
-            <isSorter>true</isSorter>
-            <isParameter>false</isParameter>
-            <returnType>String</returnType>
-            <propertyRefs>
-                <propertyRef>
-                    <key>bae06cfe-3ab0-4925-b34e-78e3541a9d30</key>
-                    <parentUnit>
-                        <key name="name" value="Entry.materialName" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="Entry" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="materialName" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
-                <key name="name" value="LocalPurMATPriceQuery" />
-            </query>
-        </queryField>
-        <queryField>
-            <name>Entry.supplier.name</name>
-            <userDefined>true</userDefined>
-            <formulaString>#0</formulaString>
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[Entry.supplier.name].displayName</displayName>
-            <groupType />
-            <isSelector>true</isSelector>
-            <isFilter>true</isFilter>
-            <isSorter>true</isSorter>
-            <isParameter>false</isParameter>
-            <returnType>String</returnType>
-            <propertyRefs>
-                <propertyRef>
-                    <key>9dc74fd0-374b-47e1-907c-06ce05d54f0c</key>
-                    <parentUnit>
-                        <key name="name" value="Entry.supplier.name" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="Entry_supplier" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="name" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
-                <key name="name" value="LocalPurMATPriceQuery" />
-            </query>
-        </queryField>
-        <propertyUnit>
-            <name>9e84c6f6-04a5-454d-b992-d7a297fd9463</name>
-            <userDefined>true</userDefined>
-            <formulaString />
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[9e84c6f6-04a5-454d-b992-d7a297fd9463].displayName</displayName>
-            <groupType />
-            <isSelector>false</isSelector>
-            <isFilter>false</isFilter>
-            <isSorter>false</isSorter>
-            <isParameter>false</isParameter>
-            <returnType />
-            <propertyRefs>
-                <propertyRef>
-                    <key>cb558e0b-0f0d-443c-8b82-1b03e8b7f1fd</key>
-                    <parentUnit>
-                        <key name="name" value="9e84c6f6-04a5-454d-b992-d7a297fd9463" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="Entry" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="supplier" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
-                <key name="name" value="LocalPurMATPriceQuery" />
-            </query>
-        </propertyUnit>
-        <propertyUnit>
-            <name>7d4a56cb-8954-40e8-b1fa-87101706f81e</name>
-            <userDefined>true</userDefined>
-            <formulaString />
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[7d4a56cb-8954-40e8-b1fa-87101706f81e].displayName</displayName>
-            <groupType />
-            <isSelector>false</isSelector>
-            <isFilter>false</isFilter>
-            <isSorter>false</isSorter>
-            <isParameter>false</isParameter>
-            <returnType />
-            <propertyRefs>
-                <propertyRef>
-                    <key>7b682faa-a02c-402c-b37b-0bcfb785613b</key>
-                    <parentUnit>
-                        <key name="name" value="7d4a56cb-8954-40e8-b1fa-87101706f81e" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="Entry_supplier" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="id" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
-                <key name="name" value="LocalPurMATPriceQuery" />
-            </query>
-        </propertyUnit>
-        <queryField>
-            <name>Entry.remark</name>
-            <userDefined>true</userDefined>
-            <formulaString>#0</formulaString>
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[Entry.remark].displayName</displayName>
-            <groupType />
-            <isSelector>true</isSelector>
-            <isFilter>true</isFilter>
-            <isSorter>true</isSorter>
-            <isParameter>false</isParameter>
-            <returnType>String</returnType>
-            <propertyRefs>
-                <propertyRef>
-                    <key>e8720592-f43d-4c7a-874c-4465fc2c1138</key>
-                    <parentUnit>
-                        <key name="name" value="Entry.remark" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="Entry" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="remark" />
+                        <key name="name" value="baseStatus" />
                     </refProperty>
                 </propertyRef>
             </propertyRefs>
@@ -1183,7 +705,7 @@
             <returnType>Date</returnType>
             <propertyRefs>
                 <propertyRef>
-                    <key>98eea22d-ccfc-42ba-88e0-29e29b710c7b</key>
+                    <key>d4c4d9bf-dc59-495d-a776-742a7356e1f4</key>
                     <parentUnit>
                         <key name="name" value="beginDate" />
                     </parentUnit>
@@ -1214,7 +736,7 @@
             <returnType>Date</returnType>
             <propertyRefs>
                 <propertyRef>
-                    <key>7850bcca-5803-4e2e-8bae-3cbe84f9f63f</key>
+                    <key>2cf27f25-1c4a-439e-be41-bf41468640e2</key>
                     <parentUnit>
                         <key name="name" value="endDate" />
                     </parentUnit>
@@ -1232,6 +754,316 @@
             </query>
         </queryField>
         <queryField>
+            <name>Entry.seq</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[Entry.seq].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0c9ae413-e375-4c0d-9dd4-8bcd7844653b</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.seq" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="seq" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="LocalPurMATPriceQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>638eb3ec-a36f-42b3-b11a-0f46df5ff26a</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[638eb3ec-a36f-42b3-b11a-0f46df5ff26a].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0188fa48-1bca-4c28-84ff-b42276d17fc8</key>
+                    <parentUnit>
+                        <key name="name" value="638eb3ec-a36f-42b3-b11a-0f46df5ff26a" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="LocalPurMATPrice" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="LocalPurMATPriceQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>8eb5f20f-4984-4e0a-87c5-f3f83880b087</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[8eb5f20f-4984-4e0a-87c5-f3f83880b087].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>c014cd34-c8af-42fa-b137-48d3b522ce02</key>
+                    <parentUnit>
+                        <key name="name" value="8eb5f20f-4984-4e0a-87c5-f3f83880b087" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="parent" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="LocalPurMATPriceQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>Entry.material.number</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[Entry.material.number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>da8b9af8-2a09-4763-a3d7-5565e52a4fda</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.material.number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry_material" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="LocalPurMATPriceQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>3056ac6b-33d8-481a-92aa-c6167529e081</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[3056ac6b-33d8-481a-92aa-c6167529e081].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>97e087d2-fb9a-4b11-9861-438b2bb80814</key>
+                    <parentUnit>
+                        <key name="name" value="3056ac6b-33d8-481a-92aa-c6167529e081" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="material" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="LocalPurMATPriceQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>2bc1235d-022f-4c61-8bb5-4214fd142919</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[2bc1235d-022f-4c61-8bb5-4214fd142919].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>752ba6bb-5678-4f9f-96ed-9add3eaf2bf2</key>
+                    <parentUnit>
+                        <key name="name" value="2bc1235d-022f-4c61-8bb5-4214fd142919" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry_material" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="LocalPurMATPriceQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>Entry.materialName</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[Entry.materialName].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>6f06ca39-6b08-497b-b64f-613047d2567b</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.materialName" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="materialName" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="LocalPurMATPriceQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.supplier.name</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[Entry.supplier.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>d68519c6-7182-46e2-8530-0b279d4963b0</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.supplier.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry_supplier" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="LocalPurMATPriceQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>712a9b9c-44a2-45c6-b96e-3b790c0a23ad</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[712a9b9c-44a2-45c6-b96e-3b790c0a23ad].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>adc65384-8722-4f5f-b05a-308a477af1e4</key>
+                    <parentUnit>
+                        <key name="name" value="712a9b9c-44a2-45c6-b96e-3b790c0a23ad" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="supplier" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="LocalPurMATPriceQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>fca98837-c04c-4724-bd78-be40dfa739f8</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[fca98837-c04c-4724-bd78-be40dfa739f8].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>12e817ed-3e78-474c-8693-95d1f063dee8</key>
+                    <parentUnit>
+                        <key name="name" value="fca98837-c04c-4724-bd78-be40dfa739f8" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry_supplier" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
+                <key name="name" value="LocalPurMATPriceQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
             <name>Entry.price</name>
             <userDefined>true</userDefined>
             <formulaString>#0</formulaString>
@@ -1245,7 +1077,7 @@
             <returnType>Number</returnType>
             <propertyRefs>
                 <propertyRef>
-                    <key>548dbe9f-05b5-4545-b33b-ff7b7305b9da</key>
+                    <key>db2b1828-a94f-454a-b195-79b66b07ab8a</key>
                     <parentUnit>
                         <key name="name" value="Entry.price" />
                     </parentUnit>
@@ -1263,28 +1095,28 @@
             </query>
         </queryField>
         <queryField>
-            <name>Entry.id</name>
+            <name>Entry.remark</name>
             <userDefined>true</userDefined>
-            <formulaString />
+            <formulaString>#0</formulaString>
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[Entry.id].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[Entry.remark].displayName</displayName>
             <groupType />
             <isSelector>true</isSelector>
             <isFilter>true</isFilter>
-            <isSorter>false</isSorter>
+            <isSorter>true</isSorter>
             <isParameter>false</isParameter>
             <returnType>String</returnType>
             <propertyRefs>
                 <propertyRef>
-                    <key>961a5310-b15f-4014-9a51-927002974990</key>
+                    <key>0884da22-dd0a-41d0-b893-9905a30e13be</key>
                     <parentUnit>
-                        <key name="name" value="Entry.id" />
+                        <key name="name" value="Entry.remark" />
                     </parentUnit>
                     <subEntity>
                         <key name="name" value="Entry" />
                     </subEntity>
                     <refProperty>
-                        <key name="name" value="id" />
+                        <key name="name" value="remark" />
                     </refProperty>
                 </propertyRef>
             </propertyRefs>
@@ -1321,9 +1153,6 @@
         <keyProperties>
             <queryField>
                 <key name="name" value="id" />
-            </queryField>
-            <queryField>
-                <key name="name" value="Entry.id" />
             </queryField>
         </keyProperties>
     </queryPK>
@@ -1390,37 +1219,7 @@
             </query>
         </join>
         <join>
-            <name>cb93ad3f-c9cd-4060-948e-dec5a1f20052</name>
-            <formulaString>#0</formulaString>
-            <type>LEFT OUTER JOIN</type>
-            <leftObject>
-                <key name="name" value="LocalPurMATPrice" />
-            </leftObject>
-            <rightObject>
-                <key name="name" value="approver" />
-            </rightObject>
-            <joinItems>
-                <joinItem>
-                    <name>99bd0d50-5276-40ae-9596-3e91bc457b3e</name>
-                    <compareType>=</compareType>
-                    <leftField>
-                        <key name="name" value="9ca17690-77a3-4045-b2b7-a38bcfb550c8" />
-                    </leftField>
-                    <rightField>
-                        <key name="name" value="7855f904-f22b-4f1f-a952-af12633d1e6c" />
-                    </rightField>
-                    <join>
-                        <key name="name" value="cb93ad3f-c9cd-4060-948e-dec5a1f20052" />
-                    </join>
-                </joinItem>
-            </joinItems>
-            <query>
-                <key name="package" value="com.kingdee.eas.farm.feedfactory.app" />
-                <key name="name" value="LocalPurMATPriceQuery" />
-            </query>
-        </join>
-        <join>
-            <name>fc621b8f-f03a-4217-81d8-3926a6db9dcc</name>
+            <name>1e3eaf7b-1a1a-42a6-a97c-c8ce3d7e9e74</name>
             <formulaString>#0</formulaString>
             <type>LEFT OUTER JOIN</type>
             <leftObject>
@@ -1431,16 +1230,16 @@
             </rightObject>
             <joinItems>
                 <joinItem>
-                    <name>6ecb983c-dc30-4d3c-8f3b-c727a589a5ed</name>
+                    <name>691bbaee-e30b-4dc2-9b20-1b78e405a0b3</name>
                     <compareType>=</compareType>
                     <leftField>
-                        <key name="name" value="1d0174ad-5f21-4122-97e3-e4b4d89b01f6" />
+                        <key name="name" value="a136b92e-46de-455d-960e-b9dfc23a3ae0" />
                     </leftField>
                     <rightField>
-                        <key name="name" value="b36a3aac-7424-4bf2-8912-9eafbe515263" />
+                        <key name="name" value="a25ea048-352d-4360-b97b-7e15506b2c86" />
                     </rightField>
                     <join>
-                        <key name="name" value="fc621b8f-f03a-4217-81d8-3926a6db9dcc" />
+                        <key name="name" value="1e3eaf7b-1a1a-42a6-a97c-c8ce3d7e9e74" />
                     </join>
                 </joinItem>
             </joinItems>
@@ -1450,7 +1249,7 @@
             </query>
         </join>
         <join>
-            <name>5c3dde82-6500-4c54-9323-799c035d1335</name>
+            <name>99425d6b-6ac9-40f8-9047-6d2e9779326d</name>
             <formulaString>#0</formulaString>
             <type>LEFT OUTER JOIN</type>
             <leftObject>
@@ -1461,16 +1260,16 @@
             </rightObject>
             <joinItems>
                 <joinItem>
-                    <name>a2b07ca0-45eb-4f4d-93ee-f708157cd39a</name>
+                    <name>c3d12cd3-7607-4e1d-b360-51d212a41c2f</name>
                     <compareType>=</compareType>
                     <leftField>
-                        <key name="name" value="3fca0190-9dca-4d0f-856b-b625a574952f" />
+                        <key name="name" value="638eb3ec-a36f-42b3-b11a-0f46df5ff26a" />
                     </leftField>
                     <rightField>
-                        <key name="name" value="42a62256-06fd-4a43-8fae-37120a46187c" />
+                        <key name="name" value="8eb5f20f-4984-4e0a-87c5-f3f83880b087" />
                     </rightField>
                     <join>
-                        <key name="name" value="5c3dde82-6500-4c54-9323-799c035d1335" />
+                        <key name="name" value="99425d6b-6ac9-40f8-9047-6d2e9779326d" />
                     </join>
                 </joinItem>
             </joinItems>
@@ -1480,7 +1279,7 @@
             </query>
         </join>
         <join>
-            <name>539c2c85-31d4-4189-aa4d-45e1a62ca5df</name>
+            <name>5c08a23d-a152-4add-84c9-fac2cc9110b8</name>
             <formulaString>#0</formulaString>
             <type>LEFT OUTER JOIN</type>
             <leftObject>
@@ -1491,16 +1290,16 @@
             </rightObject>
             <joinItems>
                 <joinItem>
-                    <name>1cf7c74d-ec2a-447f-b88e-89523f873e2a</name>
+                    <name>0575353f-5ada-4422-bf6b-7845e6dadfab</name>
                     <compareType>=</compareType>
                     <leftField>
-                        <key name="name" value="52d6d73d-46a7-41ea-8d51-f79c89fffcad" />
+                        <key name="name" value="3056ac6b-33d8-481a-92aa-c6167529e081" />
                     </leftField>
                     <rightField>
-                        <key name="name" value="817c0878-7d3f-4215-8ee5-aed01ba98525" />
+                        <key name="name" value="2bc1235d-022f-4c61-8bb5-4214fd142919" />
                     </rightField>
                     <join>
-                        <key name="name" value="539c2c85-31d4-4189-aa4d-45e1a62ca5df" />
+                        <key name="name" value="5c08a23d-a152-4add-84c9-fac2cc9110b8" />
                     </join>
                 </joinItem>
             </joinItems>
@@ -1510,7 +1309,7 @@
             </query>
         </join>
         <join>
-            <name>aee6d5b8-01c5-4962-a8e2-4db403d64eb9</name>
+            <name>6297a76f-f4cb-4a67-9aa9-8a8608e9aa54</name>
             <formulaString>#0</formulaString>
             <type>LEFT OUTER JOIN</type>
             <leftObject>
@@ -1521,16 +1320,16 @@
             </rightObject>
             <joinItems>
                 <joinItem>
-                    <name>8abc7493-bd4e-4ea8-a519-b30ef615cd03</name>
+                    <name>fc654e00-664d-4703-a631-980c8c4be4eb</name>
                     <compareType>=</compareType>
                     <leftField>
-                        <key name="name" value="9e84c6f6-04a5-454d-b992-d7a297fd9463" />
+                        <key name="name" value="712a9b9c-44a2-45c6-b96e-3b790c0a23ad" />
                     </leftField>
                     <rightField>
-                        <key name="name" value="7d4a56cb-8954-40e8-b1fa-87101706f81e" />
+                        <key name="name" value="fca98837-c04c-4724-bd78-be40dfa739f8" />
                     </rightField>
                     <join>
-                        <key name="name" value="aee6d5b8-01c5-4962-a8e2-4db403d64eb9" />
+                        <key name="name" value="6297a76f-f4cb-4a67-9aa9-8a8608e9aa54" />
                     </join>
                 </joinItem>
             </joinItems>
@@ -1649,12 +1448,6 @@
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].subObjects.subEntity[approver].alias">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_HK" value="null" />
-            <lang locale="zh_TW" value="null" />
-        </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].subObjects.subEntity[company].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
@@ -1673,55 +1466,31 @@
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[1d0174ad-5f21-4122-97e3-e4b4d89b01f6].displayName">
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[2bc1235d-022f-4c61-8bb5-4214fd142919].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[3fca0190-9dca-4d0f-856b-b625a574952f].displayName">
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[3056ac6b-33d8-481a-92aa-c6167529e081].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[42a62256-06fd-4a43-8fae-37120a46187c].displayName">
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[638eb3ec-a36f-42b3-b11a-0f46df5ff26a].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[52d6d73d-46a7-41ea-8d51-f79c89fffcad].displayName">
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[712a9b9c-44a2-45c6-b96e-3b790c0a23ad].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[7855f904-f22b-4f1f-a952-af12633d1e6c].displayName">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_HK" value="null" />
-            <lang locale="zh_TW" value="null" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[7d4a56cb-8954-40e8-b1fa-87101706f81e].displayName">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_HK" value="null" />
-            <lang locale="zh_TW" value="null" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[817c0878-7d3f-4215-8ee5-aed01ba98525].displayName">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_HK" value="null" />
-            <lang locale="zh_TW" value="null" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[9ca17690-77a3-4045-b2b7-a38bcfb550c8].displayName">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_HK" value="null" />
-            <lang locale="zh_TW" value="null" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[9e84c6f6-04a5-454d-b992-d7a297fd9463].displayName">
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[8eb5f20f-4984-4e0a-87c5-f3f83880b087].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
@@ -1751,22 +1520,23 @@
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[b36a3aac-7424-4bf2-8912-9eafbe515263].displayName">
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[a136b92e-46de-455d-960e-b9dfc23a3ae0].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[Entry.id].displayName">
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[a25ea048-352d-4360-b97b-7e15506b2c86].displayName">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="ID" />
-            <lang locale="zh_HK" value="ID" />
-            <lang locale="zh_TW" value="ID" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[Entry.id].extendedProperty.isVisibleForKDTable">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
+        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.propertyUnit[fca98837-c04c-4724-bd78-be40dfa739f8].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[Entry.material.number].displayName">
             <lang locale="en_US" value="null" />
@@ -1870,38 +1640,6 @@
             <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[Entry.supplier.name].extendedProperty.isUsingF7">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[approveTime].displayName">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="核准时间" />
-            <lang locale="zh_HK" value="核準時間" />
-            <lang locale="zh_TW" value="核準時間" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[approveTime].extendedProperty.isCommonQueryFilter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[approveTime].extendedProperty.isCommonQuerySorter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[approver.name].displayName">
-            <lang locale="en_US" value="用户别名" />
-            <lang locale="zh_CN" value="用户实名" />
-            <lang locale="zh_HK" value="用戶實名" />
-            <lang locale="zh_TW" value="用戶實名" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[approver.name].extendedProperty.isCommonQueryFilter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[approver.name].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
@@ -2243,11 +1981,6 @@
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[name].extendedProperty.isQuickSearchField">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[name].extendedProperty.isUsingF7">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
@@ -2279,11 +2012,6 @@
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[number].extendedProperty.isQuickSearchField">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[number].extendedProperty.isUsingF7">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
@@ -2314,11 +2042,6 @@
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[simpleName].extendedProperty.isQuickSearchField">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceQuery].units.queryField[simpleName].extendedProperty.isUsingF7">
             <lang locale="en_US" value="false" />
