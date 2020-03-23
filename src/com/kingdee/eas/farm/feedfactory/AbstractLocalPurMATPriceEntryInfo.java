@@ -18,7 +18,7 @@ public class AbstractLocalPurMATPriceEntryInfo extends com.kingdee.eas.framework
         super(pkField);
     }
     /**
-     * Object: 价格分录 's null property 
+     * Object: 第1个表体 's null property 
      */
     public com.kingdee.eas.farm.feedfactory.LocalPurMATPriceInfo getParent()
     {
@@ -29,7 +29,7 @@ public class AbstractLocalPurMATPriceEntryInfo extends com.kingdee.eas.framework
         put("parent", item);
     }
     /**
-     * Object: 价格分录 's 物料编码 property 
+     * Object: 第1个表体 's 物料编码 property 
      */
     public com.kingdee.eas.basedata.master.material.MaterialInfo getMaterial()
     {
@@ -40,7 +40,7 @@ public class AbstractLocalPurMATPriceEntryInfo extends com.kingdee.eas.framework
         put("material", item);
     }
     /**
-     * Object:价格分录's 物料名称property 
+     * Object:第1个表体's 物料名称property 
      */
     public String getMaterialName()
     {
@@ -51,7 +51,7 @@ public class AbstractLocalPurMATPriceEntryInfo extends com.kingdee.eas.framework
         setString("materialName", item);
     }
     /**
-     * Object: 价格分录 's 默认供应商 property 
+     * Object: 第1个表体 's 默认供应商 property 
      */
     public com.kingdee.eas.basedata.master.cssp.SupplierInfo getSupplier()
     {
@@ -62,18 +62,7 @@ public class AbstractLocalPurMATPriceEntryInfo extends com.kingdee.eas.framework
         put("supplier", item);
     }
     /**
-     * Object:价格分录's 备注property 
-     */
-    public String getRemark()
-    {
-        return getString("remark");
-    }
-    public void setRemark(String item)
-    {
-        setString("remark", item);
-    }
-    /**
-     * Object:价格分录's 价格property 
+     * Object:第1个表体's 价格property 
      */
     public java.math.BigDecimal getPrice()
     {
@@ -82,6 +71,17 @@ public class AbstractLocalPurMATPriceEntryInfo extends com.kingdee.eas.framework
     public void setPrice(java.math.BigDecimal item)
     {
         setBigDecimal("price", item);
+    }
+    /**
+     * Object:第1个表体's 备注property 
+     */
+    public String getRemark()
+    {
+        return getString("remark");
+    }
+    public void setRemark(String item)
+    {
+        setString("remark", item);
     }
     public BOSObjectType getBOSType()
     {

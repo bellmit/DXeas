@@ -20,23 +20,22 @@ import com.kingdee.eas.framework.LineResult;
 import com.kingdee.eas.framework.exception.EASMultiException;
 import com.kingdee.bos.dao.ormapping.ObjectUuidPK;
 
-import com.kingdee.eas.custom.wlhllicensemanager.app.WlhlDataBaseControllerBean;
+import com.kingdee.eas.framework.app.DataBaseControllerBean;
 import com.kingdee.eas.farm.feedfactory.LocalPurMATPriceInfo;
-import com.kingdee.bos.dao.IObjectPK;
 import com.kingdee.eas.framework.ObjectBaseCollection;
-import com.kingdee.eas.custom.wlhllicensemanager.WlhlDataBaseCollection;
-import java.lang.String;
-import com.kingdee.eas.farm.feedfactory.LocalPurMATPriceCollection;
+import com.kingdee.bos.dao.IObjectPK;
 import com.kingdee.bos.metadata.entity.EntityViewInfo;
-import com.kingdee.eas.framework.CoreBaseCollection;
+import java.lang.String;
 import com.kingdee.eas.framework.CoreBaseInfo;
+import com.kingdee.eas.framework.CoreBaseCollection;
 import com.kingdee.eas.framework.DataBaseCollection;
 import com.kingdee.eas.common.EASBizException;
+import com.kingdee.eas.farm.feedfactory.LocalPurMATPriceCollection;
 import com.kingdee.bos.metadata.entity.SelectorItemCollection;
 
 
 
-public abstract class AbstractLocalPurMATPriceControllerBean extends WlhlDataBaseControllerBean implements LocalPurMATPriceController
+public abstract class AbstractLocalPurMATPriceControllerBean extends DataBaseControllerBean implements LocalPurMATPriceController
 {
     protected AbstractLocalPurMATPriceControllerBean()
     {
@@ -50,7 +49,7 @@ public abstract class AbstractLocalPurMATPriceControllerBean extends WlhlDataBas
     public LocalPurMATPriceInfo getLocalPurMATPriceInfo(Context ctx, IObjectPK pk) throws BOSException, EASBizException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("c599f62c-ed01-4113-ac6d-5d4b12f3b52c"), new Object[]{ctx, pk});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("28a56ac1-69da-4adf-b745-a3e964953573"), new Object[]{ctx, pk});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()) {
             LocalPurMATPriceInfo retValue = (LocalPurMATPriceInfo)_getValue(ctx, pk);
@@ -75,7 +74,7 @@ public abstract class AbstractLocalPurMATPriceControllerBean extends WlhlDataBas
     public LocalPurMATPriceInfo getLocalPurMATPriceInfo(Context ctx, IObjectPK pk, SelectorItemCollection selector) throws BOSException, EASBizException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("2b83130c-84a8-4f2b-a514-189d9592687d"), new Object[]{ctx, pk, selector});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("a2173ace-a7eb-4650-89d3-a4dc2e352ebc"), new Object[]{ctx, pk, selector});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()) {
             LocalPurMATPriceInfo retValue = (LocalPurMATPriceInfo)_getValue(ctx, pk, selector);
@@ -100,7 +99,7 @@ public abstract class AbstractLocalPurMATPriceControllerBean extends WlhlDataBas
     public LocalPurMATPriceInfo getLocalPurMATPriceInfo(Context ctx, String oql) throws BOSException, EASBizException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("6440a441-40be-4568-9d69-1899ff54c12a"), new Object[]{ctx, oql});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("ae9ea303-7509-49c8-a804-89e461d6c6e3"), new Object[]{ctx, oql});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()) {
             LocalPurMATPriceInfo retValue = (LocalPurMATPriceInfo)_getValue(ctx, oql);
@@ -125,7 +124,7 @@ public abstract class AbstractLocalPurMATPriceControllerBean extends WlhlDataBas
     public LocalPurMATPriceCollection getLocalPurMATPriceCollection(Context ctx) throws BOSException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("4074ed61-0502-42b2-b2f0-08a37845db85"), new Object[]{ctx});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("24416731-c9e6-451d-af23-e12b8b6da33b"), new Object[]{ctx});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()) {
             LocalPurMATPriceCollection retValue = (LocalPurMATPriceCollection)_getCollection(ctx, svcCtx);
@@ -148,7 +147,7 @@ public abstract class AbstractLocalPurMATPriceControllerBean extends WlhlDataBas
     public LocalPurMATPriceCollection getLocalPurMATPriceCollection(Context ctx, EntityViewInfo view) throws BOSException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("e582d81e-624b-4bfa-aa7d-71678b20092b"), new Object[]{ctx, view});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("651b8764-3d2b-4441-b889-d34964b2cdc5"), new Object[]{ctx, view});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()) {
             LocalPurMATPriceCollection retValue = (LocalPurMATPriceCollection)_getCollection(ctx, svcCtx, view);
@@ -171,7 +170,7 @@ public abstract class AbstractLocalPurMATPriceControllerBean extends WlhlDataBas
     public LocalPurMATPriceCollection getLocalPurMATPriceCollection(Context ctx, String oql) throws BOSException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("ea7b1019-4a8e-46db-8cc6-0c15f6ede1b3"), new Object[]{ctx, oql});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("d65d7ea3-d513-44e2-ad87-e1055e742ef8"), new Object[]{ctx, oql});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()) {
             LocalPurMATPriceCollection retValue = (LocalPurMATPriceCollection)_getCollection(ctx, svcCtx, oql);
@@ -191,18 +190,50 @@ public abstract class AbstractLocalPurMATPriceControllerBean extends WlhlDataBas
         return super._getCollection(ctx, svcCtx, oql);
     }
 
-    public WlhlDataBaseCollection getWlhlDataBaseCollection (Context ctx) throws BOSException
+    public void audit(Context ctx, LocalPurMATPriceInfo model) throws BOSException, EASBizException
     {
-    	return (WlhlDataBaseCollection)(getLocalPurMATPriceCollection(ctx).cast(WlhlDataBaseCollection.class));
+        try {
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("cbc29b8d-62ea-4db7-98e2-3eff496900fa"), new Object[]{ctx, model});
+            invokeServiceBefore(svcCtx);
+              if(!svcCtx.invokeBreak()) {
+            _audit(ctx, model);
+            }
+            invokeServiceAfter(svcCtx);
+        } catch (BOSException ex) {
+            throw ex;
+        } catch (EASBizException ex0) {
+            throw ex0;
+        } finally {
+            super.cleanUpServiceState();
+        }
     }
-    public WlhlDataBaseCollection getWlhlDataBaseCollection (Context ctx, EntityViewInfo view) throws BOSException
+    protected void _audit(Context ctx, IObjectValue model) throws BOSException, EASBizException
+    {    	
+        return;
+    }
+
+    public void unAudit(Context ctx, LocalPurMATPriceInfo model) throws BOSException, EASBizException
     {
-    	return (WlhlDataBaseCollection)(getLocalPurMATPriceCollection(ctx, view).cast(WlhlDataBaseCollection.class));
+        try {
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("01178335-539d-4193-82a4-4a7f7262d7ac"), new Object[]{ctx, model});
+            invokeServiceBefore(svcCtx);
+              if(!svcCtx.invokeBreak()) {
+            _unAudit(ctx, model);
+            }
+            invokeServiceAfter(svcCtx);
+        } catch (BOSException ex) {
+            throw ex;
+        } catch (EASBizException ex0) {
+            throw ex0;
+        } finally {
+            super.cleanUpServiceState();
+        }
     }
-    public WlhlDataBaseCollection getWlhlDataBaseCollection (Context ctx, String oql) throws BOSException
-    {
-    	return (WlhlDataBaseCollection)(getLocalPurMATPriceCollection(ctx, oql).cast(WlhlDataBaseCollection.class));
+    protected void _unAudit(Context ctx, IObjectValue model) throws BOSException, EASBizException
+    {    	
+        return;
     }
+
     public DataBaseCollection getDataBaseCollection (Context ctx) throws BOSException
     {
     	return (DataBaseCollection)(getLocalPurMATPriceCollection(ctx).cast(DataBaseCollection.class));

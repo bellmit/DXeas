@@ -425,22 +425,6 @@ public class LocalPurMATPriceListUI extends AbstractLocalPurMATPriceListUI
     }
 
     /**
-     * output actionApprove_actionPerformed
-     */
-    public void actionApprove_actionPerformed(ActionEvent e) throws Exception
-    {
-        super.actionApprove_actionPerformed(e);
-    }
-
-    /**
-     * output actionUnApprove_actionPerformed
-     */
-    public void actionUnApprove_actionPerformed(ActionEvent e) throws Exception
-    {
-        super.actionUnApprove_actionPerformed(e);
-    }
-
-    /**
      * output getBizInterface method
      */
     protected com.kingdee.eas.framework.ICoreBase getBizInterface() throws Exception

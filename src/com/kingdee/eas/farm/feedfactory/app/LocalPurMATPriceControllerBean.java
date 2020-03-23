@@ -3,11 +3,6 @@ package com.kingdee.eas.farm.feedfactory.app;
 import org.apache.log4j.Logger;
 import javax.ejb.*;
 import java.rmi.RemoteException;
-import java.sql.SQLException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-
 import com.kingdee.bos.*;
 import com.kingdee.bos.util.BOSObjectType;
 import com.kingdee.bos.metadata.IMetaDataPK;
@@ -22,25 +17,29 @@ import com.kingdee.bos.dao.IObjectCollection;
 import com.kingdee.bos.service.ServiceContext;
 import com.kingdee.bos.service.IServiceContext;
 
-import com.kingdee.eas.custom.wlhllicensemanager.app.WlhlDataBaseControllerBean;
-import com.kingdee.eas.farm.feedfactory.LocalPurMATPriceEntryInfo;
+import com.kingdee.eas.framework.app.DataBaseControllerBean;
+import com.kingdee.eas.farm.carnivorous.basedata.BatchFactory;
+import com.kingdee.eas.farm.carnivorous.basedata.BatchInfo;
+import com.kingdee.eas.farm.carnivorous.basedata.FarmFactory;
+import com.kingdee.eas.farm.carnivorous.basedata.FarmInfo;
+import com.kingdee.eas.farm.carnivorous.basedata.IBatch;
+import com.kingdee.eas.farm.carnivorous.feedbiz.BreedSeedReceiveBillFactory;
+import com.kingdee.eas.farm.carnivorous.feedbiz.BreedSeedReceiveBillInfo;
+import com.kingdee.eas.farm.feedfactory.LocalPurMATPriceFactory;
 import com.kingdee.eas.farm.feedfactory.LocalPurMATPriceInfo;
-import com.kingdee.bos.dao.IObjectPK;
 import com.kingdee.eas.framework.ObjectBaseCollection;
-import com.kingdee.eas.custom.wlhllicensemanager.UsedStatusEnum;
-import com.kingdee.eas.custom.wlhllicensemanager.WlhlDataBaseCollection;
-import com.kingdee.eas.custom.wlhllicensemanager.WlhlDataBaseInfo;
-
-import java.lang.String;
-import com.kingdee.eas.farm.feedfactory.LocalPurMATPriceCollection;
+import com.kingdee.bos.dao.IObjectPK;
+import com.kingdee.bos.dao.ormapping.ObjectUuidPK;
 import com.kingdee.bos.metadata.entity.EntityViewInfo;
-import com.kingdee.eas.framework.CoreBaseCollection;
+import java.lang.String;
 import com.kingdee.eas.framework.CoreBaseInfo;
+import com.kingdee.eas.framework.CoreBaseCollection;
 import com.kingdee.eas.framework.DataBaseCollection;
+import com.kingdee.eas.common.EASBizException;
+import com.kingdee.eas.farm.feedfactory.LocalPurMATPriceCollection;
+import com.kingdee.eas.scm.common.BillBaseStatusEnum;
 import com.kingdee.eas.util.app.ContextUtil;
 import com.kingdee.eas.util.app.DbUtil;
-import com.kingdee.eas.common.EASBizException;
-import com.kingdee.jdbc.rowset.IRowSet;
 import com.kingdee.util.NumericExceptionSubItem;
 import com.kingdee.bos.metadata.entity.SelectorItemCollection;
 
@@ -48,81 +47,63 @@ public class LocalPurMATPriceControllerBean extends AbstractLocalPurMATPriceCont
 {
     private static Logger logger =
         Logger.getLogger("com.kingdee.eas.farm.feedfactory.app.LocalPurMATPriceControllerBean");
-    private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+    
 
-	/**
-	 * 核准
-	 */
+	protected void _audit(Context ctx, IObjectValue model)throws BOSException, EASBizException
+	{
+		LocalPurMATPriceInfo info = LocalPurMATPriceFactory.getLocalInstance(ctx).getLocalPurMATPriceInfo(new ObjectUuidPK(((LocalPurMATPriceInfo) model).getId()));
+		if(info.getBaseStatus()==null||!info.getBaseStatus().equals(BillBaseStatusEnum.SUBMITED))
+			throw new EASBizException(new NumericExceptionSubItem("001","只有提交的单子才可以执行此操作"));
+		try {
+			info.setBaseStatus(BillBaseStatusEnum.AUDITED);
+			super.save(ctx, info);
+		} catch (Exception ex) {
+			throw new EASBizException(new NumericExceptionSubItem("001",ex.getMessage()));
+		}
+	}
+	
+	
+
+	protected void _unAudit(Context ctx, IObjectValue model)throws BOSException, EASBizException
+	{
+		LocalPurMATPriceInfo info = LocalPurMATPriceFactory.getLocalInstance(ctx).getLocalPurMATPriceInfo(new ObjectUuidPK(((LocalPurMATPriceInfo) model).getId()));
+		if(info.getBaseStatus()==null||!info.getBaseStatus().equals(BillBaseStatusEnum.AUDITED))
+			throw new EASBizException(new NumericExceptionSubItem("001","只有审核的单子才可以执行此操作"));
+		if(DbUtil.executeQuery(ctx, "select * from T_BOT_Relation where FSrcObjectID='"+info.getString("id")+"'").size()>0)
+			throw new EASBizException(new NumericExceptionSubItem("001","有下游单据的单据禁止反审核"));
+		info.setBaseStatus(BillBaseStatusEnum.TEMPORARILYSAVED);
+		super._update(ctx, new ObjectUuidPK(info.getId()), info);
+	}
+
+
 	@Override
-	protected void _approve(Context ctx, IObjectValue model) throws BOSException, EASBizException {
-		LocalPurMATPriceInfo info=(LocalPurMATPriceInfo) model;
-		if(info.getBaseStatus().equals(UsedStatusEnum.APPROVED)||info.getBaseStatus().equals(UsedStatusEnum.ENABLED)) {
-			throw new EASBizException(new NumericExceptionSubItem("","资料已经核准或启用！"));
+	protected IObjectPK _save(Context ctx, IObjectValue model) throws BOSException, EASBizException {
+		// TODO Auto-generated method stub
+		LocalPurMATPriceInfo info = (LocalPurMATPriceInfo) model;
+		if(info.getBaseStatus()!=null&&!info.getBaseStatus().equals(BillBaseStatusEnum.AUDITED)&&!info.getBaseStatus().equals(BillBaseStatusEnum.CLOSED)) {
+			info.setBaseStatus(BillBaseStatusEnum.TEMPORARILYSAVED);
 		}
-		beforeApprove(ctx, info);
-		super._approve(ctx, info);
-		afterApprove(ctx, info);
+		return super._save(ctx, info);
 	}
 
-
-	private void beforeApprove(Context ctx,LocalPurMATPriceInfo info) throws EASBizException {
-		for(int i=0;i<info.getEntry().size();i++){
-			LocalPurMATPriceEntryInfo entry = info.getEntry().get(i);
-			StringBuffer sqlBuf = new StringBuffer();
-			sqlBuf.append(" /*dialect*/select t1.fid fid,t2.CFMaterialName materialName from CT_FM_LocalPurMATPrice t1 ")
-			.append(" inner join  CT_FM_LocalPurMATPriceEntry t2 on t1.fid=t2.fparentid ")
-			.append(" where t1.FBaseStatus=2 ")
-			.append(" and to_char(t1.CFBeginDate,'yyyy-MM-dd')= '").append(sdf.format(info.getBeginDate())).append("'")
-			.append(" and t2.CFMaterialID='"+entry.getMaterial().getId().toString()+"' ");
-			if(info.getId()!=null){
-				sqlBuf.append(" and t1.fid<>'"+info.getId().toString()+"'");
-			}			
-			sqlBuf.append(" and t1.CFCompanyID ='"+info.getCompany().getId().toString()+"'");
-			try {
-				IRowSet rs = DbUtil.executeQuery(ctx, sqlBuf.toString());
-				if(rs.next()){
-					throw new EASBizException(new NumericExceptionSubItem("001","当前公司物料:"+rs.getString("materialName")+"\n已维护了相同生效日期的资料,操作失败请修改!"));
-				}
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (BOSException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+	@Override
+	protected IObjectPK _submit(Context ctx, IObjectValue model) throws BOSException, EASBizException {
+		LocalPurMATPriceInfo info = (LocalPurMATPriceInfo) model;
+		if(info.getBaseStatus()==null||info.getBaseStatus().getValue()==-1||info.getBaseStatus().equals(BillBaseStatusEnum.ADD)||info.getBaseStatus().equals(BillBaseStatusEnum.TEMPORARILYSAVED)||info.getBaseStatus().equals(BillBaseStatusEnum.SUBMITED)) {
+			info.setBaseStatus(BillBaseStatusEnum.SUBMITED);
 		}
+		return super._submit(ctx, info);
 	}
-
-	private void afterApprove(Context ctx,LocalPurMATPriceInfo info) throws EASBizException {
-		Calendar cal=Calendar.getInstance();
-		cal.setTime(info.getBeginDate());
-		cal.add(Calendar.DATE, -1);
-		for(int i=0;i<info.getEntry().size();i++){
-			LocalPurMATPriceEntryInfo entry = info.getEntry().get(i);
-			StringBuffer sqlBuf = new StringBuffer();
-			sqlBuf.append(" /*dialect*/select t1.fid fid from CT_FM_LocalPurMATPrice t1 ")
-			.append(" inner join  CT_FM_LocalPurMATPriceEntry t2 on t1.fid=t2.fparentid ")
-			.append(" where t1.FBaseStatus=2 ")
-			.append(" and to_char(t1.CFBeginDate,'yyyy-MM-dd')< '").append(sdf.format(info.getBeginDate())).append("'")
-			.append(" and t2.CFMaterialID='"+entry.getMaterial().getId().toString()+"' ");
-			if(info.getId()!=null){
-				sqlBuf.append(" and t1.fid<>'"+info.getId().toString()+"'");
-			}			
-			sqlBuf.append(" and t1.CFCompanyID ='"+info.getCompany().getId().toString()+"' order by t1.CFBeginDate desc");
-			try {
-				IRowSet rs = DbUtil.executeQuery(ctx, sqlBuf.toString());
-				if(rs.next()){
-					String id = rs.getString("fid");
-					String sql="/*dialect*/update CT_FM_LocalPurMATPrice set cfenddate=to_date('"+sdf.format(cal.getTime())+"','yyyy-mm-dd') where fid ='"+id+"'";
-					DbUtil.execute(ctx, sql);
-				}
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (BOSException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+	@Override
+	protected void _delete(Context ctx, IObjectPK pk) throws BOSException, EASBizException {
+		// TODO Auto-generated method stub
+		LocalPurMATPriceInfo info = LocalPurMATPriceFactory.getLocalInstance(ctx).getLocalPurMATPriceInfo(pk);
+		if (info.getBaseStatus().equals(BillBaseStatusEnum.AUDITED)||info.getBaseStatus().equals(BillBaseStatusEnum.CLOSED)) {
+			throw new EASBizException(new NumericExceptionSubItem("001","单据已经审核或关闭，禁止删除！"));
 		}
+
+		super._delete(ctx, pk);
 	}
+    
+    
 }

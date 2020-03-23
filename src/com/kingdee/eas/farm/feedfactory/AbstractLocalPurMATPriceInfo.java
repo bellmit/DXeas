@@ -7,7 +7,7 @@ import com.kingdee.util.TypeConversionUtils;
 import com.kingdee.bos.util.BOSObjectType;
 
 
-public class AbstractLocalPurMATPriceInfo extends com.kingdee.eas.custom.wlhllicensemanager.WlhlDataBaseInfo implements Serializable 
+public class AbstractLocalPurMATPriceInfo extends com.kingdee.eas.framework.DataBaseInfo implements Serializable 
 {
     public AbstractLocalPurMATPriceInfo()
     {
@@ -30,11 +30,17 @@ public class AbstractLocalPurMATPriceInfo extends com.kingdee.eas.custom.wlhllic
         put("company", item);
     }
     /**
-     * Object: 本地收购物料价格维护 's 价格分录 property 
+     * Object:本地收购物料价格维护's 单据状态property 
      */
-    public com.kingdee.eas.farm.feedfactory.LocalPurMATPriceEntryCollection getEntry()
+    public com.kingdee.eas.scm.common.BillBaseStatusEnum getBaseStatus()
     {
-        return (com.kingdee.eas.farm.feedfactory.LocalPurMATPriceEntryCollection)get("Entry");
+        return com.kingdee.eas.scm.common.BillBaseStatusEnum.getEnum(getInt("baseStatus"));
+    }
+    public void setBaseStatus(com.kingdee.eas.scm.common.BillBaseStatusEnum item)
+    {
+		if (item != null) {
+        setInt("baseStatus", item.getValue());
+		}
     }
     /**
      * Object:本地收购物料价格维护's 生效日期property 
@@ -57,6 +63,13 @@ public class AbstractLocalPurMATPriceInfo extends com.kingdee.eas.custom.wlhllic
     public void setEndDate(java.util.Date item)
     {
         setDate("endDate", item);
+    }
+    /**
+     * Object: 本地收购物料价格维护 's 第1个表体 property 
+     */
+    public com.kingdee.eas.farm.feedfactory.LocalPurMATPriceEntryCollection getEntry()
+    {
+        return (com.kingdee.eas.farm.feedfactory.LocalPurMATPriceEntryCollection)get("Entry");
     }
     public BOSObjectType getBOSType()
     {

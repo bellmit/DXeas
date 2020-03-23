@@ -50,7 +50,7 @@ public abstract class AbstractLocalPurMATPriceEntryControllerBean extends CoreBi
     public boolean exists(Context ctx, IObjectPK pk) throws BOSException, EASBizException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("a1c468fe-39db-4100-be02-484b9ecf6e11"), new Object[]{ctx, pk});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("549ac46e-8b84-4117-a4b2-bb993ac71d77"), new Object[]{ctx, pk});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()) {
             boolean retValue = (boolean)_exists(ctx, pk);
@@ -75,7 +75,7 @@ public abstract class AbstractLocalPurMATPriceEntryControllerBean extends CoreBi
     public boolean exists(Context ctx, FilterInfo filter) throws BOSException, EASBizException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("fe4febe9-eb23-4fdd-b983-32010818e20f"), new Object[]{ctx, filter});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("921a02c9-62fd-4e70-8406-0d2efc3c20de"), new Object[]{ctx, filter});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()) {
             boolean retValue = (boolean)_exists(ctx, filter);
@@ -100,7 +100,7 @@ public abstract class AbstractLocalPurMATPriceEntryControllerBean extends CoreBi
     public boolean exists(Context ctx, String oql) throws BOSException, EASBizException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("653fb896-20bb-4979-ab55-5d9273537760"), new Object[]{ctx, oql});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("47d39e22-03fb-4967-90f3-2fad85fe205b"), new Object[]{ctx, oql});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()) {
             boolean retValue = (boolean)_exists(ctx, oql);
@@ -125,7 +125,7 @@ public abstract class AbstractLocalPurMATPriceEntryControllerBean extends CoreBi
     public LocalPurMATPriceEntryInfo getLocalPurMATPriceEntryInfo(Context ctx, IObjectPK pk) throws BOSException, EASBizException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("5b83613d-11ff-479d-8ffe-209833480c03"), new Object[]{ctx, pk});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("928aa911-e796-4d0e-8e2d-82865f0b9ebf"), new Object[]{ctx, pk});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()) {
             LocalPurMATPriceEntryInfo retValue = (LocalPurMATPriceEntryInfo)_getValue(ctx, pk);
@@ -150,7 +150,7 @@ public abstract class AbstractLocalPurMATPriceEntryControllerBean extends CoreBi
     public LocalPurMATPriceEntryInfo getLocalPurMATPriceEntryInfo(Context ctx, IObjectPK pk, SelectorItemCollection selector) throws BOSException, EASBizException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("33914eb6-e70e-4b99-a1c2-4247c805c750"), new Object[]{ctx, pk, selector});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("41dfee6b-1d92-4826-8d23-44c92aa97e33"), new Object[]{ctx, pk, selector});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()) {
             LocalPurMATPriceEntryInfo retValue = (LocalPurMATPriceEntryInfo)_getValue(ctx, pk, selector);
@@ -175,7 +175,7 @@ public abstract class AbstractLocalPurMATPriceEntryControllerBean extends CoreBi
     public LocalPurMATPriceEntryInfo getLocalPurMATPriceEntryInfo(Context ctx, String oql) throws BOSException, EASBizException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("c846437c-630f-4883-bd55-72fd523ed4bd"), new Object[]{ctx, oql});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("fc26067e-75cc-47ad-9d95-ae076cbc95c4"), new Object[]{ctx, oql});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()) {
             LocalPurMATPriceEntryInfo retValue = (LocalPurMATPriceEntryInfo)_getValue(ctx, oql);
@@ -200,7 +200,7 @@ public abstract class AbstractLocalPurMATPriceEntryControllerBean extends CoreBi
     public IObjectPK addnew(Context ctx, LocalPurMATPriceEntryInfo model) throws BOSException, EASBizException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("fb820637-9263-4d42-bcf0-9651319c8635"), new Object[]{ctx, model});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("46cef764-cb25-40de-bc93-14111b2eb3b6"), new Object[]{ctx, model});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()) {
             IObjectPK retValue = (IObjectPK)_addnew(ctx, model);
@@ -227,7 +227,7 @@ public abstract class AbstractLocalPurMATPriceEntryControllerBean extends CoreBi
     public void addnew(Context ctx, IObjectPK pk, LocalPurMATPriceEntryInfo model) throws BOSException, EASBizException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("590cba2f-c1db-4f00-b342-f8c586323541"), new Object[]{ctx, pk, model});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("1bfd2cc2-e7c9-43f4-881a-8d7c33e4d3c6"), new Object[]{ctx, pk, model});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()){
             _addnew(ctx, pk, model);
@@ -251,7 +251,7 @@ public abstract class AbstractLocalPurMATPriceEntryControllerBean extends CoreBi
     public void update(Context ctx, IObjectPK pk, LocalPurMATPriceEntryInfo model) throws BOSException, EASBizException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("bbc1becb-2ae4-4339-966a-c0f4b7af10fe"), new Object[]{ctx, pk, model});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("7ccbf5bf-1652-4077-be3b-fd6309c9b71f"), new Object[]{ctx, pk, model});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()){
             _update(ctx, pk, model);
@@ -275,7 +275,7 @@ public abstract class AbstractLocalPurMATPriceEntryControllerBean extends CoreBi
     public void updatePartial(Context ctx, LocalPurMATPriceEntryInfo model, SelectorItemCollection selector) throws BOSException, EASBizException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("10cdcd02-0338-4985-a56a-41c8a6491ecb"), new Object[]{ctx, model, selector});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("4e38d9b5-c4e0-4901-a97e-41be9b8ebaee"), new Object[]{ctx, model, selector});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()){
             _updatePartial(ctx, model, selector);
@@ -299,7 +299,7 @@ public abstract class AbstractLocalPurMATPriceEntryControllerBean extends CoreBi
     public void updateBigObject(Context ctx, IObjectPK pk, LocalPurMATPriceEntryInfo model) throws BOSException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("e2b8128e-ea9f-4135-98b2-330ffd27797d"), new Object[]{ctx, pk, model});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("ceb86b75-5f92-43d6-a1eb-c44aed1a0d0b"), new Object[]{ctx, pk, model});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()){
             _updateBigObject(ctx, pk, model);
@@ -320,7 +320,7 @@ public abstract class AbstractLocalPurMATPriceEntryControllerBean extends CoreBi
     public void delete(Context ctx, IObjectPK pk) throws BOSException, EASBizException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("c52a23bf-3015-4bf8-9e66-1b44ce4e10f6"), new Object[]{ctx, pk});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("55259885-1618-4d5e-a68a-2fab8d66c626"), new Object[]{ctx, pk});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()){
             _delete(ctx, pk);
@@ -344,7 +344,7 @@ public abstract class AbstractLocalPurMATPriceEntryControllerBean extends CoreBi
     public IObjectPK[] getPKList(Context ctx) throws BOSException, EASBizException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("c093c588-c436-476d-9d9d-933b83a0a185"), new Object[]{ctx});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("f4ffee7b-3bb7-4982-9d91-30bb0431fe55"), new Object[]{ctx});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()) {
             IObjectPK[] retValue = (IObjectPK[])_getPKList(ctx);
@@ -369,7 +369,7 @@ public abstract class AbstractLocalPurMATPriceEntryControllerBean extends CoreBi
     public IObjectPK[] getPKList(Context ctx, String oql) throws BOSException, EASBizException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("2550a804-d035-42cd-932e-754ec0e7a2a7"), new Object[]{ctx, oql});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("4f078800-123a-4c79-baea-43fc24925821"), new Object[]{ctx, oql});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()) {
             IObjectPK[] retValue = (IObjectPK[])_getPKList(ctx, oql);
@@ -394,7 +394,7 @@ public abstract class AbstractLocalPurMATPriceEntryControllerBean extends CoreBi
     public IObjectPK[] getPKList(Context ctx, FilterInfo filter, SorterItemCollection sorter) throws BOSException, EASBizException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("7e74b989-d073-4186-9c1f-4dc37f91862e"), new Object[]{ctx, filter, sorter});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("34145eae-efe3-4a7c-bb9b-27286352f690"), new Object[]{ctx, filter, sorter});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()) {
             IObjectPK[] retValue = (IObjectPK[])_getPKList(ctx, filter, sorter);
@@ -419,7 +419,7 @@ public abstract class AbstractLocalPurMATPriceEntryControllerBean extends CoreBi
     public LocalPurMATPriceEntryCollection getLocalPurMATPriceEntryCollection(Context ctx) throws BOSException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("3f19599b-85b2-4b9e-a0e4-959aced48193"), new Object[]{ctx});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("9ccdb2cc-5ca1-43c5-9eac-987518a65005"), new Object[]{ctx});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()) {
             LocalPurMATPriceEntryCollection retValue = (LocalPurMATPriceEntryCollection)_getCollection(ctx, svcCtx);
@@ -442,7 +442,7 @@ public abstract class AbstractLocalPurMATPriceEntryControllerBean extends CoreBi
     public LocalPurMATPriceEntryCollection getLocalPurMATPriceEntryCollection(Context ctx, EntityViewInfo view) throws BOSException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("135261cd-49ee-4d0a-ae0a-a343f955d027"), new Object[]{ctx, view});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("bf28590b-89da-4c3a-bc4e-b0ca9319755f"), new Object[]{ctx, view});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()) {
             LocalPurMATPriceEntryCollection retValue = (LocalPurMATPriceEntryCollection)_getCollection(ctx, svcCtx, view);
@@ -465,7 +465,7 @@ public abstract class AbstractLocalPurMATPriceEntryControllerBean extends CoreBi
     public LocalPurMATPriceEntryCollection getLocalPurMATPriceEntryCollection(Context ctx, String oql) throws BOSException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("bb94d538-267a-4f0b-98e3-52107dd43168"), new Object[]{ctx, oql});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("979d2712-50f9-4767-a406-bf96885a49b7"), new Object[]{ctx, oql});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()) {
             LocalPurMATPriceEntryCollection retValue = (LocalPurMATPriceEntryCollection)_getCollection(ctx, svcCtx, oql);
@@ -488,7 +488,7 @@ public abstract class AbstractLocalPurMATPriceEntryControllerBean extends CoreBi
     public IObjectPK[] delete(Context ctx, FilterInfo filter) throws BOSException, EASBizException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("92750663-0912-4ba8-b7cc-d66703173dc2"), new Object[]{ctx, filter});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("72cc2164-9b56-44c0-8536-5c07ccf56310"), new Object[]{ctx, filter});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()) {
             IObjectPK[] retValue = (IObjectPK[])_delete(ctx, filter);
@@ -515,7 +515,7 @@ public abstract class AbstractLocalPurMATPriceEntryControllerBean extends CoreBi
     public IObjectPK[] delete(Context ctx, String oql) throws BOSException, EASBizException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("df6067d5-d5e7-428d-981c-98b126d7a76c"), new Object[]{ctx, oql});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("ff9581d6-42c4-4be5-93d5-7ed158af2c1b"), new Object[]{ctx, oql});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()) {
             IObjectPK[] retValue = (IObjectPK[])_delete(ctx, oql);
@@ -542,7 +542,7 @@ public abstract class AbstractLocalPurMATPriceEntryControllerBean extends CoreBi
     public void delete(Context ctx, IObjectPK[] arrayPK) throws BOSException, EASBizException
     {
         try {
-            ServiceContext svcCtx = createServiceContext(new MetaDataPK("a0d6bf45-828c-4776-90fa-12489df93c82"), new Object[]{ctx, arrayPK});
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("8e7cfdb7-324f-438c-8378-bd05c7de9924"), new Object[]{ctx, arrayPK});
             invokeServiceBefore(svcCtx);
             if(!svcCtx.invokeBreak()){
             _delete(ctx, arrayPK);

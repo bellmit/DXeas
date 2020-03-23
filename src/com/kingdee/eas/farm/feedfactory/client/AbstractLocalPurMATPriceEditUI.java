@@ -43,18 +43,32 @@ import com.kingdee.bos.appframework.uip.UINavigator;
 /**
  * output class name
  */
-public abstract class AbstractLocalPurMATPriceEditUI extends com.kingdee.eas.custom.wlhllicensemanager.client.WlhlBaseEditUI
+public abstract class AbstractLocalPurMATPriceEditUI extends com.kingdee.eas.framework.client.EditUI
 {
     private static final Logger logger = CoreUIObject.getLogger(AbstractLocalPurMATPriceEditUI.class);
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer1;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer2;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer3;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer4;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contcompany;
-    protected com.kingdee.bos.ctrl.kdf.table.KDTable kdtEntry;
-	protected com.kingdee.eas.framework.client.multiDetail.DetailPanel kdtEntry_detailPanel = null;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contbaseStatus;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contbeginDate;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contendDate;
+    protected com.kingdee.bos.ctrl.kdf.table.KDTable kdtEntry;
+	protected com.kingdee.eas.framework.client.multiDetail.DetailPanel kdtEntry_detailPanel = null;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtNumber;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizMultiLangBox txtName;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtSimpleName;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizMultiLangBox txtDescription;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtcompany;
+    protected com.kingdee.bos.ctrl.swing.KDComboBox baseStatus;
     protected com.kingdee.bos.ctrl.swing.KDDatePicker pkbeginDate;
     protected com.kingdee.bos.ctrl.swing.KDDatePicker pkendDate;
+    protected com.kingdee.bos.ctrl.swing.KDWorkButton btnAuit;
+    protected com.kingdee.bos.ctrl.swing.KDWorkButton btnUnAudit;
     protected com.kingdee.eas.farm.feedfactory.LocalPurMATPriceInfo editData = null;
+    protected ActionAudit actionAudit = null;
+    protected ActionUnAudit actionUnAudit = null;
     /**
      * output class constructor
      */
@@ -74,87 +88,105 @@ public abstract class AbstractLocalPurMATPriceEditUI extends com.kingdee.eas.cus
     {
         this.resHelper = new ResourceBundleHelper(AbstractLocalPurMATPriceEditUI.class.getName());
         this.setUITitle(resHelper.getString("this.title"));
+        //actionAudit
+        this.actionAudit = new ActionAudit(this);
+        getActionManager().registerAction("actionAudit", actionAudit);
+        this.actionAudit.setExtendProperty("canForewarn", "true");
+        this.actionAudit.setExtendProperty("userDefined", "true");
+        this.actionAudit.setExtendProperty("isObjectUpdateLock", "false");
+         this.actionAudit.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+         this.actionAudit.addService(new com.kingdee.eas.framework.client.service.ForewarnService());
+        //actionUnAudit
+        this.actionUnAudit = new ActionUnAudit(this);
+        getActionManager().registerAction("actionUnAudit", actionUnAudit);
+        this.actionUnAudit.setExtendProperty("canForewarn", "true");
+        this.actionUnAudit.setExtendProperty("userDefined", "true");
+        this.actionUnAudit.setExtendProperty("isObjectUpdateLock", "false");
+         this.actionUnAudit.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+         this.actionUnAudit.addService(new com.kingdee.eas.framework.client.service.ForewarnService());
+        this.kDLabelContainer1 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDLabelContainer2 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDLabelContainer3 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDLabelContainer4 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contcompany = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.kdtEntry = new com.kingdee.bos.ctrl.kdf.table.KDTable();
+        this.contbaseStatus = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contbeginDate = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contendDate = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kdtEntry = new com.kingdee.bos.ctrl.kdf.table.KDTable();
+        this.txtNumber = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.txtName = new com.kingdee.bos.ctrl.extendcontrols.KDBizMultiLangBox();
+        this.txtSimpleName = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.txtDescription = new com.kingdee.bos.ctrl.extendcontrols.KDBizMultiLangBox();
         this.prmtcompany = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
+        this.baseStatus = new com.kingdee.bos.ctrl.swing.KDComboBox();
         this.pkbeginDate = new com.kingdee.bos.ctrl.swing.KDDatePicker();
         this.pkendDate = new com.kingdee.bos.ctrl.swing.KDDatePicker();
+        this.btnAuit = new com.kingdee.bos.ctrl.swing.KDWorkButton();
+        this.btnUnAudit = new com.kingdee.bos.ctrl.swing.KDWorkButton();
+        this.kDLabelContainer1.setName("kDLabelContainer1");
+        this.kDLabelContainer2.setName("kDLabelContainer2");
+        this.kDLabelContainer3.setName("kDLabelContainer3");
+        this.kDLabelContainer4.setName("kDLabelContainer4");
         this.contcompany.setName("contcompany");
-        this.kdtEntry.setName("kdtEntry");
+        this.contbaseStatus.setName("contbaseStatus");
         this.contbeginDate.setName("contbeginDate");
         this.contendDate.setName("contendDate");
+        this.kdtEntry.setName("kdtEntry");
+        this.txtNumber.setName("txtNumber");
+        this.txtName.setName("txtName");
+        this.txtSimpleName.setName("txtSimpleName");
+        this.txtDescription.setName("txtDescription");
         this.prmtcompany.setName("prmtcompany");
+        this.baseStatus.setName("baseStatus");
         this.pkbeginDate.setName("pkbeginDate");
         this.pkendDate.setName("pkendDate");
+        this.btnAuit.setName("btnAuit");
+        this.btnUnAudit.setName("btnUnAudit");
         // CoreUI		
         this.btnPrint.setVisible(false);		
         this.btnPrintPreview.setVisible(false);		
         this.menuItemPrint.setVisible(false);		
-        this.menuItemPrintPreview.setVisible(false);		
+        this.menuItemPrintPreview.setVisible(false);
+        // kDLabelContainer1		
         this.kDLabelContainer1.setBoundLabelText(resHelper.getString("kDLabelContainer1.boundLabelText"));		
         this.kDLabelContainer1.setBoundLabelLength(100);		
-        this.kDLabelContainer1.setBoundLabelUnderline(true);		
+        this.kDLabelContainer1.setBoundLabelUnderline(true);
+        // kDLabelContainer2		
         this.kDLabelContainer2.setBoundLabelText(resHelper.getString("kDLabelContainer2.boundLabelText"));		
         this.kDLabelContainer2.setBoundLabelLength(100);		
-        this.kDLabelContainer2.setBoundLabelUnderline(true);		
+        this.kDLabelContainer2.setBoundLabelUnderline(true);
+        // kDLabelContainer3		
         this.kDLabelContainer3.setBoundLabelText(resHelper.getString("kDLabelContainer3.boundLabelText"));		
         this.kDLabelContainer3.setBoundLabelLength(100);		
-        this.kDLabelContainer3.setBoundLabelUnderline(true);		
-        this.kDLabelContainer3.setVisible(false);		
+        this.kDLabelContainer3.setBoundLabelUnderline(true);
+        // kDLabelContainer4		
         this.kDLabelContainer4.setBoundLabelText(resHelper.getString("kDLabelContainer4.boundLabelText"));		
         this.kDLabelContainer4.setBoundLabelLength(100);		
         this.kDLabelContainer4.setBoundLabelUnderline(true);		
         this.kDLabelContainer4.setBoundLabelAlignment(7);		
-        this.kDLabelContainer4.setVisible(true);		
-        this.contapprover.setBoundLabelText(resHelper.getString("contapprover.boundLabelText"));		
-        this.contapprover.setBoundLabelLength(100);		
-        this.contapprover.setBoundLabelUnderline(true);		
-        this.contapprover.setVisible(true);		
-        this.contapproveTime.setBoundLabelText(resHelper.getString("contapproveTime.boundLabelText"));		
-        this.contapproveTime.setBoundLabelLength(100);		
-        this.contapproveTime.setBoundLabelUnderline(true);		
-        this.contapproveTime.setVisible(true);		
-        this.contbaseStatus.setBoundLabelText(resHelper.getString("contbaseStatus.boundLabelText"));		
-        this.contbaseStatus.setBoundLabelLength(100);		
-        this.contbaseStatus.setBoundLabelUnderline(true);		
-        this.contbaseStatus.setVisible(true);		
-        this.contcreator.setBoundLabelText(resHelper.getString("contcreator.boundLabelText"));		
-        this.contcreator.setBoundLabelLength(100);		
-        this.contcreator.setBoundLabelUnderline(true);		
-        this.contcreator.setVisible(true);		
-        this.contcreateTime.setBoundLabelText(resHelper.getString("contcreateTime.boundLabelText"));		
-        this.contcreateTime.setBoundLabelLength(100);		
-        this.contcreateTime.setBoundLabelUnderline(true);		
-        this.contcreateTime.setVisible(true);		
-        this.txtNumber.setMaxLength(80);		
-        this.txtSimpleName.setMaxLength(80);		
-        this.prmtapprover.setEditable(true);		
-        this.prmtapprover.setDisplayFormat("$number$");		
-        this.prmtapprover.setEditFormat("$number$");		
-        this.prmtapprover.setCommitFormat("$number$");		
-        this.prmtapprover.setRequired(false);		
-        this.prmtapprover.setEnabled(false);		
-        this.pkapproveTime.setRequired(false);		
-        this.pkapproveTime.setEnabled(false);		
-        this.baseStatus.addItems(EnumUtils.getEnumList("com.kingdee.eas.custom.wlhllicensemanager.UsedStatusEnum").toArray());		
-        this.baseStatus.setRequired(false);		
-        this.prmtcreator.setEditable(true);		
-        this.prmtcreator.setDisplayFormat("$name$");		
-        this.prmtcreator.setEditFormat("$number$");		
-        this.prmtcreator.setCommitFormat("$number$");		
-        this.prmtcreator.setRequired(false);		
-        this.prmtcreator.setEnabled(false);		
-        this.pkcreateTime.setRequired(false);		
-        this.pkcreateTime.setEnabled(false);
+        this.kDLabelContainer4.setVisible(true);
         // contcompany		
         this.contcompany.setBoundLabelText(resHelper.getString("contcompany.boundLabelText"));		
         this.contcompany.setBoundLabelLength(100);		
         this.contcompany.setBoundLabelUnderline(true);		
         this.contcompany.setVisible(true);
+        // contbaseStatus		
+        this.contbaseStatus.setBoundLabelText(resHelper.getString("contbaseStatus.boundLabelText"));		
+        this.contbaseStatus.setBoundLabelLength(100);		
+        this.contbaseStatus.setBoundLabelUnderline(true);		
+        this.contbaseStatus.setVisible(true);
+        // contbeginDate		
+        this.contbeginDate.setBoundLabelText(resHelper.getString("contbeginDate.boundLabelText"));		
+        this.contbeginDate.setBoundLabelLength(100);		
+        this.contbeginDate.setBoundLabelUnderline(true);		
+        this.contbeginDate.setVisible(true);
+        // contendDate		
+        this.contendDate.setBoundLabelText(resHelper.getString("contendDate.boundLabelText"));		
+        this.contendDate.setBoundLabelLength(100);		
+        this.contendDate.setBoundLabelUnderline(true);		
+        this.contendDate.setVisible(true);
         // kdtEntry
-		String kdtEntryStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol2\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol4\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"seq\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol0\" /><t:Column t:key=\"material\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"-1\" /><t:Column t:key=\"materialName\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol2\" /><t:Column t:key=\"supplier\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"price\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"-1\" t:styleID=\"sCol4\" /><t:Column t:key=\"remark\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{seq}</t:Cell><t:Cell>$Resource{material}</t:Cell><t:Cell>$Resource{materialName}</t:Cell><t:Cell>$Resource{supplier}</t:Cell><t:Cell>$Resource{price}</t:Cell><t:Cell>$Resource{remark}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
+		String kdtEntryStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol2\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol4\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"seq\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol0\" /><t:Column t:key=\"material\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"materialName\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol2\" /><t:Column t:key=\"supplier\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"price\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol4\" /><t:Column t:key=\"remark\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{seq}</t:Cell><t:Cell>$Resource{material}</t:Cell><t:Cell>$Resource{materialName}</t:Cell><t:Cell>$Resource{supplier}</t:Cell><t:Cell>$Resource{price}</t:Cell><t:Cell>$Resource{remark}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
 		
         this.kdtEntry.setFormatXml(resHelper.translateString("kdtEntry",kdtEntryStrXML));
         kdtEntry.addKDTEditListener(new KDTEditAdapter() {
@@ -223,31 +255,41 @@ public abstract class AbstractLocalPurMATPriceEditUI extends com.kingdee.eas.cus
         this.kdtEntry.getColumn("price").setEditor(kdtEntry_price_CellEditor);
         KDTextField kdtEntry_remark_TextField = new KDTextField();
         kdtEntry_remark_TextField.setName("kdtEntry_remark_TextField");
-        kdtEntry_remark_TextField.setMaxLength(250);
+        kdtEntry_remark_TextField.setMaxLength(100);
         KDTDefaultCellEditor kdtEntry_remark_CellEditor = new KDTDefaultCellEditor(kdtEntry_remark_TextField);
         this.kdtEntry.getColumn("remark").setEditor(kdtEntry_remark_CellEditor);
-        // contbeginDate		
-        this.contbeginDate.setBoundLabelText(resHelper.getString("contbeginDate.boundLabelText"));		
-        this.contbeginDate.setBoundLabelLength(100);		
-        this.contbeginDate.setBoundLabelUnderline(true);		
-        this.contbeginDate.setVisible(true);
-        // contendDate		
-        this.contendDate.setBoundLabelText(resHelper.getString("contendDate.boundLabelText"));		
-        this.contendDate.setBoundLabelLength(100);		
-        this.contendDate.setBoundLabelUnderline(true);
+        // txtNumber		
+        this.txtNumber.setMaxLength(80);
+        // txtName
+        // txtSimpleName		
+        this.txtSimpleName.setMaxLength(80);
+        // txtDescription
         // prmtcompany		
         this.prmtcompany.setQueryInfo("com.kingdee.eas.basedata.org.app.CompanyOrgUnitQuery");		
+        this.prmtcompany.setVisible(true);		
         this.prmtcompany.setEditable(true);		
         this.prmtcompany.setDisplayFormat("$name$");		
         this.prmtcompany.setEditFormat("$number$");		
         this.prmtcompany.setCommitFormat("$number$");		
-        this.prmtcompany.setRequired(true);
+        this.prmtcompany.setRequired(false);
+        // baseStatus		
+        this.baseStatus.setVisible(true);		
+        this.baseStatus.addItems(EnumUtils.getEnumList("com.kingdee.eas.scm.common.BillBaseStatusEnum").toArray());		
+        this.baseStatus.setRequired(false);		
+        this.baseStatus.setEnabled(false);
         // pkbeginDate		
-        this.pkbeginDate.setRequired(true);
+        this.pkbeginDate.setVisible(true);		
+        this.pkbeginDate.setRequired(false);
         // pkendDate		
-        this.pkendDate.setRequired(false);		
-        this.pkendDate.setEnabled(false);
-        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {prmtapprover,pkapproveTime,baseStatus,txtName,txtNumber,txtDescription,txtSimpleName,prmtcreator,pkcreateTime,prmtcompany,pkbeginDate,pkendDate,kdtEntry}));
+        this.pkendDate.setVisible(true);		
+        this.pkendDate.setRequired(false);
+        // btnAuit
+        this.btnAuit.setAction((IItemAction)ActionProxyFactory.getProxy(actionAudit, new Class[] { IItemAction.class }, getServiceContext()));		
+        this.btnAuit.setText(resHelper.getString("btnAuit.text"));
+        // btnUnAudit
+        this.btnUnAudit.setAction((IItemAction)ActionProxyFactory.getProxy(actionUnAudit, new Class[] { IItemAction.class }, getServiceContext()));		
+        this.btnUnAudit.setText(resHelper.getString("btnUnAudit.text"));
+        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {prmtcompany,baseStatus,pkbeginDate,pkendDate}));
         this.setFocusCycleRoot(true);
 		//Register control's property binding
 		registerBindings();
@@ -273,36 +315,28 @@ public abstract class AbstractLocalPurMATPriceEditUI extends com.kingdee.eas.cus
      */
     public void initUIContentLayout()
     {
-        this.setBounds(new Rectangle(0, 0, 679, 625));
+        this.setBounds(new Rectangle(0, 0, 666, 348));
         this.setLayout(new KDLayout());
-        this.putClientProperty("OriginalBounds", new Rectangle(0, 0, 679, 625));
-        kDLabelContainer1.setBounds(new Rectangle(32, 19, 270, 19));
-        this.add(kDLabelContainer1, new KDLayout.Constraints(32, 19, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        kDLabelContainer2.setBounds(new Rectangle(368, 19, 270, 19));
-        this.add(kDLabelContainer2, new KDLayout.Constraints(368, 19, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        kDLabelContainer3.setBounds(new Rectangle(797, 6, 270, 19));
-        this.add(kDLabelContainer3, new KDLayout.Constraints(797, 6, 270, 19, 0));
-        kDLabelContainer4.setBounds(new Rectangle(32, 122, 270, 19));
-        this.add(kDLabelContainer4, new KDLayout.Constraints(32, 122, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contapprover.setBounds(new Rectangle(370, 549, 270, 19));
-        this.add(contapprover, new KDLayout.Constraints(370, 549, 270, 19, KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contapproveTime.setBounds(new Rectangle(370, 585, 270, 19));
-        this.add(contapproveTime, new KDLayout.Constraints(370, 585, 270, 19, KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contbaseStatus.setBounds(new Rectangle(368, 53, 270, 19));
-        this.add(contbaseStatus, new KDLayout.Constraints(368, 53, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contcreator.setBounds(new Rectangle(32, 549, 270, 19));
-        this.add(contcreator, new KDLayout.Constraints(32, 549, 270, 19, KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contcreateTime.setBounds(new Rectangle(32, 585, 270, 19));
-        this.add(contcreateTime, new KDLayout.Constraints(32, 585, 270, 19, KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contcompany.setBounds(new Rectangle(32, 53, 270, 19));
-        this.add(contcompany, new KDLayout.Constraints(32, 53, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        kdtEntry.setBounds(new Rectangle(25, 163, 623, 360));
+        this.putClientProperty("OriginalBounds", new Rectangle(0, 0, 666, 348));
+        kDLabelContainer1.setBounds(new Rectangle(29, 14, 270, 19));
+        this.add(kDLabelContainer1, new KDLayout.Constraints(29, 14, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDLabelContainer2.setBounds(new Rectangle(323, 14, 270, 19));
+        this.add(kDLabelContainer2, new KDLayout.Constraints(323, 14, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        kDLabelContainer3.setBounds(new Rectangle(981, 240, 270, 19));
+        this.add(kDLabelContainer3, new KDLayout.Constraints(981, 240, 270, 19, 0));
+        kDLabelContainer4.setBounds(new Rectangle(29, 109, 270, 19));
+        this.add(kDLabelContainer4, new KDLayout.Constraints(29, 109, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contcompany.setBounds(new Rectangle(29, 45, 270, 19));
+        this.add(contcompany, new KDLayout.Constraints(29, 45, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contbaseStatus.setBounds(new Rectangle(323, 45, 270, 19));
+        this.add(contbaseStatus, new KDLayout.Constraints(323, 45, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contbeginDate.setBounds(new Rectangle(29, 76, 270, 19));
+        this.add(contbeginDate, new KDLayout.Constraints(29, 76, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contendDate.setBounds(new Rectangle(323, 76, 270, 19));
+        this.add(contendDate, new KDLayout.Constraints(323, 76, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        kdtEntry.setBounds(new Rectangle(28, 140, 580, 194));
         kdtEntry_detailPanel = (com.kingdee.eas.framework.client.multiDetail.DetailPanel)com.kingdee.eas.framework.client.multiDetail.HMDUtils.buildDetail(this,dataBinder,kdtEntry,new com.kingdee.eas.farm.feedfactory.LocalPurMATPriceEntryInfo(),null,false);
-        this.add(kdtEntry_detailPanel, new KDLayout.Constraints(25, 163, 623, 360, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
-        contbeginDate.setBounds(new Rectangle(32, 87, 270, 19));
-        this.add(contbeginDate, new KDLayout.Constraints(32, 87, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contendDate.setBounds(new Rectangle(368, 87, 270, 19));
-        this.add(contendDate, new KDLayout.Constraints(368, 87, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        this.add(kdtEntry_detailPanel, new KDLayout.Constraints(28, 140, 580, 194, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         //kDLabelContainer1
         kDLabelContainer1.setBoundEditor(txtNumber);
         //kDLabelContainer2
@@ -311,18 +345,10 @@ public abstract class AbstractLocalPurMATPriceEditUI extends com.kingdee.eas.cus
         kDLabelContainer3.setBoundEditor(txtSimpleName);
         //kDLabelContainer4
         kDLabelContainer4.setBoundEditor(txtDescription);
-        //contapprover
-        contapprover.setBoundEditor(prmtapprover);
-        //contapproveTime
-        contapproveTime.setBoundEditor(pkapproveTime);
-        //contbaseStatus
-        contbaseStatus.setBoundEditor(baseStatus);
-        //contcreator
-        contcreator.setBoundEditor(prmtcreator);
-        //contcreateTime
-        contcreateTime.setBoundEditor(pkcreateTime);
         //contcompany
         contcompany.setBoundEditor(prmtcompany);
+        //contbaseStatus
+        contbaseStatus.setBoundEditor(baseStatus);
         //contbeginDate
         contbeginDate.setBoundEditor(pkbeginDate);
         //contendDate
@@ -384,8 +410,6 @@ public abstract class AbstractLocalPurMATPriceEditUI extends com.kingdee.eas.cus
         menuView.add(menuItemNext);
         menuView.add(menuItemLast);
         //menuBiz
-        menuBiz.add(mBtnApprove);
-        menuBiz.add(mBtnUnApprove);
         menuBiz.add(menuItemCancelCancel);
         menuBiz.add(menuItemCancel);
         //menuTool
@@ -420,9 +444,11 @@ public abstract class AbstractLocalPurMATPriceEditUI extends com.kingdee.eas.cus
         this.toolBar.add(btnSubmit);
         this.toolBar.add(btnCopy);
         this.toolBar.add(btnRemove);
-        this.toolBar.add(tBtnApprove);
-        this.toolBar.add(tBtnUnApprove);
+        this.toolBar.add(btnAttachment);
+        this.toolBar.add(separatorFW1);
         this.toolBar.add(btnPageSetup);
+        this.toolBar.add(btnAuit);
+        this.toolBar.add(btnUnAudit);
         this.toolBar.add(btnPrint);
         this.toolBar.add(btnPrintPreview);
         this.toolBar.add(separatorFW2);
@@ -433,31 +459,25 @@ public abstract class AbstractLocalPurMATPriceEditUI extends com.kingdee.eas.cus
         this.toolBar.add(separatorFW3);
         this.toolBar.add(btnCancelCancel);
         this.toolBar.add(btnCancel);
-        this.toolBar.add(btnAttachment);
-        this.toolBar.add(separatorFW1);
 
 
     }
 
 	//Regiester control's property binding.
 	private void registerBindings(){
-		dataBinder.registerBinding("number", String.class, this.txtNumber, "text");
-		dataBinder.registerBinding("name", String.class, this.txtName, "_multiLangItem");
-		dataBinder.registerBinding("simpleName", String.class, this.txtSimpleName, "text");
-		dataBinder.registerBinding("description", String.class, this.txtDescription, "_multiLangItem");
-		dataBinder.registerBinding("approver", com.kingdee.eas.base.permission.UserInfo.class, this.prmtapprover, "data");
-		dataBinder.registerBinding("approveTime", java.util.Date.class, this.pkapproveTime, "value");
-		dataBinder.registerBinding("baseStatus", com.kingdee.eas.custom.wlhllicensemanager.UsedStatusEnum.class, this.baseStatus, "selectedItem");
-		dataBinder.registerBinding("creator", com.kingdee.eas.base.permission.UserInfo.class, this.prmtcreator, "data");
-		dataBinder.registerBinding("createTime", java.sql.Timestamp.class, this.pkcreateTime, "value");
 		dataBinder.registerBinding("Entry.seq", int.class, this.kdtEntry, "seq.text");
 		dataBinder.registerBinding("Entry", com.kingdee.eas.farm.feedfactory.LocalPurMATPriceEntryInfo.class, this.kdtEntry, "userObject");
 		dataBinder.registerBinding("Entry.material", java.lang.Object.class, this.kdtEntry, "material.text");
 		dataBinder.registerBinding("Entry.materialName", String.class, this.kdtEntry, "materialName.text");
 		dataBinder.registerBinding("Entry.supplier", java.lang.Object.class, this.kdtEntry, "supplier.text");
-		dataBinder.registerBinding("Entry.remark", String.class, this.kdtEntry, "remark.text");
 		dataBinder.registerBinding("Entry.price", java.math.BigDecimal.class, this.kdtEntry, "price.text");
+		dataBinder.registerBinding("Entry.remark", String.class, this.kdtEntry, "remark.text");
+		dataBinder.registerBinding("number", String.class, this.txtNumber, "text");
+		dataBinder.registerBinding("name", String.class, this.txtName, "_multiLangItem");
+		dataBinder.registerBinding("simpleName", String.class, this.txtSimpleName, "text");
+		dataBinder.registerBinding("description", String.class, this.txtDescription, "_multiLangItem");
 		dataBinder.registerBinding("company", com.kingdee.eas.basedata.org.CompanyOrgUnitInfo.class, this.prmtcompany, "data");
+		dataBinder.registerBinding("baseStatus", com.kingdee.eas.scm.common.BillBaseStatusEnum.class, this.baseStatus, "selectedItem");
 		dataBinder.registerBinding("beginDate", java.util.Date.class, this.pkbeginDate, "value");
 		dataBinder.registerBinding("endDate", java.util.Date.class, this.pkendDate, "value");		
 	}
@@ -503,7 +523,7 @@ public abstract class AbstractLocalPurMATPriceEditUI extends com.kingdee.eas.cus
     public void onShow() throws Exception
     {
         super.onShow();
-        this.prmtapprover.requestFocusInWindow();
+        this.prmtcompany.requestFocusInWindow();
     }
 
 	
@@ -606,23 +626,19 @@ public abstract class AbstractLocalPurMATPriceEditUI extends com.kingdee.eas.cus
 	 */
 	protected void registerValidator() {
     	getValidateHelper().setCustomValidator( getValidator() );
-		getValidateHelper().registerBindProperty("number", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("name", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("simpleName", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("description", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("approver", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("approveTime", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("baseStatus", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("creator", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("createTime", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("Entry.seq", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("Entry", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("Entry.material", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("Entry.materialName", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("Entry.supplier", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("Entry.remark", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("Entry.price", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("Entry.remark", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("number", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("name", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("simpleName", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("description", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("company", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("baseStatus", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("beginDate", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("endDate", ValidateHelper.ON_SAVE);    		
 	}
@@ -676,31 +692,6 @@ kdtEntry.getCell(rowIndex,"materialName").setValue(com.kingdee.bos.ui.face.UIRul
 		if(StringUtils.isEmpty(selectorAll)){
 			selectorAll = "true";
 		}
-        sic.add(new SelectorItemInfo("number"));
-        sic.add(new SelectorItemInfo("name"));
-        sic.add(new SelectorItemInfo("simpleName"));
-        sic.add(new SelectorItemInfo("description"));
-		if(selectorAll.equalsIgnoreCase("true"))
-		{
-			sic.add(new SelectorItemInfo("approver.*"));
-		}
-		else{
-        	sic.add(new SelectorItemInfo("approver.id"));
-        	sic.add(new SelectorItemInfo("approver.number"));
-        	sic.add(new SelectorItemInfo("approver.name"));
-		}
-        sic.add(new SelectorItemInfo("approveTime"));
-        sic.add(new SelectorItemInfo("baseStatus"));
-		if(selectorAll.equalsIgnoreCase("true"))
-		{
-			sic.add(new SelectorItemInfo("creator.*"));
-		}
-		else{
-        	sic.add(new SelectorItemInfo("creator.id"));
-        	sic.add(new SelectorItemInfo("creator.number"));
-        	sic.add(new SelectorItemInfo("creator.name"));
-		}
-        sic.add(new SelectorItemInfo("createTime"));
     	sic.add(new SelectorItemInfo("Entry.seq"));
 		if(selectorAll.equalsIgnoreCase("true"))
 		{
@@ -727,8 +718,12 @@ kdtEntry.getCell(rowIndex,"materialName").setValue(com.kingdee.bos.ui.face.UIRul
 			sic.add(new SelectorItemInfo("Entry.supplier.name"));
         	sic.add(new SelectorItemInfo("Entry.supplier.number"));
 		}
-    	sic.add(new SelectorItemInfo("Entry.remark"));
     	sic.add(new SelectorItemInfo("Entry.price"));
+    	sic.add(new SelectorItemInfo("Entry.remark"));
+        sic.add(new SelectorItemInfo("number"));
+        sic.add(new SelectorItemInfo("name"));
+        sic.add(new SelectorItemInfo("simpleName"));
+        sic.add(new SelectorItemInfo("description"));
 		if(selectorAll.equalsIgnoreCase("true"))
 		{
 			sic.add(new SelectorItemInfo("company.*"));
@@ -738,10 +733,111 @@ kdtEntry.getCell(rowIndex,"materialName").setValue(com.kingdee.bos.ui.face.UIRul
         	sic.add(new SelectorItemInfo("company.number"));
         	sic.add(new SelectorItemInfo("company.name"));
 		}
+        sic.add(new SelectorItemInfo("baseStatus"));
         sic.add(new SelectorItemInfo("beginDate"));
         sic.add(new SelectorItemInfo("endDate"));
         return sic;
     }        
+    	
+
+    /**
+     * output actionAudit_actionPerformed method
+     */
+    public void actionAudit_actionPerformed(ActionEvent e) throws Exception
+    {
+        com.kingdee.eas.farm.feedfactory.LocalPurMATPriceFactory.getRemoteInstance().audit(editData);
+    }
+    	
+
+    /**
+     * output actionUnAudit_actionPerformed method
+     */
+    public void actionUnAudit_actionPerformed(ActionEvent e) throws Exception
+    {
+        com.kingdee.eas.farm.feedfactory.LocalPurMATPriceFactory.getRemoteInstance().unAudit(editData);
+    }
+	public RequestContext prepareActionAudit(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareActionAudit() {
+    	return false;
+    }
+	public RequestContext prepareActionUnAudit(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareActionUnAudit() {
+    	return false;
+    }
+
+    /**
+     * output ActionAudit class
+     */     
+    protected class ActionAudit extends ItemAction {     
+    
+        public ActionAudit()
+        {
+            this(null);
+        }
+
+        public ActionAudit(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            _tempStr = resHelper.getString("ActionAudit.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionAudit.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionAudit.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractLocalPurMATPriceEditUI.this, "ActionAudit", "actionAudit_actionPerformed", e);
+        }
+    }
+
+    /**
+     * output ActionUnAudit class
+     */     
+    protected class ActionUnAudit extends ItemAction {     
+    
+        public ActionUnAudit()
+        {
+            this(null);
+        }
+
+        public ActionUnAudit(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            _tempStr = resHelper.getString("ActionUnAudit.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionUnAudit.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionUnAudit.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractLocalPurMATPriceEditUI.this, "ActionUnAudit", "actionUnAudit_actionPerformed", e);
+        }
+    }
 
     /**
      * output getMetaDataPK method
@@ -778,26 +874,6 @@ kdtEntry.getCell(rowIndex,"materialName").setValue(com.kingdee.bos.ui.face.UIRul
     }
 
 
-        
-					protected void beforeStoreFields(ActionEvent arg0) throws Exception {
-		for (int i=0,n=kdtEntry.getRowCount();i<n;i++) {
-			if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(kdtEntry.getCell(i,"material").getValue())) {
-				throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"物料编码"});
-			}
-		}
-		for (int i=0,n=kdtEntry.getRowCount();i<n;i++) {
-			if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(kdtEntry.getCell(i,"price").getValue())) {
-				throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"价格"});
-			}
-		}
-		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(prmtcompany.getData())) {
-			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"公司"});
-		}
-		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(pkbeginDate.getValue())) {
-			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"生效日期"});
-		}
-			super.beforeStoreFields(arg0);
-		}
 
     /**
      * output getDetailTable method
@@ -809,6 +885,8 @@ kdtEntry.getCell(rowIndex,"materialName").setValue(com.kingdee.bos.ui.face.UIRul
      * output applyDefaultValue method
      */
     protected void applyDefaultValue(IObjectValue vo) {        
+		vo.put("baseStatus",new Integer(-1));
+        
     }        
 	protected void setFieldsNull(com.kingdee.bos.dao.AbstractObjectValue arg0) {
 		super.setFieldsNull(arg0);

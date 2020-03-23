@@ -12,16 +12,16 @@ import com.kingdee.bos.dao.IObjectPK;
 import java.lang.String;
 import com.kingdee.bos.framework.*;
 import com.kingdee.bos.Context;
-import com.kingdee.eas.custom.wlhllicensemanager.IWlhlDataBase;
 import com.kingdee.bos.metadata.entity.EntityViewInfo;
-import com.kingdee.eas.custom.wlhllicensemanager.WlhlDataBase;
+import com.kingdee.eas.framework.DataBase;
 import com.kingdee.eas.framework.CoreBaseCollection;
 import com.kingdee.eas.framework.CoreBaseInfo;
+import com.kingdee.eas.framework.IDataBase;
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.bos.util.*;
 import com.kingdee.bos.metadata.entity.SelectorItemCollection;
 
-public class LocalPurMATPrice extends WlhlDataBase implements ILocalPurMATPrice
+public class LocalPurMATPrice extends DataBase implements ILocalPurMATPrice
 {
     public LocalPurMATPrice()
     {
@@ -120,6 +120,32 @@ public class LocalPurMATPrice extends WlhlDataBase implements ILocalPurMATPrice
     {
         try {
             return getController().getLocalPurMATPriceCollection(getContext(), oql);
+        }
+        catch(RemoteException err) {
+            throw new EJBRemoteException(err);
+        }
+    }
+    /**
+     *ºË×¼-User defined method
+     *@param model model
+     */
+    public void audit(LocalPurMATPriceInfo model) throws BOSException, EASBizException
+    {
+        try {
+            getController().audit(getContext(), model);
+        }
+        catch(RemoteException err) {
+            throw new EJBRemoteException(err);
+        }
+    }
+    /**
+     *·´ºË×¼-User defined method
+     *@param model model
+     */
+    public void unAudit(LocalPurMATPriceInfo model) throws BOSException, EASBizException
+    {
+        try {
+            getController().unAudit(getContext(), model);
         }
         catch(RemoteException err) {
             throw new EJBRemoteException(err);

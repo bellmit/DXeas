@@ -43,9 +43,11 @@ import com.kingdee.bos.appframework.uip.UINavigator;
 /**
  * output class name
  */
-public abstract class AbstractLocalPurMATPriceListUI extends com.kingdee.eas.custom.wlhllicensemanager.client.WlhlBaseListUI
+public abstract class AbstractLocalPurMATPriceListUI extends com.kingdee.eas.framework.client.ListUI
 {
     private static final Logger logger = CoreUIObject.getLogger(AbstractLocalPurMATPriceListUI.class);
+    protected ActionAudit actionAudit = null;
+    protected ActionUnAudit actionUnAudit = null;
     /**
      * output class constructor
      */
@@ -66,11 +68,27 @@ public abstract class AbstractLocalPurMATPriceListUI extends com.kingdee.eas.cus
         this.resHelper = new ResourceBundleHelper(AbstractLocalPurMATPriceListUI.class.getName());
         this.setUITitle(resHelper.getString("this.title"));
         mainQueryPK = new MetaDataPK("com.kingdee.eas.farm.feedfactory.app", "LocalPurMATPriceQuery");
+        //actionAudit
+        this.actionAudit = new ActionAudit(this);
+        getActionManager().registerAction("actionAudit", actionAudit);
+        this.actionAudit.setExtendProperty("canForewarn", "true");
+        this.actionAudit.setExtendProperty("userDefined", "true");
+        this.actionAudit.setExtendProperty("isObjectUpdateLock", "false");
+         this.actionAudit.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+         this.actionAudit.addService(new com.kingdee.eas.framework.client.service.ForewarnService());
+        //actionUnAudit
+        this.actionUnAudit = new ActionUnAudit(this);
+        getActionManager().registerAction("actionUnAudit", actionUnAudit);
+        this.actionUnAudit.setExtendProperty("canForewarn", "true");
+        this.actionUnAudit.setExtendProperty("userDefined", "true");
+        this.actionUnAudit.setExtendProperty("isObjectUpdateLock", "false");
+         this.actionUnAudit.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+         this.actionUnAudit.addService(new com.kingdee.eas.framework.client.service.ForewarnService());
         // CoreUI
-		String tblMainStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol8\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol9\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol10\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol12\"><c:NumberFormat>&amp;date</c:NumberFormat></c:Style><c:Style id=\"sCol14\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol19\"><c:NumberFormat>&amp;date</c:NumberFormat></c:Style><c:Style id=\"sCol20\"><c:NumberFormat>&amp;date</c:NumberFormat></c:Style><c:Style id=\"sCol21\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"id\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol0\" /><t:Column t:key=\"name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"number\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"description\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"simpleName\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"baseStatus\" t:width=\"60\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"5\" /><t:Column t:key=\"createTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"6\" /><t:Column t:key=\"creator.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"7\" /><t:Column t:key=\"lastUpdateTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"8\" t:styleID=\"sCol8\" /><t:Column t:key=\"lastUpdateUser.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"9\" t:styleID=\"sCol9\" /><t:Column t:key=\"treeid.id\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"10\" t:styleID=\"sCol10\" /><t:Column t:key=\"approver.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"13\" /><t:Column t:key=\"approveTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"14\" t:styleID=\"sCol12\" /><t:Column t:key=\"company.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"Entry.seq\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol14\" /><t:Column t:key=\"Entry.material.number\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"Entry.materialName\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"Entry.supplier.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"Entry.remark\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"beginDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol19\" /><t:Column t:key=\"endDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol20\" /><t:Column t:key=\"Entry.price\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol21\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{id}</t:Cell><t:Cell>$Resource{name}</t:Cell><t:Cell>$Resource{number}</t:Cell><t:Cell>$Resource{description}</t:Cell><t:Cell>$Resource{simpleName}</t:Cell><t:Cell>$Resource{baseStatus}</t:Cell><t:Cell>$Resource{createTime}</t:Cell><t:Cell>$Resource{creator.name}</t:Cell><t:Cell>$Resource{lastUpdateTime}</t:Cell><t:Cell>$Resource{lastUpdateUser.name}</t:Cell><t:Cell>$Resource{treeid.id}</t:Cell><t:Cell>$Resource{approver.name}</t:Cell><t:Cell>$Resource{approveTime}</t:Cell><t:Cell>$Resource{company.name}</t:Cell><t:Cell>$Resource{Entry.seq}</t:Cell><t:Cell>$Resource{Entry.material.number}</t:Cell><t:Cell>$Resource{Entry.materialName}</t:Cell><t:Cell>$Resource{Entry.supplier.name}</t:Cell><t:Cell>$Resource{Entry.remark}</t:Cell><t:Cell>$Resource{beginDate}</t:Cell><t:Cell>$Resource{endDate}</t:Cell><t:Cell>$Resource{Entry.price}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
+		String tblMainStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol6\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol8\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol10\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol13\"><c:NumberFormat>&amp;date</c:NumberFormat></c:Style><c:Style id=\"sCol14\"><c:NumberFormat>&amp;date</c:NumberFormat></c:Style><c:Style id=\"sCol15\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol19\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"number\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"simpleName\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"description\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"createTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"lastUpdateTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"creator.number\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol6\" /><t:Column t:key=\"creator.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"lastUpdateUser.number\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol8\" /><t:Column t:key=\"lastUpdateUser.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"id\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol10\" /><t:Column t:key=\"company.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"baseStatus\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"beginDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol13\" /><t:Column t:key=\"endDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol14\" /><t:Column t:key=\"Entry.seq\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol15\" /><t:Column t:key=\"Entry.material.number\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"Entry.materialName\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"Entry.supplier.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"Entry.price\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol19\" /><t:Column t:key=\"Entry.remark\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{number}</t:Cell><t:Cell>$Resource{name}</t:Cell><t:Cell>$Resource{simpleName}</t:Cell><t:Cell>$Resource{description}</t:Cell><t:Cell>$Resource{createTime}</t:Cell><t:Cell>$Resource{lastUpdateTime}</t:Cell><t:Cell>$Resource{creator.number}</t:Cell><t:Cell>$Resource{creator.name}</t:Cell><t:Cell>$Resource{lastUpdateUser.number}</t:Cell><t:Cell>$Resource{lastUpdateUser.name}</t:Cell><t:Cell>$Resource{id}</t:Cell><t:Cell>$Resource{company.name}</t:Cell><t:Cell>$Resource{baseStatus}</t:Cell><t:Cell>$Resource{beginDate}</t:Cell><t:Cell>$Resource{endDate}</t:Cell><t:Cell>$Resource{Entry.seq}</t:Cell><t:Cell>$Resource{Entry.material.number}</t:Cell><t:Cell>$Resource{Entry.materialName}</t:Cell><t:Cell>$Resource{Entry.supplier.name}</t:Cell><t:Cell>$Resource{Entry.price}</t:Cell><t:Cell>$Resource{Entry.remark}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
 		
         this.tblMain.setFormatXml(resHelper.translateString("tblMain",tblMainStrXML));
-                this.tblMain.putBindContents("mainQuery",new String[] {"id","name","number","description","simpleName","baseStatus","createTime","creator.name","lastUpdateTime","lastUpdateUser.name","","approver.name","approveTime","company.name","Entry.seq","Entry.material.number","Entry.materialName","Entry.supplier.name","Entry.remark","beginDate","endDate","Entry.price"});
+                this.tblMain.putBindContents("mainQuery",new String[] {"number","name","simpleName","description","createTime","lastUpdateTime","creator.number","creator.name","lastUpdateUser.number","lastUpdateUser.name","id","company.name","baseStatus","beginDate","endDate","Entry.seq","Entry.material.number","Entry.materialName","Entry.supplier.name","Entry.price","Entry.remark"});
 
 
         this.tblMain.checkParsed();
@@ -117,8 +135,8 @@ public abstract class AbstractLocalPurMATPriceListUI extends com.kingdee.eas.cus
         this.menuBar.add(menuEdit);
         this.menuBar.add(MenuService);
         this.menuBar.add(menuView);
-        this.menuBar.add(menuTool);
         this.menuBar.add(menuBiz);
+        this.menuBar.add(menuTool);
         this.menuBar.add(menuTools);
         this.menuBar.add(menuHelp);
         //menuFile
@@ -152,15 +170,13 @@ public abstract class AbstractLocalPurMATPriceListUI extends com.kingdee.eas.cus
         menuView.add(menuItemQuery);
         menuView.add(menuItemQueryScheme);
         menuView.add(menuItemRefresh);
+        //menuBiz
+        menuBiz.add(menuItemCancelCancel);
+        menuBiz.add(menuItemCancel);
         //menuTool
         menuTool.add(menuItemSendMessage);
         menuTool.add(menuItemCalculator);
         menuTool.add(menuItemToolBarCustom);
-        //menuBiz
-        menuBiz.add(mBtnApprove);
-        menuBiz.add(mBtnUnApprove);
-        menuBiz.add(menuItemCancelCancel);
-        menuBiz.add(menuItemCancel);
         //menuTools
         menuTools.add(menuMail);
         menuTools.add(menuItemStartWorkFlow);
@@ -191,10 +207,10 @@ public abstract class AbstractLocalPurMATPriceListUI extends com.kingdee.eas.cus
         this.toolBar.add(btnView);
         this.toolBar.add(btnXunTong);
         this.toolBar.add(btnEdit);
-        this.toolBar.add(btnRefresh);
+        this.toolBar.add(kDSeparatorCloud);
         this.toolBar.add(btnRemove);
-        this.toolBar.add(tBtnApprove);
-        this.toolBar.add(tBtnUnApprove);
+        this.toolBar.add(btnRefresh);
+        this.toolBar.add(btnQuery);
         this.toolBar.add(btnLocate);
         this.toolBar.add(btnAttachment);
         this.toolBar.add(separatorFW1);
@@ -205,8 +221,6 @@ public abstract class AbstractLocalPurMATPriceListUI extends com.kingdee.eas.cus
         this.toolBar.add(btnCancelCancel);
         this.toolBar.add(btnCancel);
         this.toolBar.add(btnQueryScheme);
-        this.toolBar.add(btnQuery);
-        this.toolBar.add(kDSeparatorCloud);
 
 
     }
@@ -336,18 +350,16 @@ public abstract class AbstractLocalPurMATPriceListUI extends com.kingdee.eas.cus
         sic.add(new SelectorItemInfo("creator.number"));
         sic.add(new SelectorItemInfo("lastUpdateUser.number"));
         sic.add(new SelectorItemInfo("id"));
-        sic.add(new SelectorItemInfo("baseStatus"));
-        sic.add(new SelectorItemInfo("approver.name"));
-        sic.add(new SelectorItemInfo("approveTime"));
         sic.add(new SelectorItemInfo("company.name"));
+        sic.add(new SelectorItemInfo("baseStatus"));
+        sic.add(new SelectorItemInfo("beginDate"));
+        sic.add(new SelectorItemInfo("endDate"));
         sic.add(new SelectorItemInfo("Entry.seq"));
         sic.add(new SelectorItemInfo("Entry.material.number"));
         sic.add(new SelectorItemInfo("Entry.materialName"));
         sic.add(new SelectorItemInfo("Entry.supplier.name"));
-        sic.add(new SelectorItemInfo("Entry.remark"));
-        sic.add(new SelectorItemInfo("beginDate"));
-        sic.add(new SelectorItemInfo("endDate"));
         sic.add(new SelectorItemInfo("Entry.price"));
+        sic.add(new SelectorItemInfo("Entry.remark"));
         return sic;
     }            protected java.util.List getQuerySorterFields() 
     { 
@@ -359,8 +371,111 @@ public abstract class AbstractLocalPurMATPriceListUI extends com.kingdee.eas.cus
     { 
         java.util.List pkList = new ArrayList(); 
         pkList.add("id"); 
-        pkList.add("Entry.id"); 
         return pkList;
+    }
+    	
+
+    /**
+     * output actionAudit_actionPerformed method
+     */
+    public void actionAudit_actionPerformed(ActionEvent e) throws Exception
+    {
+        if (getSelectedKeyValue() == null) return;
+com.kingdee.eas.farm.feedfactory.LocalPurMATPriceInfo editData = (com.kingdee.eas.farm.feedfactory.LocalPurMATPriceInfo)getBizInterface().getValue(new com.kingdee.bos.dao.ormapping.ObjectUuidPK(BOSUuid.read(getSelectedKeyValue())));
+com.kingdee.eas.farm.feedfactory.LocalPurMATPriceFactory.getRemoteInstance().audit(editData);
+    }
+    	
+
+    /**
+     * output actionUnAudit_actionPerformed method
+     */
+    public void actionUnAudit_actionPerformed(ActionEvent e) throws Exception
+    {
+        if (getSelectedKeyValue() == null) return;
+com.kingdee.eas.farm.feedfactory.LocalPurMATPriceInfo editData = (com.kingdee.eas.farm.feedfactory.LocalPurMATPriceInfo)getBizInterface().getValue(new com.kingdee.bos.dao.ormapping.ObjectUuidPK(BOSUuid.read(getSelectedKeyValue())));
+com.kingdee.eas.farm.feedfactory.LocalPurMATPriceFactory.getRemoteInstance().unAudit(editData);
+    }
+	public RequestContext prepareActionAudit(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareActionAudit() {
+    	return false;
+    }
+	public RequestContext prepareActionUnAudit(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareActionUnAudit() {
+    	return false;
+    }
+
+    /**
+     * output ActionAudit class
+     */     
+    protected class ActionAudit extends ItemAction {     
+    
+        public ActionAudit()
+        {
+            this(null);
+        }
+
+        public ActionAudit(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            _tempStr = resHelper.getString("ActionAudit.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionAudit.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionAudit.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractLocalPurMATPriceListUI.this, "ActionAudit", "actionAudit_actionPerformed", e);
+        }
+    }
+
+    /**
+     * output ActionUnAudit class
+     */     
+    protected class ActionUnAudit extends ItemAction {     
+    
+        public ActionUnAudit()
+        {
+            this(null);
+        }
+
+        public ActionUnAudit(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            _tempStr = resHelper.getString("ActionUnAudit.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionUnAudit.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionUnAudit.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractLocalPurMATPriceListUI.this, "ActionUnAudit", "actionUnAudit_actionPerformed", e);
+        }
     }
 
     /**
