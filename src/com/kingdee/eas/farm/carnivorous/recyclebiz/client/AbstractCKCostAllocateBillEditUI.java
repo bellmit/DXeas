@@ -305,11 +305,11 @@ public abstract class AbstractCKCostAllocateBillEditUI extends com.kingdee.eas.f
         this.contAuditor.setBoundLabelLength(100);		
         this.contAuditor.setBoundLabelUnderline(true);
         // kdtEntrys
-		String kdtEntrysStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol5\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol6\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol7\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol8\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"id\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol0\" /><t:Column t:key=\"farmer\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"farm\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"breeddata\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"batchContract\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"inQty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol5\" /><t:Column t:key=\"weight\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol6\" /><t:Column t:key=\"recWgt\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol7\" /><t:Column t:key=\"amount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol8\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{id}</t:Cell><t:Cell>$Resource{farmer}</t:Cell><t:Cell>$Resource{farm}</t:Cell><t:Cell>$Resource{breeddata}</t:Cell><t:Cell>$Resource{batchContract}</t:Cell><t:Cell>$Resource{inQty}</t:Cell><t:Cell>$Resource{weight}</t:Cell><t:Cell>$Resource{recWgt}</t:Cell><t:Cell>$Resource{amount}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
+		String kdtEntrysStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol6\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol7\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol8\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol9\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"id\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol0\" /><t:Column t:key=\"farmer\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"farm\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"breeddata\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"batchContract\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"costCenter\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"inQty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol6\" /><t:Column t:key=\"weight\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol7\" /><t:Column t:key=\"recWgt\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol8\" /><t:Column t:key=\"amount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol9\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{id}</t:Cell><t:Cell>$Resource{farmer}</t:Cell><t:Cell>$Resource{farm}</t:Cell><t:Cell>$Resource{breeddata}</t:Cell><t:Cell>$Resource{batchContract}</t:Cell><t:Cell>$Resource{costCenter}</t:Cell><t:Cell>$Resource{inQty}</t:Cell><t:Cell>$Resource{weight}</t:Cell><t:Cell>$Resource{recWgt}</t:Cell><t:Cell>$Resource{amount}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
 		
         this.kdtEntrys.setFormatXml(resHelper.translateString("kdtEntrys",kdtEntrysStrXML));
 
-                this.kdtEntrys.putBindContents("editData",new String[] {"id","farmer","farm","breeddata","batchContract","inQty","weight","recWgt","amount"});
+                this.kdtEntrys.putBindContents("editData",new String[] {"id","farmer","farm","breeddata","batchContract","costCenter","inQty","weight","recWgt","amount"});
 
 
         this.kdtEntrys.checkParsed();
@@ -412,6 +412,18 @@ public abstract class AbstractCKCostAllocateBillEditUI extends com.kingdee.eas.f
         ObjectValueRender kdtEntrys_batchContract_OVR = new ObjectValueRender();
         kdtEntrys_batchContract_OVR.setFormat(new BizDataFormat("$number$"));
         this.kdtEntrys.getColumn("batchContract").setRenderer(kdtEntrys_batchContract_OVR);
+        final KDBizPromptBox kdtEntrys_costCenter_PromptBox = new KDBizPromptBox();
+        kdtEntrys_costCenter_PromptBox.setQueryInfo("com.kingdee.eas.basedata.org.app.CostCenterItemQuery");
+        kdtEntrys_costCenter_PromptBox.setVisible(true);
+        kdtEntrys_costCenter_PromptBox.setEditable(true);
+        kdtEntrys_costCenter_PromptBox.setDisplayFormat("$number$");
+        kdtEntrys_costCenter_PromptBox.setEditFormat("$number$");
+        kdtEntrys_costCenter_PromptBox.setCommitFormat("$number$");
+        KDTDefaultCellEditor kdtEntrys_costCenter_CellEditor = new KDTDefaultCellEditor(kdtEntrys_costCenter_PromptBox);
+        this.kdtEntrys.getColumn("costCenter").setEditor(kdtEntrys_costCenter_CellEditor);
+        ObjectValueRender kdtEntrys_costCenter_OVR = new ObjectValueRender();
+        kdtEntrys_costCenter_OVR.setFormat(new BizDataFormat("$name$"));
+        this.kdtEntrys.getColumn("costCenter").setRenderer(kdtEntrys_costCenter_OVR);
         KDFormattedTextField kdtEntrys_inQty_TextField = new KDFormattedTextField();
         kdtEntrys_inQty_TextField.setName("kdtEntrys_inQty_TextField");
         kdtEntrys_inQty_TextField.setVisible(true);
@@ -487,7 +499,7 @@ public abstract class AbstractCKCostAllocateBillEditUI extends com.kingdee.eas.f
         this.contcostCenter.setBoundLabelUnderline(true);		
         this.contcostCenter.setVisible(false);
         // kdtPeriodEntry
-		String kdtPeriodEntryStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol1\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol2\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol3\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol4\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol5\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol6\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"seq\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol0\" /><t:Column t:key=\"costCenter\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol1\" /><t:Column t:key=\"accountView\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol2\" /><t:Column t:key=\"accountName\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol3\" /><t:Column t:key=\"restCost\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol4\" /><t:Column t:key=\"currentCost\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol5\" /><t:Column t:key=\"endingBanace\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol6\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{seq}</t:Cell><t:Cell>$Resource{costCenter}</t:Cell><t:Cell>$Resource{accountView}</t:Cell><t:Cell>$Resource{accountName}</t:Cell><t:Cell>$Resource{restCost}</t:Cell><t:Cell>$Resource{currentCost}</t:Cell><t:Cell>$Resource{endingBanace}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
+		String kdtPeriodEntryStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol1\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol2\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol3\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol4\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol5\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol6\"><c:Protection locked=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"seq\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol0\" /><t:Column t:key=\"costCenter\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol1\" /><t:Column t:key=\"accountView\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol2\" /><t:Column t:key=\"accountName\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol3\" /><t:Column t:key=\"endingBanace\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol4\" /><t:Column t:key=\"currentCost\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol5\" /><t:Column t:key=\"restCost\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol6\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{seq}</t:Cell><t:Cell>$Resource{costCenter}</t:Cell><t:Cell>$Resource{accountView}</t:Cell><t:Cell>$Resource{accountName}</t:Cell><t:Cell>$Resource{endingBanace}</t:Cell><t:Cell>$Resource{currentCost}</t:Cell><t:Cell>$Resource{restCost}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
 		
         this.kdtPeriodEntry.setFormatXml(resHelper.translateString("kdtPeriodEntry",kdtPeriodEntryStrXML));
         kdtPeriodEntry.addKDTEditListener(new KDTEditAdapter() {
@@ -502,7 +514,7 @@ public abstract class AbstractCKCostAllocateBillEditUI extends com.kingdee.eas.f
 	});
 
 
-                this.kdtPeriodEntry.putBindContents("editData",new String[] {"seq","costCenter","accountView","accountName","restCost","currentCost","endingBanace"});
+                this.kdtPeriodEntry.putBindContents("editData",new String[] {"seq","costCenter","accountView","accountName","endingBanace","currentCost","restCost"});
 
 
         this.kdtPeriodEntry.checkParsed();
@@ -543,28 +555,6 @@ public abstract class AbstractCKCostAllocateBillEditUI extends com.kingdee.eas.f
         kdtPeriodEntry_accountName_TextField.setMaxLength(80);
         KDTDefaultCellEditor kdtPeriodEntry_accountName_CellEditor = new KDTDefaultCellEditor(kdtPeriodEntry_accountName_TextField);
         this.kdtPeriodEntry.getColumn("accountName").setEditor(kdtPeriodEntry_accountName_CellEditor);
-        KDFormattedTextField kdtPeriodEntry_restCost_TextField = new KDFormattedTextField();
-        kdtPeriodEntry_restCost_TextField.setName("kdtPeriodEntry_restCost_TextField");
-        kdtPeriodEntry_restCost_TextField.setVisible(true);
-        kdtPeriodEntry_restCost_TextField.setEditable(true);
-        kdtPeriodEntry_restCost_TextField.setHorizontalAlignment(2);
-        kdtPeriodEntry_restCost_TextField.setDataType(1);
-        	kdtPeriodEntry_restCost_TextField.setMinimumValue(new java.math.BigDecimal("-1.0E18"));
-        	kdtPeriodEntry_restCost_TextField.setMaximumValue(new java.math.BigDecimal("1.0E18"));
-        kdtPeriodEntry_restCost_TextField.setPrecision(10);
-        KDTDefaultCellEditor kdtPeriodEntry_restCost_CellEditor = new KDTDefaultCellEditor(kdtPeriodEntry_restCost_TextField);
-        this.kdtPeriodEntry.getColumn("restCost").setEditor(kdtPeriodEntry_restCost_CellEditor);
-        KDFormattedTextField kdtPeriodEntry_currentCost_TextField = new KDFormattedTextField();
-        kdtPeriodEntry_currentCost_TextField.setName("kdtPeriodEntry_currentCost_TextField");
-        kdtPeriodEntry_currentCost_TextField.setVisible(true);
-        kdtPeriodEntry_currentCost_TextField.setEditable(true);
-        kdtPeriodEntry_currentCost_TextField.setHorizontalAlignment(2);
-        kdtPeriodEntry_currentCost_TextField.setDataType(1);
-        	kdtPeriodEntry_currentCost_TextField.setMinimumValue(new java.math.BigDecimal("-1.0E18"));
-        	kdtPeriodEntry_currentCost_TextField.setMaximumValue(new java.math.BigDecimal("1.0E18"));
-        kdtPeriodEntry_currentCost_TextField.setPrecision(10);
-        KDTDefaultCellEditor kdtPeriodEntry_currentCost_CellEditor = new KDTDefaultCellEditor(kdtPeriodEntry_currentCost_TextField);
-        this.kdtPeriodEntry.getColumn("currentCost").setEditor(kdtPeriodEntry_currentCost_CellEditor);
         KDFormattedTextField kdtPeriodEntry_endingBanace_TextField = new KDFormattedTextField();
         kdtPeriodEntry_endingBanace_TextField.setName("kdtPeriodEntry_endingBanace_TextField");
         kdtPeriodEntry_endingBanace_TextField.setVisible(true);
@@ -576,6 +566,28 @@ public abstract class AbstractCKCostAllocateBillEditUI extends com.kingdee.eas.f
         kdtPeriodEntry_endingBanace_TextField.setPrecision(10);
         KDTDefaultCellEditor kdtPeriodEntry_endingBanace_CellEditor = new KDTDefaultCellEditor(kdtPeriodEntry_endingBanace_TextField);
         this.kdtPeriodEntry.getColumn("endingBanace").setEditor(kdtPeriodEntry_endingBanace_CellEditor);
+        KDFormattedTextField kdtPeriodEntry_currentCost_TextField = new KDFormattedTextField();
+        kdtPeriodEntry_currentCost_TextField.setName("kdtPeriodEntry_currentCost_TextField");
+        kdtPeriodEntry_currentCost_TextField.setVisible(true);
+        kdtPeriodEntry_currentCost_TextField.setEditable(true);
+        kdtPeriodEntry_currentCost_TextField.setHorizontalAlignment(2);
+        kdtPeriodEntry_currentCost_TextField.setDataType(1);
+        	kdtPeriodEntry_currentCost_TextField.setMinimumValue(new java.math.BigDecimal("-1.0E18"));
+        	kdtPeriodEntry_currentCost_TextField.setMaximumValue(new java.math.BigDecimal("1.0E18"));
+        kdtPeriodEntry_currentCost_TextField.setPrecision(10);
+        KDTDefaultCellEditor kdtPeriodEntry_currentCost_CellEditor = new KDTDefaultCellEditor(kdtPeriodEntry_currentCost_TextField);
+        this.kdtPeriodEntry.getColumn("currentCost").setEditor(kdtPeriodEntry_currentCost_CellEditor);
+        KDFormattedTextField kdtPeriodEntry_restCost_TextField = new KDFormattedTextField();
+        kdtPeriodEntry_restCost_TextField.setName("kdtPeriodEntry_restCost_TextField");
+        kdtPeriodEntry_restCost_TextField.setVisible(true);
+        kdtPeriodEntry_restCost_TextField.setEditable(true);
+        kdtPeriodEntry_restCost_TextField.setHorizontalAlignment(2);
+        kdtPeriodEntry_restCost_TextField.setDataType(1);
+        	kdtPeriodEntry_restCost_TextField.setMinimumValue(new java.math.BigDecimal("-1.0E18"));
+        	kdtPeriodEntry_restCost_TextField.setMaximumValue(new java.math.BigDecimal("1.0E18"));
+        kdtPeriodEntry_restCost_TextField.setPrecision(10);
+        KDTDefaultCellEditor kdtPeriodEntry_restCost_CellEditor = new KDTDefaultCellEditor(kdtPeriodEntry_restCost_TextField);
+        this.kdtPeriodEntry.getColumn("restCost").setEditor(kdtPeriodEntry_restCost_CellEditor);
         // prmtCreator		
         this.prmtCreator.setEnabled(false);
         // kDDateCreateTime		
@@ -922,6 +934,7 @@ public abstract class AbstractCKCostAllocateBillEditUI extends com.kingdee.eas.f
 		dataBinder.registerBinding("entrys.breeddata", java.lang.Object.class, this.kdtEntrys, "breeddata.text");
 		dataBinder.registerBinding("entrys.recWgt", java.math.BigDecimal.class, this.kdtEntrys, "recWgt.text");
 		dataBinder.registerBinding("entrys.inQty", java.math.BigDecimal.class, this.kdtEntrys, "inQty.text");
+		dataBinder.registerBinding("entrys.costCenter", java.lang.Object.class, this.kdtEntrys, "costCenter.text");
 		dataBinder.registerBinding("PeriodEntry.seq", int.class, this.kdtPeriodEntry, "seq.text");
 		dataBinder.registerBinding("PeriodEntry", com.kingdee.eas.farm.carnivorous.recyclebiz.CKCostAllocateBillPeriodEntryInfo.class, this.kdtPeriodEntry, "userObject");
 		dataBinder.registerBinding("PeriodEntry.costCenter", java.lang.Object.class, this.kdtPeriodEntry, "costCenter.text");
@@ -1095,6 +1108,7 @@ public abstract class AbstractCKCostAllocateBillEditUI extends com.kingdee.eas.f
 		getValidateHelper().registerBindProperty("entrys.breeddata", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("entrys.recWgt", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("entrys.inQty", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("entrys.costCenter", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("PeriodEntry.seq", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("PeriodEntry", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("PeriodEntry.costCenter", ValidateHelper.ON_SAVE);    
@@ -1202,6 +1216,15 @@ kdtPeriodEntry.getCell(rowIndex,"accountName").setValue(com.kingdee.bos.ui.face.
 		}
     	sic.add(new SelectorItemInfo("entrys.recWgt"));
     	sic.add(new SelectorItemInfo("entrys.inQty"));
+		if(selectorAll.equalsIgnoreCase("true"))
+		{
+			sic.add(new SelectorItemInfo("entrys.costCenter.*"));
+		}
+		else{
+	    	sic.add(new SelectorItemInfo("entrys.costCenter.id"));
+			sic.add(new SelectorItemInfo("entrys.costCenter.name"));
+        	sic.add(new SelectorItemInfo("entrys.costCenter.number"));
+		}
     	sic.add(new SelectorItemInfo("PeriodEntry.seq"));
 		if(selectorAll.equalsIgnoreCase("true"))
 		{
@@ -1649,7 +1672,7 @@ kdtPeriodEntry.getCell(rowIndex,"accountName").setValue(com.kingdee.bos.ui.face.
 	}        
 				protected void setTableToSumField() {
 			setTableToSumField(kdtEntrys,new String[] {"recWgt"});
-			setTableToSumField(kdtPeriodEntry,new String[] {"restCost","currentCost","endingBanace"});
+			setTableToSumField(kdtPeriodEntry,new String[] {"endingBanace","currentCost","restCost"});
 		}
 
 

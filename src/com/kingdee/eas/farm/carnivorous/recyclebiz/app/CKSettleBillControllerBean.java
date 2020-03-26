@@ -449,7 +449,7 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 		info.setMeatRate(UIRuleUtil.getBigDecimal(info.getSettleWgt()).signum()==0?BigDecimal.ZERO:UIRuleUtil.getBigDecimal(info.getFeedWgt()).divide(UIRuleUtil.getBigDecimal(info.getSettleWgt()),2,RoundingMode.HALF_UP));
 		info.setActualMRate(info.getMeatRate());
 		//成活率 = 回收只数/上苗数量
-		info.setSurvivalRate(UIRuleUtil.getBigDecimal(info.getBatchQty()).signum()==0?BigDecimal.ZERO:UIRuleUtil.getBigDecimal(info.getRecQty()).divide(UIRuleUtil.getBigDecimal(info.getBatchQty()),2,RoundingMode.HALF_UP).multiply(new BigDecimal(100)));
+		info.setSurvivalRate(UIRuleUtil.getBigDecimal(info.getBatchQty()).signum()==0?BigDecimal.ZERO:UIRuleUtil.getBigDecimal(info.getRecQty()).divide(UIRuleUtil.getBigDecimal(info.getBatchQty()),4,RoundingMode.HALF_UP).multiply(new BigDecimal(100)));
 		//毛鸡均重 = 结算重量/回收只数
 		info.setChickenAveWgt(UIRuleUtil.getIntValue(info.getRecQty())==0?BigDecimal.ZERO:UIRuleUtil.getBigDecimal(info.getSettleWgt()).divide(UIRuleUtil.getBigDecimal(info.getRecQty()),2,RoundingMode.HALF_UP));
 		//只耗料 = 耗料重量/上苗数量
@@ -632,7 +632,7 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 			if(actDrug.compareTo(drugAmtStd)>=0){
 				info.setDrugLackPAmt(BigDecimal.ZERO);
 			}else{
-				info.setDrugLackPAmt(drugAmtStd.subtract(actDrug));
+				info.setDrugLackPAmt(actDrug.subtract(drugAmtStd));
 			}
 		}else{//勾选了，不计算
 			info.setDrugLackPAmt(BigDecimal.ZERO);
@@ -776,9 +776,9 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 		info.setOtherKbDetail(detail);
 
 
-		//外卖扣补款
-		BigDecimal outSaleKbAmt = UIRuleUtil.getBigDecimal(info.getOutSaleKbAmt());
-		info.setOutSaleKbAmt2(outSaleKbAmt);
+//		//外卖扣补款
+//		BigDecimal outSaleKbAmt = UIRuleUtil.getBigDecimal(info.getOutSaleKbAmt());
+//		info.setOutSaleKbAmt2(outSaleKbAmt);
 
 		kbAmt =UIRuleUtil.getBigDecimal(info.getDrugLackPAmt())
 		.add(UIRuleUtil.getBigDecimal(info.getMRatePAmt()))
@@ -808,10 +808,10 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 		BigDecimal standTran = getStandTran(ctx,info,farm);
 		if(UIRuleUtil.getBigDecimal(farm.getTransPrice()).compareTo(standTran) > 0){
 			//公司运费
-			BigDecimal companyTC = (UIRuleUtil.getBigDecimal(farm.getTransPrice()).subtract(standTran)).multiply(info.getFeedWgt());
+			BigDecimal companyTC = standTran.multiply(info.getFeedWgt());
 			info.setCompanyTC(companyTC);
 			//司机运费
-			BigDecimal diverCt = standTran.multiply(info.getFeedWgt());
+			BigDecimal diverCt = tranCost.subtract(companyTC);
 			info.setDiverCt(diverCt);
 		}else{
 			info.setDiverCt(BigDecimal.ZERO);
@@ -830,17 +830,19 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 		BigDecimal proDiv = proDivCal(ctx,info,contractInfo,basePrice);
 		info.setProDiv(proDiv);
 
-		//代养费 = 回收金额+利润分成+实际搭雏金额+连养补贴+扣补项目金额
-		//-苗料药总金额-总运费-用料不足扣款-用药不足扣款-本批保证金-借款还款金额-上批欠款金额
+		//代养费 = 回收金额+利润分成+实际搭雏金额+连养补贴+扣补项目金额+用料不足扣款+用药不足扣款
+		//-苗料药总金额-品质扣款-总运费-本批保证金-借款还款金额-上批欠款金额
 		BigDecimal dyFee = info.getRecAmt()
 		.add(UIRuleUtil.getBigDecimal(info.getProDiv()))
 		.add(UIRuleUtil.getBigDecimal(info.getOutSaleKbAmt2()))
 		.add(UIRuleUtil.getBigDecimal(info.getMarginAmt()))
 		.add(UIRuleUtil.getBigDecimal(info.getKbItemAmt()))
+		.add(UIRuleUtil.getBigDecimal(info.getDrugLackPAmt()))
+		.add(UIRuleUtil.getBigDecimal(info.getMRatePAmt()))
 		.subtract(UIRuleUtil.getBigDecimal(info.getMlyAllAmt()))
+		.subtract(UIRuleUtil.getBigDecimal(info.getQCItemAmt()))
 		.subtract(UIRuleUtil.getBigDecimal(info.getTranCost()))
-		.subtract(UIRuleUtil.getBigDecimal(info.getDrugLackPAmt()))
-		.subtract(UIRuleUtil.getBigDecimal(info.getOccupyMargin()))
+		.subtract(UIRuleUtil.getBigDecimal(info.getMarginGAmount()))
 		.subtract(UIRuleUtil.getBigDecimal(info.getLongBorrowReturn()))
 		.subtract(UIRuleUtil.getBigDecimal(info.getSpecialPermitAmt()));
 		dyFee = dyFee.divide(BigDecimal.ONE,2,BigDecimal.ROUND_HALF_UP);
@@ -873,9 +875,7 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 
 
 
-		//实际支付 = 代养费-保证金留取金额-预留风险押金-保证金利息-笼养借款还款金额-
-		//-借款利息-设备升级借款还款-特批借款还款金额-抓鸡费-清舍防疫费-消毒清料塔费
-		//-亏损还款
+		//实际支付 = 代养费-保证金留取金额-预留风险押金-运费-煤款-设备借款还款金额-抓鸡费--清舍防疫费-消毒清料塔费
 		BigDecimal actualPayAmt = dyFee
 		.subtract(UIRuleUtil.getBigDecimal(info.getMarginGAmount()))
 		.subtract(UIRuleUtil.getBigDecimal(info.getReserveRiskCost()))
@@ -1204,6 +1204,7 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 			BigDecimal conPrice=BigDecimal.ZERO;
 			BigDecimal contAmount=BigDecimal.ZERO;
 			BigDecimal actAmount=BigDecimal.ZERO;
+			BigDecimal allactAmount=BigDecimal.ZERO;
 			if(rs.size()>0) {
 				MaterialInfo mInfo;
 				while(rs.next()) {
@@ -1211,6 +1212,7 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 					acPrice = rs.getBigDecimal("acPrice");
 					conPrice = rs.getBigDecimal("conPrice");
 					actAmount = rs.getBigDecimal("actAmount");
+					allactAmount = allactAmount.add(actAmount);
 					contAmount = rs.getBigDecimal("contAmount");
 					entryInfo.setBizDate(rs.getDate("bizdate"));
 					entryInfo.setBillNumber(rs.getString("fnumber"));
@@ -1233,7 +1235,7 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 					}
 					info.getSeedEntrys().add(entryInfo);
 					//政策搭雏比例
-					viewItemAmt = BigDecimal.ONE.subtract(rs.getBigDecimal("price").divide(acPrice,3,BigDecimal.ROUND_HALF_UP));
+					viewItemAmt = BigDecimal.ONE.subtract(rs.getBigDecimal("price").divide(acPrice,4,BigDecimal.ROUND_HALF_UP));
 					info.setViewItemAmt(viewItemAmt);
 				}
 			}
@@ -1246,7 +1248,7 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 			BigDecimal tempItemAmt = acPrice.multiply(otherItemAmt);
 			info.setTempItemAmt(tempItemAmt);
 			//实际搭雏比例
-			BigDecimal punishAmt = BigDecimal.ONE.subtract(conPrice.divide(acPrice,3,BigDecimal.ROUND_HALF_UP));
+			BigDecimal punishAmt = BigDecimal.ONE.subtract(conPrice.divide(acPrice,4,BigDecimal.ROUND_HALF_UP));
 			info.setPunishAmt(punishAmt);
 			//实际搭雏数量
 			BigDecimal chickenRetunAmt = sumQty.multiply(punishAmt);
@@ -1256,7 +1258,7 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 			info.setOutSaleKbAmt2(outSaleKbAmt2);
 
 			info.setBatchQty(sumQty);
-			info.setBatchAmt(sumAmount.setScale(2,BigDecimal.ROUND_HALF_UP));
+			info.setBatchAmt(allactAmount.setScale(2,BigDecimal.ROUND_HALF_UP));
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

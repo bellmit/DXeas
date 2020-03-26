@@ -2656,7 +2656,7 @@ vo.put("seedSourceType","0");
 		arg0.put("number",null);
 	}        
 				protected void setTableToSumField() {
-			setTableToSumField(kdtEntrys,new String[] {"receiveQty","lossQty","supplementQty","giftQty","allReceiveQty","returnChicken","confirmQty","amount","actualCost"});
+			setTableToSumField(kdtEntrys,new String[] {"receiveQty","lossQty","supplementQty","giftQty","allReceiveQty","returnChicken","confirmQty","contractAmt","actualAmt","amount","actualCost"});
 		}
 
 

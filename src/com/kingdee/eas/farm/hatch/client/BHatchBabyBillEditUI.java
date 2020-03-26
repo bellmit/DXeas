@@ -1706,15 +1706,12 @@ public class BHatchBabyBillEditUI extends AbstractBHatchBabyBillEditUI
 	protected void applyDefaultValue(IObjectValue vo) {
 		super.applyDefaultValue(vo);
 		vo.put("baseStatus",new Integer(1));
-
 		vo.put("creator",(com.kingdee.eas.base.permission.UserInfo)(com.kingdee.eas.common.client.SysContext.getSysContext().getCurrentUser()));
 		vo.put("adminOrg", SysContext.getSysContext().getCurrentAdminUnit());
 		vo.put("hatchFactory", hatchBaseInfo);
 		if(hatchBaseInfo != null){
-			//			vo.put("eggType", hatchBaseInfo.getDefaultEggType());
-			//			vo.put("eggSourceType", hatchBaseInfo.getDefaultEggSourceType());
 		}
-		vo.put("bizDate", new Date());
+//		vo.put("bizDate", new Date());
 		PersonInfo currPerson = SysContext.getSysContext().getCurrentUserInfo().getPerson();
 		vo.put("operator",currPerson);
 	}
@@ -1726,7 +1723,7 @@ public class BHatchBabyBillEditUI extends AbstractBHatchBabyBillEditUI
 		com.kingdee.eas.farm.hatch.BHatchBabyBillInfo objectValue = new com.kingdee.eas.farm.hatch.BHatchBabyBillInfo();
 		objectValue.setCreator((com.kingdee.eas.base.permission.UserInfo)(com.kingdee.eas.common.client.SysContext.getSysContext().getCurrentUser()));
 		objectValue.setAdminOrg(SysContext.getSysContext().getCurrentAdminUnit());
-		objectValue.setBizDate(new Date());
+//		objectValue.setBizDate(new Date());
 		objectValue.setBaseStatus(BillBaseStatusEnum.ADD);
 		objectValue.setHatchFactory(hatchBaseInfo);
 		objectValue.setCU(SysContext.getSysContext().getCurrentCtrlUnit());

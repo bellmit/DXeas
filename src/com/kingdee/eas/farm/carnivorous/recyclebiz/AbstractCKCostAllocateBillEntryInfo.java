@@ -116,6 +116,17 @@ public class AbstractCKCostAllocateBillEntryInfo extends com.kingdee.eas.framewo
     {
         setBigDecimal("inQty", item);
     }
+    /**
+     * Object: 分录 's 成本中心 property 
+     */
+    public com.kingdee.eas.basedata.org.CostCenterOrgUnitInfo getCostCenter()
+    {
+        return (com.kingdee.eas.basedata.org.CostCenterOrgUnitInfo)get("costCenter");
+    }
+    public void setCostCenter(com.kingdee.eas.basedata.org.CostCenterOrgUnitInfo item)
+    {
+        put("costCenter", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("DCB4D8FC");

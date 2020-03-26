@@ -826,7 +826,7 @@ public abstract class AbstractFarmerQualicationApplEditUI extends com.kingdee.ea
         this.prmttechnologyPerson.setDisplayFormat("$name$");		
         this.prmttechnologyPerson.setEditFormat("$number$");		
         this.prmttechnologyPerson.setCommitFormat("$number$");		
-        this.prmttechnologyPerson.setRequired(false);
+        this.prmttechnologyPerson.setRequired(true);
         // txtbankAddress		
         this.txtbankAddress.setHorizontalAlignment(2);		
         this.txtbankAddress.setMaxLength(100);		
@@ -2464,6 +2464,9 @@ kdtEntrys.getCell(rowIndex,"checkContent").setValue(com.kingdee.bos.ui.face.UIRu
     
         
 					protected void beforeStoreFields(ActionEvent arg0) throws Exception {
+		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(prmttechnologyPerson.getData())) {
+			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"技术员"});
+		}
 		for (int i=0,n=kdtFarmEntry.getRowCount();i<n;i++) {
 			if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(kdtFarmEntry.getCell(i,"name").getValue())) {
 				throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"名称"});

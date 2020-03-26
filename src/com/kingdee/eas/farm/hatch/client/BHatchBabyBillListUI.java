@@ -172,7 +172,7 @@ public class BHatchBabyBillListUI extends AbstractBHatchBabyBillListUI
 			iBHatchBabyBill.unAudit(info);
 		}
 		try{
-			if(num==selIDs.length&&num==1)
+			if(num==selIDs.length && num == 1)
 				MsgBox.showInfo("反审核成功");
 			else if(num==selIDs.length)
 				MsgBox.showInfo("反审核成功(操作单子数:"+selIDs.length+")");
@@ -187,11 +187,6 @@ public class BHatchBabyBillListUI extends AbstractBHatchBabyBillListUI
 		finally{
 			refreshList();
 		}
-
-		//		super.actionAudit_actionPerformed(e);
-
-
-
 	}
 
 	/**

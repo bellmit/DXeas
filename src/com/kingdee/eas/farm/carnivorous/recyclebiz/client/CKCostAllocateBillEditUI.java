@@ -53,6 +53,8 @@ import com.kingdee.eas.farm.carnivorous.basedata.IFarmer;
 import com.kingdee.eas.farm.carnivorous.feedbiz.BatchContractBillFactory;
 import com.kingdee.eas.farm.carnivorous.feedbiz.BatchContractBillInfo;
 import com.kingdee.eas.farm.carnivorous.feedbiz.IBatchContractBill;
+import com.kingdee.eas.farm.stocking.basedata.BreedDataFactory;
+import com.kingdee.eas.farm.stocking.basedata.BreedDataInfo;
 import com.kingdee.eas.framework.*;
 import com.kingdee.eas.industry.emm.pm.SqlExecuteFacadeFactory;
 import com.kingdee.eas.scm.common.BillBaseStatusEnum;
@@ -289,7 +291,7 @@ public class CKCostAllocateBillEditUI extends AbstractCKCostAllocateBillEditUI
 			String companyID=((IPropertyContainer)prmtFICompany.getValue()).getString("id");
 			StringBuffer sqlBuf = new StringBuffer();
 			sqlBuf.append(" /*dialect*/select t1.CFFarmerID CFFarmerID,t1.CFFarmID CFFarmID,t1.CFBatchContractID CFBatchContractID, ")
-			.append(" t1.CFRecQty CFSettleWgt,t1.CFRecSuttle recWgt,t3.FActualFemaleQty inQty from CT_FM_CKSettleBill t1 ")
+			.append(" t1.CFRecQty CFSettleWgt,t1.CFSettleWgt recWgt,t3.FActualFemaleQty inQty from CT_FM_CKSettleBill t1 ")
 			.append(" inner join CT_FM_Farm t2 on t2.fid = t1.CFFarmID")
 			.append(" inner join T_FM_BatchContractBill t3 on t3.fid = t1.CFBatchContractID")
 			.append(" where t1.CFBillStatus in (4,7) ")
@@ -306,6 +308,13 @@ public class CKCostAllocateBillEditUI extends AbstractCKCostAllocateBillEditUI
 				row.getCell("farm").setValue(farm);
 				BatchContractBillInfo batchContractBill=iBatchContract.getBatchContractBillInfo(new ObjectUuidPK(rs.getString("CFBatchContractID")));
 				row.getCell("batchContract").setValue(batchContractBill);
+				BreedDataInfo  breedDataInfo = batchContractBill.getBreedData();
+				breedDataInfo = BreedDataFactory.getRemoteInstance().getBreedDataInfo(new ObjectUuidPK(breedDataInfo.getId()));
+				row.getCell("breeddata").setValue(breedDataInfo);
+				//成本中心
+				CostCenterOrgUnitInfo costInfo = batchContractBill.getCostCenter();
+				costInfo = CostCenterOrgUnitFactory.getRemoteInstance().getCostCenterOrgUnitInfo(new ObjectUuidPK(costInfo.getId()));
+				row.getCell("costCenter").setValue(costInfo);
 				row.getCell("weight").setValue(rs.getBigDecimal("CFSettleWgt"));
 				row.getCell("recWgt").setValue(rs.getBigDecimal("recWgt"));
 				row.getCell("inQty").setValue(rs.getBigDecimal("inQty"));
@@ -321,25 +330,25 @@ public class CKCostAllocateBillEditUI extends AbstractCKCostAllocateBillEditUI
 			String beginStr = adf.format(periodInfo.getBeginDate());
 			String endStr = adf.format(periodInfo.getEndDate());
 			for(int i=0;i<kdtPeriodEntry.getRowCount();i++){
-				String costCenter=UIRuleUtil.getString(kdtPeriodEntry.getCell(i,"costCenter").getValue());
+				CostCenterOrgUnitInfo costInfo = (CostCenterOrgUnitInfo) kdtPeriodEntry.getCell(i,"costCenter").getValue();
 				String s1 = "/*dialect*/ select sum(t1.FActualFemaleQty) allQty from T_FM_BatchContractBill t1" +
-				" inner join CT_FM_Farm t2 on t2.fid = t1.FFarmID where t2.FCostCenterID = '"+costCenter+"'" +
+				" inner join CT_FM_Farm t2 on t2.fid = t1.FFarmID where t2.FCostCenterID = '"+costInfo.getId()+"'" +
 				" and to_char(t1.fbizdate,'yyyy-MM-dd') >= '"+beginStr+"' " +
 				" and to_char(t1.fbizdate,'yyyy-MM-dd') <= '"+endStr+"'";
 				IRowSet r1 = SQLExecutorFactory.getRemoteInstance(s1).executeSQL();
 				if(r1.next()){
 					BigDecimal ceQty = UIRuleUtil.getBigDecimal(r1.getBigDecimal("allQty"));
 					allQty = allQty.add(ceQty);
-					qtyMap.put(costCenter, ceQty);
+					qtyMap.put(costInfo.getId().toString(), ceQty);
 				}
 			}
 
 			//成本中心，分摊金额
 			Map<String,BigDecimal> amountMap = new HashMap<String,BigDecimal>();
 			for(int i=0;i<kdtPeriodEntry.getRowCount();i++){
-				String costCenter=UIRuleUtil.getString(kdtPeriodEntry.getCell(i,"costCenter").getValue());
+				CostCenterOrgUnitInfo costInfo = (CostCenterOrgUnitInfo) kdtPeriodEntry.getCell(i,"costCenter").getValue();
 				BigDecimal amount=UIRuleUtil.getBigDecimal(kdtPeriodEntry.getCell(i,"currentCost").getValue());
-				amountMap.put(costCenter, amount);
+				amountMap.put(costInfo.getId().toString(), amount);
 			}
 
 
@@ -348,10 +357,10 @@ public class CKCostAllocateBillEditUI extends AbstractCKCostAllocateBillEditUI
 			for(int i=0;i<kdtEntrys.getRowCount();i++){
 				IRow row=kdtEntrys.getRow(i);
 				BigDecimal weight=(BigDecimal) row.getCell("inQty").getValue();
-				String farmid = UIRuleUtil.getString(row.getCell("farm").getValue());
-				FarmInfo farmInfo = FarmFactory.getRemoteInstance().getFarmInfo(new ObjectUuidPK(farmid));
+				FarmInfo farmInfo = (FarmInfo) row.getCell("farm").getValue();
+				farmInfo = FarmFactory.getRemoteInstance().getFarmInfo(new ObjectUuidPK(farmInfo.getId()));
 				//成本中心对应上苗数量
-				BigDecimal costQty = qtyMap.get(farmInfo.getCostCenter().getId().toString());
+				BigDecimal costQty = UIRuleUtil.getBigDecimal(qtyMap.get(farmInfo.getCostCenter().getId().toString()));
 				//成本中心对应分摊金额
 				BigDecimal shareAmt = amountMap.get(farmInfo.getCostCenter().getId().toString());
 				//把小数点误差归集到最后一行分录
@@ -439,7 +448,7 @@ public class CKCostAllocateBillEditUI extends AbstractCKCostAllocateBillEditUI
 			.append(" inner join T_BD_AsstActType t6 on t6.fid=t5.FAsstActTypeID").append("\n")
 			.append(" inner join T_ORG_CostCenter t7 on t7.fid = t3.FCostOrgID").append("\n")
 			.append(" inner join T_ORG_Company t8 on t8.fid = t1.FOrgUnitID")
-			.append(" where t6.fnumber = '00009' and t8.fid = '")
+			.append(" where t6.fnumber = '00011' and t2.fnumber = '5003'  and t8.fid = '")
 			.append(companyInfo.getId())
 			.append("' and t1.fperiod='")
 			.append(periodInfo.getNumber())
@@ -461,9 +470,12 @@ public class CKCostAllocateBillEditUI extends AbstractCKCostAllocateBillEditUI
 				row.getCell("costCenter").setValue(costInfo);
 				row.getCell("accountView").setValue(accountInfo);
 				row.getCell("accountName").setValue(accountInfo.getName());
-				row.getCell("restCost").setValue(amt);
+				//期末余额
+				row.getCell("endingBanace").setValue(amt);
+				//本期分摊费用
 				row.getCell("currentCost").setValue(amt);
-				row.getCell("endingBanace").setValue(BigDecimal.ZERO);
+				//剩余金额
+				row.getCell("restCost").setValue(BigDecimal.ZERO);
 			}
 		}
 	}

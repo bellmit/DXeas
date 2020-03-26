@@ -52,7 +52,7 @@ public class CKCostAllocateBillControllerBean extends AbstractCKCostAllocateBill
     		CKCostAllocateBillInfo info = CKCostAllocateBillFactory.getLocalInstance(ctx).getCKCostAllocateBillInfo(new ObjectUuidPK(((CKCostAllocateBillInfo) model).getId()));
     		if(info.getBillStatus()==null||!info.getBillStatus().equals(BillBaseStatusEnum.SUBMITED))
     			throw new EASBizException(new NumericExceptionSubItem("001","只有提交的单子才可以执行此操作"));
-    		checkIsHasSame(ctx, info);
+//    		checkIsHasSame(ctx, info);
     		info.setBillStatus(BillBaseStatusEnum.AUDITED);
 			info.setAuditTime(new java.util.Date());
 			info.setAuditor(ContextUtil.getCurrentUserInfo(ctx));
@@ -81,7 +81,7 @@ public class CKCostAllocateBillControllerBean extends AbstractCKCostAllocateBill
     	CKCostAllocateBillInfo info = (CKCostAllocateBillInfo) model;
     	if(info.getBillStatus()!=null&&info.getBillStatus().getValue()!=-1&&!info.getBillStatus().equals(BillBaseStatusEnum.TEMPORARILYSAVED)&&!info.getBillStatus().equals(BillBaseStatusEnum.ADD))
 			throw new EASBizException(new NumericExceptionSubItem("001","只有新增或者保存的单子才可以执行此操作"));
-		checkIsHasSame(ctx, info);
+//		checkIsHasSame(ctx, info);
     	if(info.getBillStatus()==null||info.getBillStatus().getValue()==-1||info.getBillStatus().equals(BillBaseStatusEnum.ADD)) {
     		info.setBillStatus(BillBaseStatusEnum.TEMPORARILYSAVED);
     	}
@@ -93,7 +93,7 @@ public class CKCostAllocateBillControllerBean extends AbstractCKCostAllocateBill
     	CKCostAllocateBillInfo info = (CKCostAllocateBillInfo) model;
     	if(info.getBillStatus()!=null&&info.getBillStatus().getValue()!=-1&&!info.getBillStatus().equals(BillBaseStatusEnum.TEMPORARILYSAVED)&&!info.getBillStatus().equals(BillBaseStatusEnum.SUBMITED)&&!info.getBillStatus().equals(BillBaseStatusEnum.ADD))
 			throw new EASBizException(new NumericExceptionSubItem("001","只有新增、保存或提交的单子才可以执行此操作"));
-		checkIsHasSame(ctx, info);
+//		checkIsHasSame(ctx, info);
     	if(info.getBillStatus()==null||info.getBillStatus().getValue()==-1||info.getBillStatus().equals(BillBaseStatusEnum.ADD)||info.getBillStatus().equals(BillBaseStatusEnum.TEMPORARILYSAVED)) {
     		info.setBillStatus(BillBaseStatusEnum.SUBMITED); 
     	}

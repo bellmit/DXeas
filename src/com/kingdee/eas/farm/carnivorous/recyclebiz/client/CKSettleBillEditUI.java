@@ -107,6 +107,12 @@ public class CKSettleBillEditUI extends AbstractCKSettleBillEditUI
 
 	private void initUI() {
 		// TODO Auto-generated method stub
+		
+		
+		txtpunishAmt.setPrecision(6);
+		txtviewItemAmt.setPrecision(6);
+		
+		
 		contadPayAmount.setVisible(false);
 		contpayOweMoneryB.setVisible(false);
 		contmarginAmt.setVisible(true);
@@ -143,8 +149,28 @@ public class CKSettleBillEditUI extends AbstractCKSettleBillEditUI
 		contoutSaleKbAmt2.setEnabled(false);
 		contchickenRetunAmt.setEnabled(false);
 		
+		contreserveRiskCost.setEnabled(false);
+		contbrokenCost.setEnabled(false);
+		contlongBorrowAmount.setEnabled(false);
+		contcoalCost.setEnabled(false);
+		contnowAccountBac.setEnabled(false);
+		contspecialBorrowinst.setEnabled(false);
+		contborrowAmiunt.setEnabled(false);
+		contmarginProfit.setEnabled(false);
+		contequipmentReAmt.setEnabled(false);
+		chkpreVoucher.setEnabled(false);
+		chkhasPay.setEnabled(false);
+		contgetChickCost.setEnabled(false);
+		contcleanHouseCost.setEnabled(false);
+		contcleanTowerCost.setEnabled(false);
+		contassetsOccupy.setEnabled(false);
+		contimmuneCostOne.setEnabled(false);
+		contimmuneCost.setEnabled(false);
+		contimmuneCostOne.setVisible(false);
 		
-
+		
+		
+		
 		setTableToSumField(kdtSeedSourceEntrys, new String[]{"qty"});
 		setTableToSumField(kdtSeedEntrys, new String[]{"qty","amount","cost"});
 		setTableToSumField(kdtFodderEntrys, new String[]{"qty","bagQty","amount","cost","hjFee"});
