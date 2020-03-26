@@ -178,6 +178,19 @@
                 <key name="name" value="BreedData" />
             </entityRef>
         </subEntity>
+        <subEntity>
+            <name>entrys_costCenter</name>
+            <alias>joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillQuery].subObjects.subEntity[entrys_costCenter].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.recyclebiz.app" />
+                <key name="name" value="CKCostAllocateBillQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="CostCenterOrgUnit" />
+            </entityRef>
+        </subEntity>
     </subObjects>
     <units>
         <propertyUnit>
@@ -1916,6 +1929,99 @@
                 <key name="name" value="CKCostAllocateBillQuery" />
             </query>
         </queryField>
+        <queryField>
+            <name>entrys.costCenter.name</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillQuery].units.queryField[entrys.costCenter.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>f29d5c0d-dcfc-4bcc-8324-92f14272eb58</key>
+                    <parentUnit>
+                        <key name="name" value="entrys.costCenter.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="entrys_costCenter" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.recyclebiz.app" />
+                <key name="name" value="CKCostAllocateBillQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>760dc8c2-beb0-494d-ba14-a0c883e21e82</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillQuery].units.propertyUnit[760dc8c2-beb0-494d-ba14-a0c883e21e82].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>ce618d58-ca8a-4432-8ca3-b07e806e0d24</key>
+                    <parentUnit>
+                        <key name="name" value="760dc8c2-beb0-494d-ba14-a0c883e21e82" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="entrys" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="costCenter" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.recyclebiz.app" />
+                <key name="name" value="CKCostAllocateBillQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>e8724632-6925-4408-983f-12a13647630f</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillQuery].units.propertyUnit[e8724632-6925-4408-983f-12a13647630f].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>55531e5c-5e1e-45c5-b80e-e4926265b4b8</key>
+                    <parentUnit>
+                        <key name="name" value="e8724632-6925-4408-983f-12a13647630f" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="entrys_costCenter" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.recyclebiz.app" />
+                <key name="name" value="CKCostAllocateBillQuery" />
+            </query>
+        </propertyUnit>
     </units>
     <defaultFilter>
         <name>defaultFilter</name>
@@ -2322,6 +2428,36 @@
                 <key name="name" value="CKCostAllocateBillQuery" />
             </query>
         </join>
+        <join>
+            <name>32bf1c44-df82-4cdc-973e-ef47e8a7dfb6</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="entrys" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="entrys_costCenter" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>caf80c56-ca5e-4d9f-8cd1-9211d440f5b0</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="760dc8c2-beb0-494d-ba14-a0c883e21e82" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="e8724632-6925-4408-983f-12a13647630f" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="32bf1c44-df82-4cdc-973e-ef47e8a7dfb6" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.recyclebiz.app" />
+                <key name="name" value="CKCostAllocateBillQuery" />
+            </query>
+        </join>
     </joins>
     <resource>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillQuery].alias">
@@ -2411,6 +2547,12 @@
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillQuery].subObjects.subEntity[entrys_costCenter].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillQuery].subObjects.subEntity[entrys_farm].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
@@ -2472,6 +2614,12 @@
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillQuery].units.propertyUnit[481c04fe-774f-4f58-b0c2-6c11827bf218].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillQuery].units.propertyUnit[760dc8c2-beb0-494d-ba14-a0c883e21e82].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
@@ -2580,6 +2728,12 @@
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillQuery].units.propertyUnit[e3bd2cf3-5736-4c7f-8a14-750980e3798c].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillQuery].units.propertyUnit[e8724632-6925-4408-983f-12a13647630f].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
@@ -2817,6 +2971,27 @@
             <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillQuery].units.queryField[entrys.breeddata.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillQuery].units.queryField[entrys.costCenter.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="成本中心" />
+            <lang locale="zh_HK" value="成本中心" />
+            <lang locale="zh_TW" value="成本中心" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillQuery].units.queryField[entrys.costCenter.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillQuery].units.queryField[entrys.costCenter.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.CKCostAllocateBillQuery].units.queryField[entrys.costCenter.name].extendedProperty.isUsingF7">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
