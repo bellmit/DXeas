@@ -232,11 +232,11 @@ public class CKSettleBillListUI extends AbstractCKSettleBillListUI
 		String information="";
 		for (int i = 0;i<selIDs.length; i++) {
 			info = iBill.getCKSettleBillInfo(new ObjectUuidPK(selIDs[i]));
-			if(!info.getBillStatus().equals(BillBaseStatusEnum.TEMPORARILYSAVED)){
-				error+=info.getString("number")+"\t"+"只有保存状态的单据可以批量结算"+"\n";
-				num--;
-				continue;
-			}
+//			if(!info.getBillStatus().equals(BillBaseStatusEnum.TEMPORARILYSAVED)){
+//				error+=info.getString("number")+"\t"+"只有保存状态的单据可以批量结算"+"\n";
+//				num--;
+//				continue;
+//			}
 			try{
 				Map result = iBill.execSettle(info);
 				if(result.get("information")!=null){

@@ -41,7 +41,7 @@ public class CostObjectEditDep {
 		KDBizPromptBox batchF7 = param.getKDBizPromptBox("prmtparentBreedBatch");
 		if(batchF7 != null){
 			batchF7.setQueryInfo("com.kingdee.eas.farm.breed.app.F7ParentBreedBatchQuery");		
-	        batchF7.setEditable(true);		
+	        batchF7.setEditable(true);
 	        batchF7.setDisplayFormat("$number$");		
 	        batchF7.setEditFormat("$number$");		
 	        batchF7.setCommitFormat("$number$");	

@@ -710,7 +710,7 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 		//保证金总额/占用/可用
 		info.setTotalMargin(farmer.getTotalMargin());
 		info.setEnableMargin(farmer.getEnableMargin());
-//		info.setUnLockedMargin(contractInfo.getUnlockMargin());
+		//		info.setUnLockedMargin(contractInfo.getUnlockMargin());
 
 		//保证金
 		info.setOccupyMargin(farmer.getOccupyMargin());
@@ -776,9 +776,9 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 		info.setOtherKbDetail(detail);
 
 
-//		//外卖扣补款
-//		BigDecimal outSaleKbAmt = UIRuleUtil.getBigDecimal(info.getOutSaleKbAmt());
-//		info.setOutSaleKbAmt2(outSaleKbAmt);
+		//		//外卖扣补款
+		//		BigDecimal outSaleKbAmt = UIRuleUtil.getBigDecimal(info.getOutSaleKbAmt());
+		//		info.setOutSaleKbAmt2(outSaleKbAmt);
 
 		kbAmt =UIRuleUtil.getBigDecimal(info.getDrugLackPAmt())
 		.add(UIRuleUtil.getBigDecimal(info.getMRatePAmt()))
@@ -809,29 +809,29 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 		if(UIRuleUtil.getBigDecimal(farm.getTransPrice()).compareTo(standTran) > 0){
 			//公司运费
 			BigDecimal companyTC = standTran.multiply(info.getFeedWgt());
-			info.setCompanyTC(companyTC);
 			//司机运费
 			BigDecimal diverCt = tranCost.subtract(companyTC);
-			info.setDiverCt(diverCt);
+			info.setCompanyTC(diverCt);
+			info.setDiverCt(companyTC);
 		}else{
-			info.setDiverCt(BigDecimal.ZERO);
-			info.setCompanyTC(tranCost);
+			info.setDiverCt(tranCost);
+			info.setCompanyTC(BigDecimal.ZERO);
 		}
 
 
-		//保证金
+		//保证金留取金额
 		BigDecimal occupyMargin = BigDecimal.ZERO;
 		if(marginPolicy != null){
 			occupyMargin = info.getBatchQty().multiply(UIRuleUtil.getBigDecimal(marginPolicy.getSingleMargin()));
-		}
-		info.setOccupyMargin(occupyMargin);
+		} 
+		info.setMarginGAmount(occupyMargin);
 
 		//利润分成
 		BigDecimal proDiv = proDivCal(ctx,info,contractInfo,basePrice);
 		info.setProDiv(proDiv);
 
 		//代养费 = 回收金额+利润分成+实际搭雏金额+连养补贴+扣补项目金额+用料不足扣款+用药不足扣款
-		//-苗料药总金额-品质扣款-总运费-本批保证金-借款还款金额-上批欠款金额
+		//-苗料药总金额-品质扣款-总运费-防疫费
 		BigDecimal dyFee = info.getRecAmt()
 		.add(UIRuleUtil.getBigDecimal(info.getProDiv()))
 		.add(UIRuleUtil.getBigDecimal(info.getOutSaleKbAmt2()))
@@ -842,9 +842,7 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 		.subtract(UIRuleUtil.getBigDecimal(info.getMlyAllAmt()))
 		.subtract(UIRuleUtil.getBigDecimal(info.getQCItemAmt()))
 		.subtract(UIRuleUtil.getBigDecimal(info.getTranCost()))
-		.subtract(UIRuleUtil.getBigDecimal(info.getMarginGAmount()))
-		.subtract(UIRuleUtil.getBigDecimal(info.getLongBorrowReturn()))
-		.subtract(UIRuleUtil.getBigDecimal(info.getSpecialPermitAmt()));
+		.subtract(UIRuleUtil.getBigDecimal(info.getUnLockedMargin()));
 		dyFee = dyFee.divide(BigDecimal.ONE,2,BigDecimal.ROUND_HALF_UP);
 		info.setDyFee(dyFee);
 		//设置成本信息页签代养费
@@ -874,17 +872,10 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 
 
 
-
-		//实际支付 = 代养费-保证金留取金额-预留风险押金-运费-煤款-设备借款还款金额-抓鸡费--清舍防疫费-消毒清料塔费
+		//实际支付=代养费-保证金留取金额-本批还款金额
 		BigDecimal actualPayAmt = dyFee
 		.subtract(UIRuleUtil.getBigDecimal(info.getMarginGAmount()))
-		.subtract(UIRuleUtil.getBigDecimal(info.getReserveRiskCost()))
-		.subtract(UIRuleUtil.getBigDecimal(info.getTranCost()))
-		.subtract(UIRuleUtil.getBigDecimal(info.getCoalCost()))
-		.subtract(UIRuleUtil.getBigDecimal(info.getEquipmentReAmt()))
-		.subtract(UIRuleUtil.getBigDecimal(info.getGetChickCost()))
-		.subtract(UIRuleUtil.getBigDecimal(info.getCleanHouseCost()))
-		.subtract(UIRuleUtil.getBigDecimal(info.getCleanTowerCost()));
+		.subtract(UIRuleUtil.getBigDecimal(info.getLongBorrowReturn()));
 		info.setActualPayAmt(actualPayAmt);
 
 

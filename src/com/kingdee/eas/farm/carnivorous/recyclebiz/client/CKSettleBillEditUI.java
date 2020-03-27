@@ -123,8 +123,13 @@ public class CKSettleBillEditUI extends AbstractCKSettleBillEditUI
 		contdeductMargin.setVisible(false);
 		contpayOweMonery.setVisible(false);
 		contadPayBalance.setVisible(false);
-
-
+		contnoPfoRetAmt.setVisible(false);
+		contspecialPermitAmt.setVisible(false);
+		contfarmeronlyPro.setVisible(false);
+		contfarmerOnlyProOne.setVisible(false);
+		
+		
+		
 		contbatchOccupyMargin.setVisible(false);
 		contkbConFeedPolicy.setVisible(false);
 		contlFeedWgt.setVisible(false);
@@ -572,19 +577,7 @@ public class CKSettleBillEditUI extends AbstractCKSettleBillEditUI
 		//-借款利息-设备升级借款还款-特批借款还款金额-亏损还款
 		BigDecimal actualPayAmt = UIRuleUtil.getBigDecimal(txtdyFee.getValue())
 		.subtract(UIRuleUtil.getBigDecimal(txtmarginGAmount.getValue()))
-		.subtract(UIRuleUtil.getBigDecimal(txtreserveRiskCost.getValue()))
-		//		.subtract(UIRuleUtil.getBigDecimal(txtmarginProfit.getValue()))
-		.subtract(UIRuleUtil.getBigDecimal(txtlongBorrowReturn.getValue()))
-		.subtract(UIRuleUtil.getBigDecimal(txttranCost.getValue()))
-		.subtract(UIRuleUtil.getBigDecimal(txtnoPfoRetAmt.getValue()))
-		.subtract(UIRuleUtil.getBigDecimal(txtcoalCost.getValue()))
-		.subtract(UIRuleUtil.getBigDecimal(txtequipmentReAmt.getValue()))
-		.subtract(UIRuleUtil.getBigDecimal(txtspecialPermitAmt.getValue()))
-
-		.subtract(UIRuleUtil.getBigDecimal(txtgetChickCost.getValue()))
-		.subtract(UIRuleUtil.getBigDecimal(txtcleanHouseCost.getValue()))
-		.subtract(UIRuleUtil.getBigDecimal(txtcleanTowerCost.getValue()));
-		//		.subtract(UIRuleUtil.getBigDecimal(txtassetsOccupy.getValue()));
+		.subtract(UIRuleUtil.getBigDecimal(txtlongBorrowReturn.getValue()));
 		txtactualPayAmt.setValue(actualPayAmt);
 
 		//设置现账面累计余额 = 上批余额+预留风险押金+保证金留取金额+设备借款还款金额+特批借款还款金额+笼养借款还款金额

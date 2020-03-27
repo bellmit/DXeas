@@ -313,7 +313,7 @@ public class ChickenRecBillEditUI extends AbstractChickenRecBillEditUI
 
 				BigDecimal saleChicPrice = (BigDecimal) kdtWeigntEntry.getCell(arg0.getRowIndex(),"saleChicPrice").getValue();
 				BigDecimal saleQty = (BigDecimal) kdtWeigntEntry.getCell(arg0.getRowIndex(),"saleQty").getValue();
-				BigDecimal houseNetWeight = saleChicPrice.multiply(saleQty);
+				BigDecimal houseNetWeight = saleChicPrice.multiply(saleQty).divide(BigDecimal.ONE,1,BigDecimal.ROUND_HALF_UP);
 				kdtWeigntEntry.getCell(arg0.getRowIndex(),"saleAmount").setValue(houseNetWeight);
 			}
 
@@ -436,8 +436,10 @@ public class ChickenRecBillEditUI extends AbstractChickenRecBillEditUI
 
 		BigDecimal houseWeight = (BigDecimal) kdtWeigntEntry.getCell(arg0.getRowIndex(),"houseWeight").getValue();
 		BigDecimal houseSkinWeight = (BigDecimal) kdtWeigntEntry.getCell(arg0.getRowIndex(),"houseSkinWeight").getValue();
-		BigDecimal houseNetWeight = houseWeight.subtract(houseSkinWeight);
+		BigDecimal houseNetWeight = (houseWeight.subtract(houseSkinWeight)).divide(BigDecimal.ONE,1,BigDecimal.ROUND_HALF_UP);
 		this.kdtWeigntEntry.getCell(arg0.getRowIndex(),"houseNetWeight").setValue(houseNetWeight);
+		this.kdtWeigntEntry.getCell(arg0.getRowIndex(),"saleQty").setValue(houseNetWeight);
+		
 		UITools.apendFootRow(kdtWeigntEntry, new String[]{"houseWeight","houseSkinWeight","houseNetWeight"});
 
 	}
@@ -548,7 +550,7 @@ public class ChickenRecBillEditUI extends AbstractChickenRecBillEditUI
 		//养殖场过滤
 		StockingComm.setFarmFilter(prmtfarm, curCompanyID, farmerID,true);
 		//合同过滤
-				StockingComm.setBatchContractFilter(prmtbatchContract, curCompanyID,farmerID,farmID,true);
+		StockingComm.setBatchContractFilter(prmtbatchContract, curCompanyID,farmerID,farmID,true);
 		//		//客户过滤 modified by zz
 		//		StockingComm.setCustomerFilterBySale(prmtcustomer, saleType.getSelectedItem()==null?null:(SaleBizType) saleType.getSelectedItem());
 	}
@@ -735,15 +737,17 @@ public class ChickenRecBillEditUI extends AbstractChickenRecBillEditUI
 			String s1 = "/*dialect*/ select fid carid  from CT_PUB_Car where fcarowner ='"+carleader+"'";
 			IRowSet r1 = SQLExecutorFactory.getRemoteInstance(s1).executeSQL();
 			if(r1.next()){
-			String carid = UIRuleUtil.getString(r1.getString("carid"));
-			CarInfo carInfo = CarFactory.getRemoteInstance().getCarInfo(new ObjectUuidPK(carid));
-			kdtWeigntEntry.getCell(rowIndex, "carcar").setValue(carInfo);
+				String carid = UIRuleUtil.getString(r1.getString("carid"));
+				CarInfo carInfo = CarFactory.getRemoteInstance().getCarInfo(new ObjectUuidPK(carid));
+				kdtWeigntEntry.getCell(rowIndex, "carcar").setValue(carInfo);
 			}
 		}
-		
-		
+
+
 		//销售客户设置批量填充
-		saleCustomer(rowIndex, colIndex);
+		if(rowIndex == 0 && "customer".equalsIgnoreCase(kdtWeigntEntry.getColumn(colIndex).getKey())){
+			saleCustomer(rowIndex, colIndex);
+		}
 		if("carcass".equalsIgnoreCase(kdtWeigntEntry.getColumn(colIndex).getKey())){
 			isNewBatchListen(rowIndex, colIndex);
 		}
@@ -758,6 +762,16 @@ public class ChickenRecBillEditUI extends AbstractChickenRecBillEditUI
 			isNewBatchListen(rowIndex, colIndex);
 		}
 
+		//计算均重
+		BigDecimal chickenQty = UIRuleUtil.getBigDecimal(kdtWeigntEntry.getCell(rowIndex, "chickenQty").getValue());
+		BigDecimal houseNetWeight = UIRuleUtil.getBigDecimal(kdtWeigntEntry.getCell(rowIndex, "houseNetWeight").getValue());
+		if(chickenQty.compareTo(BigDecimal.ZERO) > 0){
+			BigDecimal avgWgt = houseNetWeight.divide(chickenQty,2,BigDecimal.ROUND_DOWN);
+			avgWgt = avgWgt.multiply(new BigDecimal("2"));
+			kdtWeigntEntry.getCell(rowIndex, "avgWgt").setValue(avgWgt);
+		}else{
+			kdtWeigntEntry.getCell(rowIndex, "avgWgt").setValue(BigDecimal.ZERO);
+		}
 
 
 	}
@@ -772,6 +786,9 @@ public class ChickenRecBillEditUI extends AbstractChickenRecBillEditUI
 	 */
 	private void isNewBatchListen(int rowIndex, int colIndex) {
 		// TODO Auto-generated method stub
+		BigDecimal houseNetWeight = UIRuleUtil.getBigDecimal(kdtWeigntEntry.getCell(rowIndex, "houseNetWeight").getValue());
+		kdtWeigntEntry.getCell(rowIndex, "houseNetWeight").setValue(houseNetWeight.divide(BigDecimal.ONE,1,BigDecimal.ROUND_HALF_UP));
+		
 		BigDecimal saleQty = BigDecimal.ZERO;
 		if(kdtWeigntEntry.getCell(rowIndex, "carcass").getValue().toString().equalsIgnoreCase("true")
 				&& (BigDecimal) kdtWeigntEntry.getCell(rowIndex, "carcessReduceWeight").getValue() != null){
@@ -781,6 +798,9 @@ public class ChickenRecBillEditUI extends AbstractChickenRecBillEditUI
 			saleQty =  new BigDecimal(kdtWeigntEntry.getCell(rowIndex, "houseNetWeight").getValue().toString());
 		}
 		kdtWeigntEntry.getCell(rowIndex, "saleQty").setValue(saleQty);
+		BigDecimal saleChicPrice = UIRuleUtil.getBigDecimal(kdtWeigntEntry.getCell(rowIndex, "saleChicPrice").getValue());
+		kdtWeigntEntry.getCell(rowIndex, "saleAmount").setValue(saleChicPrice.multiply(saleQty).divide(BigDecimal.ONE,1,BigDecimal.ROUND_HALF_UP));
+	
 	}
 	/**
 	 * 销售客户设置批量填充
@@ -812,7 +832,7 @@ public class ChickenRecBillEditUI extends AbstractChickenRecBillEditUI
 	@Override
 	protected void beforeStoreFields(ActionEvent arg0) throws Exception {
 		// TODO Auto-generated method stub
-		
+
 		super.beforeStoreFields(arg0);
 	}
 

@@ -13,7 +13,9 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
@@ -113,9 +115,9 @@ public class CKCostAllocateBillEditUI extends AbstractCKCostAllocateBillEditUI
 			public void editStopped(KDTEditEvent e) {
 				// TODO Auto-generated method stub
 				super.editStopped(e);
-				BigDecimal restCost = UIRuleUtil.getBigDecimal(kdtPeriodEntry.getCell(e.getRowIndex(), "restCost").getValue());
+				BigDecimal endingBanace = UIRuleUtil.getBigDecimal(kdtPeriodEntry.getCell(e.getRowIndex(), "endingBanace").getValue());
 				BigDecimal currentCost = UIRuleUtil.getBigDecimal(kdtPeriodEntry.getCell(e.getRowIndex(), "currentCost").getValue());
-				kdtPeriodEntry.getCell(e.getRowIndex(), "endingBanace").setValue(restCost.subtract(currentCost));
+				kdtPeriodEntry.getCell(e.getRowIndex(), "restCost").setValue(endingBanace.subtract(currentCost));
 			}
 
 		});
@@ -297,8 +299,8 @@ public class CKCostAllocateBillEditUI extends AbstractCKCostAllocateBillEditUI
 			.append(" where t1.CFBillStatus in (4,7) ")
 			.append(" and t1.FBizDate >= to_date('"+sdf.format(period.getBeginDate())+"','yyyy-MM-dd hh24:mi:ss') ")
 			.append(" and t1.FBizDate <= to_date('"+sdf.format(period.getEndDate())+" 23:59:59','yyyy-MM-dd hh24:mi:ss') ")
-//			.append(" and t2.FCostCenterID = '"+((IPropertyContainer)prmtcostCenter.getValue()).getString("id")+"'") 
-			.append(" and t1.CFFICompanyID='"+companyID+"'");
+			//			.append(" and t2.FCostCenterID = '"+((IPropertyContainer)prmtcostCenter.getValue()).getString("id")+"'") 
+			.append(" and t1.CFFICompanyID='"+companyID+"' ");
 			IRowSet rs = SQLExecutorFactory.getRemoteInstance(sqlBuf.toString()).executeSQL();
 			while(rs.next()){
 				IRow row = kdtEntrys.addRow();
@@ -331,8 +333,8 @@ public class CKCostAllocateBillEditUI extends AbstractCKCostAllocateBillEditUI
 			String endStr = adf.format(periodInfo.getEndDate());
 			for(int i=0;i<kdtPeriodEntry.getRowCount();i++){
 				CostCenterOrgUnitInfo costInfo = (CostCenterOrgUnitInfo) kdtPeriodEntry.getCell(i,"costCenter").getValue();
-				String s1 = "/*dialect*/ select sum(t1.FActualFemaleQty) allQty from T_FM_BatchContractBill t1" +
-				" inner join CT_FM_Farm t2 on t2.fid = t1.FFarmID where t2.FCostCenterID = '"+costInfo.getId()+"'" +
+				String s1 = "/*dialect*/ select sum(t1.CFBatchQty) allQty from CT_FM_CKSettleBill t1" +
+				"  where t1.CFBillStatus in (4,7) and t1.CFCostCenterID = '"+costInfo.getId()+"'" +
 				" and to_char(t1.fbizdate,'yyyy-MM-dd') >= '"+beginStr+"' " +
 				" and to_char(t1.fbizdate,'yyyy-MM-dd') <= '"+endStr+"'";
 				IRowSet r1 = SQLExecutorFactory.getRemoteInstance(s1).executeSQL();
@@ -353,32 +355,61 @@ public class CKCostAllocateBillEditUI extends AbstractCKCostAllocateBillEditUI
 
 
 
-			BigDecimal otherAmount = BigDecimal.ZERO;
 			for(int i=0;i<kdtEntrys.getRowCount();i++){
 				IRow row=kdtEntrys.getRow(i);
 				BigDecimal weight=(BigDecimal) row.getCell("inQty").getValue();
-				FarmInfo farmInfo = (FarmInfo) row.getCell("farm").getValue();
-				farmInfo = FarmFactory.getRemoteInstance().getFarmInfo(new ObjectUuidPK(farmInfo.getId()));
+				CostCenterOrgUnitInfo costInfo = (CostCenterOrgUnitInfo) row.getCell("costCenter").getValue();
 				//成本中心对应上苗数量
-				BigDecimal costQty = UIRuleUtil.getBigDecimal(qtyMap.get(farmInfo.getCostCenter().getId().toString()));
+				BigDecimal costQty = UIRuleUtil.getBigDecimal(qtyMap.get(costInfo.getId().toString()));
 				//成本中心对应分摊金额
-				BigDecimal shareAmt = amountMap.get(farmInfo.getCostCenter().getId().toString());
-				//把小数点误差归集到最后一行分录
+				BigDecimal shareAmt = amountMap.get(costInfo.getId().toString());
 				if(costQty.compareTo(BigDecimal.ZERO) > 0){
 					if(kdtEntrys.getRowCount() == 1){
 						BigDecimal amount=shareAmt.multiply(weight).divide(costQty,2,RoundingMode.HALF_UP);
 						row.getCell("amount").setValue(amount);
 					}else{
-						if(i == kdtEntrys.getRowCount() - 1){
-							row.getCell("amount").setValue(shareAmt.subtract(otherAmount));
-						}else{
-							BigDecimal amount=shareAmt.multiply(weight).divide(costQty,2,RoundingMode.HALF_UP);
-							otherAmount = otherAmount.add(amount);
-							row.getCell("amount").setValue(amount);
+						BigDecimal amount=shareAmt.multiply(weight).divide(costQty,2,RoundingMode.HALF_UP);
+						row.getCell("amount").setValue(amount);
+					}
+				}
+			}
+
+			//把小数点误差归集到最后一行分录
+			Set<String> keySet = amountMap.keySet();//先获取map集合的所有键的Set集合
+			Iterator<String> it = keySet.iterator();//有了Set集合，就可以获取其迭代器。
+			while(it.hasNext()){
+				String costCenterid = it.next();
+				BigDecimal allAmount = amountMap.get(costCenterid);//有了键可以通过map集合的get方法获取其对应的值。
+
+				BigDecimal otherAmount = BigDecimal.ZERO;
+				int num = 0;
+				for(int i=0;i<kdtEntrys.getRowCount();i++){
+					IRow row=kdtEntrys.getRow(i);
+					BigDecimal amount=(BigDecimal) row.getCell("amount").getValue();
+					CostCenterOrgUnitInfo costInfo = (CostCenterOrgUnitInfo) row.getCell("costCenter").getValue();
+					if(costCenterid.equalsIgnoreCase(costInfo.getId().toString())){
+						otherAmount = otherAmount.add(amount);
+						num = i;
+					}
+				}
+				//如果分摊费用不等于批次分摊费用汇总
+				if(allAmount.compareTo(otherAmount) != 0){
+					for(int i=0;i<kdtEntrys.getRowCount();i++){
+						IRow row=kdtEntrys.getRow(i);
+						CostCenterOrgUnitInfo costInfo = (CostCenterOrgUnitInfo) row.getCell("costCenter").getValue();
+						if(costCenterid.equalsIgnoreCase(costInfo.getId().toString())){
+							row.getCell("amount").setValue(allAmount.subtract(otherAmount));
+							break;
 						}
 					}
 				}
 			}
+
+
+
+
+
+
 		} catch (EASBizException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

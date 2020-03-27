@@ -250,6 +250,17 @@ public class AbstractChickenRecBillWeigntEntryInfo extends com.kingdee.eas.frame
     {
         setString("carleader", item);
     }
+    /**
+     * Object:棚前过磅's 均重property 
+     */
+    public java.math.BigDecimal getAvgWgt()
+    {
+        return getBigDecimal("avgWgt");
+    }
+    public void setAvgWgt(java.math.BigDecimal item)
+    {
+        setBigDecimal("avgWgt", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("92E24BC1");
