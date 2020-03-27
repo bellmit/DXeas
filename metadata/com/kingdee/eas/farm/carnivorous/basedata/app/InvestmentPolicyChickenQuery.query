@@ -74,6 +74,45 @@
                 <key name="name" value="User" />
             </entityRef>
         </subEntity>
+        <subEntity>
+            <name>Entry</name>
+            <alias>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].subObjects.subEntity[Entry].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenEntry" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>settleItem</name>
+            <alias>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].subObjects.subEntity[settleItem].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.stocking.basedata.app" />
+                <key name="name" value="SettlementItem" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>materialNuo</name>
+            <alias>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].subObjects.subEntity[materialNuo].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.master.material.app" />
+                <key name="name" value="Material" />
+            </entityRef>
+        </subEntity>
     </subObjects>
     <units>
         <propertyUnit>
@@ -635,68 +674,6 @@
             </query>
         </propertyUnit>
         <queryField>
-            <name>beginDate</name>
-            <userDefined>true</userDefined>
-            <formulaString>#0</formulaString>
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[beginDate].displayName</displayName>
-            <groupType />
-            <isSelector>true</isSelector>
-            <isFilter>true</isFilter>
-            <isSorter>true</isSorter>
-            <isParameter>false</isParameter>
-            <returnType>Date</returnType>
-            <propertyRefs>
-                <propertyRef>
-                    <key>9f371fde-53f6-4460-946d-4df0d4532d18</key>
-                    <parentUnit>
-                        <key name="name" value="beginDate" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="InvestmentPolicyChicken" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="beginDate" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
-                <key name="name" value="InvestmentPolicyChickenQuery" />
-            </query>
-        </queryField>
-        <queryField>
-            <name>endDate</name>
-            <userDefined>true</userDefined>
-            <formulaString>#0</formulaString>
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[endDate].displayName</displayName>
-            <groupType />
-            <isSelector>true</isSelector>
-            <isFilter>true</isFilter>
-            <isSorter>true</isSorter>
-            <isParameter>false</isParameter>
-            <returnType>Date</returnType>
-            <propertyRefs>
-                <propertyRef>
-                    <key>13704dbf-03df-47b7-bbf9-2aa028cb8b42</key>
-                    <parentUnit>
-                        <key name="name" value="endDate" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="InvestmentPolicyChicken" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="endDate" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
-                <key name="name" value="InvestmentPolicyChickenQuery" />
-            </query>
-        </queryField>
-        <queryField>
             <name>billStatus</name>
             <userDefined>true</userDefined>
             <formulaString>#0</formulaString>
@@ -851,6 +828,657 @@
                 <key name="name" value="InvestmentPolicyChickenQuery" />
             </query>
         </queryField>
+        <propertyUnit>
+            <name>9c54bebe-ccc0-4754-b269-78c374a9e42d</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.propertyUnit[9c54bebe-ccc0-4754-b269-78c374a9e42d].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>65c47e4e-dae8-42a3-8d6a-b2a5cd9a2ad0</key>
+                    <parentUnit>
+                        <key name="name" value="9c54bebe-ccc0-4754-b269-78c374a9e42d" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="InvestmentPolicyChicken" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>8976dc96-9b26-4622-934b-21f9971ce7a6</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.propertyUnit[8976dc96-9b26-4622-934b-21f9971ce7a6].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>4de4790a-f504-41fa-af85-d797b40472aa</key>
+                    <parentUnit>
+                        <key name="name" value="8976dc96-9b26-4622-934b-21f9971ce7a6" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="parent" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>Entry.beginDate</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.beginDate].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>85674237-e1f0-47fc-b8ba-6dc743fd0774</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.beginDate" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="beginDate" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.endDate</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.endDate].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b4eb88c1-b516-4a44-901b-1b8435b69937</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.endDate" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="endDate" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.costPrice</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.costPrice].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>4565f7d7-ffa2-4c0d-85df-42e0343c06ff</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.costPrice" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="costPrice" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.contractPrice</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.contractPrice].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>4a923e80-eaff-44f3-b25d-4c8c5493fadb</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.contractPrice" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="contractPrice" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.marketPrice</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.marketPrice].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>7d2fcaea-60eb-4b94-9b0d-1b51cd823cb6</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.marketPrice" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="marketPrice" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.outPrice</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.outPrice].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>a9396dd7-9b90-46f8-b936-4d0500ce5ad7</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.outPrice" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="outPrice" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.unit</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.unit].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>f66f366e-9330-4d61-a0ef-c2482e3ba9b5</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.unit" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="unit" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.remark</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.remark].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b6cd82d7-f967-48d0-8f36-cea73ee2b47a</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.remark" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="remark" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Entry.id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>4f40b605-cf38-4d1d-9e6d-4deda930d498</key>
+                    <parentUnit>
+                        <key name="name" value="Entry.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>6be81a0f-1490-46de-8df4-dc357869ed18</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.propertyUnit[6be81a0f-1490-46de-8df4-dc357869ed18].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>3bf6b117-8178-4633-9e11-69c23d0e321e</key>
+                    <parentUnit>
+                        <key name="name" value="6be81a0f-1490-46de-8df4-dc357869ed18" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="settleItem" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>9c3902cd-fd51-4902-adbd-e29e533e0bc7</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.propertyUnit[9c3902cd-fd51-4902-adbd-e29e533e0bc7].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>cf7082d1-6f1e-4723-9cb3-dd06c8a0efc9</key>
+                    <parentUnit>
+                        <key name="name" value="9c3902cd-fd51-4902-adbd-e29e533e0bc7" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="settleItem" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>13ff4815-6441-4a00-8dc5-b283194af14a</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.propertyUnit[13ff4815-6441-4a00-8dc5-b283194af14a].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>10d6b779-3801-4206-903c-5f7a3e0f8e20</key>
+                    <parentUnit>
+                        <key name="name" value="13ff4815-6441-4a00-8dc5-b283194af14a" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="materialNuo" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>69b82eb2-e0a7-4e41-be58-48de7239ed42</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.propertyUnit[69b82eb2-e0a7-4e41-be58-48de7239ed42].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>20bc07a5-f5de-4ff3-9027-b3caa5823c07</key>
+                    <parentUnit>
+                        <key name="name" value="69b82eb2-e0a7-4e41-be58-48de7239ed42" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="materialNuo" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>settleItem.id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[settleItem.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>e0e26942-657d-49dc-9c0e-1d0fd1712dd7</key>
+                    <parentUnit>
+                        <key name="name" value="settleItem.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="settleItem" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>settleItem.number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[settleItem.number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>822c36c2-c45e-4315-9a26-ab6fd3c0d8f4</key>
+                    <parentUnit>
+                        <key name="name" value="settleItem.number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="settleItem" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>settleItem.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[settleItem.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>09f274a7-a9d3-48e5-8b00-b637072ffb7c</key>
+                    <parentUnit>
+                        <key name="name" value="settleItem.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="settleItem" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>materialNuo.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[materialNuo.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>f23c86ea-ff91-44a7-891f-de7d179565a9</key>
+                    <parentUnit>
+                        <key name="name" value="materialNuo.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="materialNuo" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>materialNuo.number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[materialNuo.number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>869684f1-dbb3-4de7-99ec-791f67019ee5</key>
+                    <parentUnit>
+                        <key name="name" value="materialNuo.number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="materialNuo" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>materialNuo.id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[materialNuo.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>78be11e9-b1cc-4b01-beee-3afdfabe6948</key>
+                    <parentUnit>
+                        <key name="name" value="materialNuo.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="materialNuo" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+        </queryField>
     </units>
     <defaultFilter>
         <name>defaultFilter</name>
@@ -889,6 +1517,9 @@
         <keyProperties>
             <queryField>
                 <key name="name" value="id" />
+            </queryField>
+            <queryField>
+                <key name="name" value="Entry.id" />
             </queryField>
         </keyProperties>
     </queryPK>
@@ -1014,6 +1645,96 @@
                 <key name="name" value="InvestmentPolicyChickenQuery" />
             </query>
         </join>
+        <join>
+            <name>3736bb54-1ac2-4668-97ad-4d27c3765828</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="InvestmentPolicyChicken" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="Entry" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>ffccd70c-7572-46fd-8c41-c4d6e95085ef</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="9c54bebe-ccc0-4754-b269-78c374a9e42d" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="8976dc96-9b26-4622-934b-21f9971ce7a6" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="3736bb54-1ac2-4668-97ad-4d27c3765828" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+        </join>
+        <join>
+            <name>a7d53b1c-c265-4bd8-9d12-26c5153997a6</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="Entry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="settleItem" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>3b94d2ef-8140-4483-be39-27f914c58c21</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="6be81a0f-1490-46de-8df4-dc357869ed18" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="9c3902cd-fd51-4902-adbd-e29e533e0bc7" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="a7d53b1c-c265-4bd8-9d12-26c5153997a6" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+        </join>
+        <join>
+            <name>dac38d36-5889-4ad7-96d9-dec468e5cae6</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="Entry" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="materialNuo" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>da97811b-ac9d-4e18-9b87-edd54581a532</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="13ff4815-6441-4a00-8dc5-b283194af14a" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="69b82eb2-e0a7-4e41-be58-48de7239ed42" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="dac38d36-5889-4ad7-96d9-dec468e5cae6" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.basedata.app" />
+                <key name="name" value="InvestmentPolicyChickenQuery" />
+            </query>
+        </join>
     </joins>
     <resource>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].alias">
@@ -1100,6 +1821,12 @@
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].subObjects.subEntity[Entry].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].subObjects.subEntity[InvestmentPolicyChicken].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
@@ -1130,6 +1857,24 @@
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].subObjects.subEntity[materialNuo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].subObjects.subEntity[settleItem].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.propertyUnit[13ff4815-6441-4a00-8dc5-b283194af14a].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.propertyUnit[3e644341-67a6-4950-a43b-77b0e82afa0b].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
@@ -1143,6 +1888,36 @@
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.propertyUnit[5d5c1824-ce61-404b-b685-3d06c9b87d42].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.propertyUnit[69b82eb2-e0a7-4e41-be58-48de7239ed42].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.propertyUnit[6be81a0f-1490-46de-8df4-dc357869ed18].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.propertyUnit[8976dc96-9b26-4622-934b-21f9971ce7a6].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.propertyUnit[9c3902cd-fd51-4902-adbd-e29e533e0bc7].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.propertyUnit[9c54bebe-ccc0-4754-b269-78c374a9e42d].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
@@ -1178,6 +1953,100 @@
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.beginDate].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="生效日期" />
+            <lang locale="zh_HK" value="生效日期" />
+            <lang locale="zh_TW" value="生效日期" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.beginDate].extendedProperty.isActionDate">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.beginDate].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.beginDate].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.beginDate].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.contractPrice].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="合同结算价格" />
+            <lang locale="zh_HK" value="合同結算價格" />
+            <lang locale="zh_TW" value="合同結算價格" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.costPrice].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="成本价格" />
+            <lang locale="zh_HK" value="成本價格" />
+            <lang locale="zh_TW" value="成本價格" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.endDate].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="失效日期" />
+            <lang locale="zh_HK" value="失效日期" />
+            <lang locale="zh_TW" value="失效日期" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.endDate].extendedProperty.isActionDate">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.endDate].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.endDate].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.endDate].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.marketPrice].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="市场结算价格" />
+            <lang locale="zh_HK" value="市場結算價格" />
+            <lang locale="zh_TW" value="市場結算價格" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.outPrice].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="打疫苗溢价空间" />
+            <lang locale="zh_HK" value="打疫苗溢價空間" />
+            <lang locale="zh_TW" value="打疫苗溢價空間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.remark].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="备注" />
+            <lang locale="zh_HK" value="備註" />
+            <lang locale="zh_TW" value="備註" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[Entry.unit].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="规格型号" />
+            <lang locale="zh_HK" value="規格型號" />
+            <lang locale="zh_TW" value="規格型號" />
+        </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[auditTime].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="审核时间" />
@@ -1211,22 +2080,6 @@
             <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[auditor.number].extendedProperty.isUsingF7">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[beginDate].displayName">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="生效日期" />
-            <lang locale="zh_HK" value="生效日期" />
-            <lang locale="zh_TW" value="生效日期" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[beginDate].extendedProperty.isCommonQueryFilter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[beginDate].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
@@ -1392,22 +2245,6 @@
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[endDate].displayName">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="失效日期" />
-            <lang locale="zh_HK" value="失效日期" />
-            <lang locale="zh_TW" value="失效日期" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[endDate].extendedProperty.isCommonQueryFilter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[endDate].extendedProperty.isCommonQuerySorter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[id].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="" />
@@ -1531,11 +2368,64 @@
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[materialNuo.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[materialNuo.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="物料名称" />
+            <lang locale="zh_HK" value="物料名稱" />
+            <lang locale="zh_TW" value="物料名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[materialNuo.name].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.basedata.master.material.app.F7MaterialBaseInfoQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.basedata.master.material.app.F7MaterialBaseInfoQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.basedata.master.material.app.F7MaterialBaseInfoQuery" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[materialNuo.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[materialNuo.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[materialNuo.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[materialNuo.number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="物料编码" />
+            <lang locale="zh_HK" value="物料編碼" />
+            <lang locale="zh_TW" value="物料編碼" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[materialNuo.number].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[materialNuo.number].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[materialNuo.number].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[name].displayName">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="名称" />
-            <lang locale="zh_HK" value="名稱" />
-            <lang locale="zh_TW" value="名稱" />
+            <lang locale="zh_CN" value="单据名称" />
+            <lang locale="zh_HK" value="單據名稱" />
+            <lang locale="zh_TW" value="單據名稱" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[name].extendedProperty.colWidthInKDTable">
             <lang locale="en_US" value="50" />
@@ -1564,9 +2454,9 @@
         </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[number].displayName">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="编码" />
-            <lang locale="zh_HK" value="編碼" />
-            <lang locale="zh_TW" value="編碼" />
+            <lang locale="zh_CN" value="单据编码" />
+            <lang locale="zh_HK" value="單據編碼" />
+            <lang locale="zh_TW" value="單據編碼" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[number].extendedProperty.colWidthInKDTable">
             <lang locale="en_US" value="50" />
@@ -1589,6 +2479,54 @@
             <lang locale="zh_TW" value="false" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[number].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[settleItem.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[settleItem.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="结算项目名称" />
+            <lang locale="zh_HK" value="結算項目名稱" />
+            <lang locale="zh_TW" value="結算項目名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[settleItem.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[settleItem.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[settleItem.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[settleItem.number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="结算项目编码" />
+            <lang locale="zh_HK" value="結算項目編碼" />
+            <lang locale="zh_TW" value="結算項目編碼" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[settleItem.number].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[settleItem.number].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.basedata.app.InvestmentPolicyChickenQuery].units.queryField[settleItem.number].extendedProperty.isUsingF7">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
