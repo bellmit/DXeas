@@ -98,6 +98,8 @@ import com.kingdee.eas.farm.feemanager.basedata.DriverInfo;
 import com.kingdee.eas.farm.hatch.HatchBaseDataFactory;
 import com.kingdee.eas.farm.hatch.HatchBaseDataInfo;
 import com.kingdee.eas.farm.stocking.basedata.BreedDataInfo;
+import com.kingdee.eas.farm.stocking.basedata.FarmsType;
+import com.kingdee.eas.farm.stocking.basedata.StockingFarmTypeEnum;
 import com.kingdee.eas.farm.stocking.common.BotpCommUtils;
 import com.kingdee.eas.publicdata.CarFactory;
 import com.kingdee.eas.publicdata.CarInfo;
@@ -533,50 +535,15 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 		//设置回收信息分录
 		setSettleBillEntry(ctx,info,contractInfo);
 
-
-
-
-		/****A鸡****/
-		//		CKSettleBillEntryInfo outEntry=new CKSettleBillEntryInfo();
-		//		outEntry=new CKSettleBillEntryInfo();
-		//		outEntry.setRecType(RecType.inner);
-		//		outEntry.setQty(UIRuleUtil.getIntValue(AQty));
-		//		outEntry.setWeight(suttle.subtract(Bweight).subtract(returnWeight).subtract(UIRuleUtil.getBigDecimal(info.getPunishWgt())));
-		//		outEntry.setPrice(hAbasePrice);
-		//		outAmount=(suttle.subtract(Bweight).subtract(returnWeight).subtract(UIRuleUtil.getBigDecimal(info.getPunishWgt()))).multiply(hAbasePrice).setScale(2,BigDecimal.ROUND_HALF_UP);
-		//		outEntry.setAmount(outAmount);
-		//		outEntry.setAverageWgt(outEntry.getQty()==0?BigDecimal.ZERO:outEntry.getWeight().divide(UIRuleUtil.getBigDecimal(outEntry.getQty()),2,RoundingMode.HALF_UP));
-		//		outWeight=UIRuleUtil.getBigDecimal(outEntry.getWeight());
-		//		outQty=UIRuleUtil.getIntValue(outEntry.getQty());
-		//
-		//		/****B鸡****/
-		//		CKSettleBillEntryInfo inEntry=new CKSettleBillEntryInfo();
-		//		inEntry.setRecType(RecType.out);
-		//		inEntry.setQty(UIRuleUtil.getIntValue(BQty));
-		//		inEntry.setWeight(Bweight);
-		//		inEntry.setPrice(oBbasePrice);
-		//		inAmount=UIRuleUtil.getBigDecimal(inEntry.getWeight()).multiply(UIRuleUtil.getBigDecimal(inEntry.getPrice())).setScale(2,BigDecimal.ROUND_HALF_UP);
-		//		inEntry.setAmount(inAmount);
-		//		inEntry.setAverageWgt(UIRuleUtil.getBigDecimal(inEntry.getQty()).signum()==0?BigDecimal.ZERO:UIRuleUtil.getBigDecimal(inEntry.getWeight()).divide(UIRuleUtil.getBigDecimal(inEntry.getQty()),2,RoundingMode.HALF_UP));
-		//		inQty=UIRuleUtil.getIntValue(inEntry.getQty());
-		//		inWeight=UIRuleUtil.getBigDecimal(inEntry.getWeight());
-		//
-		//		info.getEntrys().add(inEntry);
-		//		info.getEntrys().add(outEntry);
-
-
-
-
-
-
-
-
+		//计算小鸡回收金额
+		BigDecimal smallAmt = calSmallAmt(ctx,contractInfo);
+		info.setPayOweMoneryB(smallAmt);
 
 
 		//设置标准料肉比，实际料肉比，料肉比扣罚标准
 		String s4 = "/*dialect*/ select t2.CFPrice  standRate from CT_FM_CarviousFeedComMeat t1" +
 		" inner join CT_FM_CarviousFeedComMeatEntry t2 on t2.fparentid = t1.fid" +
-		" where t1.CFBreedDataID ='"+contractInfo.getBreedData().getId().toString()+"' and t2.CFMinValue<"+info.getFeedDays()+"  and t2.CFMaxValue>="+info.getFeedDays();
+		" where t1.CFBreedDataID ='"+contractInfo.getBreedData().getId().toString()+"' and t2.CFMinValue<"+info.getBatchQty()+"  and t2.CFMaxValue>="+info.getBatchQty();
 		BigDecimal standRate = BigDecimal.ZERO;
 		try {
 			IRowSet r4 = DbUtil.executeQuery(ctx, s4.toString());
@@ -730,6 +697,7 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 		BigDecimal adPayBalance = UIRuleUtil.getBigDecimal(info.getAdPayBalance());
 		info.setKYFKOccupyFee(adPayBalance.multiply(moneyOccupyDays).divide(new BigDecimal(30),8,RoundingMode.HALF_UP).multiply(loanRate.divide(new BigDecimal(100))).setScale(2,BigDecimal.ROUND_HALF_UP).negate());
 
+
 		//回收金额  = 结算政策中的回收保底价*棚前过磅总净重
 		BigDecimal basePrice = BigDecimal.ZERO;
 		for(int i = 0,size = settlementPolicy.getRecycleEntry().size();i<size;i++){
@@ -738,8 +706,14 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 				basePrice = entryInfo.getBasePrice();
 			}
 		}
-		info.setRecAmt(basePrice.multiply(info.getSettleWgt()));
-
+		if(farm.getFarmType().equals(StockingFarmTypeEnum.stocking)){
+			BigDecimal BigAmt = calnetwgt(ctx,contractInfo);
+			//			info.setRecAmt(basePrice.multiply(info.getSettleWgt()));
+			info.setRecAmt(basePrice.multiply(BigAmt));
+		}else{
+			BigDecimal BigAmt = calBigAmt(ctx,contractInfo);
+			info.setRecAmt(BigAmt);
+		}
 
 
 
@@ -789,10 +763,10 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 
 		//欧指
 		BigDecimal oValue =BigDecimal.ZERO;
-		if(UIRuleUtil.getBigDecimal(info.getMeatRate()).signum()==0||UIRuleUtil.getBigDecimal(info.getFeedDays()).signum()==0){
+		if(UIRuleUtil.getBigDecimal(info.getMeatRate()).signum()==0||UIRuleUtil.getBigDecimal(info.getActfeedDays()).signum()==0){
 			oValue=BigDecimal.ZERO;
 		}else{
-			oValue= ((info.getSurvivalRate().multiply(UIRuleUtil.getBigDecimal(info.getChickenAveWgt()))).divide(new BigDecimal(100))).divide((info.getMeatRate().multiply(UIRuleUtil.getBigDecimal(info.getFeedDays()))),6,RoundingMode.HALF_UP).setScale(6,BigDecimal.ROUND_HALF_UP);
+			oValue= ((info.getSurvivalRate().multiply(UIRuleUtil.getBigDecimal(info.getChickenAveWgt()))).divide(new BigDecimal(100))).divide((info.getMeatRate().multiply(UIRuleUtil.getBigDecimal(info.getActfeedDays()))),6,RoundingMode.HALF_UP).setScale(6,BigDecimal.ROUND_HALF_UP);
 			oValue = oValue.multiply(new BigDecimal("10000"));
 		}
 		info.setOValue(oValue);
@@ -839,6 +813,7 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 		.add(UIRuleUtil.getBigDecimal(info.getKbItemAmt()))
 		.add(UIRuleUtil.getBigDecimal(info.getDrugLackPAmt()))
 		.add(UIRuleUtil.getBigDecimal(info.getMRatePAmt()))
+		.add(UIRuleUtil.getBigDecimal(info.getPayOweMoneryB()))
 		.subtract(UIRuleUtil.getBigDecimal(info.getMlyAllAmt()))
 		.subtract(UIRuleUtil.getBigDecimal(info.getQCItemAmt()))
 		.subtract(UIRuleUtil.getBigDecimal(info.getTranCost()))
@@ -915,6 +890,87 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 		}
 
 	}
+	private BigDecimal calnetwgt(Context ctx, BatchContractBillInfo contractInfo) {
+		// TODO Auto-generated method stub
+
+		// TODO Auto-generated method stub
+		String s4 = "/*dialect*/ select sum(nvl(t2.CFHouseNetWeight,0)) smallAmt from CT_FM_ChickenRecBill t1 " +
+		" inner join CT_FM_ChickenRBWE t2 on t2.fparentid = t1.fid" +
+		" where t1.CFBillStatus in (4,7) and t2.CFSettlementItem = 1" +
+		" and t1.CFBatchContractID ='"+contractInfo.getId().toString()+"'";
+		BigDecimal smallAmt = BigDecimal.ZERO;
+		try {
+			IRowSet r4 = DbUtil.executeQuery(ctx, s4.toString());
+			if(r4.next()){
+				smallAmt = UIRuleUtil.getBigDecimal(r4.getBigDecimal("smallAmt"));
+			}
+		} catch (BOSException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return smallAmt;
+
+	}
+
+
+	private BigDecimal calBigAmt(Context ctx, BatchContractBillInfo contractInfo) {
+		// TODO Auto-generated method stub
+
+		// TODO Auto-generated method stub
+		String s4 = "/*dialect*/ select sum(nvl(t2.CFSaleAmount,0)) smallAmt from CT_FM_ChickenRecBill t1 " +
+		" inner join CT_FM_ChickenRBWE t2 on t2.fparentid = t1.fid" +
+		" where t1.CFBillStatus in (4,7) and t2.CFSettlementItem = 1" +
+		" and t1.CFBatchContractID ='"+contractInfo.getId().toString()+"'";
+		BigDecimal smallAmt = BigDecimal.ZERO;
+		try {
+			IRowSet r4 = DbUtil.executeQuery(ctx, s4.toString());
+			if(r4.next()){
+				smallAmt = UIRuleUtil.getBigDecimal(r4.getBigDecimal("smallAmt"));
+			}
+		} catch (BOSException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return smallAmt;
+
+	}
+
+
+	/**
+	 * 计算小鸡金额
+	 * @param ctx
+	 * @param contractInfo
+	 * @return
+	 */
+	private BigDecimal calSmallAmt(Context ctx,BatchContractBillInfo contractInfo) {
+		// TODO Auto-generated method stub
+		String s4 = "/*dialect*/ select sum(nvl(t2.CFSaleAmount,0)) smallAmt from CT_FM_ChickenRecBill t1 " +
+		" inner join CT_FM_ChickenRBWE t2 on t2.fparentid = t1.fid" +
+		" where t1.CFBillStatus in (4,7) and t2.CFSettlementItem = 2" +
+		" and t1.CFBatchContractID ='"+contractInfo.getId().toString()+"'";
+		BigDecimal smallAmt = BigDecimal.ZERO;
+		try {
+			IRowSet r4 = DbUtil.executeQuery(ctx, s4.toString());
+			if(r4.next()){
+				smallAmt = UIRuleUtil.getBigDecimal(r4.getBigDecimal("smallAmt"));
+			}
+		} catch (BOSException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return smallAmt;
+	}
+
+
 	/**
 	 * 设置回收信息分录
 	 * @param ctx
@@ -1012,7 +1068,7 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 	private BigDecimal proDivCal(Context ctx, CKSettleBillInfo info, BatchContractBillInfo contractInfo, BigDecimal basePrice) {
 		// TODO Auto-generated method stub
 		BigDecimal allproDiv = BigDecimal.ZERO;
-		String s1 = "/*dialect*/ select t2.CFMarketPrice price, t2.CFHouseNetWeight netWgt from CT_FM_ChickenRecBill t1" +
+		String s1 = "/*dialect*/ select t2.CFSaleChicPrice price, t2.CFHouseNetWeight netWgt from CT_FM_ChickenRecBill t1" +
 		" inner join CT_FM_ChickenRBWE t2 on t2.fparentid = t1.fid where t2.CFSettlementItem = 1 and t1.CFBillStatus in (4,7)" +
 		" and t1.CFBatchContractID = '"+contractInfo.getId()+"'";
 		try {
@@ -1189,16 +1245,35 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 		try {
 			rs=DbUtil.executeQuery(ctx, sqlBuf.toString());
 			BigDecimal sumAmount=BigDecimal.ZERO,sumQty=BigDecimal.ZERO;
-			//政策搭雏比例
-			BigDecimal viewItemAmt = BigDecimal.ZERO;
 			BigDecimal acPrice=BigDecimal.ZERO;
 			BigDecimal conPrice=BigDecimal.ZERO;
 			BigDecimal contAmount=BigDecimal.ZERO;
 			BigDecimal actAmount=BigDecimal.ZERO;
 			BigDecimal allactAmount=BigDecimal.ZERO;
+			//政策搭雏总数量
+			BigDecimal allotherItemAmt = BigDecimal.ZERO;
+			//政策搭雏总金额
+			BigDecimal alltempItemAmt = BigDecimal.ZERO;
+			//实际搭雏总数量
+			BigDecimal allchickenRetunAmt = BigDecimal.ZERO;
+			//实际搭雏总金额
+			BigDecimal alloutSaleKbAmt2 = BigDecimal.ZERO;
 			if(rs.size()>0) {
 				MaterialInfo mInfo;
 				while(rs.next()) {
+					//政策搭雏比例
+					BigDecimal viewItemAmt = BigDecimal.ZERO;
+					//政策搭雏数量
+					BigDecimal otherItemAmt = BigDecimal.ZERO;
+					//政策搭雏金额
+					BigDecimal tempItemAmt = BigDecimal.ZERO;
+					//实际搭雏比例
+					BigDecimal punishAmt = BigDecimal.ZERO;
+					//实际搭雏数量
+					BigDecimal chickenRetunAmt = BigDecimal.ZERO;
+					//实际搭雏金额
+					BigDecimal outSaleKbAmt2 = BigDecimal.ZERO;
+
 					CKSettleBillSeedEntryInfo entryInfo=new CKSettleBillSeedEntryInfo();
 					acPrice = rs.getBigDecimal("acPrice");
 					conPrice = rs.getBigDecimal("conPrice");
@@ -1226,27 +1301,44 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 					}
 					info.getSeedEntrys().add(entryInfo);
 					//政策搭雏比例
-					viewItemAmt = BigDecimal.ONE.subtract(rs.getBigDecimal("price").divide(acPrice,4,BigDecimal.ROUND_HALF_UP));
-					info.setViewItemAmt(viewItemAmt);
+					viewItemAmt = BigDecimal.ONE.subtract(rs.getBigDecimal("price").divide(acPrice,8,BigDecimal.ROUND_HALF_UP));
+					entryInfo.setPolicyCRate(viewItemAmt.divide(BigDecimal.ONE,4,BigDecimal.ROUND_HALF_UP));
+
+					//政策搭雏数量
+					otherItemAmt = (rs.getBigDecimal("qty")).multiply(viewItemAmt);
+					otherItemAmt = otherItemAmt.divide(BigDecimal.ONE,0,BigDecimal.ROUND_HALF_UP);
+					//政策搭雏总数量
+					allotherItemAmt = allotherItemAmt.add(otherItemAmt);
+					//政策搭雏金额
+					tempItemAmt = acPrice.multiply((rs.getBigDecimal("qty")).multiply(viewItemAmt));
+					///政策搭雏总金额
+					alltempItemAmt = alltempItemAmt.add(tempItemAmt);
+					//实际搭雏比例
+					if(acPrice.compareTo(BigDecimal.ZERO) > 0){
+						punishAmt = BigDecimal.ONE.subtract(conPrice.divide(acPrice,8,BigDecimal.ROUND_HALF_UP));
+						entryInfo.setActCRate(punishAmt.divide(BigDecimal.ONE,4,BigDecimal.ROUND_HALF_UP));
+					}else{
+						entryInfo.setActCRate(BigDecimal.ZERO);
+					}
+					//实际搭雏数量
+					chickenRetunAmt = (rs.getBigDecimal("qty")).multiply(punishAmt);
+					chickenRetunAmt = chickenRetunAmt.divide(BigDecimal.ONE,0,BigDecimal.ROUND_HALF_UP);
+					//实际搭雏总数量
+					allchickenRetunAmt = allchickenRetunAmt.add(chickenRetunAmt);
+					//实际搭雏金额
+					outSaleKbAmt2 = acPrice.multiply((rs.getBigDecimal("qty")).multiply(punishAmt));
+					//实际搭雏总金额
+					alloutSaleKbAmt2 = alloutSaleKbAmt2.add(outSaleKbAmt2);
 				}
 			}
-
-
-			//政策搭雏数量
-			BigDecimal otherItemAmt = sumQty.multiply(viewItemAmt);
-			info.setOtherItemAmt(otherItemAmt);
-			//政策搭雏金额
-			BigDecimal tempItemAmt = acPrice.multiply(otherItemAmt);
-			info.setTempItemAmt(tempItemAmt);
-			//实际搭雏比例
-			BigDecimal punishAmt = BigDecimal.ONE.subtract(conPrice.divide(acPrice,4,BigDecimal.ROUND_HALF_UP));
-			info.setPunishAmt(punishAmt);
-			//实际搭雏数量
-			BigDecimal chickenRetunAmt = sumQty.multiply(punishAmt);
-			info.setChickenRetunAmt(chickenRetunAmt);
-			//实际搭雏金额
-			BigDecimal outSaleKbAmt2 = acPrice.multiply(chickenRetunAmt);
-			info.setOutSaleKbAmt2(outSaleKbAmt2);
+			//政策搭雏总数量
+			info.setOtherItemAmt(allotherItemAmt);
+			//政策搭雏总金额
+			info.setTempItemAmt(alltempItemAmt.divide(BigDecimal.ONE,2,BigDecimal.ROUND_HALF_UP));
+			//实际搭雏总数量
+			info.setChickenRetunAmt(allchickenRetunAmt);
+			//实际搭雏总金额
+			info.setOutSaleKbAmt2(alloutSaleKbAmt2.divide(BigDecimal.ONE,2,BigDecimal.ROUND_HALF_UP));
 
 			info.setBatchQty(sumQty);
 			info.setBatchAmt(allactAmount.setScale(2,BigDecimal.ROUND_HALF_UP));
@@ -1496,12 +1588,18 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 
 			//设置回收日期=第一张毛鸡回收单日期
 			Date maxBizdate = info.getRecDate();
-
 			//设置饲养天数 = 出栏日期-上苗日期+1（饲养日龄）
 			if(maxBizdate != null && maxBreedbizdate != null){
 				int betweenDate = DateCommon.dateDiff(maxBizdate, maxBreedbizdate);
 				info.setFeedDays(betweenDate+1);
 			}
+
+			if(UIRuleUtil.getInt(info.getActfeedDays()) > 0){
+				info.setActfeedDays(info.getActfeedDays());
+			}else{
+				info.setActfeedDays(info.getFeedDays());
+			}
+
 
 
 

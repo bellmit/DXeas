@@ -139,6 +139,7 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contfarmerOnlyProOne;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contproDiv;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contoccupyMargin;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contactfeedDays;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtsingleDyFee;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtpunishAmt;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtmeatRate;
@@ -211,6 +212,7 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtfarmerOnlyProOne;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtproDiv;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtoccupyMargin;
+    protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtactfeedDays;
     protected com.kingdee.bos.ctrl.kdf.table.KDTable kdtEntrys;
 	protected com.kingdee.eas.framework.client.multiDetail.DetailPanel kdtEntrys_detailPanel = null;
     protected com.kingdee.bos.ctrl.swing.KDCheckBox chkisOrdinary;
@@ -641,6 +643,7 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         this.contfarmerOnlyProOne = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contproDiv = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contoccupyMargin = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contactfeedDays = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.txtsingleDyFee = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
         this.txtpunishAmt = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
         this.txtmeatRate = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
@@ -711,6 +714,7 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         this.txtfarmerOnlyProOne = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
         this.txtproDiv = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
         this.txtoccupyMargin = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
+        this.txtactfeedDays = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
         this.kdtEntrys = new com.kingdee.bos.ctrl.kdf.table.KDTable();
         this.chkisOrdinary = new com.kingdee.bos.ctrl.swing.KDCheckBox();
         this.kDTabbedPane2 = new com.kingdee.bos.ctrl.swing.KDTabbedPane();
@@ -983,6 +987,7 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         this.contfarmerOnlyProOne.setName("contfarmerOnlyProOne");
         this.contproDiv.setName("contproDiv");
         this.contoccupyMargin.setName("contoccupyMargin");
+        this.contactfeedDays.setName("contactfeedDays");
         this.txtsingleDyFee.setName("txtsingleDyFee");
         this.txtpunishAmt.setName("txtpunishAmt");
         this.txtmeatRate.setName("txtmeatRate");
@@ -1053,6 +1058,7 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         this.txtfarmerOnlyProOne.setName("txtfarmerOnlyProOne");
         this.txtproDiv.setName("txtproDiv");
         this.txtoccupyMargin.setName("txtoccupyMargin");
+        this.txtactfeedDays.setName("txtactfeedDays");
         this.kdtEntrys.setName("kdtEntrys");
         this.chkisOrdinary.setName("chkisOrdinary");
         this.kDTabbedPane2.setName("kDTabbedPane2");
@@ -1659,6 +1665,11 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         this.contoccupyMargin.setBoundLabelLength(120);		
         this.contoccupyMargin.setBoundLabelUnderline(true);		
         this.contoccupyMargin.setVisible(true);
+        // contactfeedDays		
+        this.contactfeedDays.setBoundLabelText(resHelper.getString("contactfeedDays.boundLabelText"));		
+        this.contactfeedDays.setBoundLabelLength(100);		
+        this.contactfeedDays.setBoundLabelUnderline(true);		
+        this.contactfeedDays.setVisible(true);
         // txtsingleDyFee		
         this.txtsingleDyFee.setHorizontalAlignment(2);		
         this.txtsingleDyFee.setDataType(1);		
@@ -2422,6 +2433,12 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         this.txtoccupyMargin.setPrecision(2);		
         this.txtoccupyMargin.setRequired(false);		
         this.txtoccupyMargin.setEnabled(false);
+        // txtactfeedDays		
+        this.txtactfeedDays.setVisible(true);		
+        this.txtactfeedDays.setHorizontalAlignment(2);		
+        this.txtactfeedDays.setDataType(0);		
+        this.txtactfeedDays.setSupportedEmpty(true);		
+        this.txtactfeedDays.setRequired(false);
         // kdtEntrys
 		String kdtEntrysStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol2\"><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol3\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol4\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol5\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol6\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"id\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol0\" /><t:Column t:key=\"recType\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"qty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol2\" /><t:Column t:key=\"weight\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol3\" /><t:Column t:key=\"price\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol4\" /><t:Column t:key=\"amount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol5\" /><t:Column t:key=\"averageWgt\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol6\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{id}</t:Cell><t:Cell>$Resource{recType}</t:Cell><t:Cell>$Resource{qty}</t:Cell><t:Cell>$Resource{weight}</t:Cell><t:Cell>$Resource{price}</t:Cell><t:Cell>$Resource{amount}</t:Cell><t:Cell>$Resource{averageWgt}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
 		
@@ -3806,11 +3823,11 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         // kDPanel11
         // kDPanel12
         // kdtSeedEntrys
-		String kdtSeedEntrysStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol1\"><c:NumberFormat>&amp;date</c:NumberFormat></c:Style><c:Style id=\"sCol7\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol8\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol9\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol10\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol11\"><c:Protection locked=\"true\" hidden=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol12\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol13\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol14\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol15\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"seq\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol0\" /><t:Column t:key=\"bizDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol1\" /><t:Column t:key=\"billNumber\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"billStatus\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"bizType\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"material\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"materialName\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"qty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol7\" /><t:Column t:key=\"policyPrice\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol8\" /><t:Column t:key=\"amount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol9\" /><t:Column t:key=\"unitCost\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol10\" /><t:Column t:key=\"cost\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol11\" /><t:Column t:key=\"contPrice\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol12\" /><t:Column t:key=\"contAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol13\" /><t:Column t:key=\"actPrice\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol14\" /><t:Column t:key=\"actAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol15\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{seq}</t:Cell><t:Cell>$Resource{bizDate}</t:Cell><t:Cell>$Resource{billNumber}</t:Cell><t:Cell>$Resource{billStatus}</t:Cell><t:Cell>$Resource{bizType}</t:Cell><t:Cell>$Resource{material}</t:Cell><t:Cell>$Resource{materialName}</t:Cell><t:Cell>$Resource{qty}</t:Cell><t:Cell>$Resource{policyPrice}</t:Cell><t:Cell>$Resource{amount}</t:Cell><t:Cell>$Resource{unitCost}</t:Cell><t:Cell>$Resource{cost}</t:Cell><t:Cell>$Resource{contPrice}</t:Cell><t:Cell>$Resource{contAmount}</t:Cell><t:Cell>$Resource{actPrice}</t:Cell><t:Cell>$Resource{actAmount}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
+		String kdtSeedEntrysStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol1\"><c:NumberFormat>&amp;date</c:NumberFormat></c:Style><c:Style id=\"sCol7\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol8\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol9\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol10\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol11\"><c:Protection locked=\"true\" hidden=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol12\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol13\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol14\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol15\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol16\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol17\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"seq\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol0\" /><t:Column t:key=\"bizDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol1\" /><t:Column t:key=\"billNumber\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"billStatus\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"bizType\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"material\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"materialName\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"qty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol7\" /><t:Column t:key=\"policyPrice\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol8\" /><t:Column t:key=\"amount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol9\" /><t:Column t:key=\"unitCost\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol10\" /><t:Column t:key=\"cost\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol11\" /><t:Column t:key=\"contPrice\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol12\" /><t:Column t:key=\"contAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol13\" /><t:Column t:key=\"actPrice\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol14\" /><t:Column t:key=\"actAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol15\" /><t:Column t:key=\"policyCRate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol16\" /><t:Column t:key=\"actCRate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol17\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{seq}</t:Cell><t:Cell>$Resource{bizDate}</t:Cell><t:Cell>$Resource{billNumber}</t:Cell><t:Cell>$Resource{billStatus}</t:Cell><t:Cell>$Resource{bizType}</t:Cell><t:Cell>$Resource{material}</t:Cell><t:Cell>$Resource{materialName}</t:Cell><t:Cell>$Resource{qty}</t:Cell><t:Cell>$Resource{policyPrice}</t:Cell><t:Cell>$Resource{amount}</t:Cell><t:Cell>$Resource{unitCost}</t:Cell><t:Cell>$Resource{cost}</t:Cell><t:Cell>$Resource{contPrice}</t:Cell><t:Cell>$Resource{contAmount}</t:Cell><t:Cell>$Resource{actPrice}</t:Cell><t:Cell>$Resource{actAmount}</t:Cell><t:Cell>$Resource{policyCRate}</t:Cell><t:Cell>$Resource{actCRate}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
 		
         this.kdtSeedEntrys.setFormatXml(resHelper.translateString("kdtSeedEntrys",kdtSeedEntrysStrXML));
 
-                this.kdtSeedEntrys.putBindContents("editData",new String[] {"seq","bizDate","billNumber","billStatus","bizType","material","materialName","qty","policyPrice","amount","unitCost","cost","contPrice","contAmount","actPrice","actAmount"});
+                this.kdtSeedEntrys.putBindContents("editData",new String[] {"seq","bizDate","billNumber","billStatus","bizType","material","materialName","qty","policyPrice","amount","unitCost","cost","contPrice","contAmount","actPrice","actAmount","policyCRate","actCRate"});
 
 
         this.kdtSeedEntrys.checkParsed();
@@ -3961,6 +3978,28 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         kdtSeedEntrys_actAmount_TextField.setPrecision(10);
         KDTDefaultCellEditor kdtSeedEntrys_actAmount_CellEditor = new KDTDefaultCellEditor(kdtSeedEntrys_actAmount_TextField);
         this.kdtSeedEntrys.getColumn("actAmount").setEditor(kdtSeedEntrys_actAmount_CellEditor);
+        KDFormattedTextField kdtSeedEntrys_policyCRate_TextField = new KDFormattedTextField();
+        kdtSeedEntrys_policyCRate_TextField.setName("kdtSeedEntrys_policyCRate_TextField");
+        kdtSeedEntrys_policyCRate_TextField.setVisible(true);
+        kdtSeedEntrys_policyCRate_TextField.setEditable(true);
+        kdtSeedEntrys_policyCRate_TextField.setHorizontalAlignment(2);
+        kdtSeedEntrys_policyCRate_TextField.setDataType(1);
+        	kdtSeedEntrys_policyCRate_TextField.setMinimumValue(new java.math.BigDecimal("-9.999999999999999E22"));
+        	kdtSeedEntrys_policyCRate_TextField.setMaximumValue(new java.math.BigDecimal("9.999999999999999E22"));
+        kdtSeedEntrys_policyCRate_TextField.setPrecision(5);
+        KDTDefaultCellEditor kdtSeedEntrys_policyCRate_CellEditor = new KDTDefaultCellEditor(kdtSeedEntrys_policyCRate_TextField);
+        this.kdtSeedEntrys.getColumn("policyCRate").setEditor(kdtSeedEntrys_policyCRate_CellEditor);
+        KDFormattedTextField kdtSeedEntrys_actCRate_TextField = new KDFormattedTextField();
+        kdtSeedEntrys_actCRate_TextField.setName("kdtSeedEntrys_actCRate_TextField");
+        kdtSeedEntrys_actCRate_TextField.setVisible(true);
+        kdtSeedEntrys_actCRate_TextField.setEditable(true);
+        kdtSeedEntrys_actCRate_TextField.setHorizontalAlignment(2);
+        kdtSeedEntrys_actCRate_TextField.setDataType(1);
+        	kdtSeedEntrys_actCRate_TextField.setMinimumValue(new java.math.BigDecimal("-9.999999999999999E22"));
+        	kdtSeedEntrys_actCRate_TextField.setMaximumValue(new java.math.BigDecimal("9.999999999999999E22"));
+        kdtSeedEntrys_actCRate_TextField.setPrecision(5);
+        KDTDefaultCellEditor kdtSeedEntrys_actCRate_CellEditor = new KDTDefaultCellEditor(kdtSeedEntrys_actCRate_TextField);
+        this.kdtSeedEntrys.getColumn("actCRate").setEditor(kdtSeedEntrys_actCRate_CellEditor);
         // kdtFodderEntrys
 		String kdtFodderEntrysStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol1\"><c:NumberFormat>&amp;date</c:NumberFormat></c:Style><c:Style id=\"sCol9\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol10\"><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol11\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol12\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol13\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol14\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol15\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol16\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;double</c:NumberFormat></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"seq\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol0\" /><t:Column t:key=\"bizDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol1\" /><t:Column t:key=\"billNumber\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"billStatus\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"bizType\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"Car\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"driver\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"material\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"materialName\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"unitQty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol9\" /><t:Column t:key=\"bagQty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol10\" /><t:Column t:key=\"qty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol11\" /><t:Column t:key=\"policyPrice\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol12\" /><t:Column t:key=\"amount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol13\" /><t:Column t:key=\"hjFee\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol14\" /><t:Column t:key=\"unitCost\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol15\" /><t:Column t:key=\"cost\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol16\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{seq}</t:Cell><t:Cell>$Resource{bizDate}</t:Cell><t:Cell>$Resource{billNumber}</t:Cell><t:Cell>$Resource{billStatus}</t:Cell><t:Cell>$Resource{bizType}</t:Cell><t:Cell>$Resource{Car}</t:Cell><t:Cell>$Resource{driver}</t:Cell><t:Cell>$Resource{material}</t:Cell><t:Cell>$Resource{materialName}</t:Cell><t:Cell>$Resource{unitQty}</t:Cell><t:Cell>$Resource{bagQty}</t:Cell><t:Cell>$Resource{qty}</t:Cell><t:Cell>$Resource{policyPrice}</t:Cell><t:Cell>$Resource{amount}</t:Cell><t:Cell>$Resource{hjFee}</t:Cell><t:Cell>$Resource{unitCost}</t:Cell><t:Cell>$Resource{cost}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
 		
@@ -4517,7 +4556,7 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         // btnUnClose
         this.btnUnClose.setAction((IItemAction)ActionProxyFactory.getProxy(actionUnClose, new Class[] { IItemAction.class }, getServiceContext()));		
         this.btnUnClose.setText(resHelper.getString("btnUnClose.text"));
-        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {chkFivouchered,prmtFICompany,txtNumber,pkBizDate,txtDescription,prmtAuditor,prmtCreator,kDDateCreateTime,prmtLastUpdateUser,kDDateLastUpdateTime,prmtstorageOrgUnit,billStatus,prmtfarmer,prmtfarm,prmtbatchContract,prmtbatch,prmtbreedData,pkcFBeginDate,pkcFEndDate,prmtconFeedPolicy,txtconFeededNum,prmtbEBank,txtbankNum,txtbEBankAddress,prmtperson,pkinDate,txtbatchQty,txtbatchAmt,txtfeedWgt,txtfeedQty,txtfeedAmt,txtdrugAmt,pkrecDate,txtrecQty,txtpreHouseWgt,txtpunishWgt,txtsettleWgt,txtmeatRate,txtsurvivalRate,txtchickenAveWgt,txtfeedDays,txtmlyAllAmt,txtrecAmt,txtpunishAmt,txtmarginAmt,txtadPayAmount,txtdyFee,txtsingleDyFee,chkisHasPaymentBill,chkisKouBZJ,txtmRatePAmt,txtactualMRate,txtstandardMRate,txtdrugLackPAmt,txtsingleActualDrug,txtsingleStandardDrug,txtmarginOccupyFee,txtbatchOccupyMargin,txtstandardMargin,txtsingleMargin,txtconFeedSubsidies,prmtkbConFeedPolicy,txtcontractCKWgt,txtfreightDiffSubsidies,txtlFeedWgt,txtfreightPrice,txtfreightSubsidiesStd,txtdeductMargin,txttotalMargin,txtoccupyMargin,txtenableMargin,txtdeductAdPayAmt,txtloanRate,txtkYFKOccupyFee,pkauditTime,txtsingleDrugAmt,txtsingleFeedWgt,txtoValue,prmtconFeedContract,txtfmRatePunishStd,txtdyfBalance,txtkbItemAmt,txtQCItemAmt,txtviewItemAmt,txtotherItemAmt,txttempItemAmt,txtmoneyOccupyDays,txtconFeedPolicySub,txtpayOweMonery,txtoutSaleKbAmt,txtactualPayAmt,txtpayOweMoneryB,txtSeedCost,txtfodderCost,txtdrugCost,txtallocateAmt,txtunitCost,txtallCost,txtunLockedMargin,txtrecSuttle,txtadPayBalance,prmtsettlePolicy,txtQCKbDetail,txtotherKbDetail,farmsType,txtoutSaleKbAmt2,txtimmuneCost,txtimmuneCostOne,txtcleanHouse,txtcleanHouseOne,txtreserveRiskCost,txtactualFoder,txtstandFodder,txtoneMrgin,txtmarginGAmount,txtchickenRetunAmt,txtlongBorrowAmount,txtlongBorrowReturn,txtmarginProfit,txtbeforeBatchAmount,txtborrowAmiunt,txtspecialBorrowinst,txttranCost,txtbrokenCost,txtcoalCost,txtidCodeCode,txtfarmAddress,chknoCalFodderPunish,chknoCalDrupPunish,txtequipmentReAmt,txtspecialPermitAmt,txtgetChickCost,txtcleanHouseCost,txtchickenSource,kdtQCEntrys,prmtperiod,txtdaiyFee,txtcompanyProfit,txtcleanTowerCost,kdtEntrys,txtnowAccountBac,txtassetsOccupy,prmtcostCenter,chkisOrdinary,kdtViewReqEntrys,txtdrugQty,txtnoPfoRetAmt,txtfarmeronlyPro,txtfarmerOnlyProOne,kdtOtherEntrys,txtotherMatCost,chkactualVoucher,chkpreVoucher,chktransVoucher,kdtSeedEntrys,chkhasPay,kdtFodderEntrys,kdtDrugEntrys,kdtSlaughterEntrys,kdtSaleEntrys,kdtPreHouseEntrys,kdtSeedSourceEntrys,kdtTempPolicyEntrys,txtproDiv,txtcompanyTC,txtdiverCt}));
+        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {chkFivouchered,prmtFICompany,txtNumber,pkBizDate,txtDescription,prmtAuditor,prmtCreator,kDDateCreateTime,prmtLastUpdateUser,kDDateLastUpdateTime,prmtstorageOrgUnit,billStatus,prmtfarmer,prmtfarm,prmtbatchContract,prmtbatch,prmtbreedData,pkcFBeginDate,pkcFEndDate,prmtconFeedPolicy,txtconFeededNum,prmtbEBank,txtbankNum,txtbEBankAddress,prmtperson,pkinDate,txtbatchQty,txtbatchAmt,txtfeedWgt,txtfeedQty,txtfeedAmt,txtdrugAmt,pkrecDate,txtrecQty,txtpreHouseWgt,txtpunishWgt,txtsettleWgt,txtmeatRate,txtsurvivalRate,txtchickenAveWgt,txtfeedDays,txtmlyAllAmt,txtrecAmt,txtpunishAmt,txtmarginAmt,txtadPayAmount,txtdyFee,txtsingleDyFee,chkisHasPaymentBill,chkisKouBZJ,txtmRatePAmt,txtactualMRate,txtstandardMRate,txtdrugLackPAmt,txtsingleActualDrug,txtsingleStandardDrug,txtmarginOccupyFee,txtbatchOccupyMargin,txtstandardMargin,txtsingleMargin,txtconFeedSubsidies,prmtkbConFeedPolicy,txtcontractCKWgt,txtfreightDiffSubsidies,txtlFeedWgt,txtfreightPrice,txtfreightSubsidiesStd,txtdeductMargin,txttotalMargin,txtoccupyMargin,txtenableMargin,txtdeductAdPayAmt,txtloanRate,txtkYFKOccupyFee,pkauditTime,txtsingleDrugAmt,txtsingleFeedWgt,txtoValue,prmtconFeedContract,txtfmRatePunishStd,txtdyfBalance,txtkbItemAmt,txtQCItemAmt,txtviewItemAmt,txtotherItemAmt,txttempItemAmt,txtmoneyOccupyDays,txtconFeedPolicySub,txtpayOweMonery,txtoutSaleKbAmt,txtactualPayAmt,txtpayOweMoneryB,txtSeedCost,txtfodderCost,txtdrugCost,txtallocateAmt,txtunitCost,txtallCost,txtunLockedMargin,txtrecSuttle,txtadPayBalance,prmtsettlePolicy,txtQCKbDetail,txtotherKbDetail,farmsType,txtoutSaleKbAmt2,txtimmuneCost,txtimmuneCostOne,txtcleanHouse,txtcleanHouseOne,txtreserveRiskCost,txtactualFoder,txtstandFodder,txtoneMrgin,txtmarginGAmount,txtchickenRetunAmt,txtlongBorrowAmount,txtlongBorrowReturn,txtmarginProfit,txtbeforeBatchAmount,txtborrowAmiunt,txtspecialBorrowinst,txttranCost,txtbrokenCost,txtcoalCost,txtidCodeCode,txtfarmAddress,chknoCalFodderPunish,chknoCalDrupPunish,txtequipmentReAmt,txtspecialPermitAmt,txtgetChickCost,txtcleanHouseCost,txtchickenSource,kdtQCEntrys,prmtperiod,txtdaiyFee,txtcompanyProfit,txtcleanTowerCost,kdtEntrys,txtnowAccountBac,txtassetsOccupy,prmtcostCenter,chkisOrdinary,kdtViewReqEntrys,txtdrugQty,txtnoPfoRetAmt,txtfarmeronlyPro,txtfarmerOnlyProOne,kdtOtherEntrys,txtotherMatCost,chkactualVoucher,chkpreVoucher,chktransVoucher,kdtSeedEntrys,chkhasPay,kdtFodderEntrys,kdtDrugEntrys,kdtSlaughterEntrys,kdtSaleEntrys,kdtPreHouseEntrys,kdtSeedSourceEntrys,kdtTempPolicyEntrys,txtproDiv,txtcompanyTC,txtdiverCt,txtactfeedDays}));
         this.setFocusCycleRoot(true);
 		//Register control's property binding
 		registerBindings();
@@ -4586,10 +4625,10 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         kDPanel1.setLayout(new KDLayout());
         kDPanel1.putClientProperty("OriginalBounds", new Rectangle(0, 0, 1170, 538));        chkFivouchered.setBounds(new Rectangle(20, 522, 119, 19));
         kDPanel1.add(chkFivouchered, new KDLayout.Constraints(20, 522, 119, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contsingleDyFee.setBounds(new Rectangle(300, 251, 270, 19));
-        kDPanel1.add(contsingleDyFee, new KDLayout.Constraints(300, 251, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contpunishAmt.setBounds(new Rectangle(300, 224, 270, 19));
-        kDPanel1.add(contpunishAmt, new KDLayout.Constraints(300, 224, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contsingleDyFee.setBounds(new Rectangle(300, 224, 270, 19));
+        kDPanel1.add(contsingleDyFee, new KDLayout.Constraints(300, 224, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contpunishAmt.setBounds(new Rectangle(876, 457, 270, 19));
+        kDPanel1.add(contpunishAmt, new KDLayout.Constraints(876, 457, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contmeatRate.setBounds(new Rectangle(300, 170, 270, 19));
         kDPanel1.add(contmeatRate, new KDLayout.Constraints(300, 170, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contpreHouseWgt.setBounds(new Rectangle(528, 497, 270, 19));
@@ -4598,8 +4637,8 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         kDPanel1.add(contdrugAmt, new KDLayout.Constraints(579, 143, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contbatchAmt.setBounds(new Rectangle(15, 143, 270, 19));
         kDPanel1.add(contbatchAmt, new KDLayout.Constraints(15, 143, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contbEBankAddress.setBounds(new Rectangle(299, 330, 270, 19));
-        kDPanel1.add(contbEBankAddress, new KDLayout.Constraints(299, 330, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contbEBankAddress.setBounds(new Rectangle(297, 304, 270, 19));
+        kDPanel1.add(contbEBankAddress, new KDLayout.Constraints(297, 304, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contconFeedPolicy.setBounds(new Rectangle(578, 357, 270, 19));
         kDPanel1.add(contconFeedPolicy, new KDLayout.Constraints(578, 357, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contbatch.setBounds(new Rectangle(579, 384, 270, 19));
@@ -4614,10 +4653,10 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         kDPanel1.add(contfarmer, new KDLayout.Constraints(15, 35, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contbreedData.setBounds(new Rectangle(859, 330, 270, 19));
         kDPanel1.add(contbreedData, new KDLayout.Constraints(859, 330, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contconFeededNum.setBounds(new Rectangle(15, 410, 270, 19));
-        kDPanel1.add(contconFeededNum, new KDLayout.Constraints(15, 410, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contperson.setBounds(new Rectangle(579, 276, 270, 19));
-        kDPanel1.add(contperson, new KDLayout.Constraints(579, 276, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contconFeededNum.setBounds(new Rectangle(16, 357, 270, 19));
+        kDPanel1.add(contconFeededNum, new KDLayout.Constraints(16, 357, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contperson.setBounds(new Rectangle(298, 251, 270, 19));
+        kDPanel1.add(contperson, new KDLayout.Constraints(298, 251, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contfeedWgt.setBounds(new Rectangle(300, 116, 270, 19));
         kDPanel1.add(contfeedWgt, new KDLayout.Constraints(300, 116, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contrecDate.setBounds(new Rectangle(858, 62, 270, 19));
@@ -4626,8 +4665,8 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         kDPanel1.add(contpunishWgt, new KDLayout.Constraints(858, 170, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contsurvivalRate.setBounds(new Rectangle(300, 89, 270, 19));
         kDPanel1.add(contsurvivalRate, new KDLayout.Constraints(300, 89, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contmarginAmt.setBounds(new Rectangle(15, 303, 270, 19));
-        kDPanel1.add(contmarginAmt, new KDLayout.Constraints(15, 303, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contmarginAmt.setBounds(new Rectangle(16, 250, 270, 19));
+        kDPanel1.add(contmarginAmt, new KDLayout.Constraints(16, 250, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         chkisHasPaymentBill.setBounds(new Rectangle(299, 522, 126, 19));
         kDPanel1.add(chkisHasPaymentBill, new KDLayout.Constraints(299, 522, 126, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         chkisKouBZJ.setBounds(new Rectangle(163, 522, 122, 19));
@@ -4640,14 +4679,14 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         kDPanel1.add(contchickenAveWgt, new KDLayout.Constraints(579, 89, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contsettleWgt.setBounds(new Rectangle(15, 170, 270, 19));
         kDPanel1.add(contsettleWgt, new KDLayout.Constraints(15, 170, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contrecQty.setBounds(new Rectangle(15, 89, 270, 19));
-        kDPanel1.add(contrecQty, new KDLayout.Constraints(15, 89, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contrecQty.setBounds(new Rectangle(15, 116, 270, 19));
+        kDPanel1.add(contrecQty, new KDLayout.Constraints(15, 116, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contfeedQty.setBounds(new Rectangle(789, -31, 270, 19));
         kDPanel1.add(contfeedQty, new KDLayout.Constraints(789, -31, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         continDate.setBounds(new Rectangle(579, 62, 270, 19));
         kDPanel1.add(continDate, new KDLayout.Constraints(579, 62, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contbEBank.setBounds(new Rectangle(15, 384, 270, 19));
-        kDPanel1.add(contbEBank, new KDLayout.Constraints(15, 384, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contbEBank.setBounds(new Rectangle(16, 330, 270, 19));
+        kDPanel1.add(contbEBank, new KDLayout.Constraints(16, 330, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contcFBeginDate.setBounds(new Rectangle(578, 303, 270, 19));
         kDPanel1.add(contcFBeginDate, new KDLayout.Constraints(578, 303, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contfarm.setBounds(new Rectangle(579, 35, 270, 19));
@@ -4662,16 +4701,16 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         kDPanel1.add(contcFEndDate, new KDLayout.Constraints(859, 357, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contbankNum.setBounds(new Rectangle(578, 330, 270, 19));
         kDPanel1.add(contbankNum, new KDLayout.Constraints(578, 330, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contbatchQty.setBounds(new Rectangle(15, 116, 270, 19));
-        kDPanel1.add(contbatchQty, new KDLayout.Constraints(15, 116, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contbatchQty.setBounds(new Rectangle(15, 89, 270, 19));
+        kDPanel1.add(contbatchQty, new KDLayout.Constraints(15, 89, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contfeedAmt.setBounds(new Rectangle(300, 143, 270, 19));
         kDPanel1.add(contfeedAmt, new KDLayout.Constraints(300, 143, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contfeedDays.setBounds(new Rectangle(858, 89, 270, 19));
-        kDPanel1.add(contfeedDays, new KDLayout.Constraints(858, 89, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contfeedDays.setBounds(new Rectangle(1135, 90, 270, 19));
+        kDPanel1.add(contfeedDays, new KDLayout.Constraints(1135, 90, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contrecAmt.setBounds(new Rectangle(859, 250, 270, 19));
         kDPanel1.add(contrecAmt, new KDLayout.Constraints(859, 250, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contdyFee.setBounds(new Rectangle(15, 251, 270, 19));
-        kDPanel1.add(contdyFee, new KDLayout.Constraints(15, 251, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contdyFee.setBounds(new Rectangle(15, 224, 270, 19));
+        kDPanel1.add(contdyFee, new KDLayout.Constraints(15, 224, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contsingleDrugAmt.setBounds(new Rectangle(858, 116, 270, 19));
         kDPanel1.add(contsingleDrugAmt, new KDLayout.Constraints(858, 116, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contsingleFeedWgt.setBounds(new Rectangle(579, 116, 270, 19));
@@ -4684,20 +4723,20 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         kDPanel1.add(contkbItemAmt, new KDLayout.Constraints(15, 197, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contQCItemAmt.setBounds(new Rectangle(300, 197, 270, 19));
         kDPanel1.add(contQCItemAmt, new KDLayout.Constraints(300, 197, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contviewItemAmt.setBounds(new Rectangle(579, 197, 270, 19));
-        kDPanel1.add(contviewItemAmt, new KDLayout.Constraints(579, 197, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contotherItemAmt.setBounds(new Rectangle(858, 197, 270, 19));
-        kDPanel1.add(contotherItemAmt, new KDLayout.Constraints(858, 197, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        conttempItemAmt.setBounds(new Rectangle(15, 224, 270, 19));
-        kDPanel1.add(conttempItemAmt, new KDLayout.Constraints(15, 224, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contpayOweMoneryB.setBounds(new Rectangle(223, 493, 270, 19));
-        kDPanel1.add(contpayOweMoneryB, new KDLayout.Constraints(223, 493, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contviewItemAmt.setBounds(new Rectangle(579, 457, 270, 19));
+        kDPanel1.add(contviewItemAmt, new KDLayout.Constraints(579, 457, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contotherItemAmt.setBounds(new Rectangle(579, 197, 270, 19));
+        kDPanel1.add(contotherItemAmt, new KDLayout.Constraints(579, 197, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        conttempItemAmt.setBounds(new Rectangle(858, 196, 270, 19));
+        kDPanel1.add(conttempItemAmt, new KDLayout.Constraints(858, 196, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contpayOweMoneryB.setBounds(new Rectangle(859, 277, 270, 19));
+        kDPanel1.add(contpayOweMoneryB, new KDLayout.Constraints(859, 277, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contrecSuttle.setBounds(new Rectangle(501, 493, 270, 19));
         kDPanel1.add(contrecSuttle, new KDLayout.Constraints(501, 493, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contsettlePolicy.setBounds(new Rectangle(298, 384, 270, 19));
-        kDPanel1.add(contsettlePolicy, new KDLayout.Constraints(298, 384, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contfarmsType.setBounds(new Rectangle(299, 357, 270, 19));
-        kDPanel1.add(contfarmsType, new KDLayout.Constraints(299, 357, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contsettlePolicy.setBounds(new Rectangle(296, 358, 270, 19));
+        kDPanel1.add(contsettlePolicy, new KDLayout.Constraints(296, 358, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contfarmsType.setBounds(new Rectangle(297, 331, 270, 19));
+        kDPanel1.add(contfarmsType, new KDLayout.Constraints(297, 331, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contoutSaleKbAmt2.setBounds(new Rectangle(858, 224, 270, 19));
         kDPanel1.add(contoutSaleKbAmt2, new KDLayout.Constraints(858, 224, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         kDPanel14.setBounds(new Rectangle(1076, 504, 78, 26));
@@ -4716,20 +4755,22 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         kDPanel1.add(contchickenSource, new KDLayout.Constraints(859, 301, 272, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contperiod.setBounds(new Rectangle(579, 251, 270, 19));
         kDPanel1.add(contperiod, new KDLayout.Constraints(579, 251, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contoneMrgin.setBounds(new Rectangle(15, 357, 270, 19));
-        kDPanel1.add(contoneMrgin, new KDLayout.Constraints(15, 357, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contcostCenter.setBounds(new Rectangle(299, 303, 270, 19));
-        kDPanel1.add(contcostCenter, new KDLayout.Constraints(299, 303, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contdrugQty.setBounds(new Rectangle(298, 410, 270, 19));
-        kDPanel1.add(contdrugQty, new KDLayout.Constraints(298, 410, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contoneMrgin.setBounds(new Rectangle(16, 303, 270, 19));
+        kDPanel1.add(contoneMrgin, new KDLayout.Constraints(16, 303, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contcostCenter.setBounds(new Rectangle(297, 277, 270, 19));
+        kDPanel1.add(contcostCenter, new KDLayout.Constraints(297, 277, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contdrugQty.setBounds(new Rectangle(296, 384, 270, 19));
+        kDPanel1.add(contdrugQty, new KDLayout.Constraints(296, 384, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contfarmeronlyPro.setBounds(new Rectangle(18, 455, 270, 19));
         kDPanel1.add(contfarmeronlyPro, new KDLayout.Constraints(18, 455, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contfarmerOnlyProOne.setBounds(new Rectangle(303, 455, 270, 19));
         kDPanel1.add(contfarmerOnlyProOne, new KDLayout.Constraints(303, 455, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contproDiv.setBounds(new Rectangle(859, 276, 270, 19));
-        kDPanel1.add(contproDiv, new KDLayout.Constraints(859, 276, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contoccupyMargin.setBounds(new Rectangle(15, 330, 270, 19));
-        kDPanel1.add(contoccupyMargin, new KDLayout.Constraints(15, 330, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contproDiv.setBounds(new Rectangle(579, 277, 270, 19));
+        kDPanel1.add(contproDiv, new KDLayout.Constraints(579, 277, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contoccupyMargin.setBounds(new Rectangle(16, 277, 270, 19));
+        kDPanel1.add(contoccupyMargin, new KDLayout.Constraints(16, 277, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contactfeedDays.setBounds(new Rectangle(858, 89, 270, 19));
+        kDPanel1.add(contactfeedDays, new KDLayout.Constraints(858, 89, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         //contsingleDyFee
         contsingleDyFee.setBoundEditor(txtsingleDyFee);
         //contpunishAmt
@@ -4884,6 +4925,8 @@ vo.put("billStatus",new Integer(-1));
         contproDiv.setBoundEditor(txtproDiv);
         //contoccupyMargin
         contoccupyMargin.setBoundEditor(txtoccupyMargin);
+        //contactfeedDays
+        contactfeedDays.setBoundEditor(txtactfeedDays);
         //kDPanel13
         kDPanel13.setLayout(new KDLayout());
         kDPanel13.putClientProperty("OriginalBounds", new Rectangle(0, 0, 1170, 538));        kdtEntrys.setBounds(new Rectangle(7, 39, 1153, 489));
@@ -5611,6 +5654,7 @@ vo.put("saleType","0");
 		dataBinder.registerBinding("farmerOnlyProOne", java.math.BigDecimal.class, this.txtfarmerOnlyProOne, "value");
 		dataBinder.registerBinding("proDiv", java.math.BigDecimal.class, this.txtproDiv, "value");
 		dataBinder.registerBinding("occupyMargin", java.math.BigDecimal.class, this.txtoccupyMargin, "value");
+		dataBinder.registerBinding("actfeedDays", int.class, this.txtactfeedDays, "value");
 		dataBinder.registerBinding("entrys.id", com.kingdee.bos.util.BOSUuid.class, this.kdtEntrys, "id.text");
 		dataBinder.registerBinding("entrys", com.kingdee.eas.farm.carnivorous.recyclebiz.CKSettleBillEntryInfo.class, this.kdtEntrys, "userObject");
 		dataBinder.registerBinding("entrys.recType", com.kingdee.util.enums.Enum.class, this.kdtEntrys, "recType.text");
@@ -5745,6 +5789,8 @@ vo.put("saleType","0");
 		dataBinder.registerBinding("SeedEntrys.contAmount", java.math.BigDecimal.class, this.kdtSeedEntrys, "contAmount.text");
 		dataBinder.registerBinding("SeedEntrys.actPrice", java.math.BigDecimal.class, this.kdtSeedEntrys, "actPrice.text");
 		dataBinder.registerBinding("SeedEntrys.actAmount", java.math.BigDecimal.class, this.kdtSeedEntrys, "actAmount.text");
+		dataBinder.registerBinding("SeedEntrys.policyCRate", java.math.BigDecimal.class, this.kdtSeedEntrys, "policyCRate.text");
+		dataBinder.registerBinding("SeedEntrys.actCRate", java.math.BigDecimal.class, this.kdtSeedEntrys, "actCRate.text");
 		dataBinder.registerBinding("FodderEntrys.seq", int.class, this.kdtFodderEntrys, "seq.text");
 		dataBinder.registerBinding("FodderEntrys", com.kingdee.eas.farm.carnivorous.recyclebiz.CKSettleBillFodderEntryInfo.class, this.kdtFodderEntrys, "userObject");
 		dataBinder.registerBinding("FodderEntrys.bizDate", java.util.Date.class, this.kdtFodderEntrys, "bizDate.text");
@@ -6037,6 +6083,7 @@ vo.put("saleType","0");
 		getValidateHelper().registerBindProperty("farmerOnlyProOne", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("proDiv", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("occupyMargin", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("actfeedDays", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("entrys.id", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("entrys", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("entrys.recType", ValidateHelper.ON_SAVE);    
@@ -6171,6 +6218,8 @@ vo.put("saleType","0");
 		getValidateHelper().registerBindProperty("SeedEntrys.contAmount", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("SeedEntrys.actPrice", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("SeedEntrys.actAmount", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("SeedEntrys.policyCRate", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("SeedEntrys.actCRate", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("FodderEntrys.seq", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("FodderEntrys", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("FodderEntrys.bizDate", ValidateHelper.ON_SAVE);    
@@ -6510,6 +6559,7 @@ vo.put("saleType","0");
         sic.add(new SelectorItemInfo("farmerOnlyProOne"));
         sic.add(new SelectorItemInfo("proDiv"));
         sic.add(new SelectorItemInfo("occupyMargin"));
+        sic.add(new SelectorItemInfo("actfeedDays"));
     	sic.add(new SelectorItemInfo("entrys.id"));
 		if(selectorAll.equalsIgnoreCase("true"))
 		{
@@ -6722,6 +6772,8 @@ vo.put("saleType","0");
     	sic.add(new SelectorItemInfo("SeedEntrys.contAmount"));
     	sic.add(new SelectorItemInfo("SeedEntrys.actPrice"));
     	sic.add(new SelectorItemInfo("SeedEntrys.actAmount"));
+    	sic.add(new SelectorItemInfo("SeedEntrys.policyCRate"));
+    	sic.add(new SelectorItemInfo("SeedEntrys.actCRate"));
     	sic.add(new SelectorItemInfo("FodderEntrys.seq"));
 		if(selectorAll.equalsIgnoreCase("true"))
 		{

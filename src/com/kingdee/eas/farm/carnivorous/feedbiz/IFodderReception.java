@@ -35,4 +35,5 @@ public interface IFodderReception extends ICoreBillBase
     public void batchSubmit(FodderReceptionInfo model) throws BOSException;
     public void close(FodderReceptionInfo model) throws BOSException, EASBizException;
     public void unClose(FodderReceptionInfo model) throws BOSException, EASBizException;
+    public void updatePrice(FodderReceptionInfo model) throws BOSException;
 }

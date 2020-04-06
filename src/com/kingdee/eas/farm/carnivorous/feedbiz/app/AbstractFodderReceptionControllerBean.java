@@ -340,6 +340,26 @@ public abstract class AbstractFodderReceptionControllerBean extends CoreBillBase
         return;
     }
 
+    public void updatePrice(Context ctx, FodderReceptionInfo model) throws BOSException
+    {
+        try {
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("afafa026-ac26-409c-9317-c8735576bf2e"), new Object[]{ctx, model});
+            invokeServiceBefore(svcCtx);
+              if(!svcCtx.invokeBreak()) {
+            _updatePrice(ctx, model);
+            }
+            invokeServiceAfter(svcCtx);
+        } catch (BOSException ex) {
+            throw ex;
+        } finally {
+            super.cleanUpServiceState();
+        }
+    }
+    protected void _updatePrice(Context ctx, IObjectValue model) throws BOSException
+    {    	
+        return;
+    }
+
     public CoreBillBaseCollection getCoreBillBaseCollection (Context ctx) throws BOSException
     {
     	return (CoreBillBaseCollection)(getFodderReceptionCollection(ctx).cast(CoreBillBaseCollection.class));

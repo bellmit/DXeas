@@ -33,4 +33,5 @@ public interface IBreedSeedReceiveBill extends ICoreBillBase
     public void chkVoucherAll(BreedSeedReceiveBillInfo model) throws BOSException;
     public void close(BreedSeedReceiveBillInfo model) throws BOSException, EASBizException;
     public void unClose(BreedSeedReceiveBillInfo model) throws BOSException, EASBizException;
+    public void updatePrice(BreedSeedReceiveBillInfo model) throws BOSException;
 }

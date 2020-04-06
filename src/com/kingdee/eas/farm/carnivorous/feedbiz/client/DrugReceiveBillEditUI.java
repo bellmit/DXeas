@@ -115,6 +115,7 @@ import com.kingdee.eas.farm.carnivorous.feedbiz.DrugReceiveBillInfo;
 import com.kingdee.eas.farm.carnivorous.feedbiz.FodderBillType;
 import com.kingdee.eas.farm.stocking.basedata.SettleItemType;
 import com.kingdee.eas.farm.stocking.basedata.StockingBatchFactory;
+import com.kingdee.eas.farm.stocking.basedata.StockingFarmTypeEnum;
 import com.kingdee.eas.farm.stocking.processbizill.BreedSeedBillFactory;
 import com.kingdee.eas.farm.stocking.processbizill.BreedSeedBillInfo;
 import com.kingdee.eas.framework.ObjectValueUtil;
@@ -690,19 +691,23 @@ public class DrugReceiveBillEditUI extends AbstractDrugReceiveBillEditUI
 								// TODO Auto-generated catch block
 								e1.printStackTrace();
 							}				
-//							String farmID=((IPropertyContainer)prmtfarm.getValue()).getString("id");
-//							FarmInfo farm;
-//							try {
-//								farm = FarmFactory.getRemoteInstance().getFarmInfo(new ObjectUuidPK(farmID));
-//							} catch (EASBizException e1) {
-//								// TODO Auto-generated catch block
-//								e1.printStackTrace();
-//							} catch (BOSException e1) {
-//								// TODO Auto-generated catch block
-//								e1.printStackTrace();
-//							}
-							farmerID=((IPropertyContainer)prmtfarmer.getValue()).getString("id");
-							//							prmtbatchContract.setValue(StockingComm.getLastBatchContractInfo(null, farmerID, farmID,true));
+							String farmID=((IPropertyContainer)prmtfarm.getValue()).getString("id");
+							FarmInfo farm;
+							try {
+								farm = FarmFactory.getRemoteInstance().getFarmInfo(new ObjectUuidPK(farmID));
+								if(farm.getFarmType().equals(StockingFarmTypeEnum.company)){
+									kdtEntrys.getColumn("receivePrice").getStyleAttributes().setLocked(false);
+								}else{
+									kdtEntrys.getColumn("receivePrice").getStyleAttributes().setLocked(true);
+								}
+							} catch (EASBizException e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							} catch (BOSException e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							}
+
 						}		;
 						isLoadField=false;
 					}

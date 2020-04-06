@@ -505,6 +505,9 @@ public class BreedSeedReceiveBillEditUI extends AbstractBreedSeedReceiveBillEdit
 		this.tBtnAudit.setIcon(EASResource.getIcon("imgTbtn_audit"));
 		this.tBtnUnAudit.setIcon(EASResource.getIcon("imgTbtn_unaudit"));
 
+		kdtEntrys.getColumn("actualAmt").getStyleAttributes().setLocked(true);
+		
+		
 
 		// prmtstorageOrg		
 		this.prmtstorageOrgUnit.setQueryInfo("com.kingdee.eas.farm.carnivorous.feedbiz.app.storageIsBizUnitQuery");		

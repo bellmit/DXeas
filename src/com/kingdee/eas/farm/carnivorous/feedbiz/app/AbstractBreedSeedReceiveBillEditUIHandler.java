@@ -44,4 +44,9 @@ public abstract class AbstractBreedSeedReceiveBillEditUIHandler extends com.king
 	}
 	protected void _handleActionUnClose(RequestContext request,ResponseContext response, Context context) throws Exception {
 	}
+	public void handleActionUpdatePrice(RequestContext request,ResponseContext response, Context context) throws Exception {
+		_handleActionUpdatePrice(request,response,context);
+	}
+	protected void _handleActionUpdatePrice(RequestContext request,ResponseContext response, Context context) throws Exception {
+	}
 }

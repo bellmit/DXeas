@@ -112,9 +112,10 @@ public class CKSettleBillEditUI extends AbstractCKSettleBillEditUI
 		txtpunishAmt.setPrecision(6);
 		txtviewItemAmt.setPrecision(6);
 		
-		
+		contviewItemAmt.setVisible(false);
+		contpunishAmt.setVisible(false);
+		contfeedDays.setVisible(false);
 		contadPayAmount.setVisible(false);
-		contpayOweMoneryB.setVisible(false);
 		contmarginAmt.setVisible(true);
 		contunLockedMargin.setVisible(true);
 		contmarginOccupyFee.setVisible(false);
@@ -173,8 +174,8 @@ public class CKSettleBillEditUI extends AbstractCKSettleBillEditUI
 		contimmuneCost.setEnabled(false);
 		contimmuneCostOne.setVisible(false);
 		
-		
-		
+		this.kdtSeedEntrys.getColumn("policyCRate").getStyleAttributes().setNumberFormat("#.0000");
+		this.kdtSeedEntrys.getColumn("actCRate").getStyleAttributes().setNumberFormat("#.0000");
 		
 		setTableToSumField(kdtSeedSourceEntrys, new String[]{"qty"});
 		setTableToSumField(kdtSeedEntrys, new String[]{"qty","amount","cost"});

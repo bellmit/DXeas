@@ -306,6 +306,26 @@ public abstract class AbstractBreedSeedReceiveBillControllerBean extends CoreBil
         return;
     }
 
+    public void updatePrice(Context ctx, BreedSeedReceiveBillInfo model) throws BOSException
+    {
+        try {
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("2b56c158-943f-48a2-9206-a66702a34e8c"), new Object[]{ctx, model});
+            invokeServiceBefore(svcCtx);
+              if(!svcCtx.invokeBreak()) {
+            _updatePrice(ctx, model);
+            }
+            invokeServiceAfter(svcCtx);
+        } catch (BOSException ex) {
+            throw ex;
+        } finally {
+            super.cleanUpServiceState();
+        }
+    }
+    protected void _updatePrice(Context ctx, IObjectValue model) throws BOSException
+    {    	
+        return;
+    }
+
     public CoreBillBaseCollection getCoreBillBaseCollection (Context ctx) throws BOSException
     {
     	return (CoreBillBaseCollection)(getBreedSeedReceiveBillCollection(ctx).cast(CoreBillBaseCollection.class));

@@ -190,6 +190,7 @@ public abstract class AbstractFodderReceptionEditUI extends com.kingdee.eas.fram
     protected ActionBatchSubmit actionBatchSubmit = null;
     protected ActionClose actionClose = null;
     protected ActionUnClose actionUnClose = null;
+    protected ActionUpdatePrice actionUpdatePrice = null;
     /**
      * output class constructor
      */
@@ -325,6 +326,14 @@ public abstract class AbstractFodderReceptionEditUI extends com.kingdee.eas.fram
          this.actionUnClose.addService(new com.kingdee.eas.framework.client.service.PermissionService());
          this.actionUnClose.addService(new com.kingdee.eas.framework.client.service.ForewarnService());
          this.actionUnClose.addService(new com.kingdee.eas.framework.client.service.WorkFlowService());
+        //actionUpdatePrice
+        this.actionUpdatePrice = new ActionUpdatePrice(this);
+        getActionManager().registerAction("actionUpdatePrice", actionUpdatePrice);
+        this.actionUpdatePrice.setExtendProperty("canForewarn", "true");
+        this.actionUpdatePrice.setExtendProperty("userDefined", "true");
+        this.actionUpdatePrice.setExtendProperty("isObjectUpdateLock", "false");
+         this.actionUpdatePrice.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+         this.actionUpdatePrice.addService(new com.kingdee.eas.framework.client.service.ForewarnService());
         this.contCreator = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contCreateTime = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contLastUpdateUser = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
@@ -3232,6 +3241,15 @@ kdtEntrys.getCell(rowIndex,"amount").setValue(com.kingdee.bos.ui.face.UIRuleUtil
     {
         com.kingdee.eas.farm.carnivorous.feedbiz.FodderReceptionFactory.getRemoteInstance().unClose(editData);
     }
+    	
+
+    /**
+     * output actionUpdatePrice_actionPerformed method
+     */
+    public void actionUpdatePrice_actionPerformed(ActionEvent e) throws Exception
+    {
+        com.kingdee.eas.farm.carnivorous.feedbiz.FodderReceptionFactory.getRemoteInstance().updatePrice(editData);
+    }
 	public RequestContext prepareActionSubmit(IItemAction itemAction) throws Exception {
 			RequestContext request = super.prepareActionSubmit(itemAction);		
 		if (request != null) {
@@ -3351,6 +3369,17 @@ kdtEntrys.getCell(rowIndex,"amount").setValue(com.kingdee.bos.ui.face.UIRuleUtil
     }
 	
 	public boolean isPrepareActionUnClose() {
+    	return false;
+    }
+	public RequestContext prepareActionUpdatePrice(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareActionUpdatePrice() {
     	return false;
     }
 
@@ -3591,6 +3620,36 @@ kdtEntrys.getCell(rowIndex,"amount").setValue(com.kingdee.bos.ui.face.UIRuleUtil
         {
         	getUIContext().put("ORG.PK", getOrgPK(this));
             innerActionPerformed("eas", AbstractFodderReceptionEditUI.this, "ActionUnClose", "actionUnClose_actionPerformed", e);
+        }
+    }
+
+    /**
+     * output ActionUpdatePrice class
+     */     
+    protected class ActionUpdatePrice extends ItemAction {     
+    
+        public ActionUpdatePrice()
+        {
+            this(null);
+        }
+
+        public ActionUpdatePrice(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            _tempStr = resHelper.getString("ActionUpdatePrice.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionUpdatePrice.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionUpdatePrice.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractFodderReceptionEditUI.this, "ActionUpdatePrice", "actionUpdatePrice_actionPerformed", e);
         }
     }
 

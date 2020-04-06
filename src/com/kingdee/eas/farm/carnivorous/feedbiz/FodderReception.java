@@ -229,4 +229,17 @@ public class FodderReception extends CoreBillBase implements IFodderReception
             throw new EJBRemoteException(err);
         }
     }
+    /**
+     *更新单价-User defined method
+     *@param model model
+     */
+    public void updatePrice(FodderReceptionInfo model) throws BOSException
+    {
+        try {
+            getController().updatePrice(getContext(), model);
+        }
+        catch(RemoteException err) {
+            throw new EJBRemoteException(err);
+        }
+    }
 }

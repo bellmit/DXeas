@@ -40,4 +40,5 @@ public interface FodderReceptionController extends CoreBillBaseController
     public void batchSubmit(Context ctx, FodderReceptionInfo model) throws BOSException, RemoteException;
     public void close(Context ctx, FodderReceptionInfo model) throws BOSException, EASBizException, RemoteException;
     public void unClose(Context ctx, FodderReceptionInfo model) throws BOSException, EASBizException, RemoteException;
+    public void updatePrice(Context ctx, FodderReceptionInfo model) throws BOSException, RemoteException;
 }

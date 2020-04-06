@@ -1268,7 +1268,7 @@ public class FodderReceptionEditUI extends AbstractFodderReceptionEditUI
 			filter.getFilterItems().add(new FilterItemInfo("id","",CompareType.EQUALS));
 		}
 		ev.setFilter(filter);
-		//		material.setEntityViewInfo(ev);
+		material.setEntityViewInfo(ev);
 
 		//³µÁ¾¹ýÂË
 		String driverID=prmtdriver.getValue()==null?null:((IPropertyContainer)prmtdriver.getValue()).getString("id");
@@ -1344,7 +1344,7 @@ public class FodderReceptionEditUI extends AbstractFodderReceptionEditUI
 		if(kdtEntrys.getColumnKey(colIndex).equals("amount")){
 			BigDecimal amount = UIRuleUtil.getBigDecimal(kdtEntrys.getCell(rowIndex, "amount").getValue());
 			BigDecimal receiveQty = UIRuleUtil.getBigDecimal(kdtEntrys.getCell(rowIndex, "receiveQty").getValue());
-			kdtEntrys.getCell(rowIndex, "receivePrice").setValue(amount.divide(receiveQty,4,BigDecimal.ROUND_HALF_UP));
+			kdtEntrys.getCell(rowIndex, "receivePrice").setValue(amount.divide(receiveQty,2,BigDecimal.ROUND_HALF_UP));
 
 
 		}

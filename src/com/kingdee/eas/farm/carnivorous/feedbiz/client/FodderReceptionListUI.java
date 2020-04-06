@@ -4,11 +4,15 @@
 package com.kingdee.eas.farm.carnivorous.feedbiz.client;
 
 import java.awt.event.ActionEvent;
+import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
@@ -29,13 +33,24 @@ import com.kingdee.bos.metadata.entity.SorterItemCollection;
 import com.kingdee.bos.metadata.entity.SorterItemInfo;
 import com.kingdee.bos.metadata.query.util.CompareType;
 import com.kingdee.bos.ui.face.CoreUIObject;
+import com.kingdee.bos.ui.face.IUIWindow;
+import com.kingdee.bos.ui.face.UIFactory;
+import com.kingdee.bos.ui.face.UIRuleUtil;
 import com.kingdee.eas.base.commonquery.client.CommonQueryDialog;
+import com.kingdee.eas.base.uiframe.client.UIModelDialog;
 import com.kingdee.eas.basedata.framework.util.KDTableUtil;
 import com.kingdee.eas.common.EASBizException;
+import com.kingdee.eas.common.client.OprtState;
+import com.kingdee.eas.common.client.UIContext;
+import com.kingdee.eas.common.client.UIFactoryName;
 import com.kingdee.eas.custom.commld.ClientUtils;
 import com.kingdee.eas.custom.commld.commUtils;
 import com.kingdee.eas.custom.commonld.CommFacadeFactory;
 import com.kingdee.eas.farm.carnivorous.basedata.IFarmer;
+import com.kingdee.eas.farm.carnivorous.comm.StockingComm;
+import com.kingdee.eas.farm.carnivorous.feedbiz.FodderReceptionEntryCollection;
+import com.kingdee.eas.farm.carnivorous.feedbiz.FodderReceptionEntryFactory;
+import com.kingdee.eas.farm.carnivorous.feedbiz.FodderReceptionEntryInfo;
 import com.kingdee.eas.farm.carnivorous.feedbiz.FodderReceptionFactory;
 import com.kingdee.eas.farm.carnivorous.feedbiz.FodderReceptionInfo;
 import com.kingdee.eas.farm.carnivorous.feedbiz.IFodderReception;
@@ -66,13 +81,13 @@ public class FodderReceptionListUI extends AbstractFodderReceptionListUI
 	{
 		super();
 	}
-	
+
 	@Override
 	protected boolean isIgnoreCUFilter() {
 		// TODO Auto-generated method stub
 		return true;
 	}
-	
+
 	public void actionClose_actionPerformed(ActionEvent e) throws Exception
 	{	
 		checkSelected();
@@ -116,7 +131,7 @@ public class FodderReceptionListUI extends AbstractFodderReceptionListUI
 		MsgBox.showInfo("反关闭成功！");
 		refreshList();
 	}
-	
+
 
 
 	/**
@@ -175,7 +190,7 @@ public class FodderReceptionListUI extends AbstractFodderReceptionListUI
 		}
 		super.actionEdit_actionPerformed(e);
 	}
-	
+
 	/**
 	 * 批量提交
 	 */
@@ -225,7 +240,7 @@ public class FodderReceptionListUI extends AbstractFodderReceptionListUI
 		this.mBtnUnAudit.setIcon(EASResource.getIcon("imgTbtn_unaudit"));
 		this.tBtnAudit.setIcon(EASResource.getIcon("imgTbtn_audit"));
 		this.tBtnUnAudit.setIcon(EASResource.getIcon("imgTbtn_unaudit"));
-		
+
 		this.tblMain.addKDTSelectListener(new KDTSelectListener(){
 			public void tableSelectChanged(KDTSelectEvent e) {
 				selectedRowChanged(e.getSelectBlock().getBeginRow());
@@ -286,12 +301,12 @@ public class FodderReceptionListUI extends AbstractFodderReceptionListUI
 		SorterItemCollection sorterItems=ev.getSorter();
 		SorterItemInfo sorterItem = null;
 
-//		if(sorterItems.size()==1){
-//			sorterItem = new SorterItemInfo(tblMain.getColumn("id").getFieldName());
-//			sorterItem.setSortType(SortType.ASCEND);
-//			if(sorterItems.getSorter().get(0).equals(sorterItem))
-//				sorterItems.clear();
-//		}
+		//		if(sorterItems.size()==1){
+		//			sorterItem = new SorterItemInfo(tblMain.getColumn("id").getFieldName());
+		//			sorterItem.setSortType(SortType.ASCEND);
+		//			if(sorterItems.getSorter().get(0).equals(sorterItem))
+		//				sorterItems.clear();
+		//		}
 
 		if (sorterItems != null && sorterItems.size() == 0) {
 			sorterItem = new SorterItemInfo(tblMain.getColumn("bizDate").getFieldName());
@@ -314,8 +329,8 @@ public class FodderReceptionListUI extends AbstractFodderReceptionListUI
 		}
 		super.beforeExcutQuery(arg0);
 	}
-	
-	
+
+
 	@Override
 	protected CommonQueryDialog initCommonQueryDialog() {
 		// TODO Auto-generated method stub
@@ -410,4 +425,60 @@ public class FodderReceptionListUI extends AbstractFodderReceptionListUI
 			e.printStackTrace();
 		}
 	}
+
+	@Override
+	public void actionUpdatePrice_actionPerformed(ActionEvent e)
+	throws Exception {
+		// TODO Auto-generated method stub
+		super.actionUpdatePrice_actionPerformed(e);
+
+		Map map=new UIContext(this);
+		//弹出UI界面
+		IUIWindow uiWindow=null; 
+		String scanUI = "com.kingdee.eas.farm.carnivorous.basedata.client.UpdatePriceByMaterial";
+		uiWindow = (UIModelDialog) UIFactory.createUIFactory(UIFactoryName.MODEL).create(
+				scanUI, map, null, OprtState.VIEW);
+		uiWindow.show();
+
+		//获取返回的 结算政策
+		Map<String,BigDecimal> uiMap = (Map<String, BigDecimal>) uiWindow.getUIObject().getUIContext().get("matEntry");
+		if(uiMap != null && uiMap.size() > 0){
+			//获取选中行
+			List<Integer> selectList = new ArrayList<Integer>();
+			selectList = getSelectList();
+			System.out.println(selectList);
+			String billid = null;
+			for(int i=0,size=selectList.size();i<size;i++){
+				//根据返回的Map，后台更新或者插入结算政策的投入政策分录信息
+				billid = tblMain.getCell(selectList.get(i),"id").getValue().toString();
+
+				FodderReceptionInfo billInfo = FodderReceptionFactory.getRemoteInstance().getFodderReceptionInfo(new ObjectUuidPK(billid));
+				FodderReceptionEntryCollection entryColl = billInfo.getEntrys();
+				FodderReceptionEntryInfo entryInfo = null;
+				for(int j = 0,s = entryColl.size();j<s;j++){
+					entryInfo =FodderReceptionEntryFactory.getRemoteInstance().getFodderReceptionEntryInfo(new ObjectUuidPK(entryColl.get(j).get("id").toString()));
+					BigDecimal qty = UIRuleUtil.getBigDecimal(entryInfo.getReceiveQty());
+					if(uiMap.get(entryInfo.getMaterial().getId().toString()) != null){
+						BigDecimal price = uiMap.get(entryInfo.getMaterial().getId().toString());;
+						//价格大于0，执行更新操作
+						if(price.compareTo(BigDecimal.ZERO) > 0){
+							BigDecimal amount = price.multiply(qty);
+							String s1 = "/*dialect*/ update T_FM_FodderReceptionentry  set FReceivePrice ="+price+" , CFAmount = "+amount+" where fid = '"+entryInfo.getId()+"'";
+							CommFacadeFactory.getRemoteInstance().excuteUpdateSql(s1);
+						}
+					}
+				}
+			}
+
+		}
+
+		if(uiMap != null && uiMap.size() > 0){
+			MsgBox.showWarning("更新单价完成！");
+		}
+
+
+	}
+
+
+
 }

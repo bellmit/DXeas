@@ -197,6 +197,28 @@ public class AbstractCKSettleBillSeedEntryInfo extends com.kingdee.eas.framework
     {
         setBigDecimal("actAmount", item);
     }
+    /**
+     * Object:领苗单's 政策搭雏比例property 
+     */
+    public java.math.BigDecimal getPolicyCRate()
+    {
+        return getBigDecimal("policyCRate");
+    }
+    public void setPolicyCRate(java.math.BigDecimal item)
+    {
+        setBigDecimal("policyCRate", item);
+    }
+    /**
+     * Object:领苗单's 实际搭雏比例property 
+     */
+    public java.math.BigDecimal getActCRate()
+    {
+        return getBigDecimal("actCRate");
+    }
+    public void setActCRate(java.math.BigDecimal item)
+    {
+        setBigDecimal("actCRate", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("954E36CA");

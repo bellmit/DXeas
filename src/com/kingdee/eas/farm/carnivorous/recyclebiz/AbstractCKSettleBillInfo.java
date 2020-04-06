@@ -1734,6 +1734,17 @@ public class AbstractCKSettleBillInfo extends com.kingdee.eas.framework.CoreBill
     {
         setBigDecimal("diverCt", item);
     }
+    /**
+     * Object:结算单's 实际饲养天数property 
+     */
+    public int getActfeedDays()
+    {
+        return getInt("actfeedDays");
+    }
+    public void setActfeedDays(int item)
+    {
+        setInt("actfeedDays", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("2A2E0777");

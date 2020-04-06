@@ -51,6 +51,7 @@ public abstract class AbstractFodderReceptionListUI extends com.kingdee.eas.fram
     protected com.kingdee.bos.ctrl.swing.KDWorkButton btnClose;
     protected com.kingdee.bos.ctrl.swing.KDWorkButton btnUnClose;
     protected com.kingdee.bos.ctrl.swing.KDWorkButton btnBatchSubmit;
+    protected com.kingdee.bos.ctrl.swing.KDWorkButton btnUpdatePrice;
     protected com.kingdee.bos.ctrl.swing.KDMenuItem mBtnAudit;
     protected com.kingdee.bos.ctrl.swing.KDMenuItem mBtnUnAudit;
     protected com.kingdee.bos.ctrl.swing.KDSeparator newSeparator6;
@@ -66,6 +67,7 @@ public abstract class AbstractFodderReceptionListUI extends com.kingdee.eas.fram
     protected ActionBatchSubmit actionBatchSubmit = null;
     protected ActionClose actionClose = null;
     protected ActionUnClose actionUnClose = null;
+    protected ActionUpdatePrice actionUpdatePrice = null;
     public final static String STATUS_VIEW = "VIEW";
     /**
      * output class constructor
@@ -181,11 +183,20 @@ public abstract class AbstractFodderReceptionListUI extends com.kingdee.eas.fram
          this.actionUnClose.addService(new com.kingdee.eas.framework.client.service.PermissionService());
          this.actionUnClose.addService(new com.kingdee.eas.framework.client.service.ForewarnService());
          this.actionUnClose.addService(new com.kingdee.eas.framework.client.service.WorkFlowService());
+        //actionUpdatePrice
+        this.actionUpdatePrice = new ActionUpdatePrice(this);
+        getActionManager().registerAction("actionUpdatePrice", actionUpdatePrice);
+        this.actionUpdatePrice.setExtendProperty("canForewarn", "true");
+        this.actionUpdatePrice.setExtendProperty("userDefined", "true");
+        this.actionUpdatePrice.setExtendProperty("isObjectUpdateLock", "false");
+         this.actionUpdatePrice.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+         this.actionUpdatePrice.addService(new com.kingdee.eas.framework.client.service.ForewarnService());
         this.tBtnAudit = new com.kingdee.bos.ctrl.swing.KDWorkButton();
         this.tBtnUnAudit = new com.kingdee.bos.ctrl.swing.KDWorkButton();
         this.btnClose = new com.kingdee.bos.ctrl.swing.KDWorkButton();
         this.btnUnClose = new com.kingdee.bos.ctrl.swing.KDWorkButton();
         this.btnBatchSubmit = new com.kingdee.bos.ctrl.swing.KDWorkButton();
+        this.btnUpdatePrice = new com.kingdee.bos.ctrl.swing.KDWorkButton();
         this.mBtnAudit = new com.kingdee.bos.ctrl.swing.KDMenuItem();
         this.mBtnUnAudit = new com.kingdee.bos.ctrl.swing.KDMenuItem();
         this.newSeparator6 = new com.kingdee.bos.ctrl.swing.KDSeparator();
@@ -196,6 +207,7 @@ public abstract class AbstractFodderReceptionListUI extends com.kingdee.eas.fram
         this.btnClose.setName("btnClose");
         this.btnUnClose.setName("btnUnClose");
         this.btnBatchSubmit.setName("btnBatchSubmit");
+        this.btnUpdatePrice.setName("btnUpdatePrice");
         this.mBtnAudit.setName("mBtnAudit");
         this.mBtnUnAudit.setName("mBtnUnAudit");
         this.newSeparator6.setName("newSeparator6");
@@ -234,6 +246,9 @@ public abstract class AbstractFodderReceptionListUI extends com.kingdee.eas.fram
         // btnBatchSubmit
         this.btnBatchSubmit.setAction((IItemAction)ActionProxyFactory.getProxy(actionBatchSubmit, new Class[] { IItemAction.class }, getServiceContext()));		
         this.btnBatchSubmit.setText(resHelper.getString("btnBatchSubmit.text"));
+        // btnUpdatePrice
+        this.btnUpdatePrice.setAction((IItemAction)ActionProxyFactory.getProxy(actionUpdatePrice, new Class[] { IItemAction.class }, getServiceContext()));		
+        this.btnUpdatePrice.setText(resHelper.getString("btnUpdatePrice.text"));
         // mBtnAudit
         this.mBtnAudit.setAction((IItemAction)ActionProxyFactory.getProxy(actionAudit, new Class[] { IItemAction.class }, getServiceContext()));		
         this.mBtnAudit.setText(resHelper.getString("mBtnAudit.text"));
@@ -393,6 +408,7 @@ public abstract class AbstractFodderReceptionListUI extends com.kingdee.eas.fram
         this.toolBar.add(kDSeparatorCloud);
         this.toolBar.add(tBtnAudit);
         this.toolBar.add(tBtnUnAudit);
+        this.toolBar.add(btnUpdatePrice);
         this.toolBar.add(btnClose);
         this.toolBar.add(btnUnClose);
         this.toolBar.add(btnRemove);
@@ -792,6 +808,17 @@ com.kingdee.eas.farm.carnivorous.feedbiz.FodderReceptionFactory.getRemoteInstanc
 com.kingdee.eas.farm.carnivorous.feedbiz.FodderReceptionInfo editData = (com.kingdee.eas.farm.carnivorous.feedbiz.FodderReceptionInfo)getBizInterface().getValue(new com.kingdee.bos.dao.ormapping.ObjectUuidPK(BOSUuid.read(getSelectedKeyValue())));
 com.kingdee.eas.farm.carnivorous.feedbiz.FodderReceptionFactory.getRemoteInstance().unClose(editData);
     }
+    	
+
+    /**
+     * output actionUpdatePrice_actionPerformed method
+     */
+    public void actionUpdatePrice_actionPerformed(ActionEvent e) throws Exception
+    {
+        if (getSelectedKeyValue() == null) return;
+com.kingdee.eas.farm.carnivorous.feedbiz.FodderReceptionInfo editData = (com.kingdee.eas.farm.carnivorous.feedbiz.FodderReceptionInfo)getBizInterface().getValue(new com.kingdee.bos.dao.ormapping.ObjectUuidPK(BOSUuid.read(getSelectedKeyValue())));
+com.kingdee.eas.farm.carnivorous.feedbiz.FodderReceptionFactory.getRemoteInstance().updatePrice(editData);
+    }
 	public RequestContext prepareActionRemove(IItemAction itemAction) throws Exception {
 			RequestContext request = super.prepareActionRemove(itemAction);		
 		if (request != null) {
@@ -911,6 +938,17 @@ com.kingdee.eas.farm.carnivorous.feedbiz.FodderReceptionFactory.getRemoteInstanc
     }
 	
 	public boolean isPrepareActionUnClose() {
+    	return false;
+    }
+	public RequestContext prepareActionUpdatePrice(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareActionUpdatePrice() {
     	return false;
     }
 
@@ -1211,6 +1249,36 @@ com.kingdee.eas.farm.carnivorous.feedbiz.FodderReceptionFactory.getRemoteInstanc
         {
         	getUIContext().put("ORG.PK", getOrgPK(this));
             innerActionPerformed("eas", AbstractFodderReceptionListUI.this, "ActionUnClose", "actionUnClose_actionPerformed", e);
+        }
+    }
+
+    /**
+     * output ActionUpdatePrice class
+     */     
+    protected class ActionUpdatePrice extends ItemAction {     
+    
+        public ActionUpdatePrice()
+        {
+            this(null);
+        }
+
+        public ActionUpdatePrice(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            _tempStr = resHelper.getString("ActionUpdatePrice.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionUpdatePrice.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionUpdatePrice.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractFodderReceptionListUI.this, "ActionUpdatePrice", "actionUpdatePrice_actionPerformed", e);
         }
     }
 
