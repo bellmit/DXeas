@@ -170,24 +170,20 @@ public class TranOutEditUI extends AbstractTranOutEditUI
 			public void editStopped(KDTEditEvent e) {
 				//转出养殖场添加监听事件，选中养殖场自动过滤棚舍
 				if("outFarm".equalsIgnoreCase(kdtEntrys.getColumn(e.getColIndex()).getKey())){
-					kdtEntrys.getCell(e.getRowIndex(), "outHouse").setValue(null);
-					kdtEntrys.getCell(e.getRowIndex(), "outBatch").setValue(null);
 					farmField(e);
 				}
 				//转入养殖场添加监听事件，选中养殖场自动过滤棚舍
 				if("inFarm".equalsIgnoreCase(kdtEntrys.getColumn(e.getColIndex()).getKey())){
-					kdtEntrys.getCell(e.getRowIndex(), "inHouse").setValue(null);
-					kdtEntrys.getCell(e.getRowIndex(), "inBbatch").setValue(null);
 					inFarmField(e);
 				}
 				//转出棚舍添加监听事件
 				if("outHouse".equalsIgnoreCase(kdtEntrys.getColumn(e.getColIndex()).getKey())){
-					kdtEntrys.getCell(e.getRowIndex(), "outBatch").setValue(null);
+//					kdtEntrys.getCell(e.getRowIndex(), "outBatch").setValue(null);
 //					outHouseField(e);
 				}
 				//转入棚舍添加监听事件
 				if("inHouse".equalsIgnoreCase(kdtEntrys.getColumn(e.getColIndex()).getKey())){
-					kdtEntrys.getCell(e.getRowIndex(), "inBbatch").setValue(null);
+//					kdtEntrys.getCell(e.getRowIndex(), "inBbatch").setValue(null);
 //					outHouseField(e);
 				}
 
@@ -200,12 +196,9 @@ public class TranOutEditUI extends AbstractTranOutEditUI
 						MsgBox.showWarning("转出日期不能为空！");
 					}
 
-//					if(kdtEntrys.getCell(e.getRowIndex(), "outBatch").getValue() != null
-//							&& kdtEntrys.getCell(e.getRowIndex(), "outHouse").getValue() != null){
 					if(kdtEntrys.getCell(e.getRowIndex(), "outBatch").getValue() != null){
 						batchField(e);
 					}
-					//batchField(e);
 				}
 				//分录中的是否转入新批次添加监听事件
 				if("isNewBatch".equalsIgnoreCase(kdtEntrys.getColumn(e.getColIndex()).getKey())){
@@ -346,10 +339,8 @@ public class TranOutEditUI extends AbstractTranOutEditUI
 	 * @param e
 	 */
 	protected void batchField(KDTEditEvent e) {
-		// TODO Auto-generated method stub
 
 		String batchid = ((StockingBatchInfo)kdtEntrys.getCell(e.getRowIndex(),"outBatch").getValue()).getId().toString();
-		this.kdtEntrys.removeRows();
 		StockingBatchInfo batchInfo = null;
 		StockingBatchHouseEntryCollection houseCol = null;
 		try {
@@ -367,54 +358,81 @@ public class TranOutEditUI extends AbstractTranOutEditUI
 		//转出日期
 		Date outDate = (Date) pkBizDate.getValue();
 		int[] weekDays = null;
-		IRow row;
 		for(int i=0,entrySize=houseCol.size();i<entrySize;i++){
-//			entryInfo = houseCol.get(i);
-//			//遍历批次的分录，如果棚舍和转出单对应棚舍一致，就去对应棚舍的入雏日期
-//			if(entryInfo.getHouse().getId().equals(((FarmHouseEntryInfo)kdtEntrys.getCell(e.getRowIndex(), "outHouse").getValue()).getId())){
-//				Date inDate = entryInfo.getInData();
-//				if(inDate != null){
-//					try {
-//						weekDays = StockingComm.getBreedWeekAndDay(outDate,inDate);
-//					} catch (EASBizException e1) {
-//						// TODO Auto-generated catch block
-//						e1.printStackTrace();
-//					}
-//				}
-//			}
-			
-		//1127修改  带出所有棚舍
 			entryInfo = houseCol.get(i);
-			
-			row = this.kdtEntrys.addRow();
-			try {
-				FarmHouseEntryInfo fhinfo =  FarmHouseEntryFactory.getRemoteInstance().getFarmHouseEntryInfo(new ObjectUuidPK(batchInfo.getHouseEntry().get(i).getHouse().getId().toString()));
-				FarmInfo farminfo = FarmFactory.getRemoteInstance().getFarmInfo(new ObjectUuidPK(batchInfo.getFarm().getId().toString()));
-				row.getCell("outFarm").setValue(farminfo);
-				row.getCell("outHouse").setValue(fhinfo);
-				row.getCell("outBatch").setValue(batchInfo);
+			//遍历批次的分录，如果棚舍和转出单对应棚舍一致，就去对应棚舍的入雏日期
+			if(entryInfo.getHouse().getId().equals(((FarmHouseEntryInfo)kdtEntrys.getCell(e.getRowIndex(), "outHouse").getValue()).getId())){
 				Date inDate = entryInfo.getInData();
-				weekDays = StockingComm.getBreedWeekAndDay(outDate,inDate);
-				row.getCell("outWeek").setValue(weekDays[0]);
-				row.getCell("outDay").setValue(weekDays[1]);
-			} catch (EASBizException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			} catch (BOSException e2) {
-				// TODO Auto-generated catch block
-				e2.printStackTrace();
+				if(inDate != null){
+					try {
+						weekDays = StockingComm.getBreedWeekAndDay(outDate,inDate);
+					} catch (EASBizException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+				}
 			}
-			
 		}
 
-//		//计算周日龄
-//		if(weekDays == null){
-//			MsgBox.showWarning("周日龄无法获取，请检查批次和棚舍是否对应！");
-//			SysUtil.abort();
-//		}else{
-//			kdtEntrys.getCell(e.getRowIndex(), "outWeek").setValue(weekDays[0]);
-//			kdtEntrys.getCell(e.getRowIndex(), "outDay").setValue(weekDays[1]);
+		//计算周日龄
+		if(weekDays == null){
+			MsgBox.showWarning("周日龄无法获取，请检查批次和棚舍是否对应！");
+			SysUtil.abort();
+		}else{
+			kdtEntrys.getCell(e.getRowIndex(), "outWeek").setValue(weekDays[0]);
+			kdtEntrys.getCell(e.getRowIndex(), "outDay").setValue(weekDays[1]);
+		}
+	
+
+	
+		
+		
+		
+		
+		
+		
+//		String batchid = ((StockingBatchInfo)kdtEntrys.getCell(e.getRowIndex(),"outBatch").getValue()).getId().toString();
+//		this.kdtEntrys.removeRows();
+//		StockingBatchInfo batchInfo = null;
+//		StockingBatchHouseEntryCollection houseCol = null;
+//		try {
+//			batchInfo = StockingBatchFactory.getRemoteInstance().getStockingBatchInfo(new ObjectUuidPK(batchid));
+//			houseCol = batchInfo.getHouseEntry();
+//		} catch (EASBizException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		} catch (BOSException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
 //		}
+//
+//		StockingBatchHouseEntryInfo entryInfo = null;
+//		//转出日期
+//		Date outDate = (Date) pkBizDate.getValue();
+//		int[] weekDays = null;
+//		IRow row;
+//		for(int i=0,entrySize=houseCol.size();i<entrySize;i++){
+//			entryInfo = houseCol.get(i);
+//			row = this.kdtEntrys.addRow();
+//			try {
+//				FarmHouseEntryInfo fhinfo =  FarmHouseEntryFactory.getRemoteInstance().getFarmHouseEntryInfo(new ObjectUuidPK(batchInfo.getHouseEntry().get(i).getHouse().getId().toString()));
+//				FarmInfo farminfo = FarmFactory.getRemoteInstance().getFarmInfo(new ObjectUuidPK(batchInfo.getFarm().getId().toString()));
+//				row.getCell("outFarm").setValue(farminfo);
+//				row.getCell("outHouse").setValue(fhinfo);
+//				row.getCell("outBatch").setValue(batchInfo);
+//				Date inDate = entryInfo.getInData();
+//				weekDays = StockingComm.getBreedWeekAndDay(outDate,inDate);
+//				row.getCell("outWeek").setValue(weekDays[0]);
+//				row.getCell("outDay").setValue(weekDays[1]);
+//			} catch (EASBizException e1) {
+//				// TODO Auto-generated catch block
+//				e1.printStackTrace();
+//			} catch (BOSException e2) {
+//				// TODO Auto-generated catch block
+//				e2.printStackTrace();
+//			}
+//		}
+
 	}
 
 

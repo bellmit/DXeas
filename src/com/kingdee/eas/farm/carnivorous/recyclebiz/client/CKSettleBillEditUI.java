@@ -128,7 +128,7 @@ public class CKSettleBillEditUI extends AbstractCKSettleBillEditUI
 		contspecialPermitAmt.setVisible(false);
 		contfarmeronlyPro.setVisible(false);
 		contfarmerOnlyProOne.setVisible(false);
-		
+		contQCItemAmt.setVisible(false);
 		
 		
 		contbatchOccupyMargin.setVisible(false);

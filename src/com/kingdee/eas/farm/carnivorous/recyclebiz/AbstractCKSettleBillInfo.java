@@ -1745,6 +1745,17 @@ public class AbstractCKSettleBillInfo extends com.kingdee.eas.framework.CoreBill
     {
         setInt("actfeedDays", item);
     }
+    /**
+     * Object:结算单's 品质扣款金额property 
+     */
+    public java.math.BigDecimal getPzPunishAmt()
+    {
+        return getBigDecimal("pzPunishAmt");
+    }
+    public void setPzPunishAmt(java.math.BigDecimal item)
+    {
+        setBigDecimal("pzPunishAmt", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("2A2E0777");

@@ -815,7 +815,7 @@ public class CKSettleBillControllerBean extends AbstractCKSettleBillControllerBe
 		.add(UIRuleUtil.getBigDecimal(info.getMRatePAmt()))
 		.add(UIRuleUtil.getBigDecimal(info.getPayOweMoneryB()))
 		.subtract(UIRuleUtil.getBigDecimal(info.getMlyAllAmt()))
-		.subtract(UIRuleUtil.getBigDecimal(info.getQCItemAmt()))
+		.subtract(UIRuleUtil.getBigDecimal(info.getPzPunishAmt()))
 		.subtract(UIRuleUtil.getBigDecimal(info.getTranCost()))
 		.subtract(UIRuleUtil.getBigDecimal(info.getUnLockedMargin()));
 		dyFee = dyFee.divide(BigDecimal.ONE,2,BigDecimal.ROUND_HALF_UP);

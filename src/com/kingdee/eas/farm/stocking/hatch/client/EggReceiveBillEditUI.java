@@ -385,7 +385,8 @@ public class EggReceiveBillEditUI extends AbstractEggReceiveBillEditUI
 		this.tBtnAudit.setIcon(EASResource.getIcon("imgTbtn_audit"));
 		this.tBtnUnAudit.setIcon(EASResource.getIcon("imgTbtn_unaudit"));
 
-
+		this.btnTraceUp.setVisible(true);
+		this.btnTraceDown.setVisible(true);
 		this.kdtEntrys.getColumn("farmer").getStyleAttributes().setLocked(true);
 
 
@@ -1404,8 +1405,8 @@ public class EggReceiveBillEditUI extends AbstractEggReceiveBillEditUI
 			}
 			//只要启用了棚舍管理，棚舍就是必录项
 			if(kdtEntrys.getCell(rowIndex, "farm").getValue()!=null&&(Boolean)UIRuleUtil.getProperty((IObjectValue) kdtEntrys.getCell(rowIndex, "farm").getValue(), "isHouseManager")&&kdtEntrys.getCell(rowIndex, "house").getValue()==null) {
-//				MsgBox.showWarning("第"+(rowIndex+1)+"行分录，养殖场启用棚舍管理，棚舍不能为空！");
-//				SysUtil.abort();
+				//				MsgBox.showWarning("第"+(rowIndex+1)+"行分录，养殖场启用棚舍管理，棚舍不能为空！");
+				//				SysUtil.abort();
 			}
 			if(eggSource.getSelectedItem().equals(EggSourceType.Purchase)&&kdtEntrys.getCell(rowIndex, "supplier").getValue()==null) {
 				MsgBox.showWarning("第"+(rowIndex+1)+"行分录，供应商不能为空！");

@@ -140,6 +140,7 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contproDiv;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contoccupyMargin;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contactfeedDays;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contpzPunishAmt;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtsingleDyFee;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtpunishAmt;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtmeatRate;
@@ -213,6 +214,7 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtproDiv;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtoccupyMargin;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtactfeedDays;
+    protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtpzPunishAmt;
     protected com.kingdee.bos.ctrl.kdf.table.KDTable kdtEntrys;
 	protected com.kingdee.eas.framework.client.multiDetail.DetailPanel kdtEntrys_detailPanel = null;
     protected com.kingdee.bos.ctrl.swing.KDCheckBox chkisOrdinary;
@@ -644,6 +646,7 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         this.contproDiv = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contoccupyMargin = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contactfeedDays = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contpzPunishAmt = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.txtsingleDyFee = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
         this.txtpunishAmt = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
         this.txtmeatRate = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
@@ -715,6 +718,7 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         this.txtproDiv = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
         this.txtoccupyMargin = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
         this.txtactfeedDays = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
+        this.txtpzPunishAmt = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
         this.kdtEntrys = new com.kingdee.bos.ctrl.kdf.table.KDTable();
         this.chkisOrdinary = new com.kingdee.bos.ctrl.swing.KDCheckBox();
         this.kDTabbedPane2 = new com.kingdee.bos.ctrl.swing.KDTabbedPane();
@@ -988,6 +992,7 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         this.contproDiv.setName("contproDiv");
         this.contoccupyMargin.setName("contoccupyMargin");
         this.contactfeedDays.setName("contactfeedDays");
+        this.contpzPunishAmt.setName("contpzPunishAmt");
         this.txtsingleDyFee.setName("txtsingleDyFee");
         this.txtpunishAmt.setName("txtpunishAmt");
         this.txtmeatRate.setName("txtmeatRate");
@@ -1059,6 +1064,7 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         this.txtproDiv.setName("txtproDiv");
         this.txtoccupyMargin.setName("txtoccupyMargin");
         this.txtactfeedDays.setName("txtactfeedDays");
+        this.txtpzPunishAmt.setName("txtpzPunishAmt");
         this.kdtEntrys.setName("kdtEntrys");
         this.chkisOrdinary.setName("chkisOrdinary");
         this.kDTabbedPane2.setName("kDTabbedPane2");
@@ -1670,6 +1676,11 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         this.contactfeedDays.setBoundLabelLength(100);		
         this.contactfeedDays.setBoundLabelUnderline(true);		
         this.contactfeedDays.setVisible(true);
+        // contpzPunishAmt		
+        this.contpzPunishAmt.setBoundLabelText(resHelper.getString("contpzPunishAmt.boundLabelText"));		
+        this.contpzPunishAmt.setBoundLabelLength(100);		
+        this.contpzPunishAmt.setBoundLabelUnderline(true);		
+        this.contpzPunishAmt.setVisible(true);
         // txtsingleDyFee		
         this.txtsingleDyFee.setHorizontalAlignment(2);		
         this.txtsingleDyFee.setDataType(1);		
@@ -2439,6 +2450,15 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         this.txtactfeedDays.setDataType(0);		
         this.txtactfeedDays.setSupportedEmpty(true);		
         this.txtactfeedDays.setRequired(false);
+        // txtpzPunishAmt		
+        this.txtpzPunishAmt.setVisible(true);		
+        this.txtpzPunishAmt.setHorizontalAlignment(2);		
+        this.txtpzPunishAmt.setDataType(1);		
+        this.txtpzPunishAmt.setSupportedEmpty(true);		
+        this.txtpzPunishAmt.setMinimumValue( new java.math.BigDecimal("-1.0E18"));		
+        this.txtpzPunishAmt.setMaximumValue( new java.math.BigDecimal("1.0E18"));		
+        this.txtpzPunishAmt.setPrecision(2);		
+        this.txtpzPunishAmt.setRequired(false);
         // kdtEntrys
 		String kdtEntrysStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol2\"><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol3\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol4\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol5\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol6\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"id\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol0\" /><t:Column t:key=\"recType\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"qty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol2\" /><t:Column t:key=\"weight\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol3\" /><t:Column t:key=\"price\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol4\" /><t:Column t:key=\"amount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol5\" /><t:Column t:key=\"averageWgt\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol6\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{id}</t:Cell><t:Cell>$Resource{recType}</t:Cell><t:Cell>$Resource{qty}</t:Cell><t:Cell>$Resource{weight}</t:Cell><t:Cell>$Resource{price}</t:Cell><t:Cell>$Resource{amount}</t:Cell><t:Cell>$Resource{averageWgt}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
 		
@@ -4556,7 +4576,7 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         // btnUnClose
         this.btnUnClose.setAction((IItemAction)ActionProxyFactory.getProxy(actionUnClose, new Class[] { IItemAction.class }, getServiceContext()));		
         this.btnUnClose.setText(resHelper.getString("btnUnClose.text"));
-        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {chkFivouchered,prmtFICompany,txtNumber,pkBizDate,txtDescription,prmtAuditor,prmtCreator,kDDateCreateTime,prmtLastUpdateUser,kDDateLastUpdateTime,prmtstorageOrgUnit,billStatus,prmtfarmer,prmtfarm,prmtbatchContract,prmtbatch,prmtbreedData,pkcFBeginDate,pkcFEndDate,prmtconFeedPolicy,txtconFeededNum,prmtbEBank,txtbankNum,txtbEBankAddress,prmtperson,pkinDate,txtbatchQty,txtbatchAmt,txtfeedWgt,txtfeedQty,txtfeedAmt,txtdrugAmt,pkrecDate,txtrecQty,txtpreHouseWgt,txtpunishWgt,txtsettleWgt,txtmeatRate,txtsurvivalRate,txtchickenAveWgt,txtfeedDays,txtmlyAllAmt,txtrecAmt,txtpunishAmt,txtmarginAmt,txtadPayAmount,txtdyFee,txtsingleDyFee,chkisHasPaymentBill,chkisKouBZJ,txtmRatePAmt,txtactualMRate,txtstandardMRate,txtdrugLackPAmt,txtsingleActualDrug,txtsingleStandardDrug,txtmarginOccupyFee,txtbatchOccupyMargin,txtstandardMargin,txtsingleMargin,txtconFeedSubsidies,prmtkbConFeedPolicy,txtcontractCKWgt,txtfreightDiffSubsidies,txtlFeedWgt,txtfreightPrice,txtfreightSubsidiesStd,txtdeductMargin,txttotalMargin,txtoccupyMargin,txtenableMargin,txtdeductAdPayAmt,txtloanRate,txtkYFKOccupyFee,pkauditTime,txtsingleDrugAmt,txtsingleFeedWgt,txtoValue,prmtconFeedContract,txtfmRatePunishStd,txtdyfBalance,txtkbItemAmt,txtQCItemAmt,txtviewItemAmt,txtotherItemAmt,txttempItemAmt,txtmoneyOccupyDays,txtconFeedPolicySub,txtpayOweMonery,txtoutSaleKbAmt,txtactualPayAmt,txtpayOweMoneryB,txtSeedCost,txtfodderCost,txtdrugCost,txtallocateAmt,txtunitCost,txtallCost,txtunLockedMargin,txtrecSuttle,txtadPayBalance,prmtsettlePolicy,txtQCKbDetail,txtotherKbDetail,farmsType,txtoutSaleKbAmt2,txtimmuneCost,txtimmuneCostOne,txtcleanHouse,txtcleanHouseOne,txtreserveRiskCost,txtactualFoder,txtstandFodder,txtoneMrgin,txtmarginGAmount,txtchickenRetunAmt,txtlongBorrowAmount,txtlongBorrowReturn,txtmarginProfit,txtbeforeBatchAmount,txtborrowAmiunt,txtspecialBorrowinst,txttranCost,txtbrokenCost,txtcoalCost,txtidCodeCode,txtfarmAddress,chknoCalFodderPunish,chknoCalDrupPunish,txtequipmentReAmt,txtspecialPermitAmt,txtgetChickCost,txtcleanHouseCost,txtchickenSource,kdtQCEntrys,prmtperiod,txtdaiyFee,txtcompanyProfit,txtcleanTowerCost,kdtEntrys,txtnowAccountBac,txtassetsOccupy,prmtcostCenter,chkisOrdinary,kdtViewReqEntrys,txtdrugQty,txtnoPfoRetAmt,txtfarmeronlyPro,txtfarmerOnlyProOne,kdtOtherEntrys,txtotherMatCost,chkactualVoucher,chkpreVoucher,chktransVoucher,kdtSeedEntrys,chkhasPay,kdtFodderEntrys,kdtDrugEntrys,kdtSlaughterEntrys,kdtSaleEntrys,kdtPreHouseEntrys,kdtSeedSourceEntrys,kdtTempPolicyEntrys,txtproDiv,txtcompanyTC,txtdiverCt,txtactfeedDays}));
+        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {chkFivouchered,prmtFICompany,txtNumber,pkBizDate,txtDescription,prmtAuditor,prmtCreator,kDDateCreateTime,prmtLastUpdateUser,kDDateLastUpdateTime,prmtstorageOrgUnit,billStatus,prmtfarmer,prmtfarm,prmtbatchContract,prmtbatch,prmtbreedData,pkcFBeginDate,pkcFEndDate,prmtconFeedPolicy,txtconFeededNum,prmtbEBank,txtbankNum,txtbEBankAddress,prmtperson,pkinDate,txtbatchQty,txtbatchAmt,txtfeedWgt,txtfeedQty,txtfeedAmt,txtdrugAmt,pkrecDate,txtrecQty,txtpreHouseWgt,txtpunishWgt,txtsettleWgt,txtmeatRate,txtsurvivalRate,txtchickenAveWgt,txtfeedDays,txtmlyAllAmt,txtrecAmt,txtpunishAmt,txtmarginAmt,txtadPayAmount,txtdyFee,txtsingleDyFee,chkisHasPaymentBill,chkisKouBZJ,txtmRatePAmt,txtactualMRate,txtstandardMRate,txtdrugLackPAmt,txtsingleActualDrug,txtsingleStandardDrug,txtmarginOccupyFee,txtbatchOccupyMargin,txtstandardMargin,txtsingleMargin,txtconFeedSubsidies,prmtkbConFeedPolicy,txtcontractCKWgt,txtfreightDiffSubsidies,txtlFeedWgt,txtfreightPrice,txtfreightSubsidiesStd,txtdeductMargin,txttotalMargin,txtoccupyMargin,txtenableMargin,txtdeductAdPayAmt,txtloanRate,txtkYFKOccupyFee,pkauditTime,txtsingleDrugAmt,txtsingleFeedWgt,txtoValue,prmtconFeedContract,txtfmRatePunishStd,txtdyfBalance,txtkbItemAmt,txtQCItemAmt,txtviewItemAmt,txtotherItemAmt,txttempItemAmt,txtmoneyOccupyDays,txtconFeedPolicySub,txtpayOweMonery,txtoutSaleKbAmt,txtactualPayAmt,txtpayOweMoneryB,txtSeedCost,txtfodderCost,txtdrugCost,txtallocateAmt,txtunitCost,txtallCost,txtunLockedMargin,txtrecSuttle,txtadPayBalance,prmtsettlePolicy,txtQCKbDetail,txtotherKbDetail,farmsType,txtoutSaleKbAmt2,txtimmuneCost,txtimmuneCostOne,txtcleanHouse,txtcleanHouseOne,txtreserveRiskCost,txtactualFoder,txtstandFodder,txtoneMrgin,txtmarginGAmount,txtchickenRetunAmt,txtlongBorrowAmount,txtlongBorrowReturn,txtmarginProfit,txtbeforeBatchAmount,txtborrowAmiunt,txtspecialBorrowinst,txttranCost,txtbrokenCost,txtcoalCost,txtidCodeCode,txtfarmAddress,chknoCalFodderPunish,chknoCalDrupPunish,txtequipmentReAmt,txtspecialPermitAmt,txtgetChickCost,txtcleanHouseCost,txtchickenSource,kdtQCEntrys,prmtperiod,txtdaiyFee,txtcompanyProfit,txtcleanTowerCost,kdtEntrys,txtnowAccountBac,txtassetsOccupy,prmtcostCenter,chkisOrdinary,kdtViewReqEntrys,txtdrugQty,txtnoPfoRetAmt,txtfarmeronlyPro,txtfarmerOnlyProOne,kdtOtherEntrys,txtotherMatCost,chkactualVoucher,chkpreVoucher,chktransVoucher,kdtSeedEntrys,chkhasPay,kdtFodderEntrys,kdtDrugEntrys,kdtSlaughterEntrys,kdtSaleEntrys,kdtPreHouseEntrys,kdtSeedSourceEntrys,kdtTempPolicyEntrys,txtproDiv,txtcompanyTC,txtdiverCt,txtactfeedDays,txtpzPunishAmt}));
         this.setFocusCycleRoot(true);
 		//Register control's property binding
 		registerBindings();
@@ -4721,8 +4741,8 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         kDPanel1.add(contconFeedContract, new KDLayout.Constraints(579, 410, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contkbItemAmt.setBounds(new Rectangle(15, 197, 270, 19));
         kDPanel1.add(contkbItemAmt, new KDLayout.Constraints(15, 197, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contQCItemAmt.setBounds(new Rectangle(300, 197, 270, 19));
-        kDPanel1.add(contQCItemAmt, new KDLayout.Constraints(300, 197, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contQCItemAmt.setBounds(new Rectangle(16, 431, 270, 19));
+        kDPanel1.add(contQCItemAmt, new KDLayout.Constraints(16, 431, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contviewItemAmt.setBounds(new Rectangle(579, 457, 270, 19));
         kDPanel1.add(contviewItemAmt, new KDLayout.Constraints(579, 457, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contotherItemAmt.setBounds(new Rectangle(579, 197, 270, 19));
@@ -4771,6 +4791,8 @@ public abstract class AbstractCKSettleBillEditUI extends com.kingdee.eas.framewo
         kDPanel1.add(contoccupyMargin, new KDLayout.Constraints(16, 277, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contactfeedDays.setBounds(new Rectangle(858, 89, 270, 19));
         kDPanel1.add(contactfeedDays, new KDLayout.Constraints(858, 89, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contpzPunishAmt.setBounds(new Rectangle(300, 197, 270, 19));
+        kDPanel1.add(contpzPunishAmt, new KDLayout.Constraints(300, 197, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         //contsingleDyFee
         contsingleDyFee.setBoundEditor(txtsingleDyFee);
         //contpunishAmt
@@ -4927,6 +4949,8 @@ vo.put("billStatus",new Integer(-1));
         contoccupyMargin.setBoundEditor(txtoccupyMargin);
         //contactfeedDays
         contactfeedDays.setBoundEditor(txtactfeedDays);
+        //contpzPunishAmt
+        contpzPunishAmt.setBoundEditor(txtpzPunishAmt);
         //kDPanel13
         kDPanel13.setLayout(new KDLayout());
         kDPanel13.putClientProperty("OriginalBounds", new Rectangle(0, 0, 1170, 538));        kdtEntrys.setBounds(new Rectangle(7, 39, 1153, 489));
@@ -5655,6 +5679,7 @@ vo.put("saleType","0");
 		dataBinder.registerBinding("proDiv", java.math.BigDecimal.class, this.txtproDiv, "value");
 		dataBinder.registerBinding("occupyMargin", java.math.BigDecimal.class, this.txtoccupyMargin, "value");
 		dataBinder.registerBinding("actfeedDays", int.class, this.txtactfeedDays, "value");
+		dataBinder.registerBinding("pzPunishAmt", java.math.BigDecimal.class, this.txtpzPunishAmt, "value");
 		dataBinder.registerBinding("entrys.id", com.kingdee.bos.util.BOSUuid.class, this.kdtEntrys, "id.text");
 		dataBinder.registerBinding("entrys", com.kingdee.eas.farm.carnivorous.recyclebiz.CKSettleBillEntryInfo.class, this.kdtEntrys, "userObject");
 		dataBinder.registerBinding("entrys.recType", com.kingdee.util.enums.Enum.class, this.kdtEntrys, "recType.text");
@@ -6084,6 +6109,7 @@ vo.put("saleType","0");
 		getValidateHelper().registerBindProperty("proDiv", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("occupyMargin", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("actfeedDays", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("pzPunishAmt", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("entrys.id", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("entrys", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("entrys.recType", ValidateHelper.ON_SAVE);    
@@ -6560,6 +6586,7 @@ vo.put("saleType","0");
         sic.add(new SelectorItemInfo("proDiv"));
         sic.add(new SelectorItemInfo("occupyMargin"));
         sic.add(new SelectorItemInfo("actfeedDays"));
+        sic.add(new SelectorItemInfo("pzPunishAmt"));
     	sic.add(new SelectorItemInfo("entrys.id"));
 		if(selectorAll.equalsIgnoreCase("true"))
 		{

@@ -15,6 +15,8 @@ import com.kingdee.bos.metadata.query.util.CompareType;
 import com.kingdee.bos.ui.face.CoreUIObject;
 import com.kingdee.eas.basedata.framework.util.KDTableUtil;
 import com.kingdee.eas.basedata.org.AdminOrgUnitInfo;
+import com.kingdee.eas.basedata.org.CompanyOrgUnitInfo;
+import com.kingdee.eas.basedata.org.StorageOrgUnitInfo;
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.eas.common.client.SysContext;
 import com.kingdee.eas.farm.hatch.BEggHatchBillFactory;
@@ -46,42 +48,9 @@ public class BHatchBabyBillListUI extends AbstractBHatchBabyBillListUI
 	public BHatchBabyBillListUI() throws Exception
 	{
 		super();
-		// 默认 可查询当前组织 及下游组织的  上孵单 上孵单
-		//        this.setFilterForQuery(this.getFilterInfo());
-		// 图标设置
 		this.btnAudit.setIcon(com.kingdee.eas.util.client.EASResource.getIcon("imgTbtn_audit"));
 		this.btnUnAudit.setIcon(com.kingdee.eas.util.client.EASResource.getIcon("imgTbtn_unaudit"));
 	}
-//	/**
-//	 * 设置默认过滤条件
-//	 * @return
-//	 */
-//	public FilterInfo getFilterInfo(){
-//		FilterInfo filterInfo  = new FilterInfo();
-////		AdminOrgUnitInfo currAdminOrg = SysContext.getSysContext().getCurrentAdminUnit();
-////
-////		filterInfo.getFilterItems().add(new FilterItemInfo("adminOrg.longNumber",currAdminOrg.getLongNumber(),CompareType.LIKE));
-//
-//
-//		return filterInfo;
-//	}
-//
-//
-//	/**
-//	 * 组织隔离
-//	 */
-//	@Override
-//	protected FilterInfo getDefaultFilterForQuery() {
-//		// TODO Auto-generated method stub
-//		FilterInfo filter = super.getDefaultFilterForQuery();
-//		String mskStr = filter.getMaskString();
-//		int size = filter.getFilterItems().size();
-//		if(SysContext.getSysContext().getCurrentStorageUnit()!=null){
-//			//filter.getFilterItems().add(new FilterItemInfo("storageOrg.name",SysContext.getSysContext().getCurrentStorageUnit().getString("name"),CompareType.EQUALS));
-//			//filter.setMaskString("("+mskStr+") and #"+size);
-//		}
-//		return filter;
-//	}
 
 	/**
 	 * output storeFields method
@@ -136,10 +105,6 @@ public class BHatchBabyBillListUI extends AbstractBHatchBabyBillListUI
 		finally{
 			refreshList();
 		}
-
-		//		super.actionAudit_actionPerformed(e);
-
-
 
 	}
 
@@ -217,5 +182,20 @@ public class BHatchBabyBillListUI extends AbstractBHatchBabyBillListUI
 		}
         super.actionEdit_actionPerformed(e);
     }
+
+	@Override
+	public FilterInfo getFilterInfo() {
+		FilterInfo filterInfo  = new FilterInfo();
+		StorageOrgUnitInfo currStoOrg = SysContext.getSysContext().getCurrentStorageUnit();
+		if(currStoOrg ==null){
+    		MsgBox.showInfo("当前登录组织不是库存组织");
+    		SysUtil.abort();
+    	}
+//		filterInfo.getFilterItems().add(new FilterItemInfo("StorageOrgUnit.longNumber",currStoOrg.getLongNumber(),CompareType.LIKE));
+		CompanyOrgUnitInfo companyInfo = SysContext.getSysContext().getCurrentFIUnit();
+		filterInfo.getFilterItems().add(new FilterItemInfo("CU.id",companyInfo.getId().toString(),CompareType.EQUALS));
+		return filterInfo;
+	
+	}
 
 }

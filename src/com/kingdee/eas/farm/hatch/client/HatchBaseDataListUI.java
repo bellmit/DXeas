@@ -61,14 +61,13 @@ public class HatchBaseDataListUI extends AbstractHatchBaseDataListUI
 
     public FilterInfo getFilterInfo(){
     	FilterInfo filterInfo  = new FilterInfo();
-//	    	StorageOrgUnitInfo stoInfo = SysContext.getSysContext().getCurrentStorageUnit();
     	CtrlUnitInfo currCU = SysContext.getSysContext().getCurrentCtrlUnit();
     	if(currCU == null){
     		SysUtil.abort();
     	}
     	
     	filterInfo.getFilterItems().add(new FilterItemInfo("CU.id",currCU.getId().toString(),CompareType.EQUALS));
-//    	// 如果当前在库存组织，则过滤 养殖场
+    	// 如果当前在库存组织，则过滤 养殖场
     	if(currStoOrg != null){
     		filterInfo.getFilterItems().add(new FilterItemInfo("hatchFactory.name",currStoOrg.getName()+"%",CompareType.LIKE));
     	}

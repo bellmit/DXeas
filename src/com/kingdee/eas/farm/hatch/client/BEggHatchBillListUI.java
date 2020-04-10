@@ -24,6 +24,7 @@ import com.kingdee.bos.dao.query.SQLExecutorFactory;
 import com.kingdee.eas.base.commonquery.client.CommonQueryDialog;
 import com.kingdee.eas.basedata.framework.util.KDTableUtil;
 import com.kingdee.eas.basedata.org.AdminOrgUnitInfo;
+import com.kingdee.eas.basedata.org.CompanyOrgUnitInfo;
 import com.kingdee.eas.basedata.org.StorageOrgUnitInfo;
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.eas.common.client.SysContext;
@@ -198,15 +199,15 @@ public class BEggHatchBillListUI extends AbstractBEggHatchBillListUI
 	 */
 	public FilterInfo getFilterInfo(){
 		FilterInfo filterInfo  = new FilterInfo();
-//		AdminOrgUnitInfo currAdminOrg = SysContext.getSysContext().getCurrentAdminUnit();
 		
-		
+		CompanyOrgUnitInfo companyInfo = SysContext.getSysContext().getCurrentFIUnit();
 		StorageOrgUnitInfo currStoOrg = SysContext.getSysContext().getCurrentStorageUnit();
 		if(currStoOrg ==null){
     		MsgBox.showInfo("当前登录组织不是库存组织");
     		SysUtil.abort();
     	}
-		filterInfo.getFilterItems().add(new FilterItemInfo("StorageOrgUnit.longNumber",currStoOrg.getLongNumber(),CompareType.LIKE));
+//		filterInfo.getFilterItems().add(new FilterItemInfo("StorageOrgUnit.longNumber",currStoOrg.getLongNumber(),CompareType.LIKE));
+		filterInfo.getFilterItems().add(new FilterItemInfo("CU.id",companyInfo.getId().toString(),CompareType.EQUALS));
 		
 		return filterInfo;
 	}

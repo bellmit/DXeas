@@ -2127,7 +2127,7 @@ vo.put("eggSource",new Integer(1));
 		arg0.put("number",null);
 	}        
 				protected void setTableToSumField() {
-			setTableToSumField(kdtEntrys,new String[] {"qualified","jxd","shd","dissharpEgg","doubleEgg"});
+			setTableToSumField(kdtEntrys,new String[] {"dpd","BBQty","qualified","jxd","shd","dissharpEgg","doubleEgg"});
 		}
 
 

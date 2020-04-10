@@ -19,6 +19,7 @@ import com.kingdee.bos.dao.ormapping.ObjectUuidPK;
 import com.kingdee.bos.dao.query.SQLExecutorFactory;
 import com.kingdee.eas.basedata.framework.util.KDTableUtil;
 import com.kingdee.eas.basedata.org.AdminOrgUnitInfo;
+import com.kingdee.eas.basedata.org.CompanyOrgUnitInfo;
 import com.kingdee.eas.basedata.org.StorageOrgUnitInfo;
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.eas.common.client.SysContext;
@@ -69,17 +70,15 @@ public class BEggCandlingBillListUI extends AbstractBEggCandlingBillListUI
      */
     public FilterInfo getFilterInfo(){
     	FilterInfo filterInfo  = new FilterInfo();
-    	AdminOrgUnitInfo currAdminOrg = SysContext.getSysContext().getCurrentAdminUnit();
-    	
-//    	filterInfo.getFilterItems().add(new FilterItemInfo("adminOrg.longNumber",currAdminOrg.getLongNumber(),CompareType.LIKE));
-    	
     	StorageOrgUnitInfo currStoOrg = SysContext.getSysContext().getCurrentStorageUnit();
     	if(currStoOrg ==null){
     		MsgBox.showInfo("当前登录组织不是库存组织");
     		SysUtil.abort();
     	}
-		filterInfo.getFilterItems().add(new FilterItemInfo("hatchFactory1.id",currStoOrg.getId().toString(),CompareType.EQUALS));
-    	
+//		filterInfo.getFilterItems().add(new FilterItemInfo("hatchFactory1.id",currStoOrg.getId().toString(),CompareType.EQUALS));
+
+    	CompanyOrgUnitInfo companyInfo = SysContext.getSysContext().getCurrentFIUnit();
+    	filterInfo.getFilterItems().add(new FilterItemInfo("CU.id",companyInfo.getId().toString(),CompareType.EQUALS));
     	return filterInfo;
     }
     
@@ -244,7 +243,7 @@ public class BEggCandlingBillListUI extends AbstractBEggCandlingBillListUI
 	@Override
 	protected boolean isIgnoreCUFilter() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 }

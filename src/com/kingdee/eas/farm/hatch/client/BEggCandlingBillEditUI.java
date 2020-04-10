@@ -161,10 +161,10 @@ public class BEggCandlingBillEditUI extends AbstractBEggCandlingBillEditUI
 	{
 		super.loadFields();
 		this.setUITitle("照蛋记录单");
-		if(hatchBaseInfo == null){
-			MsgBox.showInfo("当前未在任何孵化场，不能操作照蛋记录单");
-			SysUtil.abort();
-		}
+//		if(hatchBaseInfo == null){
+//			MsgBox.showInfo("当前未在任何孵化场，不能操作照蛋记录单");
+//			SysUtil.abort();
+//		}
 
 
 

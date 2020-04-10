@@ -209,7 +209,7 @@ public class StockingBreedDailyEditUI extends AbstractStockingBreedDailyEditUI
 
 		UITools.apendFootRow(kdtEntrys, new String[]{"bagQty","dailyQtyAll","femaleDailyQty"});
 		UITools.apendFootRow(kdtAssEntrys, new String[]{"deathQty","femaleDeathQty","cullQty","femaleCullQty","breekingStock","femaleBreedkingStock","adjustQty","adjustFemaleQty","cullTotalWgt","cullTotalAmt"});
-		UITools.apendFootRow(kdtEggEntry, new String[]{"allQty","qcEggQty","smallEggQty","doubleQty","brokenQty","mutnatQty","firstQty","rd","fxd","zd","BBQty"});
+		UITools.apendFootRow(kdtEggEntry, new String[]{"allQty","qcEggQty","smallEggQty","doubleQty","brokenQty","mutnatQty","firstQty","rd","fxd","zd"});
 		UITools.apendFootRow(kdtImmuneEntrys, new String[]{"vaccineGetQty","vaccineUsedQty"});
 		com.kingdee.eas.farm.carnivorous.comm.StockingComm.makeApplierF7(prmtbizPerson, SysContext.getSysContext().getCurrentAdminUnit().getString("id"), this, false);
 
@@ -580,7 +580,7 @@ public class StockingBreedDailyEditUI extends AbstractStockingBreedDailyEditUI
 				||kdtEggEntry.getColumnKey(colIndex).equals("mutnatQty")
 				||kdtEggEntry.getColumnKey(colIndex).equals("firstQty")
 				||kdtEggEntry.getColumnKey(colIndex).equals("rd")
-				||kdtEggEntry.getColumnKey(colIndex).equals("BBQty")
+//				||kdtEggEntry.getColumnKey(colIndex).equals("BBQty")
 				||kdtEggEntry.getColumnKey(colIndex).equals("zd")
 				||kdtEggEntry.getColumnKey(colIndex).equals("totalLossQty")
 				||kdtEggEntry.getColumnKey(colIndex).equals("allQty")
@@ -599,7 +599,7 @@ public class StockingBreedDailyEditUI extends AbstractStockingBreedDailyEditUI
 			BigDecimal brokenQty=UIRuleUtil.getBigDecimal(kdtEggEntry.getCell(rowIndex,"brokenQty").getValue());
 			//畸形蛋
 			BigDecimal mutnatQty=UIRuleUtil.getBigDecimal(kdtEggEntry.getCell(rowIndex,"mutnatQty").getValue());
-			//初产蛋
+			//初产蛋--修改为宝宝蛋
 			BigDecimal firstQty=UIRuleUtil.getBigDecimal(kdtEggEntry.getCell(rowIndex,"firstQty").getValue());
 			//脏蛋
 			BigDecimal zd=UIRuleUtil.getBigDecimal(kdtEggEntry.getCell(rowIndex,"zd").getValue());
@@ -607,12 +607,12 @@ public class StockingBreedDailyEditUI extends AbstractStockingBreedDailyEditUI
 			BigDecimal rd=UIRuleUtil.getBigDecimal(kdtEggEntry.getCell(rowIndex,"rd").getValue());
 			
 			//BB蛋
-			BigDecimal BBQty=UIRuleUtil.getBigDecimal(kdtEggEntry.getCell(rowIndex,"BBQty").getValue());
+//			BigDecimal BBQty=UIRuleUtil.getBigDecimal(kdtEggEntry.getCell(rowIndex,"BBQty").getValue());
 
 			
 			
 			//商品蛋
-			BigDecimal smallEggQty=fxd.add(doubleQty).add(brokenQty).add(firstQty).add(mutnatQty).add(zd).add(BBQty);
+			BigDecimal smallEggQty=fxd.add(doubleQty).add(brokenQty).add(firstQty).add(mutnatQty).add(zd);
 			kdtEggEntry.getCell(rowIndex, "smallEggQty").setValue(smallEggQty);
 			
 			//总蛋数
@@ -821,10 +821,13 @@ public class StockingBreedDailyEditUI extends AbstractStockingBreedDailyEditUI
 		this.menuItemCopy.setVisible(false);
 		this.menuItemCopyFrom.setVisible(false);
 
-
-
+//		kdtEggEntry.getColumn("BBQty").getStyleAttributes().setHided(true);
+		kdtEggEntry.getColumn("BBQty").getStyleAttributes().setLocked(true);
+//		kdtEggEntry.getColumn("BBQty").getStyleAttributes().isHided();
+		
 		//如果批次不为空，设置隐藏
 		if(prmtstockingBatch.getValue() != null){
+			kdtEggEntry.getColumn("BBQty").getStyleAttributes().setHided(true);
 			//根据批次中性别设置公禽，母禽的字段隐藏显示
 			StockingBatchInfo stockingBatchInfo = (StockingBatchInfo) prmtstockingBatch.getValue();
 			String sex = stockingBatchInfo.getSex().getValue();
@@ -2702,8 +2705,6 @@ public class StockingBreedDailyEditUI extends AbstractStockingBreedDailyEditUI
 		//校验物料领用分录
 		checkMatUseEntry();
 		super.beforeStoreFields(e);
-		//计算平均只喂量和包数
-		//		oneFeedAndBoxQty();
 
 		String batchID=((IPropertyContainer) this.prmtstockingBatch.getValue()).getString("id");
 		Calendar cal=Calendar.getInstance();
@@ -2732,17 +2733,6 @@ public class StockingBreedDailyEditUI extends AbstractStockingBreedDailyEditUI
 		}
 
 		for(int rowIndex=0;rowIndex<this.kdtAssEntrys.getRowCount();rowIndex++) {
-
-			//如果存栏量为负数 不允许保存或者提交
-			//			if(UIRuleUtil.getBigDecimal(kdtAssEntrys.getCell(rowIndex, "breekingStock").getValue()).signum() < 0){
-			//				MsgBox.showError("第"+(rowIndex+1)+"行养殖信息分录公禽存栏量为负数，不允许保存");
-			//				SysUtil.abort();
-			//			}
-			//
-			//			if(UIRuleUtil.getBigDecimal(kdtAssEntrys.getCell(rowIndex, "femaleBreedkingStock").getValue()).signum() < 0){
-			//				MsgBox.showError("第"+(rowIndex+1)+"行养殖信息分录母禽存栏量为负数，不允许保存");
-			//				SysUtil.abort();
-			//			}
 
 			//存栏量为0
 			if(UIRuleUtil.getBigDecimal(kdtAssEntrys.getCell(rowIndex, "breekingStock").getValue()).signum()<=0&&UIRuleUtil.getBigDecimal(kdtAssEntrys.getCell(rowIndex, "femaleBreedkingStock").getValue()).signum()<=0) {

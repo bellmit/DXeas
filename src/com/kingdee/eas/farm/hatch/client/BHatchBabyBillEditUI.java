@@ -117,6 +117,7 @@ public class BHatchBabyBillEditUI extends AbstractBHatchBabyBillEditUI
 		super();
 		currStoOrg = SysContext.getSysContext().getCurrentStorageUnit();
 		hatchBaseInfo = hatchFacadeFactory.getRemoteInstance().getHatchBaseData(currStoOrg);
+		System.out.println(hatchBaseInfo);
 	}
 	/**
 	 * output loadFields method
@@ -414,18 +415,16 @@ public class BHatchBabyBillEditUI extends AbstractBHatchBabyBillEditUI
 		// 校验组织 是否可编辑蛋卷
 		if(this.getOprtState().equals("ADDNEW") || this.getOprtState().equals("EDIT")){
 
-			if(currStoOrg == null){
-				MsgBox.showInfo("当前未在任何孵化场，不能操作出雏单");
-				//		        	this.getUIWindow().close();
-				SysUtil.abort();
-			}
+//			if(currStoOrg == null){
+//				MsgBox.showInfo("当前未在任何孵化场，不能操作出雏单");
+//				SysUtil.abort();
+//			}
 
 
-			if(hatchBaseInfo == null){
-				MsgBox.showInfo("当前未在任何孵化场，不能操作出雏单");
-				//		        	this.getUIWindow().close();
-				SysUtil.abort();
-			}
+//			if(hatchBaseInfo == null){
+//				MsgBox.showInfo("当前未在任何孵化场，不能操作出雏单");
+//				SysUtil.abort();
+//			}
 
 		}
 		// 初始化界面空间
@@ -1708,7 +1707,7 @@ public class BHatchBabyBillEditUI extends AbstractBHatchBabyBillEditUI
 		vo.put("baseStatus",new Integer(1));
 		vo.put("creator",(com.kingdee.eas.base.permission.UserInfo)(com.kingdee.eas.common.client.SysContext.getSysContext().getCurrentUser()));
 		vo.put("adminOrg", SysContext.getSysContext().getCurrentAdminUnit());
-		vo.put("hatchFactory", hatchBaseInfo);
+//		vo.put("hatchFactory", hatchBaseInfo);
 		if(hatchBaseInfo != null){
 		}
 //		vo.put("bizDate", new Date());
@@ -1723,9 +1722,8 @@ public class BHatchBabyBillEditUI extends AbstractBHatchBabyBillEditUI
 		com.kingdee.eas.farm.hatch.BHatchBabyBillInfo objectValue = new com.kingdee.eas.farm.hatch.BHatchBabyBillInfo();
 		objectValue.setCreator((com.kingdee.eas.base.permission.UserInfo)(com.kingdee.eas.common.client.SysContext.getSysContext().getCurrentUser()));
 		objectValue.setAdminOrg(SysContext.getSysContext().getCurrentAdminUnit());
-//		objectValue.setBizDate(new Date());
 		objectValue.setBaseStatus(BillBaseStatusEnum.ADD);
-		objectValue.setHatchFactory(hatchBaseInfo);
+//		objectValue.setHatchFactory(hatchBaseInfo);
 		objectValue.setCU(SysContext.getSysContext().getCurrentCtrlUnit());
 		return objectValue;
 	}

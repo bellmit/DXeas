@@ -2298,7 +2298,7 @@ vo.put("farmType","0");
 		arg0.put("number",null);
 	}        
 				protected void setTableToSumField() {
-			setTableToSumField(kdtWeigntEntry,new String[] {"carcessReduceWeight"});
+			setTableToSumField(kdtWeigntEntry,new String[] {"chickenQty","houseWeight","houseSkinWeight","saleQty","saleAmount","carcessReduceWeight"});
 		}
 
 

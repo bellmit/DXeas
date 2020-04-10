@@ -166,10 +166,10 @@ public class BEggHatchBillEditUI extends AbstractBEggHatchBillEditUI
 			hatchBaseInfo=coll.get(0);
 		if(coll.size()==1)
 			hatchBaseInfo=coll.get(0);
-		if(coll.size()<1){
-			MsgBox.showInfo("当前未在任何孵化场，不能操作上孵单");
-			SysUtil.abort();
-		}
+//		if(coll.size()<1){
+//			MsgBox.showInfo("当前未在任何孵化场，不能操作上孵单");
+//			SysUtil.abort();
+//		}
 	}
 	/**
 	 * output loadFields method
@@ -735,7 +735,7 @@ public class BEggHatchBillEditUI extends AbstractBEggHatchBillEditUI
 	protected void applyDefaultValue(IObjectValue vo) {
 		super.applyDefaultValue(vo);
 		vo.put("baseStatus",new Integer(1));
-		vo.put("eggType","Grand");
+		vo.put("eggType","Parent");
 		vo.put("eggSourceType",new Integer(1));
 		vo.put("creator",(com.kingdee.eas.base.permission.UserInfo)(com.kingdee.eas.common.client.SysContext.getSysContext().getCurrentUser()));
 		vo.put("adminOrg", SysContext.getSysContext().getCurrentAdminUnit());
@@ -779,11 +779,10 @@ public class BEggHatchBillEditUI extends AbstractBEggHatchBillEditUI
 		// 校验组织 是否可编辑蛋卷
 		if(this.getOprtState().equals("ADDNEW") || this.getOprtState().equals("EDIT")){
 
-			if(currStoOrg == null){
-				MsgBox.showInfo("当前未在任何孵化场，不能操作上孵单");
-				//		        	this.getUIWindow().close();
-				SysUtil.abort();
-			}
+//			if(currStoOrg == null){
+//				MsgBox.showInfo("当前未在任何孵化场，不能操作上孵单");
+//				SysUtil.abort();
+//			}
 
 
 		}
@@ -980,9 +979,10 @@ public class BEggHatchBillEditUI extends AbstractBEggHatchBillEditUI
 			curCompanyID=null;
 			hatchBaseInfo = (HatchBaseDataInfo) this.prmthatchFactory.getValue();
 			try {
+				hatchBaseInfo = HatchBaseDataFactory.getRemoteInstance().getHatchBaseDataInfo(new ObjectUuidPK(hatchBaseInfo.getId()));
 				info = StorageOrgUnitFactory.getRemoteInstance().getStorageOrgUnitInfo(new ObjectUuidPK( hatchBaseInfo.getHatchFactory().getId().toString()));
 				prmtStorageOrgUnit.setValue(info);
-
+				eggType.setSelectedItem(hatchBaseInfo.getDefaultEggType());
 			} catch (EASBizException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -1411,10 +1411,10 @@ public class BEggHatchBillEditUI extends AbstractBEggHatchBillEditUI
 	 * @throws EASBizException 
 	 */
 	private void updateEggHouse() throws EASBizException, BOSException{
+		HatchBaseDataInfo hatchBaseInfo = (HatchBaseDataInfo) prmthatchFactory.getValue();
+		hatchBaseInfo = HatchBaseDataFactory.getRemoteInstance().getHatchBaseDataInfo(new ObjectUuidPK(hatchBaseInfo.getId()));
 		WarehouseInfo eggHouse = hatchBaseInfo.getDefaultEggWarehouse();
 		EggType selType = (EggType) eggType.getSelectedItem();
-		//		if(EggType.Commercial.equals(selType)){
-		//			eggHouse = hatchBaseInfo.getDefaultCDWarehouse();
 		if(EggType.Parent.equals(selType)){
 			eggHouse = hatchBaseInfo.getDefaultParentWarehouse();
 		}else if(EggType.Grand.equals(selType)){

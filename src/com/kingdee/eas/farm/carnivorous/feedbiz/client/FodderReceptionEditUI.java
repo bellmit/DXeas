@@ -1311,6 +1311,13 @@ public class FodderReceptionEditUI extends AbstractFodderReceptionEditUI
 			}
 			kdtEntrys_Changed(rowIndex, kdtEntrys.getColumn("receiveQty").getColumnIndex());
 		}
+		//根据包数自动计算金额
+		if(kdtEntrys.getColumnKey(colIndex).equals("bagQty")){
+			BigDecimal receiveQty = UIRuleUtil.getBigDecimal(kdtEntrys.getCell(rowIndex, "receiveQty").getValue());
+			BigDecimal receivePrice = UIRuleUtil.getBigDecimal(kdtEntrys.getCell(rowIndex, "receivePrice").getValue());
+			kdtEntrys.getCell(rowIndex, "amount").setValue(receiveQty.multiply(receivePrice));
+		}
+
 
 		if(colIndex!=kdtEntrys.getColumn("confirmQty").getColumnIndex())
 			kdtEntrys.getCell(rowIndex, kdtEntrys.getColumn("confirmQty").getColumnIndex()).setValue(kdtEntrys.getCell(rowIndex, "receiveQty").getValue());
@@ -1334,8 +1341,6 @@ public class FodderReceptionEditUI extends AbstractFodderReceptionEditUI
 				kdtEntrys.getCell(rowIndex, "confirmQty").setValue(null);
 				kdtEntrys.getCell(rowIndex, "bagQty").setValue(null);
 			}
-
-			//			calAveragePrice(rowIndex, materialID);
 		}
 		if(kdtEntrys.getColumnKey(colIndex).equals("receiveQty")){
 			calAmount(rowIndex);

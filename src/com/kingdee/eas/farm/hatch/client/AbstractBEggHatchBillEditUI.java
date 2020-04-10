@@ -3002,7 +3002,7 @@ kdtEggEntry.getCell(rowIndex,"eggQty").setValue(com.kingdee.bos.ui.face.UIRuleUt
      * output applyDefaultValue method
      */
     protected void applyDefaultValue(IObjectValue vo) {        
-		vo.put("eggType","Grand");
+		vo.put("eggType","Parent");
         
     }        
 	protected void setFieldsNull(com.kingdee.bos.dao.AbstractObjectValue arg0) {
