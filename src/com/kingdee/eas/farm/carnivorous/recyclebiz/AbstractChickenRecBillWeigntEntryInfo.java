@@ -261,6 +261,17 @@ public class AbstractChickenRecBillWeigntEntryInfo extends com.kingdee.eas.frame
     {
         setBigDecimal("avgWgt", item);
     }
+    /**
+     * Object:ÅïÇ°¹ý°õ's ¿Û¿îproperty 
+     */
+    public java.math.BigDecimal getPunishAmt()
+    {
+        return getBigDecimal("punishAmt");
+    }
+    public void setPunishAmt(java.math.BigDecimal item)
+    {
+        setBigDecimal("punishAmt", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("92E24BC1");

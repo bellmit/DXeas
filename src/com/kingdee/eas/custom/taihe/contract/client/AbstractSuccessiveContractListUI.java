@@ -43,13 +43,17 @@ import com.kingdee.bos.appframework.uip.UINavigator;
 /**
  * output class name
  */
-public abstract class AbstractSuccessiveContractListUI extends com.kingdee.eas.custom.wlhllicensemanager.client.WlhlCoreBillListUI
+public abstract class AbstractSuccessiveContractListUI extends com.kingdee.eas.framework.client.CoreBillListUI
 {
     private static final Logger logger = CoreUIObject.getLogger(AbstractSuccessiveContractListUI.class);
+    protected com.kingdee.bos.ctrl.swing.KDWorkButton btnAudit;
+    protected com.kingdee.bos.ctrl.swing.KDWorkButton btnUnAudit;
     protected ActionTDPrint actionTDPrint = null;
     protected ActionTDPrintPreview actionTDPrintPreview = null;
     protected ActionBalanceBond actionBalanceBond = null;
     protected ActionViewOtherContract actionViewOtherContract = null;
+    protected ActionAudit actionAudit = null;
+    protected ActionUnAudit actionUnAudit = null;
     public final static String STATUS_VIEW = "VIEW";
     /**
      * output class constructor
@@ -111,11 +115,33 @@ public abstract class AbstractSuccessiveContractListUI extends com.kingdee.eas.c
         this.actionViewOtherContract.setExtendProperty("isObjectUpdateLock", "false");
          this.actionViewOtherContract.addService(new com.kingdee.eas.framework.client.service.PermissionService());
          this.actionViewOtherContract.addService(new com.kingdee.eas.framework.client.service.ForewarnService());
+        //actionAudit
+        this.actionAudit = new ActionAudit(this);
+        getActionManager().registerAction("actionAudit", actionAudit);
+        this.actionAudit.setBindWorkFlow(true);
+        this.actionAudit.setExtendProperty("canForewarn", "true");
+        this.actionAudit.setExtendProperty("userDefined", "false");
+        this.actionAudit.setExtendProperty("isObjectUpdateLock", "false");
+         this.actionAudit.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+         this.actionAudit.addService(new com.kingdee.eas.framework.client.service.ForewarnService());
+         this.actionAudit.addService(new com.kingdee.eas.framework.client.service.WorkFlowService());
+        //actionUnAudit
+        this.actionUnAudit = new ActionUnAudit(this);
+        getActionManager().registerAction("actionUnAudit", actionUnAudit);
+        this.actionUnAudit.setExtendProperty("canForewarn", "true");
+        this.actionUnAudit.setExtendProperty("userDefined", "false");
+        this.actionUnAudit.setExtendProperty("isObjectUpdateLock", "false");
+         this.actionUnAudit.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+         this.actionUnAudit.addService(new com.kingdee.eas.framework.client.service.ForewarnService());
+        this.btnAudit = new com.kingdee.bos.ctrl.swing.KDWorkButton();
+        this.btnUnAudit = new com.kingdee.bos.ctrl.swing.KDWorkButton();
+        this.btnAudit.setName("btnAudit");
+        this.btnUnAudit.setName("btnUnAudit");
         // CoreUI
-		String tblMainStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol3\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol8\"><c:NumberFormat>&amp;date</c:NumberFormat></c:Style><c:Style id=\"sCol9\"><c:NumberFormat>&amp;date</c:NumberFormat></c:Style><c:Style id=\"sCol11\"><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol22\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol23\"><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol24\"><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol25\"><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol27\"><c:NumberFormat>&amp;date</c:NumberFormat></c:Style><c:Style id=\"sCol29\"><c:NumberFormat>&amp;date</c:NumberFormat></c:Style><c:Style id=\"sCol30\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol31\"><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol32\"><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol35\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol36\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol37\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol38\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol40\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol41\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol42\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol44\"><c:NumberFormat>&amp;date</c:NumberFormat></c:Style><c:Style id=\"sCol45\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol47\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol48\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol49\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol50\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol51\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"id\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol0\" /><t:Column t:key=\"number\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"bizDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"description\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol3\" /><t:Column t:key=\"company.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"purchasePerson.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"Supplier.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"contractType.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"beginDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol8\" /><t:Column t:key=\"endDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol9\" /><t:Column t:key=\"billStatus\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"successiveQty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol11\" /><t:Column t:key=\"partyBCell\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"partyBAddress\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"partyBID\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"partyBBank\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"partyBBankNo\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"isInitBill\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"farm.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"header\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"headerCell\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"farmAddress\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"capacity\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol22\" /><t:Column t:key=\"days\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol23\" /><t:Column t:key=\"diffDays\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol24\" /><t:Column t:key=\"intervalDays\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol25\" /><t:Column t:key=\"closeStatus\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"closeTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol27\" /><t:Column t:key=\"remark\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"upSeedingDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol29\" /><t:Column t:key=\"upSeedingQty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol30\" /><t:Column t:key=\"initBatchQty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol31\" /><t:Column t:key=\"hasSuccessiveQty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol32\" /><t:Column t:key=\"feedingType\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"securityDeposit.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"singleSecurityDeposit\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol35\" /><t:Column t:key=\"policyMinimum\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol36\" /><t:Column t:key=\"contractMinimum\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol37\" /><t:Column t:key=\"shouldSecurityDeposit\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol38\" /><t:Column t:key=\"statementPolicy.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"createTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol40\" /><t:Column t:key=\"lastUpdateTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol41\" /><t:Column t:key=\"auditor.number\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol42\" /><t:Column t:key=\"auditor.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"auditTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol44\" /><t:Column t:key=\"creator.number\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol45\" /><t:Column t:key=\"creator.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"lastUpdateUser.number\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol47\" /><t:Column t:key=\"lastUpdateUser.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol48\" /><t:Column t:key=\"handler.number\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol49\" /><t:Column t:key=\"handler.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol50\" /><t:Column t:key=\"yzjincrease\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol51\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{id}</t:Cell><t:Cell>$Resource{number}</t:Cell><t:Cell>$Resource{bizDate}</t:Cell><t:Cell>$Resource{description}</t:Cell><t:Cell>$Resource{company.name}</t:Cell><t:Cell>$Resource{purchasePerson.name}</t:Cell><t:Cell>$Resource{Supplier.name}</t:Cell><t:Cell>$Resource{contractType.name}</t:Cell><t:Cell>$Resource{beginDate}</t:Cell><t:Cell>$Resource{endDate}</t:Cell><t:Cell>$Resource{billStatus}</t:Cell><t:Cell>$Resource{successiveQty}</t:Cell><t:Cell>$Resource{partyBCell}</t:Cell><t:Cell>$Resource{partyBAddress}</t:Cell><t:Cell>$Resource{partyBID}</t:Cell><t:Cell>$Resource{partyBBank}</t:Cell><t:Cell>$Resource{partyBBankNo}</t:Cell><t:Cell>$Resource{isInitBill}</t:Cell><t:Cell>$Resource{farm.name}</t:Cell><t:Cell>$Resource{header}</t:Cell><t:Cell>$Resource{headerCell}</t:Cell><t:Cell>$Resource{farmAddress}</t:Cell><t:Cell>$Resource{capacity}</t:Cell><t:Cell>$Resource{days}</t:Cell><t:Cell>$Resource{diffDays}</t:Cell><t:Cell>$Resource{intervalDays}</t:Cell><t:Cell>$Resource{closeStatus}</t:Cell><t:Cell>$Resource{closeTime}</t:Cell><t:Cell>$Resource{remark}</t:Cell><t:Cell>$Resource{upSeedingDate}</t:Cell><t:Cell>$Resource{upSeedingQty}</t:Cell><t:Cell>$Resource{initBatchQty}</t:Cell><t:Cell>$Resource{hasSuccessiveQty}</t:Cell><t:Cell>$Resource{feedingType}</t:Cell><t:Cell>$Resource{securityDeposit.name}</t:Cell><t:Cell>$Resource{singleSecurityDeposit}</t:Cell><t:Cell>$Resource{policyMinimum}</t:Cell><t:Cell>$Resource{contractMinimum}</t:Cell><t:Cell>$Resource{shouldSecurityDeposit}</t:Cell><t:Cell>$Resource{statementPolicy.name}</t:Cell><t:Cell>$Resource{createTime}</t:Cell><t:Cell>$Resource{lastUpdateTime}</t:Cell><t:Cell>$Resource{auditor.number}</t:Cell><t:Cell>$Resource{auditor.name}</t:Cell><t:Cell>$Resource{auditTime}</t:Cell><t:Cell>$Resource{creator.number}</t:Cell><t:Cell>$Resource{creator.name}</t:Cell><t:Cell>$Resource{lastUpdateUser.number}</t:Cell><t:Cell>$Resource{lastUpdateUser.name}</t:Cell><t:Cell>$Resource{handler.number}</t:Cell><t:Cell>$Resource{handler.name}</t:Cell><t:Cell>$Resource{yzjincrease}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
+		String tblMainStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol4\"><c:NumberFormat>&amp;date</c:NumberFormat></c:Style><c:Style id=\"sCol5\"><c:NumberFormat>&amp;date</c:NumberFormat></c:Style><c:Style id=\"sCol6\"><c:NumberFormat>&amp;date</c:NumberFormat></c:Style><c:Style id=\"sCol7\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol8\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol9\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol10\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol12\"><c:NumberFormat>&amp;date</c:NumberFormat></c:Style><c:Style id=\"sCol15\"><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol17\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol18\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol19\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol21\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol23\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol24\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol25\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol26\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol29\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol30\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol31\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol32\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol33\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol34\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol35\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol36\"><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol37\"><c:NumberFormat>&amp;date</c:NumberFormat></c:Style><c:Style id=\"sCol40\"><c:Protection hidden=\"true\" /></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"id\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol0\" /><t:Column t:key=\"number\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"farmer.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"farm.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"beginDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol4\" /><t:Column t:key=\"endDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol5\" /><t:Column t:key=\"upSeedingDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol6\" /><t:Column t:key=\"upSeedingQty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol7\" /><t:Column t:key=\"settlePolicy.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol8\" /><t:Column t:key=\"diffDays\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol9\" /><t:Column t:key=\"intervalDays\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol10\" /><t:Column t:key=\"closeStatus\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"closeTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol12\" /><t:Column t:key=\"billStatus\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"bizDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"successiveQty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol15\" /><t:Column t:key=\"description\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"createTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol17\" /><t:Column t:key=\"lastUpdateTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol18\" /><t:Column t:key=\"auditor.number\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol19\" /><t:Column t:key=\"auditor.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"creator.number\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol21\" /><t:Column t:key=\"creator.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"lastUpdateUser.number\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol23\" /><t:Column t:key=\"lastUpdateUser.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol24\" /><t:Column t:key=\"handler.number\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol25\" /><t:Column t:key=\"handler.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol26\" /><t:Column t:key=\"contractType.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"partyBCell\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"partyBAddress\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol29\" /><t:Column t:key=\"partyBID\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol30\" /><t:Column t:key=\"partyBBank\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol31\" /><t:Column t:key=\"partyBBankNo\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol32\" /><t:Column t:key=\"header\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol33\" /><t:Column t:key=\"headerCell\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol34\" /><t:Column t:key=\"capacity\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol35\" /><t:Column t:key=\"days\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol36\" /><t:Column t:key=\"auditTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol37\" /><t:Column t:key=\"remark\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"company.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"Supplier.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol40\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{id}</t:Cell><t:Cell>$Resource{number}</t:Cell><t:Cell>$Resource{farmer.name}</t:Cell><t:Cell>$Resource{farm.name}</t:Cell><t:Cell>$Resource{beginDate}</t:Cell><t:Cell>$Resource{endDate}</t:Cell><t:Cell>$Resource{upSeedingDate}</t:Cell><t:Cell>$Resource{upSeedingQty}</t:Cell><t:Cell>$Resource{settlePolicy.name}</t:Cell><t:Cell>$Resource{diffDays}</t:Cell><t:Cell>$Resource{intervalDays}</t:Cell><t:Cell>$Resource{closeStatus}</t:Cell><t:Cell>$Resource{closeTime}</t:Cell><t:Cell>$Resource{billStatus}</t:Cell><t:Cell>$Resource{bizDate}</t:Cell><t:Cell>$Resource{successiveQty}</t:Cell><t:Cell>$Resource{description}</t:Cell><t:Cell>$Resource{createTime}</t:Cell><t:Cell>$Resource{lastUpdateTime}</t:Cell><t:Cell>$Resource{auditor.number}</t:Cell><t:Cell>$Resource{auditor.name}</t:Cell><t:Cell>$Resource{creator.number}</t:Cell><t:Cell>$Resource{creator.name}</t:Cell><t:Cell>$Resource{lastUpdateUser.number}</t:Cell><t:Cell>$Resource{lastUpdateUser.name}</t:Cell><t:Cell>$Resource{handler.number}</t:Cell><t:Cell>$Resource{handler.name}</t:Cell><t:Cell>$Resource{contractType.name}</t:Cell><t:Cell>$Resource{partyBCell}</t:Cell><t:Cell>$Resource{partyBAddress}</t:Cell><t:Cell>$Resource{partyBID}</t:Cell><t:Cell>$Resource{partyBBank}</t:Cell><t:Cell>$Resource{partyBBankNo}</t:Cell><t:Cell>$Resource{header}</t:Cell><t:Cell>$Resource{headerCell}</t:Cell><t:Cell>$Resource{capacity}</t:Cell><t:Cell>$Resource{days}</t:Cell><t:Cell>$Resource{auditTime}</t:Cell><t:Cell>$Resource{remark}</t:Cell><t:Cell>$Resource{company.name}</t:Cell><t:Cell>$Resource{Supplier.name}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
 		
         this.tblMain.setFormatXml(resHelper.translateString("tblMain",tblMainStrXML));
-                this.tblMain.putBindContents("mainQuery",new String[] {"id","number","bizDate","description","company.name","purchasePerson.name","Supplier.name","contractType.name","beginDate","endDate","billStatus","successiveQty","partyBCell","partyBAddress","partyBID","partyBBank","partyBBankNo","isInitBill","farm.name","header","headerCell","farmAddress","capacity","days","diffDays","intervalDays","closeStatus","closeTime","remark","upSeedingDate","upSeedingQty","initBatchQty","hasSuccessiveQty","feedingType","securityDeposit.name","singleSecurityDeposit","policyMinimum","contractMinimum","shouldSecurityDeposit","statementPolicy.name","createTime","lastUpdateTime","auditor.number","auditor.name","auditTime","creator.number","creator.name","lastUpdateUser.number","lastUpdateUser.name","handler.number","handler.name","yzjincrease"});
+                this.tblMain.putBindContents("mainQuery",new String[] {"id","number","farmer.name","farm.name","beginDate","endDate","upSeedingDate","upSeedingQty","settlePolicy.name","diffDays","intervalDays","closeStatus","closeTime","billStatus","bizDate","successiveQty","description","createTime","lastUpdateTime","auditor.number","auditor.name","creator.number","creator.name","lastUpdateUser.number","lastUpdateUser.name","handler.number","handler.name","contractType.name","partyBCell","partyBAddress","partyBID","partyBBank","partyBBankNo","header","headerCell","capacity","days","auditTime","remark","company.name","Supplier.name"});
 
 
         this.tblMain.checkParsed();
@@ -127,6 +153,12 @@ public abstract class AbstractSuccessiveContractListUI extends com.kingdee.eas.c
         this.kDSeparator6.setVisible(false);		
         this.menuItemViewDoProccess.setVisible(false);		
         this.menuItemAuditResult.setVisible(false);
+        // btnAudit
+        this.btnAudit.setAction((IItemAction)ActionProxyFactory.getProxy(actionAudit, new Class[] { IItemAction.class }, getServiceContext()));		
+        this.btnAudit.setText(resHelper.getString("btnAudit.text"));
+        // btnUnAudit
+        this.btnUnAudit.setAction((IItemAction)ActionProxyFactory.getProxy(actionUnAudit, new Class[] { IItemAction.class }, getServiceContext()));		
+        this.btnUnAudit.setText(resHelper.getString("btnUnAudit.text"));
 		//Register control's property binding
 		registerBindings();
 		registerUIState();
@@ -154,8 +186,8 @@ public abstract class AbstractSuccessiveContractListUI extends com.kingdee.eas.c
         this.setBounds(new Rectangle(10, 10, 1013, 629));
         this.setLayout(new KDLayout());
         this.putClientProperty("OriginalBounds", new Rectangle(10, 10, 1013, 629));
-        tblMain.setBounds(new Rectangle(10, 10, 996, 607));
-        this.add(tblMain, new KDLayout.Constraints(10, 10, 996, 607, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        tblMain.setBounds(new Rectangle(10, 10, 996, 580));
+        this.add(tblMain, new KDLayout.Constraints(10, 10, 996, 580, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
 
     }
 
@@ -215,13 +247,11 @@ public abstract class AbstractSuccessiveContractListUI extends com.kingdee.eas.c
         menuView.add(menuItemQueryScheme);
         menuView.add(kDSeparator6);
         //menuBiz
-        menuBiz.add(mBtnAudit);
-        menuBiz.add(mBtnUnAudit);
         menuBiz.add(menuItemCancelCancel);
         menuBiz.add(menuItemCancel);
         menuBiz.add(menuItemVoucher);
-        menuBiz.add(menuItemPCVoucher);
         menuBiz.add(menuItemDelVoucher);
+        menuBiz.add(menuItemPCVoucher);
         menuBiz.add(menuItemDelPCVoucher);
         //menuTool
         menuTool.add(menuItemSendMessage);
@@ -269,8 +299,6 @@ public abstract class AbstractSuccessiveContractListUI extends com.kingdee.eas.c
         this.toolBar.add(btnEdit);
         this.toolBar.add(kDSeparatorCloud);
         this.toolBar.add(btnRemove);
-        this.toolBar.add(tBtnAudit);
-        this.toolBar.add(tBtnUnAudit);
         this.toolBar.add(btnRefresh);
         this.toolBar.add(btnQuery);
         this.toolBar.add(btnLocate);
@@ -293,15 +321,17 @@ public abstract class AbstractSuccessiveContractListUI extends com.kingdee.eas.c
         this.toolBar.add(separatorFW4);
         this.toolBar.add(btnNumberSign);
         this.toolBar.add(btnVoucher);
-        this.toolBar.add(btnPCVoucher);
         this.toolBar.add(btnDelVoucher);
+        this.toolBar.add(btnPCVoucher);
         this.toolBar.add(btnDelPCVoucher);
         this.toolBar.add(btnMultiapprove);
         this.toolBar.add(btnNextPerson);
         this.toolBar.add(btnAuditResult);
         this.toolBar.add(btnCancel);
         this.toolBar.add(btnCancelCancel);
+        this.toolBar.add(btnAudit);
         this.toolBar.add(btnWFViewdoProccess);
+        this.toolBar.add(btnUnAudit);
 
 
     }
@@ -434,7 +464,6 @@ public abstract class AbstractSuccessiveContractListUI extends com.kingdee.eas.c
         sic.add(new SelectorItemInfo("lastUpdateUser.name"));
         sic.add(new SelectorItemInfo("handler.number"));
         sic.add(new SelectorItemInfo("handler.name"));
-        sic.add(new SelectorItemInfo("isInitBill"));
         sic.add(new SelectorItemInfo("contractType.name"));
         sic.add(new SelectorItemInfo("beginDate"));
         sic.add(new SelectorItemInfo("endDate"));
@@ -444,8 +473,8 @@ public abstract class AbstractSuccessiveContractListUI extends com.kingdee.eas.c
         sic.add(new SelectorItemInfo("partyBID"));
         sic.add(new SelectorItemInfo("partyBBank"));
         sic.add(new SelectorItemInfo("partyBBankNo"));
-        sic.add(new SelectorItemInfo("farm.name"));
         sic.add(new SelectorItemInfo("header"));
+        sic.add(new SelectorItemInfo("headerCell"));
         sic.add(new SelectorItemInfo("capacity"));
         sic.add(new SelectorItemInfo("days"));
         sic.add(new SelectorItemInfo("diffDays"));
@@ -459,23 +488,14 @@ public abstract class AbstractSuccessiveContractListUI extends com.kingdee.eas.c
         sic.add(new SelectorItemInfo("Supplier.name"));
         sic.add(new SelectorItemInfo("upSeedingDate"));
         sic.add(new SelectorItemInfo("upSeedingQty"));
-        sic.add(new SelectorItemInfo("purchasePerson.name"));
-        sic.add(new SelectorItemInfo("hasSuccessiveQty"));
-        sic.add(new SelectorItemInfo("feedingType"));
-        sic.add(new SelectorItemInfo("securityDeposit.name"));
-        sic.add(new SelectorItemInfo("singleSecurityDeposit"));
-        sic.add(new SelectorItemInfo("policyMinimum"));
-        sic.add(new SelectorItemInfo("contractMinimum"));
-        sic.add(new SelectorItemInfo("shouldSecurityDeposit"));
-        sic.add(new SelectorItemInfo("headerCell"));
-        sic.add(new SelectorItemInfo("statementPolicy.name"));
-        sic.add(new SelectorItemInfo("initBatchQty"));
-        sic.add(new SelectorItemInfo("farmAddress"));
-        sic.add(new SelectorItemInfo("yzjincrease"));
+        sic.add(new SelectorItemInfo("farmer.name"));
+        sic.add(new SelectorItemInfo("farm.name"));
+        sic.add(new SelectorItemInfo("settlePolicy.name"));
         return sic;
     }            protected java.util.List getQuerySorterFields() 
     { 
         java.util.List sorterFieldList = new ArrayList(); 
+        sorterFieldList.add("createTime"); 
         sorterFieldList.add("number"); 
         return sorterFieldList; 
     } 
@@ -546,6 +566,28 @@ com.kingdee.eas.custom.taihe.contract.SuccessiveContractFactory.getRemoteInstanc
 com.kingdee.eas.custom.taihe.contract.SuccessiveContractInfo editData = (com.kingdee.eas.custom.taihe.contract.SuccessiveContractInfo)getBizInterface().getValue(new com.kingdee.bos.dao.ormapping.ObjectUuidPK(BOSUuid.read(getSelectedKeyValue())));
 com.kingdee.eas.custom.taihe.contract.SuccessiveContractFactory.getRemoteInstance().viewOtherContract(editData);
     }
+    	
+
+    /**
+     * output actionAudit_actionPerformed method
+     */
+    public void actionAudit_actionPerformed(ActionEvent e) throws Exception
+    {
+        if (getSelectedKeyValue() == null) return;
+com.kingdee.eas.custom.taihe.contract.SuccessiveContractInfo editData = (com.kingdee.eas.custom.taihe.contract.SuccessiveContractInfo)getBizInterface().getValue(new com.kingdee.bos.dao.ormapping.ObjectUuidPK(BOSUuid.read(getSelectedKeyValue())));
+com.kingdee.eas.custom.taihe.contract.SuccessiveContractFactory.getRemoteInstance().audit(editData);
+    }
+    	
+
+    /**
+     * output actionUnAudit_actionPerformed method
+     */
+    public void actionUnAudit_actionPerformed(ActionEvent e) throws Exception
+    {
+        if (getSelectedKeyValue() == null) return;
+com.kingdee.eas.custom.taihe.contract.SuccessiveContractInfo editData = (com.kingdee.eas.custom.taihe.contract.SuccessiveContractInfo)getBizInterface().getValue(new com.kingdee.bos.dao.ormapping.ObjectUuidPK(BOSUuid.read(getSelectedKeyValue())));
+com.kingdee.eas.custom.taihe.contract.SuccessiveContractFactory.getRemoteInstance().unAudit(editData);
+    }
 	public RequestContext prepareActionRemove(IItemAction itemAction) throws Exception {
 			RequestContext request = super.prepareActionRemove(itemAction);		
 		if (request != null) {
@@ -599,6 +641,28 @@ com.kingdee.eas.custom.taihe.contract.SuccessiveContractFactory.getRemoteInstanc
     }
 	
 	public boolean isPrepareActionViewOtherContract() {
+    	return false;
+    }
+	public RequestContext prepareActionAudit(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareActionAudit() {
+    	return false;
+    }
+	public RequestContext prepareActionUnAudit(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareActionUnAudit() {
     	return false;
     }
 
@@ -723,6 +787,66 @@ com.kingdee.eas.custom.taihe.contract.SuccessiveContractFactory.getRemoteInstanc
     }
 
     /**
+     * output ActionAudit class
+     */     
+    protected class ActionAudit extends ItemAction {     
+    
+        public ActionAudit()
+        {
+            this(null);
+        }
+
+        public ActionAudit(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            _tempStr = resHelper.getString("ActionAudit.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionAudit.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionAudit.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractSuccessiveContractListUI.this, "ActionAudit", "actionAudit_actionPerformed", e);
+        }
+    }
+
+    /**
+     * output ActionUnAudit class
+     */     
+    protected class ActionUnAudit extends ItemAction {     
+    
+        public ActionUnAudit()
+        {
+            this(null);
+        }
+
+        public ActionUnAudit(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            _tempStr = resHelper.getString("ActionUnAudit.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionUnAudit.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionUnAudit.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractSuccessiveContractListUI.this, "ActionUnAudit", "actionUnAudit_actionPerformed", e);
+        }
+    }
+
+    /**
      * output getMetaDataPK method
      */
     public IMetaDataPK getMetaDataPK()
@@ -767,7 +891,7 @@ com.kingdee.eas.custom.taihe.contract.SuccessiveContractFactory.getRemoteInstanc
      */
     public String[] getMergeColumnKeys()
     {
-        return new String[] {"id","number","bizDate","description","company.name","purchasePerson.name","Supplier.name","contractType.name","beginDate","endDate","billStatus","successiveQty","partyBCell","partyBAddress","partyBID","partyBBank","partyBBankNo","isInitBill","farm.name","header","headerCell","farmAddress","capacity","days","diffDays","intervalDays","closeStatus","closeTime","remark","upSeedingDate","upSeedingQty","initBatchQty","hasSuccessiveQty","feedingType","securityDeposit.name","singleSecurityDeposit","policyMinimum","contractMinimum","shouldSecurityDeposit","statementPolicy.name","createTime","lastUpdateTime","auditor.number","auditor.name","auditTime","creator.number","creator.name","lastUpdateUser.number","lastUpdateUser.name","handler.number","handler.name","yzjincrease"};
+        return new String[] {"id","number","farmer.name","farm.name","beginDate","endDate","upSeedingDate","upSeedingQty","settlePolicy.name","diffDays","intervalDays","closeStatus","closeTime","billStatus","bizDate","successiveQty","description","createTime","lastUpdateTime","auditor.number","auditor.name","creator.number","creator.name","lastUpdateUser.number","lastUpdateUser.name","handler.number","handler.name","contractType.name","partyBCell","partyBAddress","partyBID","partyBBank","partyBBankNo","header","headerCell","capacity","days","auditTime","remark","company.name","Supplier.name"};
     }
 
 

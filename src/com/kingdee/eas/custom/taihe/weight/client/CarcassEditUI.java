@@ -64,12 +64,12 @@ public class CarcassEditUI extends AbstractCarcassEditUI
 					try {
 						ics = CarSendBillFactory.getRemoteInstance();
 						CarSendBillInfo info = ics.getCarSendBillInfo(new ObjectUuidPK(carsendID));
-						if(info.getBatchContract()!=null){
-							String batchContract = info.getBatchContract().getId().toString();
-							IBatchContract ibc = BatchContractFactory.getRemoteInstance();
-							BatchContractInfo bcInfo = ibc.getBatchContractInfo(new ObjectUuidPK(batchContract));
-							txtmaterialNum.setText(bcInfo.getNumber());
-						}
+//						if(info.getBatchContract()!=null){
+//							String batchContract = info.getBatchContract().getId().toString();
+//							IBatchContract ibc = BatchContractFactory.getRemoteInstance();
+//							BatchContractInfo bcInfo = ibc.getBatchContractInfo(new ObjectUuidPK(batchContract));
+//							txtmaterialNum.setText(bcInfo.getNumber());
+//						}
 						
 					} catch (BOSException e) {
 						// TODO Auto-generated catch block

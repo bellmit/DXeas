@@ -99,6 +99,7 @@ public abstract class AbstractFodderReceptionEditUI extends com.kingdee.eas.fram
     protected com.kingdee.bos.ctrl.swing.KDTabbedPane kDTabbedPane1;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contcontractQty;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contallowProcess;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contconfirmTime;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtCreator;
     protected com.kingdee.bos.ctrl.swing.KDDatePicker kDDateCreateTime;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtLastUpdateUser;
@@ -173,6 +174,7 @@ public abstract class AbstractFodderReceptionEditUI extends com.kingdee.eas.fram
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtlateAllow;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtcontractQty;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtallowProcess;
+    protected com.kingdee.bos.ctrl.swing.KDDatePicker pkconfirmTime;
     protected com.kingdee.bos.ctrl.swing.KDWorkButton tBtnAudit;
     protected com.kingdee.bos.ctrl.swing.KDWorkButton tBtnUnAudit;
     protected com.kingdee.bos.ctrl.swing.KDWorkButton btnClose;
@@ -387,6 +389,7 @@ public abstract class AbstractFodderReceptionEditUI extends com.kingdee.eas.fram
         this.kDTabbedPane1 = new com.kingdee.bos.ctrl.swing.KDTabbedPane();
         this.contcontractQty = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contallowProcess = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contconfirmTime = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.prmtCreator = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.kDDateCreateTime = new com.kingdee.bos.ctrl.swing.KDDatePicker();
         this.prmtLastUpdateUser = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
@@ -460,6 +463,7 @@ public abstract class AbstractFodderReceptionEditUI extends com.kingdee.eas.fram
         this.txtlateAllow = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
         this.txtcontractQty = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
         this.txtallowProcess = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.pkconfirmTime = new com.kingdee.bos.ctrl.swing.KDDatePicker();
         this.tBtnAudit = new com.kingdee.bos.ctrl.swing.KDWorkButton();
         this.tBtnUnAudit = new com.kingdee.bos.ctrl.swing.KDWorkButton();
         this.btnClose = new com.kingdee.bos.ctrl.swing.KDWorkButton();
@@ -521,6 +525,7 @@ public abstract class AbstractFodderReceptionEditUI extends com.kingdee.eas.fram
         this.kDTabbedPane1.setName("kDTabbedPane1");
         this.contcontractQty.setName("contcontractQty");
         this.contallowProcess.setName("contallowProcess");
+        this.contconfirmTime.setName("contconfirmTime");
         this.prmtCreator.setName("prmtCreator");
         this.kDDateCreateTime.setName("kDDateCreateTime");
         this.prmtLastUpdateUser.setName("prmtLastUpdateUser");
@@ -594,6 +599,7 @@ public abstract class AbstractFodderReceptionEditUI extends com.kingdee.eas.fram
         this.txtlateAllow.setName("txtlateAllow");
         this.txtcontractQty.setName("txtcontractQty");
         this.txtallowProcess.setName("txtallowProcess");
+        this.pkconfirmTime.setName("pkconfirmTime");
         this.tBtnAudit.setName("tBtnAudit");
         this.tBtnUnAudit.setName("tBtnUnAudit");
         this.btnClose.setName("btnClose");
@@ -865,6 +871,11 @@ public abstract class AbstractFodderReceptionEditUI extends com.kingdee.eas.fram
         this.contallowProcess.setBoundLabelText(resHelper.getString("contallowProcess.boundLabelText"));		
         this.contallowProcess.setBoundLabelLength(100);		
         this.contallowProcess.setBoundLabelUnderline(true);
+        // contconfirmTime		
+        this.contconfirmTime.setBoundLabelText(resHelper.getString("contconfirmTime.boundLabelText"));		
+        this.contconfirmTime.setBoundLabelLength(100);		
+        this.contconfirmTime.setBoundLabelUnderline(true);		
+        this.contconfirmTime.setVisible(true);
         // prmtCreator		
         this.prmtCreator.setEnabled(false);
         // kDDateCreateTime		
@@ -1846,6 +1857,9 @@ public abstract class AbstractFodderReceptionEditUI extends com.kingdee.eas.fram
         this.txtallowProcess.setMaxLength(100);		
         this.txtallowProcess.setRequired(false);		
         this.txtallowProcess.setEnabled(false);
+        // pkconfirmTime		
+        this.pkconfirmTime.setVisible(true);		
+        this.pkconfirmTime.setRequired(false);
         // tBtnAudit
         this.tBtnAudit.setAction((IItemAction)ActionProxyFactory.getProxy(actionAudit, new Class[] { IItemAction.class }, getServiceContext()));		
         this.tBtnAudit.setText(resHelper.getString("tBtnAudit.text"));
@@ -1870,7 +1884,7 @@ public abstract class AbstractFodderReceptionEditUI extends com.kingdee.eas.fram
         this.mBtnUnAudit.setAction((IItemAction)ActionProxyFactory.getProxy(actionUnAudit, new Class[] { IItemAction.class }, getServiceContext()));		
         this.mBtnUnAudit.setText(resHelper.getString("mBtnUnAudit.text"));
         // newSeparator3
-        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {chkisHasSaleOrder,chkisHasSaleReturn,txtNumber,pkBizDate,prmtstorageOrgUnit,txtDescription,billStatus,prmtcompany,pkauditTime,prmtAuditor,prmtCreator,kDDateCreateTime,prmtLastUpdateUser,kDDateLastUpdateTime,chkisInit,prmtdriver,txtcarNo,txtlinkCell,prmtperson,prmtbizPerson,billType,kdtEntrys,txtvoucherNum,chkisHasMaterialReq,prmtreturnCompany,fodderSourceType,prmtfarmer,prmtfarm,prmtbatchContract,prmtbatch,prmtsettlePolicy,txtweekDay,pkindate,txtbatchQty,prmtsupplier,prmtcar,chkisTiLiao,chkisOtherIssue,chkisHasSaleIssue,chkisFromTiaoLiao,chkisSanZhuang,txtfarmerPhone,txtfarmAddress,chkisWeight,bunker,txtreturnOpinion,prmtcostCenter,prmtbreedData,txtfeedInstance,txtearlyStand,txtearlyVou,txtearlyAudit,txtearlyUnAudit,txtearlyAllow,txtmidStand,txtmidVouch,txtmidAudit,txtmidUnAudit,txtmidAllow,txtlateStand,txtlateVoucher,txtlateAudit,txtlateUnAudit,txtlateAllow,txtcontractQty,txtallowProcess}));
+        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {chkisHasSaleOrder,chkisHasSaleReturn,txtNumber,pkBizDate,prmtstorageOrgUnit,txtDescription,billStatus,prmtcompany,pkauditTime,prmtAuditor,prmtCreator,kDDateCreateTime,prmtLastUpdateUser,kDDateLastUpdateTime,chkisInit,prmtdriver,txtcarNo,txtlinkCell,prmtperson,prmtbizPerson,billType,kdtEntrys,txtvoucherNum,chkisHasMaterialReq,prmtreturnCompany,fodderSourceType,prmtfarmer,prmtfarm,prmtbatchContract,prmtbatch,prmtsettlePolicy,txtweekDay,pkindate,txtbatchQty,prmtsupplier,prmtcar,chkisTiLiao,chkisOtherIssue,chkisHasSaleIssue,chkisFromTiaoLiao,chkisSanZhuang,txtfarmerPhone,txtfarmAddress,chkisWeight,bunker,txtreturnOpinion,prmtcostCenter,prmtbreedData,txtfeedInstance,txtearlyStand,txtearlyVou,txtearlyAudit,txtearlyUnAudit,txtearlyAllow,txtmidStand,txtmidVouch,txtmidAudit,txtmidUnAudit,txtmidAllow,txtlateStand,txtlateVoucher,txtlateAudit,txtlateUnAudit,txtlateAllow,txtcontractQty,txtallowProcess,pkconfirmTime}));
         this.setFocusCycleRoot(true);
 		//Register control's property binding
 		registerBindings();
@@ -1911,8 +1925,8 @@ public abstract class AbstractFodderReceptionEditUI extends com.kingdee.eas.fram
         this.add(contNumber, new KDLayout.Constraints(21, 13, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contBizDate.setBounds(new Rectangle(305, 13, 270, 19));
         this.add(contBizDate, new KDLayout.Constraints(305, 13, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contDescription.setBounds(new Rectangle(893, 173, 270, 19));
-        this.add(contDescription, new KDLayout.Constraints(893, 173, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contDescription.setBounds(new Rectangle(893, 160, 270, 19));
+        this.add(contDescription, new KDLayout.Constraints(893, 160, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contAuditor.setBounds(new Rectangle(35, 584, 270, 19));
         this.add(contAuditor, new KDLayout.Constraints(35, 584, 270, 19, KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contbillStatus.setBounds(new Rectangle(604, 12, 270, 19));
@@ -1929,12 +1943,12 @@ public abstract class AbstractFodderReceptionEditUI extends com.kingdee.eas.fram
         this.add(contstorageOrgUnit, new KDLayout.Constraints(305, 45, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         chkisInit.setBounds(new Rectangle(1168, 302, 270, 19));
         this.add(chkisInit, new KDLayout.Constraints(1168, 302, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contdriver.setBounds(new Rectangle(305, 173, 270, 19));
-        this.add(contdriver, new KDLayout.Constraints(305, 173, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contdriver.setBounds(new Rectangle(305, 160, 270, 19));
+        this.add(contdriver, new KDLayout.Constraints(305, 160, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contcarNo.setBounds(new Rectangle(1168, 330, 270, 19));
         this.add(contcarNo, new KDLayout.Constraints(1168, 330, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contlinkCell.setBounds(new Rectangle(604, 173, 270, 19));
-        this.add(contlinkCell, new KDLayout.Constraints(604, 173, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contlinkCell.setBounds(new Rectangle(604, 160, 270, 19));
+        this.add(contlinkCell, new KDLayout.Constraints(604, 160, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contbizPerson.setBounds(new Rectangle(1165, 275, 270, 19));
         this.add(contbizPerson, new KDLayout.Constraints(1165, 275, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contperson.setBounds(new Rectangle(21, 109, 270, 19));
@@ -1945,14 +1959,14 @@ public abstract class AbstractFodderReceptionEditUI extends com.kingdee.eas.fram
         this.add(contvoucherNum, new KDLayout.Constraints(1171, 359, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         chkisHasMaterialReq.setBounds(new Rectangle(1187, 240, 25, 19));
         this.add(chkisHasMaterialReq, new KDLayout.Constraints(1187, 240, 25, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contreturnCompany.setBounds(new Rectangle(604, 140, 270, 19));
-        this.add(contreturnCompany, new KDLayout.Constraints(604, 140, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contfodderSourceType.setBounds(new Rectangle(305, 141, 270, 19));
-        this.add(contfodderSourceType, new KDLayout.Constraints(305, 141, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        chkisHasSaleOrder.setBounds(new Rectangle(-1, 229, 147, 19));
-        this.add(chkisHasSaleOrder, new KDLayout.Constraints(-1, 229, 147, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        chkisHasSaleReturn.setBounds(new Rectangle(3, 226, 154, 20));
-        this.add(chkisHasSaleReturn, new KDLayout.Constraints(3, 226, 154, 20, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contreturnCompany.setBounds(new Rectangle(604, 133, 270, 19));
+        this.add(contreturnCompany, new KDLayout.Constraints(604, 133, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contfodderSourceType.setBounds(new Rectangle(305, 134, 270, 19));
+        this.add(contfodderSourceType, new KDLayout.Constraints(305, 134, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        chkisHasSaleOrder.setBounds(new Rectangle(-1, 201, 147, 19));
+        this.add(chkisHasSaleOrder, new KDLayout.Constraints(-1, 201, 147, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        chkisHasSaleReturn.setBounds(new Rectangle(3, 198, 154, 20));
+        this.add(chkisHasSaleReturn, new KDLayout.Constraints(3, 198, 154, 20, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contfarmer.setBounds(new Rectangle(604, 44, 270, 19));
         this.add(contfarmer, new KDLayout.Constraints(604, 44, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contfarm.setBounds(new Rectangle(893, 44, 270, 19));
@@ -1963,48 +1977,50 @@ public abstract class AbstractFodderReceptionEditUI extends com.kingdee.eas.fram
         this.add(contbatch, new KDLayout.Constraints(893, 76, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contsettlePolicy.setBounds(new Rectangle(305, 109, 270, 19));
         this.add(contsettlePolicy, new KDLayout.Constraints(305, 109, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contweekDay.setBounds(new Rectangle(21, 141, 270, 19));
-        this.add(contweekDay, new KDLayout.Constraints(21, 141, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contweekDay.setBounds(new Rectangle(21, 134, 270, 19));
+        this.add(contweekDay, new KDLayout.Constraints(21, 134, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contindate.setBounds(new Rectangle(893, 108, 270, 19));
         this.add(contindate, new KDLayout.Constraints(893, 108, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contbatchQty.setBounds(new Rectangle(604, 108, 270, 19));
         this.add(contbatchQty, new KDLayout.Constraints(604, 108, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contsupplier.setBounds(new Rectangle(893, 140, 270, 19));
-        this.add(contsupplier, new KDLayout.Constraints(893, 140, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contcar.setBounds(new Rectangle(21, 173, 270, 19));
-        this.add(contcar, new KDLayout.Constraints(21, 173, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contsupplier.setBounds(new Rectangle(893, 133, 270, 19));
+        this.add(contsupplier, new KDLayout.Constraints(893, 133, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contcar.setBounds(new Rectangle(21, 160, 270, 19));
+        this.add(contcar, new KDLayout.Constraints(21, 160, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         chkisTiLiao.setBounds(new Rectangle(1189, 239, 25, 19));
         this.add(chkisTiLiao, new KDLayout.Constraints(1189, 239, 25, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         chkisOtherIssue.setBounds(new Rectangle(1200, 241, 25, 19));
         this.add(chkisOtherIssue, new KDLayout.Constraints(1200, 241, 25, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         chkisHasSaleIssue.setBounds(new Rectangle(1188, 240, 25, 20));
         this.add(chkisHasSaleIssue, new KDLayout.Constraints(1188, 240, 25, 20, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        chkisFromTiaoLiao.setBounds(new Rectangle(109, 242, 113, 19));
-        this.add(chkisFromTiaoLiao, new KDLayout.Constraints(109, 242, 113, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        chkisSanZhuang.setBounds(new Rectangle(23, 242, 83, 19));
-        this.add(chkisSanZhuang, new KDLayout.Constraints(23, 242, 83, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        chkisFromTiaoLiao.setBounds(new Rectangle(109, 214, 113, 19));
+        this.add(chkisFromTiaoLiao, new KDLayout.Constraints(109, 214, 113, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        chkisSanZhuang.setBounds(new Rectangle(23, 214, 83, 19));
+        this.add(chkisSanZhuang, new KDLayout.Constraints(23, 214, 83, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contfarmerPhone.setBounds(new Rectangle(21, 77, 270, 19));
         this.add(contfarmerPhone, new KDLayout.Constraints(21, 77, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contfarmAddress.setBounds(new Rectangle(305, 77, 270, 19));
         this.add(contfarmAddress, new KDLayout.Constraints(305, 77, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        chkisWeight.setBounds(new Rectangle(226, 242, 83, 19));
-        this.add(chkisWeight, new KDLayout.Constraints(226, 242, 83, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contbunker.setBounds(new Rectangle(21, 205, 270, 19));
-        this.add(contbunker, new KDLayout.Constraints(21, 205, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contreturnOpinion.setBounds(new Rectangle(305, 205, 272, 19));
-        this.add(contreturnOpinion, new KDLayout.Constraints(305, 205, 272, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contcostCenter.setBounds(new Rectangle(893, 204, 270, 19));
-        this.add(contcostCenter, new KDLayout.Constraints(893, 204, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contbreedData.setBounds(new Rectangle(609, 204, 270, 19));
-        this.add(contbreedData, new KDLayout.Constraints(609, 204, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contfeedInstance.setBounds(new Rectangle(308, 240, 270, 19));
-        this.add(contfeedInstance, new KDLayout.Constraints(308, 240, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        chkisWeight.setBounds(new Rectangle(226, 214, 83, 19));
+        this.add(chkisWeight, new KDLayout.Constraints(226, 214, 83, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contbunker.setBounds(new Rectangle(21, 187, 270, 19));
+        this.add(contbunker, new KDLayout.Constraints(21, 187, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contreturnOpinion.setBounds(new Rectangle(305, 187, 272, 19));
+        this.add(contreturnOpinion, new KDLayout.Constraints(305, 187, 272, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contcostCenter.setBounds(new Rectangle(893, 186, 270, 19));
+        this.add(contcostCenter, new KDLayout.Constraints(893, 186, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contbreedData.setBounds(new Rectangle(609, 186, 270, 19));
+        this.add(contbreedData, new KDLayout.Constraints(609, 186, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contfeedInstance.setBounds(new Rectangle(308, 212, 270, 19));
+        this.add(contfeedInstance, new KDLayout.Constraints(308, 212, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         kDTabbedPane1.setBounds(new Rectangle(24, 282, 1142, 283));
         this.add(kDTabbedPane1, new KDLayout.Constraints(24, 282, 1142, 283, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
-        contcontractQty.setBounds(new Rectangle(609, 240, 270, 19));
-        this.add(contcontractQty, new KDLayout.Constraints(609, 240, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contallowProcess.setBounds(new Rectangle(893, 240, 270, 19));
-        this.add(contallowProcess, new KDLayout.Constraints(893, 240, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contcontractQty.setBounds(new Rectangle(609, 212, 270, 19));
+        this.add(contcontractQty, new KDLayout.Constraints(609, 212, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contallowProcess.setBounds(new Rectangle(893, 212, 270, 19));
+        this.add(contallowProcess, new KDLayout.Constraints(893, 212, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contconfirmTime.setBounds(new Rectangle(21, 241, 270, 19));
+        this.add(contconfirmTime, new KDLayout.Constraints(21, 241, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         //contCreator
         contCreator.setBoundEditor(prmtCreator);
         //contCreateTime
@@ -2154,6 +2170,8 @@ public abstract class AbstractFodderReceptionEditUI extends com.kingdee.eas.fram
         contcontractQty.setBoundEditor(txtcontractQty);
         //contallowProcess
         contallowProcess.setBoundEditor(txtallowProcess);
+        //contconfirmTime
+        contconfirmTime.setBoundEditor(pkconfirmTime);
 
     }
 
@@ -2433,7 +2451,8 @@ public abstract class AbstractFodderReceptionEditUI extends com.kingdee.eas.fram
 		dataBinder.registerBinding("lateUnAudit", java.math.BigDecimal.class, this.txtlateUnAudit, "value");
 		dataBinder.registerBinding("lateAllow", java.math.BigDecimal.class, this.txtlateAllow, "value");
 		dataBinder.registerBinding("contractQty", java.math.BigDecimal.class, this.txtcontractQty, "value");
-		dataBinder.registerBinding("allowProcess", String.class, this.txtallowProcess, "text");		
+		dataBinder.registerBinding("allowProcess", String.class, this.txtallowProcess, "text");
+		dataBinder.registerBinding("confirmTime", java.util.Date.class, this.pkconfirmTime, "value");		
 	}
 	//Regiester UI State
 	private void registerUIState(){		
@@ -2663,7 +2682,8 @@ public abstract class AbstractFodderReceptionEditUI extends com.kingdee.eas.fram
 		getValidateHelper().registerBindProperty("lateUnAudit", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("lateAllow", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("contractQty", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("allowProcess", ValidateHelper.ON_SAVE);    		
+		getValidateHelper().registerBindProperty("allowProcess", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("confirmTime", ValidateHelper.ON_SAVE);    		
 	}
 
 
@@ -3124,6 +3144,7 @@ kdtEntrys.getCell(rowIndex,"amount").setValue(com.kingdee.bos.ui.face.UIRuleUtil
         sic.add(new SelectorItemInfo("lateAllow"));
         sic.add(new SelectorItemInfo("contractQty"));
         sic.add(new SelectorItemInfo("allowProcess"));
+        sic.add(new SelectorItemInfo("confirmTime"));
         return sic;
     }        
     	

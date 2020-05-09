@@ -72,6 +72,8 @@ public abstract class AbstractChickenRecBillEditUI extends com.kingdee.eas.frame
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contbreedData;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contfeedDays;
     protected com.kingdee.bos.ctrl.swing.KDTabbedPane kDTabbedPane1;
+    protected com.kingdee.bos.ctrl.swing.KDCheckBox chkisManu;
+    protected com.kingdee.bos.ctrl.swing.KDCheckBox chkisSaleOut;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtCreator;
     protected com.kingdee.bos.ctrl.swing.KDDatePicker kDDateCreateTime;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtLastUpdateUser;
@@ -219,6 +221,8 @@ public abstract class AbstractChickenRecBillEditUI extends com.kingdee.eas.frame
         this.contbreedData = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contfeedDays = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.kDTabbedPane1 = new com.kingdee.bos.ctrl.swing.KDTabbedPane();
+        this.chkisManu = new com.kingdee.bos.ctrl.swing.KDCheckBox();
+        this.chkisSaleOut = new com.kingdee.bos.ctrl.swing.KDCheckBox();
         this.prmtCreator = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.kDDateCreateTime = new com.kingdee.bos.ctrl.swing.KDDatePicker();
         this.prmtLastUpdateUser = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
@@ -277,6 +281,8 @@ public abstract class AbstractChickenRecBillEditUI extends com.kingdee.eas.frame
         this.contbreedData.setName("contbreedData");
         this.contfeedDays.setName("contfeedDays");
         this.kDTabbedPane1.setName("kDTabbedPane1");
+        this.chkisManu.setName("chkisManu");
+        this.chkisSaleOut.setName("chkisSaleOut");
         this.prmtCreator.setName("prmtCreator");
         this.kDDateCreateTime.setName("kDDateCreateTime");
         this.prmtLastUpdateUser.setName("prmtLastUpdateUser");
@@ -449,6 +455,16 @@ public abstract class AbstractChickenRecBillEditUI extends com.kingdee.eas.frame
         this.contfeedDays.setBoundLabelUnderline(true);		
         this.contfeedDays.setVisible(true);
         // kDTabbedPane1
+        // chkisManu		
+        this.chkisManu.setText(resHelper.getString("chkisManu.text"));		
+        this.chkisManu.setVisible(true);		
+        this.chkisManu.setHorizontalAlignment(2);		
+        this.chkisManu.setEnabled(false);
+        // chkisSaleOut		
+        this.chkisSaleOut.setText(resHelper.getString("chkisSaleOut.text"));		
+        this.chkisSaleOut.setVisible(true);		
+        this.chkisSaleOut.setHorizontalAlignment(2);		
+        this.chkisSaleOut.setEnabled(false);
         // prmtCreator		
         this.prmtCreator.setEnabled(false);
         // kDDateCreateTime		
@@ -777,7 +793,7 @@ public abstract class AbstractChickenRecBillEditUI extends com.kingdee.eas.frame
         KDTDefaultCellEditor kdtEntry_chickenQty_CellEditor = new KDTDefaultCellEditor(kdtEntry_chickenQty_TextField);
         this.kdtEntry.getColumn("chickenQty").setEditor(kdtEntry_chickenQty_CellEditor);
         // kdtWeigntEntry
-		String kdtWeigntEntryStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol4\"><c:Protection locked=\"true\" hidden=\"true\" /></c:Style><c:Style id=\"sCol5\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol6\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol10\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol11\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol12\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol13\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol15\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol17\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol18\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol19\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol20\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"seq\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol0\" /><t:Column t:key=\"carcar\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"carleader\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"driver\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"telephone\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol4\" /><t:Column t:key=\"carText\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol5\" /><t:Column t:key=\"driverText\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol6\" /><t:Column t:key=\"driverTel\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"settlementItem\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"-1\" /><t:Column t:key=\"carcass\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"marketPrice\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"-1\" t:styleID=\"sCol10\" /><t:Column t:key=\"chickenQty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol11\" /><t:Column t:key=\"houseWeight\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol12\" /><t:Column t:key=\"houseSkinWeight\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol13\" /><t:Column t:key=\"houseNetWeight\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"-1\" /><t:Column t:key=\"avgWgt\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol15\" /><t:Column t:key=\"customer\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"-1\" /><t:Column t:key=\"saleChicPrice\" t:width=\"180\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol17\" /><t:Column t:key=\"saleQty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol18\" /><t:Column t:key=\"saleAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol19\" /><t:Column t:key=\"carcessReduceWeight\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol20\" /><t:Column t:key=\"entryEemark\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{seq}</t:Cell><t:Cell>$Resource{carcar}</t:Cell><t:Cell>$Resource{carleader}</t:Cell><t:Cell>$Resource{driver}</t:Cell><t:Cell>$Resource{telephone}</t:Cell><t:Cell>$Resource{carText}</t:Cell><t:Cell>$Resource{driverText}</t:Cell><t:Cell>$Resource{driverTel}</t:Cell><t:Cell>$Resource{settlementItem}</t:Cell><t:Cell>$Resource{carcass}</t:Cell><t:Cell>$Resource{marketPrice}</t:Cell><t:Cell>$Resource{chickenQty}</t:Cell><t:Cell>$Resource{houseWeight}</t:Cell><t:Cell>$Resource{houseSkinWeight}</t:Cell><t:Cell>$Resource{houseNetWeight}</t:Cell><t:Cell>$Resource{avgWgt}</t:Cell><t:Cell>$Resource{customer}</t:Cell><t:Cell>$Resource{saleChicPrice}</t:Cell><t:Cell>$Resource{saleQty}</t:Cell><t:Cell>$Resource{saleAmount}</t:Cell><t:Cell>$Resource{carcessReduceWeight}</t:Cell><t:Cell>$Resource{entryEemark}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
+		String kdtWeigntEntryStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol0\"><c:Protection hidden=\"true\" /><c:NumberFormat>&amp;int</c:NumberFormat></c:Style><c:Style id=\"sCol4\"><c:Protection locked=\"true\" hidden=\"true\" /></c:Style><c:Style id=\"sCol5\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol6\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol10\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol11\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol12\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol13\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol15\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol17\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol18\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol19\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol20\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style><c:Style id=\"sCol21\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"seq\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol0\" /><t:Column t:key=\"carcar\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"carleader\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"driver\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"telephone\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol4\" /><t:Column t:key=\"carText\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol5\" /><t:Column t:key=\"driverText\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol6\" /><t:Column t:key=\"driverTel\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"settlementItem\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"-1\" /><t:Column t:key=\"carcass\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"marketPrice\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"-1\" t:styleID=\"sCol10\" /><t:Column t:key=\"chickenQty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol11\" /><t:Column t:key=\"houseWeight\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol12\" /><t:Column t:key=\"houseSkinWeight\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol13\" /><t:Column t:key=\"houseNetWeight\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"-1\" /><t:Column t:key=\"avgWgt\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol15\" /><t:Column t:key=\"customer\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"-1\" /><t:Column t:key=\"saleChicPrice\" t:width=\"180\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol17\" /><t:Column t:key=\"saleQty\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol18\" /><t:Column t:key=\"punishAmt\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol19\" /><t:Column t:key=\"saleAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol20\" /><t:Column t:key=\"carcessReduceWeight\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol21\" /><t:Column t:key=\"entryEemark\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{seq}</t:Cell><t:Cell>$Resource{carcar}</t:Cell><t:Cell>$Resource{carleader}</t:Cell><t:Cell>$Resource{driver}</t:Cell><t:Cell>$Resource{telephone}</t:Cell><t:Cell>$Resource{carText}</t:Cell><t:Cell>$Resource{driverText}</t:Cell><t:Cell>$Resource{driverTel}</t:Cell><t:Cell>$Resource{settlementItem}</t:Cell><t:Cell>$Resource{carcass}</t:Cell><t:Cell>$Resource{marketPrice}</t:Cell><t:Cell>$Resource{chickenQty}</t:Cell><t:Cell>$Resource{houseWeight}</t:Cell><t:Cell>$Resource{houseSkinWeight}</t:Cell><t:Cell>$Resource{houseNetWeight}</t:Cell><t:Cell>$Resource{avgWgt}</t:Cell><t:Cell>$Resource{customer}</t:Cell><t:Cell>$Resource{saleChicPrice}</t:Cell><t:Cell>$Resource{saleQty}</t:Cell><t:Cell>$Resource{punishAmt}</t:Cell><t:Cell>$Resource{saleAmount}</t:Cell><t:Cell>$Resource{carcessReduceWeight}</t:Cell><t:Cell>$Resource{entryEemark}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
 		
         this.kdtWeigntEntry.setFormatXml(resHelper.translateString("kdtWeigntEntry",kdtWeigntEntryStrXML));
         kdtWeigntEntry.addKDTEditListener(new KDTEditAdapter() {
@@ -792,7 +808,7 @@ public abstract class AbstractChickenRecBillEditUI extends com.kingdee.eas.frame
 	});
 
 
-                this.kdtWeigntEntry.putBindContents("editData",new String[] {"seq","carcar","carleader","driver","telephone","carText","driverText","driverTel","settlementItem","carcass","marketPrice","chickenQty","houseWeight","houseSkinWeight","houseNetWeight","avgWgt","customer","saleChicPrice","saleQty","saleAmount","carcessReduceWeight","entryEemark"});
+                this.kdtWeigntEntry.putBindContents("editData",new String[] {"seq","carcar","carleader","driver","telephone","carText","driverText","driverTel","settlementItem","carcass","marketPrice","chickenQty","houseWeight","houseSkinWeight","houseNetWeight","avgWgt","customer","saleChicPrice","saleQty","punishAmt","saleAmount","carcessReduceWeight","entryEemark"});
 
 
         this.kdtWeigntEntry.checkParsed();
@@ -983,6 +999,17 @@ public abstract class AbstractChickenRecBillEditUI extends com.kingdee.eas.frame
         kdtWeigntEntry_saleQty_TextField.setPrecision(10);
         KDTDefaultCellEditor kdtWeigntEntry_saleQty_CellEditor = new KDTDefaultCellEditor(kdtWeigntEntry_saleQty_TextField);
         this.kdtWeigntEntry.getColumn("saleQty").setEditor(kdtWeigntEntry_saleQty_CellEditor);
+        KDFormattedTextField kdtWeigntEntry_punishAmt_TextField = new KDFormattedTextField();
+        kdtWeigntEntry_punishAmt_TextField.setName("kdtWeigntEntry_punishAmt_TextField");
+        kdtWeigntEntry_punishAmt_TextField.setVisible(true);
+        kdtWeigntEntry_punishAmt_TextField.setEditable(true);
+        kdtWeigntEntry_punishAmt_TextField.setHorizontalAlignment(2);
+        kdtWeigntEntry_punishAmt_TextField.setDataType(1);
+        	kdtWeigntEntry_punishAmt_TextField.setMinimumValue(new java.math.BigDecimal("-1.0E18"));
+        	kdtWeigntEntry_punishAmt_TextField.setMaximumValue(new java.math.BigDecimal("1.0E18"));
+        kdtWeigntEntry_punishAmt_TextField.setPrecision(10);
+        KDTDefaultCellEditor kdtWeigntEntry_punishAmt_CellEditor = new KDTDefaultCellEditor(kdtWeigntEntry_punishAmt_TextField);
+        this.kdtWeigntEntry.getColumn("punishAmt").setEditor(kdtWeigntEntry_punishAmt_CellEditor);
         KDFormattedTextField kdtWeigntEntry_saleAmount_TextField = new KDFormattedTextField();
         kdtWeigntEntry_saleAmount_TextField.setName("kdtWeigntEntry_saleAmount_TextField");
         kdtWeigntEntry_saleAmount_TextField.setVisible(true);
@@ -1114,7 +1141,7 @@ public abstract class AbstractChickenRecBillEditUI extends com.kingdee.eas.frame
         // btnUnAudit
         this.btnUnAudit.setAction((IItemAction)ActionProxyFactory.getProxy(actionUnAudit, new Class[] { IItemAction.class }, getServiceContext()));		
         this.btnUnAudit.setText(resHelper.getString("btnUnAudit.text"));
-        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {pkauditTime,prmtfarmer,prmtfarm,prmtbatchContract,prmtbatch,billStatus,prmtsettlePolicy,pkinDate,txtbatchQty,prmtperson,txtfarmAddress,farmType,txtfarmerPhone,prmtbreedData,txtfeedDays,kDDateLastUpdateTime,prmtLastUpdateUser,kDDateCreateTime,prmtCreator,prmtAuditor,txtDescription,pkBizDate,txtNumber,prmtFICompany,kdtButcherEntry,kdtWeigntEntry,kdtEntry}));
+        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {pkauditTime,prmtfarmer,prmtfarm,prmtbatchContract,prmtbatch,billStatus,prmtsettlePolicy,pkinDate,txtbatchQty,prmtperson,txtfarmAddress,farmType,txtfarmerPhone,prmtbreedData,txtfeedDays,kDDateLastUpdateTime,prmtLastUpdateUser,kDDateCreateTime,prmtCreator,prmtAuditor,txtDescription,pkBizDate,txtNumber,prmtFICompany,kdtButcherEntry,kdtWeigntEntry,kdtEntry,chkisManu,chkisSaleOut}));
         this.setFocusCycleRoot(true);
 		//Register control's property binding
 		registerBindings();
@@ -1193,8 +1220,12 @@ public abstract class AbstractChickenRecBillEditUI extends com.kingdee.eas.frame
         this.add(contbreedData, new KDLayout.Constraints(634, 34, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contfeedDays.setBounds(new Rectangle(9, 131, 270, 19));
         this.add(contfeedDays, new KDLayout.Constraints(9, 131, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        kDTabbedPane1.setBounds(new Rectangle(10, 178, 1158, 329));
-        this.add(kDTabbedPane1, new KDLayout.Constraints(10, 178, 1158, 329, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        kDTabbedPane1.setBounds(new Rectangle(10, 186, 1158, 321));
+        this.add(kDTabbedPane1, new KDLayout.Constraints(10, 186, 1158, 321, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        chkisManu.setBounds(new Rectangle(11, 154, 270, 19));
+        this.add(chkisManu, new KDLayout.Constraints(11, 154, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        chkisSaleOut.setBounds(new Rectangle(324, 157, 270, 19));
+        this.add(chkisSaleOut, new KDLayout.Constraints(324, 157, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         //contCreator
         contCreator.setBoundEditor(prmtCreator);
         //contCreateTime
@@ -1249,12 +1280,12 @@ public abstract class AbstractChickenRecBillEditUI extends com.kingdee.eas.frame
         kDTabbedPane1.add(kDPanel3, resHelper.getString("kDPanel3.constraints"));
         //kDPanel1
         kDPanel1.setLayout(new KDLayout());
-        kDPanel1.putClientProperty("OriginalBounds", new Rectangle(0, 0, 1157, 296));        kdtEntry.setBounds(new Rectangle(2, 0, 1150, 295));
+        kDPanel1.putClientProperty("OriginalBounds", new Rectangle(0, 0, 1157, 288));        kdtEntry.setBounds(new Rectangle(2, 0, 1150, 295));
         kdtEntry_detailPanel = (com.kingdee.eas.framework.client.multiDetail.DetailPanel)com.kingdee.eas.framework.client.multiDetail.HMDUtils.buildDetail(this,dataBinder,kdtEntry,new com.kingdee.eas.farm.carnivorous.recyclebiz.ChickenRecBillEntryInfo(),null,false);
         kDPanel1.add(kdtEntry_detailPanel, new KDLayout.Constraints(2, 0, 1150, 295, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
         //kDPanel2
         kDPanel2.setLayout(new KDLayout());
-        kDPanel2.putClientProperty("OriginalBounds", new Rectangle(0, 0, 1157, 296));        kdtWeigntEntry.setBounds(new Rectangle(1, 2, 1150, 298));
+        kDPanel2.putClientProperty("OriginalBounds", new Rectangle(0, 0, 1157, 288));        kdtWeigntEntry.setBounds(new Rectangle(1, 2, 1150, 298));
         kdtWeigntEntry_detailPanel = (com.kingdee.eas.framework.client.multiDetail.DetailPanel)com.kingdee.eas.framework.client.multiDetail.HMDUtils.buildDetail(this,dataBinder,kdtWeigntEntry,new com.kingdee.eas.farm.carnivorous.recyclebiz.ChickenRecBillWeigntEntryInfo(),null,false);
         kDPanel2.add(kdtWeigntEntry_detailPanel, new KDLayout.Constraints(1, 2, 1150, 298, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
 		kdtWeigntEntry_detailPanel.addAddListener(new com.kingdee.eas.framework.client.multiDetail.IDetailPanelListener() {
@@ -1267,7 +1298,7 @@ vo.put("settlementItem","1");
 		});
         //kDPanel3
         kDPanel3.setLayout(new KDLayout());
-        kDPanel3.putClientProperty("OriginalBounds", new Rectangle(0, 0, 1157, 296));        kdtButcherEntry.setBounds(new Rectangle(0, 0, 1152, 296));
+        kDPanel3.putClientProperty("OriginalBounds", new Rectangle(0, 0, 1157, 288));        kdtButcherEntry.setBounds(new Rectangle(0, 0, 1152, 296));
         kdtButcherEntry_detailPanel = (com.kingdee.eas.framework.client.multiDetail.DetailPanel)com.kingdee.eas.framework.client.multiDetail.HMDUtils.buildDetail(this,dataBinder,kdtButcherEntry,new com.kingdee.eas.farm.carnivorous.recyclebiz.ChickenRecBillButcherEntryInfo(),null,false);
         kDPanel3.add(kdtButcherEntry_detailPanel, new KDLayout.Constraints(0, 0, 1152, 296, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
 
@@ -1448,6 +1479,8 @@ vo.put("settlementItem","1");
 
 	//Regiester control's property binding.
 	private void registerBindings(){
+		dataBinder.registerBinding("isManu", boolean.class, this.chkisManu, "selected");
+		dataBinder.registerBinding("isSaleOut", boolean.class, this.chkisSaleOut, "selected");
 		dataBinder.registerBinding("creator", com.kingdee.eas.base.permission.UserInfo.class, this.prmtCreator, "data");
 		dataBinder.registerBinding("createTime", java.sql.Timestamp.class, this.kDDateCreateTime, "value");
 		dataBinder.registerBinding("lastUpdateUser", com.kingdee.eas.base.permission.UserInfo.class, this.prmtLastUpdateUser, "data");
@@ -1501,6 +1534,7 @@ vo.put("settlementItem","1");
 		dataBinder.registerBinding("WeigntEntry.entryEemark", String.class, this.kdtWeigntEntry, "entryEemark.text");
 		dataBinder.registerBinding("WeigntEntry.carleader", String.class, this.kdtWeigntEntry, "carleader.text");
 		dataBinder.registerBinding("WeigntEntry.avgWgt", java.math.BigDecimal.class, this.kdtWeigntEntry, "avgWgt.text");
+		dataBinder.registerBinding("WeigntEntry.punishAmt", java.math.BigDecimal.class, this.kdtWeigntEntry, "punishAmt.text");
 		dataBinder.registerBinding("ButcherEntry.seq", int.class, this.kdtButcherEntry, "seq.text");
 		dataBinder.registerBinding("ButcherEntry", com.kingdee.eas.farm.carnivorous.recyclebiz.ChickenRecBillButcherEntryInfo.class, this.kdtButcherEntry, "userObject");
 		dataBinder.registerBinding("ButcherEntry.carcassQty", java.math.BigDecimal.class, this.kdtButcherEntry, "carcassQty.text");
@@ -1653,6 +1687,8 @@ vo.put("settlementItem","1");
 	 */
 	protected void registerValidator() {
     	getValidateHelper().setCustomValidator( getValidator() );
+		getValidateHelper().registerBindProperty("isManu", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("isSaleOut", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("creator", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("createTime", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("lastUpdateUser", ValidateHelper.ON_SAVE);    
@@ -1706,6 +1742,7 @@ vo.put("settlementItem","1");
 		getValidateHelper().registerBindProperty("WeigntEntry.entryEemark", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("WeigntEntry.carleader", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("WeigntEntry.avgWgt", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("WeigntEntry.punishAmt", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("ButcherEntry.seq", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("ButcherEntry", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("ButcherEntry.carcassQty", ValidateHelper.ON_SAVE);    
@@ -1798,6 +1835,8 @@ kdtWeigntEntry.getCell(rowIndex,"telephone").setValue(com.kingdee.bos.ui.face.UI
 		if(StringUtils.isEmpty(selectorAll)){
 			selectorAll = "true";
 		}
+        sic.add(new SelectorItemInfo("isManu"));
+        sic.add(new SelectorItemInfo("isSaleOut"));
 		if(selectorAll.equalsIgnoreCase("true"))
 		{
 			sic.add(new SelectorItemInfo("creator.*"));
@@ -1990,6 +2029,7 @@ kdtWeigntEntry.getCell(rowIndex,"telephone").setValue(com.kingdee.bos.ui.face.UI
     	sic.add(new SelectorItemInfo("WeigntEntry.entryEemark"));
     	sic.add(new SelectorItemInfo("WeigntEntry.carleader"));
     	sic.add(new SelectorItemInfo("WeigntEntry.avgWgt"));
+    	sic.add(new SelectorItemInfo("WeigntEntry.punishAmt"));
     	sic.add(new SelectorItemInfo("ButcherEntry.seq"));
 		if(selectorAll.equalsIgnoreCase("true"))
 		{

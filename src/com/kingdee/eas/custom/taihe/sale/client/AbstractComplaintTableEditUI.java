@@ -632,6 +632,8 @@ public abstract class AbstractComplaintTableEditUI extends com.kingdee.eas.frame
         menuBiz.add(menuItemCancel);
         menuBiz.add(MenuItemVoucher);
         menuBiz.add(menuItemDelVoucher);
+        menuBiz.add(MenuItemPCVoucher);
+        menuBiz.add(menuItemDelPCVoucher);
         //menuTable1
         menuTable1.add(menuItemAddLine);
         menuTable1.add(menuItemCopyLine);
@@ -716,6 +718,8 @@ public abstract class AbstractComplaintTableEditUI extends com.kingdee.eas.frame
         this.toolBar.add(separatorFW9);
         this.toolBar.add(btnVoucher);
         this.toolBar.add(btnDelVoucher);
+        this.toolBar.add(btnPCVoucher);
+        this.toolBar.add(btnDelPCVoucher);
         this.toolBar.add(btnAuditResult);
         this.toolBar.add(btnMultiapprove);
         this.toolBar.add(btnWFViewdoProccess);

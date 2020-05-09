@@ -78,6 +78,7 @@ public abstract class AbstractCommecialChilkenDailyEditUI extends com.kingdee.ea
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contfarmer;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contweek;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contday;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contconfirmTime;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtCreator;
     protected com.kingdee.bos.ctrl.swing.KDDatePicker kDDateCreateTime;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtLastUpdateUser;
@@ -124,6 +125,7 @@ public abstract class AbstractCommecialChilkenDailyEditUI extends com.kingdee.ea
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtfarmer;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtweek;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtday;
+    protected com.kingdee.bos.ctrl.swing.KDDatePicker pkconfirmTime;
     protected com.kingdee.bos.ctrl.swing.KDWorkButton btnAudit;
     protected com.kingdee.bos.ctrl.swing.KDWorkButton btnUnAudit;
     protected com.kingdee.bos.ctrl.swing.KDWorkButton btnGenNextBill;
@@ -256,6 +258,7 @@ public abstract class AbstractCommecialChilkenDailyEditUI extends com.kingdee.ea
         this.contfarmer = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contweek = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contday = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contconfirmTime = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.prmtCreator = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.kDDateCreateTime = new com.kingdee.bos.ctrl.swing.KDDatePicker();
         this.prmtLastUpdateUser = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
@@ -298,6 +301,7 @@ public abstract class AbstractCommecialChilkenDailyEditUI extends com.kingdee.ea
         this.prmtfarmer = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.txtweek = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
         this.txtday = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
+        this.pkconfirmTime = new com.kingdee.bos.ctrl.swing.KDDatePicker();
         this.btnAudit = new com.kingdee.bos.ctrl.swing.KDWorkButton();
         this.btnUnAudit = new com.kingdee.bos.ctrl.swing.KDWorkButton();
         this.btnGenNextBill = new com.kingdee.bos.ctrl.swing.KDWorkButton();
@@ -333,6 +337,7 @@ public abstract class AbstractCommecialChilkenDailyEditUI extends com.kingdee.ea
         this.contfarmer.setName("contfarmer");
         this.contweek.setName("contweek");
         this.contday.setName("contday");
+        this.contconfirmTime.setName("contconfirmTime");
         this.prmtCreator.setName("prmtCreator");
         this.kDDateCreateTime.setName("kDDateCreateTime");
         this.prmtLastUpdateUser.setName("prmtLastUpdateUser");
@@ -375,6 +380,7 @@ public abstract class AbstractCommecialChilkenDailyEditUI extends com.kingdee.ea
         this.prmtfarmer.setName("prmtfarmer");
         this.txtweek.setName("txtweek");
         this.txtday.setName("txtday");
+        this.pkconfirmTime.setName("pkconfirmTime");
         this.btnAudit.setName("btnAudit");
         this.btnUnAudit.setName("btnUnAudit");
         this.btnGenNextBill.setName("btnGenNextBill");
@@ -574,6 +580,11 @@ public abstract class AbstractCommecialChilkenDailyEditUI extends com.kingdee.ea
         this.contday.setBoundLabelLength(60);		
         this.contday.setBoundLabelUnderline(true);		
         this.contday.setVisible(true);
+        // contconfirmTime		
+        this.contconfirmTime.setBoundLabelText(resHelper.getString("contconfirmTime.boundLabelText"));		
+        this.contconfirmTime.setBoundLabelLength(100);		
+        this.contconfirmTime.setBoundLabelUnderline(true);		
+        this.contconfirmTime.setVisible(true);
         // prmtCreator		
         this.prmtCreator.setEnabled(false);		
         this.prmtCreator.setRequired(false);		
@@ -1283,6 +1294,9 @@ public abstract class AbstractCommecialChilkenDailyEditUI extends com.kingdee.ea
         this.txtday.setDataType(0);		
         this.txtday.setSupportedEmpty(true);		
         this.txtday.setRequired(false);
+        // pkconfirmTime		
+        this.pkconfirmTime.setVisible(true);		
+        this.pkconfirmTime.setRequired(false);
         // btnAudit
         this.btnAudit.setAction((IItemAction)ActionProxyFactory.getProxy(actionAudit, new Class[] { IItemAction.class }, getServiceContext()));		
         this.btnAudit.setText(resHelper.getString("btnAudit.text"));
@@ -1292,7 +1306,7 @@ public abstract class AbstractCommecialChilkenDailyEditUI extends com.kingdee.ea
         // btnGenNextBill
         this.btnGenNextBill.setAction((IItemAction)ActionProxyFactory.getProxy(actionGenNextBill, new Class[] { IItemAction.class }, getServiceContext()));		
         this.btnGenNextBill.setText(resHelper.getString("btnGenNextBill.text"));
-        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {kDDateLastUpdateTime,prmtLastUpdateUser,kDDateCreateTime,prmtCreator,prmtAuditor,txtDescription,pkBizDate,txtNumber,baseStatus,txtoutSideTFrom,txtoutSideTTo,txtweather,txtoutHumidityFrom,txtoutHumidityTo,pkauditTime,txtfuel,txtbreedLog,txtelectricityQty,txtdays,txtcoalFual,txtdieselFual,txtinitPersonQty,txtentryPersonQty,txtleavePersonQty,txtattendPersonQty,chkisHenhouseEmpty,kdtAssEntrys,kdtEntrys,kdtImmuneEntrys,kdtFodderPlanEntrys,prmtbreedBatch,prmtcompany,prmtfarm,prmtfarmer,txtweek,txtday}));
+        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {kDDateLastUpdateTime,prmtLastUpdateUser,kDDateCreateTime,prmtCreator,prmtAuditor,txtDescription,pkBizDate,txtNumber,baseStatus,txtoutSideTFrom,txtoutSideTTo,txtweather,txtoutHumidityFrom,txtoutHumidityTo,pkauditTime,txtfuel,txtbreedLog,txtelectricityQty,txtdays,txtcoalFual,txtdieselFual,txtinitPersonQty,txtentryPersonQty,txtleavePersonQty,txtattendPersonQty,chkisHenhouseEmpty,kdtAssEntrys,kdtEntrys,kdtImmuneEntrys,kdtFodderPlanEntrys,prmtbreedBatch,prmtcompany,prmtfarm,prmtfarmer,txtweek,txtday,pkconfirmTime}));
         this.setFocusCycleRoot(true);
 		//Register control's property binding
 		registerBindings();
@@ -1385,6 +1399,8 @@ public abstract class AbstractCommecialChilkenDailyEditUI extends com.kingdee.ea
         this.add(contweek, new KDLayout.Constraints(725, 122, 126, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contday.setBounds(new Rectangle(887, 122, 108, 19));
         this.add(contday, new KDLayout.Constraints(887, 122, 108, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contconfirmTime.setBounds(new Rectangle(725, 147, 270, 19));
+        this.add(contconfirmTime, new KDLayout.Constraints(725, 147, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         //contCreator
         contCreator.setBoundEditor(prmtCreator);
         //contCreateTime
@@ -1490,6 +1506,8 @@ public abstract class AbstractCommecialChilkenDailyEditUI extends com.kingdee.ea
         contweek.setBoundEditor(txtweek);
         //contday
         contday.setBoundEditor(txtday);
+        //contconfirmTime
+        contconfirmTime.setBoundEditor(pkconfirmTime);
 
     }
 
@@ -1748,7 +1766,8 @@ public abstract class AbstractCommecialChilkenDailyEditUI extends com.kingdee.ea
 		dataBinder.registerBinding("farm", com.kingdee.eas.farm.carnivorous.basedata.FarmInfo.class, this.prmtfarm, "data");
 		dataBinder.registerBinding("farmer", com.kingdee.eas.farm.carnivorous.basedata.FarmerInfo.class, this.prmtfarmer, "data");
 		dataBinder.registerBinding("week", int.class, this.txtweek, "value");
-		dataBinder.registerBinding("day", int.class, this.txtday, "value");		
+		dataBinder.registerBinding("day", int.class, this.txtday, "value");
+		dataBinder.registerBinding("confirmTime", java.util.Date.class, this.pkconfirmTime, "value");		
 	}
 	//Regiester UI State
 	private void registerUIState(){		
@@ -1962,7 +1981,8 @@ public abstract class AbstractCommecialChilkenDailyEditUI extends com.kingdee.ea
 		getValidateHelper().registerBindProperty("farm", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("farmer", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("week", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("day", ValidateHelper.ON_SAVE);    		
+		getValidateHelper().registerBindProperty("day", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("confirmTime", ValidateHelper.ON_SAVE);    		
 	}
 
 
@@ -2289,6 +2309,7 @@ kdtFodderPlanEntrys.getCell(rowIndex,"fodderMaterialModel").setValue(com.kingdee
 		}
         sic.add(new SelectorItemInfo("week"));
         sic.add(new SelectorItemInfo("day"));
+        sic.add(new SelectorItemInfo("confirmTime"));
         return sic;
     }        
     	

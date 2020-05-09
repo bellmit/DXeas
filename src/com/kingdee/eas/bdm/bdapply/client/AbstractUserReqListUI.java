@@ -231,6 +231,8 @@ public abstract class AbstractUserReqListUI extends com.kingdee.eas.framework.cl
         menuBiz.add(menuItemCancel);
         menuBiz.add(menuItemVoucher);
         menuBiz.add(menuItemDelVoucher);
+        menuBiz.add(menuItemPCVoucher);
+        menuBiz.add(menuItemDelPCVoucher);
         //menuTool
         menuTool.add(menuItemSendMessage);
         menuTool.add(menuItemCalculator);
@@ -301,7 +303,9 @@ public abstract class AbstractUserReqListUI extends com.kingdee.eas.framework.cl
         this.toolBar.add(separatorFW4);
         this.toolBar.add(btnNumberSign);
         this.toolBar.add(btnVoucher);
+        this.toolBar.add(btnPCVoucher);
         this.toolBar.add(btnDelVoucher);
+        this.toolBar.add(btnDelPCVoucher);
         this.toolBar.add(btnMultiapprove);
         this.toolBar.add(btnNextPerson);
         this.toolBar.add(btnAuditResult);

@@ -1836,27 +1836,11 @@ public abstract class AbstractSettleBillEditUI extends com.kingdee.eas.custom.wl
         baseTab.putClientProperty("OriginalBounds", new Rectangle(0, 0, 992, 192));        kdtEntrys.setBounds(new Rectangle(6, 6, 980, 186));
         kdtEntrys_detailPanel = (com.kingdee.eas.framework.client.multiDetail.DetailPanel)com.kingdee.eas.framework.client.multiDetail.HMDUtils.buildDetail(this,dataBinder,kdtEntrys,new com.kingdee.eas.custom.taihe.settle.SettleBillEntryInfo(),null,false);
         baseTab.add(kdtEntrys_detailPanel, new KDLayout.Constraints(6, 6, 980, 186, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
-		kdtEntrys_detailPanel.addAddListener(new com.kingdee.eas.framework.client.multiDetail.IDetailPanelListener() {
-			public void beforeEvent(com.kingdee.eas.framework.client.multiDetail.DetailPanelEvent event) throws Exception {
-				IObjectValue vo = event.getObjectValue();
-vo.put("wgtType","0");
-			}
-			public void afterEvent(com.kingdee.eas.framework.client.multiDetail.DetailPanelEvent event) throws Exception {
-			}
-		});
         //assTab
         assTab.setLayout(new KDLayout());
         assTab.putClientProperty("OriginalBounds", new Rectangle(0, 0, 992, 192));        kdtAssEntrys.setBounds(new Rectangle(6, 4, 979, 189));
         kdtAssEntrys_detailPanel = (com.kingdee.eas.framework.client.multiDetail.DetailPanel)com.kingdee.eas.framework.client.multiDetail.HMDUtils.buildDetail(this,dataBinder,kdtAssEntrys,new com.kingdee.eas.custom.taihe.settle.SettleBillAssEntryInfo(),null,false);
         assTab.add(kdtAssEntrys_detailPanel, new KDLayout.Constraints(6, 4, 979, 189, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
-		kdtAssEntrys_detailPanel.addAddListener(new com.kingdee.eas.framework.client.multiDetail.IDetailPanelListener() {
-			public void beforeEvent(com.kingdee.eas.framework.client.multiDetail.DetailPanelEvent event) throws Exception {
-				IObjectValue vo = event.getObjectValue();
-vo.put("wgtType","0");
-			}
-			public void afterEvent(com.kingdee.eas.framework.client.multiDetail.DetailPanelEvent event) throws Exception {
-			}
-		});
         //otherTab
         otherTab.setLayout(new KDLayout());
         otherTab.putClientProperty("OriginalBounds", new Rectangle(0, 0, 992, 192));        kdtOtherEntrys.setBounds(new Rectangle(6, 7, 977, 185));

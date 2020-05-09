@@ -259,6 +259,14 @@ public abstract class AbstractSettleAwardPolicyEditUI extends com.kingdee.eas.cu
 
 
         this.kdtEntry.checkParsed();
+        KDFormattedTextField kdtEntry_seq_TextField = new KDFormattedTextField();
+        kdtEntry_seq_TextField.setName("kdtEntry_seq_TextField");
+        kdtEntry_seq_TextField.setVisible(true);
+        kdtEntry_seq_TextField.setEditable(true);
+        kdtEntry_seq_TextField.setHorizontalAlignment(2);
+        kdtEntry_seq_TextField.setDataType(0);
+        KDTDefaultCellEditor kdtEntry_seq_CellEditor = new KDTDefaultCellEditor(kdtEntry_seq_TextField);
+        this.kdtEntry.getColumn("seq").setEditor(kdtEntry_seq_CellEditor);
         KDFormattedTextField kdtEntry_floor_TextField = new KDFormattedTextField();
         kdtEntry_floor_TextField.setName("kdtEntry_floor_TextField");
         kdtEntry_floor_TextField.setVisible(true);
@@ -301,6 +309,14 @@ public abstract class AbstractSettleAwardPolicyEditUI extends com.kingdee.eas.cu
 
 
         this.kdtAwardEntry.checkParsed();
+        KDFormattedTextField kdtAwardEntry_seq_TextField = new KDFormattedTextField();
+        kdtAwardEntry_seq_TextField.setName("kdtAwardEntry_seq_TextField");
+        kdtAwardEntry_seq_TextField.setVisible(true);
+        kdtAwardEntry_seq_TextField.setEditable(true);
+        kdtAwardEntry_seq_TextField.setHorizontalAlignment(2);
+        kdtAwardEntry_seq_TextField.setDataType(0);
+        KDTDefaultCellEditor kdtAwardEntry_seq_CellEditor = new KDTDefaultCellEditor(kdtAwardEntry_seq_TextField);
+        this.kdtAwardEntry.getColumn("seq").setEditor(kdtAwardEntry_seq_CellEditor);
         KDFormattedTextField kdtAwardEntry_avgWgtLower_TextField = new KDFormattedTextField();
         kdtAwardEntry_avgWgtLower_TextField.setName("kdtAwardEntry_avgWgtLower_TextField");
         kdtAwardEntry_avgWgtLower_TextField.setVisible(true);

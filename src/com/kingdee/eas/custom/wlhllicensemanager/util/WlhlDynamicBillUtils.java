@@ -9,6 +9,7 @@ import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -51,6 +52,11 @@ import com.kingdee.eas.util.app.ContextUtil;
 import com.kingdee.eas.util.app.DbUtil;
 import com.kingdee.jdbc.rowset.IRowSet;
 import com.kingdee.util.enums.Enum;
+import com.kingdee.util.enums.EnumUtils;
+import com.kingdee.util.enums.FloatEnum;
+import com.kingdee.util.enums.IntEnum;
+import com.kingdee.util.enums.LongEnum;
+import com.kingdee.util.enums.StringEnum;
 
 /**
  * 动态单据接口
@@ -758,5 +764,41 @@ public class WlhlDynamicBillUtils {
 			return list.toArray(new IObjectPK[list.size()]);
 		}
 		return pks;
+	}
+/**
+ * 获取枚举数组
+ * @param ctx
+ * @param enumPath
+ * @return
+ * @throws BOSException 
+ */
+	public Object getEnumArray(Context ctx, String enumPath) throws BOSException {
+		JSONArray ja=new JSONArray();
+		try {
+			Class enumClass=Class.forName(enumPath);
+			List<Enum> list = EnumUtils.getEnumList(enumClass);
+			JSONObject jo;
+			String value=null;
+			for(Enum eu:list) {
+				jo=new JSONObject();
+				jo.put("name", eu.getName());
+				jo.put("alias", eu.getAlias());
+				if(eu instanceof IntEnum) {
+					value=String.valueOf(((IntEnum)eu).getValue());
+				}else if(eu instanceof FloatEnum) {
+					value=String.valueOf(((FloatEnum)eu).getValue());
+				}else if(eu instanceof LongEnum) {
+					value=String.valueOf(((LongEnum)eu).getValue());
+				}else if(eu instanceof StringEnum) {
+					value=((StringEnum)eu).getValue();
+				}
+				jo.put("value",value);
+				ja.add(jo);
+			}
+
+		}catch(Exception err) {
+			throw new BOSException(err);
+		}
+		return ja;
 	}
 }

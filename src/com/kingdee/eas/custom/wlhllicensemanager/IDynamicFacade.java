@@ -18,4 +18,6 @@ public interface IDynamicFacade extends IBizCtrl
     public String getDataByID(String jsonStr) throws BOSException, EASBizException;
     public String uploadDataByBosType(String bosType, String jsonStr) throws BOSException, EASBizException;
     public String downloadBillList(String jsonStr) throws BOSException, EASBizException;
+    public String deleteAttachment(String jsonStr) throws BOSException, EASBizException;
+    public String getEumInfo(String enumPathJson) throws BOSException, EASBizException;
 }

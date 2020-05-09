@@ -1266,12 +1266,7 @@ public class DrugReceiveBillEditUI extends AbstractDrugReceiveBillEditUI
 			totalAmt = totalAmt.add(amount);
 		}
 		txttotalAmt.setValue(totalAmt);
-
-		//		if(UIRuleUtil.isNotNull(txthasDrugAmount.getValue())){
 		txtsaveAmount.setValue(UIRuleUtil.getBigDecimal(txthasDrugAmount.getValue()).add(totalAmt));
-		//		}
-
-
 		if(bizType.getSelectedItem()==DrugBizType.trans){
 			MsgBox.showWarning("不允许手工录入单据类型为调药的药品处方单!");
 			SysUtil.abort();

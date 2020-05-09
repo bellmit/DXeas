@@ -178,44 +178,6 @@ public class FeInStorageBillPlatformUI extends AbstractFeInStorageBillPlatformUI
 		initControl();
 		beginComReaderNew();
 		
-//		this.txtOrderNum.addKeyListener(new KeyAdapter()//键盘监听按钮
-//        {
-//             public void keyPressed(KeyEvent e)
-//             {
-//                 if(e.getKeyCode()==KeyEvent.VK_ESCAPE)
-//                    System.exit(0);
-//                 //组合键
-//                 else if(e.isControlDown()&&e.getKeyCode()==KeyEvent.VK_ENTER)
-//                    System.exit(0);
-//                 else if(e.getKeyCode()==KeyEvent.VK_ENTER)
-//                 {
-//               	  try {
-//                     	// 回车执行 确认事件
-//               		  	btnShowOrder_actionPerformed(null);
-//                     } catch (Exception exc) {
-//                         handUIException(exc);
-//                     } finally {
-//                         
-//                     }
-//                 }
-//             }
-//             
-//         });
-		//玖兴修改 注释掉 yumingxu
-//		txtOrderNum.addFocusListener(new FocusListener(){  
-//			   public void focusLost(FocusEvent arg0) {  
-//			    try{ 
-//			    	orderFocusLost = true;
-//			    	btnShowOrder_actionPerformed(null);  
-//			    }catch(Exception e){  
-//			         handUIException(e);  
-//			    }  
-//			   };  
-//			   public void focusGained(FocusEvent arg0) {  
-//			    // TODO 自动生成方法存根  
-//			      
-//			   }  
-//			  }); 
 		//yumingxu
 		//this.prmtMaterial.setEditable(false);
 		this.kDLabelContainer2.setEnabled(false);
@@ -677,15 +639,6 @@ public class FeInStorageBillPlatformUI extends AbstractFeInStorageBillPlatformUI
 		//yumingxu
 		this.prmtMaterial.setEditable(false);
 		this.prmtMaterial.setEnabled(false);
-		/*if(this.initParams.get("materialSet")!=null) {
-			HashSet set=(HashSet) this.initParams.get("materialSet");
-			EntityViewInfo ev=new EntityViewInfo();
-			FilterInfo filter=new FilterInfo();
-			filter.getFilterItems().add(new FilterItemInfo("id",set,CompareType.INCLUDE));
-			filter.setMaskString("#0");
-			ev.setFilter(filter);
-			m7.setBaseFilter(filter);
-		}*/
 		
 		this.prmtQueryMaterial.setSelector(m7);
 		this.prmtQueryMaterial.setEditFormat("$number$");
@@ -898,14 +851,6 @@ public class FeInStorageBillPlatformUI extends AbstractFeInStorageBillPlatformUI
 				stopComReaderNew(false);
 			}
 		});
-//		btnModifyImpurity.addActionListener(new ActionListener() {
-//			public void actionPerformed(ActionEvent e) {
-//				try {
-//					modifyImpurity();
-//				} catch (Exception e1) {
-//				} 
-//			}
-//		});
 		//this.toolBar.add(btnModifyImpurity);
 		this.toolBar.add(btnBeginRead);
 		this.toolBar.add(btnEndRead);
@@ -926,20 +871,6 @@ public class FeInStorageBillPlatformUI extends AbstractFeInStorageBillPlatformUI
 //		this.customInitControl();
 		this.btnShowOrder.setText("...");
 		
-//		// 订单 光标丢失事件
-//		this.txtOrderNum.addFocusListener(new FocusListener(){  
-//			   public void focusLost(FocusEvent e) {  
-//			    try{  
-//			    	btnShowOrder_actionPerformed(null);
-//			    }catch(Exception ex){  
-//			         handUIException(ex);  
-//			    }  
-//			   };  
-//			   public void focusGained(FocusEvent arg0) {  
-//			    // TODO 自动生成方法存根  
-//			      
-//			   }  
-//			  }); 
 	}
 	//是否临时车辆改变事件
 	private void isTempChanged(){
@@ -1103,97 +1034,6 @@ public class FeInStorageBillPlatformUI extends AbstractFeInStorageBillPlatformUI
 		return inStorageBillInfo;
 	}
 	
-	/**
-	 * 修改扣重
-	 * @throws Exception 
-	 */
-//	private void modifyImpurity () throws Exception{
-//		// 已经完成的单据修改
-//		if((this.editData!=null&&this.editData.getId()!=null)&&(this.editData.getBillStatus()!=null&&this.editData.getBillStatus().equals(WeighBaseStatus.finish))) {
-//			if(this.btnModifyImpurity.getText().equalsIgnoreCase("修改扣重"))  {
-//				BigDecimal oldImpurity=this.txtImpurity.getBigDecimalValue();
-//				BigDecimal oldSuttle=this.txtSuttle.getBigDecimalValue();
-//				BigDecimal OldImpurity2=this.txtImpurity2.getBigDecimalValue();
-//				String oldRemark=this.txtRemark.getText();
-//				if(oldImpurity==null)
-//					oldImpurity=BigDecimal.ZERO;
-//				if(oldSuttle==null)
-//					oldSuttle=BigDecimal.ZERO;
-//				if(OldImpurity2==null) {
-//					OldImpurity2=BigDecimal.ZERO;
-//				}
-//				if(StringUtils.isBlank(oldRemark)) {
-//					oldRemark="0";
-//				}
-//
-//				this.txtImpurity.setEnabled(true);
-//				this.txtImpurity2.setEnabled(true);
-//				this.txtRemark.setEnabled(true);
-//				this.btnModifyImpurity.setText("保存修改");
-//				return;
-//			}
-//			if(this.btnModifyImpurity.getText().equalsIgnoreCase("保存修改"))  {
-//				BigDecimal newImpurity=this.txtImpurity.getBigDecimalValue();
-//				BigDecimal newImpurity2=this.txtImpurity2.getBigDecimalValue();
-//				BigDecimal newSuttle=this.txtSuttle.getBigDecimalValue();
-//				String newRemark=this.txtRemark.getText();
-//				if(newImpurity==null)
-//					newImpurity=BigDecimal.ZERO;
-//				if(newSuttle==null)
-//					newSuttle=BigDecimal.ZERO;
-//				if(newImpurity2==null) {
-//					newImpurity2=BigDecimal.ZERO;
-//				}
-//				if(StringUtils.isBlank(newRemark)) {
-//					newRemark="0";
-//				}
-//				
-//				if(newSuttle.compareTo(new BigDecimal(1000))<0) {
-//					/*MsgBox.showWarning("扣重后数量不能小于1000");
-//					SysUtil.abort();*/
-//				}
-//				
-//				try{
-//					/*newSuttle= oldSuttle.add(oldImpurity).add(OldImpurity2);
-//					newSuttle=newSuttle.subtract(newImpurity).subtract(newImpurity2);*/
-//				}catch(Exception e1){ super.handleException(e1);}
-//				
-//				/**
-//				 * create table CT_WHB_InStorageModifyRecord (
-//					FBillID varchar(44),FEntryID varchar(44),FOldImpurity decimal(28,10) default 0,
-//					FOldImpurity2 decimal(28,10) default 0,FOldRemark decimal(28,10) default 0,FOldSuttle decimal(28,10) default 0,FNewImpurity decimal(28,10) default 0,FNewImpurity2 decimal(28,10) default 0,
-//					FNewRemark decimal(28,10) default 0,FNewSuttle decimal(28,10) default 0,FDate datetime
-//					)
-//				 */
-//				StringBuffer sql=new StringBuffer();
-//				sql.append(" insert into CT_WHB_InStorageModifyRecord (");
-//				sql.append(" FBillID,FEntryID,FOldImpurity,FOldImpurity2,FOldRemark,FOldSuttle,FNewImpurity,FNewImpurity2,FNewRemark,FNewSuttle");
-//				sql.append(" )values(");
-//				sql.append(" ?,?,?,?,?,?,?,?,?,?");
-//				sql.append(" )");
-//				try {
-//					getSqlInstance().execute(sql.toString(),new Object[]{this.editData.getId().toString(),null,
-//						oldImpurity,OldImpurity2,oldRemark,oldSuttle,newImpurity,newImpurity2,newRemark,newSuttle});
-//				} catch (BOSException e) {
-//					super.handleException(e);
-//				}
-//				
-//				this.StoreFields();
-//				this.getBillInterface().save(this.editData);
-//				
-//				this.LoadFields(null);
-//				this.txtImpurity.setEnabled(false);
-//				this.txtImpurity2.setEnabled(false);
-//				this.txtRemark.setEnabled(false);
-//				//this.btnModifyImpurity.setText("修改扣重");
-//				MsgBox.showInfo("修改成功！");
-//				//add@20161129
-//				execQuery();
-//				return;
-//			}
-//			
-//		}
-//	}
 	public void actionCreateFrom_actionPerformed(ActionEvent e) throws Exception {
 		this.setOprtState(STATUS_ADDNEW);
 		this.billEdit.createFrom(getMainOrgContext());
@@ -1990,34 +1830,10 @@ public class FeInStorageBillPlatformUI extends AbstractFeInStorageBillPlatformUI
 	 * 输入数据合法性教研
 	 */
 	protected void VerifyInput() throws Exception {
-//		if (!this.chkIsTemp.isSelected()&&this.prmtCar.getValue() == null) {
-//			MsgBox.showWarning("车辆不能为空！");
-//			SysUtil.abort();
-//		}
-//		if (this..isSelected()&&StringUtils.isBlank(this.txtCarNum.getText())) {
-//			MsgBox.showWarning("车牌号不能为空！");
-//			SysUtil.abort();
-//		}
 		if (this.txtGross.getText().equals("0")) {
 			MsgBox.showWarning("毛重为0不允许保存！");
 			SysUtil.abort();
 		}
-//		if (this.prmtMaterial.getValue() == null) {
-//			MsgBox.showWarning("物料不能为空！");
-//			SysUtil.abort();
-//		}
-		
-//		if (this.cmbBizType.getSelectedItem().equals(WeighBizType.Pur)) {
-//			if (this.prmtSupplier.getValue() == null) {
-//				MsgBox.showWarning("供应商不能为空！");
-//				SysUtil.abort();
-//			}
-//		} else {
-//			if (this.prmtOrderStorageOrgUnit.getValue() == null) {
-//				MsgBox.showWarning("来源库存组织不能为空！");
-//				SysUtil.abort();
-//			}
-//		}
 		
 		/********************************************20160424 WGJ ADD BEGIN 集团内采购时如果来源库存组织 在今天第一次出现，则提示用户确认后再保存**********************/
 		if (this.cmbBizType.getSelectedItem().equals(WeighBizType.GroupPur)) {

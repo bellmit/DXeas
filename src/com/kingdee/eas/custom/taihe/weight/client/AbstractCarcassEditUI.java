@@ -604,14 +604,6 @@ public abstract class AbstractCarcassEditUI extends com.kingdee.eas.custom.wlhll
         kDPanel1.setLayout(null);        kdtEntrys.setBounds(new Rectangle(1, 0, 968, 288));
         kdtEntrys_detailPanel = (com.kingdee.eas.framework.client.multiDetail.DetailPanel)com.kingdee.eas.framework.client.multiDetail.HMDUtils.buildDetail(this,dataBinder,kdtEntrys,new com.kingdee.eas.custom.taihe.weight.CarcassEntryInfo(),null,false);
         kDPanel1.add(kdtEntrys_detailPanel, null);
-		kdtEntrys_detailPanel.addAddListener(new com.kingdee.eas.framework.client.multiDetail.IDetailPanelListener() {
-			public void beforeEvent(com.kingdee.eas.framework.client.multiDetail.DetailPanelEvent event) throws Exception {
-				IObjectValue vo = event.getObjectValue();
-vo.put("carcassType","0");
-			}
-			public void afterEvent(com.kingdee.eas.framework.client.multiDetail.DetailPanelEvent event) throws Exception {
-			}
-		});
         //kDPanel2
         kDPanel2.setLayout(null);        kdtEntrysS.setBounds(new Rectangle(1, -2, 965, 292));
         kdtEntrysS_detailPanel = (com.kingdee.eas.framework.client.multiDetail.DetailPanel)com.kingdee.eas.framework.client.multiDetail.HMDUtils.buildDetail(this,dataBinder,kdtEntrysS,new com.kingdee.eas.custom.taihe.weight.CarcassEntrysSInfo(),null,false);
@@ -1278,8 +1270,6 @@ prmtdriver.setData(com.kingdee.bos.ui.face.UIRuleUtil.getProperty((com.kingdee.b
      * output applyDefaultValue method
      */
     protected void applyDefaultValue(IObjectValue vo) {        
-		vo.put("carcassType","0");
-        
     }        
 	protected void setFieldsNull(com.kingdee.bos.dao.AbstractObjectValue arg0) {
 		super.setFieldsNull(arg0);

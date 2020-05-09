@@ -1,6 +1,7 @@
 package com.kingdee.eas.custom.wlhllicensemanager.app;
 
 import java.sql.SQLException;
+import java.util.Map;
 
 import org.apache.log4j.Logger;
 
@@ -9,6 +10,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.kingdee.bos.BOSException;
 import com.kingdee.bos.Context;
 import com.kingdee.eas.common.EASBizException;
+import com.kingdee.eas.custom.wlhllicensemanager.util.AttachmentUtils;
 import com.kingdee.eas.custom.wlhllicensemanager.util.JUtils;
 import com.kingdee.eas.custom.wlhllicensemanager.util.WlhlDynamicBillUtils;
 import com.kingdee.eas.util.app.DbUtil;
@@ -148,4 +150,50 @@ public class DynamicFacadeControllerBean extends AbstractDynamicFacadeController
 		}
 		return ja.toString();
 	}
+	@Override
+	protected String _deleteAttachment(Context ctx, String jsonStr)
+			throws BOSException, EASBizException {
+		JSONObject resultJson = new JSONObject();
+		resultJson.put("result", "0");
+		resultJson.put("message", "success");
+    	
+		net.sf.json.JSONObject jsonParam=net.sf.json.JSONObject.fromObject(jsonStr);
+
+		String billId = jsonParam.getString("billId");
+		String id = jsonParam.getString("id");
+
+		Map map=null;
+		try {
+			AttachmentUtils is = new AttachmentUtils(ctx);
+			map = is.deleteAttachment(billId, id);
+		} catch (Exception e) {
+			resultJson.put("result", "1");
+			resultJson.put("message", e.getMessage());
+		} 
+		if(map!=null)
+			resultJson.put("data", map);
+		return resultJson.toString();
+	}
+	@Override
+	protected String _getEumInfo(Context ctx, String jsonStr)
+			throws BOSException, EASBizException {
+		JSONObject json=new JSONObject();
+    	json.put("result", "0");
+    	json.put("message", "success");
+	    	try {
+	    		net.sf.json.JSONObject queryJson=net.sf.json.JSONObject.fromObject(jsonStr);
+	    		String enumPath=queryJson.getString("enumPath");
+				String dataStr=new WlhlDynamicBillUtils().getEnumArray(ctx, enumPath).toString();
+	    		json.put("data", dataStr);
+	    	}catch(Exception err) {
+	    		json.put("result", "1");
+	        	json.put("message", err.getMessage());
+	    	}
+    	return json.toString();
+	}
+	
+	
+	
+	
+	
 }

@@ -6,22 +6,22 @@ import java.rmi.RemoteException;
 import com.kingdee.bos.framework.AbstractBizCtrl;
 import com.kingdee.bos.orm.template.ORMObject;
 
-import com.kingdee.eas.custom.wlhllicensemanager.WlhlBillBase;
 import com.kingdee.bos.BOSException;
 import com.kingdee.bos.dao.IObjectPK;
+import com.kingdee.eas.framework.CoreBillBase;
 import com.kingdee.eas.custom.taihe.contract.app.*;
 import java.lang.String;
 import com.kingdee.bos.framework.*;
+import com.kingdee.eas.framework.ICoreBillBase;
 import com.kingdee.bos.Context;
 import com.kingdee.bos.metadata.entity.EntityViewInfo;
-import com.kingdee.eas.custom.wlhllicensemanager.IWlhlBillBase;
 import com.kingdee.eas.framework.CoreBaseCollection;
 import com.kingdee.eas.framework.CoreBaseInfo;
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.bos.util.*;
 import com.kingdee.bos.metadata.entity.SelectorItemCollection;
 
-public class SuccessiveContract extends WlhlBillBase implements ISuccessiveContract
+public class SuccessiveContract extends CoreBillBase implements ISuccessiveContract
 {
     public SuccessiveContract()
     {
@@ -146,6 +146,32 @@ public class SuccessiveContract extends WlhlBillBase implements ISuccessiveContr
     {
         try {
             getController().viewOtherContract(getContext(), model);
+        }
+        catch(RemoteException err) {
+            throw new EJBRemoteException(err);
+        }
+    }
+    /**
+     *…Û∫À-User defined method
+     *@param model model
+     */
+    public void audit(SuccessiveContractInfo model) throws BOSException, EASBizException
+    {
+        try {
+            getController().audit(getContext(), model);
+        }
+        catch(RemoteException err) {
+            throw new EJBRemoteException(err);
+        }
+    }
+    /**
+     *∑¥…Û∫À-User defined method
+     *@param model model
+     */
+    public void unAudit(SuccessiveContractInfo model) throws BOSException, EASBizException
+    {
+        try {
+            getController().unAudit(getContext(), model);
         }
         catch(RemoteException err) {
             throw new EJBRemoteException(err);

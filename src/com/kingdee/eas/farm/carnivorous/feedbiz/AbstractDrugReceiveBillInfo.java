@@ -392,6 +392,28 @@ public class AbstractDrugReceiveBillInfo extends com.kingdee.eas.framework.CoreB
     {
         setBigDecimal("saveAmount", item);
     }
+    /**
+     * Object:药品处方单's 确认时间property 
+     */
+    public java.util.Date getConfirmTime()
+    {
+        return getDate("confirmTime");
+    }
+    public void setConfirmTime(java.util.Date item)
+    {
+        setDate("confirmTime", item);
+    }
+    /**
+     * Object:药品处方单's 签名数据property 
+     */
+    public byte[] getSignData()
+    {
+        return (byte[])get("signData");
+    }
+    public void setSignData(byte[] item)
+    {
+        put("signData", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("0E74B6E6");

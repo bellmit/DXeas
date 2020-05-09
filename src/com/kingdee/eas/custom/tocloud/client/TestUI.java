@@ -32,6 +32,13 @@ public class TestUI extends AbstractTestUI
     	String res = DataSynPlateformFacadeFactory.getRemoteInstance().login();
     	System.out.println(res);
     	this.kDTextArea1.setText(res);
+    	
+    	System.out.println("");
+    	
+    	       
+    	
+    	
+    	
 	}
 
 	/**

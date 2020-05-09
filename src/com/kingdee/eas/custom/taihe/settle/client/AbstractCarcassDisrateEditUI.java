@@ -352,14 +352,6 @@ public abstract class AbstractCarcassDisrateEditUI extends com.kingdee.eas.custo
         kDPanel1.setLayout(null);        kdtDisRateEntry.setBounds(new Rectangle(-1, 1, 619, 185));
         kdtDisRateEntry_detailPanel = (com.kingdee.eas.framework.client.multiDetail.DetailPanel)com.kingdee.eas.framework.client.multiDetail.HMDUtils.buildDetail(this,dataBinder,kdtDisRateEntry,new com.kingdee.eas.custom.taihe.settle.CarcassDisrateDisRateEntryInfo(),null,false);
         kDPanel1.add(kdtDisRateEntry_detailPanel, null);
-		kdtDisRateEntry_detailPanel.addAddListener(new com.kingdee.eas.framework.client.multiDetail.IDetailPanelListener() {
-			public void beforeEvent(com.kingdee.eas.framework.client.multiDetail.DetailPanelEvent event) throws Exception {
-				IObjectValue vo = event.getObjectValue();
-vo.put("wgtType","0");
-			}
-			public void afterEvent(com.kingdee.eas.framework.client.multiDetail.DetailPanelEvent event) throws Exception {
-			}
-		});
         //kDPanel2
         kDPanel2.setLayout(null);        kdtEntry.setBounds(new Rectangle(4, 1, 613, 189));
         kdtEntry_detailPanel = (com.kingdee.eas.framework.client.multiDetail.DetailPanel)com.kingdee.eas.framework.client.multiDetail.HMDUtils.buildDetail(this,dataBinder,kdtEntry,new com.kingdee.eas.custom.taihe.settle.CarcassDisrateEntryInfo(),null,false);

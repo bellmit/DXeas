@@ -319,20 +319,13 @@ public class CustomerInfoReqControllerBean extends AbstractCustomerInfoReqContro
 
 			String FCUID =ctx.get("CurCompanyId").toString();//取得当前公司
 
-//			if(cirinfo.getCustomerGroupEntry().size()==0)
-//				throw new EASBizException(new NumericExceptionSubItem("001","分录_客户基本分类不能为空"));
-
 			//add@20160929 by dai
 			if(cirinfo.getCustomerGroupEntry().size()>0) {
 				objectUuidpk  = new ObjectUuidPK(cirinfo.getCustomerGroupEntry().get(0).getCustomerGroup().getId());
 			}
 
-			//objectUuidpk  = new ObjectUuidPK(cirinfo.getCSSGroup().getId());//
 			CSSPGroupInfo    cSSPGroupInfo = CSSPGroupFactory.getLocalInstance(ctx).getCSSPGroupInfo(objectUuidpk);
-			//				 cinfo.setBrowseGroup(cSSPGroupInfo);
 			cinfo.setBrowseGroup(cSSPGroupInfo);
-
-
 
 			if (isCodeRuleEnable(ctx,cinfo,FCUID)) {
 				// cinfo.setNumber(getAutoCode(ctx,cinfo,FCUID));
@@ -349,17 +342,6 @@ public class CustomerInfoReqControllerBean extends AbstractCustomerInfoReqContro
 			CSSPGroupStandardInfo CSSPGSIInfo = null;
 			CSSPGSIInfo = CSSPGroupStandardFactory.getLocalInstance(ctx).getCSSPGroupStandardInfo(objectUuidpk);
 
-			//modify@20160929
-			/*CustomerGroupDetailInfo centryinfo = new CustomerGroupDetailInfo();//如何得到
-			centryinfo.setCustomerGroupStandard(CSSPGSIInfo);// 客户分类标准
-
-			//if(entryinfo.getCustomerGroup() != null){
-				 centryinfo.setCustomerGroup(cSSPGroupInfo);
-			//}
-			centryinfo.setCustomerGroupFullName(cSSPGroupInfo.getName());
-			cinfo.getCustomerGroupDetails().add(centryinfo);// 添加到分录
-
-			 */		
 			//add@20160929 by dai 
 			for(int index=0;index<cirinfo.getCustomerGroupEntry().size();index++) {
 				if(cirinfo.getCustomerGroupEntry().get(index).getCustomerGroup()==null) {
@@ -372,11 +354,8 @@ public class CustomerInfoReqControllerBean extends AbstractCustomerInfoReqContro
 				cinfo.getCustomerGroupDetails().add(centryinfo);// 添加到分录
 			}
 
-
 			IObjectPK pk = CustomerFactory.getLocalInstance(ctx).submit(cinfo);
-
 			customerId = pk.toString();
-
 			Object[] Obj = new Object[4];
 			for(int i = 0;i < cirinfo.getSettleCustomerEntry().size(); i++){
 				Obj[0] = BOSUuid.create("E84E0555").toString();
@@ -416,8 +395,8 @@ public class CustomerInfoReqControllerBean extends AbstractCustomerInfoReqContro
 				}else{
 					str = FIInfo.getLongNumber().substring(0, FIInfo.getLongNumber().lastIndexOf("!"));
 				}
-				IRowSet rs = DbUtil.executeQuery(ctx,"select FID from T_ORG_Company where flongNumber like '"+str+"%'");
-
+//				IRowSet rs = DbUtil.executeQuery(ctx,"select FID from T_ORG_Company where flongNumber like '"+str+"%'");
+				IRowSet rs = DbUtil.executeQuery(ctx,"select FID from T_ORG_Company where fid = '"+comOrgID+"'");
 				//保留初始数据
 				saleInfo=cirinfo.getSaleOrgUnit();
 				SaleGroupInfo saleGroup = cirinfo.getSaleGroup();
@@ -429,8 +408,6 @@ public class CustomerInfoReqControllerBean extends AbstractCustomerInfoReqContro
 
 					currentFIInfo=null;
 					currentSaleInfo=null;
-
-
 
 					currentCU=iCtrl.getCtrlUnitInfo(new ObjectUuidPK(rs.getString("FID")));
 					currentFIInfo=iCompany.getCompanyOrgUnitInfo(new ObjectUuidPK(rs.getString("FID")));

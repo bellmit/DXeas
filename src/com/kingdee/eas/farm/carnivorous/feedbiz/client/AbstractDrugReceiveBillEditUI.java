@@ -89,6 +89,7 @@ public abstract class AbstractDrugReceiveBillEditUI extends com.kingdee.eas.fram
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer conthignDrugAmount;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer conthasOneDrug;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contsaveAmount;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contconfirmTime;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtCreator;
     protected com.kingdee.bos.ctrl.swing.KDDatePicker kDDateCreateTime;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtLastUpdateUser;
@@ -124,6 +125,7 @@ public abstract class AbstractDrugReceiveBillEditUI extends com.kingdee.eas.fram
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txthignDrugAmount;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txthasOneDrug;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtsaveAmount;
+    protected com.kingdee.bos.ctrl.swing.KDDatePicker pkconfirmTime;
     protected com.kingdee.bos.ctrl.swing.KDWorkButton tBtnAudit;
     protected com.kingdee.bos.ctrl.swing.KDWorkButton tBtnUnAudit;
     protected com.kingdee.bos.ctrl.swing.KDWorkButton btnClose;
@@ -295,6 +297,7 @@ public abstract class AbstractDrugReceiveBillEditUI extends com.kingdee.eas.fram
         this.conthignDrugAmount = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.conthasOneDrug = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contsaveAmount = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contconfirmTime = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.prmtCreator = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.kDDateCreateTime = new com.kingdee.bos.ctrl.swing.KDDatePicker();
         this.prmtLastUpdateUser = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
@@ -330,6 +333,7 @@ public abstract class AbstractDrugReceiveBillEditUI extends com.kingdee.eas.fram
         this.txthignDrugAmount = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
         this.txthasOneDrug = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
         this.txtsaveAmount = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
+        this.pkconfirmTime = new com.kingdee.bos.ctrl.swing.KDDatePicker();
         this.tBtnAudit = new com.kingdee.bos.ctrl.swing.KDWorkButton();
         this.tBtnUnAudit = new com.kingdee.bos.ctrl.swing.KDWorkButton();
         this.btnClose = new com.kingdee.bos.ctrl.swing.KDWorkButton();
@@ -379,6 +383,7 @@ public abstract class AbstractDrugReceiveBillEditUI extends com.kingdee.eas.fram
         this.conthignDrugAmount.setName("conthignDrugAmount");
         this.conthasOneDrug.setName("conthasOneDrug");
         this.contsaveAmount.setName("contsaveAmount");
+        this.contconfirmTime.setName("contconfirmTime");
         this.prmtCreator.setName("prmtCreator");
         this.kDDateCreateTime.setName("kDDateCreateTime");
         this.prmtLastUpdateUser.setName("prmtLastUpdateUser");
@@ -414,6 +419,7 @@ public abstract class AbstractDrugReceiveBillEditUI extends com.kingdee.eas.fram
         this.txthignDrugAmount.setName("txthignDrugAmount");
         this.txthasOneDrug.setName("txthasOneDrug");
         this.txtsaveAmount.setName("txtsaveAmount");
+        this.pkconfirmTime.setName("pkconfirmTime");
         this.tBtnAudit.setName("tBtnAudit");
         this.tBtnUnAudit.setName("tBtnUnAudit");
         this.btnClose.setName("btnClose");
@@ -800,6 +806,11 @@ public abstract class AbstractDrugReceiveBillEditUI extends com.kingdee.eas.fram
         this.contsaveAmount.setBoundLabelLength(120);		
         this.contsaveAmount.setBoundLabelUnderline(true);		
         this.contsaveAmount.setVisible(true);
+        // contconfirmTime		
+        this.contconfirmTime.setBoundLabelText(resHelper.getString("contconfirmTime.boundLabelText"));		
+        this.contconfirmTime.setBoundLabelLength(100);		
+        this.contconfirmTime.setBoundLabelUnderline(true);		
+        this.contconfirmTime.setVisible(true);
         // prmtCreator		
         this.prmtCreator.setEnabled(false);
         // kDDateCreateTime		
@@ -1137,6 +1148,9 @@ public abstract class AbstractDrugReceiveBillEditUI extends com.kingdee.eas.fram
         this.txtsaveAmount.setPrecision(10);		
         this.txtsaveAmount.setRequired(false);		
         this.txtsaveAmount.setEnabled(false);
+        // pkconfirmTime		
+        this.pkconfirmTime.setVisible(true);		
+        this.pkconfirmTime.setRequired(false);
         // tBtnAudit
         this.tBtnAudit.setAction((IItemAction)ActionProxyFactory.getProxy(actionAudit, new Class[] { IItemAction.class }, getServiceContext()));		
         this.tBtnAudit.setText(resHelper.getString("tBtnAudit.text"));
@@ -1158,7 +1172,7 @@ public abstract class AbstractDrugReceiveBillEditUI extends com.kingdee.eas.fram
         this.mBtnUnAudit.setAction((IItemAction)ActionProxyFactory.getProxy(actionUnAudit, new Class[] { IItemAction.class }, getServiceContext()));		
         this.mBtnUnAudit.setText(resHelper.getString("mBtnUnAudit.text"));
         // newSeparator3
-        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {chkisHasTrans,txtNumber,pkBizDate,txtDescription,prmtAuditor,prmtCreator,kDDateCreateTime,prmtLastUpdateUser,kDDateLastUpdateTime,billStatus,prmtcompany,pkauditTime,prmtstorageOrgUnit,chkisInit,chkisHasMaterial,prmtfarmer,prmtfarm,prmtbatch,prmtbatchContract,prmtdriver,pkinDate,txtinQty,txttotalCost,kdtEntrys,txttotalAmt,txtvoucherNum,prmtsettlePolicy,prmtbreedData,prmtperson,txtdrugedSingleAmt,chkisFromTiaoYao,bizType,txtfarmerPhone,txtfarmAddress,prmtvet,prmtcostcenter,txthasDrugAmount,txthignDrugAmount,txthasOneDrug,txtsaveAmount}));
+        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {chkisHasTrans,txtNumber,pkBizDate,txtDescription,prmtAuditor,prmtCreator,kDDateCreateTime,prmtLastUpdateUser,kDDateLastUpdateTime,billStatus,prmtcompany,pkauditTime,prmtstorageOrgUnit,chkisInit,chkisHasMaterial,prmtfarmer,prmtfarm,prmtbatch,prmtbatchContract,prmtdriver,pkinDate,txtinQty,txttotalCost,kdtEntrys,txttotalAmt,txtvoucherNum,prmtsettlePolicy,prmtbreedData,prmtperson,txtdrugedSingleAmt,chkisFromTiaoYao,bizType,txtfarmerPhone,txtfarmAddress,prmtvet,prmtcostcenter,txthasDrugAmount,txthignDrugAmount,txthasOneDrug,txtsaveAmount,pkconfirmTime}));
         this.setFocusCycleRoot(true);
 		//Register control's property binding
 		registerBindings();
@@ -1272,6 +1286,8 @@ public abstract class AbstractDrugReceiveBillEditUI extends com.kingdee.eas.fram
         this.add(conthasOneDrug, new KDLayout.Constraints(331, 127, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contsaveAmount.setBounds(new Rectangle(331, 178, 270, 19));
         this.add(contsaveAmount, new KDLayout.Constraints(331, 178, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contconfirmTime.setBounds(new Rectangle(639, 178, 270, 19));
+        this.add(contconfirmTime, new KDLayout.Constraints(639, 178, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         //contCreator
         contCreator.setBoundEditor(prmtCreator);
         //contCreateTime
@@ -1342,6 +1358,8 @@ public abstract class AbstractDrugReceiveBillEditUI extends com.kingdee.eas.fram
         conthasOneDrug.setBoundEditor(txthasOneDrug);
         //contsaveAmount
         contsaveAmount.setBoundEditor(txtsaveAmount);
+        //contconfirmTime
+        contconfirmTime.setBoundEditor(pkconfirmTime);
 
     }
 
@@ -1581,7 +1599,8 @@ public abstract class AbstractDrugReceiveBillEditUI extends com.kingdee.eas.fram
 		dataBinder.registerBinding("hasDrugAmount", java.math.BigDecimal.class, this.txthasDrugAmount, "value");
 		dataBinder.registerBinding("hignDrugAmount", java.math.BigDecimal.class, this.txthignDrugAmount, "value");
 		dataBinder.registerBinding("hasOneDrug", java.math.BigDecimal.class, this.txthasOneDrug, "value");
-		dataBinder.registerBinding("saveAmount", java.math.BigDecimal.class, this.txtsaveAmount, "value");		
+		dataBinder.registerBinding("saveAmount", java.math.BigDecimal.class, this.txtsaveAmount, "value");
+		dataBinder.registerBinding("confirmTime", java.util.Date.class, this.pkconfirmTime, "value");		
 	}
 	//Regiester UI State
 	private void registerUIState(){		
@@ -1772,7 +1791,8 @@ public abstract class AbstractDrugReceiveBillEditUI extends com.kingdee.eas.fram
 		getValidateHelper().registerBindProperty("hasDrugAmount", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("hignDrugAmount", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("hasOneDrug", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("saveAmount", ValidateHelper.ON_SAVE);    		
+		getValidateHelper().registerBindProperty("saveAmount", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("confirmTime", ValidateHelper.ON_SAVE);    		
 	}
 
 
@@ -2069,6 +2089,7 @@ kdtEntrys.getCell(rowIndex,"amount").setValue(com.kingdee.bos.ui.face.UIRuleUtil
         sic.add(new SelectorItemInfo("hignDrugAmount"));
         sic.add(new SelectorItemInfo("hasOneDrug"));
         sic.add(new SelectorItemInfo("saveAmount"));
+        sic.add(new SelectorItemInfo("confirmTime"));
         return sic;
     }        
     	

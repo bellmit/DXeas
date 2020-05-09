@@ -43,85 +43,85 @@ import com.kingdee.bos.appframework.uip.UINavigator;
 /**
  * output class name
  */
-public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.custom.wlhllicensemanager.client.WlhlCoreBillEditUI
+public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.framework.client.CoreBillEditUI
 {
     private static final Logger logger = CoreUIObject.getLogger(AbstractSuccessiveContractEditUI.class);
-    protected com.kingdee.bos.ctrl.swing.KDCheckBox chkisInitBill;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contCreator;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contCreateTime;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contLastUpdateUser;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contLastUpdateTime;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contNumber;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contBizDate;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contAuditor;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contcontractType;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contbeginDate;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contendDate;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contsuccessiveQty;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contcloseStatus;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contcloseTime;
-    protected com.kingdee.bos.ctrl.swing.KDTextArea txtremark;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contcompany;
-    protected com.kingdee.bos.ctrl.swing.KDPanel kDPanel1;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contpurchasePerson;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer conthasSuccessiveQty;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contfeedingType;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contsecurityDeposit;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contsingleSecurityDeposit;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contpolicyMinimum;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contcontractMinimum;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contshouldSecurityDeposit;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contstatementPolicy;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer continitBatchQty;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contyzjincrease;
-    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtcontractType;
-    protected com.kingdee.bos.ctrl.swing.KDDatePicker pkbeginDate;
-    protected com.kingdee.bos.ctrl.swing.KDDatePicker pkendDate;
-    protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtsuccessiveQty;
-    protected com.kingdee.bos.ctrl.swing.KDComboBox closeStatus;
-    protected com.kingdee.bos.ctrl.swing.KDDatePicker pkcloseTime;
-    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtcompany;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contpartyBCell;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contpartyBAddress;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contpartyBID;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contpartyBBank;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contpartyBBankNo;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contfarm;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contheader;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contheaderCell;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contcapacity;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contdays;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contdiffDays;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contSupplier;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contintervalDays;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contcloseStatus;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contcloseTime;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contbillStatus;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contauditTime;
+    protected com.kingdee.bos.ctrl.swing.KDTextArea txtremark;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contcompany;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contSupplier;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contupSeedingDate;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contupSeedingQty;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contheaderCell;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contfarmAddress;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contfarmer;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contfarm;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contsettlePolicy;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtCreator;
+    protected com.kingdee.bos.ctrl.swing.KDDatePicker kDDateCreateTime;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtLastUpdateUser;
+    protected com.kingdee.bos.ctrl.swing.KDDatePicker kDDateLastUpdateTime;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtNumber;
+    protected com.kingdee.bos.ctrl.swing.KDDatePicker pkBizDate;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtAuditor;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtcontractType;
+    protected com.kingdee.bos.ctrl.swing.KDDatePicker pkbeginDate;
+    protected com.kingdee.bos.ctrl.swing.KDDatePicker pkendDate;
+    protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtsuccessiveQty;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtpartyBCell;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtpartyBAddress;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtpartyBID;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtpartyBBank;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtpartyBBankNo;
-    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtfarm;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtheader;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtheaderCell;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtcapacity;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtdays;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtdiffDays;
-    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtSupplier;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtintervalDays;
+    protected com.kingdee.bos.ctrl.swing.KDComboBox closeStatus;
+    protected com.kingdee.bos.ctrl.swing.KDDatePicker pkcloseTime;
+    protected com.kingdee.bos.ctrl.swing.KDComboBox billStatus;
+    protected com.kingdee.bos.ctrl.swing.KDDatePicker pkauditTime;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtcompany;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtSupplier;
     protected com.kingdee.bos.ctrl.swing.KDDatePicker pkupSeedingDate;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtupSeedingQty;
-    protected com.kingdee.bos.ctrl.swing.KDTextField txtheaderCell;
-    protected com.kingdee.bos.ctrl.swing.KDTextField txtfarmAddress;
-    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtpurchasePerson;
-    protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txthasSuccessiveQty;
-    protected com.kingdee.bos.ctrl.swing.KDComboBox feedingType;
-    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtsecurityDeposit;
-    protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtsingleSecurityDeposit;
-    protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtpolicyMinimum;
-    protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtcontractMinimum;
-    protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtshouldSecurityDeposit;
-    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtstatementPolicy;
-    protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtinitBatchQty;
-    protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtyzjincrease;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtfarmer;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtfarm;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtsettlePolicy;
     protected com.kingdee.bos.ctrl.swing.KDWorkButton btnBalanceBond;
     protected com.kingdee.bos.ctrl.swing.KDWorkButton btnViewOtherContract;
+    protected com.kingdee.bos.ctrl.swing.KDWorkButton btnAudit;
+    protected com.kingdee.bos.ctrl.swing.KDWorkButton btnUnAudit;
     protected com.kingdee.eas.custom.taihe.contract.SuccessiveContractInfo editData = null;
     protected ActionBalanceBond actionBalanceBond = null;
     protected ActionViewOtherContract actionViewOtherContract = null;
+    protected ActionAudit actionAudit = null;
+    protected ActionUnAudit actionUnAudit = null;
     /**
      * output class constructor
      */
@@ -201,152 +201,166 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
         this.actionViewOtherContract.setExtendProperty("isObjectUpdateLock", "false");
          this.actionViewOtherContract.addService(new com.kingdee.eas.framework.client.service.PermissionService());
          this.actionViewOtherContract.addService(new com.kingdee.eas.framework.client.service.ForewarnService());
-        this.chkisInitBill = new com.kingdee.bos.ctrl.swing.KDCheckBox();
+        //actionAudit
+        this.actionAudit = new ActionAudit(this);
+        getActionManager().registerAction("actionAudit", actionAudit);
+        this.actionAudit.setBindWorkFlow(true);
+        this.actionAudit.setExtendProperty("canForewarn", "true");
+        this.actionAudit.setExtendProperty("userDefined", "false");
+        this.actionAudit.setExtendProperty("isObjectUpdateLock", "false");
+         this.actionAudit.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+         this.actionAudit.addService(new com.kingdee.eas.framework.client.service.ForewarnService());
+         this.actionAudit.addService(new com.kingdee.eas.framework.client.service.WorkFlowService());
+        //actionUnAudit
+        this.actionUnAudit = new ActionUnAudit(this);
+        getActionManager().registerAction("actionUnAudit", actionUnAudit);
+        this.actionUnAudit.setExtendProperty("canForewarn", "true");
+        this.actionUnAudit.setExtendProperty("userDefined", "false");
+        this.actionUnAudit.setExtendProperty("isObjectUpdateLock", "false");
+         this.actionUnAudit.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+         this.actionUnAudit.addService(new com.kingdee.eas.framework.client.service.ForewarnService());
+        this.contCreator = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contCreateTime = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contLastUpdateUser = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contLastUpdateTime = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contNumber = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contBizDate = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contAuditor = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contcontractType = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contbeginDate = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contendDate = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contsuccessiveQty = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.contcloseStatus = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.contcloseTime = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.txtremark = new com.kingdee.bos.ctrl.swing.KDTextArea();
-        this.contcompany = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.kDPanel1 = new com.kingdee.bos.ctrl.swing.KDPanel();
-        this.contpurchasePerson = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.conthasSuccessiveQty = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.contfeedingType = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.contsecurityDeposit = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.contsingleSecurityDeposit = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.contpolicyMinimum = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.contcontractMinimum = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.contshouldSecurityDeposit = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.contstatementPolicy = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.continitBatchQty = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.contyzjincrease = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.prmtcontractType = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
-        this.pkbeginDate = new com.kingdee.bos.ctrl.swing.KDDatePicker();
-        this.pkendDate = new com.kingdee.bos.ctrl.swing.KDDatePicker();
-        this.txtsuccessiveQty = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
-        this.closeStatus = new com.kingdee.bos.ctrl.swing.KDComboBox();
-        this.pkcloseTime = new com.kingdee.bos.ctrl.swing.KDDatePicker();
-        this.prmtcompany = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.contpartyBCell = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contpartyBAddress = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contpartyBID = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contpartyBBank = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contpartyBBankNo = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.contfarm = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contheader = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contheaderCell = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contcapacity = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contdays = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contdiffDays = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.contSupplier = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contintervalDays = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contcloseStatus = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contcloseTime = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contbillStatus = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contauditTime = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.txtremark = new com.kingdee.bos.ctrl.swing.KDTextArea();
+        this.contcompany = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contSupplier = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contupSeedingDate = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contupSeedingQty = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.contheaderCell = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.contfarmAddress = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contfarmer = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contfarm = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contsettlePolicy = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.prmtCreator = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
+        this.kDDateCreateTime = new com.kingdee.bos.ctrl.swing.KDDatePicker();
+        this.prmtLastUpdateUser = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
+        this.kDDateLastUpdateTime = new com.kingdee.bos.ctrl.swing.KDDatePicker();
+        this.txtNumber = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.pkBizDate = new com.kingdee.bos.ctrl.swing.KDDatePicker();
+        this.prmtAuditor = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
+        this.prmtcontractType = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
+        this.pkbeginDate = new com.kingdee.bos.ctrl.swing.KDDatePicker();
+        this.pkendDate = new com.kingdee.bos.ctrl.swing.KDDatePicker();
+        this.txtsuccessiveQty = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
         this.txtpartyBCell = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.txtpartyBAddress = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.txtpartyBID = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.txtpartyBBank = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.txtpartyBBankNo = new com.kingdee.bos.ctrl.swing.KDTextField();
-        this.prmtfarm = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.txtheader = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.txtheaderCell = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.txtcapacity = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
         this.txtdays = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
         this.txtdiffDays = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
-        this.prmtSupplier = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.txtintervalDays = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
+        this.closeStatus = new com.kingdee.bos.ctrl.swing.KDComboBox();
+        this.pkcloseTime = new com.kingdee.bos.ctrl.swing.KDDatePicker();
+        this.billStatus = new com.kingdee.bos.ctrl.swing.KDComboBox();
+        this.pkauditTime = new com.kingdee.bos.ctrl.swing.KDDatePicker();
+        this.prmtcompany = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
+        this.prmtSupplier = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.pkupSeedingDate = new com.kingdee.bos.ctrl.swing.KDDatePicker();
         this.txtupSeedingQty = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
-        this.txtheaderCell = new com.kingdee.bos.ctrl.swing.KDTextField();
-        this.txtfarmAddress = new com.kingdee.bos.ctrl.swing.KDTextField();
-        this.prmtpurchasePerson = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
-        this.txthasSuccessiveQty = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
-        this.feedingType = new com.kingdee.bos.ctrl.swing.KDComboBox();
-        this.prmtsecurityDeposit = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
-        this.txtsingleSecurityDeposit = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
-        this.txtpolicyMinimum = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
-        this.txtcontractMinimum = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
-        this.txtshouldSecurityDeposit = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
-        this.prmtstatementPolicy = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
-        this.txtinitBatchQty = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
-        this.txtyzjincrease = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
+        this.prmtfarmer = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
+        this.prmtfarm = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
+        this.prmtsettlePolicy = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.btnBalanceBond = new com.kingdee.bos.ctrl.swing.KDWorkButton();
         this.btnViewOtherContract = new com.kingdee.bos.ctrl.swing.KDWorkButton();
-        this.chkisInitBill.setName("chkisInitBill");
+        this.btnAudit = new com.kingdee.bos.ctrl.swing.KDWorkButton();
+        this.btnUnAudit = new com.kingdee.bos.ctrl.swing.KDWorkButton();
+        this.contCreator.setName("contCreator");
+        this.contCreateTime.setName("contCreateTime");
+        this.contLastUpdateUser.setName("contLastUpdateUser");
+        this.contLastUpdateTime.setName("contLastUpdateTime");
+        this.contNumber.setName("contNumber");
+        this.contBizDate.setName("contBizDate");
+        this.contAuditor.setName("contAuditor");
         this.contcontractType.setName("contcontractType");
         this.contbeginDate.setName("contbeginDate");
         this.contendDate.setName("contendDate");
         this.contsuccessiveQty.setName("contsuccessiveQty");
-        this.contcloseStatus.setName("contcloseStatus");
-        this.contcloseTime.setName("contcloseTime");
-        this.txtremark.setName("txtremark");
-        this.contcompany.setName("contcompany");
-        this.kDPanel1.setName("kDPanel1");
-        this.contpurchasePerson.setName("contpurchasePerson");
-        this.conthasSuccessiveQty.setName("conthasSuccessiveQty");
-        this.contfeedingType.setName("contfeedingType");
-        this.contsecurityDeposit.setName("contsecurityDeposit");
-        this.contsingleSecurityDeposit.setName("contsingleSecurityDeposit");
-        this.contpolicyMinimum.setName("contpolicyMinimum");
-        this.contcontractMinimum.setName("contcontractMinimum");
-        this.contshouldSecurityDeposit.setName("contshouldSecurityDeposit");
-        this.contstatementPolicy.setName("contstatementPolicy");
-        this.continitBatchQty.setName("continitBatchQty");
-        this.contyzjincrease.setName("contyzjincrease");
-        this.prmtcontractType.setName("prmtcontractType");
-        this.pkbeginDate.setName("pkbeginDate");
-        this.pkendDate.setName("pkendDate");
-        this.txtsuccessiveQty.setName("txtsuccessiveQty");
-        this.closeStatus.setName("closeStatus");
-        this.pkcloseTime.setName("pkcloseTime");
-        this.prmtcompany.setName("prmtcompany");
         this.contpartyBCell.setName("contpartyBCell");
         this.contpartyBAddress.setName("contpartyBAddress");
         this.contpartyBID.setName("contpartyBID");
         this.contpartyBBank.setName("contpartyBBank");
         this.contpartyBBankNo.setName("contpartyBBankNo");
-        this.contfarm.setName("contfarm");
         this.contheader.setName("contheader");
+        this.contheaderCell.setName("contheaderCell");
         this.contcapacity.setName("contcapacity");
         this.contdays.setName("contdays");
         this.contdiffDays.setName("contdiffDays");
-        this.contSupplier.setName("contSupplier");
         this.contintervalDays.setName("contintervalDays");
+        this.contcloseStatus.setName("contcloseStatus");
+        this.contcloseTime.setName("contcloseTime");
+        this.contbillStatus.setName("contbillStatus");
+        this.contauditTime.setName("contauditTime");
+        this.txtremark.setName("txtremark");
+        this.contcompany.setName("contcompany");
+        this.contSupplier.setName("contSupplier");
         this.contupSeedingDate.setName("contupSeedingDate");
         this.contupSeedingQty.setName("contupSeedingQty");
-        this.contheaderCell.setName("contheaderCell");
-        this.contfarmAddress.setName("contfarmAddress");
+        this.contfarmer.setName("contfarmer");
+        this.contfarm.setName("contfarm");
+        this.contsettlePolicy.setName("contsettlePolicy");
+        this.prmtCreator.setName("prmtCreator");
+        this.kDDateCreateTime.setName("kDDateCreateTime");
+        this.prmtLastUpdateUser.setName("prmtLastUpdateUser");
+        this.kDDateLastUpdateTime.setName("kDDateLastUpdateTime");
+        this.txtNumber.setName("txtNumber");
+        this.pkBizDate.setName("pkBizDate");
+        this.prmtAuditor.setName("prmtAuditor");
+        this.prmtcontractType.setName("prmtcontractType");
+        this.pkbeginDate.setName("pkbeginDate");
+        this.pkendDate.setName("pkendDate");
+        this.txtsuccessiveQty.setName("txtsuccessiveQty");
         this.txtpartyBCell.setName("txtpartyBCell");
         this.txtpartyBAddress.setName("txtpartyBAddress");
         this.txtpartyBID.setName("txtpartyBID");
         this.txtpartyBBank.setName("txtpartyBBank");
         this.txtpartyBBankNo.setName("txtpartyBBankNo");
-        this.prmtfarm.setName("prmtfarm");
         this.txtheader.setName("txtheader");
+        this.txtheaderCell.setName("txtheaderCell");
         this.txtcapacity.setName("txtcapacity");
         this.txtdays.setName("txtdays");
         this.txtdiffDays.setName("txtdiffDays");
-        this.prmtSupplier.setName("prmtSupplier");
         this.txtintervalDays.setName("txtintervalDays");
+        this.closeStatus.setName("closeStatus");
+        this.pkcloseTime.setName("pkcloseTime");
+        this.billStatus.setName("billStatus");
+        this.pkauditTime.setName("pkauditTime");
+        this.prmtcompany.setName("prmtcompany");
+        this.prmtSupplier.setName("prmtSupplier");
         this.pkupSeedingDate.setName("pkupSeedingDate");
         this.txtupSeedingQty.setName("txtupSeedingQty");
-        this.txtheaderCell.setName("txtheaderCell");
-        this.txtfarmAddress.setName("txtfarmAddress");
-        this.prmtpurchasePerson.setName("prmtpurchasePerson");
-        this.txthasSuccessiveQty.setName("txthasSuccessiveQty");
-        this.feedingType.setName("feedingType");
-        this.prmtsecurityDeposit.setName("prmtsecurityDeposit");
-        this.txtsingleSecurityDeposit.setName("txtsingleSecurityDeposit");
-        this.txtpolicyMinimum.setName("txtpolicyMinimum");
-        this.txtcontractMinimum.setName("txtcontractMinimum");
-        this.txtshouldSecurityDeposit.setName("txtshouldSecurityDeposit");
-        this.prmtstatementPolicy.setName("prmtstatementPolicy");
-        this.txtinitBatchQty.setName("txtinitBatchQty");
-        this.txtyzjincrease.setName("txtyzjincrease");
+        this.prmtfarmer.setName("prmtfarmer");
+        this.prmtfarm.setName("prmtfarm");
+        this.prmtsettlePolicy.setName("prmtsettlePolicy");
         this.btnBalanceBond.setName("btnBalanceBond");
         this.btnViewOtherContract.setName("btnViewOtherContract");
+        this.btnAudit.setName("btnAudit");
+        this.btnUnAudit.setName("btnUnAudit");
         // CoreUI		
         this.btnTraceUp.setVisible(false);		
         this.btnTraceDown.setVisible(false);		
@@ -368,68 +382,42 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
         this.menuItemRemoveLine.setVisible(false);		
         this.menuItemViewSubmitProccess.setVisible(false);		
         this.menuItemViewDoProccess.setVisible(false);		
-        this.menuItemAuditResult.setVisible(false);		
+        this.menuItemAuditResult.setVisible(false);
+        // contCreator		
         this.contCreator.setBoundLabelText(resHelper.getString("contCreator.boundLabelText"));		
         this.contCreator.setBoundLabelLength(100);		
         this.contCreator.setBoundLabelUnderline(true);		
-        this.contCreator.setEnabled(false);		
+        this.contCreator.setEnabled(false);
+        // contCreateTime		
         this.contCreateTime.setBoundLabelText(resHelper.getString("contCreateTime.boundLabelText"));		
         this.contCreateTime.setBoundLabelLength(100);		
         this.contCreateTime.setBoundLabelUnderline(true);		
-        this.contCreateTime.setEnabled(false);		
+        this.contCreateTime.setEnabled(false);
+        // contLastUpdateUser		
         this.contLastUpdateUser.setBoundLabelText(resHelper.getString("contLastUpdateUser.boundLabelText"));		
         this.contLastUpdateUser.setBoundLabelLength(100);		
         this.contLastUpdateUser.setBoundLabelUnderline(true);		
-        this.contLastUpdateUser.setEnabled(false);		
-        this.contLastUpdateUser.setVisible(true);		
+        this.contLastUpdateUser.setEnabled(false);
+        // contLastUpdateTime		
         this.contLastUpdateTime.setBoundLabelText(resHelper.getString("contLastUpdateTime.boundLabelText"));		
         this.contLastUpdateTime.setBoundLabelLength(100);		
         this.contLastUpdateTime.setBoundLabelUnderline(true);		
         this.contLastUpdateTime.setEnabled(false);		
-        this.contLastUpdateTime.setVisible(true);		
+        this.contLastUpdateTime.setVisible(false);
+        // contNumber		
         this.contNumber.setBoundLabelText(resHelper.getString("contNumber.boundLabelText"));		
         this.contNumber.setBoundLabelLength(100);		
-        this.contNumber.setBoundLabelUnderline(true);		
+        this.contNumber.setBoundLabelUnderline(true);
+        // contBizDate		
         this.contBizDate.setBoundLabelText(resHelper.getString("contBizDate.boundLabelText"));		
         this.contBizDate.setBoundLabelLength(100);		
         this.contBizDate.setBoundLabelUnderline(true);		
         this.contBizDate.setBoundLabelAlignment(7);		
-        this.contBizDate.setVisible(true);		
-        this.contDescription.setVisible(false);		
+        this.contBizDate.setVisible(true);
+        // contAuditor		
         this.contAuditor.setBoundLabelText(resHelper.getString("contAuditor.boundLabelText"));		
         this.contAuditor.setBoundLabelLength(100);		
-        this.contAuditor.setBoundLabelUnderline(true);		
-        this.contauditTime.setBoundLabelText(resHelper.getString("contauditTime.boundLabelText"));		
-        this.contauditTime.setBoundLabelLength(100);		
-        this.contauditTime.setBoundLabelUnderline(true);		
-        this.contauditTime.setVisible(true);		
-        this.contbillStatus.setBoundLabelText(resHelper.getString("contbillStatus.boundLabelText"));		
-        this.contbillStatus.setBoundLabelLength(100);		
-        this.contbillStatus.setBoundLabelUnderline(true);		
-        this.contbillStatus.setVisible(true);		
-        this.prmtCreator.setEnabled(false);		
-        this.kDDateCreateTime.setTimeEnabled(true);		
-        this.kDDateCreateTime.setEnabled(false);		
-        this.prmtLastUpdateUser.setEnabled(false);		
-        this.kDDateLastUpdateTime.setTimeEnabled(true);		
-        this.kDDateLastUpdateTime.setEnabled(false);		
-        this.txtNumber.setMaxLength(80);		
-        this.txtNumber.setRequired(true);		
-        this.pkBizDate.setVisible(true);		
-        this.pkBizDate.setEnabled(true);		
-        this.pkBizDate.setRequired(true);		
-        this.prmtAuditor.setEnabled(false);		
-        this.pkauditTime.setVisible(true);		
-        this.pkauditTime.setRequired(false);		
-        this.pkauditTime.setEnabled(false);		
-        this.billStatus.setVisible(true);		
-        this.billStatus.addItems(EnumUtils.getEnumList("com.kingdee.eas.scm.common.BillBaseStatusEnum").toArray());		
-        this.billStatus.setRequired(false);		
-        this.billStatus.setEnabled(false);
-        // chkisInitBill		
-        this.chkisInitBill.setText(resHelper.getString("chkisInitBill.text"));		
-        this.chkisInitBill.setVisible(true);		
-        this.chkisInitBill.setHorizontalAlignment(2);
+        this.contAuditor.setBoundLabelUnderline(true);
         // contcontractType		
         this.contcontractType.setBoundLabelText(resHelper.getString("contcontractType.boundLabelText"));		
         this.contcontractType.setBoundLabelLength(100);		
@@ -450,154 +438,41 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
         this.contsuccessiveQty.setBoundLabelLength(100);		
         this.contsuccessiveQty.setBoundLabelUnderline(true);		
         this.contsuccessiveQty.setVisible(true);
-        // contcloseStatus		
-        this.contcloseStatus.setBoundLabelText(resHelper.getString("contcloseStatus.boundLabelText"));		
-        this.contcloseStatus.setBoundLabelLength(100);		
-        this.contcloseStatus.setBoundLabelUnderline(true);		
-        this.contcloseStatus.setVisible(true);
-        // contcloseTime		
-        this.contcloseTime.setBoundLabelText(resHelper.getString("contcloseTime.boundLabelText"));		
-        this.contcloseTime.setBoundLabelLength(100);		
-        this.contcloseTime.setBoundLabelUnderline(true);		
-        this.contcloseTime.setVisible(true);
-        // txtremark		
-        this.txtremark.setVisible(true);		
-        this.txtremark.setRequired(false);		
-        this.txtremark.setMaxLength(255);
-        // contcompany		
-        this.contcompany.setBoundLabelText(resHelper.getString("contcompany.boundLabelText"));		
-        this.contcompany.setBoundLabelLength(100);		
-        this.contcompany.setBoundLabelUnderline(true);		
-        this.contcompany.setVisible(true);
-        // kDPanel1		
-        this.kDPanel1.setBorder(new TitledBorder(BorderFactory.createEtchedBorder(new Color(255,255,255),new Color(148,145,140)), resHelper.getString("kDPanel1.border.title")));
-        // contpurchasePerson		
-        this.contpurchasePerson.setBoundLabelText(resHelper.getString("contpurchasePerson.boundLabelText"));		
-        this.contpurchasePerson.setBoundLabelLength(100);		
-        this.contpurchasePerson.setBoundLabelUnderline(true);		
-        this.contpurchasePerson.setVisible(true);
-        // conthasSuccessiveQty		
-        this.conthasSuccessiveQty.setBoundLabelText(resHelper.getString("conthasSuccessiveQty.boundLabelText"));		
-        this.conthasSuccessiveQty.setBoundLabelLength(80);		
-        this.conthasSuccessiveQty.setBoundLabelUnderline(true);		
-        this.conthasSuccessiveQty.setVisible(true);
-        // contfeedingType		
-        this.contfeedingType.setBoundLabelText(resHelper.getString("contfeedingType.boundLabelText"));		
-        this.contfeedingType.setBoundLabelLength(100);		
-        this.contfeedingType.setBoundLabelUnderline(true);		
-        this.contfeedingType.setVisible(true);
-        // contsecurityDeposit		
-        this.contsecurityDeposit.setBoundLabelText(resHelper.getString("contsecurityDeposit.boundLabelText"));		
-        this.contsecurityDeposit.setBoundLabelLength(100);		
-        this.contsecurityDeposit.setBoundLabelUnderline(true);		
-        this.contsecurityDeposit.setVisible(true);
-        // contsingleSecurityDeposit		
-        this.contsingleSecurityDeposit.setBoundLabelText(resHelper.getString("contsingleSecurityDeposit.boundLabelText"));		
-        this.contsingleSecurityDeposit.setBoundLabelLength(100);		
-        this.contsingleSecurityDeposit.setBoundLabelUnderline(true);		
-        this.contsingleSecurityDeposit.setVisible(true);
-        // contpolicyMinimum		
-        this.contpolicyMinimum.setBoundLabelText(resHelper.getString("contpolicyMinimum.boundLabelText"));		
-        this.contpolicyMinimum.setBoundLabelLength(100);		
-        this.contpolicyMinimum.setBoundLabelUnderline(true);		
-        this.contpolicyMinimum.setVisible(true);
-        // contcontractMinimum		
-        this.contcontractMinimum.setBoundLabelText(resHelper.getString("contcontractMinimum.boundLabelText"));		
-        this.contcontractMinimum.setBoundLabelLength(100);		
-        this.contcontractMinimum.setBoundLabelUnderline(true);		
-        this.contcontractMinimum.setVisible(true);
-        // contshouldSecurityDeposit		
-        this.contshouldSecurityDeposit.setBoundLabelText(resHelper.getString("contshouldSecurityDeposit.boundLabelText"));		
-        this.contshouldSecurityDeposit.setBoundLabelLength(100);		
-        this.contshouldSecurityDeposit.setBoundLabelUnderline(true);		
-        this.contshouldSecurityDeposit.setVisible(true);
-        // contstatementPolicy		
-        this.contstatementPolicy.setBoundLabelText(resHelper.getString("contstatementPolicy.boundLabelText"));		
-        this.contstatementPolicy.setBoundLabelLength(100);		
-        this.contstatementPolicy.setBoundLabelUnderline(true);		
-        this.contstatementPolicy.setVisible(true);
-        // continitBatchQty		
-        this.continitBatchQty.setBoundLabelText(resHelper.getString("continitBatchQty.boundLabelText"));		
-        this.continitBatchQty.setBoundLabelLength(90);		
-        this.continitBatchQty.setBoundLabelUnderline(true);		
-        this.continitBatchQty.setVisible(true);
-        // contyzjincrease		
-        this.contyzjincrease.setBoundLabelText(resHelper.getString("contyzjincrease.boundLabelText"));		
-        this.contyzjincrease.setBoundLabelLength(100);		
-        this.contyzjincrease.setBoundLabelUnderline(true);		
-        this.contyzjincrease.setVisible(true);
-        // prmtcontractType		
-        this.prmtcontractType.setQueryInfo("com.kingdee.eas.custom.signwasthetable.app.ContractTypeQuery");		
-        this.prmtcontractType.setVisible(true);		
-        this.prmtcontractType.setEditable(true);		
-        this.prmtcontractType.setDisplayFormat("$name$");		
-        this.prmtcontractType.setEditFormat("$number$");		
-        this.prmtcontractType.setCommitFormat("$number$");		
-        this.prmtcontractType.setRequired(true);
-        // pkbeginDate		
-        this.pkbeginDate.setVisible(true);		
-        this.pkbeginDate.setRequired(true);
-        // pkendDate		
-        this.pkendDate.setVisible(true);		
-        this.pkendDate.setRequired(false);
-        // txtsuccessiveQty		
-        this.txtsuccessiveQty.setVisible(true);		
-        this.txtsuccessiveQty.setHorizontalAlignment(2);		
-        this.txtsuccessiveQty.setDataType(0);		
-        this.txtsuccessiveQty.setSupportedEmpty(true);		
-        this.txtsuccessiveQty.setRequired(false);
-        // closeStatus		
-        this.closeStatus.setVisible(true);		
-        this.closeStatus.addItems(EnumUtils.getEnumList("com.kingdee.eas.custom.taihe.contract.CloseStatus").toArray());		
-        this.closeStatus.setRequired(false);		
-        this.closeStatus.setEnabled(false);
-        // pkcloseTime		
-        this.pkcloseTime.setVisible(true);		
-        this.pkcloseTime.setRequired(false);		
-        this.pkcloseTime.setEnabled(false);
-        // prmtcompany		
-        this.prmtcompany.setQueryInfo("com.kingdee.eas.basedata.org.app.CompanyOrgUnitQuery");		
-        this.prmtcompany.setVisible(true);		
-        this.prmtcompany.setEditable(true);		
-        this.prmtcompany.setDisplayFormat("$name$");		
-        this.prmtcompany.setEditFormat("$number$");		
-        this.prmtcompany.setCommitFormat("$number$");		
-        this.prmtcompany.setRequired(true);
         // contpartyBCell		
         this.contpartyBCell.setBoundLabelText(resHelper.getString("contpartyBCell.boundLabelText"));		
         this.contpartyBCell.setBoundLabelLength(100);		
         this.contpartyBCell.setBoundLabelUnderline(true);		
-        this.contpartyBCell.setVisible(true);
+        this.contpartyBCell.setVisible(false);
         // contpartyBAddress		
         this.contpartyBAddress.setBoundLabelText(resHelper.getString("contpartyBAddress.boundLabelText"));		
         this.contpartyBAddress.setBoundLabelLength(100);		
         this.contpartyBAddress.setBoundLabelUnderline(true);		
-        this.contpartyBAddress.setVisible(true);
+        this.contpartyBAddress.setVisible(false);
         // contpartyBID		
         this.contpartyBID.setBoundLabelText(resHelper.getString("contpartyBID.boundLabelText"));		
         this.contpartyBID.setBoundLabelLength(100);		
         this.contpartyBID.setBoundLabelUnderline(true);		
-        this.contpartyBID.setVisible(true);
+        this.contpartyBID.setVisible(false);
         // contpartyBBank		
         this.contpartyBBank.setBoundLabelText(resHelper.getString("contpartyBBank.boundLabelText"));		
         this.contpartyBBank.setBoundLabelLength(100);		
         this.contpartyBBank.setBoundLabelUnderline(true);		
-        this.contpartyBBank.setVisible(true);
+        this.contpartyBBank.setVisible(false);
         // contpartyBBankNo		
         this.contpartyBBankNo.setBoundLabelText(resHelper.getString("contpartyBBankNo.boundLabelText"));		
         this.contpartyBBankNo.setBoundLabelLength(100);		
         this.contpartyBBankNo.setBoundLabelUnderline(true);		
-        this.contpartyBBankNo.setVisible(true);
-        // contfarm		
-        this.contfarm.setBoundLabelText(resHelper.getString("contfarm.boundLabelText"));		
-        this.contfarm.setBoundLabelLength(100);		
-        this.contfarm.setBoundLabelUnderline(true);		
-        this.contfarm.setVisible(true);
+        this.contpartyBBankNo.setVisible(false);
         // contheader		
         this.contheader.setBoundLabelText(resHelper.getString("contheader.boundLabelText"));		
         this.contheader.setBoundLabelLength(100);		
         this.contheader.setBoundLabelUnderline(true);		
-        this.contheader.setVisible(true);
+        this.contheader.setVisible(false);
+        // contheaderCell		
+        this.contheaderCell.setBoundLabelText(resHelper.getString("contheaderCell.boundLabelText"));		
+        this.contheaderCell.setBoundLabelLength(100);		
+        this.contheaderCell.setBoundLabelUnderline(true);		
+        this.contheaderCell.setVisible(false);
         // contcapacity		
         this.contcapacity.setBoundLabelText(resHelper.getString("contcapacity.boundLabelText"));		
         this.contcapacity.setBoundLabelLength(100);		
@@ -613,16 +488,45 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
         this.contdiffDays.setBoundLabelLength(100);		
         this.contdiffDays.setBoundLabelUnderline(true);		
         this.contdiffDays.setVisible(true);
-        // contSupplier		
-        this.contSupplier.setBoundLabelText(resHelper.getString("contSupplier.boundLabelText"));		
-        this.contSupplier.setBoundLabelLength(100);		
-        this.contSupplier.setBoundLabelUnderline(true);		
-        this.contSupplier.setVisible(true);
         // contintervalDays		
         this.contintervalDays.setBoundLabelText(resHelper.getString("contintervalDays.boundLabelText"));		
         this.contintervalDays.setBoundLabelLength(100);		
         this.contintervalDays.setBoundLabelUnderline(true);		
         this.contintervalDays.setVisible(true);
+        // contcloseStatus		
+        this.contcloseStatus.setBoundLabelText(resHelper.getString("contcloseStatus.boundLabelText"));		
+        this.contcloseStatus.setBoundLabelLength(100);		
+        this.contcloseStatus.setBoundLabelUnderline(true);		
+        this.contcloseStatus.setVisible(true);
+        // contcloseTime		
+        this.contcloseTime.setBoundLabelText(resHelper.getString("contcloseTime.boundLabelText"));		
+        this.contcloseTime.setBoundLabelLength(100);		
+        this.contcloseTime.setBoundLabelUnderline(true);		
+        this.contcloseTime.setVisible(true);
+        // contbillStatus		
+        this.contbillStatus.setBoundLabelText(resHelper.getString("contbillStatus.boundLabelText"));		
+        this.contbillStatus.setBoundLabelLength(100);		
+        this.contbillStatus.setBoundLabelUnderline(true);		
+        this.contbillStatus.setVisible(true);
+        // contauditTime		
+        this.contauditTime.setBoundLabelText(resHelper.getString("contauditTime.boundLabelText"));		
+        this.contauditTime.setBoundLabelLength(100);		
+        this.contauditTime.setBoundLabelUnderline(true);		
+        this.contauditTime.setVisible(true);
+        // txtremark		
+        this.txtremark.setVisible(true);		
+        this.txtremark.setRequired(false);		
+        this.txtremark.setMaxLength(255);
+        // contcompany		
+        this.contcompany.setBoundLabelText(resHelper.getString("contcompany.boundLabelText"));		
+        this.contcompany.setBoundLabelLength(100);		
+        this.contcompany.setBoundLabelUnderline(true);		
+        this.contcompany.setVisible(true);
+        // contSupplier		
+        this.contSupplier.setBoundLabelText(resHelper.getString("contSupplier.boundLabelText"));		
+        this.contSupplier.setBoundLabelLength(100);		
+        this.contSupplier.setBoundLabelUnderline(true);		
+        this.contSupplier.setVisible(false);
         // contupSeedingDate		
         this.contupSeedingDate.setBoundLabelText(resHelper.getString("contupSeedingDate.boundLabelText"));		
         this.contupSeedingDate.setBoundLabelLength(100);		
@@ -633,82 +537,95 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
         this.contupSeedingQty.setBoundLabelLength(100);		
         this.contupSeedingQty.setBoundLabelUnderline(true);		
         this.contupSeedingQty.setVisible(true);
-        // contheaderCell		
-        this.contheaderCell.setBoundLabelText(resHelper.getString("contheaderCell.boundLabelText"));		
-        this.contheaderCell.setBoundLabelLength(100);		
-        this.contheaderCell.setBoundLabelUnderline(true);		
-        this.contheaderCell.setVisible(true);
-        // contfarmAddress		
-        this.contfarmAddress.setBoundLabelText(resHelper.getString("contfarmAddress.boundLabelText"));		
-        this.contfarmAddress.setBoundLabelLength(100);		
-        this.contfarmAddress.setBoundLabelUnderline(true);		
-        this.contfarmAddress.setVisible(true);
+        // contfarmer		
+        this.contfarmer.setBoundLabelText(resHelper.getString("contfarmer.boundLabelText"));		
+        this.contfarmer.setBoundLabelLength(100);		
+        this.contfarmer.setBoundLabelUnderline(true);		
+        this.contfarmer.setVisible(true);
+        // contfarm		
+        this.contfarm.setBoundLabelText(resHelper.getString("contfarm.boundLabelText"));		
+        this.contfarm.setBoundLabelLength(100);		
+        this.contfarm.setBoundLabelUnderline(true);		
+        this.contfarm.setVisible(true);
+        // contsettlePolicy		
+        this.contsettlePolicy.setBoundLabelText(resHelper.getString("contsettlePolicy.boundLabelText"));		
+        this.contsettlePolicy.setBoundLabelLength(100);		
+        this.contsettlePolicy.setBoundLabelUnderline(true);		
+        this.contsettlePolicy.setVisible(true);
+        // prmtCreator		
+        this.prmtCreator.setEnabled(false);
+        // kDDateCreateTime		
+        this.kDDateCreateTime.setTimeEnabled(true);		
+        this.kDDateCreateTime.setEnabled(false);
+        // prmtLastUpdateUser		
+        this.prmtLastUpdateUser.setEnabled(false);
+        // kDDateLastUpdateTime		
+        this.kDDateLastUpdateTime.setTimeEnabled(true);		
+        this.kDDateLastUpdateTime.setEnabled(false);
+        // txtNumber		
+        this.txtNumber.setMaxLength(80);		
+        this.txtNumber.setRequired(true);
+        // pkBizDate		
+        this.pkBizDate.setVisible(true);		
+        this.pkBizDate.setEnabled(true);		
+        this.pkBizDate.setRequired(true);
+        // prmtAuditor		
+        this.prmtAuditor.setEnabled(false);
+        // prmtcontractType		
+        this.prmtcontractType.setQueryInfo("com.kingdee.eas.custom.signwasthetable.app.ContractTypeQuery");		
+        this.prmtcontractType.setVisible(true);		
+        this.prmtcontractType.setEditable(true);		
+        this.prmtcontractType.setDisplayFormat("$name$");		
+        this.prmtcontractType.setEditFormat("$number$");		
+        this.prmtcontractType.setCommitFormat("$number$");		
+        this.prmtcontractType.setRequired(false);
+        // pkbeginDate		
+        this.pkbeginDate.setVisible(true);		
+        this.pkbeginDate.setRequired(false);
+        // pkendDate		
+        this.pkendDate.setVisible(true);		
+        this.pkendDate.setRequired(false);
+        // txtsuccessiveQty		
+        this.txtsuccessiveQty.setVisible(true);		
+        this.txtsuccessiveQty.setHorizontalAlignment(2);		
+        this.txtsuccessiveQty.setDataType(0);		
+        this.txtsuccessiveQty.setSupportedEmpty(true);		
+        this.txtsuccessiveQty.setRequired(false);
         // txtpartyBCell		
-        this.txtpartyBCell.setVisible(true);		
+        this.txtpartyBCell.setVisible(false);		
         this.txtpartyBCell.setHorizontalAlignment(2);		
         this.txtpartyBCell.setMaxLength(100);		
         this.txtpartyBCell.setRequired(false);
         // txtpartyBAddress		
-        this.txtpartyBAddress.setVisible(true);		
+        this.txtpartyBAddress.setVisible(false);		
         this.txtpartyBAddress.setHorizontalAlignment(2);		
         this.txtpartyBAddress.setMaxLength(100);		
         this.txtpartyBAddress.setRequired(false);
         // txtpartyBID		
-        this.txtpartyBID.setVisible(true);		
+        this.txtpartyBID.setVisible(false);		
         this.txtpartyBID.setHorizontalAlignment(2);		
         this.txtpartyBID.setMaxLength(100);		
         this.txtpartyBID.setRequired(false);
         // txtpartyBBank		
-        this.txtpartyBBank.setVisible(true);		
+        this.txtpartyBBank.setVisible(false);		
         this.txtpartyBBank.setHorizontalAlignment(2);		
         this.txtpartyBBank.setMaxLength(100);		
-        this.txtpartyBBank.setRequired(true);
+        this.txtpartyBBank.setRequired(false);
         // txtpartyBBankNo		
-        this.txtpartyBBankNo.setVisible(true);		
+        this.txtpartyBBankNo.setVisible(false);		
         this.txtpartyBBankNo.setHorizontalAlignment(2);		
         this.txtpartyBBankNo.setMaxLength(100);		
         this.txtpartyBBankNo.setRequired(false);
-        // prmtfarm		
-        this.prmtfarm.setQueryInfo("com.kingdee.eas.farm.stocking.basedata.app.FarmQuery");		
-        this.prmtfarm.setVisible(true);		
-        this.prmtfarm.setEditable(true);		
-        this.prmtfarm.setDisplayFormat("$name$");		
-        this.prmtfarm.setEditFormat("$number$");		
-        this.prmtfarm.setCommitFormat("$number$");		
-        this.prmtfarm.setRequired(true);
-        		prmtfarm.addSelectorListener(new SelectorListener() {
-			com.kingdee.eas.farm.stocking.basedata.client.FarmListUI prmtfarm_F7ListUI = null;
-			public void willShow(SelectorEvent e) {
-				if (prmtfarm_F7ListUI == null) {
-					try {
-						prmtfarm_F7ListUI = new com.kingdee.eas.farm.stocking.basedata.client.FarmListUI();
-					} catch (Exception e1) {
-						e1.printStackTrace();
-					}
-					HashMap ctx = new HashMap();
-					ctx.put("bizUIOwner",javax.swing.SwingUtilities.getWindowAncestor(prmtfarm_F7ListUI));
-					prmtfarm_F7ListUI.setF7Use(true,ctx);
-					prmtfarm.setSelector(prmtfarm_F7ListUI);
-				}
-			}
-		});
-					
-        prmtfarm.addDataChangeListener(new DataChangeListener() {
-		public void dataChanged(DataChangeEvent e) {
-			try {
-				prmtfarm_Changed();
-			}
-			catch (Exception exc) {
-				handUIException(exc);
-			}
-		}
-	});
-
         // txtheader		
-        this.txtheader.setVisible(true);		
+        this.txtheader.setVisible(false);		
         this.txtheader.setHorizontalAlignment(2);		
         this.txtheader.setMaxLength(80);		
         this.txtheader.setRequired(false);
+        // txtheaderCell		
+        this.txtheaderCell.setVisible(false);		
+        this.txtheaderCell.setHorizontalAlignment(2);		
+        this.txtheaderCell.setMaxLength(100);		
+        this.txtheaderCell.setRequired(false);
         // txtcapacity		
         this.txtcapacity.setVisible(true);		
         this.txtcapacity.setHorizontalAlignment(2);		
@@ -730,23 +647,47 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
         this.txtdiffDays.setDataType(0);		
         this.txtdiffDays.setSupportedEmpty(true);		
         this.txtdiffDays.setRequired(false);
-        // prmtSupplier		
-        this.prmtSupplier.setQueryInfo("com.kingdee.eas.basedata.master.cssp.app.PSupplierQuery");		
-        this.prmtSupplier.setVisible(true);		
-        this.prmtSupplier.setEditable(true);		
-        this.prmtSupplier.setDisplayFormat("$name$");		
-        this.prmtSupplier.setEditFormat("$number$");		
-        this.prmtSupplier.setCommitFormat("$number$");		
-        this.prmtSupplier.setRequired(true);
         // txtintervalDays		
         this.txtintervalDays.setVisible(true);		
         this.txtintervalDays.setHorizontalAlignment(2);		
         this.txtintervalDays.setDataType(0);		
         this.txtintervalDays.setSupportedEmpty(true);		
         this.txtintervalDays.setRequired(false);
+        // closeStatus		
+        this.closeStatus.setVisible(true);		
+        this.closeStatus.addItems(EnumUtils.getEnumList("com.kingdee.eas.custom.taihe.contract.CloseStatus").toArray());		
+        this.closeStatus.setRequired(false);
+        // pkcloseTime		
+        this.pkcloseTime.setVisible(true);		
+        this.pkcloseTime.setRequired(false);
+        // billStatus		
+        this.billStatus.setVisible(true);		
+        this.billStatus.addItems(EnumUtils.getEnumList("com.kingdee.eas.scm.common.BillBaseStatusEnum").toArray());		
+        this.billStatus.setRequired(false);		
+        this.billStatus.setEnabled(false);
+        // pkauditTime		
+        this.pkauditTime.setVisible(true);		
+        this.pkauditTime.setRequired(false);		
+        this.pkauditTime.setEnabled(false);
+        // prmtcompany		
+        this.prmtcompany.setQueryInfo("com.kingdee.eas.basedata.org.app.CompanyOrgUnitQuery");		
+        this.prmtcompany.setVisible(true);		
+        this.prmtcompany.setEditable(true);		
+        this.prmtcompany.setDisplayFormat("$name$");		
+        this.prmtcompany.setEditFormat("$number$");		
+        this.prmtcompany.setCommitFormat("$number$");		
+        this.prmtcompany.setRequired(true);
+        // prmtSupplier		
+        this.prmtSupplier.setQueryInfo("com.kingdee.eas.bdm.bdapply.app.SupplierReqQuery");		
+        this.prmtSupplier.setVisible(false);		
+        this.prmtSupplier.setEditable(true);		
+        this.prmtSupplier.setDisplayFormat("$name$");		
+        this.prmtSupplier.setEditFormat("$number$");		
+        this.prmtSupplier.setCommitFormat("$number$");		
+        this.prmtSupplier.setRequired(false);
         // pkupSeedingDate		
         this.pkupSeedingDate.setVisible(true);		
-        this.pkupSeedingDate.setRequired(true);
+        this.pkupSeedingDate.setRequired(false);
         // txtupSeedingQty		
         this.txtupSeedingQty.setVisible(true);		
         this.txtupSeedingQty.setHorizontalAlignment(2);		
@@ -755,161 +696,95 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
         this.txtupSeedingQty.setMinimumValue( new java.math.BigDecimal("-1.0E18"));		
         this.txtupSeedingQty.setMaximumValue( new java.math.BigDecimal("1.0E18"));		
         this.txtupSeedingQty.setPrecision(4);		
-        this.txtupSeedingQty.setRequired(true);
-        txtupSeedingQty.addDataChangeListener(new DataChangeListener() {
-		public void dataChanged(DataChangeEvent e) {
-			try {
-				txtupSeedingQty_Changed();
-			}
-			catch (Exception exc) {
-				handUIException(exc);
-			}
-		}
-	});
-
-        // txtheaderCell		
-        this.txtheaderCell.setVisible(true);		
-        this.txtheaderCell.setHorizontalAlignment(2);		
-        this.txtheaderCell.setMaxLength(80);		
-        this.txtheaderCell.setRequired(false);
-        // txtfarmAddress		
-        this.txtfarmAddress.setVisible(true);		
-        this.txtfarmAddress.setHorizontalAlignment(2);		
-        this.txtfarmAddress.setMaxLength(80);		
-        this.txtfarmAddress.setRequired(true);
-        // prmtpurchasePerson		
-        this.prmtpurchasePerson.setQueryInfo("com.kingdee.eas.basedata.person.app.PersonQuery");		
-        this.prmtpurchasePerson.setVisible(true);		
-        this.prmtpurchasePerson.setEditable(true);		
-        this.prmtpurchasePerson.setDisplayFormat("$name$");		
-        this.prmtpurchasePerson.setEditFormat("$number$");		
-        this.prmtpurchasePerson.setCommitFormat("$number$");		
-        this.prmtpurchasePerson.setRequired(false);
-        // txthasSuccessiveQty		
-        this.txthasSuccessiveQty.setVisible(true);		
-        this.txthasSuccessiveQty.setHorizontalAlignment(2);		
-        this.txthasSuccessiveQty.setDataType(0);		
-        this.txthasSuccessiveQty.setSupportedEmpty(true);		
-        this.txthasSuccessiveQty.setRequired(false);		
-        this.txthasSuccessiveQty.setEnabled(false);
-        // feedingType		
-        this.feedingType.setVisible(true);		
-        this.feedingType.addItems(EnumUtils.getEnumList("com.kingdee.eas.custom.taihe.contract.FeedType").toArray());		
-        this.feedingType.setRequired(true);
-        // prmtsecurityDeposit		
-        this.prmtsecurityDeposit.setQueryInfo("com.kingdee.eas.custom.taihe.contract.app.AssureAmtPolicyQuery");		
-        this.prmtsecurityDeposit.setVisible(true);		
-        this.prmtsecurityDeposit.setEditable(true);		
-        this.prmtsecurityDeposit.setDisplayFormat("$name$");		
-        this.prmtsecurityDeposit.setEditFormat("$number$");		
-        this.prmtsecurityDeposit.setCommitFormat("$number$");		
-        this.prmtsecurityDeposit.setRequired(false);
-        		prmtsecurityDeposit.addSelectorListener(new SelectorListener() {
-			com.kingdee.eas.custom.taihe.contract.client.AssureAmtPolicyListUI prmtsecurityDeposit_F7ListUI = null;
+        this.txtupSeedingQty.setRequired(false);
+        // prmtfarmer		
+        this.prmtfarmer.setQueryInfo("com.kingdee.eas.farm.carnivorous.basedata.app.FarmerQuery");		
+        this.prmtfarmer.setVisible(true);		
+        this.prmtfarmer.setEditable(true);		
+        this.prmtfarmer.setDisplayFormat("$name$");		
+        this.prmtfarmer.setEditFormat("$number$");		
+        this.prmtfarmer.setCommitFormat("$number$");		
+        this.prmtfarmer.setRequired(false);
+        		prmtfarmer.addSelectorListener(new SelectorListener() {
+			com.kingdee.eas.farm.carnivorous.basedata.client.FarmerListUI prmtfarmer_F7ListUI = null;
 			public void willShow(SelectorEvent e) {
-				if (prmtsecurityDeposit_F7ListUI == null) {
+				if (prmtfarmer_F7ListUI == null) {
 					try {
-						prmtsecurityDeposit_F7ListUI = new com.kingdee.eas.custom.taihe.contract.client.AssureAmtPolicyListUI();
+						prmtfarmer_F7ListUI = new com.kingdee.eas.farm.carnivorous.basedata.client.FarmerListUI();
 					} catch (Exception e1) {
 						e1.printStackTrace();
 					}
 					HashMap ctx = new HashMap();
-					ctx.put("bizUIOwner",javax.swing.SwingUtilities.getWindowAncestor(prmtsecurityDeposit_F7ListUI));
-					prmtsecurityDeposit_F7ListUI.setF7Use(true,ctx);
-					prmtsecurityDeposit.setSelector(prmtsecurityDeposit_F7ListUI);
+					ctx.put("bizUIOwner",javax.swing.SwingUtilities.getWindowAncestor(prmtfarmer_F7ListUI));
+					prmtfarmer_F7ListUI.setF7Use(true,ctx);
+					prmtfarmer.setSelector(prmtfarmer_F7ListUI);
 				}
 			}
 		});
 					
-        prmtsecurityDeposit.addDataChangeListener(new DataChangeListener() {
-		public void dataChanged(DataChangeEvent e) {
-			try {
-				prmtsecurityDeposit_Changed();
+        // prmtfarm		
+        this.prmtfarm.setQueryInfo("com.kingdee.eas.farm.carnivorous.basedata.app.FarmQuery");		
+        this.prmtfarm.setVisible(true);		
+        this.prmtfarm.setEditable(true);		
+        this.prmtfarm.setDisplayFormat("$name$");		
+        this.prmtfarm.setEditFormat("$number$");		
+        this.prmtfarm.setCommitFormat("$number$");		
+        this.prmtfarm.setRequired(false);
+        		prmtfarm.addSelectorListener(new SelectorListener() {
+			com.kingdee.eas.farm.carnivorous.basedata.client.FarmListUI prmtfarm_F7ListUI = null;
+			public void willShow(SelectorEvent e) {
+				if (prmtfarm_F7ListUI == null) {
+					try {
+						prmtfarm_F7ListUI = new com.kingdee.eas.farm.carnivorous.basedata.client.FarmListUI();
+					} catch (Exception e1) {
+						e1.printStackTrace();
+					}
+					HashMap ctx = new HashMap();
+					ctx.put("bizUIOwner",javax.swing.SwingUtilities.getWindowAncestor(prmtfarm_F7ListUI));
+					prmtfarm_F7ListUI.setF7Use(true,ctx);
+					prmtfarm.setSelector(prmtfarm_F7ListUI);
+				}
 			}
-			catch (Exception exc) {
-				handUIException(exc);
+		});
+					
+        // prmtsettlePolicy		
+        this.prmtsettlePolicy.setQueryInfo("com.kingdee.eas.farm.carnivorous.basedata.app.SettlePolicyQuery");		
+        this.prmtsettlePolicy.setVisible(true);		
+        this.prmtsettlePolicy.setEditable(true);		
+        this.prmtsettlePolicy.setDisplayFormat("$name$");		
+        this.prmtsettlePolicy.setEditFormat("$number$");		
+        this.prmtsettlePolicy.setCommitFormat("$number$");		
+        this.prmtsettlePolicy.setRequired(false);
+        		prmtsettlePolicy.addSelectorListener(new SelectorListener() {
+			com.kingdee.eas.farm.carnivorous.basedata.client.SettlePolicyListUI prmtsettlePolicy_F7ListUI = null;
+			public void willShow(SelectorEvent e) {
+				if (prmtsettlePolicy_F7ListUI == null) {
+					try {
+						prmtsettlePolicy_F7ListUI = new com.kingdee.eas.farm.carnivorous.basedata.client.SettlePolicyListUI();
+					} catch (Exception e1) {
+						e1.printStackTrace();
+					}
+					HashMap ctx = new HashMap();
+					ctx.put("bizUIOwner",javax.swing.SwingUtilities.getWindowAncestor(prmtsettlePolicy_F7ListUI));
+					prmtsettlePolicy_F7ListUI.setF7Use(true,ctx);
+					prmtsettlePolicy.setSelector(prmtsettlePolicy_F7ListUI);
+				}
 			}
-		}
-	});
-
-        // txtsingleSecurityDeposit		
-        this.txtsingleSecurityDeposit.setVisible(true);		
-        this.txtsingleSecurityDeposit.setHorizontalAlignment(2);		
-        this.txtsingleSecurityDeposit.setDataType(1);		
-        this.txtsingleSecurityDeposit.setSupportedEmpty(true);		
-        this.txtsingleSecurityDeposit.setMinimumValue( new java.math.BigDecimal("-3.4028234663852886E38"));		
-        this.txtsingleSecurityDeposit.setMaximumValue( new java.math.BigDecimal("3.4028234663852886E38"));		
-        this.txtsingleSecurityDeposit.setPrecision(10);		
-        this.txtsingleSecurityDeposit.setRequired(false);
-        txtsingleSecurityDeposit.addDataChangeListener(new DataChangeListener() {
-		public void dataChanged(DataChangeEvent e) {
-			try {
-				txtsingleSecurityDeposit_Changed();
-			}
-			catch (Exception exc) {
-				handUIException(exc);
-			}
-		}
-	});
-
-        // txtpolicyMinimum		
-        this.txtpolicyMinimum.setVisible(true);		
-        this.txtpolicyMinimum.setHorizontalAlignment(2);		
-        this.txtpolicyMinimum.setDataType(1);		
-        this.txtpolicyMinimum.setSupportedEmpty(true);		
-        this.txtpolicyMinimum.setMinimumValue( new java.math.BigDecimal("-3.4028234663852886E38"));		
-        this.txtpolicyMinimum.setMaximumValue( new java.math.BigDecimal("3.4028234663852886E38"));		
-        this.txtpolicyMinimum.setPrecision(10);		
-        this.txtpolicyMinimum.setRequired(false);
-        // txtcontractMinimum		
-        this.txtcontractMinimum.setVisible(true);		
-        this.txtcontractMinimum.setHorizontalAlignment(2);		
-        this.txtcontractMinimum.setDataType(1);		
-        this.txtcontractMinimum.setSupportedEmpty(true);		
-        this.txtcontractMinimum.setMinimumValue( new java.math.BigDecimal("-3.4028234663852886E38"));		
-        this.txtcontractMinimum.setMaximumValue( new java.math.BigDecimal("3.4028234663852886E38"));		
-        this.txtcontractMinimum.setPrecision(10);		
-        this.txtcontractMinimum.setRequired(false);
-        // txtshouldSecurityDeposit		
-        this.txtshouldSecurityDeposit.setVisible(true);		
-        this.txtshouldSecurityDeposit.setHorizontalAlignment(2);		
-        this.txtshouldSecurityDeposit.setDataType(1);		
-        this.txtshouldSecurityDeposit.setSupportedEmpty(true);		
-        this.txtshouldSecurityDeposit.setMinimumValue( new java.math.BigDecimal("-1.0E18"));		
-        this.txtshouldSecurityDeposit.setMaximumValue( new java.math.BigDecimal("1.0E18"));		
-        this.txtshouldSecurityDeposit.setPrecision(2);		
-        this.txtshouldSecurityDeposit.setRequired(false);
-        // prmtstatementPolicy		
-        this.prmtstatementPolicy.setQueryInfo("com.kingdee.eas.custom.taihe.settle.app.TaiHeSettlePolicyQuery");		
-        this.prmtstatementPolicy.setVisible(true);		
-        this.prmtstatementPolicy.setEditable(true);		
-        this.prmtstatementPolicy.setDisplayFormat("$name$");		
-        this.prmtstatementPolicy.setEditFormat("$number$");		
-        this.prmtstatementPolicy.setCommitFormat("$number$");		
-        this.prmtstatementPolicy.setRequired(true);
-        // txtinitBatchQty		
-        this.txtinitBatchQty.setVisible(true);		
-        this.txtinitBatchQty.setHorizontalAlignment(2);		
-        this.txtinitBatchQty.setDataType(0);		
-        this.txtinitBatchQty.setSupportedEmpty(true);		
-        this.txtinitBatchQty.setRequired(false);		
-        this.txtinitBatchQty.setEnabled(false);
-        // txtyzjincrease		
-        this.txtyzjincrease.setVisible(true);		
-        this.txtyzjincrease.setHorizontalAlignment(2);		
-        this.txtyzjincrease.setDataType(1);		
-        this.txtyzjincrease.setSupportedEmpty(true);		
-        this.txtyzjincrease.setMinimumValue( new java.math.BigDecimal("-1.0E18"));		
-        this.txtyzjincrease.setMaximumValue( new java.math.BigDecimal("1.0E18"));		
-        this.txtyzjincrease.setPrecision(4);		
-        this.txtyzjincrease.setRequired(false);
+		});
+					
         // btnBalanceBond
         this.btnBalanceBond.setAction((IItemAction)ActionProxyFactory.getProxy(actionBalanceBond, new Class[] { IItemAction.class }, getServiceContext()));		
         this.btnBalanceBond.setText(resHelper.getString("btnBalanceBond.text"));
         // btnViewOtherContract
         this.btnViewOtherContract.setAction((IItemAction)ActionProxyFactory.getProxy(actionViewOtherContract, new Class[] { IItemAction.class }, getServiceContext()));		
         this.btnViewOtherContract.setText(resHelper.getString("btnViewOtherContract.text"));
-        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {chkisInitBill,prmtcontractType,pkbeginDate,pkendDate,txtsuccessiveQty,txtpartyBCell,txtpartyBAddress,txtpartyBID,txtpartyBBank,txtpartyBBankNo,prmtfarm,txtheader,txtcapacity,txtdays,txtdiffDays,txtintervalDays,closeStatus,pkcloseTime,billStatus,pkauditTime,txtremark,prmtcompany,prmtSupplier,pkupSeedingDate,txtupSeedingQty,prmtpurchasePerson,txthasSuccessiveQty,feedingType,prmtsecurityDeposit,txtsingleSecurityDeposit,txtpolicyMinimum,txtcontractMinimum,txtshouldSecurityDeposit,txtheaderCell,prmtstatementPolicy,txtinitBatchQty,txtfarmAddress,txtyzjincrease}));
+        // btnAudit
+        this.btnAudit.setAction((IItemAction)ActionProxyFactory.getProxy(actionAudit, new Class[] { IItemAction.class }, getServiceContext()));		
+        this.btnAudit.setText(resHelper.getString("btnAudit.text"));
+        // btnUnAudit
+        this.btnUnAudit.setAction((IItemAction)ActionProxyFactory.getProxy(actionUnAudit, new Class[] { IItemAction.class }, getServiceContext()));		
+        this.btnUnAudit.setText(resHelper.getString("btnUnAudit.text"));
+        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {prmtcontractType,pkbeginDate,pkendDate,txtsuccessiveQty,txtpartyBCell,txtpartyBAddress,txtpartyBID,txtpartyBBank,txtpartyBBankNo,txtheader,txtheaderCell,txtcapacity,txtdays,txtdiffDays,txtintervalDays,closeStatus,pkcloseTime,billStatus,pkauditTime,txtremark,prmtcompany,prmtSupplier,pkupSeedingDate,txtupSeedingQty,prmtfarmer,prmtfarm,prmtsettlePolicy}));
         this.setFocusCycleRoot(true);
 		//Register control's property binding
 		registerBindings();
@@ -935,71 +810,77 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
      */
     public void initUIContentLayout()
     {
-        this.setBounds(new Rectangle(0, 0, 1015, 629));
+        this.setBounds(new Rectangle(0, 0, 1013, 553));
         this.setLayout(new KDLayout());
-        this.putClientProperty("OriginalBounds", new Rectangle(0, 0, 1015, 629));
-        contCreator.setBounds(new Rectangle(369, 524, 270, 19));
-        this.add(contCreator, new KDLayout.Constraints(369, 524, 270, 19, KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contCreateTime.setBounds(new Rectangle(719, 524, 270, 19));
-        this.add(contCreateTime, new KDLayout.Constraints(719, 524, 270, 19, KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contLastUpdateUser.setBounds(new Rectangle(369, 555, 270, 19));
-        this.add(contLastUpdateUser, new KDLayout.Constraints(369, 555, 270, 19, KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contLastUpdateTime.setBounds(new Rectangle(719, 555, 270, 19));
-        this.add(contLastUpdateTime, new KDLayout.Constraints(719, 555, 270, 19, KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contNumber.setBounds(new Rectangle(22, 23, 270, 19));
-        this.add(contNumber, new KDLayout.Constraints(22, 23, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contBizDate.setBounds(new Rectangle(369, 23, 270, 19));
-        this.add(contBizDate, new KDLayout.Constraints(369, 23, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contDescription.setBounds(new Rectangle(1061, 73, 270, 19));
-        this.add(contDescription, new KDLayout.Constraints(1061, 73, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contAuditor.setBounds(new Rectangle(20, 528, 270, 19));
-        this.add(contAuditor, new KDLayout.Constraints(20, 528, 270, 19, KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contauditTime.setBounds(new Rectangle(20, 555, 270, 19));
-        this.add(contauditTime, new KDLayout.Constraints(20, 555, 270, 19, KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contbillStatus.setBounds(new Rectangle(719, 23, 270, 19));
-        this.add(contbillStatus, new KDLayout.Constraints(719, 23, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        chkisInitBill.setBounds(new Rectangle(721, 339, 270, 19));
-        this.add(chkisInitBill, new KDLayout.Constraints(721, 339, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contcontractType.setBounds(new Rectangle(719, 54, 270, 19));
-        this.add(contcontractType, new KDLayout.Constraints(719, 54, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contbeginDate.setBounds(new Rectangle(22, 54, 270, 19));
-        this.add(contbeginDate, new KDLayout.Constraints(22, 54, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contendDate.setBounds(new Rectangle(369, 54, 270, 19));
-        this.add(contendDate, new KDLayout.Constraints(369, 54, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contsuccessiveQty.setBounds(new Rectangle(21, 311, 270, 19));
-        this.add(contsuccessiveQty, new KDLayout.Constraints(21, 311, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contcloseStatus.setBounds(new Rectangle(22, 339, 270, 19));
-        this.add(contcloseStatus, new KDLayout.Constraints(22, 339, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contcloseTime.setBounds(new Rectangle(369, 339, 270, 19));
-        this.add(contcloseTime, new KDLayout.Constraints(369, 339, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        txtremark.setBounds(new Rectangle(22, 449, 969, 66));
-        this.add(txtremark, new KDLayout.Constraints(22, 449, 969, 66, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
-        contcompany.setBounds(new Rectangle(22, 367, 270, 19));
-        this.add(contcompany, new KDLayout.Constraints(22, 367, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        kDPanel1.setBounds(new Rectangle(9, 85, 993, 216));
-        this.add(kDPanel1, new KDLayout.Constraints(9, 85, 993, 216, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
-        contpurchasePerson.setBounds(new Rectangle(369, 367, 270, 19));
-        this.add(contpurchasePerson, new KDLayout.Constraints(369, 367, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        conthasSuccessiveQty.setBounds(new Rectangle(515, 311, 124, 19));
-        this.add(conthasSuccessiveQty, new KDLayout.Constraints(515, 311, 124, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contfeedingType.setBounds(new Rectangle(721, 367, 270, 19));
-        this.add(contfeedingType, new KDLayout.Constraints(721, 367, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contsecurityDeposit.setBounds(new Rectangle(22, 395, 270, 19));
-        this.add(contsecurityDeposit, new KDLayout.Constraints(22, 395, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contsingleSecurityDeposit.setBounds(new Rectangle(369, 395, 270, 19));
-        this.add(contsingleSecurityDeposit, new KDLayout.Constraints(369, 395, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contpolicyMinimum.setBounds(new Rectangle(721, 395, 270, 19));
-        this.add(contpolicyMinimum, new KDLayout.Constraints(721, 395, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contcontractMinimum.setBounds(new Rectangle(369, 423, 270, 19));
-        this.add(contcontractMinimum, new KDLayout.Constraints(369, 423, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contshouldSecurityDeposit.setBounds(new Rectangle(22, 423, 270, 19));
-        this.add(contshouldSecurityDeposit, new KDLayout.Constraints(22, 423, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contstatementPolicy.setBounds(new Rectangle(721, 311, 270, 19));
-        this.add(contstatementPolicy, new KDLayout.Constraints(721, 311, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        continitBatchQty.setBounds(new Rectangle(369, 311, 144, 19));
-        this.add(continitBatchQty, new KDLayout.Constraints(369, 311, 144, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contyzjincrease.setBounds(new Rectangle(721, 422, 270, 19));
-        this.add(contyzjincrease, new KDLayout.Constraints(721, 422, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        this.putClientProperty("OriginalBounds", new Rectangle(0, 0, 1013, 553));
+        contCreator.setBounds(new Rectangle(369, 462, 270, 19));
+        this.add(contCreator, new KDLayout.Constraints(369, 462, 270, 19, KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contCreateTime.setBounds(new Rectangle(719, 462, 270, 19));
+        this.add(contCreateTime, new KDLayout.Constraints(719, 462, 270, 19, KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contLastUpdateUser.setBounds(new Rectangle(369, 493, 270, 19));
+        this.add(contLastUpdateUser, new KDLayout.Constraints(369, 493, 270, 19, KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contLastUpdateTime.setBounds(new Rectangle(719, 493, 270, 19));
+        this.add(contLastUpdateTime, new KDLayout.Constraints(719, 493, 270, 19, KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contNumber.setBounds(new Rectangle(22, 32, 270, 19));
+        this.add(contNumber, new KDLayout.Constraints(22, 32, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contBizDate.setBounds(new Rectangle(369, 32, 270, 19));
+        this.add(contBizDate, new KDLayout.Constraints(369, 32, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contAuditor.setBounds(new Rectangle(20, 466, 270, 19));
+        this.add(contAuditor, new KDLayout.Constraints(20, 466, 270, 19, KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contcontractType.setBounds(new Rectangle(719, 32, 270, 19));
+        this.add(contcontractType, new KDLayout.Constraints(719, 32, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contbeginDate.setBounds(new Rectangle(22, 73, 270, 19));
+        this.add(contbeginDate, new KDLayout.Constraints(22, 73, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contendDate.setBounds(new Rectangle(369, 73, 270, 19));
+        this.add(contendDate, new KDLayout.Constraints(369, 73, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contsuccessiveQty.setBounds(new Rectangle(369, 159, 270, 19));
+        this.add(contsuccessiveQty, new KDLayout.Constraints(369, 159, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contpartyBCell.setBounds(new Rectangle(9, 329, 270, 19));
+        this.add(contpartyBCell, new KDLayout.Constraints(9, 329, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contpartyBAddress.setBounds(new Rectangle(9, 329, 270, 19));
+        this.add(contpartyBAddress, new KDLayout.Constraints(9, 329, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contpartyBID.setBounds(new Rectangle(9, 329, 270, 19));
+        this.add(contpartyBID, new KDLayout.Constraints(9, 329, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contpartyBBank.setBounds(new Rectangle(9, 329, 270, 19));
+        this.add(contpartyBBank, new KDLayout.Constraints(9, 329, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contpartyBBankNo.setBounds(new Rectangle(9, 329, 270, 19));
+        this.add(contpartyBBankNo, new KDLayout.Constraints(9, 329, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contheader.setBounds(new Rectangle(9, 329, 270, 19));
+        this.add(contheader, new KDLayout.Constraints(9, 329, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contheaderCell.setBounds(new Rectangle(9, 329, 270, 19));
+        this.add(contheaderCell, new KDLayout.Constraints(9, 329, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contcapacity.setBounds(new Rectangle(22, 159, 270, 19));
+        this.add(contcapacity, new KDLayout.Constraints(22, 159, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contdays.setBounds(new Rectangle(369, 118, 270, 19));
+        this.add(contdays, new KDLayout.Constraints(369, 118, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contdiffDays.setBounds(new Rectangle(719, 118, 270, 19));
+        this.add(contdiffDays, new KDLayout.Constraints(719, 118, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contintervalDays.setBounds(new Rectangle(22, 200, 270, 19));
+        this.add(contintervalDays, new KDLayout.Constraints(22, 200, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contcloseStatus.setBounds(new Rectangle(22, 242, 270, 19));
+        this.add(contcloseStatus, new KDLayout.Constraints(22, 242, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contcloseTime.setBounds(new Rectangle(369, 200, 270, 19));
+        this.add(contcloseTime, new KDLayout.Constraints(369, 200, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contbillStatus.setBounds(new Rectangle(719, 200, 270, 19));
+        this.add(contbillStatus, new KDLayout.Constraints(719, 200, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contauditTime.setBounds(new Rectangle(20, 493, 270, 19));
+        this.add(contauditTime, new KDLayout.Constraints(20, 493, 270, 19, KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        txtremark.setBounds(new Rectangle(22, 316, 969, 126));
+        this.add(txtremark, new KDLayout.Constraints(22, 316, 969, 126, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        contcompany.setBounds(new Rectangle(22, 274, 270, 19));
+        this.add(contcompany, new KDLayout.Constraints(22, 274, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contSupplier.setBounds(new Rectangle(9, 329, 270, 19));
+        this.add(contSupplier, new KDLayout.Constraints(9, 329, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contupSeedingDate.setBounds(new Rectangle(369, 242, 270, 19));
+        this.add(contupSeedingDate, new KDLayout.Constraints(369, 242, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contupSeedingQty.setBounds(new Rectangle(719, 242, 270, 19));
+        this.add(contupSeedingQty, new KDLayout.Constraints(719, 242, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contfarmer.setBounds(new Rectangle(719, 73, 270, 19));
+        this.add(contfarmer, new KDLayout.Constraints(719, 73, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contfarm.setBounds(new Rectangle(22, 118, 270, 19));
+        this.add(contfarm, new KDLayout.Constraints(22, 118, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contsettlePolicy.setBounds(new Rectangle(719, 160, 270, 19));
+        this.add(contsettlePolicy, new KDLayout.Constraints(719, 160, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         //contCreator
         contCreator.setBoundEditor(prmtCreator);
         //contCreateTime
@@ -1012,14 +893,8 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
         contNumber.setBoundEditor(txtNumber);
         //contBizDate
         contBizDate.setBoundEditor(pkBizDate);
-        //contDescription
-        contDescription.setBoundEditor(txtDescription);
         //contAuditor
         contAuditor.setBoundEditor(prmtAuditor);
-        //contauditTime
-        contauditTime.setBoundEditor(pkauditTime);
-        //contbillStatus
-        contbillStatus.setBoundEditor(billStatus);
         //contcontractType
         contcontractType.setBoundEditor(prmtcontractType);
         //contbeginDate
@@ -1028,46 +903,6 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
         contendDate.setBoundEditor(pkendDate);
         //contsuccessiveQty
         contsuccessiveQty.setBoundEditor(txtsuccessiveQty);
-        //contcloseStatus
-        contcloseStatus.setBoundEditor(closeStatus);
-        //contcloseTime
-        contcloseTime.setBoundEditor(pkcloseTime);
-        //contcompany
-        contcompany.setBoundEditor(prmtcompany);
-        //kDPanel1
-        kDPanel1.setLayout(new KDLayout());
-        kDPanel1.putClientProperty("OriginalBounds", new Rectangle(9, 85, 993, 216));        contpartyBCell.setBounds(new Rectangle(361, 26, 270, 19));
-        kDPanel1.add(contpartyBCell, new KDLayout.Constraints(361, 26, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contpartyBAddress.setBounds(new Rectangle(706, 26, 270, 19));
-        kDPanel1.add(contpartyBAddress, new KDLayout.Constraints(706, 26, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contpartyBID.setBounds(new Rectangle(14, 56, 270, 19));
-        kDPanel1.add(contpartyBID, new KDLayout.Constraints(14, 56, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contpartyBBank.setBounds(new Rectangle(361, 56, 270, 19));
-        kDPanel1.add(contpartyBBank, new KDLayout.Constraints(361, 56, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contpartyBBankNo.setBounds(new Rectangle(706, 56, 270, 19));
-        kDPanel1.add(contpartyBBankNo, new KDLayout.Constraints(706, 56, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contfarm.setBounds(new Rectangle(14, 86, 270, 19));
-        kDPanel1.add(contfarm, new KDLayout.Constraints(14, 86, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contheader.setBounds(new Rectangle(361, 86, 270, 19));
-        kDPanel1.add(contheader, new KDLayout.Constraints(361, 86, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contcapacity.setBounds(new Rectangle(14, 116, 270, 19));
-        kDPanel1.add(contcapacity, new KDLayout.Constraints(14, 116, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contdays.setBounds(new Rectangle(14, 146, 270, 19));
-        kDPanel1.add(contdays, new KDLayout.Constraints(14, 146, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contdiffDays.setBounds(new Rectangle(361, 146, 270, 19));
-        kDPanel1.add(contdiffDays, new KDLayout.Constraints(361, 146, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contSupplier.setBounds(new Rectangle(14, 26, 270, 19));
-        kDPanel1.add(contSupplier, new KDLayout.Constraints(14, 26, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contintervalDays.setBounds(new Rectangle(706, 146, 270, 19));
-        kDPanel1.add(contintervalDays, new KDLayout.Constraints(706, 146, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contupSeedingDate.setBounds(new Rectangle(14, 179, 270, 19));
-        kDPanel1.add(contupSeedingDate, new KDLayout.Constraints(14, 179, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contupSeedingQty.setBounds(new Rectangle(361, 179, 270, 19));
-        kDPanel1.add(contupSeedingQty, new KDLayout.Constraints(361, 179, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contheaderCell.setBounds(new Rectangle(706, 86, 270, 19));
-        kDPanel1.add(contheaderCell, new KDLayout.Constraints(706, 86, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contfarmAddress.setBounds(new Rectangle(361, 116, 270, 19));
-        kDPanel1.add(contfarmAddress, new KDLayout.Constraints(361, 116, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         //contpartyBCell
         contpartyBCell.setBoundEditor(txtpartyBCell);
         //contpartyBAddress
@@ -1078,50 +913,40 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
         contpartyBBank.setBoundEditor(txtpartyBBank);
         //contpartyBBankNo
         contpartyBBankNo.setBoundEditor(txtpartyBBankNo);
-        //contfarm
-        contfarm.setBoundEditor(prmtfarm);
         //contheader
         contheader.setBoundEditor(txtheader);
+        //contheaderCell
+        contheaderCell.setBoundEditor(txtheaderCell);
         //contcapacity
         contcapacity.setBoundEditor(txtcapacity);
         //contdays
         contdays.setBoundEditor(txtdays);
         //contdiffDays
         contdiffDays.setBoundEditor(txtdiffDays);
-        //contSupplier
-        contSupplier.setBoundEditor(prmtSupplier);
         //contintervalDays
         contintervalDays.setBoundEditor(txtintervalDays);
+        //contcloseStatus
+        contcloseStatus.setBoundEditor(closeStatus);
+        //contcloseTime
+        contcloseTime.setBoundEditor(pkcloseTime);
+        //contbillStatus
+        contbillStatus.setBoundEditor(billStatus);
+        //contauditTime
+        contauditTime.setBoundEditor(pkauditTime);
+        //contcompany
+        contcompany.setBoundEditor(prmtcompany);
+        //contSupplier
+        contSupplier.setBoundEditor(prmtSupplier);
         //contupSeedingDate
         contupSeedingDate.setBoundEditor(pkupSeedingDate);
         //contupSeedingQty
         contupSeedingQty.setBoundEditor(txtupSeedingQty);
-        //contheaderCell
-        contheaderCell.setBoundEditor(txtheaderCell);
-        //contfarmAddress
-        contfarmAddress.setBoundEditor(txtfarmAddress);
-        //contpurchasePerson
-        contpurchasePerson.setBoundEditor(prmtpurchasePerson);
-        //conthasSuccessiveQty
-        conthasSuccessiveQty.setBoundEditor(txthasSuccessiveQty);
-        //contfeedingType
-        contfeedingType.setBoundEditor(feedingType);
-        //contsecurityDeposit
-        contsecurityDeposit.setBoundEditor(prmtsecurityDeposit);
-        //contsingleSecurityDeposit
-        contsingleSecurityDeposit.setBoundEditor(txtsingleSecurityDeposit);
-        //contpolicyMinimum
-        contpolicyMinimum.setBoundEditor(txtpolicyMinimum);
-        //contcontractMinimum
-        contcontractMinimum.setBoundEditor(txtcontractMinimum);
-        //contshouldSecurityDeposit
-        contshouldSecurityDeposit.setBoundEditor(txtshouldSecurityDeposit);
-        //contstatementPolicy
-        contstatementPolicy.setBoundEditor(prmtstatementPolicy);
-        //continitBatchQty
-        continitBatchQty.setBoundEditor(txtinitBatchQty);
-        //contyzjincrease
-        contyzjincrease.setBoundEditor(txtyzjincrease);
+        //contfarmer
+        contfarmer.setBoundEditor(prmtfarmer);
+        //contfarm
+        contfarm.setBoundEditor(prmtfarm);
+        //contsettlePolicy
+        contsettlePolicy.setBoundEditor(prmtsettlePolicy);
 
     }
 
@@ -1195,13 +1020,11 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
         menuView.add(kDSeparator7);
         menuView.add(menuItemLocate);
         //menuBiz
-        menuBiz.add(mBtnAudit);
-        menuBiz.add(mBtnUnAudit);
         menuBiz.add(menuItemCancelCancel);
         menuBiz.add(menuItemCancel);
         menuBiz.add(MenuItemVoucher);
-        menuBiz.add(MenuItemPCVoucher);
         menuBiz.add(menuItemDelVoucher);
+        menuBiz.add(MenuItemPCVoucher);
         menuBiz.add(menuItemDelPCVoucher);
         //menuTable1
         menuTable1.add(menuItemAddLine);
@@ -1251,10 +1074,10 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
         this.toolBar.add(kDSeparatorCloud);
         this.toolBar.add(btnReset);
         this.toolBar.add(btnSubmit);
+        this.toolBar.add(btnAudit);
+        this.toolBar.add(btnUnAudit);
         this.toolBar.add(btnCopy);
         this.toolBar.add(btnRemove);
-        this.toolBar.add(tBtnAudit);
-        this.toolBar.add(tBtnUnAudit);
         this.toolBar.add(btnCancelCancel);
         this.toolBar.add(btnCancel);
         this.toolBar.add(btnAttachment);
@@ -1295,8 +1118,8 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
         this.toolBar.add(btnMultiapprove);
         this.toolBar.add(btnWFViewdoProccess);
         this.toolBar.add(btnWFViewSubmitProccess);
-        this.toolBar.add(btnBalanceBond);
         this.toolBar.add(btnNextPerson);
+        this.toolBar.add(btnBalanceBond);
         this.toolBar.add(btnViewOtherContract);
 
 
@@ -1304,6 +1127,7 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
 
 	//Regiester control's property binding.
 	private void registerBindings(){
+		dataBinder.registerBinding("remark", String.class, this.txtremark, "text");
 		dataBinder.registerBinding("creator", com.kingdee.eas.base.permission.UserInfo.class, this.prmtCreator, "data");
 		dataBinder.registerBinding("createTime", java.sql.Timestamp.class, this.kDDateCreateTime, "value");
 		dataBinder.registerBinding("lastUpdateUser", com.kingdee.eas.base.permission.UserInfo.class, this.prmtLastUpdateUser, "data");
@@ -1311,44 +1135,32 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
 		dataBinder.registerBinding("number", String.class, this.txtNumber, "text");
 		dataBinder.registerBinding("bizDate", java.util.Date.class, this.pkBizDate, "value");
 		dataBinder.registerBinding("auditor", com.kingdee.eas.base.permission.UserInfo.class, this.prmtAuditor, "data");
-		dataBinder.registerBinding("auditTime", java.util.Date.class, this.pkauditTime, "value");
-		dataBinder.registerBinding("billStatus", com.kingdee.eas.scm.common.BillBaseStatusEnum.class, this.billStatus, "selectedItem");
-		dataBinder.registerBinding("isInitBill", boolean.class, this.chkisInitBill, "selected");
-		dataBinder.registerBinding("remark", String.class, this.txtremark, "text");
 		dataBinder.registerBinding("contractType", com.kingdee.eas.custom.signwasthetable.ContractTypeInfo.class, this.prmtcontractType, "data");
 		dataBinder.registerBinding("beginDate", java.util.Date.class, this.pkbeginDate, "value");
 		dataBinder.registerBinding("endDate", java.util.Date.class, this.pkendDate, "value");
 		dataBinder.registerBinding("successiveQty", int.class, this.txtsuccessiveQty, "value");
-		dataBinder.registerBinding("closeStatus", com.kingdee.eas.custom.taihe.contract.CloseStatus.class, this.closeStatus, "selectedItem");
-		dataBinder.registerBinding("closeTime", java.util.Date.class, this.pkcloseTime, "value");
-		dataBinder.registerBinding("company", com.kingdee.eas.basedata.org.CompanyOrgUnitInfo.class, this.prmtcompany, "data");
 		dataBinder.registerBinding("partyBCell", String.class, this.txtpartyBCell, "text");
 		dataBinder.registerBinding("partyBAddress", String.class, this.txtpartyBAddress, "text");
 		dataBinder.registerBinding("partyBID", String.class, this.txtpartyBID, "text");
 		dataBinder.registerBinding("partyBBank", String.class, this.txtpartyBBank, "text");
 		dataBinder.registerBinding("partyBBankNo", String.class, this.txtpartyBBankNo, "text");
-		dataBinder.registerBinding("farm", com.kingdee.eas.farm.stocking.basedata.FarmInfo.class, this.prmtfarm, "data");
 		dataBinder.registerBinding("header", String.class, this.txtheader, "text");
+		dataBinder.registerBinding("headerCell", String.class, this.txtheaderCell, "text");
 		dataBinder.registerBinding("capacity", java.math.BigDecimal.class, this.txtcapacity, "value");
 		dataBinder.registerBinding("days", int.class, this.txtdays, "value");
 		dataBinder.registerBinding("diffDays", int.class, this.txtdiffDays, "value");
-		dataBinder.registerBinding("Supplier", com.kingdee.eas.bdm.bdapply.SupplierReqInfo.class, this.prmtSupplier, "data");
 		dataBinder.registerBinding("intervalDays", int.class, this.txtintervalDays, "value");
+		dataBinder.registerBinding("closeStatus", com.kingdee.eas.custom.taihe.contract.CloseStatus.class, this.closeStatus, "selectedItem");
+		dataBinder.registerBinding("closeTime", java.util.Date.class, this.pkcloseTime, "value");
+		dataBinder.registerBinding("billStatus", com.kingdee.eas.scm.common.BillBaseStatusEnum.class, this.billStatus, "selectedItem");
+		dataBinder.registerBinding("auditTime", java.util.Date.class, this.pkauditTime, "value");
+		dataBinder.registerBinding("company", com.kingdee.eas.basedata.org.CompanyOrgUnitInfo.class, this.prmtcompany, "data");
+		dataBinder.registerBinding("Supplier", com.kingdee.eas.bdm.bdapply.SupplierReqInfo.class, this.prmtSupplier, "data");
 		dataBinder.registerBinding("upSeedingDate", java.util.Date.class, this.pkupSeedingDate, "value");
 		dataBinder.registerBinding("upSeedingQty", java.math.BigDecimal.class, this.txtupSeedingQty, "value");
-		dataBinder.registerBinding("headerCell", String.class, this.txtheaderCell, "text");
-		dataBinder.registerBinding("farmAddress", String.class, this.txtfarmAddress, "text");
-		dataBinder.registerBinding("purchasePerson", com.kingdee.eas.basedata.person.PersonInfo.class, this.prmtpurchasePerson, "data");
-		dataBinder.registerBinding("hasSuccessiveQty", int.class, this.txthasSuccessiveQty, "value");
-		dataBinder.registerBinding("feedingType", com.kingdee.eas.custom.taihe.contract.FeedType.class, this.feedingType, "selectedItem");
-		dataBinder.registerBinding("securityDeposit", com.kingdee.eas.custom.taihe.contract.AssureAmtPolicyInfo.class, this.prmtsecurityDeposit, "data");
-		dataBinder.registerBinding("singleSecurityDeposit", java.math.BigDecimal.class, this.txtsingleSecurityDeposit, "value");
-		dataBinder.registerBinding("policyMinimum", java.math.BigDecimal.class, this.txtpolicyMinimum, "value");
-		dataBinder.registerBinding("contractMinimum", java.math.BigDecimal.class, this.txtcontractMinimum, "value");
-		dataBinder.registerBinding("shouldSecurityDeposit", java.math.BigDecimal.class, this.txtshouldSecurityDeposit, "value");
-		dataBinder.registerBinding("statementPolicy", com.kingdee.eas.custom.taihe.settle.TaiHeSettlePolicyInfo.class, this.prmtstatementPolicy, "data");
-		dataBinder.registerBinding("initBatchQty", int.class, this.txtinitBatchQty, "value");
-		dataBinder.registerBinding("yzjincrease", java.math.BigDecimal.class, this.txtyzjincrease, "value");		
+		dataBinder.registerBinding("farmer", com.kingdee.eas.farm.carnivorous.basedata.FarmerInfo.class, this.prmtfarmer, "data");
+		dataBinder.registerBinding("farm", com.kingdee.eas.farm.carnivorous.basedata.FarmInfo.class, this.prmtfarm, "data");
+		dataBinder.registerBinding("settlePolicy", com.kingdee.eas.farm.carnivorous.basedata.SettlePolicyInfo.class, this.prmtsettlePolicy, "data");		
 	}
 	//Regiester UI State
 	private void registerUIState(){		
@@ -1380,7 +1192,7 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
     public void onShow() throws Exception
     {
         super.onShow();
-        this.chkisInitBill.requestFocusInWindow();
+        this.prmtcontractType.requestFocusInWindow();
     }
 
 	
@@ -1483,52 +1295,40 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
 	 */
 	protected void registerValidator() {
     	getValidateHelper().setCustomValidator( getValidator() );
+		getValidateHelper().registerBindProperty("remark", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("creator", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("createTime", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("lastUpdateUser", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("lastUpdateTime", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("number", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("bizDate", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("description", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("auditor", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("auditTime", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("billStatus", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("isInitBill", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("remark", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("contractType", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("beginDate", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("endDate", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("successiveQty", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("closeStatus", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("closeTime", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("company", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("partyBCell", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("partyBAddress", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("partyBID", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("partyBBank", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("partyBBankNo", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("farm", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("header", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("headerCell", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("capacity", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("days", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("diffDays", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("Supplier", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("intervalDays", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("closeStatus", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("closeTime", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("billStatus", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("auditTime", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("company", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("Supplier", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("upSeedingDate", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("upSeedingQty", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("headerCell", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("farmAddress", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("purchasePerson", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("hasSuccessiveQty", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("feedingType", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("securityDeposit", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("singleSecurityDeposit", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("policyMinimum", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("contractMinimum", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("shouldSecurityDeposit", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("statementPolicy", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("initBatchQty", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("yzjincrease", ValidateHelper.ON_SAVE);    		
+		getValidateHelper().registerBindProperty("farmer", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("farm", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("settlePolicy", ValidateHelper.ON_SAVE);    		
 	}
 
 
@@ -1546,60 +1346,6 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
         }
     }
 
-
-    /**
-     * output prmtfarm_Changed() method
-     */
-    public void prmtfarm_Changed() throws Exception
-    {
-        System.out.println("prmtfarm_Changed() Function is executed!");
-            txtheader.setText(com.kingdee.bos.ui.face.UIRuleUtil.getString(com.kingdee.bos.ui.face.UIRuleUtil.getProperty((com.kingdee.bos.dao.IObjectValue)prmtfarm.getData(),"theHeader")));
-
-    txtcapacity.setValue(com.kingdee.bos.ui.face.UIRuleUtil.getBigDecimal(com.kingdee.bos.ui.face.UIRuleUtil.getProperty((com.kingdee.bos.dao.IObjectValue)prmtfarm.getData(),"capacity")));
-
-    txtheaderCell.setText(com.kingdee.bos.ui.face.UIRuleUtil.getString(com.kingdee.bos.ui.face.UIRuleUtil.getProperty((com.kingdee.bos.dao.IObjectValue)prmtfarm.getData(),"telePhone")));
-
-    txtfarmAddress.setText(com.kingdee.bos.ui.face.UIRuleUtil.getString(com.kingdee.bos.ui.face.UIRuleUtil.getProperty((com.kingdee.bos.dao.IObjectValue)prmtfarm.getData(),"address")));
-
-
-    }
-
-    /**
-     * output txtupSeedingQty_Changed() method
-     */
-    public void txtupSeedingQty_Changed() throws Exception
-    {
-        System.out.println("txtupSeedingQty_Changed() Function is executed!");
-            txtshouldSecurityDeposit.setValue(com.kingdee.bos.ui.face.UIRuleUtil.getBigDecimal(com.kingdee.bos.ui.face.UIRuleUtil.getBigDecimalValue(txtsingleSecurityDeposit.getValue())* com.kingdee.bos.ui.face.UIRuleUtil.getBigDecimalValue(txtupSeedingQty.getValue())));
-
-
-    }
-
-    /**
-     * output prmtsecurityDeposit_Changed() method
-     */
-    public void prmtsecurityDeposit_Changed() throws Exception
-    {
-        System.out.println("prmtsecurityDeposit_Changed() Function is executed!");
-            txtsingleSecurityDeposit.setValue(com.kingdee.bos.ui.face.UIRuleUtil.getBigDecimal(com.kingdee.bos.ui.face.UIRuleUtil.getProperty((com.kingdee.bos.dao.IObjectValue)prmtsecurityDeposit.getData(),"assurePrice")));
-
-    txtpolicyMinimum.setValue(com.kingdee.bos.ui.face.UIRuleUtil.getBigDecimal(com.kingdee.bos.ui.face.UIRuleUtil.getProperty((com.kingdee.bos.dao.IObjectValue)prmtsecurityDeposit.getData(),"lowPrice")));
-
-    txtcontractMinimum.setValue(com.kingdee.bos.ui.face.UIRuleUtil.getBigDecimal(com.kingdee.bos.ui.face.UIRuleUtil.getProperty((com.kingdee.bos.dao.IObjectValue)prmtsecurityDeposit.getData(),"lowPrice")));
-
-
-    }
-
-    /**
-     * output txtsingleSecurityDeposit_Changed() method
-     */
-    public void txtsingleSecurityDeposit_Changed() throws Exception
-    {
-        System.out.println("txtsingleSecurityDeposit_Changed() Function is executed!");
-            txtshouldSecurityDeposit.setValue(com.kingdee.bos.ui.face.UIRuleUtil.getBigDecimal(com.kingdee.bos.ui.face.UIRuleUtil.getBigDecimalValue(txtsingleSecurityDeposit.getValue())* com.kingdee.bos.ui.face.UIRuleUtil.getBigDecimalValue(txtupSeedingQty.getValue())));
-
-
-    }
     /**
      * output getSelectors method
      */
@@ -1610,6 +1356,7 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
 		if(StringUtils.isEmpty(selectorAll)){
 			selectorAll = "true";
 		}
+        sic.add(new SelectorItemInfo("remark"));
 		if(selectorAll.equalsIgnoreCase("true"))
 		{
 			sic.add(new SelectorItemInfo("creator.*"));
@@ -1641,10 +1388,6 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
         	sic.add(new SelectorItemInfo("auditor.number"));
         	sic.add(new SelectorItemInfo("auditor.name"));
 		}
-        sic.add(new SelectorItemInfo("auditTime"));
-        sic.add(new SelectorItemInfo("billStatus"));
-        sic.add(new SelectorItemInfo("isInitBill"));
-        sic.add(new SelectorItemInfo("remark"));
 		if(selectorAll.equalsIgnoreCase("true"))
 		{
 			sic.add(new SelectorItemInfo("contractType.*"));
@@ -1657,8 +1400,21 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
         sic.add(new SelectorItemInfo("beginDate"));
         sic.add(new SelectorItemInfo("endDate"));
         sic.add(new SelectorItemInfo("successiveQty"));
+        sic.add(new SelectorItemInfo("partyBCell"));
+        sic.add(new SelectorItemInfo("partyBAddress"));
+        sic.add(new SelectorItemInfo("partyBID"));
+        sic.add(new SelectorItemInfo("partyBBank"));
+        sic.add(new SelectorItemInfo("partyBBankNo"));
+        sic.add(new SelectorItemInfo("header"));
+        sic.add(new SelectorItemInfo("headerCell"));
+        sic.add(new SelectorItemInfo("capacity"));
+        sic.add(new SelectorItemInfo("days"));
+        sic.add(new SelectorItemInfo("diffDays"));
+        sic.add(new SelectorItemInfo("intervalDays"));
         sic.add(new SelectorItemInfo("closeStatus"));
         sic.add(new SelectorItemInfo("closeTime"));
+        sic.add(new SelectorItemInfo("billStatus"));
+        sic.add(new SelectorItemInfo("auditTime"));
 		if(selectorAll.equalsIgnoreCase("true"))
 		{
 			sic.add(new SelectorItemInfo("company.*"));
@@ -1668,24 +1424,6 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
         	sic.add(new SelectorItemInfo("company.number"));
         	sic.add(new SelectorItemInfo("company.name"));
 		}
-        sic.add(new SelectorItemInfo("partyBCell"));
-        sic.add(new SelectorItemInfo("partyBAddress"));
-        sic.add(new SelectorItemInfo("partyBID"));
-        sic.add(new SelectorItemInfo("partyBBank"));
-        sic.add(new SelectorItemInfo("partyBBankNo"));
-		if(selectorAll.equalsIgnoreCase("true"))
-		{
-			sic.add(new SelectorItemInfo("farm.*"));
-		}
-		else{
-        	sic.add(new SelectorItemInfo("farm.id"));
-        	sic.add(new SelectorItemInfo("farm.number"));
-        	sic.add(new SelectorItemInfo("farm.name"));
-		}
-        sic.add(new SelectorItemInfo("header"));
-        sic.add(new SelectorItemInfo("capacity"));
-        sic.add(new SelectorItemInfo("days"));
-        sic.add(new SelectorItemInfo("diffDays"));
 		if(selectorAll.equalsIgnoreCase("true"))
 		{
 			sic.add(new SelectorItemInfo("Supplier.*"));
@@ -1695,46 +1433,35 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
         	sic.add(new SelectorItemInfo("Supplier.number"));
         	sic.add(new SelectorItemInfo("Supplier.name"));
 		}
-        sic.add(new SelectorItemInfo("intervalDays"));
         sic.add(new SelectorItemInfo("upSeedingDate"));
         sic.add(new SelectorItemInfo("upSeedingQty"));
-        sic.add(new SelectorItemInfo("headerCell"));
-        sic.add(new SelectorItemInfo("farmAddress"));
 		if(selectorAll.equalsIgnoreCase("true"))
 		{
-			sic.add(new SelectorItemInfo("purchasePerson.*"));
+			sic.add(new SelectorItemInfo("farmer.*"));
 		}
 		else{
-        	sic.add(new SelectorItemInfo("purchasePerson.id"));
-        	sic.add(new SelectorItemInfo("purchasePerson.number"));
-        	sic.add(new SelectorItemInfo("purchasePerson.name"));
+        	sic.add(new SelectorItemInfo("farmer.id"));
+        	sic.add(new SelectorItemInfo("farmer.number"));
+        	sic.add(new SelectorItemInfo("farmer.name"));
 		}
-        sic.add(new SelectorItemInfo("hasSuccessiveQty"));
-        sic.add(new SelectorItemInfo("feedingType"));
 		if(selectorAll.equalsIgnoreCase("true"))
 		{
-			sic.add(new SelectorItemInfo("securityDeposit.*"));
+			sic.add(new SelectorItemInfo("farm.*"));
 		}
 		else{
-        	sic.add(new SelectorItemInfo("securityDeposit.id"));
-        	sic.add(new SelectorItemInfo("securityDeposit.number"));
-        	sic.add(new SelectorItemInfo("securityDeposit.name"));
+        	sic.add(new SelectorItemInfo("farm.id"));
+        	sic.add(new SelectorItemInfo("farm.number"));
+        	sic.add(new SelectorItemInfo("farm.name"));
 		}
-        sic.add(new SelectorItemInfo("singleSecurityDeposit"));
-        sic.add(new SelectorItemInfo("policyMinimum"));
-        sic.add(new SelectorItemInfo("contractMinimum"));
-        sic.add(new SelectorItemInfo("shouldSecurityDeposit"));
 		if(selectorAll.equalsIgnoreCase("true"))
 		{
-			sic.add(new SelectorItemInfo("statementPolicy.*"));
+			sic.add(new SelectorItemInfo("settlePolicy.*"));
 		}
 		else{
-        	sic.add(new SelectorItemInfo("statementPolicy.id"));
-        	sic.add(new SelectorItemInfo("statementPolicy.number"));
-        	sic.add(new SelectorItemInfo("statementPolicy.name"));
+        	sic.add(new SelectorItemInfo("settlePolicy.id"));
+        	sic.add(new SelectorItemInfo("settlePolicy.number"));
+        	sic.add(new SelectorItemInfo("settlePolicy.name"));
 		}
-        sic.add(new SelectorItemInfo("initBatchQty"));
-        sic.add(new SelectorItemInfo("yzjincrease"));
         return sic;
     }        
     	
@@ -1798,6 +1525,24 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
     {
         com.kingdee.eas.custom.taihe.contract.SuccessiveContractFactory.getRemoteInstance().viewOtherContract(editData);
     }
+    	
+
+    /**
+     * output actionAudit_actionPerformed method
+     */
+    public void actionAudit_actionPerformed(ActionEvent e) throws Exception
+    {
+        com.kingdee.eas.custom.taihe.contract.SuccessiveContractFactory.getRemoteInstance().audit(editData);
+    }
+    	
+
+    /**
+     * output actionUnAudit_actionPerformed method
+     */
+    public void actionUnAudit_actionPerformed(ActionEvent e) throws Exception
+    {
+        com.kingdee.eas.custom.taihe.contract.SuccessiveContractFactory.getRemoteInstance().unAudit(editData);
+    }
 	public RequestContext prepareActionSubmit(IItemAction itemAction) throws Exception {
 			RequestContext request = super.prepareActionSubmit(itemAction);		
 		if (request != null) {
@@ -1851,6 +1596,28 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
     }
 	
 	public boolean isPrepareActionViewOtherContract() {
+    	return false;
+    }
+	public RequestContext prepareActionAudit(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareActionAudit() {
+    	return false;
+    }
+	public RequestContext prepareActionUnAudit(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareActionUnAudit() {
     	return false;
     }
 
@@ -1915,6 +1682,66 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
     }
 
     /**
+     * output ActionAudit class
+     */     
+    protected class ActionAudit extends ItemAction {     
+    
+        public ActionAudit()
+        {
+            this(null);
+        }
+
+        public ActionAudit(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            _tempStr = resHelper.getString("ActionAudit.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionAudit.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionAudit.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractSuccessiveContractEditUI.this, "ActionAudit", "actionAudit_actionPerformed", e);
+        }
+    }
+
+    /**
+     * output ActionUnAudit class
+     */     
+    protected class ActionUnAudit extends ItemAction {     
+    
+        public ActionUnAudit()
+        {
+            this(null);
+        }
+
+        public ActionUnAudit(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            _tempStr = resHelper.getString("ActionUnAudit.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionUnAudit.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionUnAudit.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractSuccessiveContractEditUI.this, "ActionUnAudit", "actionUnAudit_actionPerformed", e);
+        }
+    }
+
+    /**
      * output getMetaDataPK method
      */
     public IMetaDataPK getMetaDataPK()
@@ -1965,38 +1792,14 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
     
         
 					protected void beforeStoreFields(ActionEvent arg0) throws Exception {
-		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(prmtcontractType.getData())) {
-			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"合同类型"});
+		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(txtNumber.getText())) {
+			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"单据编号"});
 		}
-		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(pkbeginDate.getValue())) {
-			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"合同开始日期"});
+		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(pkBizDate.getValue())) {
+			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"业务日期"});
 		}
 		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(prmtcompany.getData())) {
 			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"公司"});
-		}
-		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(txtpartyBBank.getText())) {
-			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"乙方收款银行"});
-		}
-		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(prmtfarm.getData())) {
-			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"养殖场"});
-		}
-		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(prmtSupplier.getData())) {
-			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"供应商"});
-		}
-		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(pkupSeedingDate.getValue())) {
-			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"上苗日期"});
-		}
-		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(txtupSeedingQty.getValue())) {
-			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"上苗数量"});
-		}
-		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(txtfarmAddress.getText())) {
-			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"养殖场地址"});
-		}
-		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(feedingType.getSelectedItem())) {
-			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"饲喂类别"});
-		}
-		if (com.kingdee.bos.ui.face.UIRuleUtil.isNull(prmtstatementPolicy.getData())) {
-			throw new com.kingdee.eas.common.EASBizException(com.kingdee.eas.common.EASBizException.CHECKBLANK,new Object[] {"结算政策"});
 		}
 			super.beforeStoreFields(arg0);
 		}
@@ -2012,8 +1815,7 @@ public abstract class AbstractSuccessiveContractEditUI extends com.kingdee.eas.c
      */
     protected void applyDefaultValue(IObjectValue vo) {        
 		vo.put("closeStatus","0");
-		vo.put("intervalDays",new Integer(30));
-vo.put("feedingType","0");
+vo.put("billStatus",new Integer(-1));
         
     }        
 	protected void setFieldsNull(com.kingdee.bos.dao.AbstractObjectValue arg0) {

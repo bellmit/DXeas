@@ -21,4 +21,6 @@ public interface DynamicFacadeController extends BizController
     public String getDataByID(Context ctx, String jsonStr) throws BOSException, EASBizException, RemoteException;
     public String uploadDataByBosType(Context ctx, String bosType, String jsonStr) throws BOSException, EASBizException, RemoteException;
     public String downloadBillList(Context ctx, String jsonStr) throws BOSException, EASBizException, RemoteException;
+    public String deleteAttachment(Context ctx, String jsonStr) throws BOSException, EASBizException, RemoteException;
+    public String getEumInfo(Context ctx, String enumPathJson) throws BOSException, EASBizException, RemoteException;
 }

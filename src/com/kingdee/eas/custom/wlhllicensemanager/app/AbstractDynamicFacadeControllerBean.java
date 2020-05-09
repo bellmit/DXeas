@@ -99,4 +99,52 @@ public abstract class AbstractDynamicFacadeControllerBean extends AbstractBizCon
     }
     protected abstract String _downloadBillList(Context ctx, String jsonStr) throws BOSException, EASBizException;
 
+    public String deleteAttachment(Context ctx, String jsonStr) throws BOSException, EASBizException
+    {
+        try {
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("34ea8808-5c10-47ba-a38a-61c923a4560b"), new Object[]{ctx, jsonStr});
+            invokeServiceBefore(svcCtx);
+            if(!svcCtx.invokeBreak()) {
+            String retValue = (String)_deleteAttachment(ctx, jsonStr);
+            svcCtx.setMethodReturnValue(retValue);
+            }
+            invokeServiceAfter(svcCtx);
+            return (String)svcCtx.getMethodReturnValue();
+        } catch (BOSException ex) {
+            throw ex;
+        } catch (EASBizException ex0) {
+            throw ex0;
+        } finally {
+            super.cleanUpServiceState();
+        }
+    }
+    protected String _deleteAttachment(Context ctx, String jsonStr) throws BOSException, EASBizException
+    {    	
+        return null;
+    }
+
+    public String getEumInfo(Context ctx, String enumPathJson) throws BOSException, EASBizException
+    {
+        try {
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("45a4632b-14a3-49d2-bb12-6ebf47d3da5e"), new Object[]{ctx, enumPathJson});
+            invokeServiceBefore(svcCtx);
+            if(!svcCtx.invokeBreak()) {
+            String retValue = (String)_getEumInfo(ctx, enumPathJson);
+            svcCtx.setMethodReturnValue(retValue);
+            }
+            invokeServiceAfter(svcCtx);
+            return (String)svcCtx.getMethodReturnValue();
+        } catch (BOSException ex) {
+            throw ex;
+        } catch (EASBizException ex0) {
+            throw ex0;
+        } finally {
+            super.cleanUpServiceState();
+        }
+    }
+    protected String _getEumInfo(Context ctx, String enumPathJson) throws BOSException, EASBizException
+    {    	
+        return null;
+    }
+
 }

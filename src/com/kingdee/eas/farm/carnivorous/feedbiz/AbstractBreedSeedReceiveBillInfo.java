@@ -427,6 +427,85 @@ public class AbstractBreedSeedReceiveBillInfo extends com.kingdee.eas.framework.
     {
         put("chickenPerson", item);
     }
+    /**
+     * Object:雏苗领用单's 种蛋来源类型property 
+     */
+    public com.kingdee.eas.farm.carnivorous.feedbiz.EggSourceType getEggSourceType()
+    {
+        return com.kingdee.eas.farm.carnivorous.feedbiz.EggSourceType.getEnum(getString("eggSourceType"));
+    }
+    public void setEggSourceType(com.kingdee.eas.farm.carnivorous.feedbiz.EggSourceType item)
+    {
+		if (item != null) {
+        setString("eggSourceType", item.getValue());
+		}
+    }
+    /**
+     * Object: 雏苗领用单 's 种蛋来源种鸡场 property 
+     */
+    public com.kingdee.eas.farm.stocking.basedata.FarmInfo getEggFarm()
+    {
+        return (com.kingdee.eas.farm.stocking.basedata.FarmInfo)get("eggFarm");
+    }
+    public void setEggFarm(com.kingdee.eas.farm.stocking.basedata.FarmInfo item)
+    {
+        put("eggFarm", item);
+    }
+    /**
+     * Object: 雏苗领用单 's 种蛋来源供应商 property 
+     */
+    public com.kingdee.eas.basedata.master.cssp.SupplierInfo getEggSourceSupplier()
+    {
+        return (com.kingdee.eas.basedata.master.cssp.SupplierInfo)get("eggSourceSupplier");
+    }
+    public void setEggSourceSupplier(com.kingdee.eas.basedata.master.cssp.SupplierInfo item)
+    {
+        put("eggSourceSupplier", item);
+    }
+    /**
+     * Object:雏苗领用单's F7idproperty 
+     */
+    public String getF7id()
+    {
+        return getString("F7id");
+    }
+    public void setF7id(String item)
+    {
+        setString("F7id", item);
+    }
+    /**
+     * Object:雏苗领用单's F7Fnumberproperty 
+     */
+    public String getF7Fnumber()
+    {
+        return getString("F7Fnumber");
+    }
+    public void setF7Fnumber(String item)
+    {
+        setString("F7Fnumber", item);
+    }
+    /**
+     * Object:雏苗领用单's 确认时间property 
+     */
+    public java.util.Date getConfirmTime()
+    {
+        return getDate("confirmTime");
+    }
+    public void setConfirmTime(java.util.Date item)
+    {
+        setDate("confirmTime", item);
+    }
+    /**
+     * Object:雏苗领用单's 签名数据property 
+     */
+    public byte[] getSignData()
+    {
+        return (byte[])get("signData");
+    }
+    public void setSignData(byte[] item)
+    {
+        put("signData", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("681AB2A9");

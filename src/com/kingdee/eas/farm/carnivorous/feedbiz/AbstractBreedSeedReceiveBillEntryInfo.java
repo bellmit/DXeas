@@ -325,6 +325,17 @@ public class AbstractBreedSeedReceiveBillEntryInfo extends com.kingdee.eas.frame
     {
         setBigDecimal("actualAmt", item);
     }
+    /**
+     * Object:·ÖÂ¼'s Åú´Î¿â´æproperty 
+     */
+    public java.math.BigDecimal getBatchInv()
+    {
+        return getBigDecimal("batchInv");
+    }
+    public void setBatchInv(java.math.BigDecimal item)
+    {
+        setBigDecimal("batchInv", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("7B27A749");

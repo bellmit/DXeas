@@ -20,23 +20,22 @@ import com.kingdee.eas.framework.LineResult;
 import com.kingdee.eas.framework.exception.EASMultiException;
 import com.kingdee.bos.dao.ormapping.ObjectUuidPK;
 
-import com.kingdee.bos.dao.IObjectPK;
+import com.kingdee.eas.framework.app.CoreBillBaseControllerBean;
 import com.kingdee.eas.framework.ObjectBaseCollection;
+import com.kingdee.bos.dao.IObjectPK;
 import com.kingdee.eas.custom.taihe.contract.SuccessiveContractCollection;
-import java.lang.String;
-import com.kingdee.eas.custom.wlhllicensemanager.WlhlBillBaseCollection;
-import com.kingdee.eas.custom.taihe.contract.SuccessiveContractInfo;
-import com.kingdee.eas.framework.CoreBillBaseCollection;
-import com.kingdee.eas.custom.wlhllicensemanager.app.WlhlBillBaseControllerBean;
 import com.kingdee.bos.metadata.entity.EntityViewInfo;
-import com.kingdee.eas.framework.CoreBaseCollection;
+import java.lang.String;
 import com.kingdee.eas.framework.CoreBaseInfo;
+import com.kingdee.eas.framework.CoreBaseCollection;
+import com.kingdee.eas.framework.CoreBillBaseCollection;
+import com.kingdee.eas.custom.taihe.contract.SuccessiveContractInfo;
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.bos.metadata.entity.SelectorItemCollection;
 
 
 
-public abstract class AbstractSuccessiveContractControllerBean extends WlhlBillBaseControllerBean implements SuccessiveContractController
+public abstract class AbstractSuccessiveContractControllerBean extends CoreBillBaseControllerBean implements SuccessiveContractController
 {
     protected AbstractSuccessiveContractControllerBean()
     {
@@ -231,18 +230,44 @@ public abstract class AbstractSuccessiveContractControllerBean extends WlhlBillB
         return;
     }
 
-    public WlhlBillBaseCollection getWlhlBillBaseCollection (Context ctx) throws BOSException
+    public void audit(Context ctx, SuccessiveContractInfo model) throws BOSException, EASBizException
     {
-    	return (WlhlBillBaseCollection)(getSuccessiveContractCollection(ctx).cast(WlhlBillBaseCollection.class));
+        try {
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("05178fd9-f815-4f91-9175-edf4d505d180"), new Object[]{ctx, model});
+            invokeServiceBefore(svcCtx);
+              if(!svcCtx.invokeBreak()) {
+            _audit(ctx, model);
+            }
+            invokeServiceAfter(svcCtx);
+        } catch (BOSException ex) {
+            throw ex;
+        } catch (EASBizException ex0) {
+            throw ex0;
+        } finally {
+            super.cleanUpServiceState();
+        }
     }
-    public WlhlBillBaseCollection getWlhlBillBaseCollection (Context ctx, EntityViewInfo view) throws BOSException
+    protected abstract void _audit(Context ctx, IObjectValue model) throws BOSException, EASBizException;
+
+    public void unAudit(Context ctx, SuccessiveContractInfo model) throws BOSException, EASBizException
     {
-    	return (WlhlBillBaseCollection)(getSuccessiveContractCollection(ctx, view).cast(WlhlBillBaseCollection.class));
+        try {
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("eefaa002-c557-4a3c-906e-b707ac35ef1b"), new Object[]{ctx, model});
+            invokeServiceBefore(svcCtx);
+              if(!svcCtx.invokeBreak()) {
+            _unAudit(ctx, model);
+            }
+            invokeServiceAfter(svcCtx);
+        } catch (BOSException ex) {
+            throw ex;
+        } catch (EASBizException ex0) {
+            throw ex0;
+        } finally {
+            super.cleanUpServiceState();
+        }
     }
-    public WlhlBillBaseCollection getWlhlBillBaseCollection (Context ctx, String oql) throws BOSException
-    {
-    	return (WlhlBillBaseCollection)(getSuccessiveContractCollection(ctx, oql).cast(WlhlBillBaseCollection.class));
-    }
+    protected abstract void _unAudit(Context ctx, IObjectValue model) throws BOSException, EASBizException;
+
     public CoreBillBaseCollection getCoreBillBaseCollection (Context ctx) throws BOSException
     {
     	return (CoreBillBaseCollection)(getSuccessiveContractCollection(ctx).cast(CoreBillBaseCollection.class));

@@ -19,7 +19,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import javax.swing.SwingUtilities;
 
@@ -32,12 +35,17 @@ import com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox;
 import com.kingdee.bos.ctrl.kdf.table.IRow;
 import com.kingdee.bos.ctrl.kdf.table.KDTDefaultCellEditor;
 import com.kingdee.bos.ctrl.kdf.table.KDTable;
+import com.kingdee.bos.ctrl.kdf.table.event.KDTEditAdapter;
+import com.kingdee.bos.ctrl.kdf.table.event.KDTEditEvent;
+import com.kingdee.bos.ctrl.kdf.table.event.KDTEditListener;
 import com.kingdee.bos.ctrl.kdf.table.util.KDTableUtil;
 import com.kingdee.bos.ctrl.kdf.util.render.ObjectValueRender;
 import com.kingdee.bos.ctrl.report.forapp.kdnote.client.KDNoteHelper;
 import com.kingdee.bos.ctrl.swing.KDFormattedTextField;
 import com.kingdee.bos.ctrl.swing.event.DataChangeEvent;
 import com.kingdee.bos.ctrl.swing.event.DataChangeListener;
+import com.kingdee.bos.ctrl.swing.event.SelectorEvent;
+import com.kingdee.bos.ctrl.swing.event.SelectorListener;
 import com.kingdee.bos.dao.AbstractObjectValue;
 import com.kingdee.bos.dao.DataAccessException;
 import com.kingdee.bos.dao.IObjectPK;
@@ -52,8 +60,11 @@ import com.kingdee.bos.metadata.entity.SelectorItemInfo;
 import com.kingdee.bos.metadata.query.QueryInfo;
 import com.kingdee.bos.metadata.query.util.CompareType;
 import com.kingdee.bos.ui.face.CoreUIObject;
+import com.kingdee.bos.ui.face.IUIWindow;
+import com.kingdee.bos.ui.face.UIFactory;
 import com.kingdee.bos.ui.face.UIRuleUtil;
 import com.kingdee.eas.base.permission.PermissionFactory;
+import com.kingdee.eas.base.uiframe.client.UIModelDialog;
 import com.kingdee.eas.basedata.assistant.IPrintIntegration;
 import com.kingdee.eas.basedata.assistant.PrintIntegrationFactory;
 import com.kingdee.eas.basedata.assistant.PrintIntegrationInfo;
@@ -78,6 +89,7 @@ import com.kingdee.eas.basedata.scm.im.inv.WarehouseInfo;
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.eas.common.client.OprtState;
 import com.kingdee.eas.common.client.SysContext;
+import com.kingdee.eas.common.client.UIContext;
 import com.kingdee.eas.common.client.UIFactoryName;
 import com.kingdee.eas.custom.commld.ClientUtils;
 import com.kingdee.eas.custom.commld.CodingUtil;
@@ -98,6 +110,7 @@ import com.kingdee.eas.farm.carnivorous.feedbiz.BizTypeEnum;
 import com.kingdee.eas.farm.carnivorous.feedbiz.BreedSeedReceiveBill;
 import com.kingdee.eas.farm.carnivorous.feedbiz.BreedSeedReceiveBillFactory;
 import com.kingdee.eas.farm.carnivorous.feedbiz.BreedSeedReceiveBillInfo;
+import com.kingdee.eas.farm.carnivorous.feedbiz.EggSourceType;
 import com.kingdee.eas.farm.carnivorous.feedbiz.SeedSourceType;
 import com.kingdee.eas.farm.hatch.HatchBabyBill;
 import com.kingdee.eas.farm.hatch.HatchBaseData;
@@ -111,15 +124,20 @@ import com.kingdee.eas.farm.stocking.processbizill.BreedSeedBillInfo;
 import com.kingdee.eas.framework.ObjectValueUtil;
 import com.kingdee.eas.framework.batchHandler.UtilRequest;
 import com.kingdee.eas.framework.print.MultiapproveDataProvider;
+import com.kingdee.eas.framework.report.util.RptParams;
+import com.kingdee.eas.framework.report.util.RptRowSet;
 import com.kingdee.eas.industry.emm.pm.SqlExecuteFacadeFactory;
 import com.kingdee.eas.scm.common.BillBaseStatusEnum;
 import com.kingdee.eas.scm.common.util.F7ContextManager;
 import com.kingdee.eas.scm.common.util.MultiDataSourceDataProviderProxy;
 import com.kingdee.eas.scm.common.util.SCMCommonDataProvider;
 import com.kingdee.eas.scm.im.inv.client.InvClientUtils;
+import com.kingdee.eas.scm.im.rpt.InOutStoreGatherReportFacadeFactory;
 import com.kingdee.eas.util.SysUtil;
 import com.kingdee.eas.util.client.EASResource;
 import com.kingdee.eas.util.client.MsgBox;
+import com.kingdee.eas.wlhlcomm.IToolFacade;
+import com.kingdee.eas.wlhlcomm.ToolFacadeFactory;
 import com.kingdee.eas.wlhlcomm.WorkFlowUtil;
 import com.kingdee.jdbc.rowset.IRowSet;
 import com.kingdee.util.IPropertyContainer;
@@ -177,6 +195,37 @@ public class BreedSeedReceiveBillEditUI extends AbstractBreedSeedReceiveBillEdit
 
 		//业务员过滤
 		StockingComm.makeApplierF7(prmtperson, ((IPropertyContainer)prmtcompany.getValue()).getString("id"), this, false);
+		//养殖场多选
+		this.prmteggFarm.setQueryInfo("com.kingdee.eas.farm.stocking.basedata.app.FarmMulQuery");		
+		this.prmteggFarm.setRequired(false);
+		this.prmteggFarm.setEnabledMultiSelection(true);
+		this.prmteggFarm.setVisible(true);		
+		this.prmteggFarm.setEditable(true);
+		this.prmteggFarm.setDisplayFormat("$number$;$number$");		
+		this.prmteggFarm.setEditFormat("$number$;$number$");		
+		this.prmteggFarm.setCommitFormat("$number$;$number$");
+		String suID = txtF7id.getText();
+		if (!StringUtils.isEmpty(suID)) {
+			String[] supplier = suID.split(";");
+			Object[] obj = new Object[supplier.length];
+			for (int i = 0; i < obj.length; i++){
+				String id = supplier[i];
+				try {
+					com.kingdee.eas.farm.stocking.basedata.FarmInfo instorInfo =com.kingdee.eas.farm.stocking.basedata.FarmFactory.getRemoteInstance().getFarmInfo(new ObjectUuidPK(id));
+					if (instorInfo != null) {
+						obj[i] = instorInfo;
+					}
+				} catch (EASBizException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (BOSException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			prmteggFarm.setValue(obj);
+		}
+
 	}
 
 
@@ -497,6 +546,26 @@ public class BreedSeedReceiveBillEditUI extends AbstractBreedSeedReceiveBillEdit
 		initControl();
 		((KDFormattedTextField)kdtEntrys.getColumn("amount").getEditor().getComponent()).setPrecision(2);
 		((KDFormattedTextField)kdtEntrys.getColumn("actualCost").getEditor().getComponent()).setPrecision(2);
+
+		//养殖场多选
+		this.prmteggFarm.setQueryInfo("com.kingdee.eas.farm.stocking.basedata.app.FarmMulQuery");		
+		this.prmteggFarm.setRequired(false);
+		this.prmteggFarm.setEnabledMultiSelection(true);
+		this.prmteggFarm.setVisible(true);		
+		this.prmteggFarm.setEditable(true);
+		this.prmteggFarm.setDisplayFormat("$number$;$number$");		
+		this.prmteggFarm.setEditFormat("$number$;$number$");		
+		this.prmteggFarm.setCommitFormat("$number$;$number$");
+		prmteggFarm.addSelectorListener(new SelectorListener() {
+			com.kingdee.eas.farm.stocking.basedata.client.FarmListUI prmteggFarm_F7ListUI = null;
+			public void willShow(SelectorEvent e) {
+			}
+		});
+
+
+
+
+
 	}
 
 	private void initControl() {
@@ -504,11 +573,29 @@ public class BreedSeedReceiveBillEditUI extends AbstractBreedSeedReceiveBillEdit
 		this.mBtnUnAudit.setIcon(EASResource.getIcon("imgTbtn_unaudit"));
 		this.tBtnAudit.setIcon(EASResource.getIcon("imgTbtn_audit"));
 		this.tBtnUnAudit.setIcon(EASResource.getIcon("imgTbtn_unaudit"));
+		contF7id.setVisible(false);
+		contF7Fnumber.setVisible(false);
+		
+		//种蛋来源类型添加监听事件
+		eggSourceType.addItemListener(new ItemListener(){
 
+			public void itemStateChanged(ItemEvent e) {
+				// TODO Auto-generated method stub
+				if(eggSourceType.getSelectedItem() != null && eggSourceType.getSelectedItem().equals(EggSourceType.innerCollect)){
+					conteggFarm.setEnabled(true);
+					conteggSourceSupplier.setEnabled(false);
+					prmteggSourceSupplier.setValue(null);
+				}else{
+					//外购---供应商可以编辑
+					conteggFarm.setEnabled(false);
+					conteggSourceSupplier.setEnabled(true);
+					prmteggFarm.setValue(null);
+				}
+			}
+			
+		});
+		
 		kdtEntrys.getColumn("actualAmt").getStyleAttributes().setLocked(true);
-		
-		
-
 		// prmtstorageOrg		
 		this.prmtstorageOrgUnit.setQueryInfo("com.kingdee.eas.farm.carnivorous.feedbiz.app.storageIsBizUnitQuery");		
 		this.prmtstorageOrgUnit.setEditable(true);		
@@ -532,8 +619,6 @@ public class BreedSeedReceiveBillEditUI extends AbstractBreedSeedReceiveBillEdit
 
 		StorageF7 sf7=new StorageF7();
 		sf7.setIsCUFilter(true);
-		//		this.prmtstorageOrgUnit.setSelector(sf7);
-
 		f7Manager.registerBizMaterialF7( (KDBizPromptBox) this.kdtEntrys.getColumn("material").getEditor().getComponent(), null, null, orgInfo,false);
 		f7Manager.registerMeasureUnitF7(kdtEntrys, "material", "unit");
 
@@ -581,6 +666,80 @@ public class BreedSeedReceiveBillEditUI extends AbstractBreedSeedReceiveBillEdit
 			public void dataChanged(DataChangeEvent e) {
 				setFilter();
 			}
+		});
+		
+		
+		this.kdtEntrys.addKDTEditListener(new KDTEditAdapter(){
+
+			@Override
+			public void editStarted(KDTEditEvent e) {
+				// TODO Auto-generated method stub
+				super.editStarted(e);
+
+				//点击批号字段的时候，自动弹出来一个ui界面，用于存放批次和即时库存
+				if(kdtEntrys.getColumn(e.getColIndex()).getKey().equals("materialBatch")
+						&& kdtEntrys.getCell(e.getRowIndex(), "warehouse").getValue() != null
+						&& kdtEntrys.getCell(e.getRowIndex(), "material").getValue() != null
+						&& prmtstorageOrgUnit.getValue() != null){
+
+					StorageOrgUnitInfo stoInmfo = (StorageOrgUnitInfo) prmtstorageOrgUnit.getValue();
+					MaterialInfo matiNfo = (MaterialInfo) kdtEntrys.getCell(e.getRowIndex(), "material").getValue();
+					WarehouseInfo wareHouseInfo = (WarehouseInfo) kdtEntrys.getCell(e.getRowIndex(), "warehouse").getValue();
+					Map map=new UIContext(this);
+
+					//通过物料和库存组织查询即时库存
+					try {
+						IToolFacade tool = ToolFacadeFactory.getRemoteInstance();
+						RptParams para = tool.getInOutStoreGatherParam(stoInmfo.getId().toString(),
+								wareHouseInfo.getId().toString(), new Date(), new Date(),matiNfo.getId().toString());
+
+						RptParams rpt = InOutStoreGatherReportFacadeFactory.getRemoteInstance().query(para, 0, 10000);
+						Map resultMap = rpt.toMap();
+						RptRowSet rrs =  (RptRowSet) resultMap.get("rowset");
+
+						List<Map> lotList = new ArrayList<Map>();
+
+						Map<String,BigDecimal> lotMap = null;
+						while(rrs.next()){
+							lotMap = new HashMap<String,BigDecimal>();
+							//物料的 编码，ID，名称,批次，规格型号，期初，期末数量
+							String materialNumber=rrs.getString("FMATERIALNUMBER");
+							String materialName=rrs.getString("FMATERIALNAME");
+							String lot=rrs.getString("FLOT");
+							String model=rrs.getString("FMATERIALSIZE");
+
+							BigDecimal beginQty = rrs.getBigDecimal("FBEGINQTY");//期初数量
+							BigDecimal beginAMT = rrs.getBigDecimal("FBEGINAMT");//期初金额
+							BigDecimal endQty=rrs.getBigDecimal("FENDQTY");//期末数量
+							lotMap.put(lot, endQty);
+							lotList.add(lotMap);
+
+						}
+						map.put("lotList",lotList);
+						IUIWindow uiWindow=null; 
+						String scanUI = "com.kingdee.eas.farm.carnivorous.feedbiz.client.BatchAndInv";
+						uiWindow = (UIModelDialog) UIFactory.createUIFactory(UIFactoryName.MODEL).create(
+								scanUI, map, null, OprtState.VIEW);
+						uiWindow.show();
+						//获取返回的 物料明细
+						Map<String,BigDecimal> choMap = (Map<String, BigDecimal>) uiWindow.getUIObject().getUIContext().get("billNums");
+						Set<String> keySet = choMap.keySet();
+						Iterator<String> it = keySet.iterator();
+						while(it.hasNext()){
+							String keyVa1 = it.next();
+							kdtEntrys.getCell(e.getRowIndex(),"materialBatch").setValue(keyVa1);
+							BigDecimal inventory = choMap.get(keyVa1);
+							//设置数量
+							kdtEntrys.getCell(e.getRowIndex(),"batchInv").setValue(inventory);
+						}
+					} catch (Exception e2) {
+						e2.printStackTrace();
+					}
+
+				}
+
+			}
+			
 		});
 
 		this.prmtstorageOrgUnit.addDataChangeListener(new DataChangeListener(){
@@ -763,6 +922,18 @@ public class BreedSeedReceiveBillEditUI extends AbstractBreedSeedReceiveBillEdit
 
 			}
 		});
+		
+		//根据种蛋类型判断种鸡场和供应商是否是可以编辑的
+		//自产--种鸡场可以编辑
+		if(eggSourceType.getSelectedItem() != null && eggSourceType.getSelectedItem().equals(EggSourceType.innerCollect)){
+			conteggFarm.setEnabled(true);
+			conteggSourceSupplier.setEnabled(false);
+		}else{
+			//外购---供应商可以编辑
+			conteggFarm.setEnabled(false);
+			conteggSourceSupplier.setEnabled(true);
+		}
+		
 	}
 	protected void prmtbatchContract_dataChange(DataChangeEvent arg0) {
 		// TODO Auto-generated method stub
@@ -1100,6 +1271,44 @@ public class BreedSeedReceiveBillEditUI extends AbstractBreedSeedReceiveBillEdit
 			MsgBox.showWarning("雏苗来源类型为"+SeedSourceType.outPur.getAlias()+"的情况下必须填写外购供应商!");
 			SysUtil.abort();
 		}
+
+		//养殖场多选
+		this.prmteggFarm.setQueryInfo("com.kingdee.eas.farm.stocking.basedata.app.FarmMulQuery");		
+		this.prmteggFarm.setRequired(false);
+		this.prmteggFarm.setEnabledMultiSelection(true);
+		this.prmteggFarm.setVisible(true);		
+		this.prmteggFarm.setEditable(true);
+		this.prmteggFarm.setDisplayFormat("$number$;$number$");		
+		this.prmteggFarm.setEditFormat("$number$;$number$");		
+		this.prmteggFarm.setCommitFormat("$number$;$number$");
+
+
+
+		StringBuffer strID=new StringBuffer();
+		StringBuffer strName=new StringBuffer();
+		List<String> idList = new ArrayList<String>();
+		StringBuffer s2 = new StringBuffer();
+		if(!StringUtils.isEmpty(prmteggFarm.getText())){
+			Object[] obj = (Object[]) prmteggFarm.getData();
+			s2.append("(");
+			for(int i = 0; i < obj.length; i++) {
+				com.kingdee.eas.farm.stocking.basedata.FarmInfo suInfo = (com.kingdee.eas.farm.stocking.basedata.FarmInfo) obj[i];
+				strID.append(suInfo.getId().toString()+";");
+				strName.append(suInfo.getNumber()+",");
+				s2.append("'");
+				s2.append(suInfo.getId().toString());
+				if(i == obj.length - 1){
+					s2.append("'");
+				}else{
+					s2.append("',");
+				}
+				idList.add(suInfo.getId().toString());
+			}
+			s2.append(")");
+			txtF7id.setText(strID.substring(0, strID.length()-1));
+			txtF7Fnumber.setText(strName.substring(0,strName.length()-1));
+		}
+
 	}
 
 

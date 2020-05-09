@@ -232,6 +232,28 @@ public class AbstractChickenRecBillInfo extends com.kingdee.eas.framework.CoreBi
     {
         return (com.kingdee.eas.farm.carnivorous.recyclebiz.ChickenRecBillButcherEntryCollection)get("ButcherEntry");
     }
+    /**
+     * Object:毛鸡回收订单's 是否生产入property 
+     */
+    public boolean isIsManu()
+    {
+        return getBoolean("isManu");
+    }
+    public void setIsManu(boolean item)
+    {
+        setBoolean("isManu", item);
+    }
+    /**
+     * Object:毛鸡回收订单's 是否销售出property 
+     */
+    public boolean isIsSaleOut()
+    {
+        return getBoolean("isSaleOut");
+    }
+    public void setIsSaleOut(boolean item)
+    {
+        setBoolean("isSaleOut", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("B283071F");

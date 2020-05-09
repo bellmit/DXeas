@@ -1756,6 +1756,28 @@ public class AbstractCKSettleBillInfo extends com.kingdee.eas.framework.CoreBill
     {
         setBigDecimal("pzPunishAmt", item);
     }
+    /**
+     * Object:结算单's 签名数据property 
+     */
+    public byte[] getSignData()
+    {
+        return (byte[])get("signData");
+    }
+    public void setSignData(byte[] item)
+    {
+        put("signData", item);
+    }
+    /**
+     * Object:结算单's 确认时间property 
+     */
+    public java.util.Date getConfirmTime()
+    {
+        return getDate("confirmTime");
+    }
+    public void setConfirmTime(java.util.Date item)
+    {
+        setDate("confirmTime", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("2A2E0777");

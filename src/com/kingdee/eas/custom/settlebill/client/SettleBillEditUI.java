@@ -66,29 +66,29 @@ public class SettleBillEditUI extends AbstractSettleBillEditUI
 				// TODO Auto-generated method stub
 				if(prmtsendCars.getValue()!=null){
 					CarSendBillInfo carSendBillInfo = (CarSendBillInfo)prmtsendCars.getValue();
-					if(carSendBillInfo.getBatchContract()!=null){
-						pkBizDate.setValue(carSendBillInfo.getRecycleDate());
-						BatchContractInfo batchContractInfo;
-						try {
-							SelectorItemCollection slor=new SelectorItemCollection();
-							slor.add("*");
-							slor.add("contractType.*");
-							batchContractInfo = BatchContractFactory.getRemoteInstance().getBatchContractInfo(new ObjectUuidPK(carSendBillInfo.getBatchContract().getString("id")),slor);
-							prmtbatchContract.setValue(batchContractInfo);
-							prmtcontractType.setValue(batchContractInfo.getContractType());
-							if(UIRuleUtil.isNotNull(batchContractInfo.getSuccessiveContract())){
-								SuccessiveContractCollection coll = SuccessiveContractFactory.getRemoteInstance().getSuccessiveContractCollection("where number='"+batchContractInfo.getSuccessiveContract()+"'");
-								if(coll.size()>0)
-									prmtseriousContract.setValue(coll.get(0));
-							}
-						} catch (EASBizException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						} catch (BOSException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-					}
+//					if(carSendBillInfo.getBatchContract()!=null){
+//						pkBizDate.setValue(carSendBillInfo.getRecycleDate());
+//						BatchContractInfo batchContractInfo;
+//						try {
+//							SelectorItemCollection slor=new SelectorItemCollection();
+//							slor.add("*");
+//							slor.add("contractType.*");
+//							batchContractInfo = BatchContractFactory.getRemoteInstance().getBatchContractInfo(new ObjectUuidPK(carSendBillInfo.getBatchContract().getString("id")),slor);
+//							prmtbatchContract.setValue(batchContractInfo);
+//							prmtcontractType.setValue(batchContractInfo.getContractType());
+//							if(UIRuleUtil.isNotNull(batchContractInfo.getSuccessiveContract())){
+//								SuccessiveContractCollection coll = SuccessiveContractFactory.getRemoteInstance().getSuccessiveContractCollection("where number='"+batchContractInfo.getSuccessiveContract()+"'");
+//								if(coll.size()>0)
+//									prmtseriousContract.setValue(coll.get(0));
+//							}
+//						} catch (EASBizException e) {
+//							// TODO Auto-generated catch block
+//							e.printStackTrace();
+//						} catch (BOSException e) {
+//							// TODO Auto-generated catch block
+//							e.printStackTrace();
+//						}
+//					}
 				}
 			}});
 	}

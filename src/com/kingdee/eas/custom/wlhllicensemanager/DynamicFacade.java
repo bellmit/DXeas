@@ -77,4 +77,32 @@ public class DynamicFacade extends AbstractBizCtrl implements IDynamicFacade
             throw new EJBRemoteException(err);
         }
     }
+    /**
+     *deleteAttachment-User defined method
+     *@param jsonStr jsonStr
+     *@return
+     */
+    public String deleteAttachment(String jsonStr) throws BOSException, EASBizException
+    {
+        try {
+            return getController().deleteAttachment(getContext(), jsonStr);
+        }
+        catch(RemoteException err) {
+            throw new EJBRemoteException(err);
+        }
+    }
+    /**
+     *getEumInfo-User defined method
+     *@param enumPathJson enumPathJson
+     *@return
+     */
+    public String getEumInfo(String enumPathJson) throws BOSException, EASBizException
+    {
+        try {
+            return getController().getEumInfo(getContext(), enumPathJson);
+        }
+        catch(RemoteException err) {
+            throw new EJBRemoteException(err);
+        }
+    }
 }

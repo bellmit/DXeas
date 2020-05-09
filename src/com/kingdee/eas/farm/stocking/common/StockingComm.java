@@ -1703,4 +1703,29 @@ public class StockingComm {
 	
 	}
 
+	public static int getDayAgeByWeekAge(Context ctx,
+			StockingBatchInfo batchInfo, int week, int weekDay) throws EASBizException, BOSException {
+		if(batchInfo==null) {
+			return 0;
+		}
+		SelectorItemCollection selector=new SelectorItemCollection();
+//		selector.add("dayAgeCalType");
+//		if(batchInfo.getDayAgeCalType()==null) {
+			if(ctx==null) {
+				batchInfo=StockingBatchFactory.getRemoteInstance().getStockingBatchInfo(new ObjectUuidPK(batchInfo.getId()), selector);
+			}else {
+				batchInfo=StockingBatchFactory.getLocalInstance(ctx).getStockingBatchInfo(new ObjectUuidPK(batchInfo.getId()), selector);
+			}
+//		}
+		int age=((week-1)*7+weekDay)-1;
+		if(age<0) {
+			age=0;
+		}
+		//上苗日为1日龄
+//		if(batchInfo.getDayAgeCalType().equals(DayAgeCalTypeEnum.Day1)) {
+//			age+=1;
+//		}
+		return age;
+	}
+
 }

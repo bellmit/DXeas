@@ -682,6 +682,28 @@ public class AbstractFodderReceptionInfo extends com.kingdee.eas.framework.CoreB
     {
         setString("allowProcess", item);
     }
+    /**
+     * Object:饲料领用单's 确认时间property 
+     */
+    public java.util.Date getConfirmTime()
+    {
+        return getDate("confirmTime");
+    }
+    public void setConfirmTime(java.util.Date item)
+    {
+        setDate("confirmTime", item);
+    }
+    /**
+     * Object:饲料领用单's 签名数据property 
+     */
+    public byte[] getSignData()
+    {
+        return (byte[])get("signData");
+    }
+    public void setSignData(byte[] item)
+    {
+        put("signData", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("713C6B15");

@@ -1176,8 +1176,6 @@ public class BEggHatchBillEditUI extends AbstractBEggHatchBillEditUI
 		try {
 			// 根据种蛋来源设置 其他分录可编辑性
 			if(colIndex == eggSourceCol){
-				//去掉先 edited by sun 6-12
-				//				setRowEditStateByEggSource(rowIndex);
 			}else if(colIndex == inFarmCol){
 				setInternalFarmInfos(rowIndex);
 			}else if(colIndex == farmer){
@@ -1199,63 +1197,11 @@ public class BEggHatchBillEditUI extends AbstractBEggHatchBillEditUI
 			this.handleException(e);
 			e.printStackTrace();
 		}
-		//根据合同和批次带出养殖户和农场
-		//		if(kdtEggEntry.getColumn(colIndex).getKey().equals("outBatch")) {
-		//			if(kdtEggEntry.getCell(rowIndex, "outBatch").getValue()!=null) {
-		//
-		//				if(rowIndex != 0){
-		//					kdtEggEntry.getCell(rowIndex, "farmer").setValue(UIRuleUtil.getProperty((IObjectValue) kdtEggEntry.getCell(rowIndex,"outBatch").getValue(), "farmer"));
-		//					kdtEggEntry.getCell(rowIndex, "outFarm").setValue(UIRuleUtil.getProperty((IObjectValue) kdtEggEntry.getCell(rowIndex,"outBatch").getValue(), "farm"));
-		//					String costObjectid = ((StockingBatchInfo) kdtEggEntry.getCell(rowIndex,"outBatch").getValue()).getEggCostItem().getId().toString();
-		//					CostObjectInfo costInfo = CostObjectFactory.getRemoteInstance().getCostObjectInfo(new ObjectUuidPK(costObjectid));
-		//					kdtEggEntry.getCell(rowIndex, "eggLog").setValue(costInfo.getName());
-		//				}else{
-		//					for(int i=0;i<kdtEggEntry.getRowCount();i++){
-		//						kdtEggEntry.getCell(i, "farmer").setValue(UIRuleUtil.getProperty((IObjectValue) kdtEggEntry.getCell(rowIndex,"outBatch").getValue(), "farmer"));
-		//						kdtEggEntry.getCell(i, "outFarm").setValue(UIRuleUtil.getProperty((IObjectValue) kdtEggEntry.getCell(rowIndex,"outBatch").getValue(), "farm"));
-		//						String costObjectid = ((StockingBatchInfo) kdtEggEntry.getCell(i,"outBatch").getValue()).getEggCostItem().getId().toString();
-		//						CostObjectInfo costInfo = CostObjectFactory.getRemoteInstance().getCostObjectInfo(new ObjectUuidPK(costObjectid));
-		//						kdtEggEntry.getCell(i, "eggLog").setValue(costInfo.getName());
-		//					}
-		//				}
-		//
-		//
-		//				super.kdtEggEntry_Changed(rowIndex, kdtEggEntry.getColumnIndex("farmer"));
-		//			}
-		//		}
 
 		if(kdtEggEntry.getColumn(colIndex).getKey().equals("outFarm")) {
 			this.kdtEggEntry.getCell(rowIndex, "outHouse").setValue(null);
 		}
 
-		//栋舍带出批次
-//		if(kdtEggEntry.getColumn(colIndex).getKey().equals("outHouse")) {
-//			this.kdtEggEntry.getCell(rowIndex, "outBatch").setValue(null);
-//			if(this.kdtEggEntry.getCell(rowIndex, "outHouse").getValue()!=null) {
-//				String houseID=((IPropertyContainer) this.kdtEggEntry.getCell(rowIndex, "outHouse").getValue()).getString("id");
-//				HashSet<String> batchIDs = StockingComm.getBatchIDByHouseID(null, null, houseID);
-//				if(batchIDs.size()==2){
-//					Iterator<String> iterator = batchIDs.iterator();
-//					while(iterator.hasNext()){
-//						String batchID = iterator.next();
-//						if(batchID.equals("abcd1234")){
-//							continue;
-//						}
-//						StockingBatchInfo batch=StockingBatchFactory.getRemoteInstance().getStockingBatchInfo(new ObjectUuidPK(batchID));
-//						this.kdtEggEntry.getCell(rowIndex, "outBatch").setValue(batch);
-//						//20190617 macheng add
-//						if(batch.getBreedData() != null){
-//							BreedDataInfo breedDataInfo = BreedDataFactory.getRemoteInstance().getBreedDataInfo(new ObjectUuidPK(batch.getBreedData().getId().toString()));
-//							//							this.kdtEggEntry.getCell(rowIndex, "BreedData").setValue(breedDataInfo);
-//							this.kdtEggEntry.getCell(rowIndex, "genderType").setValue(breedDataInfo.getGenderType());
-//							this.kdtEggEntry.getCell(rowIndex, "breedDataNew").setValue(breedDataInfo);
-//							this.editData.getEggEntry().get(rowIndex).setBreedDataNew(breedDataInfo);
-//							//							this.editData.getEggEntry().get(rowIndex).setGenderType(breedDataInfo.getGenderType());
-//						} 
-//					}								
-//				}
-//			}
-//		}
 
 		if(kdtEggEntry.getColumn(colIndex).getKey().equals("hatchHouse")) {
 			Object obj = kdtEggEntry.getCell(rowIndex, "hatchHouse").getValue();
@@ -1269,10 +1215,6 @@ public class BEggHatchBillEditUI extends AbstractBEggHatchBillEditUI
 		if(kdtEggEntry.getColumn(colIndex).getKey().equals("carQty")||kdtEggEntry.getColumn(colIndex).getKey().equals("floorQty")||kdtEggEntry.getColumn(colIndex).getKey().equals("plateQty")||kdtEggEntry.getColumn(colIndex).getKey().equals("meiQty")){
 			calHatchQty(rowIndex);
 		}
-		if(kdtEggEntry.getColumn(colIndex).getKey().equals("eggSourceType")) {
-			//去掉先 edited by sun 6-12
-			//			setCellLockedSinlgle(rowIndex);
-		}
 
 		if(kdtEggEntry.getColumn(colIndex).getKey().equals("isMix")) {
 			if(kdtEggEntry.getCell(rowIndex, "isMix").getValue().equals(true)) {
@@ -1284,10 +1226,56 @@ public class BEggHatchBillEditUI extends AbstractBEggHatchBillEditUI
 				kdtEggEntry.getCell(rowIndex, "dayAge").setValue(0);
 			}
 		}
+		
+		//成本对象根据种禽批次名称或者外购供应商名称的成本对象
+		if(kdtEggEntry.getColumn(colIndex).getKey().equals("outBatch")) {
+			if(kdtEggEntry.getCell(rowIndex, "outBatch").getValue() != null){
+				StockingBatchInfo batchInfo = (StockingBatchInfo) kdtEggEntry.getCell(rowIndex, "outBatch").getValue();
+				batchInfo = StockingBatchFactory.getRemoteInstance().getStockingBatchInfo(new ObjectUuidPK(batchInfo.getId()));
+				setCostObject(rowIndex,batchInfo.getName());
+			}
+		}
+		if(kdtEggEntry.getColumn(colIndex).getKey().equals("supplier")) {
+			if(kdtEggEntry.getCell(rowIndex, "supplier").getValue() != null){
+				SupplierInfo supplierInfo = (SupplierInfo) kdtEggEntry.getCell(rowIndex, "supplier").getValue();
+				supplierInfo =SupplierFactory.getRemoteInstance().getSupplierInfo(new ObjectUuidPK(supplierInfo.getId()));
+				setCostObject(rowIndex,supplierInfo.getName());
+			}
+		}
+		
+		
 
-
-		// 如果当前行 批次或者 养殖场、养户不为空，则更新 对应 区域
-
+	}
+	
+	/**
+	 * 根据种禽批次名称或者供应商名称自动带出成本对象
+	 * @param rowIndex
+	 * @param name
+	 */
+	private void setCostObject(int rowIndex, String name) {
+		// TODO Auto-generated method stub
+		try {
+			String s1 = "/*dialect*/ select t1.fid costid from T_BD_CostObject t1 inner join T_BD_CostObjectEntry t2 on t2.FParentID = t1.fid " +
+					" where t2.FRelatedNumber = '02-001334' and t1.FBATCHNUMBER  = '"+name+"'";
+			IRowSet r1= SQLExecutorFactory.getRemoteInstance(s1).executeSQL();
+			if(r1.next()){
+				String costid = UIRuleUtil.getString(r1.getString("costid"));
+				CostObjectInfo constInfo = CostObjectFactory.getRemoteInstance().getCostObjectInfo(new ObjectUuidPK(costid));
+				kdtEggEntry.getCell(rowIndex, "CostObject").setValue(constInfo);
+			}else{
+				kdtEggEntry.getCell(rowIndex, "CostObject").setValue(null);
+			}
+		} catch (BOSException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (EASBizException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 	/**
 	 * 获取上孵单的换算系数

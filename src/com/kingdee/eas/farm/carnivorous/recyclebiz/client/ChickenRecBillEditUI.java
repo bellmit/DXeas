@@ -280,7 +280,8 @@ public class ChickenRecBillEditUI extends AbstractChickenRecBillEditUI
 				}
 				//计算销售金额
 				if("saleChicPrice".equalsIgnoreCase(kdtWeigntEntry.getColumn(arg0.getColIndex()).getKey())
-						|| "saleQty".equalsIgnoreCase(kdtWeigntEntry.getColumn(arg0.getColIndex()).getKey())){
+						|| "saleQty".equalsIgnoreCase(kdtWeigntEntry.getColumn(arg0.getColIndex()).getKey())
+						|| "punishAmt".equalsIgnoreCase(kdtWeigntEntry.getColumn(arg0.getColIndex()).getKey())){
 					if(kdtWeigntEntry.getCell(arg0.getRowIndex(),"saleChicPrice").getValue() != null
 							&& kdtWeigntEntry.getCell(arg0.getRowIndex(),"saleQty").getValue() != null){
 						weightSaleEntryChange(arg0);
@@ -311,9 +312,10 @@ public class ChickenRecBillEditUI extends AbstractChickenRecBillEditUI
 			private void weightSaleEntryChange(KDTEditEvent arg0) {
 				// TODO Auto-generated method stub
 
-				BigDecimal saleChicPrice = (BigDecimal) kdtWeigntEntry.getCell(arg0.getRowIndex(),"saleChicPrice").getValue();
-				BigDecimal saleQty = (BigDecimal) kdtWeigntEntry.getCell(arg0.getRowIndex(),"saleQty").getValue();
-				BigDecimal houseNetWeight = saleChicPrice.multiply(saleQty).divide(BigDecimal.ONE,1,BigDecimal.ROUND_HALF_UP);
+				BigDecimal saleChicPrice = UIRuleUtil.getBigDecimal(kdtWeigntEntry.getCell(arg0.getRowIndex(),"saleChicPrice").getValue());
+				BigDecimal saleQty = UIRuleUtil.getBigDecimal(kdtWeigntEntry.getCell(arg0.getRowIndex(),"saleQty").getValue());
+				BigDecimal punishAmt = UIRuleUtil.getBigDecimal(kdtWeigntEntry.getCell(arg0.getRowIndex(),"punishAmt").getValue());
+				BigDecimal houseNetWeight = (saleChicPrice.multiply(saleQty).subtract(punishAmt)).divide(BigDecimal.ONE,1,BigDecimal.ROUND_HALF_UP);
 				kdtWeigntEntry.getCell(arg0.getRowIndex(),"saleAmount").setValue(houseNetWeight);
 			}
 
@@ -321,9 +323,10 @@ public class ChickenRecBillEditUI extends AbstractChickenRecBillEditUI
 			private void aleEntryChange(KDTEditEvent arg0) {
 				// TODO Auto-generated method stub
 
-				BigDecimal saleAmount = (BigDecimal) kdtWeigntEntry.getCell(arg0.getRowIndex(),"saleAmount").getValue();
-				BigDecimal saleQty = (BigDecimal) kdtWeigntEntry.getCell(arg0.getRowIndex(),"saleQty").getValue();
-				BigDecimal houseNetWeight = saleAmount.divide(saleQty,3,BigDecimal.ROUND_HALF_UP);
+				BigDecimal saleAmount = UIRuleUtil.getBigDecimal(kdtWeigntEntry.getCell(arg0.getRowIndex(),"saleAmount").getValue());
+				BigDecimal saleQty = UIRuleUtil.getBigDecimal(kdtWeigntEntry.getCell(arg0.getRowIndex(),"saleQty").getValue());
+				BigDecimal punishAmt = UIRuleUtil.getBigDecimal(kdtWeigntEntry.getCell(arg0.getRowIndex(),"punishAmt").getValue());
+				BigDecimal houseNetWeight = (saleAmount.add(punishAmt)).divide(saleQty,3,BigDecimal.ROUND_HALF_UP);
 				kdtWeigntEntry.getCell(arg0.getRowIndex(),"saleChicPrice").setValue(houseNetWeight);
 			}
 

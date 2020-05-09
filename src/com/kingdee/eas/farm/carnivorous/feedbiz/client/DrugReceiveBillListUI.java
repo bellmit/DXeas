@@ -33,7 +33,9 @@ import com.kingdee.bos.ui.face.CoreUIObject;
 import com.kingdee.bos.ui.face.UIRuleUtil;
 import com.kingdee.eas.base.commonquery.client.CommonQueryDialog;
 import com.kingdee.eas.basedata.framework.util.KDTableUtil;
+import com.kingdee.eas.basedata.org.StorageOrgUnitInfo;
 import com.kingdee.eas.common.EASBizException;
+import com.kingdee.eas.common.client.SysContext;
 import com.kingdee.eas.custom.commld.ClientUtils;
 import com.kingdee.eas.custom.commonld.CommFacadeFactory;
 import com.kingdee.eas.farm.carnivorous.feedbiz.IDrugReceiveBill;
@@ -62,8 +64,8 @@ public class DrugReceiveBillListUI extends AbstractDrugReceiveBillListUI
 		// TODO Auto-generated method stub
 		return true;
 	}
-	
-	
+
+
 	/**
 	 * output storeFields method
 	 */
@@ -89,7 +91,7 @@ public class DrugReceiveBillListUI extends AbstractDrugReceiveBillListUI
 
 		return objectValue;
 	}
-	
+
 	public void actionEdit_actionPerformed(ActionEvent e) throws Exception{
 		checkSelected();
 		if(this.getBizInterface().getValue(new ObjectUuidPK(getSelectedKeyValue())).get("BillStatus").equals(BillBaseStatusEnum.AUDITED_VALUE)
@@ -143,7 +145,7 @@ public class DrugReceiveBillListUI extends AbstractDrugReceiveBillListUI
 		MsgBox.showInfo("反关闭成功！");
 		refreshList();
 	}
-	
+
 
 
 	/**
@@ -160,7 +162,7 @@ public class DrugReceiveBillListUI extends AbstractDrugReceiveBillListUI
 			MsgBox.showWarning("单据已经审核，禁止再次审核！");
 			SysUtil.abort();
 		}
-		
+
 		IDrugReceiveBill  instence= (IDrugReceiveBill) getBizInterface();
 		ArrayList<String> list=getSelectedIdValues();
 		int size=list.size();  
@@ -234,8 +236,11 @@ public class DrugReceiveBillListUI extends AbstractDrugReceiveBillListUI
 	}
 
 	protected FilterInfo getDefaultFilterForQuery() {
-		// TODO Auto-generated method stub
-		return super.getDefaultFilterForQuery();
+		FilterInfo filter = new FilterInfo();
+		StorageOrgUnitInfo storageInfo = SysContext.getSysContext().getCurrentStorageUnit();
+//		filter.getFilterItems().add(new FilterItemInfo("storageOrgUnit.name", storageInfo.getName(), CompareType.EQUALS));
+		filter.getFilterItems().add(new FilterItemInfo("storageOrgUnit.id", storageInfo.getId().toString(), CompareType.EQUALS));
+		return filter;
 	}
 
 	protected boolean initDefaultFilter() {

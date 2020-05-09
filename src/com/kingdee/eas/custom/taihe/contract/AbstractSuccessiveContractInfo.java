@@ -7,7 +7,7 @@ import com.kingdee.util.TypeConversionUtils;
 import com.kingdee.bos.util.BOSObjectType;
 
 
-public class AbstractSuccessiveContractInfo extends com.kingdee.eas.custom.wlhllicensemanager.WlhlBillBaseInfo implements Serializable 
+public class AbstractSuccessiveContractInfo extends com.kingdee.eas.framework.CoreBillBaseInfo implements Serializable 
 {
     public AbstractSuccessiveContractInfo()
     {
@@ -27,17 +27,6 @@ public class AbstractSuccessiveContractInfo extends com.kingdee.eas.custom.wlhll
     public void setFivouchered(boolean item)
     {
         setBoolean("Fivouchered", item);
-    }
-    /**
-     * Object:连养合同's 初始化单据property 
-     */
-    public boolean isIsInitBill()
-    {
-        return getBoolean("isInitBill");
-    }
-    public void setIsInitBill(boolean item)
-    {
-        setBoolean("isInitBill", item);
     }
     /**
      * Object: 连养合同 's 合同类型 property 
@@ -95,7 +84,7 @@ public class AbstractSuccessiveContractInfo extends com.kingdee.eas.custom.wlhll
         setString("partyBCell", item);
     }
     /**
-     * Object:连养合同's 供应商地址property 
+     * Object:连养合同's 乙方地址property 
      */
     public String getPartyBAddress()
     {
@@ -106,7 +95,7 @@ public class AbstractSuccessiveContractInfo extends com.kingdee.eas.custom.wlhll
         setString("partyBAddress", item);
     }
     /**
-     * Object:连养合同's 供应商身份证号码property 
+     * Object:连养合同's 乙方身份证号码property 
      */
     public String getPartyBID()
     {
@@ -117,7 +106,7 @@ public class AbstractSuccessiveContractInfo extends com.kingdee.eas.custom.wlhll
         setString("partyBID", item);
     }
     /**
-     * Object:连养合同's 供应商收款银行property 
+     * Object:连养合同's 乙方收款银行property 
      */
     public String getPartyBBank()
     {
@@ -128,7 +117,7 @@ public class AbstractSuccessiveContractInfo extends com.kingdee.eas.custom.wlhll
         setString("partyBBank", item);
     }
     /**
-     * Object:连养合同's 供应商银行账号property 
+     * Object:连养合同's 乙方银行账号property 
      */
     public String getPartyBBankNo()
     {
@@ -137,17 +126,6 @@ public class AbstractSuccessiveContractInfo extends com.kingdee.eas.custom.wlhll
     public void setPartyBBankNo(String item)
     {
         setString("partyBBankNo", item);
-    }
-    /**
-     * Object: 连养合同 's 养殖场 property 
-     */
-    public com.kingdee.eas.farm.stocking.basedata.FarmInfo getFarm()
-    {
-        return (com.kingdee.eas.farm.stocking.basedata.FarmInfo)get("farm");
-    }
-    public void setFarm(com.kingdee.eas.farm.stocking.basedata.FarmInfo item)
-    {
-        put("farm", item);
     }
     /**
      * Object:连养合同's 养殖场场长property 
@@ -159,6 +137,17 @@ public class AbstractSuccessiveContractInfo extends com.kingdee.eas.custom.wlhll
     public void setHeader(String item)
     {
         setString("header", item);
+    }
+    /**
+     * Object:连养合同's 场长联系方式property 
+     */
+    public String getHeaderCell()
+    {
+        return getString("headerCell");
+    }
+    public void setHeaderCell(String item)
+    {
+        setString("headerCell", item);
     }
     /**
      * Object:连养合同's 养殖规模property 
@@ -229,6 +218,30 @@ public class AbstractSuccessiveContractInfo extends com.kingdee.eas.custom.wlhll
         setDate("closeTime", item);
     }
     /**
+     * Object:连养合同's 单据状态property 
+     */
+    public com.kingdee.eas.scm.common.BillBaseStatusEnum getBillStatus()
+    {
+        return com.kingdee.eas.scm.common.BillBaseStatusEnum.getEnum(getInt("billStatus"));
+    }
+    public void setBillStatus(com.kingdee.eas.scm.common.BillBaseStatusEnum item)
+    {
+		if (item != null) {
+        setInt("billStatus", item.getValue());
+		}
+    }
+    /**
+     * Object:连养合同's 审核时间property 
+     */
+    public java.util.Date getAuditTime()
+    {
+        return getDate("auditTime");
+    }
+    public void setAuditTime(java.util.Date item)
+    {
+        setDate("auditTime", item);
+    }
+    /**
      * Object:连养合同's 备注property 
      */
     public String getRemark()
@@ -253,11 +266,11 @@ public class AbstractSuccessiveContractInfo extends com.kingdee.eas.custom.wlhll
     /**
      * Object: 连养合同 's 供应商 property 
      */
-    public com.kingdee.eas.basedata.master.cssp.SupplierInfo getSupplier()
+    public com.kingdee.eas.bdm.bdapply.SupplierReqInfo getSupplier()
     {
-        return (com.kingdee.eas.basedata.master.cssp.SupplierInfo)get("Supplier");
+        return (com.kingdee.eas.bdm.bdapply.SupplierReqInfo)get("Supplier");
     }
-    public void setSupplier(com.kingdee.eas.basedata.master.cssp.SupplierInfo item)
+    public void setSupplier(com.kingdee.eas.bdm.bdapply.SupplierReqInfo item)
     {
         put("Supplier", item);
     }
@@ -284,149 +297,37 @@ public class AbstractSuccessiveContractInfo extends com.kingdee.eas.custom.wlhll
         setBigDecimal("upSeedingQty", item);
     }
     /**
-     * Object: 连养合同 's 原料员 property 
+     * Object: 连养合同 's 养殖户 property 
      */
-    public com.kingdee.eas.basedata.person.PersonInfo getPurchasePerson()
+    public com.kingdee.eas.farm.carnivorous.basedata.FarmerInfo getFarmer()
     {
-        return (com.kingdee.eas.basedata.person.PersonInfo)get("purchasePerson");
+        return (com.kingdee.eas.farm.carnivorous.basedata.FarmerInfo)get("farmer");
     }
-    public void setPurchasePerson(com.kingdee.eas.basedata.person.PersonInfo item)
+    public void setFarmer(com.kingdee.eas.farm.carnivorous.basedata.FarmerInfo item)
     {
-        put("purchasePerson", item);
+        put("farmer", item);
     }
     /**
-     * Object:连养合同's 已连养批数property 
+     * Object: 连养合同 's 养殖场 property 
      */
-    public int getHasSuccessiveQty()
+    public com.kingdee.eas.farm.carnivorous.basedata.FarmInfo getFarm()
     {
-        return getInt("hasSuccessiveQty");
+        return (com.kingdee.eas.farm.carnivorous.basedata.FarmInfo)get("farm");
     }
-    public void setHasSuccessiveQty(int item)
+    public void setFarm(com.kingdee.eas.farm.carnivorous.basedata.FarmInfo item)
     {
-        setInt("hasSuccessiveQty", item);
-    }
-    /**
-     * Object:连养合同's 饲喂类别property 
-     */
-    public com.kingdee.eas.custom.taihe.contract.FeedType getFeedingType()
-    {
-        return com.kingdee.eas.custom.taihe.contract.FeedType.getEnum(getString("feedingType"));
-    }
-    public void setFeedingType(com.kingdee.eas.custom.taihe.contract.FeedType item)
-    {
-		if (item != null) {
-        setString("feedingType", item.getValue());
-		}
-    }
-    /**
-     * Object: 连养合同 's 保证金政策 property 
-     */
-    public com.kingdee.eas.custom.taihe.contract.AssureAmtPolicyInfo getSecurityDeposit()
-    {
-        return (com.kingdee.eas.custom.taihe.contract.AssureAmtPolicyInfo)get("securityDeposit");
-    }
-    public void setSecurityDeposit(com.kingdee.eas.custom.taihe.contract.AssureAmtPolicyInfo item)
-    {
-        put("securityDeposit", item);
-    }
-    /**
-     * Object:连养合同's 单只保证金property 
-     */
-    public java.math.BigDecimal getSingleSecurityDeposit()
-    {
-        return getBigDecimal("singleSecurityDeposit");
-    }
-    public void setSingleSecurityDeposit(java.math.BigDecimal item)
-    {
-        setBigDecimal("singleSecurityDeposit", item);
-    }
-    /**
-     * Object:连养合同's 政策保底价property 
-     */
-    public java.math.BigDecimal getPolicyMinimum()
-    {
-        return getBigDecimal("policyMinimum");
-    }
-    public void setPolicyMinimum(java.math.BigDecimal item)
-    {
-        setBigDecimal("policyMinimum", item);
-    }
-    /**
-     * Object:连养合同's 合同保底价property 
-     */
-    public java.math.BigDecimal getContractMinimum()
-    {
-        return getBigDecimal("contractMinimum");
-    }
-    public void setContractMinimum(java.math.BigDecimal item)
-    {
-        setBigDecimal("contractMinimum", item);
-    }
-    /**
-     * Object:连养合同's 应交保证金property 
-     */
-    public java.math.BigDecimal getShouldSecurityDeposit()
-    {
-        return getBigDecimal("shouldSecurityDeposit");
-    }
-    public void setShouldSecurityDeposit(java.math.BigDecimal item)
-    {
-        setBigDecimal("shouldSecurityDeposit", item);
-    }
-    /**
-     * Object:连养合同's 场长联系方式property 
-     */
-    public String getHeaderCell()
-    {
-        return getString("headerCell");
-    }
-    public void setHeaderCell(String item)
-    {
-        setString("headerCell", item);
+        put("farm", item);
     }
     /**
      * Object: 连养合同 's 结算政策 property 
      */
-    public com.kingdee.eas.custom.taihe.settle.TaiHeSettlePolicyInfo getStatementPolicy()
+    public com.kingdee.eas.farm.carnivorous.basedata.SettlePolicyInfo getSettlePolicy()
     {
-        return (com.kingdee.eas.custom.taihe.settle.TaiHeSettlePolicyInfo)get("statementPolicy");
+        return (com.kingdee.eas.farm.carnivorous.basedata.SettlePolicyInfo)get("settlePolicy");
     }
-    public void setStatementPolicy(com.kingdee.eas.custom.taihe.settle.TaiHeSettlePolicyInfo item)
+    public void setSettlePolicy(com.kingdee.eas.farm.carnivorous.basedata.SettlePolicyInfo item)
     {
-        put("statementPolicy", item);
-    }
-    /**
-     * Object:连养合同's 初始化已养批数property 
-     */
-    public int getInitBatchQty()
-    {
-        return getInt("initBatchQty");
-    }
-    public void setInitBatchQty(int item)
-    {
-        setInt("initBatchQty", item);
-    }
-    /**
-     * Object:连养合同's 养殖场地址property 
-     */
-    public String getFarmAddress()
-    {
-        return getString("farmAddress");
-    }
-    public void setFarmAddress(String item)
-    {
-        setString("farmAddress", item);
-    }
-    /**
-     * Object:连养合同's 优质鸡加价property 
-     */
-    public java.math.BigDecimal getYzjincrease()
-    {
-        return getBigDecimal("yzjincrease");
-    }
-    public void setYzjincrease(java.math.BigDecimal item)
-    {
-        setBigDecimal("yzjincrease", item);
+        put("settlePolicy", item);
     }
     public BOSObjectType getBOSType()
     {
