@@ -707,6 +707,104 @@
             <scale>0</scale>
             <precision>0</precision>
         </column>
+        <column>
+            <name>CFEggSourceType</name>
+            <alias>dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFEggSourceType].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFEggSourceType].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFEggFarmID</name>
+            <alias>dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFEggFarmID].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFEggFarmID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFEggSourceSupplie</name>
+            <alias>dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFEggSourceSupplie].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFEggSourceSupplie].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFF7id</name>
+            <alias>dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFF7id].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFF7id].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFF7Fnumber</name>
+            <alias>dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFF7Fnumber].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFF7Fnumber].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFConfirmTime</name>
+            <alias>dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFConfirmTime].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFConfirmTime].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FSignData</name>
+            <alias>dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[FSignData].alias</alias>
+            <description>dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[FSignData].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>BLOB</sqlType>
+            <length>1048576</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
     </columns>
     <primaryKey>
         <name>PK_FM_BreedSRBIeie</name>
@@ -1102,6 +1200,44 @@
                 </fkColumnPair>
             </fkColumnPairs>
         </foreignKey>
+        <foreignKey>
+            <name>CFK_FM_BreedSRBGl9</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.farm.stocking.basedata.app" />
+                <key name="name" value="T_FM_Farm" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="CFEggFarmID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>CFK_FM_BrdSRBGgSea</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.master.cssp.app" />
+                <key name="name" value="T_BD_Supplier" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="CFEggSourceSupplie" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
     </foreignKeys>
     <resource>
         <rs key="dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].alias">
@@ -1134,6 +1270,18 @@
             <lang locale="zh_HK" value="放雛員" />
             <lang locale="zh_TW" value="放雛員" />
         </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFConfirmTime].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="确认时间" />
+            <lang locale="zh_HK" value="確認時間" />
+            <lang locale="zh_TW" value="確認時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFConfirmTime].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="确认时间" />
+            <lang locale="zh_HK" value="確認時間" />
+            <lang locale="zh_TW" value="確認時間" />
+        </rs>
         <rs key="dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFCostObjectID].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="成本中心" />
@@ -1145,6 +1293,66 @@
             <lang locale="zh_CN" value="放养成本中心" />
             <lang locale="zh_HK" value="放養成本中心" />
             <lang locale="zh_TW" value="放養成本中心" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFEggFarmID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="种蛋来源种鸡场" />
+            <lang locale="zh_HK" value="種蛋來源種雞場" />
+            <lang locale="zh_TW" value="種蛋來源種雞場" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFEggFarmID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="种蛋来源种鸡场" />
+            <lang locale="zh_HK" value="種蛋來源種雞場" />
+            <lang locale="zh_TW" value="種蛋來源種雞場" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFEggSourceSupplie].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="种蛋来源供应商" />
+            <lang locale="zh_HK" value="種蛋來源供應商" />
+            <lang locale="zh_TW" value="種蛋來源供應商" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFEggSourceSupplie].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="种蛋来源供应商" />
+            <lang locale="zh_HK" value="種蛋來源供應商" />
+            <lang locale="zh_TW" value="種蛋來源供應商" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFEggSourceType].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="种蛋来源类型" />
+            <lang locale="zh_HK" value="種蛋來源類型" />
+            <lang locale="zh_TW" value="種蛋來源類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFEggSourceType].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="种蛋来源类型" />
+            <lang locale="zh_HK" value="種蛋來源類型" />
+            <lang locale="zh_TW" value="種蛋來源類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFF7Fnumber].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="F7Fnumber" />
+            <lang locale="zh_HK" value="F7Fnumber" />
+            <lang locale="zh_TW" value="F7Fnumber" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFF7Fnumber].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="F7Fnumber" />
+            <lang locale="zh_HK" value="F7Fnumber" />
+            <lang locale="zh_TW" value="F7Fnumber" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFF7id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="F7id" />
+            <lang locale="zh_HK" value="F7id" />
+            <lang locale="zh_TW" value="F7id" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFF7id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="F7id" />
+            <lang locale="zh_HK" value="F7id" />
+            <lang locale="zh_TW" value="F7id" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[CFFarmAddress].alias">
             <lang locale="en_US" value="null" />
@@ -1649,6 +1857,17 @@
             <lang locale="zh_CN" value="数量" />
             <lang locale="zh_HK" value="數量" />
             <lang locale="zh_TW" value="數量" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[FSignData].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="签名数据" />
+            <lang locale="zh_HK" value="簽名數據" />
+            <lang locale="zh_TW" value="簽名數據" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[FSignData].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.farm.carnivorous.feedbiz.app.T_FM_BreedSeedReceiveBill].columns.column[FSourceBillID].alias">
             <lang locale="en_US" value="null" />

@@ -2438,6 +2438,99 @@
                 <key name="name" value="ChickenRecBillQuery" />
             </query>
         </queryField>
+        <queryField>
+            <name>WeigntEntry.punishAmt</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.ChickenRecBillQuery].units.queryField[WeigntEntry.punishAmt].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>4f0b34c4-7bab-4840-a8e1-c34be64cff98</key>
+                    <parentUnit>
+                        <key name="name" value="WeigntEntry.punishAmt" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="WeigntEntry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="punishAmt" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.recyclebiz.app" />
+                <key name="name" value="ChickenRecBillQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>isManu</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.ChickenRecBillQuery].units.queryField[isManu].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Boolean</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>6e3b601b-f3b7-40d3-ae00-ae92eac47e3b</key>
+                    <parentUnit>
+                        <key name="name" value="isManu" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="ChickenRecBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="isManu" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.recyclebiz.app" />
+                <key name="name" value="ChickenRecBillQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>isSaleOut</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.ChickenRecBillQuery].units.queryField[isSaleOut].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Boolean</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>a210db4a-f990-4753-88a5-368a0a97c6af</key>
+                    <parentUnit>
+                        <key name="name" value="isSaleOut" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="ChickenRecBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="isSaleOut" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.recyclebiz.app" />
+                <key name="name" value="ChickenRecBillQuery" />
+            </query>
+        </queryField>
     </units>
     <defaultFilter>
         <name>defaultFilter</name>
@@ -3321,9 +3414,9 @@
             <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.ChickenRecBillQuery].units.queryField[WeigntEntry.houseNetWeight].extendedProperty.isSumField">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.ChickenRecBillQuery].units.queryField[WeigntEntry.houseNetWeight].extendedProperty.isVisibleForKDTable">
             <lang locale="en_US" value="true" />
@@ -3378,6 +3471,22 @@
             <lang locale="zh_HK" value="ID" />
             <lang locale="zh_TW" value="ID" />
         </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.ChickenRecBillQuery].units.queryField[WeigntEntry.punishAmt].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="扣款" />
+            <lang locale="zh_HK" value="扣款" />
+            <lang locale="zh_TW" value="扣款" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.ChickenRecBillQuery].units.queryField[WeigntEntry.punishAmt].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.ChickenRecBillQuery].units.queryField[WeigntEntry.punishAmt].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.ChickenRecBillQuery].units.queryField[WeigntEntry.saleAmount].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="销售金额" />
@@ -3404,6 +3513,16 @@
             <lang locale="zh_CN" value="销售毛鸡价格(元/斤)" />
             <lang locale="zh_HK" value="銷售毛雞價格(元/斤)" />
             <lang locale="zh_TW" value="銷售毛雞價格(元/斤)" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.ChickenRecBillQuery].units.queryField[WeigntEntry.saleChicPrice].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.ChickenRecBillQuery].units.queryField[WeigntEntry.saleChicPrice].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.ChickenRecBillQuery].units.queryField[WeigntEntry.saleQty].displayName">
             <lang locale="en_US" value="null" />
@@ -3772,6 +3891,38 @@
             <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.ChickenRecBillQuery].units.queryField[inDate].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.ChickenRecBillQuery].units.queryField[isManu].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否生产入" />
+            <lang locale="zh_HK" value="是否生產入" />
+            <lang locale="zh_TW" value="是否生產入" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.ChickenRecBillQuery].units.queryField[isManu].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.ChickenRecBillQuery].units.queryField[isManu].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.ChickenRecBillQuery].units.queryField[isSaleOut].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否销售出" />
+            <lang locale="zh_HK" value="是否銷售出" />
+            <lang locale="zh_TW" value="是否銷售出" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.ChickenRecBillQuery].units.queryField[isSaleOut].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.recyclebiz.app.ChickenRecBillQuery].units.queryField[isSaleOut].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />

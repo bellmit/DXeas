@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.farm.carnivorous.feedbiz.app</package>
+    <name>FarmPollingBillRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.FarmPollingBillRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.FarmPollingBillRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>d2da8f41-d43f-40ad-89c2-482830e5ab35</id>
+            <parentID />
+            <source>InventoryEntry.materialName=InventoryEntry.material.name</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>9899d570-e48f-4207-a544-b2e0abb5daf4</id>
+            <parentID>d2da8f41-d43f-40ad-89c2-482830e5ab35</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>fb368256-3c6e-4204-b48b-8a0d40d0df13</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>fb368256-3c6e-4204-b48b-8a0d40d0df13</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtInventoryEntry.getCell(rowIndex,"materialName")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>27c04960-913f-493e-be1e-2d9477247f5c</id>
+            <parentID>d2da8f41-d43f-40ad-89c2-482830e5ab35</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>acac6981-f34d-4fde-85e3-672df75753b4</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>c4b9dd30-5e87-4352-b549-b91ae3935c5c</id>
+                        <expressionID>6586b064-f6a3-43fa-b73c-f56e76c5889a</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>155ec1bb-4178-4cd0-a618-d3ff65702ad8</id>
+                        <expressionID>70ebc148-41ae-4bd7-9727-ca4743651b46</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>acac6981-f34d-4fde-85e3-672df75753b4</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>6586b064-f6a3-43fa-b73c-f56e76c5889a</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>b7ba42ed-1b59-477e-9a91-af0448049a6a</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b7ba42ed-1b59-477e-9a91-af0448049a6a</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtInventoryEntry.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>70ebc148-41ae-4bd7-9727-ca4743651b46</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>name</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>ca7641ef-386a-480d-ab32-3195dd6baf47</id>
+            <parentID />
+            <source>InventoryEntry.model=InventoryEntry.material.model</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>12e7f1f0-a29a-4f8a-be95-c4db5c3a760e</id>
+            <parentID>ca7641ef-386a-480d-ab32-3195dd6baf47</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>51825bdf-7d07-4eae-899b-05983e1fe1b3</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>51825bdf-7d07-4eae-899b-05983e1fe1b3</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>kdtInventoryEntry.getCell(rowIndex,"model")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>67afdede-fb8d-4295-ab60-f6067116f245</id>
+            <parentID>ca7641ef-386a-480d-ab32-3195dd6baf47</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>d136027a-73bc-4be0-ace1-8b2288bf3641</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>42b313d4-22b9-4194-bcc0-e015685e77f4</id>
+                        <expressionID>d9cbaf95-94c4-4987-8040-cd5bc47d89f0</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>57bef52a-44d0-4f8d-9159-5f8fdce44151</id>
+                        <expressionID>3b78bd39-1637-46c1-a70e-bc9e7daaa6da</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d136027a-73bc-4be0-ace1-8b2288bf3641</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>d9cbaf95-94c4-4987-8040-cd5bc47d89f0</id>
+            <parentID />
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>Object</valueType>
+            <value />
+            <property>
+                <ownerID>532e7246-7074-49f1-92a1-887df19b371d</ownerID>
+                <name>value</name>
+                <type>Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>532e7246-7074-49f1-92a1-887df19b371d</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)kdtInventoryEntry.getCell(rowIndex,"material")</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3b78bd39-1637-46c1-a70e-bc9e7daaa6da</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>model</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>8a904a68-1ab0-4d8a-b050-902196d5de86</id>
+            <name>InventoryEntry_materialName_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.FarmPollingBillRuleSet].actions.action[InventoryEntry_materialName_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.FarmPollingBillRuleSet].actions.action[InventoryEntry_materialName_ActionInfo].description</description>
+            <expressionID>d2da8f41-d43f-40ad-89c2-482830e5ab35</expressionID>
+        </action>
+        <action>
+            <id>a917ed14-000a-4661-b709-fca226cb2871</id>
+            <name>InventoryEntry_model_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.FarmPollingBillRuleSet].actions.action[InventoryEntry_model_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.FarmPollingBillRuleSet].actions.action[InventoryEntry_model_ActionInfo].description</description>
+            <expressionID>ca7641ef-386a-480d-ab32-3195dd6baf47</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>InventoryEntry_materialName_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.FarmPollingBillRuleSet].rules.conditionRule[InventoryEntry_materialName_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.FarmPollingBillRuleSet].rules.conditionRule[InventoryEntry_materialName_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="8a904a68-1ab0-4d8a-b050-902196d5de86" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>InventoryEntry_model_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.FarmPollingBillRuleSet].rules.conditionRule[InventoryEntry_model_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.FarmPollingBillRuleSet].rules.conditionRule[InventoryEntry_model_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="a917ed14-000a-4661-b709-fca226cb2871" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.FarmPollingBillRuleSet].actions.action[InventoryEntry_materialName_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.FarmPollingBillRuleSet].actions.action[InventoryEntry_materialName_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.FarmPollingBillRuleSet].actions.action[InventoryEntry_model_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.FarmPollingBillRuleSet].actions.action[InventoryEntry_model_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.FarmPollingBillRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.FarmPollingBillRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.FarmPollingBillRuleSet].rules.conditionRule[InventoryEntry_materialName_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_name" />
+            <lang locale="zh_HK" value="攜帶字段屬性_name" />
+            <lang locale="zh_TW" value="攜帶字段屬性_name" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.FarmPollingBillRuleSet].rules.conditionRule[InventoryEntry_materialName_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.FarmPollingBillRuleSet].rules.conditionRule[InventoryEntry_materialName_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="material" />
+            <lang locale="zh_CN" value="material" />
+            <lang locale="zh_TW" value="material" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.FarmPollingBillRuleSet].rules.conditionRule[InventoryEntry_materialName_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.FarmPollingBillRuleSet].rules.conditionRule[InventoryEntry_model_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_model" />
+            <lang locale="zh_HK" value="攜帶字段屬性_model" />
+            <lang locale="zh_TW" value="攜帶字段屬性_model" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.FarmPollingBillRuleSet].rules.conditionRule[InventoryEntry_model_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.FarmPollingBillRuleSet].rules.conditionRule[InventoryEntry_model_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="material" />
+            <lang locale="zh_CN" value="material" />
+            <lang locale="zh_TW" value="material" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.farm.carnivorous.feedbiz.app.FarmPollingBillRuleSet].rules.conditionRule[InventoryEntry_model_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</ruleSet>
+

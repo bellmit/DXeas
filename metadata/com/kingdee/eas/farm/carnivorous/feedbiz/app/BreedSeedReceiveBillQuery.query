@@ -347,6 +347,32 @@
                 <key name="name" value="Person" />
             </entityRef>
         </subEntity>
+        <subEntity>
+            <name>eggFarm</name>
+            <alias>joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].subObjects.subEntity[eggFarm].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.feedbiz.app" />
+                <key name="name" value="BreedSeedReceiveBillQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.farm.stocking.basedata.app" />
+                <key name="name" value="Farm" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>eggSourceSupplier</name>
+            <alias>joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].subObjects.subEntity[eggSourceSupplier].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.feedbiz.app" />
+                <key name="name" value="BreedSeedReceiveBillQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.master.cssp.app" />
+                <key name="name" value="Supplier" />
+            </entityRef>
+        </subEntity>
     </subObjects>
     <units>
         <propertyUnit>
@@ -4286,6 +4312,347 @@
                 <key name="name" value="BreedSeedReceiveBillQuery" />
             </query>
         </queryField>
+        <queryField>
+            <name>eggSourceType</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[eggSourceType].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>039ed601-ac99-4e2a-af92-3e8d9429320b</key>
+                    <parentUnit>
+                        <key name="name" value="eggSourceType" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BreedSeedReceiveBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="eggSourceType" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.feedbiz.app" />
+                <key name="name" value="BreedSeedReceiveBillQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>eggFarm.name</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[eggFarm.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>05851b5a-7523-4652-9c8d-01482683c72a</key>
+                    <parentUnit>
+                        <key name="name" value="eggFarm.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="eggFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.feedbiz.app" />
+                <key name="name" value="BreedSeedReceiveBillQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>3824b5f9-3715-47cb-8736-73a6eee52baa</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.propertyUnit[3824b5f9-3715-47cb-8736-73a6eee52baa].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0e31dc01-849d-460b-b5d1-2af3ff4b5a52</key>
+                    <parentUnit>
+                        <key name="name" value="3824b5f9-3715-47cb-8736-73a6eee52baa" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BreedSeedReceiveBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="eggFarm" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.feedbiz.app" />
+                <key name="name" value="BreedSeedReceiveBillQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>c5b167ad-150a-4ca0-a86e-4b542c8e98f8</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.propertyUnit[c5b167ad-150a-4ca0-a86e-4b542c8e98f8].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>da823bc4-118b-40b3-902a-b70244c13f36</key>
+                    <parentUnit>
+                        <key name="name" value="c5b167ad-150a-4ca0-a86e-4b542c8e98f8" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="eggFarm" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.feedbiz.app" />
+                <key name="name" value="BreedSeedReceiveBillQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>eggSourceSupplier.name</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[eggSourceSupplier.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>c86291bb-1bc1-42a4-a33b-0e89483d72dd</key>
+                    <parentUnit>
+                        <key name="name" value="eggSourceSupplier.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="eggSourceSupplier" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.feedbiz.app" />
+                <key name="name" value="BreedSeedReceiveBillQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>659a57ef-9741-49d0-a4ae-2d74b3cadc37</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.propertyUnit[659a57ef-9741-49d0-a4ae-2d74b3cadc37].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>c03b38f5-b0fa-4b9d-80c1-290953ef7b28</key>
+                    <parentUnit>
+                        <key name="name" value="659a57ef-9741-49d0-a4ae-2d74b3cadc37" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BreedSeedReceiveBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="eggSourceSupplier" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.feedbiz.app" />
+                <key name="name" value="BreedSeedReceiveBillQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>718dbdf9-f535-41eb-a903-fec8c769cfba</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.propertyUnit[718dbdf9-f535-41eb-a903-fec8c769cfba].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>b354b85b-f4e1-48ca-a686-e78bc2236e4a</key>
+                    <parentUnit>
+                        <key name="name" value="718dbdf9-f535-41eb-a903-fec8c769cfba" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="eggSourceSupplier" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.feedbiz.app" />
+                <key name="name" value="BreedSeedReceiveBillQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>F7id</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[F7id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>9cadeba6-79ad-44b8-9d3e-c4510e569b09</key>
+                    <parentUnit>
+                        <key name="name" value="F7id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BreedSeedReceiveBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="F7id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.feedbiz.app" />
+                <key name="name" value="BreedSeedReceiveBillQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>F7Fnumber</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[F7Fnumber].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>9ffa1f60-9939-44af-af57-82b308bc36c7</key>
+                    <parentUnit>
+                        <key name="name" value="F7Fnumber" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BreedSeedReceiveBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="F7Fnumber" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.feedbiz.app" />
+                <key name="name" value="BreedSeedReceiveBillQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>entrys.batchInv</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[entrys.batchInv].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>24d91c3e-766e-4dda-8415-4614b9136072</key>
+                    <parentUnit>
+                        <key name="name" value="entrys.batchInv" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="entrys" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="batchInv" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.feedbiz.app" />
+                <key name="name" value="BreedSeedReceiveBillQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>confirmTime</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[confirmTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>40ff0242-70fa-4d6c-bea4-9bdc5b0f99e9</key>
+                    <parentUnit>
+                        <key name="name" value="confirmTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="BreedSeedReceiveBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="confirmTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.feedbiz.app" />
+                <key name="name" value="BreedSeedReceiveBillQuery" />
+            </query>
+        </queryField>
     </units>
     <defaultFilter>
         <name>defaultFilter</name>
@@ -5082,6 +5449,66 @@
                 <key name="name" value="BreedSeedReceiveBillQuery" />
             </query>
         </join>
+        <join>
+            <name>d1eccab9-3cce-4f28-bb25-11a5768b4c6b</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="BreedSeedReceiveBill" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="eggFarm" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>8e90838d-909a-4c2e-a68e-a1a69a6da3ac</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="3824b5f9-3715-47cb-8736-73a6eee52baa" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="c5b167ad-150a-4ca0-a86e-4b542c8e98f8" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="d1eccab9-3cce-4f28-bb25-11a5768b4c6b" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.feedbiz.app" />
+                <key name="name" value="BreedSeedReceiveBillQuery" />
+            </query>
+        </join>
+        <join>
+            <name>34c69e09-b1c2-41a9-a7c4-a838e3f0ba67</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="BreedSeedReceiveBill" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="eggSourceSupplier" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>eb807213-3a8d-434b-9248-77a9bd230cbb</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="659a57ef-9741-49d0-a4ae-2d74b3cadc37" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="718dbdf9-f535-41eb-a903-fec8c769cfba" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="34c69e09-b1c2-41a9-a7c4-a838e3f0ba67" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.farm.carnivorous.feedbiz.app" />
+                <key name="name" value="BreedSeedReceiveBillQuery" />
+            </query>
+        </join>
     </joins>
     <resource>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].alias">
@@ -5190,6 +5617,18 @@
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].subObjects.subEntity[driver].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].subObjects.subEntity[eggFarm].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].subObjects.subEntity[eggSourceSupplier].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
@@ -5333,6 +5772,12 @@
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.propertyUnit[3824b5f9-3715-47cb-8736-73a6eee52baa].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.propertyUnit[38d98d78-f605-41d6-a6ed-5177f47e52e7].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
@@ -5381,6 +5826,12 @@
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.propertyUnit[659a57ef-9741-49d0-a4ae-2d74b3cadc37].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.propertyUnit[6752726a-3e81-44f2-967c-f49a8b475e7e].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
@@ -5388,6 +5839,12 @@
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.propertyUnit[6ae6f3a3-b5c4-4121-a56c-b5802bf8ffb6].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.propertyUnit[718dbdf9-f535-41eb-a903-fec8c769cfba].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
@@ -5507,6 +5964,12 @@
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.propertyUnit[c5b167ad-150a-4ca0-a86e-4b542c8e98f8].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.propertyUnit[c8930cbb-ecef-4d1d-9832-e61ed96f65c3].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
@@ -5578,6 +6041,38 @@
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[F7Fnumber].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="F7Fnumber" />
+            <lang locale="zh_HK" value="F7Fnumber" />
+            <lang locale="zh_TW" value="F7Fnumber" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[F7Fnumber].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[F7Fnumber].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[F7id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="F7id" />
+            <lang locale="zh_HK" value="F7id" />
+            <lang locale="zh_TW" value="F7id" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[F7id].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[F7id].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[Fivouchered].displayName">
             <lang locale="en_US" value="null" />
@@ -5813,6 +6308,22 @@
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[confirmTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="确认时间" />
+            <lang locale="zh_HK" value="確認時間" />
+            <lang locale="zh_TW" value="確認時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[confirmTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[confirmTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[costObject.name].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="成本中心" />
@@ -5895,6 +6406,64 @@
             <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[driver.drivername].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[eggFarm.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="种蛋来源种鸡场" />
+            <lang locale="zh_HK" value="種蛋來源種雞場" />
+            <lang locale="zh_TW" value="種蛋來源種雞場" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[eggFarm.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[eggFarm.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[eggFarm.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[eggSourceSupplier.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="种蛋来源供应商" />
+            <lang locale="zh_HK" value="種蛋來源供應商" />
+            <lang locale="zh_TW" value="種蛋來源供應商" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[eggSourceSupplier.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[eggSourceSupplier.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[eggSourceSupplier.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[eggSourceType].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="种蛋来源类型" />
+            <lang locale="zh_HK" value="種蛋來源類型" />
+            <lang locale="zh_TW" value="種蛋來源類型" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[eggSourceType].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[eggSourceType].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
@@ -6027,6 +6596,22 @@
             <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[entrys.basePrice].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[entrys.batchInv].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="批次库存" />
+            <lang locale="zh_HK" value="批次庫存" />
+            <lang locale="zh_TW" value="批次庫存" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[entrys.batchInv].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.farm.carnivorous.feedbiz.app.BreedSeedReceiveBillQuery].units.queryField[entrys.batchInv].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
